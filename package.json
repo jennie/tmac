@@ -12,6 +12,7 @@
     "hard-source-webpack-plugin": "0.0.38",
     "image-webpack-loader": "^2.0.0",
     "reshape-standard": "^0.3.0",
+    "spike": "~0.12.1",
     "spike-css-standards": "^0.1.1",
     "spike-page-id": "^0.1.0",
     "webpack": "^1.13.1"
