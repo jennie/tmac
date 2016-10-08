@@ -1,1 +1,186 @@
 @import '_global.sss'
+body
+  height: 100%
+  width: 100%
+  position: relative
+  overflow-x: hidden
+  padding:0
+  margin:0
+  .media-coverage
+    li
+      margin-bottom: 1em
+  &#open-letter
+    header
+      height: auto
+    .aside
+      h4
+        margin: 0
+        font-size: 14px
+        line-height: 1.3em
+      .timeline
+        font-size: 14px
+        .row
+          border-top: solid 1px #eee
+          padding: .5em 0
+    h3
+      margin-top: 2em
+    #cta,.highlight
+      background-color: #fff695
+      padding: 1em
+    .sidebar
+      h3
+        margin-top: .75em
+    .download-platforms
+      margin: 2em 0 0 0
+      text-align: left
+      *
+        margin: 0
+    .content p:first-of-type, p.no-indent, .no-indent p
+      text-indent: 0
+    p+p
+      text-indent: 1.5em
+.cta
+  text-align: center;
+  margin: 3rem auto;
+
+#letter-callout
+  margin: 0
+  *
+    border-radius: 0
+header
+  position: relative
+  text-align: center
+  float: none;
+  margin: 0 auto
+  display: block
+  h1
+    display: none
+  .lead
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+
+  .buttons
+    margin: 1em 0 0 0
+  padding: 2em
+  background-image: url(/images/cinema_treated.gif)
+  background-position: center center
+  background-size: cover
+  img
+    max-width: 500px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 1rem
+    float: none
+    text-align: center
+    display: block
+.dates
+  b
+    display: block
+    font-size: 18px
+.download-platforms
+  margin: 0 0 30px 0
+  a
+    color: inherit
+    &:hover
+      text-decoration: none
+  .icon
+    font-size: 48px
+    margin: 0 20px
+.my-btn
+  // .button-variant(#fff, #000, #fff)
+  border-radius: 0
+  font-weight: 900
+  text-transform: uppercase
+  color: #fff
+  background-color: #000
+
+  &:hover
+    background-color: #444
+    color: #fff
+.lead
+  font-weight: 400
+main
+  a
+    text-decoration: underline
+    color: inherit
+  h2
+    text-transform: uppercase
+    font-weight: 900
+    letter-spacing: 1px
+    font-size: 38px
+    margin: 0 0 .25em 0
+    &.programming
+      font-size: 24px
+  ul
+    list-style: square
+    margin: 1em 0 0 0
+  #programming
+    b
+      color: #3826d7
+section
+  background: #fff
+  margin-top: 2em
+  margin-bottom: 2em
+  &#callout
+    margin: 0 auto
+    text-align: center
+    padding: 1rem
+    background-color: #fbfbfb
+  &#post-header
+    background-image: url(/images/photos/south.jpg)
+    background-position: center center
+    background-size: cover
+    margin: 0
+    .content
+      background: rgba(000,000,000,.6)
+      color: #fff
+      padding-bottom: 1em
+      padding-top: 1em
+footer
+  margin-left: auto
+  margin-right: auto
+  text-align: center
+
+  .vcard
+    display: none
+  p
+    background: #fff
+    padding: 5px
+.orgs
+  clear: both
+  display: flex
+  align-items: center
+  justify-content: center
+  .item
+    width: 25%
+    padding: .5rem
+    align-items: center
+    justify-content: center
+.wrapper
+  display: table
+  width: 100%
+  height: 100%
+  margin: auto
+.cell
+  display: table-cell
+  vertical-align: middle
+  position: relative
+  p
+    margin: 0 auto
+    text-align: center
+    float: none
+.Aligner
+  display: flex
+  align-items: center
+  justify-content: center
+  min-height: 24em
+
+.Aligner-item
+  max-width: 50%
+
+.Aligner-item--top
+  align-self: flex-start
+
+.Aligner-item--bottom
+  align-self: flex-end
