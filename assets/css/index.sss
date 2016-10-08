@@ -1,8 +1,5 @@
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-
+@import '_global.sss'
 body
-  .text-center()
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
   height: 100%
   width: 100%
   position: relative
@@ -42,6 +39,10 @@ body
       text-indent: 0
     p+p
       text-indent: 1.5em
+.cta
+  text-align: center;
+  margin: 3rem auto;
+
 #letter-callout
   margin: 0
   *
@@ -49,10 +50,16 @@ body
 header
   position: relative
   text-align: center
+  float: none;
   margin: 0 auto
   display: block
   h1
     display: none
+  .lead
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+
   .buttons
     margin: 1em 0 0 0
   padding: 2em
@@ -60,8 +67,13 @@ header
   background-position: center center
   background-size: cover
   img
-    width: 500px
-    margin-bottom: 1em
+    max-width: 500px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 1rem
+    float: none
+    text-align: center
+    display: block
 .dates
   b
     display: block
@@ -80,8 +92,14 @@ header
   border-radius: 0
   font-weight: 900
   text-transform: uppercase
+  color: #fff
+  background-color: #000
+
   &:hover
-    background-color: #0024cd
+    background-color: #444
+    color: #fff
+.lead
+  font-weight: 400
 main
   a
     text-decoration: underline
@@ -105,8 +123,9 @@ section
   margin-top: 2em
   margin-bottom: 2em
   &#callout
-    margin: 0
-    padding: 1em
+    margin: 0 auto
+    text-align: center
+    padding: 1rem
     background-color: #fbfbfb
   &#post-header
     background-image: url(/images/photos/south.jpg)
@@ -119,31 +138,25 @@ section
       padding-bottom: 1em
       padding-top: 1em
 footer
-  margin: 0 0 2em 0
+  margin-left: auto
+  margin-right: auto
+  text-align: center
+
   .vcard
     display: none
   p
     background: #fff
     padding: 5px
-#members
+.orgs
   clear: both
-  .row
-    margin: 0 0 1em 0
-  .wrapper
-    display: table
-    width: 100%
-    height: 100%
-    margin: auto
-  .member
-    display: table-cell
-    vertical-align: middle
-    position: relative
-    img
-      margin: 0 auto
-      text-align: center
-      float: none
-      display: block
-      width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  .item
+    width: 25%
+    padding: .5rem
+    align-items: center
+    justify-content: center
 .wrapper
   display: table
   width: 100%
@@ -157,3 +170,17 @@ footer
     margin: 0 auto
     text-align: center
     float: none
+.Aligner
+  display: flex
+  align-items: center
+  justify-content: center
+  min-height: 24em
+
+.Aligner-item
+  max-width: 50%
+
+.Aligner-item--top
+  align-self: flex-start
+
+.Aligner-item--bottom
+  align-self: flex-end

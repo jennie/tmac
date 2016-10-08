@@ -7,28 +7,30 @@ const jsStandards      = require('babel-preset-latest')
 const pageId           = require('spike-page-id')
 const mixins           = require('postcss-mixins')
 const vars             = require('postcss-simple-vars')
-const nesting          = require('postcss-nesting')
+const nestedProps      = require('postcss-nested-props')
+const nested           = require('postcss-nested')
 
 module.exports = {
   devtool: 'source-map',
   matchers: {
-    html: '*(**/)*.sgr',
+    html: '*(**/)*.sml',
     css: '*(**/)*.sss',
     js: '**/*.js'
   },
-  ignore: ['**/layout.sgr', '**/_*', '**/.*', '_cache/**', 'readme.md'],
+  ignore: ['**/layout.sml', '**/_*', '**/.*', '_cache/**', 'readme.md'],
   reshape: (ctx) => {
     return htmlStandards({
       webpack: ctx,
       locals: { pageId: pageId(ctx), foo: 'bar' }
     })
   },
-
-  postcss: (ctx) =>  {
-    return cssStandards({
-      webpack: ctx,
-      plugins: [mixins,vars,nesting]
-    })
+  postcss: (ctx) => {
+    let css = cssStandards({ webpack: ctx })
+    let otherPlugins = [mixins, vars, nestedProps, nested]
+    otherPlugins.forEach(plugin =>
+      css.plugins.push(plugin())
+    )
+    return css
   },
   babel: { presets: [jsStandards] },
   plugins: [
