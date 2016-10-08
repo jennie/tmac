@@ -4,7 +4,7 @@ extends(src='layout.sgr')
       .wrapper
         .cell
           a(href='/')
-            img.img-responsive(src='images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
+            img.img-fluid(src='images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
           h1 Toronto Media Arts Centre
     section#letter
       .container

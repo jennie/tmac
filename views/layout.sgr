@@ -5,15 +5,17 @@ html
       meta(name='description' content='A collaborative space for Toronto media arts organizations, media-based artists and the Queen West Triangle community.')
       meta(name='keywords' content='toronto media arts, toronto media arts cluster, media-based arts, electronic arts, computer integrated media, toronto media arts center, media arts collective')
       meta(name='viewport' content='width=device-width, initial-scale=1.0')
-      meta(name="viewport" content="width=device-width, initial-scale=1")
 
     block(name='title')
       title Toronto Media Arts Centre (TMAC)
 
     block(name='stylesheets')
-      link(rel='stylesheet' href='styles/main.css')
+      link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css' integrity='sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj' crossorigin='anonymous')
+      link(rel='stylesheet' href='css/index.css')
 
   body(role='document')
     main(role='main' id='{{ pageId }}')
       block(name='content')
 
+    block(name='javascript')
+         script(src='js/main.js' defer)

@@ -1,9 +1,13 @@
-const path = require('path')
+const path             = require('path')
 const HardSourcePlugin = require('hard-source-webpack-plugin')
-const htmlStandards = require('reshape-standard')
-const cssStandards = require('spike-css-standards')
-const jsStandards = require('babel-preset-latest')
-const pageId = require('spike-page-id')
+const htmlStandards    = require('reshape-standard')
+const postcss          = require('postcss')
+const cssStandards     = require('spike-css-standards')
+const jsStandards      = require('babel-preset-latest')
+const pageId           = require('spike-page-id')
+const mixins           = require('postcss-mixins')
+const vars             = require('postcss-simple-vars')
+const nesting          = require('postcss-nesting')
 
 module.exports = {
   devtool: 'source-map',
@@ -19,8 +23,12 @@ module.exports = {
       locals: { pageId: pageId(ctx), foo: 'bar' }
     })
   },
-  postcss: (ctx) => {
-    return cssStandards({ webpack: ctx })
+
+  postcss: (ctx) =>  {
+    return cssStandards({
+      webpack: ctx,
+      plugins: [mixins,vars,nesting]
+    })
   },
   babel: { presets: [jsStandards] },
   plugins: [
