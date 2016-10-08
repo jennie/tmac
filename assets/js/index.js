@@ -6,10 +6,3 @@
 
 ga('create', 'UA-16850490-7', 'auto');
 ga('send', 'pageview');
-
-
-try{Typekit.load()}catch(e){}
-//
-// $(document).ready(function(){
-//   $('.member,.funder,.cell').matchHeight();
-// });
