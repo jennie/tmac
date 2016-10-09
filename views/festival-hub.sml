@@ -32,7 +32,7 @@ extends(src='layout.sml')
                 p Whether yours is a small identity-based film festival, a performance or audio festival, or a collective in need of exhibition space, TMAC will tailor its support to fit your needs. Increase audience and visibility through shared resources. Be part of a dynamic new multidisciplinary centre with 40,000 sq. ft. dedicated to supporting media art and technology exhibition, production and distribution.
                 p TMAC offers specialized infrastructure designed specifically to support the needs of small festivals year-round—without the overhead of a lease and high administration costs. With your membership, you’ll get access to a dedicated, purpose-built venue and staff support for screenings, festivals, fundraisers and special events.
             .cta
-              a.btn.btn-primary(href='/festival-hub-loi') Register Your Interest Now
+              a.btn.btn-primary(href='/loi') Register Your Interest Now
             h3 Membership Benefits
             .row
               .col-md-6
