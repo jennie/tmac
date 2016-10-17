@@ -18,7 +18,7 @@ extends(src='layout.sml')
               br
               img(src='/images/charity-default-profile-swatch-en.jpg' alt='' style='margin-top: 1em;')
             hr
-            a.btn.my-btn.btn-lg(href='https://www.canadahelps.org/en/charities/toronto-media-arts-centre/') Make a Donation
+            a.btn.my-btn(href='https://www.canadahelps.org/en/charities/toronto-media-arts-centre/') Make a Donation
             hr
             p
               a(href='/#history') Our history and facility

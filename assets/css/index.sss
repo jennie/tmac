@@ -47,6 +47,17 @@ body
   margin: 0
   *
     border-radius: 0
+figure
+  max-height: 40vh
+  background-size: cover
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 37.5%;
+  background-size: 100% auto;
+  width: 100%;
+  position: relative;
+
 header
   position: relative
   text-align: center
@@ -56,14 +67,16 @@ header
   h1
     display: none
   .lead
-    max-width: 40%;
+    min-width: 40vw;
+    max-width: 80vw;
+    font-size: calc(14px + .7vw);
     display: block;
     margin: 0 auto;
 
   .buttons
     margin: 1em 0 0 0
   padding: 2em
-  background-image: url(/images/cinema_treated.gif)
+  /*background-image: url(/images/photos/south.jpg)*/
   background-position: center center
   background-size: cover
   img
@@ -89,14 +102,19 @@ header
     margin: 0 20px
 .my-btn
   // .button-variant(#fff, #000, #fff)
-  border-radius: 0
-  font-weight: 900
+  font-size: calc(14px + .7vw);
+  letter-spacing: .1vw;
+  border-radius: .3rem
+  font-weight: 400
   text-transform: uppercase
   color: #fff
-  background-color: #000
+  background-color: #0a223e
+  &.small
+    font-size: calc(14px);
+
 
   &:hover
-    background-color: #444
+    background-color: #000
     color: #fff
 .lead
   font-weight: 400
@@ -128,8 +146,8 @@ section
     padding: 1rem
     background-color: #fbfbfb
   &#post-header
-    background-image: url(/images/photos/south.jpg)
-    background-position: center center
+    background-image: url('/images/26438888462_aac971043f_o.jpg')
+    background-position: center top
     background-size: cover
     margin: 0
     .content

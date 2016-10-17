@@ -1,6 +1,7 @@
 extends(src='layout.sml')
 
   block(name='content')
+    figure(style="background-image:url(/images/photos/south-view.jpg)")
     header
       img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
       h1 Toronto Media Arts Centre
@@ -93,9 +94,9 @@ extends(src='layout.sml')
             .col-md-8.content
               h2 Facility
               div(md).
-                Not only does the facility provide affordable space for non-profit arts organizations to operate, it will also engage the community of the Queen West Triangle with public performances, exhibitions, festivals, workshops and more.
+                <!-- Not only does the facility provide affordable space for non-profit arts organizations to operate, it will also engage the community of the Queen West Triangle with public performances, exhibitions, festivals, workshops and more.-->
 
-                The multi-purpose facility offers shared spaces and amenities including:
+                Our multi-purpose facility offers shared spaces and amenities including:
                 - A **200-seat theatre** designed by renowned architect Peter Smith, for screening independent and experimental works
                 - Studio apartment for visiting **artist residencies**
                 - Classrooms for public talks, workshops, screenings, festivals and events
