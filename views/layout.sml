@@ -5,6 +5,7 @@ html
       meta(name='description' content='A collaborative space for Toronto media arts organizations, media-based artists and the Queen West Triangle community.')
       meta(name='keywords' content='toronto media arts, toronto media arts cluster, media-based arts, electronic arts, computer integrated media, toronto media arts center, media arts collective')
       meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      meta(name='google-site-verification' content='ArLdqonWlRvHkvmHpdwdW3nxGnct3sJE--rDYC-Y0Mo')
     block(name='title')
       title Toronto Media Arts Centre (TMAC)
     block(name='stylesheets')
