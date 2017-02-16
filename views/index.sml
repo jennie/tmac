@@ -6,8 +6,8 @@ extends(src='layout.sml')
       img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
       h1 Toronto Media Arts Centre
       p.lead A new permanent home for Toronto's media arts organizations, and an accessible public space for art, creation and collaboration in the Queen West Triangle.
-      // .buttons
-      //   a.btn.my-btn.btn-lg(href='/festival-hub') Film Festival Membership
+      .buttons
+        a.btn.my-btn.btn-lg(href='/festival-hub') Film Festival Membership
 
     main
 
@@ -51,7 +51,7 @@ extends(src='layout.sml')
                       img.img-fluid(src='/images/logos/dmg_toronto_dames_making_games_logo.png' alt='')
                   .item.member
                     a(href='http://gammaspace.ca')
-                      img.img-fluid(src='/images/logos/gamma_space_logo_colour.png' alt='')
+                      img.img-fluid(src='/images/logos/gamma_space_twitter_500x500.png' alt='')
               hr
               div(md).
                 Spaces are available! We are excited to welcome new tenant members once our facility is operational. [Get in touch](info@tomediaarts.org) if your organization is interested in joining TMAC!
