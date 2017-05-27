@@ -70,6 +70,9 @@ extends(src='layout.sml')
 
                 Construction is nearly complete and TMAC looks forward to moving in to its new space in 2017!
 
+                We continute to operate under our <a href="/images/TMAC-Governance-V.1.6.pdf">collaborative governance model</a> as a charitable organization until we move into our permanent home.
+
+
               img.pull-right(src='/images/charity-default-profile-swatch-en.jpg' alt='')
 
               div(md).
