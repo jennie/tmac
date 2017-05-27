@@ -54,7 +54,7 @@ extends(src='layout.sml')
                       img.img-fluid(src='/images/logos/gamma_space_logo_colour.png' alt='')
               hr
               div(md).
-                Spaces are available! We are excited to welcome new tenant members once our facility is operational. [Get in touch](info@tomediaarts.org) if your organization is interested in joining TMAC!
+                Spaces are available! We are excited to welcome new tenant members once our facility is operational. [Get in touch](mailto:info@tomediaarts.org) if your organization is interested in joining TMAC!
         hr
       section#about
         .container
