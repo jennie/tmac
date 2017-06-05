@@ -9,6 +9,10 @@ extends(src='layout.sml')
       // .buttons
       //   a.btn.my-btn.btn-lg(href='/festival-hub') Film Festival Membership
 
+    div.alert.alert-success#letter-callout
+      span
+        a(href='/dispute') More information about our lawsuit against Urbancorp and the City of Toronto. Updated May 2017.
+
     main
 
       section#mission
@@ -73,12 +77,13 @@ extends(src='layout.sml')
                 We continue to operate under our [collaborative governance model](http://governance.tomediaarts.org/) as a charitable organization until we move into our permanent home.
 
 
-              img.pull-right(src='/images/charity-default-profile-swatch-en.jpg' alt='')
+              img.swatch(src='/images/charity-default-profile-swatch-en.jpg' alt='')
 
               div(md).
                 **[Make a donation today](https://www.canadahelps.org/en/charities/toronto-media-arts-centre) and immediately receive a charitable receipt through Canada Helps!**
             .col-sm-4
-              img.img-fluid(src='/images/photos/stairs.jpg' alt='')
+              img.img-fluid(src='/images/photos/elevator.jpg' alt='' style='margin-bottom: 1rem')
+              img.img-fluid(src='/images/photos/TMAC-gallery.jpg' alt='')
 
       section#callout
         // Begin MailChimp Signup Form
