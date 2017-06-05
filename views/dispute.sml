@@ -66,7 +66,7 @@ extends(src='layout.sml')
 
               .row
                 .col-md-6
-                  p Are you a resident of the Queen West Triangle? We're looking forward to being good neighbors! We invite feedback and conversation. <a href="mailto:info@tomediaarts.org">Email us</a>.
+                  p Are you a resident of the Queen West Triangle? We're looking forward to being good neighbors! We invite feedback and conversation. <a href=mailto:info@tomediaarts.org>Email us</a>.
                 .col-md-6
                   img(src="/images/photos/agco-updated-may-2017.jpg" class="img-fluid")
 
@@ -120,7 +120,7 @@ extends(src='layout.sml')
                 **July 22, 2015**
 
                 We filed a joint reply to the City's and Urbancorp's statements of defence today. You can read the whole thing here:\
-                [Reply to Edge on Triangle Park and City of Toronto](/images/reply-to-urbancorp-and-cot.pdf) (PDF)
+                [Reply to Edge on Triangle Park and City of Toronto](/docs/reply-to-urbancorp-and-cot.pdf) (PDF)
 
                 #### The City's Defence
 
@@ -249,7 +249,7 @@ extends(src='layout.sml')
                 **Board of Directors**
 
                 Alex Williams - [Charles Street Video](http://charlesstreetvideo.com/home.php)\
-                Henry Faber - [Gamma Space](https://gammaspace.ca)\
+                Henry Faber - [Gamma Space](http://gammaspace.ca)\
                 Frank Manzo - [CFMDC](http://www.cfmdc.org/)\
                 Jennie Robinson Faber - [Dames Making Games](https://dmg.to)
 
@@ -330,7 +330,7 @@ extends(src='layout.sml')
                 li
                   a(href="http://www.vice.com/en_ca/read/condos-are-destroying-art-galleries-on-queen-west") VICE: Condos Are Destroying Art Galleries on Queen West
                 li
-                  a(href="http://netgainpartners.com/blog/a-false-dilemma-about-section-37-deals/") Netgain Partners: A false dilemma about Section 37 deals
+                  a(href="http://netgainpartners.com/blog/false-dilemma-about-section-37-deals/") Netgain Partners: A false dilemma about Section 37 deals
                 li
                   a(href="http://www.theglobeandmail.com/news/toronto/unstoppable-real-estate-market-displaces-beatrice-house-shelter/article25042379/") The Globe &amp; Mail: Unstoppable real estate market displaces Beatrice House shelter
 
