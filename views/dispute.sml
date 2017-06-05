@@ -83,7 +83,7 @@ extends(src='layout.sml')
 
                 In 2016, we hosted dozens of joint programming events as TMAC, deepening the collaboration between our organizations and the local community. Our board and volunteers have invested thousands of hours into this project, driven by the memberships of our organizations (representing over 5,000 artists) and an actively engaged public that continues to demand we fight for dedicated media arts space in Toronto.
 
-                TMAC member organizations are bursting at the seams in our current spaces, and closing in on the end of our leases at three different spaces across the city. **We will not be able to find new spaces in Toronto** if we do not secure our space at 36 Lisgar.
+                TMAC member organizations are bursting at the seams in our current spaces, and closing in on the end of our leases at three different spaces across the city. **It is very unlikely our organizations will be able to find new affordable spaces in Toronto** if we do not secure our space at 36 Lisgar.
 
                 Without space, the vital resources we provide artists working in media and new technologies will disappear. The work we do that enriches the social and cultural fabric of Toronto will be damaged. **We urge the City to prove it supports the continuity of media arts nonprofits in Toronto.** Keep working with us in good faith to secure the space at 36 Lisgar for the benefit of the community and the organization it was intended for.
 
