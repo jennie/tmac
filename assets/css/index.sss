@@ -38,19 +38,21 @@ body
     .content p:first-of-type, p.no-indent, .no-indent p
       text-indent: 0
     p+p
-      text-indent: 1.5em
+      /*text-indent: 1.5em*/
 .cta
   text-align: center
   margin: 3rem auto
 
 #letter-callout
   margin: 0
+  text-align: center
+  font-size: 1.4rem
   *
     border-radius: 0
 figure
-  max-height: 40vh
+  max-height: 50vh
   background-size: cover
-  background-position: top center
+  background-position: bottom center
   background-repeat: no-repeat
   background-size: cover
   padding-top: 37.5%
@@ -102,7 +104,7 @@ header
     margin: 0 20px
 .my-btn
   // .button-variant(#fff, #000, #fff)
-  font-size: calc(14px + .7vw)
+  /*font-size: calc(14px + .7vw)*/
   letter-spacing: .1vw
   border-radius: .3rem
   font-weight: 400
@@ -121,7 +123,12 @@ header
 main
   a
     text-decoration: underline
-    color: inherit
+    color: #394EFF
+    font-weight: 900
+  .aside
+    a
+      color: inherit
+      font-weight: normal
   h2
     text-transform: uppercase
     font-weight: 900
@@ -132,7 +139,7 @@ main
       font-size: 24px
   ul
     list-style: square
-    margin: 1em 0 0 0
+    /*margin: 1em 0 0 0*/
   #programming
     b
       color: #3826d7
@@ -202,3 +209,9 @@ footer
 
 .Aligner-item--bottom
   align-self: flex-end
+
+.swatch
+  margin: 1rem auto
+  text-align: center
+  float: none
+  display: block
