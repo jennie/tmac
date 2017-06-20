@@ -27,7 +27,7 @@ extends(src='layout.sml')
             .col-md-8
               div(md).
 
-                -   [AGCO update & Ward 18 community event](#june-2017-update) June 9, 2017
+                -   [AGCO update & Ward 18 community event](#june-2017-update) June 19, 2017
                 -   [Spring 2017 update](#spring-2017) May 15, 2017
                 -   [Mediation progress &amp; Urbancorp bankruptcy](#progress) September 30, 2016
                 -   [Mediation date set!](#mediation) September 21, 2015
@@ -38,7 +38,7 @@ extends(src='layout.sml')
 
                 ### AGCO update & Ward 18 community event
 
-                **June 9, 2017**
+                **June 19, 2017**
 
                 Our license application – and news of progress towards occupying the arts hub – has been met with excitement by the local community at 36 Lisgar, 150 Sudbury, 68 Abell and surrounding residences! However, we've heard a concern about the proposed outdoor patio adjacent to Lisgar Park and our cafe, and will be modifying our application accordingly. Our goal is to be good neighbors and bring new opportunities for the community to freely and safely engage with arts right in their neighborhood, so we're sensitive to the needs of folks who live nearby.
 
