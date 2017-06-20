@@ -27,6 +27,7 @@ extends(src='layout.sml')
             .col-md-8
               div(md).
 
+                -   [AGCO update & Ward 18 community event](#june-2017-update) June 9, 2017
                 -   [Spring 2017 update](#spring-2017) May 15, 2017
                 -   [Mediation progress &amp; Urbancorp bankruptcy](#progress) September 30, 2016
                 -   [Mediation date set!](#mediation) September 21, 2015
@@ -34,6 +35,29 @@ extends(src='layout.sml')
                 -   [Response to the City's Statement of Defense](#sod-response) June 29, 2015
                 -   [A Way Forward](#way-forward) June 22, 2015
                 -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
+
+                ### AGCO update & Ward 18 community event
+
+                **June 9, 2017**
+
+                Our license application – and news of progress towards occupying the arts hub – has been met with excitement by the local community at 36 Lisgar, 150 Sudbury, 68 Abell and surrounding residences! However, we've heard a concern about the proposed outdoor patio adjacent to Lisgar Park and our cafe, and will be modifying our application accordingly. Our goal is to be good neighbors and bring new opportunities for the community to freely and safely engage with arts right in their neighborhood, so we're sensitive to the needs of folks who live nearby.
+
+                  [Drop us a line](mailto:info@tomediaarts.org) if you have any questions about the licensing process!
+
+                #### Ward 18 Talks: Artist and Cultural Spaces
+
+                [Join us](http://www.anabailao.com/artspaces) on Thursday, June 22 at Henderson Brewing Co. for a panel hosted by our ward councillor Ana Bailão on the topic of creating and retaining new arts spaces across the City.
+
+                - **What:** Panel and Q&A with City Planning and arts organization staff
+                - **Date & Time:** Thur, June 22 at 6:30 p.m.
+                - **Venue:** Henderson Brewery at [128A Sterling Road](https://www.google.com/maps?q=128A+Sterling+Rd,+Toronto,+ON+M6P+0A1,+Canada) (wheelchair–accessible)
+
+              div.alert.alert-success
+                span We are very interested in learning how the City plans to ensure local communities' and arts groups' needs – not just those of profit-driven developers – are met through Section 37 deals and other City-facilitated cultural partnerships in the future.
+
+              div(md).
+
+                [Read more about the event and RSVP.](http://www.anabailao.com/artspaces)
 
                 ### Spring 2017 update<a name=spring-2017></a>
 
@@ -63,6 +87,7 @@ extends(src='layout.sml')
                 You can view the [original application](/docs/TMAC-AGCO-Liquor-License-Application-Feb-2014.pdf) (director information has been kept up-to-date with the AGCO, of course) as well as [floor plans](/docs/TMAC-AGCO-Liquor-License-Application-proposed-licensed-areas.pdf) that show where alcohol will be allowed to be sold and consumed.
 
                 TMAC is designed to be a space that engages the public with the art created and exhibited here. Part of the way we will support the sustainability of the centre is through public licensed events and a café. Rather than seeking special occasion permits for every gallery opening, film screening, fundraiser or other public event, a license allows us to offer consistent public programming at a lower cost to TMAC, and generate revenues that go back into our operating fund.
+
 
               .row
                 .col-md-6
@@ -267,74 +292,8 @@ extends(src='layout.sml')
                   | &nbsp;•&nbsp;
                   a(href='mailto:media@tomediaarts.org') Media inquiries
 
-              hr
-              h3 Coverage
-              ul.media-coverage
-                li
-                  a(href='http://torontoist.com/2015/06/we-had-a-deal-and-were-not-walking-away/')
-                    b Torontoist:
-                    |  Arts Without a Home
-                li
-                  a(href='http://metronews.ca/news/toronto/1413547/city-blames-toronto-media-arts-centre-in-lawsuit-over-arts-space/')
-                    b Metro Toronto:
-                    |  City, arts group face off
-                li
-                  a(href='http://www.thestar.com/entertainment/visualarts/2015/06/30/city-of-toronto-denies-claims-in-community-arts-group-lawsuit.html')
-                    b Toronto Star:
-                    |  City of Toronto denies claims in community arts group lawsuit
-                li
-                  a(href='https://www.youtube.com/watch?v=Q-ljOD_zQcQ&feature=youtu.be')
-                    b CBC News:
-                    |  Toronto Media Arts Centre group angry after deal to run west-end space falls through
-                  |  (video)
-                li
-                  a(href='http://metronews.ca/news/toronto/1398213/charity-sues-city-of-toronto-developer-over-use-of-art-space/')
-                    b The Globe & Mail:
-                    |  Toronto arts group sue city and developer in battle over Queen West cultural centre
-                  br
-                  | by John Lorinc
-                li
-                  a(href='http://www.theglobeandmail.com/news/toronto/toronto-arts-consortium-launches-lawsuit-over-queen-west-facility/article24958832/')
-                    b Globe and Mail:
-                    |  Toronto arts consortium launches lawsuit over Queen West facility
-                  br
-                  | by John Lorinc
-                li
-                  a(href='http://www.thestar.com/entertainment/visualarts/2015/06/15/group-sues-city-over-cancelled-queen-west-arts-hub.html')
-                    b Toronto Star:
-                    |  Group sues city over cancelled Queen West arts hub
-                  br
-                  | by Murray Whyte
-                li
-                  a(href='http://globalnews.ca/video/2060779/toronto-media-arts-centre-sues-city-over-queen-st-west-art-space')
-                    b Global News:
-                    |  Toronto Media Arts Centre sues city over Queen St. West art space
-                  |  (video)
-                li
-                  a(href='http://metronews.ca/news/toronto/1398213/charity-sues-city-of-toronto-developer-over-use-of-art-space/')
-                    b Metro Toronto:
-                    |  Charity sues City of Toronto, developer over use of art space
 
 
-              h3 Related Stories
-
-              ul.media-coverage
-                li
-                  a(href="http://www.blogto.com/arts/2012/05/massive_arts_hub_coming_to_west_queen_west_triangle/") BlogTO: Massive arts hub coming to West Queen West Triangle
-                li
-                  a(href="http://canadianart.ca/features/toronto-condos-story/") Canadian Art: Condos: Boon or Blight for the Toronto Art Scene?
-                li
-                  a(href="http://www.theglobeandmail.com/news/toronto/the-unexpected-merits-of-torontos-condo-boom/article4178396/") The Globe &amp; Mail: The unexpected merits of Toronto's condo boom
-                li
-                  a(href="http://www.thestar.com/entertainment/visualarts/2015/04/04/drawing-the-line-on-cultural-development-in-toronto.html") The Star: Drawing the line on cultural development in Toronto
-                li
-                  a(href="http://www.vice.com/en_ca/read/condos-are-destroying-art-galleries-on-queen-west") VICE: Condos Are Destroying Art Galleries on Queen West
-                li
-                  a(href="http://netgainpartners.com/blog/false-dilemma-about-section-37-deals/") Netgain Partners: A false dilemma about Section 37 deals
-                li
-                  a(href="http://www.theglobeandmail.com/news/toronto/unstoppable-real-estate-market-displaces-beatrice-house-shelter/article25042379/") The Globe &amp; Mail: Unstoppable real estate market displaces Beatrice House shelter
-
-              hr
               .timeline
                 h3 Timeline
                 .row
@@ -363,7 +322,7 @@ extends(src='layout.sml')
                       a(href="/docs/Section-37-Agreement-executed.pdf") Section 37 agreement
                       |  (PDF) subject to a&nbsp;
                       a(href="/docs/Land-Use-Agreement-executed.pdf") land use agreement
-                      | (PDF)
+                      |  (PDF)
 
                 .row
                   .col-md-3
@@ -419,3 +378,70 @@ extends(src='layout.sml')
                   .col-md-9
                     p
                       | Litigation is ongoing, but parties are working toward a settlement.
+              hr
+
+              h3 Coverage
+              ul.media-coverage
+                li
+                  a(href='http://torontoist.com/2015/06/we-had-a-deal-and-were-not-walking-away/')
+                    b Torontoist:
+                    |  Arts Without a Home
+                li
+                  a(href='http://metronews.ca/news/toronto/1413547/city-blames-toronto-media-arts-centre-in-lawsuit-over-arts-space/')
+                    b Metro Toronto:
+                    |  City, arts group face off
+                li
+                  a(href='http://www.thestar.com/entertainment/visualarts/2015/06/30/city-of-toronto-denies-claims-in-community-arts-group-lawsuit.html')
+                    b Toronto Star:
+                    |  City of Toronto denies claims in community arts group lawsuit
+                li
+                  a(href='https://www.youtube.com/watch?v=Q-ljOD_zQcQ&feature=youtu.be')
+                    b CBC News:
+                    |  Toronto Media Arts Centre group angry after deal to run west-end space falls through
+                  |  (video)
+                li
+                  a(href='https://www.theglobeandmail.com/news/toronto/toronto-arts-group-sue-city-and-developer-in-battle-over-queen-west-cultural-centre')
+                    b The Globe & Mail:
+                    |  Toronto arts group sue city and developer in battle over Queen West cultural centre
+                  br
+                  | by John Lorinc
+                li
+                  a(href='http://www.theglobeandmail.com/news/toronto/toronto-arts-consortium-launches-lawsuit-over-queen-west-facility/article24958832/')
+                    b Globe and Mail:
+                    |  Toronto arts consortium launches lawsuit over Queen West facility
+                  br
+                  | by John Lorinc
+                li
+                  a(href='http://www.thestar.com/entertainment/visualarts/2015/06/15/group-sues-city-over-cancelled-queen-west-arts-hub.html')
+                    b Toronto Star:
+                    |  Group sues city over cancelled Queen West arts hub
+                  br
+                  | by Murray Whyte
+                li
+                  a(href='http://globalnews.ca/video/2060779/toronto-media-arts-centre-sues-city-over-queen-st-west-art-space')
+                    b Global News:
+                    |  Toronto Media Arts Centre sues city over Queen St. West art space
+                  |  (video)
+                li
+                  a(href='http://metronews.ca/news/toronto/1398213/charity-sues-city-of-toronto-developer-over-use-of-art-space/')
+                    b Metro Toronto:
+                    |  Charity sues City of Toronto, developer over use of art space
+
+
+              h3 Related Stories
+
+              ul.media-coverage
+                li
+                  a(href="http://www.blogto.com/arts/2012/05/massive_arts_hub_coming_to_west_queen_west_triangle/") BlogTO: Massive arts hub coming to West Queen West Triangle
+                li
+                  a(href="http://canadianart.ca/features/toronto-condos-story/") Canadian Art: Condos: Boon or Blight for the Toronto Art Scene?
+                li
+                  a(href="http://www.theglobeandmail.com/news/toronto/the-unexpected-merits-of-torontos-condo-boom/article4178396/") The Globe &amp; Mail: The unexpected merits of Toronto's condo boom
+                li
+                  a(href="http://www.thestar.com/entertainment/visualarts/2015/04/04/drawing-the-line-on-cultural-development-in-toronto.html") The Star: Drawing the line on cultural development in Toronto
+                li
+                  a(href="http://www.vice.com/en_ca/read/condos-are-destroying-art-galleries-on-queen-west") VICE: Condos Are Destroying Art Galleries on Queen West
+                li
+                  a(href="http://netgainpartners.com/blog/false-dilemma-about-section-37-deals/") Netgain Partners: A false dilemma about Section 37 deals
+                li
+                  a(href="http://www.theglobeandmail.com/news/toronto/unstoppable-real-estate-market-displaces-beatrice-house-shelter/article25042379/") The Globe &amp; Mail: Unstoppable real estate market displaces Beatrice House shelter
