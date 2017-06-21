@@ -432,6 +432,9 @@ extends(src='layout.sml')
 
               ul.media-coverage
                 li
+                  a(https://www.thestar.com/entertainment/visualarts/2016/10/23/skyrocketing-commercial-rents-purge-reluctant-artists-from-the-west-end.html) Skyrocketing commercial rents purge reluctant artists from Toronto’s west end
+
+                li
                   a(href="http://www.blogto.com/arts/2012/05/massive_arts_hub_coming_to_west_queen_west_triangle/") BlogTO: Massive arts hub coming to West Queen West Triangle
                 li
                   a(href="http://canadianart.ca/features/toronto-condos-story/") Canadian Art: Condos: Boon or Blight for the Toronto Art Scene?
