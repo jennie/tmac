@@ -38,7 +38,7 @@ extends(src='layout.sml')
                 -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
 
                 #### <a name=moving-forward>
-                
+
                 ### Moving forward with our claim against the City</a>
 
                 As our community is painfully aware, our fight to protect the cultural benefit at 36 Lisgar and secure a permanent home for media arts in Toronto has dragged on for years. All we have asked is for Urbancorp to deliver on its contractual obligations to us – nothing more, nothing less. The City has always had the ability to compel them to do so, but has not.
@@ -69,6 +69,9 @@ extends(src='layout.sml')
               div(md).
 
                 We'll be in touch about what you can do to support TMAC very soon. In the meantime, [sign this petition](https://www.change.org/p/kathleen-wynne-save-401-richmond?recruiter=737031617&utm_source=share_petition&utm_medium=copylink&utm_campaign=share_petition&utm_term=share_petition) to support 401 Richmond as it faces a property tax increase that could leave hundreds of artists, arts nonprofits and civic orgs without a home.
+
+                <img src=images/photos/tmac-meeting-parkdale.jpg class=img-fluid>
+
 
                 ### AGCO update & Ward 18 community event
 
