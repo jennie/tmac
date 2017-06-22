@@ -27,6 +27,7 @@ extends(src='layout.sml')
             .col-md-8
               div(md).
 
+                -   [Moving forward with our claim against the City](#moving-forward) June 22, 2017
                 -   [AGCO update & Ward 18 community event](#june-2017-update) June 19, 2017
                 -   [Spring 2017 update](#spring-2017) May 15, 2017
                 -   [Mediation progress &amp; Urbancorp bankruptcy](#progress) September 30, 2016
@@ -35,6 +36,39 @@ extends(src='layout.sml')
                 -   [Response to the City's Statement of Defense](#sod-response) June 29, 2015
                 -   [A Way Forward](#way-forward) June 22, 2015
                 -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
+
+                #### <a name=moving-forward>
+                
+                ### Moving forward with our claim against the City</a>
+
+                As our community is painfully aware, our fight to protect the cultural benefit at 36 Lisgar and secure a permanent home for media arts in Toronto has dragged on for years. All we have asked is for Urbancorp to deliver on its contractual obligations to us – nothing more, nothing less. The City has always had the ability to compel them to do so, but has not.
+
+                ### A brief background
+
+                In May 2015, Urbancorp refused to allow us to close on the property because it had not finished work.
+
+                As stewards of public funding, as small non-profits with long histories planning our future as part of this collaborative organization, we could not simply shrug our shoulders and walk away.
+
+                Without the City as an advocate, we had no choice but to protect ourselves by filing a claim against Urbancorp and the City.
+
+                In June of that year – despite our pending litigation – the City [invited the community to a consultation](https://www.youtube.com/watch?v=Q-ljOD_zQcQ&feature=youtu.be) to determine who should operate the space instead of TMAC. Through no fault of ours, the space was to be handed over to a different group after years of work designing the space, and close to $1 million of public funding secured by TMAC to build and operate it.
+
+                The message from the community at that consultation – attended by 200+ – sent a clear message to the City: **We want TMAC in its space.**
+
+                Finally, in October 2015, the City agreed to negotiate a settlement with TMAC and sat down at the table with us.
+
+                ### Two years of negotiations
+
+                Through two years of negotiations, we have been driven by the support and conviction of local residents, artists, our members and funders, that this space is essential to the future of media arts in Toronto. It’s been hard work. Many hundreds of volunteer hours by our board and members of our nonprofit organizations have been invested in righting our alliance with the City and protecting the community benefit at 36 Lisgar.
+
+                We’ve been very optimistic that a resolution could be reached – despite the complexity introduced by Urbancorp’s filing for bankruptcy protection in April 2016 – because our conversations with the City have been consistently positive and productive. **Unfortunately, the negotiations have not resulted in a settlement.**
+
+              div.alert.alert-success
+                span The City’s official position has not changed. From a legal perspective, it does not recognize TMAC’s right to purchase the space. From a policy perspective, it does not support TMAC’s efforts to find a permanent home for Toronto’s media arts community. This is, of course, a deeply disappointing situation given all of the time and effort put into the negotiation process by all parties. But we see no alternative to proceeding with our claim against the City of Toronto.
+
+              div(md).
+
+                We'll be in touch about what you can do to support TMAC very soon. In the meantime, [sign this petition](https://www.change.org/p/kathleen-wynne-save-401-richmond?recruiter=737031617&utm_source=share_petition&utm_medium=copylink&utm_campaign=share_petition&utm_term=share_petition) to support 401 Richmond as it faces a property tax increase that could leave hundreds of artists, arts nonprofits and civic orgs without a home.
 
                 ### AGCO update & Ward 18 community event
 
@@ -46,11 +80,11 @@ extends(src='layout.sml')
 
                 #### Ward 18 Talks: Artist and Cultural Spaces
 
-                [Join us](http://www.anabailao.com/artspaces) on Thursday, June 22 at Henderson Brewing Co. for a panel hosted by our ward councillor Ana Bailão on the topic of creating and retaining new arts spaces across the City.
+                [Join us](http://www.anabailao.com/artspaces) on Thursday, June 22 at **The Drake Commissary** for a panel hosted by our ward councillor Ana Bailão on the topic of creating and retaining new arts spaces across the City.
 
                 - **What:** Panel and Q&A with City Planning and arts organization staff
                 - **Date & Time:** Thur, June 22 at 6:30 p.m.
-                - **Venue:** Henderson Brewery at [128A Sterling Road](https://www.google.com/maps?q=128A+Sterling+Rd,+Toronto,+ON+M6P+0A1,+Canada) (wheelchair–accessible)
+                - **Venue:** Drake Commissary at [128 Sterling Road](https://www.google.com/maps?q=128+Sterling+Rd,+Toronto,+ON+M6P+0A1,+Canada) (If you use a wheelchair or other assistive device, ring the doorbell at the main entrance and someone will come get you to bring you to the accessible entrance. Washroom on the main floor is accessible.)
 
               div.alert.alert-success
                 span We are very interested in learning how the City plans to ensure local communities' and arts groups' needs – not just those of profit-driven developers – are met through Section 37 deals and other City-facilitated cultural partnerships in the future.
@@ -431,6 +465,8 @@ extends(src='layout.sml')
               h3 Related Stories
 
               ul.media-coverage
+                li
+                  a(href="") City moves to save 401 Richmond and other cultural institutions
                 li
                   a(href="https://www.thestar.com/entertainment/visualarts/2016/10/23/skyrocketing-commercial-rents-purge-reluctant-artists-from-the-west-end.html") Skyrocketing commercial rents purge reluctant artists from Toronto’s west end
                 li
