@@ -317,22 +317,25 @@ extends(src='layout.sml')
 
 
             .col-md-4.aside
-
-
               .visible-xs
                 h3 Get In Touch
-
                 p
                   a(href='http://twitter.com/TOMediaArts') Twitter
                   | &nbsp;•&nbsp;
                   a(href='https://www.facebook.com/pages/Toronto-Media-Arts-Centre/842345815814723') Facebook
                   | &nbsp;•&nbsp;
                   a(href='mailto:media@tomediaarts.org') Media inquiries
-
-
-
               .timeline
                 h3 Timeline
+                .row
+                  .col-md-3
+                    h4 1994
+                  .col-md-9
+                    p
+                      | TMAC's precursor, the Cultural Arts Centre Toronto (CACTI), commissions a&nbsp;
+                      a(href="/docs/cacti-study-1994.pdf") feasibility study
+                      | &nbsp;(PDF).
+                      img.img-fluid(src='/images/cacti-cover.png', alt='')
                 .row
                   .col-md-3
                     h4 2003
@@ -470,6 +473,8 @@ extends(src='layout.sml')
               ul.media-coverage
                 li
                   a(href="") City moves to save 401 Richmond and other cultural institutions
+                li
+                  a(href="https://www.thestar.com/opinion/editorials/2017/06/19/queens-park-must-change-tax-policy-to-save-cultural-hubs-editorial.html") Queen’s Park must change tax policy to save cultural hubs: Editorial
                 li
                   a(href="https://www.thestar.com/entertainment/visualarts/2016/10/23/skyrocketing-commercial-rents-purge-reluctant-artists-from-the-west-end.html") Skyrocketing commercial rents purge reluctant artists from Toronto’s west end
                 li
