@@ -27,6 +27,7 @@ extends(src='layout.sml')
             .col-md-8
               div(md).
 
+                -   [Some positive momentum](#positive-momentum) September 20, 2017
                 -   [Moving forward with our claim against the City](#moving-forward) June 22, 2017
                 -   [AGCO update & Ward 18 community event](#june-2017-update) June 19, 2017
                 -   [Spring 2017 update](#spring-2017) May 15, 2017
@@ -36,6 +37,20 @@ extends(src='layout.sml')
                 -   [Response to the City's Statement of Defense](#sod-response) June 29, 2015
                 -   [A Way Forward](#way-forward) June 22, 2015
                 -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
+
+                #### <a name=positive-momentum>
+
+                ### Some positive momentum</a>
+
+                **September 20, 2017**
+
+                We're once again in productive talks with the City of Toronto about coming to mutually acceptable terms about the space at 36 Lisgar and certain a resolution is just around the corner.
+
+                **In the meantime:** Space has become very tight for TMAC member Dames Making Games, as the organization is growing faster than its small office can accommodate (this is, in fact, true of all our member organizations!). With an end-of-summer exhibition and conference planned for September 29 and 30, they found themselves without a suitable venue. As a gesture of good will and community support, the current owner of the TMAC space has given us the go-ahead to host the DMG events there. We're excited to bring Charles Street Video, CFMDC, Gamma Space and DMG together with the local community at 36 Lisgar for the first time later this month!
+
+                - **What:** [Damage Camp opening reception and conference](https://www.damage.camp)
+                - **Date & Time:** Friday, September 29 at 8pm; Saturday, Sep 30 10am-7pm
+                - **Venue:** TMAC [36 Lisgar Street](https://www.google.ca/maps/place/Toronto+Media+Arts+Centre/@43.6420699,-79.4232241,15z/data=!4m2!3m1!1s0x0:0x1ca084cfc4618789?sa=X&ved=0ahUKEwjCh6ruo7TWAhVF6IMKHdVrAuQQ_BIIczAK) (Accessibility: There is a  ramp leading to the ground-floor entrance from Abell Street. Inside TMAC, the event space is accessible via elevator. There are multiple wheelchair-accessible washrooms and barrier-free access to all event spaces.)
 
                 #### <a name=moving-forward>
 
