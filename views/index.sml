@@ -9,10 +9,6 @@ extends(src='layout.sml')
       // .buttons
       //   a.btn.my-btn.btn-lg(href='/festival-hub') Film Festival Membership
 
-    div.alert.alert-success#letter-callout
-      span
-        a(href='/dispute') More information about our lawsuit against Urbancorp and the City of Toronto. Updated June 2017.
-
     main
 
       section#mission
@@ -112,6 +108,10 @@ extends(src='layout.sml')
                 - A temperature-controlled vault and archive
                 - Technical and production facilities
                 - Public galleries and **exhibition spaces**
+
+      div.alert.alert-success#letter-callout
+        span
+          a(href='/dispute') More information about our lawsuit against Urbancorp and the City of Toronto. Updated June 2017.
 
       section#facility
         .container
