@@ -11,6 +11,10 @@ extends(src='layout.sml')
 
     main
 
+      div.alert.alert-success#letter-callout
+        span
+          a(href='/dispute') More information about our lawsuit against Urbancorp and the City of Toronto. Updated September 2017.
+          
       section#mission
         .container
           .row
@@ -109,9 +113,6 @@ extends(src='layout.sml')
                 - Technical and production facilities
                 - Public galleries and **exhibition spaces**
 
-      div.alert.alert-success#letter-callout
-        span
-          a(href='/dispute') More information about our lawsuit against Urbancorp and the City of Toronto. Updated June 2017.
 
       section#facility
         .container
