@@ -1,46 +1,54 @@
 @import '_global.sss'
+
 body
   height: 100%
   width: 100%
   position: relative
   overflow-x: hidden
-  padding:0
-  margin:0
-  .media-coverage
-    li
-      margin-bottom: 1em
+  padding: 0
+  margin: 0
+
+
+
   &#dispute
-    header
+    & header
       height: auto
-    .aside
-      h4
+    & .aside
+      & h4
         margin: 0
         font-size: 14px
         line-height: 1.3em
         text-transform: uppercase
-      .timeline
+      & .timeline
         font-size: 14px
 
-        .row
+        & .row
           border-top: solid 1px #eee
           padding: .5em 0
-    h3
+    & h3
       margin-top: 2em
-    #cta,.highlight
+    & #cta,
+    & .highlight
       background-color: #fff695
       padding: 1em
-    .sidebar
-      h3
+    & .sidebar
+      & h3
         margin-top: .75em
-    .download-platforms
+    & .download-platforms
       margin: 2em 0 0 0
       text-align: left
-      *
+      & *
         margin: 0
-    .content p:first-of-type, p.no-indent, .no-indent p
+    & .content p:first-of-type
       text-indent: 0
-    p+p
-      /*text-indent: 1.5em*/
+    & p.no-indent
+      text-indent: 0
+    & .no-indent p
+      text-indent: 0
+
+.media-coverage li
+  margin-bottom: 1em
+
 .cta
   text-align: center
   margin: 3rem auto
@@ -49,7 +57,7 @@ body
   margin: 0
   text-align: center
   font-size: 1.4rem
-  *
+  & *
     border-radius: 0
 figure
   max-height: 50vh
@@ -68,22 +76,25 @@ header
   float: none
   margin: 0 auto
   display: block
-  h1
+  padding: 2em
+  background-position: center center
+  background-size: cover
+
+  & h1
     display: none
-  .lead
+
+  & .lead
     min-width: 40vw
     max-width: 80vw
     font-size: calc(14px + .7vw)
     display: block
     margin: 0 auto
 
-  .buttons
+  & .buttons
     margin: 1em 0 0 0
-  padding: 2em
-  /*background-image: url(/images/photos/south.jpg)*/
-  background-position: center center
-  background-size: cover
-  img
+
+
+  & img
     max-width: 500px
     margin-left: auto
     margin-right: auto
@@ -91,46 +102,49 @@ header
     float: none
     text-align: center
     display: block
+
 .dates
-  b
+  & b
     display: block
     font-size: 18px
 .download-platforms
   margin: 0 0 30px 0
-  a
+  & a
     color: inherit
     &:hover
       text-decoration: none
-  .icon
+  & .icon
     font-size: 48px
     margin: 0 20px
 .my-btn
-  // .button-variant(#fff, #000, #fff)
-  /*font-size: calc(14px + .7vw)*/
+
   letter-spacing: .1vw
   border-radius: .3rem
   font-weight: 400
   text-transform: uppercase
   color: #fff
   background-color: #0a223e
+
   &.small
     font-size: calc(14px)
-
 
   &:hover
     background-color: #000
     color: #fff
+
 .lead
   font-weight: 400
+
 main
-  a
+  & a
     text-decoration: underline
     color: #394EFF
     font-weight: 900
-  .aside
-    a
+
+  & .aside
+    & a
       font-weight: normal
-  h2
+  & h2
     text-transform: uppercase
     font-weight: 900
     letter-spacing: 1px
@@ -138,64 +152,74 @@ main
     margin: 0 0 .25em 0
     &.programming
       font-size: 24px
-  ul
+  & ul
     list-style: square
-    /*margin: 1em 0 0 0*/
-  #programming
-    b
-      color: #3826d7
+
+  & #programming b
+    color: #3826d7
+
 section
   background: #fff
   margin-top: 2em
   margin-bottom: 2em
+
   &#callout
     margin: 0 auto
     text-align: center
     padding: 1rem
     background-color: #fbfbfb
+
   &#post-header
     background-image: url('/images/26438888462_aac971043f_o.jpg')
     background-position: center top
     background-size: cover
     margin: 0
-    .content
+
+    & .content
       background: rgba(000,000,000,.6)
       color: #fff
       padding-bottom: 1em
       padding-top: 1em
+
 footer
   margin-left: auto
   margin-right: auto
   text-align: center
 
-  .vcard
+  & .vcard
     display: none
-  p
+  & p
     background: #fff
     padding: 5px
+
 .orgs
   clear: both
   display: flex
   align-items: center
   justify-content: center
-  .item
+
+  & .item
     width: 25%
     padding: .5rem
     align-items: center
     justify-content: center
+
 .wrapper
   display: table
   width: 100%
   height: 100%
   margin: auto
+
 .cell
   display: table-cell
   vertical-align: middle
   position: relative
-  p
+
+  & p
     margin: 0 auto
     text-align: center
     float: none
+
 .Aligner
   display: flex
   align-items: center
@@ -216,3 +240,12 @@ footer
   text-align: center
   float: none
   display: block
+.alert-success
+  border-radius: 0
+  background-color: #000
+  border: none
+  color: #fff
+
+  & a
+    color: #fff
+    font-weight: normal

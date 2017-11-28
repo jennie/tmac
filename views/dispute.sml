@@ -3,7 +3,9 @@ extends(src='layout.sml')
   block(name='content')
     figure(style="background-image:url(/images/photos/TMAC-gallery.jpg)")
     header
-      a(href="/"): img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
+      a(href="/")
+        img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
+
       h1 Toronto Media Arts Centre
 
       section#callout
@@ -26,7 +28,7 @@ extends(src='layout.sml')
             .col-md-8
               div(md).
 
-                -   [Update from our members](#update-from-our-members) November 28, 2017
+                -   [Updates from our members](#update-from-our-members) November 28, 2017
                 -   [Some positive momentum](#positive-momentum) September 20, 2017
                 -   [Moving forward with our claim against the City](#moving-forward) June 22, 2017
                 -   [AGCO update & Ward 18 community event](#june-2017-update) June 19, 2017
@@ -44,14 +46,13 @@ extends(src='layout.sml')
 
                 As you may have heard, three of our members are moving out of their current spaces this month. Dames Making Games, CFMDC, and Gamma Space have issued letters to their members:
 
-                * [CFMDC](http://mailchi.mp/c5106fd32457/cfmdc-move)
-                * [Dames Making Games](https://dmg.to/blog/a-new-home)
-                * [Gamma Space](https://www.gammaspace.ca/)
+                - [CFMDC](http://mailchi.mp/c5106fd32457/cfmdc-move)
+                - [Dames Making Games](https://dmg.to/blog/a-new-home)
+                - [Gamma Space](https://www.gammaspace.ca/)
 
                 On Monday, November 27, TMAC had a productive meeting with City staff and Councillor Ana Bailão about our members' urgent space issues. All agree that the process of finalizing the settlement is taking too long – it's been four months since an agreement in principle was reached and a MOU drafted. A solution is needed to house our organizations in the interim.
 
-              div.alert.alert-success
-                span City staff promised an update on Wednesday, November 30, and we'll share the details as soon as we can.
+                City staff promised an update on Wednesday, November 30, and we'll share the details as soon as we can.
 
                 #### <a name=positive-momentum>
 
