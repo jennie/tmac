@@ -44,6 +44,8 @@ extends(src='layout.sml')
 
                 ### Updates from our members</a>
 
+                **November 28, 2017**
+
                 As you may have heard, three of our members are moving out of their current spaces this month. Dames Making Games, CFMDC, and Gamma Space have issued letters to their members:
 
                 - [CFMDC](http://mailchi.mp/c5106fd32457/cfmdc-move)
