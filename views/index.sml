@@ -6,8 +6,6 @@ extends(src='layout.sml')
       img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
       h1 Toronto Media Arts Centre
       p.lead A new permanent home for Toronto's media arts organizations, and an accessible public space for art, creation and collaboration in the Queen West Triangle.
-      // .buttons
-      //   a.btn.my-btn.btn-lg(href='/festival-hub') Film Festival Membership
 
     main
 
@@ -86,7 +84,6 @@ extends(src='layout.sml')
               img.img-fluid(src='/images/photos/TMAC-gallery.jpg' alt='')
 
       section#callout
-        // Begin MailChimp Signup Form
         #mc_embed_signup
           form#mc-embedded-subscribe-form.validate.form-inline(action='//tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
             div(id='mc_embed_signup_scroll form-group')
@@ -95,15 +92,12 @@ extends(src='layout.sml')
               input#mc-embedded-subscribe.btn.my-btn(type='submit' value='Subscribe' name='subscribe')
               div(style='position: absolute; left: -5000px;')
                 input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')
-        // End mc_embed_signup
       section#post-header
         .container
           .row
             .col-md-8.content
               h2 Facility
               div(md).
-                <!-- Not only does the facility provide affordable space for non-profit arts organizations to operate, it will also engage the community of the Queen West Triangle with public performances, exhibitions, festivals, workshops and more.-->
-
                 Our multi-purpose facility offers shared spaces and amenities including:
                 - A **200-seat theatre** designed by renowned architect Peter Smith, for screening independent and experimental works
                 - Studio apartment for visiting **artist residencies**
