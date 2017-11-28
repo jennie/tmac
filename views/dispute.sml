@@ -16,8 +16,7 @@ extends(src='layout.sml')
               input#mc-embedded-subscribe.btn.my-btn(type='submit' value='Subscribe' name='subscribe')
               div(style='position: absolute; left: -5000px;')
                 input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')
-        // End mc_embed_signup      // .buttons
-      //   a.btn.my-btn.btn-lg(href='/festival-hub') Film Festival Membership
+
 
     main
 
@@ -27,6 +26,7 @@ extends(src='layout.sml')
             .col-md-8
               div(md).
 
+                -   [Update from our members](#update-from-our-members) November 28, 2017
                 -   [Some positive momentum](#positive-momentum) September 20, 2017
                 -   [Moving forward with our claim against the City](#moving-forward) June 22, 2017
                 -   [AGCO update & Ward 18 community event](#june-2017-update) June 19, 2017
@@ -37,6 +37,21 @@ extends(src='layout.sml')
                 -   [Response to the City's Statement of Defense](#sod-response) June 29, 2015
                 -   [A Way Forward](#way-forward) June 22, 2015
                 -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
+
+                #### <a name=update-from-our-members>
+
+                ### Updates from our members</a>
+
+                As you may have heard, three of our members are moving out of their current spaces this month. Dames Making Games, CFMDC, and Gamma Space have issued letters to their members:
+
+                * [CFMDC](http://mailchi.mp/c5106fd32457/cfmdc-move)
+                * [Dames Making Games](https://dmg.to/blog/a-new-home)
+                * [Gamma Space](https://www.gammaspace.ca/)
+
+                On Monday, November 27, TMAC had a productive meeting with City staff and Councillor Ana Bailão about our members' urgent space issues. All agree that the process of finalizing the settlement is taking too long – it's been four months since an agreement in principle was reached and a MOU drafted. A solution is needed to house our organizations in the interim.
+
+              div.alert.alert-success
+                span City staff promised an update on Wednesday, November 30, and we'll share the details as soon as we can.
 
                 #### <a name=positive-momentum>
 
