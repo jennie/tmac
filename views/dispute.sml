@@ -52,7 +52,7 @@ extends(src='layout.sml')
 
                 On Monday, November 27, TMAC had a productive meeting with City staff and Councillor Ana Bailão about our members' urgent space issues. All agree that the process of finalizing the settlement is taking too long – it's been four months since an agreement in principle was reached and a MOU drafted. A solution is needed to house our organizations in the interim.
 
-                City staff promised an update on Wednesday, November 30, and we'll share the details as soon as we can.
+                City staff promised an update on Wednesday, November 29, and we'll share the details as soon as we can.
 
                 #### <a name=positive-momentum>
 
