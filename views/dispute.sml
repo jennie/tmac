@@ -395,6 +395,7 @@ extends(src='layout.sml')
                       a(href="/docs/Land-Use-Agreement-executed.pdf") land use agreement
                       |  (PDF)
 
+
                 .row
                   .col-md-3
                     h4 2014
@@ -404,6 +405,12 @@ extends(src='layout.sml')
                       a(href='/docs/TMAC-Edge-City_APS-executed.pdf') Agreement of Purchase and Sale
                       |  (PDF)
                     img.img-fluid(src='/images/photos/tmac_agreement.jpeg', alt='')
+                .row
+                  .col-md-3
+                    h4 2012-2015
+                  .col-md-9
+                    p TMAC designs the facility, investing close to $1m in public funds and thousands of volunteer hours into overseeing the build
+
                 .row
                   .col-md-3
                     h4 April 2015
