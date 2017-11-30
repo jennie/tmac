@@ -56,6 +56,10 @@ extends(src='layout.sml')
 
                 City staff promised an update on Wednesday, November 29, and we'll share the details as soon as we can.
 
+              div.alert.alert-success
+                span <b>Update</b>: As of end of day November 29, we had not heard back from the City.
+
+              div(md).
                 #### <a name=positive-momentum>
 
                 ### Some positive momentum</a>
