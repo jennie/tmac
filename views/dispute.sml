@@ -500,7 +500,7 @@ extends(src='layout.sml')
                     |  Toronto Media Arts Centre group angry after deal to run west-end space falls through
                   |  (video)
                 li
-                  a(href='https://www.theglobeandmail.com/news/toronto/toronto-arts-group-sue-city-and-developer-in-battle-over-queen-west-cultural-centre')
+                  a(href='https://www.theglobeandmail.com/news/toronto/toronto-arts-group-sue-city-and-developer-in-battle-over-queen-west-cultural-centre/article25157323/')
                     b The Globe & Mail:
                     |  Toronto arts group sue city and developer in battle over Queen West cultural centre
                   br
