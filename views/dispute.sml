@@ -28,6 +28,7 @@ extends(src='layout.sml')
             .col-md-8
               div(md).
 
+                -   [City of Toronto rejects interim occupancy proposal](#city-rejects-interim-occupancy) December 18, 2017
                 -   [Updates from our members](#update-from-our-members) November 28, 2017
                 -   [Some positive momentum](#positive-momentum) September 20, 2017
                 -   [Moving forward with our claim against the City](#moving-forward) June 22, 2017
@@ -40,6 +41,25 @@ extends(src='layout.sml')
                 -   [A Way Forward](#way-forward) June 22, 2015
                 -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
 
+                #### <a name=city-rejects-interim-occupancy>
+
+                ### City of Toronto rejects interim occupancy proposal</a>
+
+                **December 18, 2017**
+
+                In a surprising development, City staff have refused to support TMAC's efforts to relieve its [space crisis](#update-from-our-members) while we wait for Edge on Triangle Park to finalize its portion of the resolution we've been working towards.
+
+                > City staff have reviewed, and reject, the proposal.
+                > The City remains prepared to move this matter forward if the Plaintiff is prepared to sign the Minutes of Settlement as last revised on November 27, 2017. (Christopher J. Henderson, City of Toronto Legal Services, Dec. 14, 2017)
+
+                Our proposal to enter into an interim license agreement *would not have impacted the legal position of the City or the lawsuit in any way.* Inexplicably, City staff rejected it. We have four arts organizations that need space, and a space – **sitting empty for almost 3 years now** – that needs arts organizations.
+
+                The City also continues to ask us to sign Minutes of Settlement that are incomplete. We're not willing to risk TMAC's future and this community benefit in the Queen West Triangle by doing so.
+
+              div.alert.alert-success
+                span We want to continue on a cooperative path and believe an agreement satisfactory to all sides is possible – but TMAC has nowhere to go on January 1. We'll be taking further steps to protect the future of media arts in Toronto.
+
+              div(md).
                 #### <a name=update-from-our-members>
 
                 ### Updates from our members</a>
@@ -57,9 +77,10 @@ extends(src='layout.sml')
                 City staff promised an update on Wednesday, November 29, and we'll share the details as soon as we can.
 
               div.alert.alert-success
-                span <b>Update</b>: As of end of day November 29, we had not heard back from the City.
+                span Update: As of end of day November 29, we had not heard back from the City.
 
               div(md).
+
                 #### <a name=positive-momentum>
 
                 ### Some positive momentum</a>

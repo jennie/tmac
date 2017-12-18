@@ -11,7 +11,7 @@ extends(src='layout.sml')
 
       div.alert.alert-success#letter-callout
         span: a(href='/dispute') More information about our lawsuit against Urbancorp and the City of Toronto.
-        span: small Updated November 2017.
+        span: small Updated December 2017.
 
       section#mission
         .container
