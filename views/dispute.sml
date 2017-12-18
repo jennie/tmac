@@ -49,10 +49,7 @@ extends(src='layout.sml')
 
                 In a surprising development, City staff have refused to support TMAC's efforts to relieve its [space crisis](#update-from-our-members) while we wait for Edge on Triangle Park to finalize its portion of the resolution we've been working towards.
 
-                > City staff have reviewed, and reject, the proposal.
-                > The City remains prepared to move this matter forward if the Plaintiff is prepared to sign the Minutes of Settlement as last revised on November 27, 2017. (Christopher J. Henderson, City of Toronto Legal Services, Dec. 14, 2017)
-
-                Our proposal to enter into an interim license agreement *would not have impacted the legal position of the City or the lawsuit in any way.* Inexplicably, City staff rejected it. We have four arts organizations that need space, and a space – **sitting empty for almost 3 years now** – that needs arts organizations.
+                We have four arts organizations that need space, and a space – **sitting empty for almost 3 years now** – that needs arts organizations.
 
                 The City also continues to ask us to sign Minutes of Settlement that are incomplete. We're not willing to risk TMAC's future and this community benefit in the Queen West Triangle by doing so.
 
