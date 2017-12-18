@@ -49,7 +49,7 @@ extends(src='layout.sml')
 
                 In a surprising development, City staff have refused to support TMAC's efforts to relieve its [space crisis](#update-from-our-members) while we wait for Edge on Triangle Park to finalize its portion of the resolution we've been working towards.
 
-                We have four arts organizations that need space, and a space – **sitting empty for almost 3 years now** – that needs arts organizations.
+                Our proposal to enter into an interim license agreement *would not impair the legal position of the City.* Inexplicably, City staff rejected it. We have four arts organizations that need space, and a space – **sitting empty for almost 3 years now** – that needs arts organizations.
 
               div.alert.alert-success
                 span We want to continue on a cooperative path and believe an agreement satisfactory to all sides is possible – but TMAC has nowhere to go on January 1. We'll be taking further steps to protect the future of media arts in Toronto.
