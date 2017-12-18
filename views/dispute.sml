@@ -532,7 +532,7 @@ extends(src='layout.sml')
 
               ul.media-coverage
                 li
-                  a(href="") City moves to save 401 Richmond and other cultural institutions
+                  a(href="https://www.thestar.com/entertainment/visualarts/2016/10/23/skyrocketing-commercial-rents-purge-reluctant-artists-from-the-west-end.html") Skyrocketing commercial rents purge reluctant artists from Toronto’s west end
                 li
                   a(href="https://www.thestar.com/opinion/editorials/2017/06/19/queens-park-must-change-tax-policy-to-save-cultural-hubs-editorial.html") Queen’s Park must change tax policy to save cultural hubs: Editorial
                 li
