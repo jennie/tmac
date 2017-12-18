@@ -51,8 +51,6 @@ extends(src='layout.sml')
 
                 We have four arts organizations that need space, and a space – **sitting empty for almost 3 years now** – that needs arts organizations.
 
-                The City also continues to ask us to sign Minutes of Settlement that are incomplete. We're not willing to risk TMAC's future and this community benefit in the Queen West Triangle by doing so.
-
               div.alert.alert-success
                 span We want to continue on a cooperative path and believe an agreement satisfactory to all sides is possible – but TMAC has nowhere to go on January 1. We'll be taking further steps to protect the future of media arts in Toronto.
 
