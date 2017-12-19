@@ -46,7 +46,7 @@ extends(src='layout.sml')
 
                 **December 19, 2017**
 
-                Today, the Toronto Media Arts Centre will ask the court for an injunction to prevent the City from blocking our interim occupancy of the arts space at 36 Lisgar – **a privilege Urbancorp has enjoyed for over a year with the explicit blessing of City staff.**
+                The Toronto Media Arts Centre will ask the court for an injunction to prevent the City from blocking our interim occupancy of the arts space at 36 Lisgar – **a privilege Urbancorp has enjoyed for over a year with the explicit blessing of City staff.**
 
                 TMAC spent 2017 in intense negotiation, working towards a resolution that everyone can live with. While we’re close, we haven’t reached an agreement yet.
 
@@ -499,6 +499,12 @@ extends(src='layout.sml')
                   .col-md-9
                     p
                       | Litigation is ongoing, but parties are working toward a settlement.
+                .row
+                  .col-md-3
+                    h4 December 2017
+                  .col-md-9
+                    p
+                      | TMAC files motion for an injunction to prevent the City from blocking our temporary occupancy of the space while we continue negotiating the settlement
               hr
 
               h3 Coverage
