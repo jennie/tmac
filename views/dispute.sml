@@ -19,15 +19,14 @@ extends(src='layout.sml')
               div(style='position: absolute; left: -5000px;')
                 input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')
 
-
     main
-
       section#mission
         .container
           .row
             .col-md-8
               div(md).
 
+                -   [TMAC to file injunction over arts space at 36 Lisgar](#tmac-injunction) December 19, 2017
                 -   [City of Toronto rejects interim occupancy proposal](#city-rejects-interim-occupancy) December 18, 2017
                 -   [Updates from our members](#update-from-our-members) November 28, 2017
                 -   [Some positive momentum](#positive-momentum) September 20, 2017
@@ -40,6 +39,25 @@ extends(src='layout.sml')
                 -   [Response to the City's Statement of Defense](#sod-response) June 29, 2015
                 -   [A Way Forward](#way-forward) June 22, 2015
                 -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
+
+                #### <a name=tmac-injunction>
+
+                ### TMAC to file injunction over arts space at 36 Lisgar</a>
+
+                **December 19, 2017**
+
+                Tomorrow, the Toronto Media Arts Centre will ask the court for an injunction to prevent the City from blocking our interim occupancy of the arts space at 36 Lisgar – **a privilege Urbancorp has enjoyed for over a year with the explicit blessing of City staff.**
+
+                TMAC spent 2017 in intense negotiation, working towards a resolution that everyone can live with. While we’re close, we haven’t reached an agreement yet.
+
+                We are in the midst of a space crisis. Most of our members are losing their current spaces this month, a problem we identified years ago and the very reason TMAC was formed and is urgently needed.
+
+                To relieve this burden and prevent the damage an interruption to our operations would cause the community, we proposed an interim occupancy arrangement that would not affect any of the parties’ rights. Simply put, we asked the City not to stand in the way of our moving into the space temporarily while the details of the agreement are finalized.
+
+                **The City has rejected our proposal and made it plain they will block us from pursuing this relief** – offering no alternative.
+
+                The City of Toronto does not support our efforts to ensure the continuity of media arts in Toronto. Urbancorp continues to benefit – with the City’s permission – while artists and nonprofits go homeless.
+
 
                 #### <a name=city-rejects-interim-occupancy>
 
@@ -94,6 +112,8 @@ extends(src='layout.sml')
 
                 ### Moving forward with our claim against the City</a>
 
+                **June 22, 2017**
+
                 As our community is painfully aware, our fight to protect the cultural benefit at 36 Lisgar and secure a permanent home for media arts in Toronto has dragged on for years. All we have asked is for Urbancorp to deliver on its contractual obligations to us – nothing more, nothing less. The City has always had the ability to compel them to do so, but has not.
 
                 ### A brief background
@@ -125,6 +145,7 @@ extends(src='layout.sml')
 
                 <img src=images/photos/tmac-meeting-parkdale.jpg class=img-fluid>
 
+                #### <a name=june-2017-update>
 
                 ### AGCO update & Ward 18 community event
 
