@@ -1,5 +1,13 @@
 extends(src='layout.sml')
 
+  block(name='meta')
+
+    meta(name='description' content="A comprehensive timeline and documentation of TMAC's 2015 lawsuit agains the City of Toronto and Urbancorp over the Section 37 space at 36 Lisgar.")
+    meta(name='keywords' content='TMAC, toronto media arts, toronto media arts cluster, urbancorp bakruptcy, tmac lawsuit')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='google-site-verification' content='ArLdqonWlRvHkvmHpdwdW3nxGnct3sJE--rDYC-Y0Mo')
+
+
   block(name='content')
     figure(style="background-image:url(/images/photos/TMAC-gallery.jpg)")
     header
