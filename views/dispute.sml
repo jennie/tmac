@@ -57,7 +57,7 @@ extends(src='layout.sml')
 
                 Yesterday, our lawyer appeared in Ontario Superior Court to ask for an injunction to **prevent the City of Toronto from blocking TMAC from taking temporary occupancy** of our space at 36 Lisgar.
 
-                Last week, we made a pretty reasonable request of the City – that they not stand in the way of our using the space while we continue negotiations. We’ve been engaged in productive settlement discussions with staff and Urbancorp for over two years, and our members’ leases are up, so we expected they’d support our simple solution to our members’ pressing issues. Hey, the space is empty! *(Except for Urbancorp… who’s using one corner as an office.)*
+                Last week, we made a pretty reasonable request of the City – that they not stand in the way of our using the space while we continue negotiations. We’ve been engaged in productive settlement discussions with staff and Urbancorp for over two years, and our members’ leases are up, so we expected they’d support our simple solution to a pressing issue. Hey, the space is empty! *(Except the corner Urbancorp is using as an office…)*
 
                 Not only did it outright reject our request, the City seized on this as an opportunity to seek summary judgment terminating our [agreement of purchase and sale](https://tomediaarts.org/docs/TMAC-Edge-City_APS-executed.pdf) and to put an end to our lawsuit.
 
