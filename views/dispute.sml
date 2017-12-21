@@ -26,6 +26,7 @@ extends(src='layout.sml')
             .col-md-8
               div(md).
 
+                -   [Hearing date set: January 17 – and what you can do!](#court-date) December 21, 2017
                 -   [TMAC to file injunction over arts space at 36 Lisgar](#tmac-injunction) December 19, 2017
                 -   [City of Toronto rejects interim occupancy proposal](#city-rejects-interim-occupancy) December 18, 2017
                 -   [Updates from our members](#update-from-our-members) November 28, 2017
@@ -39,6 +40,65 @@ extends(src='layout.sml')
                 -   [Response to the City's Statement of Defense](#sod-response) June 29, 2015
                 -   [A Way Forward](#way-forward) June 22, 2015
                 -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
+
+                #### <a name=court-date>
+
+                ### Hearing date set for Jan 17 – and what you can do!</a>
+
+                **December 21, 2017**
+
+                Yesterday, our lawyer appeared in Ontario Superior Court to ask for an injunction to **prevent the City of Toronto from blocking TMAC from taking temporary occupancy** of our space at 36 Lisgar.
+
+                Last week, we made a pretty reasonable request of the City – that they not stand in the way of our using the space while we continue negotiations. We’ve been engaged in productive settlement discussions with staff and Urbancorp for over two years, and our members’ leases are up, so we expected they’d support our simple solution to our members’ pressing issues. Hey, the space is empty! *(Except for Urbancorp… who’s using one corner as an office.)*
+
+                Not only did it outright reject our request, the City seized on this as an opportunity to seek summary judgment terminating our [agreement of purchase and sale](https://tomediaarts.org/docs/TMAC-Edge-City_APS-executed.pdf) and to put an end to our lawsuit.
+
+
+                While the monitor was okay with our proposal and willing to lease the space to us, the City not only objected to it without explanation, but also **moved to compel the monitor to lease the space to it instead**! 🤔
+
+                We're very curious what their plans might be for a purpose-built media arts centre…
+
+                We have a court date set for January 17, where a judge will hear our arguments.
+
+                [Want to help? Here’s what you can do.](/help)
+
+                #### The City recycles its old defence
+
+                In addition to the City's motion, the City helpfully provided a sworn affidavit by Sally Han, manager of cultural partnerships at the City of Toronto. It parrots many of the wildly inaccurate points included in the City’s original defence to our claim in 2015. It will be easy to respond to, since [we already did… back in 2015](https://www.tomediaarts.org/docs/reply-to-urbancorp-and-cot.pdf).
+
+                We were surprised to find this in Sally's statement:
+
+                > the City had no confidence whatsoever (and still has no confidence whatsoever) that TMAC can successfully operate the Combined Arts and Culture Space for the benefit of the community.
+
+                *This is a **shocking contradiction to the City’s public position** that we’ve been making progress working together on an agreement to secure the space.*
+
+                Why have the limited resources of an arts charity and four nonprofit community groups been wasted on negotiations the City apparently had no intention of honouring? Why has the City kept the space empty – aside from permitting Urbancorp to use it as an office, an obvious contravention of the nonprofit-arts-use-only [land-use agreement](https://www.tomediaarts.org/docs/Land-Use-Agreement-executed.pdf) they fretted <i>we</i> would violate somehow – and blocked the community from enjoying the benefit of a vibrant space for media arts?
+
+                We have no answers.
+
+                #### Still pressing forward!
+
+                Despite the City’s apparent **contempt for the cultural contributions of our organizations**, our artist members and staff; its disregard for the needs and wishes of the local community; despite our being outrageously out-resourced as a charity up against a multi-billion dollar corporation and an insolvent commercial developer, we’ve hung in here.
+
+                Our goals remain the same:
+
+                - Purchase the space we designed, built, and raised $1 million for
+                - Operate it according to our [charitable mandate](https://www.tomediaarts.org/images/addenda/TMAC-Addenda-4-Statement-of-Charitable-Activities.pdf), for the benefit of the West Queen West community, the media arts community, artists, and broader cultural community in Toronto
+                - Support media arts nonprofits and artists by offering a permanent, affordable home for them to do their critical work without the fear and stress of precarity
+
+                Our commitment to this project – against the odds – is rooted in a belief that the communities that produce the cultural work that the City of Toronto banks on to attract talent, develop its economy, create jobs and thriving hubs of creative enterprise **should not be trampled by commercial interests and discarded once they’ve made our city worth living in.**
+
+                We continue fighting for this space because every Toronto arts organization – however small – deserves permanence, security and recognition for the work they do to change lives, neighborhoods and our culture.
+
+                Our motion for interim occupancy is *simply a request to the City to help us avoid a catastrophic interruption in our services and programming*, which would have a harmful impact on the many thousands of artists, organizers, and community members who frequent our spaces and contribute to the economic and cultural fabric of West Queen West, Toronto and the broader arts community.
+
+              div.alert.alert-success
+                span As we stare down the end of our leases and move our equipment and collections into storage and tell our members they have nowhere to work in January, we wonder:<br><br><b>What is the City getting out of this?</b>
+
+              div(md).
+
+                [Here’s what you can do to help now.](/help)
+
 
                 #### <a name=tmac-injunction>
 
@@ -147,7 +207,7 @@ extends(src='layout.sml')
 
                 #### <a name=june-2017-update>
 
-                ### AGCO update & Ward 18 community event
+                ### AGCO update & Ward 18 community event</a>
 
                 **June 19, 2017**
 
@@ -507,8 +567,20 @@ extends(src='layout.sml')
                       | TMAC files motion for an injunction to prevent the City from blocking our temporary occupancy of the space while we continue negotiating the settlement
               hr
 
-              h3 Coverage
+              h3 Media Coverage
               ul.media-coverage
+
+                li
+                  a(href='https://www.thestar.com/news/city_hall/2017/12/20/toronto-media-arts-centre-locked-in-legal-battle-with-city-over-space-at-queen-and-dovercourt.html')
+                    b Toronto Star:
+                    |  Toronto media arts centre locked in legal battle with City over space at Queen and Dovercourt
+                  |  December 20, 2017
+
+                li
+                  a(href='https://www.theglobeandmail.com/news/toronto/toronto-arts-hub-fights-for-right-to-occupy-condo-space/article37391532/?cmpid=rss1&click=sf_globe')
+                    b Globe and Mail:
+                    |  Toronto arts hub fights for right to occupy condo space
+                  |  December 19, 2017
                 li
                   a(href='http://torontoist.com/2015/06/we-had-a-deal-and-were-not-walking-away/')
                     b Torontoist:
