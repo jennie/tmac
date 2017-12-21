@@ -76,7 +76,7 @@ extends(src='layout.sml')
 
                 #### Make a tax-deductible donation
 
-                [Make a donation online](https://www.canadahelps.org/en/charities/toronto-media-arts-centre/). You’ll get a tax receipt, we’re a charity! Our members have moving and storage costs to cover this month, plus ongoing legal and accounting expenses that will be more difficult to meet without our primary revenue sources.
+                [Make a donation online](https://www.canadahelps.org/en/charities/toronto-media-arts-centre/). You’ll get a tax receipt, we’re a charity! Our members have extra moving and storage costs to cover this month, as three of our groups have been forced to move out of their spaces.
 
           .row
             .col-md-12
