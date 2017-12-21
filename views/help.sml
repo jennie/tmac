@@ -1,23 +1,12 @@
 extends(src='layout.sml')
 
   block(name='content')
-    figure(style="background-image:url(/images/photos/TMAC-gallery.jpg)")
+    figure(style="background-image:url(/images/photos/damage-camp.jpg); background-position: 0 -100px")
     header
       a(href="/")
         img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
 
       h1 Toronto Media Arts Centre
-
-      section#callout
-        // Begin MailChimp Signup Form
-        #mc_embed_signup
-          form#mc-embedded-subscribe-form.validate.form-inline(action='//tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
-            div(id='mc_embed_signup_scroll form-group')
-              label(for='mce-EMAIL form-label') Subscribe to our mailing list
-              input#mce-EMAIL.email.form-control(type='email' value='' name='EMAIL' placeholder='email address' required='')
-              input#mc-embedded-subscribe.btn.my-btn(type='submit' value='Subscribe' name='subscribe')
-              div(style='position: absolute; left: -5000px;')
-                input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')
 
     main
       section#mission
@@ -27,6 +16,8 @@ extends(src='layout.sml')
               div(md).
 
                 ### What you can do to help
+
+                On Dec 14, 2017, the City [rejected our proposal for interim occupancy](/dispute#court-date), despite our collective progress towards an agreement over the last 2 years.
 
                 Will you be impacted by the closure of DMG, Gamma Space, and CFMDC? Know artists and community members who will be?
 
@@ -79,3 +70,14 @@ extends(src='layout.sml')
                 * Toronto Star (December 20): [Toronto media arts centre locked in legal battle with City over space at Queen and Dovercourt](https://www.thestar.com/news/city_hall/2017/12/20/toronto-media-arts-centre-locked-in-legal-battle-with-city-over-space-at-queen-and-dovercourt.html)
                 * Globe and Mail (December 19): [Toronto arts hub fights for right to occupy condo space](https://www.theglobeandmail.com/news/toronto/toronto-arts-hub-fights-for-right-to-occupy-condo-space/article37391532/?cmpid=rss1&click=sf_globe)
 
+
+        section#callout
+          // Begin MailChimp Signup Form
+          #mc_embed_signup
+            form#mc-embedded-subscribe-form.validate.form-inline(action='//tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
+              div(id='mc_embed_signup_scroll form-group')
+                label(for='mce-EMAIL form-label') Subscribe to our mailing list
+                input#mce-EMAIL.email.form-control(type='email' value='' name='EMAIL' placeholder='email address' required='')
+                input#mc-embedded-subscribe.btn.my-btn(type='submit' value='Subscribe' name='subscribe')
+                div(style='position: absolute; left: -5000px;')
+                  input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')

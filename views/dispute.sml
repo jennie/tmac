@@ -64,7 +64,7 @@ extends(src='layout.sml')
 
                 #### The City recycles its old defence
 
-                In addition to the City's motion, the City helpfully provided a sworn affidavit by Sally Han, manager of cultural partnerships at the City of Toronto. It parrots many of the wildly inaccurate points included in the City’s original defence to our claim in 2015. It will be easy to respond to, since [we already did… back in 2015](https://www.tomediaarts.org/docs/reply-to-urbancorp-and-cot.pdf).
+                In addition to the motion, we were provided a sworn affidavit by Sally Han, manager of cultural partnerships at the City of Toronto. It parrots many of the wildly inaccurate points included in the City’s original defence to our claim in 2015. It will be easy to respond to, since [we already did… back in 2015](https://www.tomediaarts.org/docs/reply-to-urbancorp-and-cot.pdf).
 
                 We were surprised to find this in Sally's statement:
 
@@ -452,6 +452,9 @@ extends(src='layout.sml')
 
             .col-md-4.aside
               .visible-xs
+                h3
+                  a(href="/help" class="btn btn-primary btn-lg") How You Can Help
+
                 h3 Get In Touch
                 p
                   a(href='http://twitter.com/TOMediaArts') Twitter
