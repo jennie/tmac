@@ -6,6 +6,7 @@ extends(src='layout.sml')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(name='google-site-verification' content='ArLdqonWlRvHkvmHpdwdW3nxGnct3sJE--rDYC-Y0Mo')
 
+
   block(name='content')
     figure(style="background-image:url(/images/photos/damage-camp.jpg); background-position: 0 -100px")
     header
