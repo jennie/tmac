@@ -54,21 +54,21 @@ extends(src='layout.sml')
                 [Your member of Council](https://www.toronto.ca/city-government/council/members-of-council/)
 
                 *DMG, Gamma Space, and CSV's councillor:*<br>
-                **Mike Layton**<br>
-                Ward 19
+                **Mike Layton**, Ward 19<br>
                 [councillor_layton@toronto.ca](mailto:councillor_layton@toronto.ca)<br>
+                Twitter: [@m_layton](https://twitter.com/m_layton)<br>
                 416-392-4009
 
                 *CFMDC's councillor:*<br>
-                **Joe Cressy**<br>
-                Ward 20
+                **Joe Cressy**, Ward 20<br>
                 [Councillor_Cressy@toronto.ca](mailto:Councillor_Cressy@toronto.ca)<br>
+                Twitter: [@joe_cressy](https://twitter.com/joe_cressy)<br>
                 416-392-4044
 
                 *TMAC's councillor:*<br>
-                **Deputy Mayor Ana Bailão**<br>
-                Ward 18 councillor<br>
+                **Deputy Mayor Ana Bailão**, Ward 18<br>
                 [councillor_bailao@toronto.ca](mailto:councillor_bailao@toronto.ca)<br>
+                Twitter: [@anabailaoTO](https://twitter.com/AnaBailaoTO)<br>
                 416-392-7012
 
             .col-md-4
