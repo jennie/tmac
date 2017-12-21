@@ -1,7 +1,7 @@
 extends(src='layout.sml')
   block(name='meta')
 
-    meta(name='description' content="Information about how you can support TMAC's efforts to secure the Section 37 space at 36 Lisgar."")
+    meta(name='description' content="Information about how you can support TMAC's efforts to secure the Section 37 space at 36 Lisgar.")
     meta(name='keywords' content='TMAC, toronto media arts, toronto media arts cluster, urbancorp bakruptcy, tmac lawsuit')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(name='google-site-verification' content='ArLdqonWlRvHkvmHpdwdW3nxGnct3sJE--rDYC-Y0Mo')
