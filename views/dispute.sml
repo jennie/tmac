@@ -33,7 +33,7 @@ extends(src='layout.sml')
           .row
             .col-md-8
 
-              p(class='highlight') In May 2015, the City of Toronto and Urbancorp <b>breached its obligations under a contract</b> with TMAC. We're suing both parties for the right to purchase the arts space as agreed. Here you'll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.
+              p(class='highlight') In May 2015, the City of Toronto and Urbancorp <b>breached their obligations under a contract</b> with TMAC. We're suing both parties for the right to purchase the arts space as agreed. Here you'll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.
 
               div(md).
                 -   [Hearing date set: January 17 – and what you can do!](#court-date) December 21, 2017
