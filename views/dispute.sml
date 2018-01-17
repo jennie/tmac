@@ -36,6 +36,7 @@ extends(src='layout.sml')
               p(class='highlight') In May 2015, the City of Toronto and Urbancorp <b>breached their obligations under a contract</b> with TMAC. We're suing both parties for the right to purchase the arts space as agreed. Here you'll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.
 
               div(md).
+                -   [Close to a settlement – postponing court date til Jan 24](#settlement) January 16, 2018
                 -   [Hearing date set: January 17 – and what you can do!](#court-date) December 21, 2017
                 -   [TMAC to file injunction over arts space at 36 Lisgar](#tmac-injunction) December 19, 2017
                 -   [City of Toronto rejects interim occupancy proposal](#city-rejects-interim-occupancy) December 18, 2017
@@ -52,6 +53,14 @@ extends(src='layout.sml')
                 -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
                 ---
 
+                #### <a name=settlement>
+
+                ### Close to a settlement – postponing court date til Jan 24</a>
+
+                **January 16, 2018**
+                
+                We are very close to reaching a settlement with the City of Toronto and Urbancorp. As such, we are postponing tomorrow's court date one week, until January 24, where we expect it to be finalized. 
+                
                 #### <a name=court-date>
 
                 ### Hearing date set for Jan 17 – and what you can do!</a>
