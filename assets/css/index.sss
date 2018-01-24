@@ -42,6 +42,23 @@ body
             max-width: 100%
             display: block
             margin-top: 12px
+    & .toc
+      margin-top: 3rem
+      @media screen and (max-width: 525px)
+        display: none
+
+      & ul
+        list-style: none
+        margin: 0
+        padding: 0
+        & li
+          margin: 0 0 .5rem 0
+          padding: 0 0 .5rem 0
+          border-bottom: solid 1px #eee
+          font-size: 12px
+          & a
+            display: block
+            font-size: 14px
 
     & blockquote
       padding-left: 24px
@@ -57,6 +74,9 @@ body
       height: auto
 
     & .aside
+      margin-top: 3rem
+      & .social
+        margin: 2rem 0
       & .btn
         margin: 0 auto
         text-align: center
@@ -76,6 +96,8 @@ body
           padding: .5em 0
     & h3
       margin-top: 2em
+      &:first-child
+        margin-top: 0
 
     & h4
       text-transform: uppercase
@@ -116,12 +138,12 @@ body
   & *
     border-radius: 0
 figure
-  max-height: 50vh
+  max-height: 20vh
   background-size: cover
-  background-position: bottom center
+  background-position: center center
   background-repeat: no-repeat
   background-size: cover
-  padding-top: 37.5%
+  padding-top: 17.5%
   background-size: 100% auto
   width: 100%
   position: relative
@@ -132,9 +154,15 @@ header
   float: none
   margin: 0 auto
   display: block
-  padding: 2em
+  padding: 1rem 0
+
   background-position: center center
   background-size: cover
+  & img
+
+
+    width: 327px
+
 
   & h1
     display: none

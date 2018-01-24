@@ -16,28 +16,16 @@ extends(src='layout.sml')
 
       h1 Toronto Media Arts Centre
 
-      section#callout
-        // Begin MailChimp Signup Form
-        #mc_embed_signup
-          form#mc-embedded-subscribe-form.validate.form-inline(action='//tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
-            div(id='mc_embed_signup_scroll form-group')
-              label(for='mce-EMAIL form-label') Subscribe to our mailing list
-              input#mce-EMAIL.email.form-control(type='email' value='' name='EMAIL' placeholder='email address' required='')
-              input#mc-embedded-subscribe.btn.my-btn(type='submit' value='Subscribe' name='subscribe')
-              div(style='position: absolute; left: -5000px;')
-                input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')
-
     main
       section#mission
         .container
+          p(class='highlight') In May 2015, the City of Toronto and Urbancorp <b>breached their obligations under a contract</b> with TMAC. We're suing both parties for the right to purchase the arts space as agreed. Here you'll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.
           .row
-            .col-md-8
+            .col-lg-3
 
-              p(class='highlight') In May 2015, the City of Toronto and Urbancorp <b>breached their obligations under a contract</b> with TMAC. We're suing both parties for the right to purchase the arts space as agreed. Here you'll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.
-
-              div(md).
-                -   [Close to a settlement – postponing court date til Jan 24](#settlement) January 16, 2018
-                -   [Hearing date set: January 17 – and what you can do!](#court-date) December 21, 2017
+              div(class='toc' md).
+                -   [Close to a settlement](#settlement) January 16, 2018
+                -   [Hearing date set for January 17](#court-date) December 21, 2017
                 -   [TMAC to file injunction over arts space at 36 Lisgar](#tmac-injunction) December 19, 2017
                 -   [City of Toronto rejects interim occupancy proposal](#city-rejects-interim-occupancy) December 18, 2017
                 -   [Updates from our members](#update-from-our-members) November 28, 2017
@@ -53,14 +41,19 @@ extends(src='layout.sml')
                 -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
                 ---
 
-                #### <a name=settlement>
+            .col-lg-6
+              div(md).
 
-                ### Close to a settlement – postponing court date til Jan 24</a>
+                ### <a name=settlement>Close to a settlement</a>
+
+                **January 24, 2018**
+
+                We are still waiting for Urbancorp and the City to finalize the details of the agreement. We’ve been told to expect it by the end of the week.
 
                 **January 16, 2018**
-                
-                We are very close to reaching a settlement with the City of Toronto and Urbancorp. As such, we are postponing tomorrow's court date one week, until January 24, where we expect it to be finalized. 
-                
+
+                We are very close to reaching a settlement with the City of Toronto and Urbancorp. As such, we are postponing tomorrow's court date one week, until January 24, where we expect it to be finalized.
+
                 #### <a name=court-date>
 
                 ### Hearing date set for Jan 17 – and what you can do!</a>
@@ -263,9 +256,9 @@ extends(src='layout.sml')
                 We've been provided ongoing access to the space to give tours to donors, funders, board members and community stakeholders. It's very exciting to be in the space talking about our programming and operational plans, but sad to see it sitting empty. We're ready to activate it now!
 
               .row(style="margin-bottom: 2rem")
-                .col-md-6
+                .col-lg-6
                   img(src="/images/photos/tmac-elevator.jpg" class="img-fluid")
-                .col-md-6
+                .col-lg-6
                   img(src="/images/photos/TMAC-gallery.jpg" class="img-fluid")
 
               div(md).
@@ -281,9 +274,9 @@ extends(src='layout.sml')
 
 
               .row
-                .col-md-6
+                .col-lg-6
                   p Are you a resident of the Queen West Triangle? We're looking forward to being good neighbors! We invite feedback and conversation. <a href=mailto:info@tomediaarts.org>Email us</a>.
-                .col-md-6
+                .col-lg-6
                   img(src="/images/photos/agco-updated-may-2017.jpg" class="img-fluid")
 
               div(md).
@@ -470,18 +463,17 @@ extends(src='layout.sml')
                 Jennie Robinson Faber - [Dames Making Games](https://dmg.to)
 
 
-            .col-md-4.aside
+            .col-lg-3.aside
               .visible-xs
-                h3
-                  a(href="/help" class="btn btn-primary btn-lg") How You Can Help
 
-                h3 Get In Touch
-                p
-                  a(href='http://twitter.com/TOMediaArts') Twitter
-                  | &nbsp;•&nbsp;
-                  a(href='https://www.facebook.com/pages/Toronto-Media-Arts-Centre/842345815814723') Facebook
-                  | &nbsp;•&nbsp;
-                  a(href='mailto:media@tomediaarts.org') Media inquiries
+                a(href="/help" class="btn btn-primary") How You Can Help
+
+                ul.social
+                  li: a(href='http://twitter.com/TOMediaArts') Twitter
+                  li: a(href='https://www.facebook.com/pages/Toronto-Media-Arts-Centre/842345815814723') Facebook
+                  li: a(href='mailto:media@tomediaarts.org') Media inquiries
+
+                a(href="http://tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0" class="btn btn-secondary") Join Our Mailing List
 
                 h3 Timeline
 
