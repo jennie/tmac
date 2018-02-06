@@ -49,7 +49,7 @@ extends(src='layout.sml')
 
                 **February 6, 2018**
 
-                We have accepted the City's offer of settlement, and resolved our litigation regarding the TMAC space at 36 Lisgar. *There are still a few steps to go before we'll be allowed to complete the purchase of the space*. We'll be in touch with our funders, partners, and members in the coming days to fill in the details.
+                We have accepted the City's offer of settlement, which will resolve our litigation regarding the TMAC space at 36 Lisgar. *There are still a few steps to go before we'll be allowed to complete the purchase of the space*. We'll be in touch with our funders, partners, and members in the coming days to fill in the details.
 
                 The following is a joint statement issued by TMAC and the City of Toronto:
 
