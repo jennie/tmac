@@ -24,6 +24,7 @@ extends(src='layout.sml')
             .col-lg-3
 
               div(class='toc' md).
+                -   [We have reached a settlement with the City of Toronto](#agreement-reached) Feb 6, 2018
                 -   [Close to a settlement](#settlement) January 16, 2018
                 -   [Hearing date set for January 17](#court-date) December 21, 2017
                 -   [TMAC to file injunction over arts space at 36 Lisgar](#tmac-injunction) December 19, 2017
@@ -43,6 +44,27 @@ extends(src='layout.sml')
 
             .col-lg-6
               div(md).
+
+                ### <a name=agreement-reached>We have reached a settlement with the City of Toronto</a>
+
+                **February 6, 2018**
+
+                We have accepted the City's offer of settlement, and resolved our litigation regarding the TMAC space at 36 Lisgar. *There are still a few steps to go before we'll be able to complete the purchase of the space*. We'll be in touch with our funders, partners, and members in the coming days to fill in the details.
+
+                The following is a joint statement issued by TMAC and the City of Toronto:
+
+                > The City of Toronto and TMAC have come to an agreement regarding the community arts and cultural space at 36 Lisgar Street.
+
+                > This agreement, which is still subject to approval by the Court, will resolve the legal action. Highlights of this mutually-accepted resolution include:
+
+                > * TMAC is required to comply with certain provisions to provide additional certainty to the City that TMAC will be able to successfully operate the Cultural Space for the benefit of the community
+                > * If TMAC meets or exceeds these obligations, it will have the right to complete the purchase of the arts and cultural space
+                > * If it does not, TMAC has agreed to leave the space voluntarily and the City would either find an alternate arts organization to take the space, or would take ownership of it itself.
+                > * In the interim, the City is allowing TMAC temporary occupancy of a portion of the arts and cultural space
+
+                > It is excellent news for all of us that Toronto will now have this space where creativity can flourish for the benefit of the immediate local community, the cultural sector, and the city as a whole.
+
+                Edge must seek Court approval for the agreement now – we expect that court date to happen within the next 10 days or so.
 
                 ### <a name=settlement>Close to a settlement</a>
 
@@ -466,7 +488,7 @@ extends(src='layout.sml')
             .col-lg-3.aside
               .visible-xs
 
-                a(href="/help" class="btn btn-primary") How You Can Help
+                // a(href="/help" class="btn btn-primary") How You Can Help
 
                 ul.social
                   li: a(href='http://twitter.com/TOMediaArts') Twitter
@@ -478,6 +500,9 @@ extends(src='layout.sml')
                 h3 Timeline
 
                 div(md class="timeline").
+                  * **February 2018**<br>
+                    TMAC and the City of Toronto sign agreement resolving the legal dispute over the TMAC space at 36 Lisgar.
+
                   * **December 2017**<br>
                     TMAC files motion for an injunction for temporary occupancy of the space while we continue negotiating the settlement. Court date set for Jan. 17, 2018.
                     [More info](/dispute#court-date)
