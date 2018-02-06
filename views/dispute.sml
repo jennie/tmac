@@ -50,12 +50,12 @@ extends(src='layout.sml')
 
                 We have accepted the City's offer of settlement, which will resolve our litigation regarding the TMAC space at 36 Lisgar. *There are still a few steps to go before we'll be allowed to complete the purchase of the space*. We'll be in touch with our funders, partners, and members in the coming days to fill in the details.
 
-                The following is a joint statement issued by TMAC and the City of Toronto:
+                The following is a [joint statement](https://www.toronto.ca/home/media-room/backgrounders-other-resources/city-tmac-joint-statement/) issued by TMAC and the City of Toronto:
 
                 > The City of Toronto and TMAC have come to an agreement regarding the community arts and cultural space at 36 Lisgar Street.
 
                 > This agreement, which is still subject to approval by the Court, will resolve the legal action. Highlights of this mutually-accepted resolution include:
-
+                
                 > * TMAC is required to comply with certain provisions to provide additional certainty to the City that TMAC will be able to successfully operate the Cultural Space for the benefit of the community
                 > * If TMAC meets or exceeds these obligations, it will have the right to complete the purchase of the arts and cultural space
                 > * If it does not, TMAC has agreed to leave the space voluntarily and the City would either find an alternate arts organization to take the space, or would take ownership of it itself.
