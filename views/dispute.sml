@@ -19,7 +19,6 @@ extends(src='layout.sml')
     main
       section#mission
         .container
-          p(class='highlight') In May 2015, the City of Toronto and Urbancorp <b>breached their obligations under a contract</b> with TMAC. We're suing both parties for the right to purchase the arts space as agreed. Here you'll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.
           .row
             .col-lg-3
 
@@ -484,6 +483,7 @@ extends(src='layout.sml')
                 Frank Manzo - [CFMDC](http://www.cfmdc.org/)\
                 Jennie Robinson Faber - [Dames Making Games](https://dmg.to)
 
+              p(class='highlight') In May 2015, the City of Toronto and Urbancorp <b>breached their obligations under a contract</b> with TMAC. We're suing both parties for the right to purchase the arts space as agreed. Here you'll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.
 
             .col-lg-3.aside
               .visible-xs
