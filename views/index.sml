@@ -27,7 +27,7 @@ extends(src='layout.sml')
                 With year-round arts and cultural programming, open lab studios, equipment libraries, coworking and social areas, we provide the tools, space and freedom to play with art, media and new technologies–including film, videogames, audio, video, robotics, electronics and more.
             .col-sm-5
 
-                h4 Funders
+                h4.divider Funders
                 .orgs#funders
                   .item.funder
                     a(href='http://www.pch.gc.ca/eng/1266037002102/1265993639778')
@@ -40,7 +40,7 @@ extends(src='layout.sml')
                       img.img-fluid(src='./images/logos/funders/ONTrillium.jpg' alt='')
                   .item.funder
                     img.img-fluid(src='./images/logos/funders/TD_logo.png' alt='')
-                h4 Members
+                h4.divider Members
                 .orgs#members
                   .item.member
                     a(href='http://cfmdc.org')
@@ -56,7 +56,7 @@ extends(src='layout.sml')
                       img.img-fluid(src='/images/logos/gamma_space_logo_colour.png' alt='')
               hr
               div(md).
-                Spaces are available! We are excited to welcome new tenant members once our facility is operational. [Get in touch](mailto:info@tomediaarts.org) if your organization is interested in joining TMAC!
+                [Get in touch](mailto:info@tomediaarts.org) if your organization is interested in sponsoring, partnering with, or joining TMAC.
         hr
       section#about
         .container
@@ -83,15 +83,17 @@ extends(src='layout.sml')
               img.img-fluid(src='/images/photos/elevator.jpg' alt='' style='margin-bottom: 1rem')
               img.img-fluid(src='/images/photos/TMAC-gallery.jpg' alt='')
 
+
       section#callout
-        #mc_embed_signup
-          form#mc-embedded-subscribe-form.validate.form-inline(action='//tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
-            div(id='mc_embed_signup_scroll form-group')
-              label(for='mce-EMAIL form-label') Subscribe to our mailing list
-              input#mce-EMAIL.email.form-control(type='email' value='' name='EMAIL' placeholder='email address' required='')
-              input#mc-embedded-subscribe.btn.my-btn(type='submit' value='Subscribe' name='subscribe')
-              div(style='position: absolute; left: -5000px;')
-                input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')
+        .container
+          #mc_embed_signup
+            form#mc-embedded-subscribe-form.validate.form-inline(action='//tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
+              div(id='mc_embed_signup_scroll form-group')
+                label(for='mce-EMAIL form-label') Subscribe to our mailing list
+                input#mce-EMAIL.email.form-control(type='email' value='' name='EMAIL' placeholder='email address' required='')
+                input#mc-embedded-subscribe.btn.my-btn(type='submit' value='Subscribe' name='subscribe')
+                div(style='position: absolute; left: -5000px;')
+                  input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')
       section#post-header
         .container
           .row
