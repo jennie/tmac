@@ -75,8 +75,14 @@ body
 
     & .aside
       margin-top: 3rem
+      & h3
+        margin: 1rem 0
+        font-size: 18px
+        text-transform: uppercase
+        font-weight: 900
+
       & .social
-        margin: 2rem 0
+        margin: 0 0 2rem 0
       & .btn
         margin: 0 auto
         text-align: center
@@ -124,8 +130,14 @@ body
     & .no-indent p
       text-indent: 0
 
-.media-coverage li
-  margin-bottom: 1em
+ul.media-coverage
+  margin: 0
+  padding: 0
+  & li
+    list-style: none
+    margin: 0 0 1rem 0
+    & a
+      font-weight: normal
 
 .cta
   text-align: center
@@ -239,6 +251,8 @@ section
   background: #fff
   margin-top: 2em
   margin-bottom: 2em
+
+  &#press
 
   &#callout
     margin: 0 auto
