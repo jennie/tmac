@@ -1,23 +1,23 @@
 extends(src='layout.sml')
 
   block(name='content')
-    figure(style="background-image:url(/images/photos/south-view.jpg)")
-    header
+    // figure
+    header(style="background-image:url(/images/photos/damage-camp.jpg);")
       img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
       h1 Toronto Media Arts Centre
-      p.lead A new permanent home for Toronto's media arts organizations, and an accessible public space for art, creation and collaboration in the Queen West Triangle.
 
     main
 
       div.alert.alert-success#letter-callout
-        span: a(href='/dispute') More information about our lawsuit against Urbancorp and the City of Toronto.
-        span: small Updated January 2018.
+        span: a(href='/dispute') We have reached an agreement with the City of Toronto and Urbancorp.
+        span: small Updated February 6, 2018.
 
       section#mission
+
         .container
           .row
             .col-sm-7
-
+              p.lead A new permanent home for Toronto's media arts organizations, and an accessible public space for art, creation and collaboration in the Queen West Triangle.
               h2 Our Mission
 
               p.lead TMAC aspires to be a centre for excellence for the media arts that takes an accessible approach to the advancement of culture and technology.
