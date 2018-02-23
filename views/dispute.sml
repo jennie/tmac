@@ -23,6 +23,7 @@ extends(src='layout.sml')
             .col-lg-3
 
               div(class='toc' md).
+                -   [We're moving in!](#court-approval) Feb 23, 2018
                 -   [We have reached a settlement with the City of Toronto](#agreement-reached) Feb 6, 2018
                 -   [Close to a settlement](#settlement) January 16, 2018
                 -   [Hearing date set for January 17](#court-date) December 21, 2017
@@ -43,6 +44,14 @@ extends(src='layout.sml')
 
             .col-lg-6
               div(md).
+
+                ### <a name=court-approval>We're moving in!</a>
+
+                **February 23, 2018**
+
+                This afternoon, the court approved our settlement with the City of Toronto and Urbancorp, as well as our interim occupancy agreement. We'll be moving in to our new home immediately.
+
+                We'll have more information for members, partners and the whole community very soon. We can't wait to welcome you in to our space.
 
                 ### <a name=agreement-reached>We have reached a settlement with the City of Toronto</a>
 
@@ -518,7 +527,7 @@ extends(src='layout.sml')
                     Mediation begins, and all parties engage in a negotiation process
                   * **June 2015**<br>
                     City holds a public consultation, signalling its intent to move forward with an RFP process, despite a legal action by TMAC asserting its rights to the space
-                    
+
                     A “raucous” community consultation attended by 200+ community members, plus local and national news media, sends a message to the City: The community wants TMAC in its space.
                     !['Parkdale'](/images/photos/parkdale-meeting.jpg)
 
