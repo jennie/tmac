@@ -11,9 +11,12 @@ html
     block(name='stylesheets')
       link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css' integrity='sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj' crossorigin='anonymous')
       link(rel='stylesheet' href='css/index.css')
+      link(rel='stylesheet' href='https://calendly.com/assets/external/widget.css')
+
   body(role='document' id='{{ pageId }}')
     block(name='content')
     block(name='footer')
       include(src='/includes/footer.sml')
     block(name='javascript')
      script(src='js/main.js' defer)
+     script(src="https://calendly.com/assets/external/widget.js" type="text/javascript")

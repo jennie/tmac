@@ -18,6 +18,7 @@ extends(src='layout.sml')
           .row
             .col-sm-7
               p.lead A new permanent home for Toronto's media arts organizations, and an accessible public space for art, creation and collaboration in the Queen West Triangle.
+
               h2 Our Mission
 
               p.lead TMAC aspires to be a centre for excellence for the media arts that takes an accessible approach to the advancement of culture and technology.
@@ -26,6 +27,7 @@ extends(src='layout.sml')
 
                 With year-round arts and cultural programming, open lab studios, equipment libraries, coworking and social areas, we provide the tools, space and freedom to play with art, media and new technologies–including film, videogames, audio, video, robotics, electronics and more.
             .col-sm-5
+              a(href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false") Book a tour
 
                 h4.divider Funders
                 .orgs#funders
@@ -57,6 +59,7 @@ extends(src='layout.sml')
               hr
               div(md).
                 [Get in touch](mailto:info@tomediaarts.org) if your organization is interested in sponsoring, partnering with, or joining TMAC.
+
         hr
       section#about
         .container
@@ -119,3 +122,4 @@ extends(src='layout.sml')
               img.img-fluid(src='/images/photos/mezzanine-park_q.jpg' alt='')
             .col-md-4
               img.img-fluid(src='/images/photos/exterior_park.jpg' alt='')
+
