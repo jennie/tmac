@@ -6,13 +6,14 @@ extends(src='layout.sml')
       img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
       h1 Toronto Media Arts Centre
 
+
+
     main
 
       div.alert.alert-success#letter-callout
         span: a(href='/dispute') We have reached an agreement with the City of Toronto and Urbancorp.
         span: small Updated February 6, 2018.
-
-      section#mission
+      section(id="mission")
 
         .container
           .row
@@ -27,22 +28,8 @@ extends(src='layout.sml')
 
                 With year-round arts and cultural programming, open lab studios, equipment libraries, coworking and social areas, we provide the tools, space and freedom to play with art, media and new technologies–including film, videogames, audio, video, robotics, electronics and more.
             .col-sm-5
-              a(href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false") Book a tour
 
-                h4.divider Funders
-                .orgs#funders
-                  .item.funder
-                    a(href='http://www.pch.gc.ca/eng/1266037002102/1265993639778')
-                      img.img-fluid(src='/images/logos/funders/CanadianHeritage.jpg' alt='')
-                  .item.funder
-                    a(href='https://www.ontario.ca/')
-                      img.img-fluid(src='./images/logos/funders/ontario.jpg' alt='')
-                  .item.funder
-                    a(href='http://otf.ca')
-                      img.img-fluid(src='./images/logos/funders/ONTrillium.jpg' alt='')
-                  .item.funder
-                    img.img-fluid(src='./images/logos/funders/TD_logo.png' alt='')
-                h4.divider Members
+                h4.divider Our Members
                 .orgs#members
                   .item.member
                     a(href='http://cfmdc.org')
@@ -57,10 +44,21 @@ extends(src='layout.sml')
                     a(href='http://gammaspace.ca')
                       img.img-fluid(src='/images/logos/gamma_space_logo_colour.png' alt='')
               hr
+
+              a(href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false") Book a tour
               div(md).
                 [Get in touch](mailto:info@tomediaarts.org) if your organization is interested in sponsoring, partnering with, or joining TMAC.
 
-        hr
+      section#callout
+        .container
+          #mc_embed_signup
+            form#mc-embedded-subscribe-form.validate.form-inline(action='//tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
+              div(id='mc_embed_signup_scroll form-group')
+                label(for='mce-EMAIL form-label') Subscribe to our mailing list
+                input#mce-EMAIL.email.form-control(type='email' value='' name='EMAIL' placeholder='email address' required='')
+                input#mc-embedded-subscribe.btn.my-btn(type='submit' value='Subscribe' name='subscribe')
+                div(style='position: absolute; left: -5000px;')
+                  input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')
       section#about
         .container
           .row
@@ -87,39 +85,49 @@ extends(src='layout.sml')
               img.img-fluid(src='/images/photos/TMAC-gallery.jpg' alt='')
 
 
-      section#callout
-        .container
-          #mc_embed_signup
-            form#mc-embedded-subscribe-form.validate.form-inline(action='//tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
-              div(id='mc_embed_signup_scroll form-group')
-                label(for='mce-EMAIL form-label') Subscribe to our mailing list
-                input#mce-EMAIL.email.form-control(type='email' value='' name='EMAIL' placeholder='email address' required='')
-                input#mc-embedded-subscribe.btn.my-btn(type='submit' value='Subscribe' name='subscribe')
-                div(style='position: absolute; left: -5000px;')
-                  input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')
+
       section#post-header
         .container
           .row
             .col-md-8.content
               h2 Facility
               div(md).
-                Our multi-purpose facility offers shared spaces and amenities including:
-                - A **200-seat theatre** designed by renowned architect Peter Smith, for screening independent and experimental works
+
+                Our multi-purpose facility will offer shared spaces and amenities including:
+
+                - A **210-seat theatre** designed by renowned architect Peter Smith, for screening independent and experimental works
                 - Studio apartment for visiting **artist residencies**
+                - Community gathering and event spaces overlooking Lisgar Park
                 - Classrooms for public talks, workshops, screenings, festivals and events
+                - Meeting rooms seating up to 14
+                - Coworking spaces for film festival and studio staff
                 - Shared resource and equipment libraries
-                - A temperature-controlled vault and archive
+                - A temperature-controlled film vault and archive
                 - Technical and production facilities
-                - Public galleries and **exhibition spaces**
+                - Four public galleries and **exhibition spaces**
 
 
       section#facility
         .container
           .row
             .col-md-4
-              img.img-fluid(src='/images/photos/mezzanine-interior_q.jpg' alt='')
+              img.img-fluid(src='/images/photos/outside.jpeg' alt='')
             .col-md-4
-              img.img-fluid(src='/images/photos/mezzanine-park_q.jpg' alt='')
+              img.img-fluid(src='/images/photos/park.jpeg' alt='')
             .col-md-4
-              img.img-fluid(src='/images/photos/exterior_park.jpg' alt='')
+              img.img-fluid(src='/images/photos/inside.jpeg' alt='')
+      section#funders
+        h4.divider Funders
+        .orgs
+          .item.funder
+            a(href='http://www.pch.gc.ca/eng/1266037002102/1265993639778')
+              img.img-fluid(src='/images/logos/funders/CanadianHeritage.jpg' alt='')
+          .item.funder
+            a(href='https://www.ontario.ca/')
+              img.img-fluid(src='./images/logos/funders/ontario.jpg' alt='')
+          .item.funder
+            a(href='http://otf.ca')
+              img.img-fluid(src='./images/logos/funders/ONTrillium.jpg' alt='')
+          .item.funder
+            img.img-fluid(src='./images/logos/funders/TD_logo.png' alt='')
 

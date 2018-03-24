@@ -1,4 +1,18 @@
-@import '_global.sss'
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i,700,900')
+
+:root
+  --color-blue: #007AFF
+
+p, li
+  font-family: 'Rubik', sans-serif
+  & b
+    font-weight: 700
+  & a
+    font-weight: 700
+h1, h2, h3, h4
+  font-family: 'Rubik', sans-serif
+  font-weight: 700
+
 
 body
   height: 100%
@@ -7,7 +21,6 @@ body
   overflow-x: hidden
   padding: 0
   margin: 0
-
   & .actions
     padding: 1rem 0
     margin: 1rem 0
@@ -56,8 +69,10 @@ body
           padding: 0 0 .5rem 0
           border-bottom: solid 1px #eee
           font-size: 12px
+          &:last-child
+            border-bottom: none
           & a
-            display: block
+            display: inline
             font-size: 14px
 
     & blockquote
@@ -152,14 +167,14 @@ h4.divider
   font-size: 22px
   text-transform: uppercase
   text-align: center
-  font-weight: 900
-  border-top: solid
-  padding-top: 12px
-  margin-top: 12px
+  font-weight: 700
 
 #letter-callout
   text-align: center
   font-size: 1.4rem
+  & a
+    background-color: transparent
+    text-decoration: underline
   & *
     border-radius: 0
 figure
@@ -219,7 +234,6 @@ header
     font-size: 48px
     margin: 0 20px
 .my-btn
-
   letter-spacing: .1vw
   border-radius: .3rem
   font-weight: 400
@@ -238,10 +252,12 @@ header
   font-weight: 400
 
 main
-  & a
-    text-decoration: underline
-    color: #394EFF
-    font-weight: 900
+  & a:link
+    text-decoration: none
+    color: var(--color-blue)
+    background-color: color(var(--color-blue) tint(95%))
+    font-weight: 400
+
 
   & .aside
     & a
@@ -252,13 +268,14 @@ main
     letter-spacing: 1px
     font-size: 38px
     margin: 0 0 .25em 0
+    color: var(--color-blue)
     &.programming
       font-size: 24px
   & ul
     list-style: square
 
   & #programming b
-    color: #3826d7
+    color: var(--color-blue)
 
 section
   background: #fff
@@ -270,13 +287,17 @@ section
     padding: 3rem 0
     text-align: center
     background-color: #fbfbfb
-
+  &#funders
+    margin: 0 auto
+    width: 30vw
   &#post-header
-    background-image: url('/images/26438888462_aac971043f_o.jpg')
-    background-position: center top
+    background-image: url('/images/photos/south.jpg')
+    background-position: center bottom
+    background-repeat: no-repeat
     background-size: cover
     margin: 0
-
+    & h2
+      color: #fff
     & .content
       background: rgba(000,000,000,.6)
       color: #fff
@@ -360,11 +381,13 @@ footer
     font-weight: 900
 
 .btn-primary
-  background-color: #4848F0
-  border-color: #4848F0
+  background-color: var(--color-blue)
+  border-color: var(--color-blue)
   text-decoration: none
+  width: 12rem
   border-radius: 3rem
   padding: .5rem 2rem
   display: block
+  margin: 1rem auto
   &:hover
-    background-color: color(#4848F0 shade(10%))
+    background-color: color(var(--color-blue) shade(10%))
