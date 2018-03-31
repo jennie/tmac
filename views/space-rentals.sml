@@ -23,10 +23,10 @@ extends(src='layout.sml')
             a(href="/") &larr; Back home
           h3 Host your event at TMAC!
 
-          .row
+          .row.intro
             .col-lg-6
               p TMAC is available to rent for a wide range of events—from gallery openings and receptions to small meetups and hackathons, dining events to panel discussions.
-              p Located in the heart of the Queen West Triangle – a vibrant, arts-friendly neighbourhood close to downtown Toronto – TMAC features cutting-edge technology, soaring 40' ceilings and huge windows overlooking Lisgar Park, and a variety of event, meeting and exhibition spaces.
+              p Located in the heart of the Queen West Triangle – a vibrant, arts-friendly neighbourhood close to downtown Toronto – TMAC offers event, meeting and exhibition spaces in a beautiful purpose-built media arts facility overlooking Lisgar Park.
               p Rates are for either daytime (9-6pm) or evening events (6-11pm) inclusive of set up/clean up time.
               p
                 em We are completing the fit-out of our new cinema and expect it to be available in spring 2019.
@@ -247,14 +247,16 @@ extends(src='layout.sml')
                       | Video/slide deck, audio recorded, edited, and made web ready (max 1.5 hours)
                     td $475
                     td $375
-
+          hr
           h3 Booking Procedure
           ol
-            li Complete our <a href="">booking request form</a>
-            li Our team will follow up via email within 2 days
+            li Complete our <a href="/booking-request">booking request form</a>
+            li Our team will follow up via email
             li Review and sign our rental agreement
             li Pay your deposit to confirm your event date
             li Have an amazing event!
+
+          p Questions? <a href='mailto:events@tomediaarts.org'>Drop us a line!</a>
 
 
           p: em Prices do not include Ontario HST. For bookings within one month of event date, payment is due 7 days before event. For events more than a month away, a 40% deposit is due immediately and balance by 7 days before event. We accept cheque, Interac e-Transfer, and major credit cards.

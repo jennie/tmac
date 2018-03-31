@@ -21,7 +21,8 @@ module.exports = {
     parser: sugarml,
     locals: (ctx) => { return Object.assign(locals,
       { pageId: pageId(ctx) },
-    )}
+    )},
+    retext: { quotes: false }
   }),
   postcss: cssStandards({
     parser: sugarss
