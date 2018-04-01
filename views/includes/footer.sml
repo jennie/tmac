@@ -4,7 +4,7 @@ footer
       span.icon.icon-twitter(title='Twitter')
     a(href='https://www.facebook.com/pages/Toronto-Media-Arts-Centre/842345815814723')
       span.icon.icon-facebook(title='Facebook')
-  p © 2011-2018 Toronto Media Arts Cluster • Registered Charity 847429701RR0001
+  p © 2011-2018 Toronto Media Arts Cluster • Registered Charity 847429701RR0001 • <a href="https://governance.tomediaarts.org">Governance</a>
   .vcard(id='')
     span.fn.n
       span.given-name

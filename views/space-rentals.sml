@@ -31,7 +31,7 @@ extends(src='layout.sml')
               p
                 em We are completing the fit-out of our new cinema and expect it to be available in spring 2019.
               p
-                a(href="/booking-request" class="btn btn-primary") Booking Request
+                a(href="/booking-request" class="btn btn-primary") Submit a booking request
                 a(href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false") Schedule a tour
 
 
