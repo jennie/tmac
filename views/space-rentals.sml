@@ -21,16 +21,19 @@ extends(src='layout.sml')
         .container
           p(style='text-align: center')
             a(href="/") &larr; Back home
-          h3 Host your event at TMAC!
 
           .row.intro
             .col-lg-6
+              h3 Host your event at TMAC!
               p TMAC is available to rent for a wide range of events—from gallery openings and receptions to small meetups and hackathons, dining events to panel discussions.
               p Located in the heart of the Queen West Triangle – a vibrant, arts-friendly neighbourhood close to downtown Toronto – TMAC offers event, meeting and exhibition spaces in a beautiful purpose-built media arts facility overlooking Lisgar Park.
               p Rates are for either daytime (9-6pm) or evening events (6-11pm) inclusive of set up/clean up time.
               p
                 em We are completing the fit-out of our new cinema and expect it to be available in spring 2019.
-              p: a(href="/booking-request" class="btn btn-primary") Booking Request
+              p
+                a(href="/booking-request" class="btn btn-primary") Booking Request
+                a(href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false") Schedule a tour
+
 
             .col-lg-6
                 img(src="/images/event-layout.jpg" class="responsive")
@@ -67,7 +70,6 @@ extends(src='layout.sml')
 
             .col-lg-6
               img(src="../images/photos/space-rentals/mezzanine.jpg" class="responsive shadowed")
-
 
 
 

@@ -390,8 +390,13 @@ footer
   margin: 1rem auto
   &:hover
     background-color: color(var(--color-blue) shade(10%))
+  @media screen and (min-width: 525px)
+    & + .btn-primary
+      margin-left: 2rem
 .row.space, .row.intro, .row.add-ons
   margin: 5rem 0
+.row.intro
+  margin-top: 2rem
 img.responsive
   max-width: 100%
   display: block
