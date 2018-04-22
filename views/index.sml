@@ -38,7 +38,8 @@ extends(src='layout.sml')
               h3 Learn about our space
               p Want to see what TMAC is all about? Curious about the possibilities? Come on inside!
                 a(href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false") Book a tour
-              p [Accessibility information](https://policies.tomediaarts.org/policies/accessibility.html)
+              p
+                a(href="https://policies.tomediaarts.org/policies/accessibility.html") Accessibility information
 
       section#member-list
         .container
