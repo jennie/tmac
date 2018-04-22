@@ -6,13 +6,13 @@ extends(src='layout.sml')
       img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
       h1 Toronto Media Arts Centre
 
-
-
     main
 
       div.alert.alert-success#letter-callout
-        span: a(href='/dispute') We have reached an agreement with the City of Toronto and Urbancorp.
-        span: small Updated February 23, 2018.
+
+        p.address 32 Lisgar Street, Toronto
+        p Our entrance is on the <b>north</b> side of the building, facing onto the park, east of the condo entrance.
+
 
 
       section(id="mission")
@@ -38,6 +38,7 @@ extends(src='layout.sml')
               h3 Learn about our space
               p Want to see what TMAC is all about? Curious about the possibilities? Come on inside!
                 a(href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false") Book a tour
+              p [Accessibility information](https://policies.tomediaarts.org/policies/accessibility.html)
 
       section#member-list
         .container
