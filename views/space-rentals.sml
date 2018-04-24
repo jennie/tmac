@@ -29,6 +29,8 @@ extends(src='layout.sml')
               p Located in the heart of the Queen West Triangle – a vibrant, arts-friendly neighbourhood close to downtown Toronto – TMAC offers event, meeting and exhibition spaces in a beautiful purpose-built media arts facility overlooking Lisgar Park.
               p Rates are for either daytime (9-6pm) or evening events (6-11pm) inclusive of set up/clean up time.
               p
+                 b.highlight We offer nonprofit/educational discounts and welcome co-production and co-presentation inquiries!
+              p
                 em We are completing the fit-out of our new cinema and expect it to be available in spring 2019.
               p
                 a(href="/booking-request" class="btn btn-primary") Submit a booking request
@@ -53,20 +55,17 @@ extends(src='layout.sml')
                 thead
                   tr
                     th(style='width:75%') Days
-                    th(style='width:25%') Regular
-                    th(style='width:25%') Nonprofit
-                    th(style='width:25%') Edu
+                    th(style='width:25%') Rate
+
                 tbody
                   tr
-                    td M-F
+                    td Weekdays
                     td $950
-                    td $618
-                    td $475
+
                   tr
-                    td Sa-Sun and holidays
+                    td Weekends and holidays
                     td $1,425
-                    td $1,225
-                    td $725
+
 
             .col-lg-6
               img(src="../images/photos/space-rentals/mezzanine.jpg" class="responsive shadowed")
@@ -90,20 +89,17 @@ extends(src='layout.sml')
                 thead
                   tr
                     th(style='width:75%') Days
-                    th(style='width:25%') Regular
-                    th(style='width:25%') Nonprofit
-                    th(style='width:25%') Edu
+                    th(style='width:25%') Rate
+
                 tbody
                   tr
-                    td Weekday
+                    td Weekdays
                     td $300
-                    td $195
-                    td $150
+
                   tr
                     td Weekends & holidays
                     td $450
-                    td $300
-                    td $225
+
 
             .col-lg-6
               img(src="../images/photos/space-rentals/gathering.jpg" class="responsive shadowed")
@@ -125,20 +121,17 @@ extends(src='layout.sml')
                 thead
                   tr
                     th(style='width:75%') Days
-                    th(style='width:25%') Regular
-                    th(style='width:25%') Nonprofit
-                    th(style='width:25%') Edu
+                    th(style='width:25%') Rate
+
                 tbody
                   tr
-                    td M-F
+                    td Weekdays
                     td $700
-                    td $455
-                    td $350
+
                   tr
-                    td Sa-Sun and holidays
+                    td Weekends and holidays
                     td $1,050
-                    td $685
-                    td $375
+
 
             .col-lg-6
               img(src='../images/photos/IMG_4739.jpg' class="responsive shadowed")
@@ -158,20 +151,17 @@ extends(src='layout.sml')
                 thead
                   tr
                     th(style='width:75%') Days
-                    th(style='width:25%') Regular
-                    th(style='width:25%') Nonprofit
-                    th(style='width:25%') Edu
+                    th(style='width:25%') Rate
+
                 tbody
                   tr
-                    td M-F
+                    td Weekdays
                     td $1,250
-                    td $813
-                    td $625
+
                   tr
-                    td Sa-Sun and holidays
+                    td Weekends and holidays
                     td $1,875
-                    td $1,225
-                    td $950
+
             .col-lg-6
               img(src="../images/photos/space-rentals/main-gallery.jpg" class="responsive shadowed")
 
@@ -260,5 +250,9 @@ extends(src='layout.sml')
 
           p Questions? <a href='mailto:events@tomediaarts.org'>Drop us a line!</a>
 
-
-          p: em Prices do not include Ontario HST. For bookings within one month of event date, payment is due 7 days before event. For events more than a month away, a 40% deposit is due immediately and balance by 7 days before event. We accept cheque, Interac e-Transfer, and major credit cards.
+          h3 Terms and more info
+          p: em Prices do not include Ontario HST.
+          ul
+            li For bookings within one month of event date, payment is due 7 days before event. For events more than a month away, a 40% deposit is due immediately and balance by 7 days before event. We accept cheque, Interac e-Transfer, and major credit cards.
+            li Food must be served at any event where alcohol is available. You must supply Smart Serve certified bar staff.
+            li You may be required to pay a security surcharge if your event concludes after 11 p.m.
