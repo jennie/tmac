@@ -30,6 +30,8 @@ extends(src='layout.sml')
 
                 With year-round arts and cultural programming, open lab studios, equipment libraries, coworking and social areas, we provide the tools, space and freedom to play with art, media and new technologies–including film, videogames, audio, video, robotics, electronics and more.
             .col-sm-5
+              p
+                a(href="https://policies.tomediaarts.org/policies/accessibility.html") Accessibility information
               h3 Space rentals
               p Need space for an event, exhibition, or meeting? <a href="/space-rentals">Check out our rates and space info.</a>
               h3 Partnerships
@@ -38,8 +40,7 @@ extends(src='layout.sml')
               h3 Learn about our space
               p Want to see what TMAC is all about? Curious about the possibilities? Come on inside!
                 a(href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false") Book a tour
-              p
-                a(href="https://policies.tomediaarts.org/policies/accessibility.html") Accessibility information
+
 
       section#member-list
         .container
@@ -80,6 +81,8 @@ extends(src='layout.sml')
                 In 2014, with the support of the local community, City staff, [Active 18](http://active18.net) and Councillor [Ana Bailão](http://www.anabailao.com/developments), TMAC, Urbancorp and the City of Toronto finalized an agreement that would provide the Edge on Triangle Park condominium a density bonus in exchange for a **turnkey, purpose-built, ~40,000 sq. ft. facility** for TMAC.
 
                 TMAC moved into its new facility in March 2018!
+
+                [Read about our dispute with the City of Toronto and Urbancorp over the facility, and the settlement we reached in February 2018.](/dispute)
 
 
 
