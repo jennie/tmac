@@ -60,14 +60,8 @@ extends(src='layout.sml')
                 img.img-fluid(src='/images/logos/gamma_space_logo_colour.png' alt='')
       section#callout
         .container
-          #mc_embed_signup
-            form#mc-embedded-subscribe-form.validate.form-inline(action='//tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
-              div(id='mc_embed_signup_scroll form-group')
-                label(for='mce-EMAIL form-label') Subscribe to our mailing list
-                input#mce-EMAIL.email.form-control(type='email' value='' name='EMAIL' placeholder='email address' required='')
-                input#mc-embedded-subscribe.btn.my-btn(type='submit' value='Subscribe' name='subscribe')
-                div(style='position: absolute; left: -5000px;')
-                  input(type='text' name='b_a11a58bffdfcead3161ea4d9d_0f5e662ee0' tabindex='-1', value='')
+          a(href='http://eepurl.com/cTlUMP' class='btn btn-primary') Subscribe to our mailing list
+
       section#about
         .container
           .row
