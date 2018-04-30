@@ -289,7 +289,7 @@ section
     background-color: #fbfbfb
   &#funders
     margin: 0 auto
-    width: 30vw
+    width: 80vw
   &#post-header
     background-image: url('/images/photos/south.jpg')
     background-position: center bottom
@@ -322,11 +322,12 @@ footer
   justify-content: center
 
   & .item
-    width: 25%
-    max-width: 200px
-    padding: .5rem
     align-items: center
     justify-content: center
+    max-width: 25%
+    @media screen and (min-width: 780px)
+      max-width: 200px
+      padding: .5rem
 
 .wrapper
   display: table
