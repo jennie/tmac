@@ -27,6 +27,12 @@ extends(src='layout.sml')
               h4 Selected Media Coverage
               ul.media-coverage
                 li
+                  a(href='https://www.thestar.com/entertainment/visualarts/2018/04/29/a-queen-west-arts-centres-failure-to-launch.html')
+                    b Toronto Star:
+                    |  A Queen West arts centre’s failure to launch: The Toronto Media Arts Centre opened on Queen West after years of legal limbo, but its celebration may be short lived
+                  br
+                  | Murray Whyte April 29, 2018
+                li
                   a(href='https://www.thestar.com/entertainment/2018/02/06/deal-lets-arts-group-into-edge-condo-space-on-lisgar-at-last.html')
                     b Toronto Star:
                     |  Deal lets arts group into Edge condo space on Lisgar at last
