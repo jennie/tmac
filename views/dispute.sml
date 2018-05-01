@@ -64,9 +64,9 @@ extends(src='layout.sml')
                 span We agreed to these provisions in order to bring an end to this dispute and get the space back in the hands of the community. We’re confident we’ll be able to meet them by the deadline.
 
               div(md).
-                Here’s what we’ve been up to in the weeks since we moved into the facility under the interim occupancy agreement:
+                <b>Here’s what we’ve been up to in the weeks since we moved into the facility under the interim occupancy agreement:</b>
 
-                Member organizations moved their operations in – equipment, collections, office furniture, staff and all.
+                Member organizations moved their operations in – equipment, collections, office furniture, staff and all!
 
                 ![](/images/photos/april-2018-update/cfmdc-office.JPG)
 
