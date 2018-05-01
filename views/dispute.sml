@@ -124,7 +124,7 @@ extends(src='layout.sml')
                 ![](/images/photos/april-2018-update/csv-agm.jpg)
                 ![](/images/photos/april-2018-update/csv-workshop.JPG)
 
-                Thank you for your continued support while we leap through the last few hoops in our journey to secure the space for the benefit of the this community. We're so close, thanks to you!
+                Thank you for your continued support while we leap through the last few hoops in our journey to secure the space for the benefit of this community. We're so close, thanks to you!
 
                 ![](/images/photos/april-2018-update/images-catalog.JPG)
 
