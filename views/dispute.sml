@@ -23,6 +23,7 @@ extends(src='layout.sml')
             .col-lg-3
 
               div(class='toc' md).
+                -   [An update about our settlement, and our first month at TMAC!](#april-2018-update) Apr 30, 2018
                 -   [We're moving in!](#court-approval) Feb 23, 2018
                 -   [We have reached a settlement with the City of Toronto](#agreement-reached) Feb 6, 2018
                 -   [Close to a settlement](#settlement) January 16, 2018
@@ -44,6 +45,88 @@ extends(src='layout.sml')
 
             .col-lg-6
               div(md).
+
+
+                ### <a name=april-2018-update>An update about our settlement, and our first month at TMAC!</a>
+
+                **April 30, 2018**
+
+                This weekend, an [article in the Toronto Star](https://www.thestar.com/entertainment/visualarts/2018/04/29/a-queen-west-arts-centres-failure-to-launch.html) brought to light details about our settlement with the City of Toronto and Urbancorp. The “obligations” referred to in the [joint statement](#agreement-reached) are now public.
+
+                By June 5:
+
+                - TMAC must show the City it has *$2.5 million*
+                - Our business plan must meet the standards outlined in two checklists selected by City staff:
+                	- A scoring sheet called the [City of Toronto Below-Market Rent – Organization Assessment and Financial Review](https://tomediaarts.org/docs/TMAC-BMR-Review-Feb-7-2018.pdf)
+                	- An Enterprise Toronto worksheet called the [Business Plan Risk Predictor Scoreboard](https://tomediaarts.org/docs/Enterprise-Toronto-Scoreboard.pdf)
+
+              div.alert.alert-success
+                span We agreed to these provisions in order to bring an end to this dispute and get the space back in the hands of the community. We’re confident we’ll be able to meet them by the deadline.
+
+              div(md).
+                Here’s what we’ve been up to in the weeks since we moved into the facility under the interim occupancy agreement:
+
+                Member organizations moved their operations in – equipment, collections, office furniture, staff and all.
+
+                ![](/images/photos/april-2018-update/cfmdc-office.JPG)
+
+                ![](/images/photos/april-2018-update/dmg-office.JPG)
+
+                CFMDC moved its film collection out of public storage and into its temperature-controlled vault!
+
+                ![](/images/photos/april-2018-update/cfmdc-vault.jpg)
+
+                Thanks to our sponsor Beanfield Metroconnect, we're getting wired up for super-fast internet ⚡️
+
+                ![](/images/photos/april-2018-update/gamma-working.JPG)
+
+                We hosted a couple of major community arts events with partners like *Images Festival*…
+
+                ![](/images/photos/april-2018-update/images-party.JPG)
+
+                ![](/images/photos/april-2018-update/images-event.JPG)
+
+                … *Regent Park Film Festival* (in partnership with CSV) …
+
+                ![](/images/photos/april-2018-update/regent-park-presentation.JPG)
+                ![](/images/photos/april-2018-update/regent-park-pano.JPG)
+
+                … plus a dozen smaller gatherings and workshops (with groups such as *Black Women Film*, the *Arab Community Centre of Toronto*, *Node School*, *Interactive Ontario*, *Game UX* and more)
+
+                ![](/images/photos/april-2018-update/izzie-workshop.JPG)
+                ![](/images/photos/april-2018-update/playtesting.JPG)
+
+                We sanded, sealed, and finished the raw concrete floors in all occupied offices and our future cafe.
+
+                ![](/images/photos/april-2018-update/cafe-floors.JPG)
+                ![](/images/photos/april-2018-update/shiny-floors.JPG)
+
+                Every day we work closely with Urbancorp staff (who have been very responsive and helpful!) to learn the ropes of the facility and resolve various mechanical and maintenance issues.
+
+                We're in the thick of making plans with arts organizations, community groups and nonprofits for spring and summer programming (*Heydon Park Secondary School*, *White House Studio Project*, *Spiral Film Philosophy Conference*, *Internet Yama-Ichi* and many more)
+
+                ![](/images/photos/april-2018-update/bwf-workshop.JPG)
+
+                We strengthened partnerships with local groups like the *Lisgar Park Stewardship Committee* to integrate our programming with community spaces and projects.
+
+                Here's the joint programming subcommittee, with representatives from nearby galleries (*Propeller Gallery*, *Zwig Collection*), arts venues (*Theatre Centre*, *Freedom Factory*) as well as artists and business owners:
+
+                ![](/images/photos/april-2018-update/park-committee.JPG)
+
+                A City parks staffer and our ward councillor Ana Bailao presenting ground cover changes coming to the media arts park:
+
+                ![](/images/photos/april-2018-update/ana-park-2.JPG)
+
+                We toured the space to over 30 current and potential new partners.
+
+                And our member organizations – Charles Street Video, CFMDC, Dames Making Games, and Gamma Space – held AGMs, workshops, meetings, and more!
+
+                ![](/images/photos/april-2018-update/csv-agm.jpg)
+                ![](/images/photos/april-2018-update/csv-workshop.JPG)
+
+                Thank you for your continued support while we leap through the last few hoops in our journey to secure the space for the benefit of the this community. We're so close, thanks to you!
+
+                ![](/images/photos/april-2018-update/images-catalog.JPG)
 
                 ### <a name=court-approval>We're moving in!</a>
 

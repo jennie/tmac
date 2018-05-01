@@ -2,8 +2,6 @@ const path             = require('path')
 const htmlStandards    = require('reshape-standard')
 const sugarml          = require('sugarml')
 const sugarss          = require('sugarss')
-
-const postcss          = require('postcss')
 const cssStandards     = require('spike-css-standards')
 const jsStandards      = require('babel-preset-latest')
 const pageId           = require('spike-page-id')

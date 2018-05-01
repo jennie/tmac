@@ -68,17 +68,15 @@ extends(src='layout.sml')
             .col-sm-8
               h2#history History
               div(md).
+                [Read about our dispute with the City of Toronto and Urbancorp over the facility, and the settlement we reached in February 2018.](/dispute)
+
                 TMAC grew out of grassroots community support and in response to a need for an accessible and affordable centre dedicated to media art and technology.
 
                 The idea for TMAC was first conceptualized in 2003, after almost 15 years of organizing. TMAC incorporated in 2011 and attained charitable status in 2013. Today, TMAC has organically grown into an integrated collaborative organization supporting its members, the West Queen West community, and all of Toronto's media artists and artist-run centres.
 
-                In 2014, with the support of the local community, City staff, [Active 18](http://active18.net) and Councillor [Ana Bailão](http://www.anabailao.com/developments), TMAC, Urbancorp and the City of Toronto finalized an agreement that would provide the Edge on Triangle Park condominium a density bonus in exchange for a **turnkey, purpose-built, ~40,000 sq. ft. facility** for TMAC.
+                In 2014, with the support of the local community, City staff, [Active 18](http://active18.net) and Councillor [Ana Bailão](http://www.anabailao.com/developments), TMAC, Urbancorp and the City of Toronto finalized an agreement that would provide the Edge on Triangle Park condominium a density bonus in exchange for a **turnkey, purpose-built, 38,000 sq. ft. facility** for TMAC.
 
                 TMAC moved into its new facility in March 2018!
-
-                [Read about our dispute with the City of Toronto and Urbancorp over the facility, and the settlement we reached in February 2018.](/dispute)
-
-
 
               img.swatch(src='/images/charity-default-profile-swatch-en.jpg' alt='')
 

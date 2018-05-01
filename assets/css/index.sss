@@ -35,6 +35,9 @@ body
       font-weight: 900
 
   &#dispute
+    & img
+      max-width: 100%
+      margin: 0 0 10px 0
     & .timeline
       & ul
         margin: 0
@@ -254,10 +257,9 @@ header
 main
   & a:link
     text-decoration: none
-    color: var(--color-blue)
-    background-color: color(var(--color-blue) tint(95%))
+    color: #007AFF
+    background-color: color(#007AFF tint(95%))
     font-weight: 400
-
 
   & .aside
     & a
@@ -268,14 +270,14 @@ main
     letter-spacing: 1px
     font-size: 38px
     margin: 0 0 .25em 0
-    color: var(--color-blue)
+    color: #007AFF
     &.programming
       font-size: 24px
   & ul
     list-style: square
 
   & #programming b
-    color: var(--color-blue)
+    color: #007AFF
 
 section
   background: #fff
@@ -383,15 +385,15 @@ footer
     font-weight: 900
 
 .btn-primary
-  background-color: var(--color-blue)
-  border-color: var(--color-blue)
+  background-color: #007AFF
+  border-color: #007AFF
   text-decoration: none
   border-radius: 3rem
   padding: .5rem 2rem
   display: inline-block
   margin: 1rem auto
   &:hover
-    background-color: color(var(--color-blue) shade(10%))
+    background-color: color(#007AFF shade(10%))
   @media screen and (min-width: 525px)
     & + .btn-primary
       margin-left: 2rem
