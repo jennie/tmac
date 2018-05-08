@@ -406,3 +406,27 @@ footer {
     float: none;
   }
 }
+
+.alert-success {
+  border-radius: 0;
+background-color: #000;
+border: none;
+color: #fff;
+}
+h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 36px;
+
+}
+
+#space-rentals {
+  & p > b.highlight {
+    background-color: #fff695;
+  }
+  & img {
+    max-width: 100%;
+    display: block;
+  }
+
+}

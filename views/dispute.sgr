@@ -1,0 +1,645 @@
+extends(src='layout.sgr')
+
+  block(name='meta')
+
+    meta(name='description' content="A comprehensive timeline and documentation of TMAC's 2015 lawsuit against the City of Toronto and Urbancorp over the Section 37 space at 36 Lisgar.")
+    meta(name='keywords' content='TMAC, toronto media arts, toronto media arts cluster, urbancorp bakruptcy, tmac lawsuit')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='google-site-verification' content='ArLdqonWlRvHkvmHpdwdW3nxGnct3sJE--rDYC-Y0Mo')
+
+
+  block(name='content')
+
+    header(style="background-image:url(/images/photos/TMAC-gallery.jpg); background-position: center bottom")
+      a(href="/")
+        img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
+
+      h1 Toronto Media Arts Centre
+
+    main
+      section#mission
+
+        
+        .container
+          .row
+            .col-lg-3
+
+              div(class='toc' md).
+                -   [An update about our settlement, and our first month at TMAC!](#april-2018-update) Apr 30, 2018
+                -   [We're moving in!](#court-approval) Feb 23, 2018
+                -   [We have reached a settlement with the City of Toronto](#agreement-reached) Feb 6, 2018
+                -   [Close to a settlement](#settlement) January 16, 2018
+                -   [Hearing date set for January 17](#court-date) December 21, 2017
+                -   [TMAC to file injunction over arts space at 36 Lisgar](#tmac-injunction) December 19, 2017
+                -   [City of Toronto rejects interim occupancy proposal](#city-rejects-interim-occupancy) December 18, 2017
+                -   [Updates from our members](#update-from-our-members) November 28, 2017
+                -   [Some positive momentum](#positive-momentum) September 20, 2017
+                -   [Moving forward with our claim against the City](#moving-forward) June 22, 2017
+                -   [AGCO update & Ward 18 community event](#june-2017-update) June 19, 2017
+                -   [Spring 2017 update](#spring-2017) May 15, 2017
+                -   [Mediation progress &amp; Urbancorp bankruptcy](#progress) September 30, 2016
+                -   [Mediation date set!](#mediation) September 21, 2015
+                -   [Reply to Urbancorp and City of Toronto Filed](#sod-reply) July 22, 2015
+                -   [Response to the City's Statement of Defense](#sod-response) June 29, 2015
+                -   [A Way Forward](#way-forward) June 22, 2015
+                -   [Open Letter Re: The Cultural Space at 36 Lisgar](#letter) June 15, 2015
+                ---
+
+            .col-lg-6
+              div(md).
+
+
+                ### <a name=april-2018-update>An update about our settlement, and our first month at TMAC!</a>
+
+                **April 30, 2018**
+
+                This weekend, an [article in the Toronto Star](https://www.thestar.com/entertainment/visualarts/2018/04/29/a-queen-west-arts-centres-failure-to-launch.html) brought to light details about our settlement with the City of Toronto and Urbancorp. The “obligations” referred to in the [joint statement](#agreement-reached) are now public.
+
+                By June 5:
+
+                - TMAC must show the City it has *$2.5 million*
+                - Our business plan must meet the standards outlined in two checklists selected by City staff:
+                	- A scoring sheet called the [City of Toronto Below-Market Rent – Organization Assessment and Financial Review](https://tomediaarts.org/docs/TMAC-BMR-Review-Feb-7-2018.pdf)
+                	- An Enterprise Toronto worksheet called the [Business Plan Risk Predictor Scoreboard](https://tomediaarts.org/docs/Enterprise-Toronto-Scoreboard.pdf)
+
+              div.alert.alert-success
+                span We agreed to these provisions in order to bring an end to this dispute and get the space back in the hands of the community. We’re confident we’ll be able to meet them by the deadline.
+
+              div(md).
+                <b>Here’s what we’ve been up to in the weeks since we moved into the facility under the interim occupancy agreement:</b>
+
+                Member organizations moved their operations in – equipment, collections, office furniture, staff and all!
+
+                ![](/images/photos/april-2018-update/cfmdc-office.JPG)
+
+                ![](/images/photos/april-2018-update/dmg-office.JPG)
+
+                CFMDC moved its film collection out of public storage and into its temperature-controlled vault!
+
+                ![](/images/photos/april-2018-update/cfmdc-vault.jpg)
+
+                Thanks to our sponsor Beanfield Metroconnect, we're getting wired up for super-fast internet ⚡️
+
+                ![](/images/photos/april-2018-update/gamma-working.JPG)
+
+                We hosted a couple of major community arts events with partners like *Images Festival*…
+
+                ![](/images/photos/april-2018-update/images-party.JPG)
+
+                ![](/images/photos/april-2018-update/images-event.JPG)
+
+                … *Regent Park Film Festival* (in partnership with CSV) …
+
+                ![](/images/photos/april-2018-update/regent-park-presentation.JPG)
+                ![](/images/photos/april-2018-update/regent-park-pano.JPG)
+
+                … plus a dozen smaller gatherings and workshops (with groups such as *Black Women Film*, the *Arab Community Centre of Toronto*, *Node School*, *Interactive Ontario*, *Game UX* and more)
+
+                ![](/images/photos/april-2018-update/izzie-workshop.JPG)
+                ![](/images/photos/april-2018-update/playtesting.JPG)
+
+                We sanded, sealed, and finished the raw concrete floors in all occupied offices and our future cafe.
+
+                ![](/images/photos/april-2018-update/cafe-floors.JPG)
+                ![](/images/photos/april-2018-update/shiny-floors.JPG)
+
+                Every day we work closely with Urbancorp staff (who have been very responsive and helpful!) to learn the ropes of the facility and resolve various mechanical and maintenance issues.
+
+                We're in the thick of making plans with arts organizations, community groups and nonprofits for spring and summer programming (*Heydon Park Secondary School*, *White House Studio Project*, *Spiral Film Philosophy Conference*, *Internet Yama-Ichi* and many more)
+
+                ![](/images/photos/april-2018-update/bwf-workshop.JPG)
+
+                We strengthened partnerships with local groups like the *Lisgar Park Stewardship Committee* to integrate our programming with community spaces and projects.
+
+                Here's the joint programming subcommittee, with representatives from nearby galleries (*Propeller Gallery*, *Zwig Collection*), arts venues (*Theatre Centre*, *Freedom Factory*) as well as artists and business owners:
+
+                ![](/images/photos/april-2018-update/park-committee.JPG)
+
+                A City parks staffer and our ward councillor Ana Bailao presenting ground cover changes coming to the media arts park:
+
+                ![](/images/photos/april-2018-update/ana-park-2.JPG)
+
+                We toured the space to over 30 current and potential new partners.
+
+                And our member organizations – Charles Street Video, CFMDC, Dames Making Games, and Gamma Space – held AGMs, workshops, meetings, and more!
+
+                ![](/images/photos/april-2018-update/csv-agm.jpg)
+                ![](/images/photos/april-2018-update/csv-workshop.JPG)
+
+                Thank you for your continued support while we leap through the last few hoops in our journey to secure the space for the benefit of this community. We're so close, thanks to you!
+
+                ![](/images/photos/april-2018-update/images-catalog.JPG)
+
+                ### <a name=court-approval>We're moving in!</a>
+
+                **February 23, 2018**
+
+                This afternoon, the court approved our settlement with the City of Toronto and Urbancorp, as well as our interim occupancy agreement. We'll be moving in to our new home immediately.
+
+                We'll have more information for members, partners and the whole community very soon. We can't wait to welcome you in to our space.
+
+                ### <a name=agreement-reached>We have reached a settlement with the City of Toronto</a>
+
+                **February 6, 2018**
+
+                We have accepted the City's offer of settlement, which will resolve our litigation regarding the TMAC space at 36 Lisgar. *There are still a few steps to go before we'll be allowed to complete the purchase of the space*. We'll be in touch with our funders, partners, and members in the coming days to fill in the details.
+
+                The following is a [joint statement](https://www.toronto.ca/home/media-room/backgrounders-other-resources/city-tmac-joint-statement/) issued by TMAC and the City of Toronto:
+
+                > The City of Toronto and TMAC have come to an agreement regarding the community arts and cultural space at 36 Lisgar Street.
+
+                > This agreement, which is still subject to approval by the Court, will resolve the legal action. Highlights of this mutually-accepted resolution include:
+
+                > * TMAC is required to comply with certain provisions to provide additional certainty to the City that TMAC will be able to successfully operate the Cultural Space for the benefit of the community
+                > * If TMAC meets or exceeds these obligations, it will have the right to complete the purchase of the arts and cultural space
+                > * If it does not, TMAC has agreed to leave the space voluntarily and the City would either find an alternate arts organization to take the space, or would take ownership of it itself.
+                > * In the interim, the City is allowing TMAC temporary occupancy of a portion of the arts and cultural space
+
+                > It is excellent news for all of us that Toronto will now have this space where creativity can flourish for the benefit of the immediate local community, the cultural sector, and the city as a whole.
+
+                Edge must seek Court approval for the agreement now – we expect that court date to happen within the next 10 days or so.
+
+                ### <a name=settlement>Close to a settlement</a>
+
+                **January 24, 2018**
+
+                We are still waiting for Urbancorp and the City to finalize the details of the agreement. We’ve been told to expect it by the end of the week.
+
+                **January 16, 2018**
+
+                We are very close to reaching a settlement with the City of Toronto and Urbancorp. As such, we are postponing tomorrow's court date one week, until January 24, where we expect it to be finalized.
+
+                #### <a name=court-date>
+
+                ### Hearing date set for Jan 17 – and what you can do!</a>
+
+                **December 21, 2017**
+
+                Yesterday, our lawyer appeared in Ontario Superior Court to ask for an injunction to **prevent the City of Toronto from blocking TMAC from taking temporary occupancy** of our space at 36 Lisgar.
+
+                Last week, we made a pretty reasonable request of the City – that they not stand in the way of our using the space while we continue negotiations. We’ve been engaged in productive settlement discussions with staff and Urbancorp for over two years, and our members’ leases are up, so we expected they’d support our simple solution to a pressing issue. Hey, the space is empty! *(Except the corner Urbancorp is using as an office…)*
+
+                Not only did it outright reject our request, the City seized on this as an opportunity to seek summary judgment terminating our [agreement of purchase and sale](https://tomediaarts.org/docs/TMAC-Edge-City_APS-executed.pdf) and to put an end to our lawsuit.
+
+
+                While the monitor was okay with our proposal and willing to lease the space to us, the City not only objected to it without explanation, but also **moved to compel the monitor to lease the space to it instead**! 🤔
+
+                We're very curious what their plans might be for a purpose-built media arts centre…
+
+                We have a court date set for January 17, where a judge will hear our arguments.
+
+                [Want to help? Here’s what you can do.](/help)
+
+                #### The City recycles its old defence
+
+                In addition to the motion, we were provided a sworn affidavit by Sally Han, manager of cultural partnerships at the City of Toronto. It parrots many of the wildly inaccurate points included in the City’s original defence to our claim in 2015. It will be easy to respond to, since [we already did… back in 2015](https://www.tomediaarts.org/docs/reply-to-urbancorp-and-cot.pdf).
+
+                We were surprised to find this in Sally's statement:
+
+                > the City had no confidence whatsoever (and still has no confidence whatsoever) that TMAC can successfully operate the Combined Arts and Culture Space for the benefit of the community.
+
+                *This is a **shocking contradiction to the City’s public position** that we’ve been making progress working together on an agreement to secure the space.*
+
+                Why have the limited resources of an arts charity and four nonprofit community groups been wasted on negotiations the City apparently had no intention of honouring? Why has the City kept the space empty – aside from permitting Urbancorp to use it as an office, an obvious contravention of the nonprofit-arts-use-only [land-use agreement](https://www.tomediaarts.org/docs/Land-Use-Agreement-executed.pdf) they fretted <i>we</i> would violate somehow – and blocked the community from enjoying the benefit of a vibrant space for media arts?
+
+                We have no answers.
+
+                #### Still pressing forward!
+
+                Despite the City’s apparent **contempt for the cultural contributions of our organizations**, our artist members and staff; its disregard for the needs and wishes of the local community; despite our being outrageously out-resourced as a charity up against a multi-billion dollar corporation and an insolvent commercial developer, we’ve hung in here.
+
+                Our goals remain the same:
+
+                - Purchase the space we designed, built, and raised $1 million for
+                - Operate it according to our [charitable mandate](https://www.tomediaarts.org/images/addenda/TMAC-Addenda-4-Statement-of-Charitable-Activities.pdf), for the benefit of the West Queen West community, the media arts community, artists, and broader cultural community in Toronto
+                - Support media arts nonprofits and artists by offering a permanent, affordable home for them to do their critical work without the fear and stress of precarity
+
+                Our commitment to this project – against the odds – is rooted in a belief that the communities that produce the cultural work that the City of Toronto banks on to attract talent, develop its economy, create jobs and thriving hubs of creative enterprise **should not be trampled by commercial interests and discarded once they’ve made our city worth living in.**
+
+                We continue fighting for this space because every Toronto arts organization – however small – deserves permanence, security and recognition for the work they do to change lives, neighborhoods and our culture.
+
+                Our motion for interim occupancy is *simply a request to the City to help us avoid a catastrophic interruption in our services and programming*, which would have a harmful impact on the many thousands of artists, organizers, and community members who frequent our spaces and contribute to the economic and cultural fabric of West Queen West, Toronto and the broader arts community.
+
+              div.alert.alert-success
+                span As we stare down the end of our leases and move our equipment and collections into storage and tell our members they have nowhere to work in January, we wonder:<br><br><b>What is the City getting out of this?</b>
+
+              div(md).
+
+                [Here’s what you can do to help now.](/help)
+
+
+                #### <a name=tmac-injunction>
+
+                ### TMAC to file injunction over arts space at 36 Lisgar</a>
+
+                **December 19, 2017**
+
+                The Toronto Media Arts Centre will ask the court for an injunction to prevent the City from blocking our interim occupancy of the arts space at 36 Lisgar – **a privilege Urbancorp has enjoyed for over a year with the explicit blessing of City staff.**
+
+                TMAC spent 2017 in intense negotiation, working towards a resolution that everyone can live with. While we’re close, we haven’t reached an agreement yet.
+
+                We are in the midst of a space crisis. Most of our members are losing their current spaces this month, a problem we identified years ago and the very reason TMAC was formed and is urgently needed.
+
+                To relieve this burden and prevent the damage an interruption to our operations would cause the community, we proposed an interim occupancy arrangement that would not affect any of the parties’ rights. Simply put, we asked the City not to stand in the way of our moving into the space temporarily while the details of the agreement are finalized.
+
+                **The City has rejected our proposal and made it plain they will block us from pursuing this relief** – offering no alternative.
+
+                The City of Toronto does not support our efforts to ensure the continuity of media arts in Toronto. Urbancorp continues to benefit – with the City’s permission – while artists and nonprofits go homeless.
+
+
+                #### <a name=city-rejects-interim-occupancy>
+
+                ### City of Toronto rejects interim occupancy proposal</a>
+
+                **December 18, 2017**
+
+                In a surprising development, City staff have refused to support TMAC's efforts to relieve its [space crisis](#update-from-our-members) while we wait for Edge on Triangle Park to finalize its portion of the resolution we've been working towards.
+
+                Our proposal to enter into an interim license agreement *would not impair the legal position of the City.* Inexplicably, City staff rejected it. We have four arts organizations that need space, and a space – **sitting empty for almost 3 years now** – that needs arts organizations.
+
+              div.alert.alert-success
+                span We want to continue on a cooperative path and believe an agreement satisfactory to all sides is possible – but TMAC has nowhere to go on January 1. We'll be taking further steps to protect the future of media arts in Toronto.
+
+              div(md).
+                #### <a name=update-from-our-members>
+
+                ### Updates from our members</a>
+
+                **November 28, 2017**
+
+                As you may have heard, three of our members are moving out of their current spaces this month. Dames Making Games, CFMDC, and Gamma Space have issued letters to their members:
+
+                - [CFMDC](http://mailchi.mp/c5106fd32457/cfmdc-move)
+                - [Dames Making Games](https://dmg.to/blog/a-new-home)
+                - [Gamma Space](https://www.gammaspace.ca/)
+
+                On Monday, November 27, TMAC had a productive meeting with City staff and Councillor Ana Bailão about our members' urgent space issues. All agree that the process of finalizing the settlement is taking too long. A solution is needed to house our organizations in the interim.
+
+                City staff promised an update on Wednesday, November 29, and we'll share the details as soon as we can.
+
+              div.alert.alert-success
+                span Update: As of end of day November 29, we had not heard back from the City.
+
+              div(md).
+
+                #### <a name=positive-momentum>
+
+                ### Some positive momentum</a>
+
+                **September 20, 2017**
+
+                We're once again in productive talks with the City of Toronto about coming to mutually acceptable terms about the space at 36 Lisgar and certain a resolution is just around the corner.
+
+                **In the meantime:** Space has become very tight for TMAC member Dames Making Games, as the organization is growing faster than its small office can accommodate (this is, in fact, true of all our member organizations!). With an end-of-summer exhibition and conference planned for September 29 and 30, they found themselves without a suitable venue. As a gesture of good will and community support, the current owner of the TMAC space has given us the go-ahead to host the DMG events there. We're excited to bring Charles Street Video, CFMDC, Gamma Space and DMG together with the local community at 36 Lisgar for the first time later this month!
+
+                - **What:** [Damage Camp opening reception and conference](https://www.damage.camp)
+                - **Date & Time:** Friday, September 29 at 8pm; Saturday, Sep 30 10am-7pm
+                - **Venue:** TMAC [36 Lisgar Street](https://www.google.ca/maps/place/Toronto+Media+Arts+Centre/@43.6420699,-79.4232241,15z/data=!4m2!3m1!1s0x0:0x1ca084cfc4618789?sa=X&ved=0ahUKEwjCh6ruo7TWAhVF6IMKHdVrAuQQ_BIIczAK) (Accessibility: There is a  ramp leading to the ground-floor entrance from Abell Street. Inside TMAC, the event space is accessible via elevator. There are multiple wheelchair-accessible washrooms and barrier-free access to all event spaces.)
+
+                #### <a name=moving-forward>
+
+                ### Moving forward with our claim against the City</a>
+
+                **June 22, 2017**
+
+                As our community is painfully aware, our fight to protect the cultural benefit at 36 Lisgar and secure a permanent home for media arts in Toronto has dragged on for years. All we have asked is for Urbancorp to deliver on its contractual obligations to us – nothing more, nothing less. The City has always had the ability to compel them to do so, but has not.
+
+                ### A brief background
+
+                In May 2015, Urbancorp refused to allow us to close on the property because it had not finished work.
+
+                As stewards of public funding, as small non-profits with long histories planning our future as part of this collaborative organization, we could not simply shrug our shoulders and walk away.
+
+                Without the City as an advocate, we had no choice but to protect ourselves by filing a claim against Urbancorp and the City.
+
+                In June of that year – despite our pending litigation – the City [invited the community to a consultation](https://www.youtube.com/watch?v=Q-ljOD_zQcQ&feature=youtu.be) to determine who should operate the space instead of TMAC. Through no fault of ours, the space was to be handed over to a different group after years of work designing the space, and close to $1 million of public funding secured by TMAC to build and operate it.
+
+                The message from the community at that consultation – attended by 200+ – sent a clear message to the City: **We want TMAC in its space.**
+
+                Finally, in October 2015, the City agreed to negotiate a settlement with TMAC and sat down at the table with us.
+
+                ### Two years of negotiations
+
+                Through two years of negotiations, we have been driven by the support and conviction of local residents, artists, our members and funders, that this space is essential to the future of media arts in Toronto. It’s been hard work. Many hundreds of volunteer hours by our board and members of our nonprofit organizations have been invested in righting our alliance with the City and protecting the community benefit at 36 Lisgar.
+
+                We’ve been very optimistic that a resolution could be reached – despite the complexity introduced by Urbancorp’s filing for bankruptcy protection in April 2016 – because our conversations with the City have been consistently positive and productive. **Unfortunately, the negotiations have not resulted in a settlement.**
+
+              div.alert.alert-success
+                span The City’s official position has not changed. From a legal perspective, it does not recognize TMAC’s right to purchase the space. From a policy perspective, it does not support TMAC’s efforts to find a permanent home for Toronto’s media arts community. This is, of course, a deeply disappointing situation given all of the time and effort put into the negotiation process by all parties. But we see no alternative to proceeding with our claim against the City of Toronto.
+
+              div(md).
+
+                We'll be in touch about what you can do to support TMAC very soon. In the meantime, [sign this petition](https://www.change.org/p/kathleen-wynne-save-401-richmond?recruiter=737031617&utm_source=share_petition&utm_medium=copylink&utm_campaign=share_petition&utm_term=share_petition) to support 401 Richmond as it faces a property tax increase that could leave hundreds of artists, arts nonprofits and civic orgs without a home.
+
+                <img src=images/photos/tmac-meeting-parkdale.jpg class=img-fluid>
+
+                #### <a name=june-2017-update>
+
+                ### AGCO update & Ward 18 community event</a>
+
+                **June 19, 2017**
+
+                Our license application – and news of progress towards occupying the arts hub – has been met with excitement by the local community at 36 Lisgar, 150 Sudbury, 68 Abell and surrounding residences! However, we've heard a concern about the proposed outdoor patio adjacent to Lisgar Park and our cafe, and will be modifying our application accordingly. Our goal is to be good neighbors and bring new opportunities for the community to freely and safely engage with arts right in their neighborhood, so we're sensitive to the needs of folks who live nearby.
+
+                  [Drop us a line](mailto:info@tomediaarts.org) if you have any questions about the licensing process!
+
+                #### Ward 18 Talks: Artist and Cultural Spaces
+
+                [Join us](http://www.anabailao.com/artspaces) on Thursday, June 22 at **The Drake Commissary** for a panel hosted by our ward councillor Ana Bailão on the topic of creating and retaining new arts spaces across the City.
+
+                - **What:** Panel and Q&A with City Planning and arts organization staff
+                - **Date & Time:** Thur, June 22 at 6:30 p.m.
+                - **Venue:** Drake Commissary at [128 Sterling Road](https://www.google.com/maps?q=128+Sterling+Rd,+Toronto,+ON+M6P+0A1,+Canada) (If you use a wheelchair or other assistive device, ring the doorbell at the main entrance and someone will come get you to bring you to the accessible entrance. Washroom on the main floor is accessible.)
+
+              div.alert.alert-success
+                span We are very interested in learning how the City plans to ensure local communities' and arts groups' needs – not just those of profit-driven developers – are met through Section 37 deals and other City-facilitated cultural partnerships in the future.
+
+              div(md).
+
+                [Read more about the event and RSVP.](http://www.anabailao.com/artspaces)
+
+                ### Spring 2017 update<a name=spring-2017></a>
+
+                **May 15, 2017**
+
+                We are still at it! TMAC is making (slow, but sure) progress toward a settlement that will work for all parties to our lawsuit, which now includes the trustee for Urbancorp's bankruptcy.
+
+                We've spoken to many neighborhood residents and condo unit owners (including folks at 45 Lisgar, 36 Lisgar and 30 Abell) who are very keen on an update about the space – it's been sitting empty for two years, and they were promised a public arts centre. We share their frustration about the slow progress, and wish we were at liberty to share more details.
+
+                #### Tours
+
+                We've been provided ongoing access to the space to give tours to donors, funders, board members and community stakeholders. It's very exciting to be in the space talking about our programming and operational plans, but sad to see it sitting empty. We're ready to activate it now!
+
+              .row(style="margin-bottom: 2rem")
+                .col-lg-6
+                  img(src="/images/photos/tmac-elevator.jpg" class="img-fluid")
+                .col-lg-6
+                  img(src="/images/photos/TMAC-gallery.jpg" class="img-fluid")
+
+              div(md).
+
+
+                #### Liquor License
+
+                Our liquor license application has been open for a relatively long time – 3 years – due to delays affecting occupancy, so a placard has gone up in the window again. It was also displayed in 2015 to solicit community input.
+
+                You can view the [original application](/docs/TMAC-AGCO-Liquor-License-Application-Feb-2014.pdf) (director information has been kept up-to-date with the AGCO, of course) as well as [floor plans](/docs/TMAC-AGCO-Liquor-License-Application-proposed-licensed-areas.pdf) that show where alcohol will be allowed to be sold and consumed.
+
+                TMAC is designed to be a space that engages the public with the art created and exhibited here. Part of the way we will support the sustainability of the centre is through public licensed events and a café. Rather than seeking special occasion permits for every gallery opening, film screening, fundraiser or other public event, a license allows us to offer consistent public programming at a lower cost to TMAC, and generate revenues that go back into our operating fund.
+
+
+              .row
+                .col-lg-6
+                  p Are you a resident of the Queen West Triangle? We're looking forward to being good neighbors! We invite feedback and conversation. <a href=mailto:info@tomediaarts.org>Email us</a>.
+                .col-lg-6
+                  img(src="/images/photos/agco-updated-may-2017.jpg" class="img-fluid")
+
+              div(md).
+                ---
+
+                ### Mediation progress &amp; Urbancorp bankruptcy<a name=progress></a>
+
+                **September 30, 2016**
+
+                It's been close to a year since we engaged in mediation with the City of Toronto and Urbancorp. Progress has been slowed by Urbancorp's April 2016 filing for bankruptcy protection, which put a pause on our litigation.
+
+                However, we've continued to have productive conversations with City staff about a resolution since our October 2015 mediation meeting. While we can't share any of the details of those conversations quite yet, we're confident a settlement that secures the space for TMAC is imminent.
+
+                In 2016, we hosted dozens of joint programming events as TMAC, deepening the collaboration between our organizations and the local community. Our board and volunteers have invested thousands of hours into this project, driven by the memberships of our organizations (representing over 5,000 artists) and an actively engaged public that continues to demand we fight for dedicated media arts space in Toronto.
+
+                TMAC member organizations are bursting at the seams in our current spaces, and closing in on the end of our leases at three different spaces across the city. **It is very unlikely our organizations will be able to find new affordable spaces in Toronto** if we do not secure our space at 36 Lisgar.
+
+                Without space, the vital resources we provide artists working in media and new technologies will disappear. The work we do that enriches the social and cultural fabric of Toronto will be damaged. **We urge the City to prove it supports the continuity of media arts nonprofits in Toronto.** Keep working with us in good faith to secure the space at 36 Lisgar for the benefit of the community and the organization it was intended for.
+
+                ---
+
+                ### Active 18 AGM<a name=mediation></a>
+
+                **June 21, 2016**
+
+                TMAC representatives and members attended the [Active 18 AGM](https://www.facebook.com/342646939086975/photos/a.665435810141418.1073741825.342646939086975/1264474673570859/?type=3&theater) on June 21.
+
+                Lori Martin, Senior Cultural Affairs Officer at City of Toronto, presented a few points about TMAC. She confirmed that the parties are working together to resolve the dispute, and that we're progressing towards sorting it out – but pointed out that the details are all confidential.
+
+                TMAC board members joined the 2017 Park Committee, as TMAC has an interest in the design and use of Lisgar Park.
+
+                ---
+
+                ### Mediation date set!<a name=mediation></a>
+
+                **September 21, 2015**
+
+                The day after we filed our [reply to Urbancorp and the City's statements of defense](#sod-reply), the City of Toronto reached out to TMAC to ask if we'd be open to mediation (rather than proceed to court with our claim). Of course, this is exactly what we'd been asking for all along–for the City to simply talk to us and make time and space for all parties to come to a positive resolution.
+
+                It took almost two months to confirm it, but we're very excited to have nailed down a date for mediation: **October 23**.
+
+                We are confident the City shares our goal of conveying the community arts space to the rightful and intended operator—the Toronto Media Arts Centre—and that we'll have great news to share with this incredibly supportive and energized community at the end of October.
+
+                Thank you again to the community, from artists to donors, funders to neighbors, for your constant support. We're **so** excited to share our amazing space with you soon!
+
+                ---
+
+                ### Reply to Urbancorp and City of Toronto Filed <a name=sod-reply></a>
+
+                **July 22, 2015**
+
+                We filed a joint reply to the City's and Urbancorp's statements of defence today. You can read the whole thing here:\
+                [Reply to Edge on Triangle Park and City of Toronto](/docs/reply-to-urbancorp-and-cot.pdf) (PDF)
+
+                #### The City's Defence
+
+                The City claims its conduct was justified as a "good faith attempt to support the City’s objective of ensuring that the Space could be successfully operated for the benefit of the Community." **Instead, the City's actions have had the exact opposite effect**, as it knew or should have known they would. If the City had simply fulfilled its obligations, TMAC would already be operating the space and providing a benefit to the community.
+
+                Instead, the Space sits vacant with no prospect of the community receiving the promised benefit from it in the foreseeable future. The City's careless actions may delay operation of the Space for months or years if it does not take steps to begin mediation soon.
+
+                The City attempted to colour the proceedings with an attack on TMAC's alleged "financial and operational" problems. These allegations are untrue and legally irrelevant — our right to purchase the space was not conditional on the City’s continuing faith in our abilities — and should be disregarded entirely. (We did think the City's claim that TMAC has "no experience in operating a very large number of events" was particularly funny, having run between our orgs about 1,500 events in the last four years alone.)
+
+                #### Urbancorp's Defence
+
+                Urbancorp's claim that TMAC's rights could be terminated by Urbancorp's own delays is incorrect and ridiculous, contradicted by the plain words of the agreement.
+
+                Urbancorp claims that because it did not fulfill its pre-closing obligations by May 3, 2015, its obligations to complete the transaction simply disappeared. **No suggestion has been made that TMAC lost its right to purchase the space through anything it did or failed to do.**
+
+                Urbancorp failed to work diligently and in good faith to complete the sale, robbing TMAC of close to \$800,000 in investment and four years of work, and the community of the arts and cultural space it was promised.
+
+
+              div.alert.alert-success
+                span TMAC remains open to talking to the City about how to resolve this situation. We need Councillor Bailao to meet us halfway and take steps to begin a formal, transparent, accountable process to get everyone to a positive resolution. It's not too late for the City to take responsibility for its actions and do right by TMAC, Toronto artists and the West Queen West community.
+
+              div(md).
+
+                #### So, what's next?
+
+                While we wait on the City to decide how it wants to proceed (whether to leave the space sitting empty for years or simply talk to us), TMAC continues to operate on the assumption that we will soon be able to occupy the space we designed and built. That means:
+
+                -   Operating under our [collaborative governance model](https://governance.tomediaarts.org) as a charitable organization. We don't have our permanent home yet, but we'll adapt as we always have to the resources we have and the challenges in front of us.
+                -   Planning our inaugural year programming, cinema fitout capital campaign and tenant membership drive.
+                -   Developing exciting collaborations and co-presentations for fall/winter 2015 with our members.
+
+                We're very grateful to our lead donors and funders for their continued support! If you're interested in TMAC's future, consider [making a tax-deductible donation](https://www.canadahelps.org/en/charities/toronto-media-arts-centre/). Stay tuned on [Twitter](http://twitter.com/TOMediaArts) and [Facebook](https://www.facebook.com/pages/Toronto-Media-Arts-Centre/842345815814723), [join our mailing list](http://eepurl.com/bq2DVf), and we'll keep in touch!
+
+                ---
+
+                ### Response to the City's Statement of Defense <a name=sod-response></a>
+
+                **June 29, 2015**
+
+                Today, the City of Toronto [responded](http://www.scribd.com/doc/270024689/City-of-Toronto-statement-of-defense-TMAC-lawsuit) to the statement of claim TMAC filed on May 28. It’s an interesting document filled with many assertions and much erroneous information. We are curious to see how the Court responds to the City’s claims.
+
+                **On May 3, TMAC was ready, willing and able to close.**
+
+                The City did not have the right to direct Urbancorp not to close with us.
+
+                It seems the City viewed the May 3 outside date as an "escape hatch" to get out of a deal it simply did not want to uphold, instead of following through with the agreements it made.
+
+                Throughout this four-year process, TMAC proved it could rise to every challenge encountered, from construction delays caused by condo flooding, to changing TMAC member priorities and resources. **We held up TMAC’s end of the bargain, right up to tendering our closing deliveries on May 3.**
+
+              div.alert.alert-success
+                span TMAC wholeheartedly stands by our claim. We invite the City to make good on its promises and ensure this community benefit does not fail West Queen West.
+
+              div(md).
+
+                ---
+
+                ### A Way Forward<a name=way-forward></a>
+
+                **June 22, 2015**
+
+                About a month ago, TMAC filed a statement of claim against the City of Toronto and the property developer Urbancorp. It was a sad end to a four-year collaboration that was supposed to result in a new media arts centre our neighborhood, members, and community could be proud of — a place to build the future of our organizations.
+
+                **When that was taken away, we felt hopelessly backed into a corner.**
+
+                But as stewards of public funding, as small non-profits with long histories planning our future as part of this collaborative organization, we could not simply shrug our shoulders and walk away.
+
+                As the weakest party in a three-way agreement, and without the City as an advocate, we had no choice but to protect ourselves by filing a claim.
+
+                We want our building back, yes! We also want West Queen West to have the community-engaged arts space it very much deserves and needs. The one [Active 18](http://www.active18.net/?page_id=1117), the community and all our organizations have worked so hard for.
+
+                And we want to ensure future Section 37 deals between developers, the City and non-profits do not go as terribly sideways as ours did at the last minute.
+
+
+
+              div.alert.alert-success
+                span We can fix this together. <b>We want to fix this together.</b> Bring TMAC back to the table. Rebuild the trust and goodwill needed to ensure Toronto can continue to secure the cultural spaces that make our city both vibrant and livable.
+
+              div(md).
+
+                ------------------------------------------------------------------------
+
+                ### Open Letter Re: The Cultural Space at 36 Lisgar <a name=letter></a>
+
+                **June 15, 2015**
+
+                The state-of-the-art, purpose-built media arts facility we secured in 2011 through a Section 37 deal with condo developer Urbancorp and the City of Toronto has been ripped out from under us just as we were preparing to move in. We are frankly mystified by the lack of support and facilitation the City provided to ensure Urbancorp did not default on this deal.
+
+                #### Interference instead of facilitation <a name=interference-instead-of-facilitation></a>
+
+                Despite a fully executed purchase agreement that obligated Urbancorp to build and deliver this space to TMAC, Urbancorp failed to complete work and close on the property by its deadline.
+
+                With construction nearly done, and TMAC agreeable, there was no reason for Urbancorp not to extend this date in order to give itself time to complete the work and close the transaction.
+
+                **Instead, the City of Toronto directed Urbancorp to allow the date to pass, apparently because it intended to hand the facility over to real estate developer Artscape in the final hour.** \[Edited June 26 to add: Indeed, Artscape CEO Tim Jones [confirmed in the media](http://www.theglobeandmail.com/news/toronto/toronto-arts-consortium-launches-lawsuit-over-queen-west-facility/article24958832/) that Artscape became involved in our project at the City's request weeks before the outside date of our agreement, and **"recommended 'a reset' to city officials and the developer"** — despite our rejection of Artscape's offer of "assistance"\]
+
+                The role of the City was to facilitate the agreement and ensure Urbancorp delivered on its promises to the community and TMAC. That it failed to do so demonstrates not only bad faith but also a gross breach of community trust.
+
+                In what we believe was an attempt to justify this interference and discredit TMAC, our local Councillor Ana Bailão made unreasonable and irrelevant requests — just weeks before Urbancorp’s deadline — under threat of "canceling" our agreement, which she had no power or authority to do.
+
+                We obliged, but were in effect ignored.
+
+                It is worth noting that Councillor Bailão sits on the [Artscape board of directors](http://www.torontoartscape.org/about-us/artscape-directors) and Alan Saskin, President of Urbancorp, is the chair of the [Artscape Foundation board of directors](http://www.torontoartscape.org/about-us/artscape-directors).
+
+                #### Implications <a name=implications></a>
+
+                Urbancorp refused to close the transaction by the deadline, **despite acknowledging TMAC was ready, willing and able to close**. Because of their failure:
+
+                -   The agreement was terminated on an easily amendable point intended to *protect* TMAC, not punish it
+                -   Urbancorp is relieved of its obligation to complete and deliver the TMAC space, while still enjoying its lucrative density bonus
+                -   We have been forced to take legal action against the City of Toronto and Urbancorp in order to protect our rights
+
+                While Urbancorp suffers no consequences for its default, and indeed enjoys the profits of its 6-story density increase, TMAC is left to answer to public and private funders who relied on the City’s purported support. Our member organizations are now scrambling to relocate. And four years of cash-strapped arts administrators’ time has been wasted designing, stewarding, and planning a future in a facility that will now be handed over to a different owner.
+
+                The disastrous consequences of the City’s bad faith and Urbancorp’s self-interest apply not only to TMAC and its member organizations, but also to all Toronto arts non-profits. Trust between provincial and federal arts funders and the City will be deeply eroded. The impact of public input on community benefit contributions is in doubt. It’s unlikely another deal like this will ever happen again if the termination of our agreement is not reversed.
+
+                #### A gross breach of community trust
+
+                The community made its needs clear through the original consultation process in 2011.
+
+                Now, despite TMAC’s legal interest in the property, the City of Toronto is attempting to engage the public in a new consultation process to find a different operator for the space — even before responding to our claim.
+
+                TMAC remains ready, willing and able to close. **All we want is for Urbancorp to deliver on the promises it made and complete the transaction — nothing more, nothing less.** The City has the authority and right to compel them to do so, and a responsibility to protect this unique Section 37 benefit in West Queen West by facilitating its stewardship by the rightful and intended owner.
+
+                — Toronto Media Arts Centre
+
+                **Board of Directors**
+
+                Alex Williams - [Charles Street Video](http://charlesstreetvideo.com/home.php)\
+                Henry Faber - [Gamma Space](http://gammaspace.ca)\
+                Frank Manzo - [CFMDC](http://www.cfmdc.org/)\
+                Jennie Robinson Faber - [Dames Making Games](https://dmg.to)
+
+              p(class='highlight') In May 2015, the City of Toronto and Urbancorp <b>breached their obligations under a contract</b> with TMAC. We're suing both parties for the right to purchase the arts space as agreed. Here you'll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.
+
+            .col-lg-3.aside
+              .visible-xs
+
+                // a(href="/help" class="btn btn-primary") How You Can Help
+                a(href="/press") Read the latest media coverage
+
+                h3 Connect with TMAC 👋
+
+                ul.social
+                  li: a(href='http://twitter.com/TOMediaArts') Twitter
+                  li: a(href='https://www.facebook.com/pages/Toronto-Media-Arts-Centre/842345815814723') Facebook
+                  li: a(href='mailto:media@tomediaarts.org') Media inquiries
+                  li: a(href="http://tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0") Join Our Mailing List
+
+                h3 Timeline
+
+                div(md class="timeline").
+                  * **February 2018**<br>
+                    TMAC and the City of Toronto sign agreement resolving the legal dispute over the TMAC space at 36 Lisgar.
+
+                  * **December 2017**<br>
+                    TMAC files motion for an injunction for temporary occupancy of the space while we continue negotiating the settlement. Court date set for Jan. 17, 2018.
+                    [More info](/dispute#court-date)
+
+                  * **November 2017**<br>
+                    The City blocks our proposal for temporary occupancy of the space to provide relief to our member organizations with expiring leases – despite granting Urbancorp permission to use it as an office. [More info](/dispute#city-rejects-interim-occupancy)
+
+                  * **April 2016**<br>
+                    [Urbancorp files for restructuring under bankruptcy act](https://www.thestar.com/news/gta/transportation/2016/04/22/urbancorp-files-for-restructuring-under-bankruptcy-act.html)
+                  * **October 2015 - December 2017**<br>
+                    Mediation begins, and all parties engage in a negotiation process
+                  * **June 2015**<br>
+                    City holds a public consultation, signalling its intent to move forward with an RFP process, despite a legal action by TMAC asserting its rights to the space
+
+                    A “raucous” community consultation attended by 200+ community members, plus local and national news media, sends a message to the City: The community wants TMAC in its space.
+                    !['Parkdale'](/images/photos/parkdale-meeting.jpg)
+
+                    [Watch a short video clip from the meeting](/images/2015-06-public-meeting.mp4)
+
+                  * **May 28, 2015**<br>
+                    TMAC files a statement of claim against Urbancorp and the City of Toronto for specific performance of the APS, requiring Urbancorp to complete the sale
+                  * **May 3, 2015**<br>
+                    TMAC tenders closing deliveries; Urbancorp refuses to complete the transaction
+                  * **April 2015**<br>
+                    City directs Urbancorp not to complete sale, despite facility being substantially completed for occupancy and subsequently registered
+                  * **2014**<br>
+                    Urbancorp, TMAC and the City finalize [Agreement of Purchase and Sale](/docs/TMAC-Edge-City_APS-executed.pdf) (PDF)
+                    !['APS'](/images/photos/tmac_agreement.jpeg)
+                  * **2012**<br>
+                    Urbancorp and the City enter into [Section 37 agreement](/docs/Section-37-Agreement-executed.pdf) (PDF) subject to a 
+                      [land use agreement](/docs/Land-Use-Agreement-executed.pdf) (PDF)
+                  * **2012-2015**<br>
+                    TMAC designs the facility, investing close to $1m in public funds and thousands of volunteer hours into overseeing the build
+                  * **2011**<br>
+                    TMAC and Urbancorp sign a [letter of intent](/docs/Letter-of-Intent-executed.pdf)
+                    !['Saskin'](/images/photos/saskin.png)
+                  * **2005**<br>
+                    TMAC commissions needs assessment for shared facility
+                    !['Saskin'](/images/photos/lga.jpg)
+                  * **2003**<br>
+                      TMAC formed to secure permanent affordable space for media arts non-profits
+                  * **1994**<br>
+                    TMAC’s precursor, the Cultural Arts Centre Toronto (CACTI), commissions [feasibility study](/docs/cacti-study-1994.pdf) (PDF).
+                    !['Parkdale'](/images/cacti-cover.png)
