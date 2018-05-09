@@ -13,10 +13,6 @@ extends(src='layout.sgr')
         p.address 32 Lisgar Street, Toronto
         p Our entrance is on the <b>north</b> side of the building, facing onto the park, east of the condo entrance.
 
-
-      // pre {{ JSON.stringify( dato.event, null, 2 ) }}
-      // each(loop='section in dato.event')
-
       section(id="mission")
 
         .container

@@ -1,0 +1,35 @@
+extends(src='layout.sgr')
+
+  block(name='meta')
+
+    meta(name='description' content="")
+    meta(name='keywords' content='TMAC, toronto media arts, toronto media arts cluster')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+  block(name='content')
+
+    header(style="background-image:url(/images/photos/parkdale-meeting.jpg)")
+      a(href="/")
+        img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
+
+      h1 Toronto Media Arts Centre
+
+    main
+      section#press
+        .container
+          p(style='text-align: center')
+            a(href="/dispute") &larr; Back to dispute history
+          #event-grid
+
+            each(loop='event in dato.event')
+              .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?blend=0000FF'); background-size: cover;")
+                .desc
+                  if(condition="{{ event.member[0] }}")
+                    small {{ event.member[0].name }}
+                  h3 {{ event.title }}
+                  p.date {{ df(event.startDateTime, "UTC:mmmm d, yyyy", true)}}
+                  p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+
+                  p: a(class="btn btn-primary" href="{{ event.registrationLink }}") Info
+
+

@@ -9,6 +9,7 @@
   "bugs": "https://github.com/jennie/tmac/issues",
   "dependencies": {
     "babel-preset-latest": "^6.24.1",
+    "dateformat": "^3.0.3",
     "hard-source-webpack-plugin": "^0.6.4",
     "image-webpack-loader": "^4.2.0",
     "markdown-it": "^8.4.1",
@@ -28,7 +29,7 @@
     "spike-page-id": "^1.1.0",
     "sugarml": "^0.6.0",
     "sugarss": "^1.0.1",
-    "webpack": "^4.6.0"
+    "webpack": "^4.8.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",
