@@ -8,25 +8,24 @@ extends(src='layout.sgr')
 
   block(name='content')
 
-    header(style="background-image:url(/images/photos/parkdale-meeting.jpg)")
-      a(href="/")
-        img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
-
+    header
       h1 Toronto Media Arts Centre
+      h2 What's on at TMAC
 
     main
       section#press
         .container
-          p(style='text-align: center')
-            a(href="/dispute") &larr; Back to dispute history
+
           #event-grid
 
             each(loop='event in dato.event')
+
               .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?blend=0000FF'); background-size: cover;")
                 .desc
                   if(condition="{{ event.member[0] }}")
                     small {{ event.member[0].name }}
                   h3 {{ event.title }}
+                  // p: b {{ event.location[0].name }}
                   p.date {{ df(event.startDateTime, "UTC:mmmm d, yyyy", true)}}
                   p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
 

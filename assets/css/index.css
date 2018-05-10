@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,400i,700,900');
+/* @import url('https://fonts.googleapis.com/css?family=Space Mono:400,400i,700,900'); */
+ /* @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700'); */
+  @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
 :root {
   --color-blue: #007AFF;
 }
 
 p, li {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   & b {
     font-weight: 700;
   }
@@ -14,7 +16,7 @@ p, li {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Space Text', sans-serif;
   font-weight: 700;
 }
 
@@ -310,7 +312,7 @@ main {
     }
   }
   & h2 {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 900;
     letter-spacing: 1px;
     font-size: 38px;
@@ -535,5 +537,17 @@ p > b.highlight {
 
       }
     }
+  }
+}
+
+#events {
+
+  & header {
+    height: auto;
+    text-align: center;
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
   }
 }
