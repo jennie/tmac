@@ -20,7 +20,7 @@ extends(src='layout.sgr')
 
             each(loop='event in dato.event')
 
-              .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?blend=0000FF'); background-size: cover;")
+              .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?blend=157EFB&high=-90'); background-size: cover;")
                 .desc
                   if(condition="{{ event.member[0] }}")
                     small {{ event.member[0].name }}
@@ -29,6 +29,7 @@ extends(src='layout.sgr')
                   p.date {{ df(event.startDateTime, "UTC:mmmm d, yyyy", true)}}
                   p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
 
-                  p: a(class="btn btn-primary" href="{{ event.registrationLink }}") Info
+                .register
+                  a(class="btn btn-primary" href="{{ event.registrationLink }}") Info
 
 

@@ -501,9 +501,19 @@ p > b.highlight {
   grid-row-gap: 10px;
   margin-top: 10px;
   grid-template-columns: 1fr 1fr 1fr;
+  & > div {
+    padding: 10px;
+
+  }
   & .event {
     grid-template-areas: "image desc";
+    display: flex;
+    flex-direction: column;
+    & .register {
+      justify-content: flex-end;
+      margin-top: auto;
 
+    }
     @nest & .desc {
       grid-area: desc;
       color: #fff;
@@ -513,7 +523,6 @@ p > b.highlight {
     }
 
     & .desc {
-      padding: 10px;
       & p {
         margin: 0 0 .7rem 0;
         font-size: calc(13px + .5vw);
@@ -549,5 +558,15 @@ p > b.highlight {
     height: 20vh;
     justify-content: center;
     align-items: center;
+  }
+
+  & .event {
+    & h3, & p {
+      text-shadow: 2px 2px #000;
+    }
+    & .btn-primary {
+      background-color: #e83d37;
+      border: none;
+    }
   }
 }
