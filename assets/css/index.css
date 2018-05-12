@@ -567,6 +567,7 @@ p > b.highlight {
     & .btn-primary {
       background-color: #e83d37;
       border: none;
+      color: #fff;
     }
   }
 }
