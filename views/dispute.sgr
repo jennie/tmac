@@ -19,7 +19,7 @@ extends(src='layout.sgr')
     main
       section#mission
 
-
+        
         .container
           .row
             .col-lg-3

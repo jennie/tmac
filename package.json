@@ -9,7 +9,8 @@
   "bugs": "https://github.com/jennie/tmac/issues",
   "dependencies": {
     "babel-preset-latest": "^6.24.1",
-    "hard-source-webpack-plugin": "^0.6.4",
+    "dateformat": "^3.0.3",
+    "hard-source-webpack-plugin": "^0.6.6",
     "image-webpack-loader": "^4.2.0",
     "markdown-it": "^8.4.1",
     "postcss-mixins": "^6.2.0",
@@ -24,10 +25,12 @@
     "reshape-standard": "^3.3.0",
     "spike": "^2.2.1",
     "spike-css-standards": "^4.0.0",
+    "spike-datocms": "^2.3.1",
     "spike-page-id": "^1.1.0",
     "sugarml": "^0.6.0",
     "sugarss": "^1.0.1",
-    "webpack": "^4.6.0"
+    "tinysort": "^2.3.6",
+    "webpack": "^4.8.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",
