@@ -12,7 +12,8 @@ extends(src='layout.sgr')
 
         p.address 32 Lisgar Street, Toronto
         p Our entrance is on the <b>north</b> side of the building, facing onto the park, east of the condo entrance.
-
+        p {{dateFns.format(new Date(2014, 1, 11), 'MM/DD/YYYY')}}
+        p {{ dateFns.format(new Date(2014, 1, 11), 'MM/DD/YYYY') }}
 
 
       section(id="mission")
@@ -45,28 +46,59 @@ extends(src='layout.sgr')
 
       section#events
         .container
-          h4.divider Events
-          #event-grid
+          h4.divider Upcoming events
+          .event-grid.upcoming
             each(loop='event in dato.event')
-              .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=000000&bm=multiply&blend=157EFB'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
-                .desc
-                  if(condition="event.member[0] && event.presenter")
-                    small {{ event.member[0].name }} &amp; {{ event.presenter }}
-                  elseif(condition="event.member[0]")
-                    small {{ event.member[0].name }}
-                  elseif(condition="event.presenter")
-                    small {{ event.presenter }}
-                  h3 {{ event.title }}
-                  // p: b {{ event.location[0].name }}
-                  .when
-                    if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
-                      p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}
-                      p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
-                    else
-                      p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
-                      p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
-                .register
-                  a(class="btn btn-primary" href="{{ event.registrationLink }}") Info
+              if(condition='event.past !== true')
+                .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=000000&bm=multiply&blend=157EFB'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
+                  .desc
+                    if(condition="event.member[0] && event.presenter")
+                      small {{ event.member[0].name }} &amp; {{ event.presenter }}
+                    elseif(condition="event.member[0]")
+                      small {{ event.member[0].name }}
+                    elseif(condition="event.presenter")
+                      small {{ event.presenter }}
+                    h3 {{ event.title }}
+                    // p: b {{ event.location[0].name }}
+                    .when
+                      if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
+                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}
+                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+                      else
+                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
+                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+
+                      // p Coming up in {{ dateFns.distanceInWordsToNow(event.startDateTime, true) }}
+
+                  .register
+                    a(class="btn btn-primary" href="{{ event.registrationLink }}") Info
+
+          h4.divider Recent events
+          .event-grid.past
+            each(loop='event in dato.event')
+              if(condition='event.past == true')
+                .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=444444&bm=darken&blend=eee'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
+                  .desc
+                    if(condition="event.member[0] && event.presenter")
+                      small {{ event.member[0].name }} &amp; {{ event.presenter }}
+                    elseif(condition="event.member[0]")
+                      small {{ event.member[0].name }}
+                    elseif(condition="event.presenter")
+                      small {{ event.presenter }}
+                    h3 {{ event.title }}
+                    // p: b {{ event.location[0].name }}
+                    .when
+                      if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
+                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}
+                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+                      else
+                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
+                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+
+                      // p Coming up in {{ dateFns.distanceInWordsToNow(event.startDateTime, true) }}
+
+                  .register
+                    a(class="btn btn-primary" href="{{ event.registrationLink }}") Info
 
 
 
@@ -164,6 +196,7 @@ extends(src='layout.sgr')
     block(name="javascript")
       script(src="/js/vendor/tinysort.js")
       script.
-        tinysort('#event-grid .event',{data:'startdate', order:'asc'});
+        tinysort('#event-grid .upcoming .event',{data:'startdate', order:'asc'});
+        tinysort('#event-grid .past .event',{data:'startdate', order:'desc'});
 
 

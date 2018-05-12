@@ -8,6 +8,7 @@ const cssStandards     = require('spike-css-standards')
 const jsStandards      = require('babel-preset-latest')
 const pageId           = require('spike-page-id')
 const df                      = require('dateformat')
+const dateFns                      = require('date-fns')
 
 const SpikeDatoCMS            = require('spike-datocms')
 const postcssMixins           = require('postcss-mixins')
@@ -29,6 +30,12 @@ const Dato = new SpikeDatoCMS({
         endDateHours = new Date( new Date(data.endDateTime).getTime() + offset * 3600 * 1000).toUTCString()
         data.endDateTime = endDateHours
       }
+      if (dateFns.isPast(data.endDateTime)) {
+        data.past = true
+      }
+      else {
+        data.past = false
+      }
       return data
     }
   }]
@@ -43,7 +50,9 @@ module.exports = {
     parser: sugarml,
     locals: (ctx) => { return Object.assign(locals,
       { pageId: pageId(ctx) },
-      { df: df.bind(df) }
+      { df: df.bind(df) },
+      { dateFns: dateFns }
+
     )},
     retext: { quotes: false }
   }),

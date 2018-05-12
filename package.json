@@ -11,7 +11,7 @@
     "babel-preset-latest": "^6.24.1",
     "date-fns": "^1.29.0",
     "dateformat": "^3.0.3",
-    "hard-source-webpack-plugin": "^0.6.6",
+    "hard-source-webpack-plugin": "^0.6.7",
     "image-webpack-loader": "^4.2.0",
     "markdown-it": "^8.4.1",
     "postcss-mixins": "^6.2.0",
