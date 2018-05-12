@@ -9,6 +9,7 @@
   "bugs": "https://github.com/jennie/tmac/issues",
   "dependencies": {
     "babel-preset-latest": "^6.24.1",
+    "date-fns": "^1.29.0",
     "dateformat": "^3.0.3",
     "hard-source-webpack-plugin": "^0.6.6",
     "image-webpack-loader": "^4.2.0",

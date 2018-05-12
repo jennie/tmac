@@ -1,6 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css?family=Space Mono:400,400i,700,900'); */
- /* @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700'); */
-  @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+@import 'fonts.css';
+
 :root {
   --color-blue: #007AFF;
 
