@@ -12,8 +12,6 @@ extends(src='layout.sgr')
 
         p.address 32 Lisgar Street, Toronto
         p Our entrance is on the <b>north</b> side of the building, facing onto the park, east of the condo entrance.
-        p {{dateFns.format(new Date(2014, 1, 11), 'MM/DD/YYYY')}}
-        p {{ dateFns.format(new Date(2014, 1, 11), 'MM/DD/YYYY') }}
 
 
       section(id="mission")
