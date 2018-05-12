@@ -19,16 +19,26 @@ extends(src='layout.sgr')
           #event-grid
 
             each(loop='event in dato.event')
-
-              .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?blend=157EFB&high=-90'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
+              .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=2E4170&bm=darken&blend=555555'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
                 .desc
-                  if(condition="{{ event.member[0] }}")
+
+
+                  if(condition="event.member[0] && event.presenter")
+                    small {{ event.member[0].name }} &amp; {{ event.presenter }}
+                  elseif(condition="event.member[0]")
                     small {{ event.member[0].name }}
+                  elseif(condition="event.presenter")
+                    small {{ event.presenter }}
                   h3 {{ event.title }}
                   // p: b {{ event.location[0].name }}
-                  p.date {{ df(event.startDateTime, "UTC:mmmm d, yyyy", true)}}
-                  if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
-                  p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+                  .when
+                    if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
+                      p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}
+                      p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+                    else
+                      p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
+                      p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+
 
                 .register
                   a(class="btn btn-primary" href="{{ event.registrationLink }}") Info

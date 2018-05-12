@@ -499,7 +499,7 @@ p > b.highlight {
   display: grid;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  margin-top: 10px;
+  margin-top: 3rem;
   grid-template-columns: 1fr 1fr 1fr;
   & > div {
     padding: 10px;
@@ -525,7 +525,7 @@ p > b.highlight {
     & .desc {
       & p {
         margin: 0 0 .7rem 0;
-        font-size: calc(13px + .5vw);
+        font-size: calc(14px + .5vw);
         &:last-child {
           margin: 0;
         }
@@ -568,6 +568,14 @@ p > b.highlight {
       background-color: #e83d37;
       border: none;
       color: #fff;
+    }
+    & .when {
+      & p {
+        line-height: normal;
+        margin: 0;
+        &.time {
+        }
+      }
     }
   }
 }
