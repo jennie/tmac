@@ -1,72 +1,71 @@
 @font-face {
     font-family: 'Space Text';
-    src: url('SpaceText-Regular.woff2') format('woff2'),
-        url('SpaceText-Regular.woff') format('woff');
+    src: url('../fonts/SpaceText-Regular.woff2') format('woff2'),
+        url('../fonts/SpaceText-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Space Text';
-    src: url('SpaceText-Light.woff2') format('woff2'),
-        url('SpaceText-Light.woff') format('woff');
+    src: url('../fonts/SpaceText-Light.woff2') format('woff2'),
+        url('../fonts/SpaceText-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Space Text';
-    src: url('SpaceText-Bold.woff2') format('woff2'),
-        url('SpaceText-Bold.woff') format('woff');
+    src: url('../fonts/SpaceText-Bold.woff2') format('woff2'),
+        url('../fonts/SpaceText-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Space Text';
-    src: url('SpaceText-SemiBold.woff2') format('woff2'),
-        url('SpaceText-SemiBold.woff') format('woff');
+    src: url('../fonts/SpaceText-SemiBold.woff2') format('woff2'),
+        url('../fonts/SpaceText-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Space Text';
-    src: url('SpaceText-Medium.woff2') format('woff2'),
-        url('SpaceText-Medium.woff') format('woff');
+    src: url('../fonts/SpaceText-Medium.woff2') format('woff2'),
+        url('../fonts/SpaceText-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Space Text';
-    src: url('SpaceText-SemiBold.woff2') format('woff2'),
-        url('SpaceText-SemiBold.woff') format('woff');
+    src: url('../fonts/SpaceText-SemiBold.woff2') format('woff2'),
+        url('../fonts/SpaceText-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Space Text';
-    src: url('SpaceText-Regular.woff2') format('woff2'),
-        url('SpaceText-Regular.woff') format('woff');
+    src: url('../fonts/SpaceText-Regular.woff2') format('woff2'),
+        url('../fonts/SpaceText-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Space Text';
-    src: url('SpaceText-Light.woff2') format('woff2'),
-        url('SpaceText-Light.woff') format('woff');
+    src: url('../fonts/SpaceText-Light.woff2') format('woff2'),
+        url('../fonts/SpaceText-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Space Text';
-    src: url('SpaceText-Bold.woff2') format('woff2'),
-        url('SpaceText-Bold.woff') format('woff');
+    src: url('../fonts/SpaceText-Bold.woff2') format('woff2'),
+        url('../fonts/SpaceText-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
-
