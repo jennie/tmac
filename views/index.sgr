@@ -75,7 +75,7 @@ extends(src='layout.sgr')
           .event-grid.past
             each(loop='event in dato.event')
               if(condition='event.past == true')
-                .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=444444&bm=darken&blend=eee'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
+                .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=000000&bm=darken&blend=555555'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
                   .desc
                     if(condition="event.member[0] && event.presenter")
                       small {{ event.member[0].name }} &amp; {{ event.presenter }}

@@ -511,6 +511,7 @@ p > b.highlight {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   margin: 3rem 0;
+  grid-auto-rows: 1fr;
 
   @media (--tablet) {
     grid-template-columns: 1fr 1fr;
@@ -578,8 +579,8 @@ p > b.highlight {
   }
 
   & .event {
-    & h3, & p {
-      text-shadow: 2px 2px #000;
+    & > * {
+      text-shadow: 1px 1px #000;
     }
     & .btn-primary {
       background-color: #e83d37;
