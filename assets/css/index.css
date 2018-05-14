@@ -535,6 +535,11 @@ p > b.highlight {
     @nest & .desc {
       grid-area: desc;
       color: #fff;
+      & small {
+        line-height: normal;
+        display: block;
+        margin-bottom: 10px;
+      }
     }
     @nest & .image {
       grid-area: image;
