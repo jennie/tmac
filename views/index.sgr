@@ -1,5 +1,5 @@
 extends(src='layout.sgr')
-  
+
   block(name='content')
     // figure
     header(style="background-image:url(/images/photos/damage-camp.jpg);")
@@ -14,7 +14,7 @@ extends(src='layout.sgr')
         p Our entrance is on the <b>north</b> side of the building, facing onto the park, east of the condo entrance.
 
 
-      section(id="mission")
+      section(id="about")
 
         .container
           .row
@@ -118,7 +118,7 @@ extends(src='layout.sgr')
         .container
           a(href='http://eepurl.com/cTlUMP' class='btn btn-primary') Subscribe to our mailing list
 
-      section#about
+      section#history
         .container
           .row
             .col-sm-8

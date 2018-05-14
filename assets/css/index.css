@@ -80,7 +80,7 @@ body {
       font-weight: 900;
     }
   }
-  &#dispute {
+  &#news {
     & img {
       max-width: 100%;
       margin: 0 0 10px 0;
@@ -582,7 +582,7 @@ img.shadowed {
   border-radius: 4px;
   box-shadow: 3px 3px 3px #eee;
 }
-#mission {
+#about {
   & h3 {
     font-size: 16px;
     text-transform: uppercase;

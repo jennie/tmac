@@ -45,7 +45,7 @@ module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.css' },
   vendor: 'assets/js/vendor/**',
-  ignore: ['**/layout.sgr', '**/_*', '**/.*', '_cache/**', 'readme.md'],
+  ignore: ['**/layout.sgr', '**/_layout.sgr', '**/.*', '_cache/**', 'readme.md'],
   reshape: htmlStandards ({
     parser: sugarml,
     locals: (ctx) => { return Object.assign(locals,

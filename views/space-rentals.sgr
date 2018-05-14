@@ -10,9 +10,8 @@ extends(src='layout.sgr')
 
   block(name='content')
 
-    header(style="background-image:url(/images/photos/TMAC-gallery.jpg); background-position: center top; height: auto")
-      a(href="/")
-        img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
+    header(style="background-image:url(/images/photos/TMAC-gallery.jpg); background-position: center top; height: 35vh")
+
 
       h1 Toronto Media Arts Centre Space Rentals
 

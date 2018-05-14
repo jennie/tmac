@@ -10,9 +10,7 @@ extends(src='layout.sgr')
 
   block(name='content')
 
-    header(style="background-image:url(/images/photos/parkdale-meeting.jpg)")
-      a(href="/")
-        img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
+    header(style="background-image:url(/images/photos/parkdale-meeting.jpg); background-position: center top; height: 80vh")
 
       h1 Toronto Media Arts Centre
 
