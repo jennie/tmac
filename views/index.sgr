@@ -49,6 +49,7 @@ extends(src='layout.sgr')
             each(loop='event in dato.event')
               if(condition='event.past !== true')
                 .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=000000&bm=multiply&blend=157EFB'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
+
                   .desc
                     if(condition="event.member[0] && event.presenter")
                       small {{ event.member[0].name }} &amp; {{ event.presenter }}
@@ -65,10 +66,12 @@ extends(src='layout.sgr')
                         p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
                         p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}–{{ df(event.endDateTime, "h:MM tt", true)}}
 
-                      // p Coming up in {{ dateFns.distanceInWordsToNow(event.startDateTime, true) }}
+
 
                   .register
                     a(class="btn btn-primary" href="{{ event.registrationLink }}") Info
+                    if(condition="{{ dateFns.isThisWeek(event.startDateTime) == true}}")
+                      p.thisweek This week
 
           h4.divider Recent events
           .event-grid.past
@@ -194,4 +197,3 @@ extends(src='layout.sgr')
       script.
         tinysort('.event-grid.upcoming .event',{data:'startdate', order:'asc'});
         tinysort('.event-grid.past .event',{data:'startdate', order:'desc'});
-    

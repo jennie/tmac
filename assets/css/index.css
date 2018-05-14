@@ -613,11 +613,28 @@ p > b.highlight {
     grid-template-areas: "image desc";
     display: flex;
     flex-direction: column;
+    position: relative;
     & .register {
-      justify-content: flex-end;
+      justify-content: space-between;
       margin-top: auto;
+      display: flex;
+      align-items: center;
 
+      & .btn {
+        margin: 0;
+      }
+      & .thisweek {
+        background-color: rgba(0,0,0,.9);
+        color: #fff;
+        margin: 0;
+        @mixin upper;
+        font-weight: normal;
+        font-family: "Space Text", sans-serif;
+        padding: 0 8px;
+      }
     }
+
+
     @nest & .desc {
       grid-area: desc;
       color: #fff;
