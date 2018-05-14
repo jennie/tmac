@@ -1,0 +1,7 @@
+li {{ pageId }}
+li: a(class="{{ pageId === 'index' ? 'current' : '' }}" href="/") Home
+li: a(class="" href="/#about") About
+li: a(class="" href="/#events") Events
+li: a(class="{{ pageId === 'space-rentals' ? 'current' : '' }}" href="/space-rentals") Space Rentals
+li: a(class="{{ pageId === 'dispute' ? 'current' : '' }}" href="/news") News
+// li: a(class="" href="/#contact") Contact

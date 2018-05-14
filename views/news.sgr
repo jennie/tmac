@@ -10,16 +10,13 @@ extends(src='layout.sgr')
 
   block(name='content')
 
-    header(style="background-image:url(/images/photos/TMAC-gallery.jpg); background-position: center bottom")
-      a(href="/")
-        img.img-fluid(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
-
+    header(style="background-image:url(/images/photos/TMAC-gallery.jpg); background-position: center top; min-height: 45vh")
       h1 Toronto Media Arts Centre
 
     main
       section#mission
 
-        
+
         .container
           .row
             .col-lg-3

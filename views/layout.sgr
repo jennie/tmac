@@ -14,7 +14,31 @@ html
       link(rel='stylesheet' href='https://calendly.com/assets/external/widget.css')
 
   body(role='document' id='{{ pageId }}')
+    div.header-container
+      .box.header
+        .logo: a(href="/")
+          img(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
+
+        block(name="nav")
+          .nav
+            .nav-desktop
+              ul
+                include(src='includes/nav-items.sgr')
+            .nav-mobile
+              .nav-toggle
+                span(class='burg' onclick='toggleNav()')
+                  svg(height='32px' id='burg' style='enable-background:new 0 0 32 32;' version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+                    path(d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z")
+              .nav-toggle
+                span(class='x' onclick='toggleNav()')
+                  svg(id='x' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='-4 -4 32 32')
+                    path(d='M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z')
+
+              .nav-menu
+                include(src='includes/nav-items.sgr')
+
     block(name='content')
+
     block(name='footer')
       include(src='/includes/footer.sgr')
     block(name='javascript')
