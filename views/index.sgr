@@ -60,11 +60,10 @@ extends(src='layout.sgr')
                     // p: b {{ event.location[0].name }}
                     .when
                       if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
-                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}
-                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
                       else
                         p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
-                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}–{{ df(event.endDateTime, "h:MM tt", true)}}
 
                       // p Coming up in {{ dateFns.distanceInWordsToNow(event.startDateTime, true) }}
 
@@ -87,11 +86,11 @@ extends(src='layout.sgr')
                     // p: b {{ event.location[0].name }}
                     .when
                       if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
-                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}
-                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} •
+                          span.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
                       else
                         p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
-                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}} – {{ df(event.endDateTime, "h:MM TT", true)}}
+                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}–{{ df(event.endDateTime, "h:MM tt", true)}}
 
                       // p Coming up in {{ dateFns.distanceInWordsToNow(event.startDateTime, true) }}
 
