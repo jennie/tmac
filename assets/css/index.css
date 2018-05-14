@@ -696,6 +696,7 @@ p > b.highlight {
       color: #fff;
     }
     & .when {
+      margin-bottom: 20px;
       & p {
         line-height: normal;
         margin: 0;
