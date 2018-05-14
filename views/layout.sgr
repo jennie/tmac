@@ -44,31 +44,31 @@ html
     block(name='javascript')
      script(src='js/main.js' defer)
      script(src="https://calendly.com/assets/external/widget.js" type="text/javascript")
-     script.
-       const mobileMenu = document.querySelector('.nav-menu');
-       const burg = document.querySelector('.burg');
-       const x = document.querySelector('.x');
-       const menuItems = document.querySelectorAll('.nav-menu li a');
+   script.
+    const mobileMenu = document.querySelector('.nav-menu');
+    const burg = document.querySelector('.burg');
+    const x = document.querySelector('.x');
+    const menuItems = document.querySelectorAll('.nav-menu li a');
 
-       function isHidden(e) {
-         return (e.offsetParent === null)
-       }
-       function hideNav() {
-         mobileMenu.setAttribute('style','display: none')
-       }
-       function toggleNav() {
-         if(isHidden(mobileMenu)) {
-           mobileMenu.setAttribute('style','display: block')
-           burg.setAttribute('style','display: none')
-           x.setAttribute('style','display: block')
-         }
-         else {
-           hideNav()
-           burg.setAttribute('style','display: block')
-           x.setAttribute('style','display: none')
-         }
-       }
-       for (var i = 0 ; i < menuItems.length; i++) {
-          menuItems[i].addEventListener('click', toggleNav, false) ;
-       }
+    function isHidden(e) {
+     return (e.offsetParent === null)
+    }
+    function hideNav() {
+     mobileMenu.setAttribute('style','display: none')
+    }
+    function toggleNav() {
+     if(isHidden(mobileMenu)) {
+       mobileMenu.setAttribute('style','display: block')
+       burg.setAttribute('style','display: none')
+       x.setAttribute('style','display: block')
+     }
+     else {
+       hideNav()
+       burg.setAttribute('style','display: block')
+       x.setAttribute('style','display: none')
+     }
+    }
+    for (var i = 0 ; i < menuItems.length; i++) {
+      menuItems[i].addEventListener('click', toggleNav, false) ;
+    }
 
