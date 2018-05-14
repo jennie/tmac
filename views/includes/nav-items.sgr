@@ -1,4 +1,3 @@
-li {{ pageId }}
 li: a(class="{{ pageId === 'index' ? 'current' : '' }}" href="/") Home
 li: a(class="" href="/#about") About
 li: a(class="" href="/#events") Events
