@@ -599,8 +599,7 @@ p > b.highlight {
   margin: 3rem 0;
   grid-auto-rows: 1fr;
 & a {
-  display: grid;
-  &:hover {
+    &:hover {
     text-decoration: none
   }
 }
@@ -610,15 +609,15 @@ p > b.highlight {
   @media (--desktop) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  & .event > div {
+  & > div {
     padding: 10px;
 
   }
-  & .event {
+  & .event a {
     grid-template-areas: "image desc";
     display: flex;
     flex-direction: column;
-    position: relative;
+    height: 100%;
     & .register {
       justify-content: space-between;
       margin-top: auto;
