@@ -397,7 +397,7 @@ header {
 }
 
 main {
-  & a:link {
+  & p a:link {
     text-decoration: none;
     color: #007AFF;
     background-color: color(#007AFF tint(95%));
@@ -598,14 +598,19 @@ p > b.highlight {
   grid-row-gap: 10px;
   margin: 3rem 0;
   grid-auto-rows: 1fr;
-
+& a {
+  display: grid;
+  &:hover {
+    text-decoration: none
+  }
+}
   @media (--tablet) {
     grid-template-columns: 1fr 1fr;
   }
   @media (--desktop) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  & > div {
+  & .event > div {
     padding: 10px;
 
   }

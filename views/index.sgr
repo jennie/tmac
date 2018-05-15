@@ -48,56 +48,59 @@ extends(src='layout.sgr')
           .event-grid.upcoming
             each(loop='event in dato.event')
               if(condition='event.past !== true')
-                .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=000000&bm=multiply&blend=157EFB'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
+                a(href="{{ event.registrationLink }}")
+                  .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=000000&bm=multiply&blend=157EFB'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
 
-                  .desc
-                    if(condition="event.member[0] && event.presenter")
-                      small {{ event.member[0].name }} &amp; {{ event.presenter }}
-                    elseif(condition="event.member[0]")
-                      small {{ event.member[0].name }}
-                    elseif(condition="event.presenter")
-                      small {{ event.presenter }}
-                    h3 {{ event.title }}
-                    // p: b {{ event.location[0].name }}
-                    .when
-                      if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
-                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
-                      else
-                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
-                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}–{{ df(event.endDateTime, "h:MM tt", true)}}
+                    .desc
+                      if(condition="event.member[0] && event.presenter")
+                        small {{ event.member[0].name }} &amp; {{ event.presenter }}
+                      elseif(condition="event.member[0]")
+                        small {{ event.member[0].name }}
+                      elseif(condition="event.presenter")
+                        small {{ event.presenter }}
+                      h3 {{ event.title }}
+                      // p: b {{ event.location[0].name }}
+                      .when
+                        if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
+                          p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
+                        else
+                          p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
+                          p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}–{{ df(event.endDateTime, "h:MM tt", true)}}
 
 
 
-                  .register
-                    a(class="btn btn-primary" href="{{ event.registrationLink }}") Info
-                    if(condition="{{ dateFns.isThisWeek(event.startDateTime) == true}}")
-                      p.thisweek This week
+                    .register
+                      span(class="btn btn-primary") Info
+                      if(condition="{{ dateFns.isThisWeek(event.startDateTime) == true}}")
+                        p.thisweek This week
 
           h4.divider Recent events
           .event-grid.past
             each(loop='event in dato.event')
               if(condition='event.past == true')
-                .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=000000&bm=darken&blend=555555'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
-                  .desc
-                    if(condition="event.member[0] && event.presenter")
-                      small {{ event.member[0].name }} &amp; {{ event.presenter }}
-                    elseif(condition="event.member[0]")
-                      small {{ event.member[0].name }}
-                    elseif(condition="event.presenter")
-                      small {{ event.presenter }}
-                    h3 {{ event.title }}
-                    // p: b {{ event.location[0].name }}
-                    .when
-                      if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
-                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
-                      else
-                        p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
-                        p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}–{{ df(event.endDateTime, "h:MM tt", true)}}
+                a(href="{{ event.registrationLink }}")
 
-                      // p Coming up in {{ dateFns.distanceInWordsToNow(event.startDateTime, true) }}
+                  .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=000000&bm=darken&blend=555555'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
+                    .desc
+                      if(condition="event.member[0] && event.presenter")
+                        small {{ event.member[0].name }} &amp; {{ event.presenter }}
+                      elseif(condition="event.member[0]")
+                        small {{ event.member[0].name }}
+                      elseif(condition="event.presenter")
+                        small {{ event.presenter }}
+                      h3 {{ event.title }}
+                      // p: b {{ event.location[0].name }}
+                      .when
+                        if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
+                          p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
+                        else
+                          p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
+                          p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}–{{ df(event.endDateTime, "h:MM tt", true)}}
 
-                  .register
-                    a(class="btn btn-primary" href="{{ event.registrationLink }}") Info
+                        // p Coming up in {{ dateFns.distanceInWordsToNow(event.startDateTime, true) }}
+
+                    .register
+                      span(class="btn btn-primary") Info
 
 
 
