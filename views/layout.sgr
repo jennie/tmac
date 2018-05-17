@@ -14,7 +14,7 @@ html
       link(rel='stylesheet' href='https://calendly.com/assets/external/widget.css')
 
   body(role='document' id='{{ pageId }}')
-    div.header-container
+    div.container
       .box.header
         .logo: a(href="/")
           img(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
