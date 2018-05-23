@@ -6,6 +6,8 @@ extends(src='layout.sgr')
 
       h1 Toronto Media Arts Centre
 
+
+    
     main
 
       div.alert.alert-success#letter-callout
@@ -71,7 +73,9 @@ extends(src='layout.sgr')
 
                     .register
                       span(class="btn btn-primary") Info
-                      if(condition="{{ dateFns.isThisWeek(event.startDateTime) == true}}")
+                      if(condition="{{ dateFns.isToday(event.startDateTime) == true}}")
+                        p.thisweek Today
+                      else(condition="{{ dateFns.isThisWeek(event.startDateTime) == true}}")
                         p.thisweek This week
 
           h4.divider Recent events
