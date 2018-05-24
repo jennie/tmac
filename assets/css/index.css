@@ -618,6 +618,17 @@ p > b.highlight {
     display: flex;
     flex-direction: column;
     height: 100%;
+    /* position: relative; */
+    & span.canceled {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 999999;
+      background: red;
+      color: #fff;
+      width: 100%;
+      padding: 10px;
+    }
     & .register {
       justify-content: space-between;
       margin-top: auto;

@@ -48,10 +48,12 @@ extends(src='layout.sgr')
           .event-grid.upcoming
             each(loop='event in dato.event')
               if(condition='event.past !== true')
-                .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=000000&bm=multiply&blend=157EFB'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
+                .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?mono=000000&bm=multiply&blend={{ event.canceled == true ? 'eeeeee' : '157EFB'}}'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}"  class="{{ event.canceled == true ? 'canceled' : ''}}")
 
                   a(href="{{ event.registrationLink }}")
                     .desc
+                      if(condition="event.canceled == true")
+                        span.canceled Canceled
                       if(condition="event.member[0] && event.presenter")
                         small {{ event.member[0].name }} &amp; {{ event.presenter }}
                       elseif(condition="event.member[0]")
