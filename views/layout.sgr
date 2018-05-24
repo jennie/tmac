@@ -43,7 +43,7 @@ html
       include(src='/includes/footer.sgr')
     block(name='javascript')
      script(src='js/main.js' defer)
-     script(src="https://calendly.com/assets/external/widget.js" type="text/javascript")
+   script(src="https://calendly.com/assets/external/widget.js" type="text/javascript")
    script.
     const mobileMenu = document.querySelector('.nav-menu');
     const burg = document.querySelector('.burg');
