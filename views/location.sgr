@@ -42,6 +42,10 @@ extends(src='layout.sgr')
 
 
             .col-lg-6
+              h4 Address
+
+              p 32 Lisgar Street, Toronto, ON, M6J 0C9
+              
               h4 Entrance
               p Our doors are east of the main condo entrance on the north side of the building, facing onto Lisgar Park (<em>not</em> off of Lisgar Street!).
               p: a(href="https://policies.tomediaarts.org/policies/accessibility.html") Accessibility information
