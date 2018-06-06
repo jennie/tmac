@@ -22,6 +22,7 @@ extends(src='layout.sgr')
             .col-lg-3
 
               div(class='toc' md).
+                -   [Full speed ahead!](#june-2018-update) June 6, 2018
                 -   [An update about our settlement, and our first month at TMAC!](#april-2018-update) Apr 30, 2018
                 -   [We're moving in!](#court-approval) Feb 23, 2018
                 -   [We have reached a settlement with the City of Toronto](#agreement-reached) Feb 6, 2018
