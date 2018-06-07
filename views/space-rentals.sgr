@@ -169,26 +169,28 @@ extends(src='layout.sgr')
             .col-lg-6
               h4 Meeting Rooms
 
-              p Perfect for presenting to a client or brainstorming with your team. 40-inch TV with Apple TV connection, large whiteboard and kitchenette. Seats up to 10. Available Mon-Fri, 9 a.m.-6 p.m.
+              p Perfect for presenting to a client, brainstorming with your team or as a writers' room. 40-inch screen with Apple TV connection, large whiteboard and kitchenette with fridge, microwave and dishes. Floor to ceiling windows. AC/heat controls. Seats up to 10.
+              p Available Mon-Fri, 9 a.m.-6 p.m. After hours access and nightly cleaning available for multi-day bookings.
 
               table.table.table-condensed
 
                 tbody
                   tr
-                    td 1 hour
-                    td $30
+                    td Hourly
+                    td $25
                   tr
-                    td 2 hours
-                    td $50
-                  tr
-                    td 3 hours
-                    td $70
-                  tr
-                    td 4 hours
+                    td Half day
                     td $85
+                  tr
+                    td Full day
+                    td $140
+                  tr
+                    td Multi-day
+                    td $120/day (minimum 2 days, maximum 4 weeks)
+
 
             .col-lg-6
-              img(src="../images/photos/space-rentals/meeting-room.jpg" class="responsive shadowed")
+              img(src="../images/photos/space-rentals/meeting-room-1.jpg" class="responsive shadowed")
           hr
           .row.add-ons
             .col-lg-6
@@ -197,7 +199,9 @@ extends(src='layout.sgr')
 
               p We can arrange for catering—from platters of finger foods to sweet treats to a full Mexican pop-up dinner. You may also bring your own food, of course!
 
-              p Alcohol may not be sold or provided without a Special Occasion Permit. You should apply for your SOP at least 30 days in advance of your event.
+              p We recommend our partner OMG on the Park for all of your catering needs. Please <a href="mailto:doug.mattina.omg@gmail.com">contact owner Doug Mattina directly</a> to discuss your menu.
+
+              p Alcohol may not be sold or provided without a Special Occasion Permit. You should apply for your SOP at least 30 days in advance of your event via <a href="https://www.iagco.agco.ca/prod/pub/en/login.aspx">iAGCO</a>.
 
               h4 Chairs & tables
 
@@ -242,7 +246,7 @@ extends(src='layout.sgr')
           h3 Booking Procedure
           ol
             li Complete our <a href="/booking-request">booking request form</a>
-            li Our team will follow up via email
+            li Our team will follow up via email after our weekly programming committee meeting (Tuesdays)
             li Review and sign our rental agreement
             li Pay your deposit to confirm your event date
             li Have an amazing event!
