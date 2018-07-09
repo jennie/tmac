@@ -13,7 +13,7 @@ extends(src='layout.sgr')
       div.alert.alert-success#letter-callout
 
         p.address 32 Lisgar Street, Toronto
-        p Our entrance is on the <b>north</b> side of the building, facing onto the park, east of the condo entrance.
+        p Hours: 10am–6pm M-F • Café: open daily at 7am
 
 
       section(id="about")
@@ -28,18 +28,17 @@ extends(src='layout.sgr')
               //
               // p.lead TMAC aspires to be a centre for excellence for the media arts that takes an accessible approach to the advancement of culture and technology.
               div(md).
-                In the heart of Toronto’s Art and Design District, TMAC is creating a diverse and collaborative environment where anyone can engage meaningfully with art and technology. TMAC integrates creation, production, presentation, education, conservation and dissemination practices and with a focus on community building and inclusivity.
+                In the heart of Toronto’s Art and Design District, TMAC is creating a diverse and collaborative environment where everyone can engage meaningfully with art and technology. TMAC integrates creation, production, presentation, education, conservation and dissemination practices and with a focus on community building and inclusivity.
 
                 With year-round arts and cultural programming, open lab studios, equipment libraries, coworking and social areas, we provide the tools, space and freedom to play with art, media and new technologies–including film, videogames, audio, video, robotics, electronics and more.
               p: a(href="https://policies.tomediaarts.org/policies/accessibility.html") Accessibility information
 
             .col-sm-5
               h3 Space rentals
-              p Need space for an event, exhibition, or meeting? <a href="/space-rentals">Check out our rates and space info.</a>
-              h3 Partnerships
-              div(md).
-                [Get in touch](mailto:info@tomediaarts.org) if your organization is interested in sponsoring, partnering with, or joining TMAC.
-              h3 Learn about our space
+              p Need space for an event, exhibition, or meeting? Check out our rates and space info.
+                a(href="/space-rentals" class="btn btn-primary") Host an Event
+
+              h3 Visit TMAC
               p Want to see what TMAC is all about? Curious about the possibilities? Come on inside!
                 a(href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false") Book a tour
 
@@ -136,10 +135,9 @@ extends(src='layout.sgr')
               h2 Facility
               div(md).
 
-                Our multi-purpose facility will offer shared spaces and amenities including:
+                Our multi-purpose facility offers shared spaces and amenities including:
 
-                - A **210-seat theatre** designed by renowned architect Peter Smith, for screening independent and experimental works
-                - Studio apartment for visiting **artist residencies**
+                - Café serving coffee, pastries and lunch daily from 7 a.m.
                 - Community gathering and event spaces overlooking Lisgar Park
                 - Classrooms for public talks, workshops, screenings, festivals and events
                 - Meeting rooms seating up to 14
@@ -148,6 +146,8 @@ extends(src='layout.sgr')
                 - A temperature-controlled film vault and archive
                 - Technical and production facilities
                 - Four public galleries and **exhibition spaces**
+                - A **210-seat theatre** designed by renowned architect Peter Smith, for screening independent and experimental works – coming 2019
+                - Studio apartment for visiting **artist residencies** – coming 2019
 
 
       section#facility
