@@ -1,0 +1,62 @@
+extends(src='layout.sgr')
+
+  block(name='meta')
+
+    meta(name='description' content="How to get to Toronto Media Arts Centre")
+    meta(name='keywords' content='TMAC, toronto media arts, toronto media arts cluster')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='google-site-verification' content='ArLdqonWlRvHkvmHpdwdW3nxGnct3sJE--rDYC-Y0Mo')
+
+
+  block(name='content')
+
+    header(style="background-image:url(/images/photos/TMAC-gallery.jpg); background-position: center top; height: 35vh")
+
+
+      h1 Toronto Media Arts Centre Location
+
+    main
+      section#spaces
+        .container
+          p(style='text-align: center')
+            a(href="/") &larr; Back home
+
+
+          h4.divider Recent events
+          .event-grid.past
+            each(loop='event in dato.event')
+              if(condition='event.past == true')
+
+                .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=60&blend=322D5A'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}")
+                  a(href="{{ event.registrationLink }}")
+                    .desc
+                      if(condition="event.member[0] && event.presenter")
+                        small {{ event.member[0].name }} &amp; {{ event.presenter }}
+                      elseif(condition="event.member[0]")
+                        small {{ event.member[0].name }}
+                      elseif(condition="event.presenter")
+                        small {{ event.presenter }}
+                      h3 {{ event.title }}
+                      // p: b {{ event.location[0].name }}
+                      .when
+                        if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
+                          p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
+                        else
+                          p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
+                          p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}–{{ df(event.endDateTime, "h:MM tt", true)}}
+
+                        // p Coming up in {{ dateFns.distanceInWordsToNow(event.startDateTime, true) }}
+
+                    .register
+                      span(class="btn btn-primary") Info
+
+
+
+
+
+
+    block(name="javascript")
+      script(src="/js/vendor/tinysort.js")
+
+      script.
+        tinysort('.thing',{data:'startdate', order:'asc'});
