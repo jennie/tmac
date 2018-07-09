@@ -2,8 +2,8 @@ extends(src='layout.sgr')
 
   block(name='meta')
 
-    meta(name='description' content="How to get to Toronto Media Arts Centre")
-    meta(name='keywords' content='TMAC, toronto media arts, toronto media arts cluster')
+    meta(name='description' content="Past events at Toronto Media Arts Centre")
+    meta(name='keywords' content='TMAC, events, past events, toronto media arts, toronto media arts cluster')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(name='google-site-verification' content='ArLdqonWlRvHkvmHpdwdW3nxGnct3sJE--rDYC-Y0Mo')
 
