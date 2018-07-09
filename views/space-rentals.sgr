@@ -174,8 +174,7 @@ extends(src='layout.sgr')
 
               p: a(href="https://external-bookings.apps.cobot.me/4c625a78-fb90-44f2-bd27-bf4a23412b8d/book" class="btn btn-primary") Book online now
 
-              table.table.table-condensed
-
+              table(class="table table-condensed")
                 tbody
                   tr
                     td Hourly
