@@ -1010,6 +1010,9 @@ p.past {
   @nest & section {
     background: black
   }
+  @nest & .header {
+    display:none;
+  }
   @nest & .event-grid {
     margin: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1017,9 +1020,6 @@ p.past {
     max-height: 100vh;
     grid-column-gap: 2px;
     grid-row-gap: 2px;
-    @nest & .header {
-      display:none;
-    }
     @nest & .event {
       @nest & .location {
         text-transform: uppercase;
