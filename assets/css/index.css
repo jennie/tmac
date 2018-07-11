@@ -996,3 +996,29 @@ p > b.highlight {
 p.past {
   text-align: center;
 }
+
+
+#events_today {
+  @nest & .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  @nest & #events {
+    margin: 0;
+  }
+  @nest & .event-grid {
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto-fill;
+    max-height: 100vh;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    @nest & .event {
+      @nest & .location {
+        text-transform: uppercase;
+        font-size: 11px;
+      }
+    }
+  }
+}

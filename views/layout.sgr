@@ -15,9 +15,10 @@ html
 
   body(role='document' id='{{ pageId }}')
     div.container
-      .box.header
-        .logo: a(href="/")
-          img(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
+      block(name="header")
+        .box.header
+          .logo: a(href="/")
+            img(src='/images/tmac_logo_alt.png' alt='Toronto Media Arts Centre')
 
         block(name="nav")
           .nav
