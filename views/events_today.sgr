@@ -2,8 +2,6 @@ extends(src='layout.sgr')
 
   block(name='meta')
 
-  block(name="header")
-
   block(name="nav")
 
   block(name='content')
