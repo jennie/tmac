@@ -999,6 +999,7 @@ p.past {
 
 
 #events_today {
+  background: #000;
   @nest & .container {
     width: 100%;
     max-width: 100%;
@@ -1015,7 +1016,7 @@ p.past {
   }
   @nest & .event-grid {
     margin: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto-fill;
     max-height: 100vh;
     grid-column-gap: 2px;
