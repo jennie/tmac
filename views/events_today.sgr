@@ -28,6 +28,8 @@ extends(src='layout.sgr')
                       h3 {{ event.title }}
                       if(condition="event.location[0]")
                         p.location {{ event.location[0].name }}
+
+                      
                       .when
                         if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
                           p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
@@ -41,7 +43,7 @@ extends(src='layout.sgr')
                       if(condition="dateFns.isToday(event.startDateTime) == true")
                         p.thisweek Today
                       elseif(condition="dateFns.isThisWeek(event.startDateTime) == true")
-                        p.thisweek This week
+                        p.thisweek {{ dateFns.format(event.startDateTime, 'dddd') }}
 
 
 
