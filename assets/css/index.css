@@ -1025,7 +1025,7 @@ p.past {
         font-size: 24px;
       }
       @nest & h3 {
-        font-size: 70px;
+        font-size: 60px;
       }
       @nest & p.thisweek {
         padding: 4px 12px;
