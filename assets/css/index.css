@@ -1016,10 +1016,9 @@ p.past {
   }
   @nest & .event-grid {
     margin: 0;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 100vh;
-    grid-column-gap: 3px;
-    grid-row-gap: 3px;
+
     @nest & .event {
       @nest & .desc small {
         font-size: 24px;
