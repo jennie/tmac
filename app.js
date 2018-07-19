@@ -32,6 +32,13 @@ const Dato = new SpikeDatoCMS({
   models: [{
     name: 'event',
     transform: (data) => {
+      if (dateFns.isPast(data.endDateTime)) {
+        data.past = true
+        console.log(data.endDateTime + ': PAST (' + endDateHours + ')')
+      }
+      else {
+        data.past = false
+      }
       if (data.startDateTime) {
         startDateHours = new Date(new Date(data.startDateTime).getTime() + offset * 3600 * 1000).toUTCString()
         data.startDateTime = startDateHours
@@ -40,12 +47,7 @@ const Dato = new SpikeDatoCMS({
         endDateHours = new Date( new Date(data.endDateTime).getTime() + offset * 3600 * 1000).toUTCString()
         data.endDateTime = endDateHours
       }
-      if (dateFns.isPast(data.endDateTime)) {
-        data.past = true
-      }
-      else {
-        data.past = false
-      }
+
       return data
     }
   }]
