@@ -1,0 +1,12 @@
+extends(src='layout.sgr')
+
+  block(name='meta')
+
+  block(name='content')
+
+    main#fullscreen
+      img(src="../images/signage/24-25-July-Shopify.jpg")
+
+    block(name='footer')
+
+    block(name="javascript")
