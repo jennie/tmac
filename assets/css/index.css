@@ -1050,3 +1050,9 @@ p.past {
     }
   }
 }
+#signage_blank {
+  background-color: black;
+  @nest & .container {
+    display: none;
+  }
+}

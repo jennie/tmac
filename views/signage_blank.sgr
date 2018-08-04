@@ -1,0 +1,14 @@
+extends(src='layout.sgr')
+
+  block(name='meta')
+
+  block(name="nav")
+
+  block(name='content')
+
+    main#blank
+
+    block(name='footer')
+
+
+    block(name="javascript")
