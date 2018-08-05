@@ -27,7 +27,7 @@ const locals           = { }
 
 var offset = -4;
 const Dato = new SpikeDatoCMS({
-  // drafts: true,
+  drafts: true,
   addDataTo: locals,
   token: process.env.dato_api_key,
   models: [
@@ -54,6 +54,10 @@ const Dato = new SpikeDatoCMS({
     },
     {
       name: 'program',
+      template: {
+        path: 'views/_program.sgr',
+        output: (program) => { return `program/${program.slug}.html` }
+      },
       transform: (data) => {
         if (dateFns.isPast(data.endDate)) {
           data.past = true

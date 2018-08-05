@@ -66,6 +66,8 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
+
+
   & .actions {
     padding: 1rem 0;
     margin: 1rem 0;
@@ -1083,5 +1085,17 @@ p.past {
   background-color: black;
   @nest & .container {
     display: none;
+  }
+}
+
+
+
+body#_program {
+  @nest & #schedule {
+    @nest & h4 {
+      font-size: calc(14px + .02vw);
+      font-weight: 900;
+      color: var(--color-blue);
+    }
   }
 }

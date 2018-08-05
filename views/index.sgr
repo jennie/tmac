@@ -52,7 +52,7 @@ extends(src='layout.sgr')
               if(condition='exhibition.past !== true')
                 .event.exhibition(style="background-image: url('//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=60&blend={{ exhibition.canceled == true ? 'eeeeee' : '6042CD'}}'); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}"  class="{{ exhibition.canceled == true ? 'canceled' : ''}}")
 
-                  a(href="{{ exhibition.link }}")
+                  a(href="/program/{{ exhibition.slug }}")
                     .desc
                       if(condition="exhibition.member[0] && exhibition.presenter")
                         small {{ exhibition.member[0].name }} &amp; {{ exhibition.presenter }}
@@ -67,21 +67,23 @@ extends(src='layout.sgr')
 
                       .when
                         p.date
-                          span(class="fas fa-calendar-alt")
-                          // starts and ends on same day
+                          span(class="fas fa-fw fa-calendar-alt")
+                          // if the program starts and ends on same day
                           if(condition="dateFns.isSameDay(exhibition.startDate,exhibition.endDate) == true")
                             span.date {{ df(exhibition.startDate, "UTC:mmmm d", true)}} • {{ df(exhibition.startDate, "UTC:h:MM tt", true)}}
-                          // starts and ends in same month
+                          // if the program starts and ends in same month, don't show month name twice
                           if(condition="dateFns.isSameMonth(exhibition.startDate,exhibition.endDate) == true")
                             span.date {{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:d", true)}}
                           else
                             span.date {{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:mmmm d", true)}}
-                        p.hours
-                          span(class="fas fa-clock")
-                          span {{ exhibition.hours }}
-                        p.tickets
-                          span(class="fas fa-ticket-alt")
-                          span {{ exhibition.ticketPrice }}
+                        if(condition="{{ exhibition.hours }}")
+                          p.hours
+                            span(class="fas fa-fw fa-clock")
+                            span {{ exhibition.hours }}
+                        if(condition="{{ exhibition.ticketPrice }}")
+                          p.tickets
+                            span(class="fas fa-fw fa-ticket-alt")
+                            span {{ exhibition.ticketPrice }}
 
 
                       each(loop='highlight in exhibition.highlights')
@@ -113,13 +115,17 @@ extends(src='layout.sgr')
                       elseif(condition="event.presenter")
                         small {{ event.presenter }}
                       h3 {{ event.title }}
-                      // p: b {{ event.location[0].name }}
                       .when
-                        if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
+                        // if the event starts and ends on same day
+                        if(condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true")
                           p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
+
+                        // if the event spans multiple days, but starts and ends in same month,
+                        // don't show month name twice
+                        elseif(condition="dateFns.isSameMonth(event.startDateTime,event.endDateTime) == true")
+                          p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:d", true)}}
                         else
                           p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
-                          p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}–{{ df(event.endDateTime, "h:MM tt", true)}}
 
 
 

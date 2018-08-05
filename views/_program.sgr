@@ -1,0 +1,82 @@
+extends(src="layout.sgr")
+  block(name="title")
+    title {{ item.title }} - TMAC
+
+  block(name="content")
+
+    // figure
+    header(style="background-image:url('//{{ dato._meta.imgixHost + item.featureImage.path }}?bm=normal&balph=60&blend=322D5A&auto=compress'); background-size: cover;")
+
+      h1 Toronto Media Arts Centre
+
+    main
+
+      div.alert.alert-success#letter-callout
+        h1 {{ item.title }}
+
+        if(condition="item.member[0] && item.presenter")
+          h3 {{ item.member[0].name }} &amp; {{ item.presenter }}
+        elseif(condition="item.member[0]")
+          h3 {{ item.member[0].name }}
+        elseif(condition="item.presenter")
+          h3 {{ item.presenter }}
+
+      section
+        .container
+          .row
+            .col-md-7
+              div.description(md).
+                {{ item.description }}
+              p: a(href="{{ item.link }}") Web site
+
+            .col-md-5
+              .desc
+
+                if(condition="item.location[0]")
+                  p.location
+                    span(class="fas fa-fw fa-door-open")
+                    span {{ item.location[0].name }}
+
+
+                .when
+                  if(condition="{{ item.startDate }}")
+                    p.date
+                      span(class="fas fa-fw fa-calendar-alt")
+                      if(condition="dateFns.isSameDay(item.startDate,item.endDate) == true")
+                        span.date {{ df(item.startDate, "UTC:mmmm d", true)}} • {{ df(item.startDate, "UTC:h:MM tt", true)}}
+                      if(condition="dateFns.isSameMonth(item.startDate,item.endDate) == true")
+                        span.date {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:d", true)}}
+                      else
+                        span.date {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:mmmm d", true)}}
+                  if(condition="{{ item.hours }}")
+                    p.hours
+                      span(class="fas fa-fw fa-clock")
+                      span {{ item.hours }}
+                  if(condition="{{ item.ticketPrice }}")
+                    p.tickets
+                      span(class="fas fa-ticket-alt")
+                      span {{ item.ticketPrice }}
+
+
+
+              if(condition="{{item.highlights[0]}}")
+                each(loop='highlight in item.highlights')
+                  h4.highlight {{ highlight.title }}
+                  p.date {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:dddd, mmmm d, h:MM tt", true)}}
+              if(condition="{{item.sessions[0]}}")
+                #schedule
+                  h3 Schedule
+                  each(loop="session in item.sessions")
+                    .session(data-startDate="{{ Date.parse(session.startDateTime) }}")
+                      h4 {{session.work.title}}
+                      p {{df(dateFns.subHours(session.startDateTime, 4), "UTC:dddd, mmmm d, h:MM tt", true)}} ({{session.location.name}})
+
+
+
+  block(name="footer")
+
+  block(name="javascript")
+    script(src="/js/vendor/tinysort.js")
+
+    script.
+      tinysort('.session',{data:'startdate', order:'asc'});
