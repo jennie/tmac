@@ -46,11 +46,11 @@ extends(src='layout.sgr')
 
       section#exhibitions
         .container
-          h4.divider Exhibitions
+          h4.divider Exhibitions &amp; Festivals
           .event-grid.exhibitions
-            each(loop='exhibition in dato.exhibition')
+            each(loop='exhibition in dato.program')
               if(condition='exhibition.past !== true')
-                .event.exhibition(style="background-image: url('//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=60&blend={{ exhibition.canceled == true ? 'eeeeee' : 'FF001A'}}'); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}"  class="{{ exhibition.canceled == true ? 'canceled' : ''}}")
+                .event.exhibition(style="background-image: url('//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=60&blend={{ exhibition.canceled == true ? 'eeeeee' : '6042CD'}}'); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}"  class="{{ exhibition.canceled == true ? 'canceled' : ''}}")
 
                   a(href="{{ exhibition.link }}")
                     .desc
@@ -61,7 +61,8 @@ extends(src='layout.sgr')
                       elseif(condition="exhibition.presenter")
                         small {{ exhibition.presenter }}
                       h3 {{ exhibition.title }}
-                      p.location {{ exhibition.location[0].name }}
+                      if(condition="exhibition.location[0]")
+                        p.location {{ exhibition.location[0].name }}
 
 
                       .when
