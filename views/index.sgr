@@ -13,7 +13,8 @@ extends(src='layout.sgr')
       div.alert.alert-success#letter-callout
 
         p.address 32 Lisgar Street, Toronto
-        p Hours: 10am–6pm M-F • Café: open daily at 7am
+        p Hours: 10am–6pm M-F
+          small Café open weekdays at 7am, weekends at 8am
 
 
       section(id="about")
@@ -42,6 +43,55 @@ extends(src='layout.sgr')
               p Want to see what TMAC is all about? Curious about the possibilities? Come on inside!
                 a(href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false") Book a tour
 
+
+      section#exhibitions
+        .container
+          h4.divider Exhibitions
+          .event-grid.exhibitions
+            each(loop='exhibition in dato.exhibition')
+              if(condition='exhibition.past !== true')
+                .event.exhibition(style="background-image: url('//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=60&blend={{ exhibition.canceled == true ? 'eeeeee' : 'FF001A'}}'); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}"  class="{{ exhibition.canceled == true ? 'canceled' : ''}}")
+
+                  a(href="{{ exhibition.link }}")
+                    .desc
+                      if(condition="exhibition.member[0] && exhibition.presenter")
+                        small {{ exhibition.member[0].name }} &amp; {{ exhibition.presenter }}
+                      elseif(condition="exhibition.member[0]")
+                        small {{ exhibition.member[0].name }}
+                      elseif(condition="exhibition.presenter")
+                        small {{ exhibition.presenter }}
+                      h3 {{ exhibition.title }}
+                      p.location {{ exhibition.location[0].name }}
+
+
+                      .when
+                        p.date
+                          span(class="fas fa-calendar-alt")
+                          // starts and ends on same day
+                          if(condition="dateFns.isSameDay(exhibition.startDate,exhibition.endDate) == true")
+                            span.date {{ df(exhibition.startDate, "UTC:mmmm d", true)}} • {{ df(exhibition.startDate, "UTC:h:MM tt", true)}}
+                          // starts and ends in same month
+                          if(condition="dateFns.isSameMonth(exhibition.startDate,exhibition.endDate) == true")
+                            span.date {{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:d", true)}}
+                          else
+                            span.date {{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:mmmm d", true)}}
+                        p.hours
+                          span(class="fas fa-clock")
+                          span {{ exhibition.hours }}
+                        p.tickets
+                          span(class="fas fa-ticket-alt")
+                          span {{ exhibition.ticketPrice }}
+
+
+                      each(loop='highlight in exhibition.highlights')
+                        p.highlight {{ highlight.title }}: {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:mmmm d • h:MM tt", true)}}
+
+                    .register
+                      // span(class="btn btn-primary") Info
+                      if(condition="dateFns.isWithinRange(new Date(), exhibition.startDate, exhibition.endDate) == true")
+                        p.thisweek Current
+                      elseif(condition="dateFns.isFuture(exhibition.startDate) == true")
+                        p.thisweek Upcoming
 
       section#events
         .container
@@ -73,7 +123,7 @@ extends(src='layout.sgr')
 
 
                     .register
-                      span(class="btn btn-primary") Info
+                      // span(class="btn btn-primary") Info
                       if(condition="dateFns.isToday(event.startDateTime) == true")
                         p.thisweek Today
                       elseif(condition="dateFns.isThisWeek(event.startDateTime) == true")

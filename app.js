@@ -29,28 +29,49 @@ var offset = -4;
 const Dato = new SpikeDatoCMS({
   addDataTo: locals,
   token: process.env.dato_api_key,
-  models: [{
-    name: 'event',
-    transform: (data) => {
-      if (dateFns.isPast(data.endDateTime)) {
-        data.past = true
-        console.log(data.endDateTime + ': PAST (' + endDateHours + ')')
-      }
-      else {
-        data.past = false
-      }
-      if (data.startDateTime) {
-        startDateHours = new Date(new Date(data.startDateTime).getTime() + offset * 3600 * 1000).toUTCString()
-        data.startDateTime = startDateHours
-      }
-      if (data.endDateTime) {
-        endDateHours = new Date( new Date(data.endDateTime).getTime() + offset * 3600 * 1000).toUTCString()
-        data.endDateTime = endDateHours
-      }
+  models: [
+    {
+      name: 'event',
+      transform: (data) => {
+        if (dateFns.isPast(data.endDateTime)) {
+          data.past = true
+        }
+        else {
+          data.past = false
+        }
+        if (data.startDateTime) {
+          startDateHours = new Date(new Date(data.startDateTime).getTime() + offset * 3600 * 1000).toUTCString()
+          data.startDateTime = startDateHours
+        }
+        if (data.endDateTime) {
+          endDateHours = new Date( new Date(data.endDateTime).getTime() + offset * 3600 * 1000).toUTCString()
+          data.endDateTime = endDateHours
+        }
 
-      return data
+        return data
+      }
+    },
+    {
+      name: 'exhibition',
+      transform: (data) => {
+        if (dateFns.isPast(data.endDate)) {
+          data.past = true
+        }
+        else {
+          data.past = false
+        }
+        if (data.startDate) {
+          startDateHours = new Date(new Date(data.startDate).getTime() + 0 * 3600 * 1000).toUTCString()
+          data.startDate = startDateHours
+        }
+        if (data.endDate) {
+          endDateHours = new Date( new Date(data.endDate).getTime() + 0 * 3600 * 1000).toUTCString()
+          data.endDate = endDateHours
+        }
+        return data
+      }
     }
-  }]
+  ]
 })
 
 module.exports = {
