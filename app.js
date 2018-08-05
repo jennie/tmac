@@ -27,7 +27,7 @@ const locals           = { }
 
 var offset = -4;
 const Dato = new SpikeDatoCMS({
-  drafts: true,
+  // drafts: true,
   addDataTo: locals,
   token: process.env.dato_api_key,
   models: [
