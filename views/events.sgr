@@ -59,4 +59,4 @@ extends(src='layout.sgr')
       script(src="/js/vendor/tinysort.js")
 
       script.
-        tinysort('.thing',{data:'startdate', order:'asc'});
+        tinysort('.event',{data:'startdate', order:'desc'});

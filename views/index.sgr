@@ -229,5 +229,4 @@ extends(src='layout.sgr')
       script(src="/js/vendor/tinysort.js")
 
       script.
-        tinysort('.event-grid.upcoming .event',{data:'startdate', order:'asc'});
-        tinysort('.event-grid.past .event',{data:'startdate', order:'desc'});
+        tinysort('.event-grid .event',{data:'startdate', order:'asc'});
