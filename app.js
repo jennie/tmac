@@ -13,14 +13,6 @@ const dateFns                      = require('date-fns')
 const SpikeDatoCMS            = require('spike-datocms')
 const postcssMixins           = require('postcss-mixins')
 const MarkdownIt = require('markdown-it')
-const markdownItFootnote = require('markdown-it-footnote')
-const markdownItTocAndAnchor = require('markdown-it-toc-and-anchor').default
-const markdownItAttrs = require('markdown-it-attrs')
-const markdownItContainer = require('markdown-it-container')
-const markdownItSup = require('markdown-it-sup')
-const markdownTOC = new MarkdownIt().use(markdownItTocAndAnchor, {
-  tocFirstLevel: 3
-})
 const md = new MarkdownIt()
 const locals           = { }
 
@@ -86,10 +78,11 @@ module.exports = {
   ignore: ['**/layout.sgr', '**/_layout.sgr', '**/.*', '_cache/**', 'readme.md'],
   reshape: htmlStandards ({
     parser: sugarml,
-    locals: (ctx) => { return Object.assign(locals,
-      { pageId: pageId(ctx) },
-      { df: df.bind(df) },
-      { dateFns: dateFns }
+    locals: (ctx) => { return Object.assign(locals
+      , { pageId: pageId(ctx) }
+      , { df: df.bind(df) }
+      , { dateFns: dateFns }
+      , { md: md.render.bind(md) }
 
     )},
     retext: { quotes: false }

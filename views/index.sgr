@@ -219,3 +219,5 @@ extends(src='layout.sgr')
     script(src="https://calendly.com/assets/external/widget.js")
     script.
       tinysort('.event-grid .event',{data:'startdate', order:'asc'});
+      window.locals = {{{ JSON.stringify(locals) }}}
+

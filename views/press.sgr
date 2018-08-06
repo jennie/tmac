@@ -22,14 +22,28 @@ extends(src='layout.sgr')
           .row
             .col-lg-6
 
-              h4 Selected Media Coverage
+              h4 Media Coverage
               ul.media-coverage
+                li
+                  a(href='https://www.thestar.com/entertainment/visualarts/2018/06/06/arts-groups-feud-with-city-on-hold-thanks-to-use-of-disputed-space.html')
+                    b Toronto Star:
+                    |  Toronto Media Arts Centre’s feud with city on hold thanks to use of disputed space
+                  br
+                  a(href='/docs/press-clippings/tmac-feud-with-city-on-hold.pdf')
+                    i(class="fas fa-fw fa-file-pdf")
+                    | PDF
+                  br
+                  | Murray Whyte • June 6, 2018
                 li
                   a(href='https://www.thestar.com/entertainment/visualarts/2018/04/29/a-queen-west-arts-centres-failure-to-launch.html')
                     b Toronto Star:
                     |  A Queen West arts centre’s failure to launch: The Toronto Media Arts Centre opened on Queen West after years of legal limbo, but its celebration may be short lived
                   br
-                  | Murray Whyte April 29, 2018
+                  a(href='/docs/press-clippings/a-Queen-West-arts-centre’s-failure-to-launch.jpg')
+                    i(class="fas fa-fw fa-file-image")
+                    | JPG
+                  br
+                  | Murray Whyte • April 29, 2018
                 li
                   a(href='https://www.thestar.com/entertainment/2018/02/06/deal-lets-arts-group-into-edge-condo-space-on-lisgar-at-last.html')
                     b Toronto Star:
