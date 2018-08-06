@@ -5,7 +5,7 @@ const htmlStandards    = require('reshape-standard')
 const sugarml          = require('sugarml')
 const sugarss          = require('sugarss')
 const cssStandards     = require('spike-css-standards')
-const jsStandards      = require('babel-preset-latest')
+const jsStandards = require('spike-js-standards')
 const pageId           = require('spike-page-id')
 const df                      = require('dateformat')
 const dateFns                      = require('date-fns')
@@ -81,7 +81,7 @@ const Dato = new SpikeDatoCMS({
 
 module.exports = {
   devtool: 'source-map',
-  matchers: { html: '*(**/)*.sgr', css: '*(**/)*.css' },
+  matchers: { html: '*(**/)*.sgr', css: '*(**/)*.css', js: '*(**/)*.js' },
   vendor: 'assets/js/vendor/**',
   ignore: ['**/layout.sgr', '**/_layout.sgr', '**/.*', '_cache/**', 'readme.md'],
   reshape: htmlStandards ({

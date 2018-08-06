@@ -54,7 +54,7 @@ extends(src="layout.sgr")
                       span {{ item.hours }}
                   if(condition="{{ item.ticketPrice }}")
                     p.tickets
-                      span(class="fas fa-ticket-alt")
+                      span(class="fas fa-fw fa-ticket-alt")
                       span {{ item.ticketPrice }}
 
 

@@ -6,16 +6,63 @@ extends(src='layout.sgr')
 
   block(name='content')
 
-    main
+    main.slider
 
-      section#events
+      #exhibitions
+        .event-grid.exhibitions
+          h1 Exhibitions &amp; Festivals
+          each(loop='exhibition in dato.program')
+            if(condition='exhibition.past !== true')
+              .event.exhibition(style="background-image: url('//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=60&blend={{ exhibition.canceled == true ? 'eeeeee' : '004439'}}'); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}"  class="{{ exhibition.canceled == true ? 'canceled' : ''}}")
+
+                a(href="/program/{{ exhibition.slug }}")
+                  .desc
+                    if(condition="exhibition.member[0] && exhibition.presenter")
+                      small {{ exhibition.member[0].name }} &amp; {{ exhibition.presenter }}
+                    elseif(condition="exhibition.member[0]")
+                      small {{ exhibition.member[0].name }}
+                    elseif(condition="exhibition.presenter")
+                      small {{ exhibition.presenter }}
+                    h3 {{ exhibition.title }}
+                    if(condition="exhibition.location[0]")
+                      p.location {{ exhibition.location[0].name }}
+
+
+                    .when
+                      p.date
+                        span(class="fas fa-fw fa-calendar-alt")
+                        // if the program starts and ends on same day
+                        if(condition="dateFns.isSameDay(exhibition.startDate,exhibition.endDate) == true")
+                          span.date {{ df(exhibition.startDate, "UTC:mmmm d", true)}} • {{ df(exhibition.startDate, "UTC:h:MM tt", true)}}
+                        // if the program starts and ends in same month, don't show month name twice
+                        if(condition="dateFns.isSameMonth(exhibition.startDate,exhibition.endDate) == true")
+                          span.date {{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:d", true)}}
+                        else
+                          span.date {{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:mmmm d", true)}}
+                      if(condition="{{ exhibition.hours }}")
+                        p.hours
+                          span(class="fas fa-fw fa-clock")
+                          span {{ exhibition.hours }}
+                      if(condition="{{ exhibition.ticketPrice }}")
+                        p.tickets
+                          span(class="fas fa-fw fa-ticket-alt")
+                          span {{ exhibition.ticketPrice }}
+
+
+                  .register
+                    // span(class="btn btn-primary") Info
+                    if(condition="dateFns.isWithinRange(new Date(), exhibition.startDate, exhibition.endDate) == true")
+                      p.thisweek Current
+                    elseif(condition="dateFns.isFuture(exhibition.startDate) == true")
+                      p.thisweek Upcoming
+      #events
         .container
           .event-grid.upcoming
             each(loop='event in dato.event')
               if(condition='event.past !== true')
                 .event(style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=70&blend={{ event.canceled == true ? 'eeeeee' : '322D5A'}}'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}"  class="{{ event.canceled == true ? 'canceled' : ''}}")
 
-                  a(href="{{ event.registrationLink }}")
+                  a
                     .desc
                       if(condition="event.canceled == true")
                         span.canceled Canceled
@@ -29,14 +76,18 @@ extends(src='layout.sgr')
                       if(condition="event.location[0]")
                         p.location {{ event.location[0].name }}
 
-                      
+
                       .when
-                        if(condition="{{ df(event.startDateTime, 'mmmm d') == df(event.endDateTime, 'mmmm d') }}")
+                        // if the event starts and ends on same day
+                        if(condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true")
                           p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
+
+                        // if the event spans multiple days, but starts and ends in same month,
+                        // don't show month name twice
+                        elseif(condition="dateFns.isSameMonth(event.startDateTime,event.endDateTime) == true")
+                          p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:d", true)}}
                         else
                           p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
-                          p.time {{ df(event.startDateTime, "UTC:h:MM tt", true)}}–{{ df(event.endDateTime, "h:MM tt", true)}}
-
 
 
                     .register
@@ -45,13 +96,24 @@ extends(src='layout.sgr')
                       elseif(condition="dateFns.isThisWeek(event.startDateTime) == true")
                         p.thisweek {{ dateFns.format(event.startDateTime, 'dddd') }}
 
+  block(name='footer')
 
+  block(name='javascript')
 
-    block(name='footer')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/min/tiny-slider.js")
+    script(src="/js/vendor/tinysort.js")
+    script.
+      tinysort('.event',{data:'startdate', order:'asc'});
+      var slider = tns({
+        items: 1,
+        speed: 300,
+        slideBy: 'page',
+        autoplay: true,
+        controls: false,
+        mode: 'gallery',
+        nav: false,
+        autoplayButtonOutput: false,
+        // autoplayTimeout: 5000
+      });
+      slider.play();
 
-
-    block(name="javascript")
-      script(src="/js/vendor/tinysort.js")
-
-      script.
-        tinysort('.event',{data:'startdate', order:'asc'});
