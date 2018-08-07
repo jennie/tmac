@@ -15,7 +15,7 @@ const postcssMixins           = require('postcss-mixins')
 const MarkdownIt = require('markdown-it')
 const md = new MarkdownIt()
 const locals           = { }
-
+// const DefinePlugin = require('webpack').DefinePlugin
 
 var offset = -4;
 const Dato = new SpikeDatoCMS({
@@ -92,6 +92,9 @@ module.exports = {
     appendPlugins: postcssMixins()
   }),
   babel: jsStandards(),
-  plugins: [ Dato ]
-
+  plugins: [ Dato
+    // , new DefinePlugin({
+    //   locals
+    // })
+  ]
 }

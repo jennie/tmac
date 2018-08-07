@@ -9,6 +9,7 @@ extends(src='layout.sgr')
         p.address 32 Lisgar Street, Toronto
         p Hours: 10am–6pm M-F
           small Café open weekdays at 7am, weekends at 8am
+
       section(id="about")
 
         .container
@@ -27,6 +28,11 @@ extends(src='layout.sgr')
               p: a(href="https://policies.tomediaarts.org/policies/accessibility.html") Accessibility information
 
             .col-sm-5
+              h3 Social
+              section#social
+                a(href="https://www.instagram.com/tomediaarts/"): i(class="fab fa-instagram")
+                a(href="https://twitter.com/tomediaarts"): i(class="fab fa-twitter")
+                a(href="https://www.facebook.com/TOMediaArts"): i(class="fab fa-facebook")
               h3 Space rentals
               p Need space for an event, exhibition, or meeting? Check out our rates and space info.
                 a(href="/space-rentals" class="btn btn-primary") Host an Event
@@ -189,15 +195,8 @@ extends(src='layout.sgr')
                 - Four public galleries and **exhibition spaces**
                 - A **210-seat theatre** designed by renowned architect Peter Smith, for screening independent and experimental works – coming 2019
                 - Studio apartment for visiting **artist residencies** – coming 2019
-      section#facility
-        .container
-          .row
-            .col-md-4
-              img.img-fluid(src='/images/photos/tmac-exterior-summer.jpg' alt='')
-            .col-md-4
-              img.img-fluid(src='/images/photos/park.jpeg' alt='')
-            .col-md-4
-              img.img-fluid(src='/images/photos/inside.jpeg' alt='')
+
+
       section#funders
         h4.divider Funders
         .orgs
