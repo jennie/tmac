@@ -37,7 +37,7 @@
     "sugarml": "^0.6.0",
     "sugarss": "^1.0.1",
     "tinysort": "^2.3.6",
-    "webpack": "^4.8.1"
+    "webpack": "^3.11.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",

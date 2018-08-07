@@ -1,6 +1,6 @@
 extends(src='layout.sgr')
   block(name='content')
-    header(style="background-image:url(/images/photos/damage-camp.jpg);")
+    header(style="background-image:url(https://www.datocms-assets.com/5128/1533616878-damage-camp.jpg?bm=normal&balph=30&blend=130CB7&auto=compress);")
       h1 Toronto Media Arts Centre
 
     main
@@ -158,7 +158,7 @@ extends(src='layout.sgr')
             .col-sm-8
               h2#history History
               div(md).
-                [Read about our dispute with the City of Toronto and Urbancorp over the facility, and the settlement we reached in February 2018.](/dispute)
+                [Read about our dispute with the City of Toronto and Urbancorp over the facility, and the settlement we reached in February 2018.](/news)
 
                 TMAC grew out of grassroots community support and in response to a need for an accessible and affordable centre dedicated to media art and technology.
 

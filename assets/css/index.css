@@ -3,6 +3,7 @@
 
 :root {
   --color-blue: #130CB7;
+  --color-primary-alt: #FF001A;
 
   /* max-widths for containers */
   --mini: 90vw;
@@ -45,7 +46,7 @@
 }
 a {
   color: var(--color-blue);
-  &:hover {
+  &:active,&:hover {
     color: color(var(--color-blue) tint(10%));
   }
 }
@@ -828,7 +829,7 @@ p > b.highlight {
         width: 100%;
         &:active,
         &:hover {
-          background-color: var(--color-light-grey);
+          background-color: #eee;
           text-decoration: none;
         }
       }
