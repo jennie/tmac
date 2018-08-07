@@ -193,7 +193,7 @@ extends(src='layout.sgr')
         .container
           .row
             .col-md-4
-              img.img-fluid(src='/images/photos/outside.jpeg' alt='')
+              img.img-fluid(src='/images/photos/tmac-exterior-summer.jpg' alt='')
             .col-md-4
               img.img-fluid(src='/images/photos/park.jpeg' alt='')
             .col-md-4
