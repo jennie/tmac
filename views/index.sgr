@@ -1,6 +1,6 @@
 extends(src='layout.sgr')
   block(name='content')
-    header(style="background-image:url(https://www.datocms-assets.com/5128/1533616878-damage-camp.jpg?bm=normal&balph=30&blend=130CB7&auto=compress);")
+    header(style="background-image:url(https://www.datocms-assets.com/5128/1533616878-damage-camp.jpg?bm=normal&balph=20&blend=2300BF&auto=compress&mono=444444);")
       h1 Toronto Media Arts Centre
 
     main
