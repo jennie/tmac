@@ -14,12 +14,11 @@ extends(src="layout.sgr")
       div.alert.alert-success#letter-callout
         h1 {{ item.title }}
 
-        if(condition="item.member[0] && item.presenter")
-          h3 {{ item.member[0].name }} &amp; {{ item.presenter }}
+
+        if(condition="item.presenter")
+          h3 {{ item.presenter }}
         elseif(condition="item.member[0]")
           h3 {{ item.member[0].name }}
-        elseif(condition="item.presenter")
-          h3 {{ item.presenter }}
 
       section
         .container
@@ -31,6 +30,9 @@ extends(src="layout.sgr")
 
             .col-md-5
               .desc
+
+                if(condition="item.member[0] && item.presenter")
+                  p: b Presented by {{ item.member[0].name }}
 
                 if(condition="item.location[0]")
                   p.location
