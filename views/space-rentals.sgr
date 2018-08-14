@@ -26,7 +26,6 @@ extends(src='layout.sgr')
               h3 Host your event at TMAC!
               p TMAC is available to rent for a wide range of events—from gallery openings and receptions to small meetups and hackathons, dining events to panel discussions.
               p Located in the heart of the Queen West Triangle – a vibrant, arts-friendly neighbourhood close to downtown Toronto – TMAC offers event, meeting and exhibition spaces in a beautiful purpose-built media arts facility overlooking Lisgar Park.
-              p Rates are for either daytime (9-6pm) or evening events (6-11pm) inclusive of set up/clean up time.
               p
                  b.highlight We offer nonprofit/educational discounts and welcome co-production and co-presentation inquiries!
               p
@@ -39,6 +38,13 @@ extends(src='layout.sgr')
             .col-lg-6
                 img(src="/images/event-layout.jpg" class="responsive")
           hr
+          p: b Bookings are inclusive of set up/installation and strike/clean up time.
+
+          p Weekday daytime: 10 a.m.-6 p.m.
+          p Weekday evening: 4 p.m.-midnight
+          p Late night extension: midnight-2 a.m.
+          p Weekends and holidays: 8 hours between noon and midnight
+
           .row.space
             .col-lg-6
               h4 Mezzanine Event Space
@@ -58,9 +64,15 @@ extends(src='layout.sgr')
 
                 tbody
                   tr
-                    td Weekdays
+                    td Weekday daytime
                     td $950
-
+                  tr
+                    td Weekday evening
+                    td $1,070
+                  tr
+                    td Late night extension
+                    // Hourly rate for evening for 2 hours, plus $60 for staffing, rounded up
+                    td $350
                   tr
                     td Weekends and holidays
                     td $1,425
@@ -77,7 +89,7 @@ extends(src='layout.sgr')
 
               dl
                 dt Capacity
-                dd 60 (40 w/ SOP)
+                dd 30
                 dt Size
                 dd 450 sq. ft.
 
@@ -90,14 +102,22 @@ extends(src='layout.sgr')
                     th(style='width:75%') Days
                     th(style='width:25%') Rate
 
+
                 tbody
                   tr
-                    td Weekdays
+                    td Weekday daytime
                     td $300
-
                   tr
-                    td Weekends & holidays
-                    td $450
+                    td Weekday evening
+                    td $420
+                  tr
+                    td Late night extension
+                    td $135
+                  tr
+                    td Weekends and holidays
+                    // 1.5 times base weekday daytime rate, plus $240 staffing fee
+                    td $690
+
 
 
             .col-lg-6
@@ -124,13 +144,17 @@ extends(src='layout.sgr')
 
                 tbody
                   tr
-                    td Weekdays
+                    td Weekday daytime
                     td $700
-
+                  tr
+                    td Weekday evening
+                    td $820
+                  tr
+                    td Late night extension
+                    td $235
                   tr
                     td Weekends and holidays
-                    td $1,050
-
+                    td $1,290
 
             .col-lg-6
               img(src='../images/photos/IMG_4739.jpg' class="responsive shadowed")
@@ -154,12 +178,17 @@ extends(src='layout.sgr')
 
                 tbody
                   tr
-                    td Weekdays
+                    td Weekday daytime
                     td $1,250
-
+                  tr
+                    td Weekday evening
+                    td $1,370
+                  tr
+                    td Late night extension
+                    td $375
                   tr
                     td Weekends and holidays
-                    td $1,875
+                    td $2,115
 
             .col-lg-6
               img(src="../images/photos/space-rentals/main-gallery.jpg" class="responsive shadowed")
@@ -170,7 +199,7 @@ extends(src='layout.sgr')
               h4 Meeting Room
 
               p Perfect for presenting to a client, brainstorming with your team or as a writers' room. 40-inch screen with Apple TV connection, large whiteboard and kitchenette with fridge, microwave and dishes. Floor to ceiling windows. AC/heat controls. Seats up to 10.
-              p Available Mon-Fri, 9 a.m.-6 p.m. After hours access and nightly cleaning available for multi-day bookings.
+              p Available Mon-Fri, 10 a.m.-6 p.m. After-hours access and nightly cleaning available for multi-day bookings.
 
               p: a(href="https://external-bookings.apps.cobot.me/4c625a78-fb90-44f2-bd27-bf4a23412b8d/book" class="btn btn-primary") Book online now
 
@@ -215,6 +244,11 @@ extends(src='layout.sgr')
                     td 6' folding tables (up to 20)
                     td Included in rental
             .col-lg-6
+              h4 Staffing
+
+              p Rates include one TMAC staff person on site for all events between 6 and 10 p.m. on weekdays, and all weekend events.
+              p Additional TMAC staff is required for every 40 attendees you expect (so if you have 100 attendees, you'll need 2 TMAC people). An additional charge of $30/hour per person will be applied to your rate.
+
               h4 A/V Services
 
               table.table.table-condensed
