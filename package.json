@@ -23,7 +23,7 @@
     "postcss-nested": "^3.0.0",
     "postcss-nested-props": "^2.0.0",
     "postcss-simple-vars": "^4.1.0",
-    "reshape": "1.0.0",
+    "reshape": "^1.0.0",
     "reshape-content": "^0.3.0",
     "reshape-expressions": "^0.1.5",
     "reshape-layouts": "^1.0.0",
@@ -34,7 +34,7 @@
     "spike-datocms": "^2.3.1",
     "spike-js-standards": "^2.0.2",
     "spike-page-id": "^1.1.0",
-    "sugarml": "^0.6.0",
+    "sugarml": "^0.7.0",
     "sugarss": "^1.0.1",
     "tinysort": "^2.3.6",
     "webpack": "^3.11.0"
