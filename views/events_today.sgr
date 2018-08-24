@@ -10,7 +10,7 @@ extends(src='layout.sgr')
 
       #exhibitions
         .event-grid.exhibitions
-          h1 Exhibitions &amp; Festivals
+          h1 Exhibitions + Festivals
           each(loop='exhibition in dato.program')
             if(condition='exhibition.past !== true')
               .event.exhibition(style="background-image: url('//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=70&blend={{ exhibition.canceled == true ? 'eeeeee' : 'FF6282'}}'); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}"  class="{{ exhibition.canceled == true ? 'canceled' : ''}}")
@@ -18,7 +18,7 @@ extends(src='layout.sgr')
                 a(href="/program/{{ exhibition.slug }}")
                   .desc
                     if(condition="exhibition.member[0] && exhibition.presenter")
-                      small {{ exhibition.member[0].name }} &amp; {{ exhibition.presenter }}
+                      small {{ exhibition.member[0].name }} & {{ exhibition.presenter }}
                     elseif(condition="exhibition.member[0]")
                       small {{ exhibition.member[0].name }}
                     elseif(condition="exhibition.presenter")
@@ -67,7 +67,7 @@ extends(src='layout.sgr')
                       if(condition="event.canceled == true")
                         span.canceled Canceled
                       if(condition="event.member[0] && event.presenter")
-                        small {{ event.member[0].name }} &amp; {{ event.presenter }}
+                        small {{ event.member[0].name }} & {{ event.presenter }}
                       elseif(condition="event.member[0]")
                         small {{ event.member[0].name }}
                       elseif(condition="event.presenter")

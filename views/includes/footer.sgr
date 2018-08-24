@@ -8,7 +8,8 @@ footer
 
   div(md).
     Interested in sponsoring, partnering with, or joining TMAC? [Email us!](mailto:info@tomediaarts.org)
-  p © 2011-2018 Toronto Media Arts Cluster • Registered Charity 847429701RR0001 • <a href="https://governance.tomediaarts.org">Governance</a>
+
+    © 2011-2018 Toronto Media Arts Cluster • Registered Charity 847429701RR0001 • [Governance](https://governance.tomediaarts.org)
   .vcard(id='')
     span.fn.n
       span.given-name

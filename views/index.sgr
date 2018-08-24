@@ -43,7 +43,7 @@ extends(src='layout.sgr')
       #events
         section#exhibitions
           .container
-            h4.divider Exhibitions &amp; Festivals
+            h4.divider Exhibitions & Festivals
             .event-grid.exhibitions
               each(loop='exhibition in dato.program')
                 if(condition='exhibition.past !== true')
@@ -105,7 +105,7 @@ extends(src='layout.sgr')
                         if(condition="event.canceled == true")
                           span.canceled Canceled
                         if(condition="event.member[0] && event.presenter")
-                          small {{ event.member[0].name }} &amp; {{ event.presenter }}
+                          small {{ event.member[0].name }} + {{ event.presenter }}
                         elseif(condition="event.member[0]")
                           small {{ event.member[0].name }}
                         elseif(condition="event.presenter")
