@@ -19,7 +19,7 @@ extends(src='layout.sgr')
       section#spaces
         .container
           p(style='text-align: center')
-            a(href="/") &larr; Back home
+            a(href="/") ⬅ Back home
 
           .row.intro
             .col-lg-6
@@ -229,9 +229,10 @@ extends(src='layout.sgr')
 
               p We can arrange for catering—from platters of finger foods to sweet treats to a full Mexican pop-up dinner. You may also bring your own food, of course!
 
-              p We recommend our partner OMG on the Park for all of your catering needs. Please <a href="mailto:doug.mattina.omg@gmail.com">contact owner Doug Mattina directly</a> to discuss your menu.
+              div(md).
+                We recommend our partner OMG on the Park for all of your catering needs. Please [contact owner Doug Mattina directly](mailto:doug.mattina.omg@gmail.com) to discuss your menu.
 
-              p Alcohol may not be sold or provided without a Special Occasion Permit. You should apply for your SOP at least 30 days in advance of your event via <a href="https://www.iagco.agco.ca/prod/pub/en/login.aspx">iAGCO</a>.
+                p Alcohol may not be sold or provided without a Special Occasion Permit. You should apply for your SOP at least 30 days in advance of your event via [iAGCO](https://www.iagco.agco.ca/prod/pub/en/login.aspx).
 
               h4 Chairs & tables
 
@@ -279,14 +280,16 @@ extends(src='layout.sgr')
                     td $375
           hr
           h3 Booking Procedure
-          ol
-            li Complete our <a href="/booking-request">booking request form</a>
-            li Our team will follow up via email after our weekly programming committee meeting (Tuesdays)
-            li Review and sign our rental agreement
-            li Pay your deposit to confirm your event date
-            li Have an amazing event!
 
-          p Questions? <a href='mailto:events@tomediaarts.org'>Drop us a line!</a>
+          div(md).
+
+            1. Complete our [booking request form](/booking-request)
+            2. Our team will follow up via email after our weekly programming committee meeting (Tuesdays)
+            3. Review and sign our rental agreement
+            4. Pay your deposit to confirm your event date
+            5. Have an amazing event!
+
+            Questions? [Drop us a line!](mailto:events@tomediaarts.org)
 
           h3 Terms and more info
           p: em Prices do not include Ontario HST.
