@@ -1,19 +1,30 @@
 const env                     = require('dotenv').config()
 
-const path             = require('path')
-const htmlStandards    = require('reshape-standard')
-const sugarml          = require('sugarml')
-const sugarss          = require('sugarss')
-const cssStandards     = require('spike-css-standards')
-const jsStandards = require('spike-js-standards')
-const pageId           = require('spike-page-id')
+const path                    = require('path')
+const htmlStandards           = require('reshape-standard')
+const sugarml                 = require('sugarml')
+const sugarss                 = require('sugarss')
+const cssStandards            = require('spike-css-standards')
+const jsStandards             = require('spike-js-standards')
+const pageId                  = require('spike-page-id')
 const df                      = require('dateformat')
-const dateFns                      = require('date-fns')
+const dateFns                 = require('date-fns')
 
 const SpikeDatoCMS            = require('spike-datocms')
 const postcssMixins           = require('postcss-mixins')
-const MarkdownIt = require('markdown-it')
+
+const MarkdownIt              = require('markdown-it')
+const markdownItTocAndAnchor  = require('markdown-it-toc-and-anchor').default
+const markdownItAttrs         = require('markdown-it-attrs')
+const markdownItContainer     = require('markdown-it-container')
+
 const md = new MarkdownIt()
+  .use(markdownItTocAndAnchor, {
+    tocFirstLevel: 3,
+    anchorLink: true
+  })
+  .use(markdownItContainer)
+
 const locals           = { }
 const DefinePlugin = require('webpack').DefinePlugin
 
@@ -85,6 +96,8 @@ module.exports = {
       , { md: md.render.bind(md) }
 
     )},
+    markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3 }],markdownItAttrs, markdownItContainer ],
+
     retext: { quotes: false }
   }),
   postcss: cssStandards({
