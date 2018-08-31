@@ -620,11 +620,11 @@ p > b.highlight {
     }
   }
 
-& a {
+  & a {
     &:hover {
-    text-decoration: underline;
+      text-decoration: none;
+    }
   }
-}
   @media (--tablet) {
     grid-template-columns: 1fr 1fr;
   }
@@ -1078,7 +1078,7 @@ p.past {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 80px 1fr;
       @nest & h1 {
-        grid-column: 1 / 5;
+        grid-column: 1 / 4;
         grid-row: 1;
         color: #fff;
         text-align: center;
