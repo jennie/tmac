@@ -176,7 +176,7 @@ extends(src='layout.sgr')
               img.swatch(src='/images/charity-default-profile-swatch-en.jpg' alt='')
 
               div(md).
-                **[Make a donation today](https://www.canadahelps.org/en/charities/toronto-media-arts-centre) and immediately receive a charitable receipt through Canada Helps!**
+                **[Make a donation today](https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865) and immediately receive a charitable receipt through Canada Helps!**
             .col-sm-4
               img.img-fluid(src='/images/photos/elevator.jpg' alt='' style='margin-bottom: 1rem')
               img.img-fluid(src='/images/photos/TMAC-gallery.jpg' alt='')
