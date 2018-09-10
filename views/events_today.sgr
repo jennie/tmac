@@ -102,19 +102,19 @@ extends(src='layout.sgr')
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/min/tiny-slider.js")
     script(src="/js/vendor/tinysort.js")
-    script.
-      tinysort('.event-grid .exhibition',{data:'startdate', order:'asc'});
-      tinysort('.event-grid .daily',{data:'startdate', order:'asc'});
-      var slider = tns({
-        items: 1,
-        speed: 300,
-        slideBy: 'page',
-        autoplay: true,
-        controls: false,
-        mode: 'gallery',
-        nav: false,
-        autoplayButtonOutput: false,
-        // autoplayTimeout: 5000
-      });
-      slider.play();
-
+    // script.
+    //   tinysort('.event-grid .exhibition',{data:'startdate', order:'asc'});
+    //   tinysort('.event-grid .daily',{data:'startdate', order:'asc'});
+    //   var slider = tns({
+    //     items: 1,
+    //     speed: 300,
+    //     slideBy: 'page',
+    //     autoplay: true,
+    //     controls: false,
+    //     mode: 'gallery',
+    //     nav: false,
+    //     autoplayButtonOutput: false,
+    //     // autoplayTimeout: 5000
+    //   });
+    //   slider.play();
+    //

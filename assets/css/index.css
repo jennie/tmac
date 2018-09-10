@@ -1075,8 +1075,9 @@ p.past {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 100vh;
     @nest &.exhibitions {
-      grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 80px 1fr;
+      grid-template-columns: auto;
+      
       @nest & h1 {
         grid-column: 1 / 4;
         grid-row: 1;
