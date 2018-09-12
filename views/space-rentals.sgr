@@ -201,8 +201,6 @@ extends(src='layout.sgr')
               p Perfect for presenting to a client, brainstorming with your team or as a writers' room. 40-inch screen with Apple TV connection, large whiteboard and kitchenette with fridge, microwave and dishes. Floor to ceiling windows. AC/heat controls. Seats up to 10.
               p Available Mon-Fri, 10 a.m.-6 p.m. After-hours access and nightly cleaning available for multi-day bookings.
 
-              p: a(href="https://external-bookings.apps.cobot.me/4c625a78-fb90-44f2-bd27-bf4a23412b8d/book" class="btn btn-primary") Book online now
-
               table(class="table table-condensed")
                 tbody
                   tr
