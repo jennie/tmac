@@ -25,19 +25,29 @@ extends(src='layout.sgr')
                 In the heart of Toronto’s Art and Design District, TMAC is creating a diverse and collaborative environment where everyone can engage meaningfully with art and technology. TMAC integrates creation, production, presentation, education, conservation and dissemination practices and with a focus on community building and inclusivity.
 
                 With year-round arts and cultural programming, open lab studios, equipment libraries, coworking and social areas, we provide the tools, space and freedom to play with art, media and new technologies–including film, videogames, audio, video, robotics, electronics and more.
-              p: a(href="https://policies.tomediaarts.org/policies/accessibility.html") Accessibility information
+              p
+                i(class="fab fa-accessible-icon")
+                a(href="https://policies.tomediaarts.org/policies/accessibility.html") Accessibility information
 
               a(href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865")
                 img(src="https://www.canadahelps.org/image/DonateNowLink/en/Donate5.png" border="0" alt="Donate Now Through CanadaHelps.org!")
 
-
             .col-sm-5
-
-              h3 Social
-              section#social
-                a(href="https://www.instagram.com/tomediaarts/"): i(class="fab fa-instagram")
-                a(href="https://twitter.com/tomediaarts"): i(class="fab fa-twitter")
-                a(href="https://www.facebook.com/TOMediaArts"): i(class="fab fa-facebook")
+              .row
+                .col-sm-6
+                  h3 Contact us
+                  section#contact
+                    span
+                      a(href="mailto:info@tomediaarts.org"): i(class="fas fa-at")
+                    span
+                      a(href="tel:6476896005"): i(class="fas fa-mobile-alt")
+                      span (647) 689-6005
+                .col-sm-6
+                  h3 Social
+                  section#social
+                    a(href="https://www.instagram.com/tomediaarts/"): i(class="fab fa-instagram")
+                    a(href="https://twitter.com/tomediaarts"): i(class="fab fa-twitter")
+                    a(href="https://www.facebook.com/TOMediaArts"): i(class="fab fa-facebook")
               h3 Space rentals
               p Need space for an event, exhibition, or meeting? Check out our rates and space info.
                 a(href="/space-rentals" class="btn btn-primary") Host an Event
