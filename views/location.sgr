@@ -19,7 +19,7 @@ extends(src='layout.sgr')
       section#spaces
         .container
           p(style='text-align: center')
-            a(href="/") &larr; Back home
+            a(href="/") Back to home page
           h3 How to find us
 
           .row
