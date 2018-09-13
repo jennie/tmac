@@ -598,6 +598,7 @@ img.shadowed {
     font-size: 16px;
     text-transform: uppercase;
     margin-top: 36px;
+    text-align: center;
   }
 }
 p > b.highlight {
@@ -1077,7 +1078,7 @@ p.past {
     @nest &.exhibitions {
       grid-template-rows: 80px 1fr;
       grid-template-columns: auto;
-      
+
       @nest & h1 {
         grid-column: 1 / 4;
         grid-row: 1;
@@ -1133,13 +1134,20 @@ body#_program {
   }
 }
 
-#social {
+#social, #contact {
   display: flex;
   justify-content: flex-start;
-  @nest & a {
+  @nest & > * {
     /* justify-content: space-evenly;
     align-content: center; */
     flex: 1 0 33.3333%;
     font-size: 36px;
+    margin: 0 auto;
+    text-align: center;
+    @nest & > span {
+      font-size: 12px;
+      display: flex;
+    }
+
   }
 }
