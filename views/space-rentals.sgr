@@ -16,7 +16,7 @@ extends(src='layout.sgr')
       h1 Toronto Media Arts Centre Space Rentals
 
     main
-      section#spaces
+      section
         .container
           p(style='text-align: center')
             a(href="/") ⬅ Back home
@@ -39,274 +39,354 @@ extends(src='layout.sgr')
                 img(src="/images/event-layout.jpg" class="responsive")
 
           hr
-          p: b Bookings are inclusive of set up/installation and strike/clean up time.
+          .row
+            .col-md-6
+              ul
+                li: a(class="" href="#galleries") Gallery Spaces
+                li: a(class="" href="#events") Event Spaces
+                li: a(class="" href="#meetings") Meeting Spaces
+                li: a(class="" href="#other") Other Spaces
+            .col-md-6
+              p: b Bookings are inclusive of set up/installation and strike/clean up time.
+              .times
 
-          p Weekday daytime: 10 a.m.-6 p.m.
-          p Weekday evening: 4 p.m.-midnight
-          p Late night extension: midnight-2 a.m.
-          p Weekends and holidays: 8 hours between noon and midnight
+                table(class="table table-condensed")
+                  thead
+                    tr
+                      th(style='width:50%') Days
+                      th(style='width:50%') Rate
 
-          .row.space
-            .col-lg-6
-              h4 Mezzanine Event Space
+                  tbody
+                    tr
+                      td Weekday daytime
+                      td 10 a.m.-6 p.m.
+                    tr
+                      td Weekday evening
+                      td 4 p.m.-midnight
+                    tr
+                      td Late night extension
+                      td midnight-2 a.m.
+                    tr
+                      td Weekends and holidays
+                      td 8 hours between noon and midnight
 
-              p Soaring 40' floor-to-ceiling windows overlooking Lisgar Park. North-facing natural light. Perfect for receptions/galas and presentations.
-
-              p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3533333136383733373035%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
-              dl
-                dt Capacity
-                dd 145 (113 w/ SOP)
-                dt Size
-                dd 1,000 sq. ft.
+          section#spaces
+            div(id="galleries")
+              h3 Gallery Spaces
+              p The adjoining Main and Small galleries can be rented together for media art exhibitions of 10 to 30 days at the following rates:
 
               table(class="table table-condensed")
                 thead
                   tr
-                    th(style='width:75%') Days
-                    th(style='width:25%') Rate
+                    th(style='width:33%') Daily
+                    th(style='width:33%') Weekly
+                    th(style='width:33%') Monthly
 
                 tbody
                   tr
-                    td Weekday daytime
-                    td $950
-                  tr
-                    td Weekday evening
-                    td $1,070
-                  tr
-                    td Late night extension
-                    // Hourly rate for evening for 2 hours, plus $60 for staffing, rounded up
                     td $350
-                  tr
-                    td Weekends and holidays
-                    td $1,425
+                    td $1,750
+                    td $5,775
+
+              p The rates that follow are for events in the galleries.
+
+              .row.space
+                .col-lg-6
+                  h4 Main Gallery
+
+                  p Expansive gallery wall space for media art installation and projection. Double-height ceilings.
+
+                  p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3639393732323535313836%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
+
+                  dl
+                    dt Capacity
+                    dd 110 (40 w/ SOP)
+                    dt Size
+                    dd 1,200 sq. ft. (38.5' × 26')
+
+                  table(class="table table-condensed")
+                    thead
+                      tr
+                        th(style='width:75%') Days
+                        th(style='width:25%') Rate
+
+                    tbody
+                      tr
+                        td Weekday daytime
+                        td $1,250
+                      tr
+                        td Weekday evening
+                        td $1,370
+                      tr
+                        td Late night extension
+                        td $375
+                      tr
+                        td Weekends and holidays
+                        td $2,115
+
+                .col-lg-6
+                  img(src="../images/photos/space-rentals/main-gallery.jpg" class="responsive shadowed")
+
+              .row.space
+                .col-lg-6
+
+                  h4 Small Gallery
+
+                  dl
+                    dt Capacity
+                    dd 100 (60 w/ SOP)
+                    dt Size
+                    dd 1,200 sq. ft.
+
+                  p A light-filled gallery space with two wall surfaces for mounting or projecting work. 13' ceilings. Floor-to-ceiling east facing windows.
+
+                  p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3732313531353430353532%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
 
 
-            .col-lg-6
-              img(src="../images/photos/space-rentals/mezzanine.jpg" class="responsive shadowed")
+                  table(class="table table-condensed")
+                    thead
+                      tr
+                        th(style='width:75%') Days
+                        th(style='width:25%') Rate
+
+                    tbody
+                      tr
+                        td Weekday daytime
+                        td $700
+                      tr
+                        td Weekday evening
+                        td $820
+                      tr
+                        td Late night extension
+                        td $235
+                      tr
+                        td Weekends and holidays
+                        td $1,290
+
+                .col-lg-6
+                  img(src='../images/photos/IMG_4739.jpg' class="responsive shadowed")
+
+            div(id="events")
+              h3 Event Spaces
+              .row.space
+                .col-lg-6
+                  h4 Mezzanine
+
+                  p Soaring floor-to-ceiling windows overlooking Lisgar Park on the mezzanine between the two towers of the Edge condo. North-facing natural light. Perfect for receptions/galas and presentations.
+
+                  p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3533333136383733373035%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
+                  dl
+                    dt Capacity
+                    dd 145 (113 w/ SOP)
+                    dt Size
+                    dd 1,000 sq. ft.
+
+                  table(class="table table-condensed")
+                    thead
+                      tr
+                        th(style='width:75%') Days
+                        th(style='width:25%') Rate
+
+                    tbody
+                      tr
+                        td Weekday daytime
+                        td $950
+                      tr
+                        td Weekday evening
+                        td $1,070
+                      tr
+                        td Late night extension
+                        // Hourly rate for evening for 2 hours, plus $60 for staffing, rounded up
+                        td $350
+                      tr
+                        td Weekends and holidays
+                        td $1,425
+
+
+                .col-lg-6
+                  img(src="../images/photos/space-rentals/mezzanine.jpg" class="responsive shadowed")
 
 
 
-          .row.space
-            .col-lg-6
-              h4 Gathering Space
+              .row.space
+                .col-lg-6
+                  h4 Gathering Space
 
-              dl
-                dt Capacity
-                dd 30
-                dt Size
-                dd 450 sq. ft.
+                  dl
+                    dt Capacity
+                    dd 30
+                    dt Size
+                    dd 450 sq. ft.
 
-              p At the top of the landing on the second floor, with windows overlooking the park. A great space for a small community event, meeting, class, or overflow for an event happening in another one of our spaces.
+                  p At the top of the landing on the second floor, with windows overlooking the park. A great space for a small community event, meeting, class, or overflow for an event happening in another one of our spaces.
 
-              p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_39353539353230313930%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
-
-
-
-              table(class="table table-condensed")
-                thead
-                  tr
-                    th(style='width:75%') Days
-                    th(style='width:25%') Rate
-
-
-                tbody
-                  tr
-                    td Weekday daytime
-                    td $300
-                  tr
-                    td Weekday evening
-                    td $420
-                  tr
-                    td Late night extension
-                    td $135
-                  tr
-                    td Weekends and holidays
-                    // 1.5 times base weekday daytime rate, plus $240 staffing fee
-                    td $690
+                  p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_39353539353230313930%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
 
 
 
-            .col-lg-6
-              img(src="../images/photos/space-rentals/gathering.jpg" class="responsive shadowed")
-          hr
-          .row.space
-            .col-lg-6
-
-              h4 Small Gallery
-
-              dl
-                dt Capacity
-                dd 100 (60 w/ SOP)
-                dt Size
-                dd 1,200 sq. ft.
-
-              p A light-filled gallery space with two wall surfaces for mounting or projecting work. 13' ceilings. Floor-to-ceiling east facing windows.
-
-              p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3732313531353430353532%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
+                  table(class="table table-condensed")
+                    thead
+                      tr
+                        th(style='width:75%') Days
+                        th(style='width:25%') Rate
 
 
-              table(class="table table-condensed")
-                thead
-                  tr
-                    th(style='width:75%') Days
-                    th(style='width:25%') Rate
-
-                tbody
-                  tr
-                    td Weekday daytime
-                    td $700
-                  tr
-                    td Weekday evening
-                    td $820
-                  tr
-                    td Late night extension
-                    td $235
-                  tr
-                    td Weekends and holidays
-                    td $1,290
-
-            .col-lg-6
-              img(src='../images/photos/IMG_4739.jpg' class="responsive shadowed")
-          hr
-          .row.space
-            .col-lg-6
-              h4 Main Gallery
-
-              p Expansive gallery wall space for media art installation and projection. Double-height ceilings.
-
-              p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3639393732323535313836%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
-
-              dl
-                dt Capacity
-                dd 110 (40 w/ SOP)
-                dt Size
-                dd 1,200 sq. ft.
-
-              table(class="table table-condensed")
-                thead
-                  tr
-                    th(style='width:75%') Days
-                    th(style='width:25%') Rate
-
-                tbody
-                  tr
-                    td Weekday daytime
-                    td $1,250
-                  tr
-                    td Weekday evening
-                    td $1,370
-                  tr
-                    td Late night extension
-                    td $375
-                  tr
-                    td Weekends and holidays
-                    td $2,115
-
-            .col-lg-6
-              img(src="../images/photos/space-rentals/main-gallery.jpg" class="responsive shadowed")
-
-          hr
-          .row.space
-            .col-lg-6
-              h4 Meeting Room
-
-              p Perfect for presenting to a client, brainstorming with your team or as a writers' room. 40-inch screen with Apple TV connection, large whiteboard and kitchenette with fridge, microwave and dishes. Floor to ceiling windows. AC/heat controls. Seats up to 10.
-              p Available Mon-Fri, 10 a.m.-6 p.m. After-hours access available for multi-day bookings.
-
-              p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3732353233343730313530%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
+                    tbody
+                      tr
+                        td Weekday daytime
+                        td $300
+                      tr
+                        td Weekday evening
+                        td $420
+                      tr
+                        td Late night extension
+                        td $135
+                      tr
+                        td Weekends and holidays
+                        // 1.5 times base weekday daytime rate, plus $240 staffing fee
+                        td $690
 
 
-              table(class="table table-condensed")
-                tbody
-                  tr
-                    td Hourly
-                    td $25
-                  tr
-                    td Half day
-                    td $85
-                  tr
-                    td Full day
-                    td $140
-                  tr
-                    td Multi-day
-                    td $120/day (minimum 2 days, maximum 4 weeks)
+
+                .col-lg-6
+                  img(src="../images/photos/space-rentals/gathering.jpg" class="responsive shadowed")
 
 
-            .col-lg-6
-              img(src="../images/photos/space-rentals/meeting-room-1.jpg" class="responsive shadowed")
-          hr
-          .row.add-ons
-            .col-lg-6
+            div(id="meetings")
+              h3 Meeting Spaces
 
-              h4 Catering
+              .row.space
+                .col-lg-6
+                  h4 Meeting Room 1
 
-              p We can arrange for catering—from platters of finger foods to sweet treats to a full Mexican pop-up dinner. You may also bring your own food, of course!
+                  p Perfect for presenting to a client, brainstorming with your team or as a writers' room. 40-inch screen with Apple TV connection, large whiteboard and kitchenette with fridge, microwave and dishes. Floor to ceiling windows. AC/heat controls. Seats up to 10.
+                  p Available Mon-Fri, 10 a.m.-6 p.m. After-hours access available for multi-day bookings.
 
-              div(md).
-                We recommend our partner OMG on the Park for all of your catering needs. Please [contact owner Doug Mattina directly](mailto:doug.mattina.omg@gmail.com) to discuss your menu.
+                  p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3732353233343730313530%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
 
-                p Alcohol may not be sold or provided without a Special Occasion Permit. You should apply for your SOP at least 30 days in advance of your event via [iAGCO](https://www.iagco.agco.ca/prod/pub/en/login.aspx).
 
-              h4 Chairs & tables
+                  table(class="table table-condensed")
+                    tbody
+                      tr
+                        td Hourly
+                        td $25
+                      tr
+                        td Half day
+                        td $85
+                      tr
+                        td Full day
+                        td $140
+                      tr
+                        td Multi-day
+                        td $120/day (minimum 2 days, maximum 4 weeks)
 
-              table(class="table table-condensed")
-                tbody
-                  tr
-                    td Padded folding chairs (up to 80)
-                    td Included in rental
-                  tr
-                    td 6' folding tables (up to 20)
-                    td Included in rental
-            .col-lg-6
-              h4 Staffing
 
-              p Rates include one TMAC staff person on site for all events between 6 and 10 p.m. on weekdays, and all weekend events.
-              p Additional TMAC staff is required for every 40 attendees you expect (so if you have 100 attendees, you'll need 2 TMAC people). An additional charge of $30/hour per person will be applied to your rate.
+                .col-lg-6
+                  img(src="../images/photos/space-rentals/meeting-room-1.jpg" class="responsive shadowed")
+              .row.space
+                .col-lg-12
+                  h4 Meeting Room 2
 
-              h4 A/V Services
+                  p Great for a short-term festival office for up to 4 people, or daily meeting space for 6-8.
+                  p Available Mon-Fri, 10 a.m.-6 p.m. After-hours access available for multi-day bookings.
 
-              table(class="table table-condensed")
-                thead
-                  tr
-                    th(style='width:75%')
-                    th(style='width:25%') Regular
-                    th(style='width:25%') NFP/Edu
-                tbody
-                  tr
-                    td Set-up of projector, screen, amplification, and mics
-                    td $125
-                    td $95
-                  tr
-                    td Set-up of projector, amplification, and panel-style mic setup
-                    td $150
-                    td $112
-                  tr
-                    td Tech on site (4 hour minimum)
-                    td $35/hour
-                    td —
-                  tr
-                    td
-                      | Presentation recording
-                      br
-                      | Video/slide deck, audio recorded, edited, and made web ready (max 1.5 hours)
-                    td $475
-                    td $375
-          hr
-          h3 Booking Procedure
+                  p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3132313439363234363330%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
 
-          div(md).
 
-            1. Complete our [booking request form](/booking-request)
-            2. Our team will follow up via email after our weekly programming committee meeting (Tuesdays)
-            3. Review and sign our rental agreement
-            4. Pay your deposit to confirm your event date
-            5. Have an amazing event!
+                  table(class="table table-condensed")
+                    tbody
+                      tr
+                        td Hourly
+                        td $12
+                      tr
+                        td Half day
+                        td $42
+                      tr
+                        td Full day
+                        td $70
+                      tr
+                        td Multi-day
+                        td $60/day (2-5 days)
+                      tr
+                        td Monthly
+                        td $450/month (media arts nonprofits only)
 
-            Questions? [Drop us a line!](mailto:events@tomediaarts.org)
 
-          h3 Terms and more info
-          p: em Prices do not include Ontario HST.
-          ul
-            li For bookings within one month of event date, payment is due 7 days before event. For events more than a month away, a 40% deposit is due immediately and balance by 7 days before event. We accept cheque, Interac e-Transfer, and major credit cards.
-            li Food must be served at any event where alcohol is available. You must supply Smart Serve certified bar staff.
-            li You may be required to pay a security surcharge if your event concludes after 11 p.m.
+                // .col-lg-6
+                //   img(src="../images/photos/space-rentals/meeting-room-1.jpg" class="responsive shadowed")
+
+            hr
+            .row.add-ons
+              .col-lg-6
+
+                h4 Catering
+
+                p We can arrange for catering—from platters of finger foods to sweet treats to a full Mexican pop-up dinner. You may also bring your own food, of course!
+
+                div(md).
+                  We recommend our partner OMG on the Park for all of your catering needs. Please [contact owner Doug Mattina directly](mailto:doug.mattina.omg@gmail.com) to discuss your menu.
+
+                  p Alcohol may not be sold or provided without a Special Occasion Permit. You should apply for your SOP at least 30 days in advance of your event via [iAGCO](https://www.iagco.agco.ca/prod/pub/en/login.aspx).
+
+                h4 Chairs & tables
+
+                table(class="table table-condensed")
+                  tbody
+                    tr
+                      td Padded folding chairs (up to 80)
+                      td Included in rental
+                    tr
+                      td 6' folding tables (up to 20)
+                      td Included in rental
+              .col-lg-6
+                h4 Staffing
+
+                p Rates include one TMAC staff person on site for all events between 6 and 10 p.m. on weekdays, and all weekend events.
+                p Additional TMAC staff is required for every 40 attendees you expect (so if you have 100 attendees, you'll need 2 TMAC people). An additional charge of $30/hour per person will be applied to your rate.
+
+                h4 A/V Services
+
+                table(class="table table-condensed")
+                  thead
+                    tr
+                      th(style='width:75%')
+                      th(style='width:25%') Regular
+                      th(style='width:25%') NFP/Edu
+                  tbody
+                    tr
+                      td Set-up of projector, screen, amplification, and mics
+                      td $125
+                      td $95
+                    tr
+                      td Set-up of projector, amplification, and panel-style mic setup
+                      td $150
+                      td $112
+                    tr
+                      td Tech on site (4 hour minimum)
+                      td $35/hour
+                      td —
+                    tr
+                      td
+                        | Presentation recording
+                        br
+                        | Video/slide deck, audio recorded, edited, and made web ready (max 1.5 hours)
+                      td $475
+                      td $375
+            h3 Booking Procedure
+
+            div(md).
+
+              1. Complete our [booking request form](/booking-request)
+              2. Our team will follow up via email after our weekly programming committee meeting (Tuesdays)
+              3. Review and sign our rental agreement
+              4. Pay your deposit to confirm your event date
+              5. Have an amazing event!
+
+              Questions? [Drop us a line!](mailto:events@tomediaarts.org)
+
+            h3 Terms and more info
+            p: em Prices do not include Ontario HST.
+            ul
+              li For bookings within one month of event date, payment is due 7 days before event. For events more than a month away, a 40% deposit is due immediately and balance by 7 days before event. We accept cheque, Interac e-Transfer, and major credit cards.
+              li Food must be served at any event where alcohol is available. You must supply Smart Serve certified bar staff.
+              li You may be required to pay a security surcharge if your event concludes after 11 p.m.

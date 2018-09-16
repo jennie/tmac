@@ -1120,7 +1120,17 @@ p.past {
   }
 }
 
-
+body#space-rentals {
+  @nest & #spaces {
+    @nest & h3 {
+      text-align: center;
+      text-transform: uppercase;
+      border-top: solid 2px var(--color-blue);
+      padding-top: 18px;
+      color: var(--color-blue);
+    }
+  }
+}
 
 body#_program {
   @nest & #schedule {
