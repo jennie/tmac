@@ -37,6 +37,7 @@ extends(src='layout.sgr')
 
             .col-lg-6
                 img(src="/images/event-layout.jpg" class="responsive")
+
           hr
           p: b Bookings are inclusive of set up/installation and strike/clean up time.
 
@@ -50,13 +51,15 @@ extends(src='layout.sgr')
               h4 Mezzanine Event Space
 
               p Soaring 40' floor-to-ceiling windows overlooking Lisgar Park. North-facing natural light. Perfect for receptions/galas and presentations.
+
+              p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3533333136383733373035%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
               dl
                 dt Capacity
                 dd 145 (113 w/ SOP)
                 dt Size
                 dd 1,000 sq. ft.
 
-              table.table.table-condensed
+              table(class="table table-condensed")
                 thead
                   tr
                     th(style='width:75%') Days
@@ -95,8 +98,11 @@ extends(src='layout.sgr')
 
               p At the top of the landing on the second floor, with windows overlooking the park. A great space for a small community event, meeting, class, or overflow for an event happening in another one of our spaces.
 
+              p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_39353539353230313930%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
 
-              table.table.table-condensed
+
+
+              table(class="table table-condensed")
                 thead
                   tr
                     th(style='width:75%') Days
@@ -136,7 +142,10 @@ extends(src='layout.sgr')
 
               p A light-filled gallery space with two wall surfaces for mounting or projecting work. 13' ceilings. Floor-to-ceiling east facing windows.
 
-              table.table.table-condensed
+              p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3732313531353430353532%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
+
+
+              table(class="table table-condensed")
                 thead
                   tr
                     th(style='width:75%') Days
@@ -163,14 +172,17 @@ extends(src='layout.sgr')
             .col-lg-6
               h4 Main Gallery
 
-              p Expansive gallery wall space for media art installation and projection. Double-height (40') ceilings.
+              p Expansive gallery wall space for media art installation and projection. Double-height ceilings.
+
+              p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3639393732323535313836%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
+
               dl
                 dt Capacity
                 dd 110 (40 w/ SOP)
                 dt Size
                 dd 1,200 sq. ft.
 
-              table.table.table-condensed
+              table(class="table table-condensed")
                 thead
                   tr
                     th(style='width:75%') Days
@@ -199,7 +211,10 @@ extends(src='layout.sgr')
               h4 Meeting Room
 
               p Perfect for presenting to a client, brainstorming with your team or as a writers' room. 40-inch screen with Apple TV connection, large whiteboard and kitchenette with fridge, microwave and dishes. Floor to ceiling windows. AC/heat controls. Seats up to 10.
-              p Available Mon-Fri, 10 a.m.-6 p.m. After-hours access and nightly cleaning available for multi-day bookings.
+              p Available Mon-Fri, 10 a.m.-6 p.m. After-hours access available for multi-day bookings.
+
+              p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3732353233343730313530%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
+
 
               table(class="table table-condensed")
                 tbody
@@ -234,7 +249,7 @@ extends(src='layout.sgr')
 
               h4 Chairs & tables
 
-              table.table.table-condensed
+              table(class="table table-condensed")
                 tbody
                   tr
                     td Padded folding chairs (up to 80)
@@ -250,7 +265,7 @@ extends(src='layout.sgr')
 
               h4 A/V Services
 
-              table.table.table-condensed
+              table(class="table table-condensed")
                 thead
                   tr
                     th(style='width:75%')
