@@ -1077,10 +1077,8 @@ p.past {
     height: 100vh;
     @nest &.exhibitions {
       grid-template-rows: 80px 1fr;
-      grid-template-columns: auto;
-
       @nest & h1 {
-        grid-column: 1 / 4;
+        grid-column: 1/-1;
         grid-row: 1;
         color: #fff;
         text-align: center;
