@@ -2,10 +2,12 @@ extends(src='layout.sgr')
 
   block(name='meta')
 
+  block(name="nav")
+
   block(name='content')
 
     main#fullscreen
-      img(src="../images/signage/24-25-July-Shopify.jpg")
+      img(src="../images/signage/ThinkTank_general-slide.png")
 
     block(name='footer')
 

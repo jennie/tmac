@@ -1038,7 +1038,12 @@ p.past {
   text-align: center;
 }
 
-#shopify {
+
+body#signage_fullscreen {
+  border: none;
+  @nest & .container {
+    display: none;
+  }
   background: black;
   height: 100vh;
   margin: 0;
@@ -1073,7 +1078,7 @@ p.past {
   }
   @nest & .event-grid {
     margin: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     height: 100vh;
     @nest &.exhibitions {
       grid-template-rows: 80px 1fr;
