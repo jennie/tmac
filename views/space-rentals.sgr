@@ -175,6 +175,9 @@ extends(src='layout.sgr')
                   p Soaring floor-to-ceiling windows overlooking Lisgar Park on the mezzanine between the two towers of the Edge condo. North-facing natural light. Perfect for receptions/galas and presentations.
 
                   p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3533333136383733373035%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
+
+                  p: a(href="https://shwca.se/tmac-mezzanine" target="_blank") View more photos
+
                   dl
                     dt Capacity
                     dd 145 (113 w/ SOP)
