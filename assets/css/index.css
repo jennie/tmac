@@ -617,7 +617,8 @@ p > b.highlight {
       grid-template-columns: 1fr;
     }
     @media (--desktop) {
-      grid-template-columns: 1fr 1fr;
+      /* grid-template-columns: 1fr 1fr; */
+      grid-template-columns: 1fr;
     }
   }
 
