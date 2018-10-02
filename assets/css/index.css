@@ -1110,7 +1110,7 @@ body#signage_fullscreen {
       }
       @nest & p.thisweek {
         padding: 4px 12px;
-        /* font-size: 56px; */
+        font-size: 56px;
       }
       @nest & .location {
         text-transform: uppercase;
