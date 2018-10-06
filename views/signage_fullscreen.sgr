@@ -7,7 +7,7 @@ extends(src='layout.sgr')
   block(name='content')
 
     main#fullscreen
-      img(src="../images/signage/ThinkTank_general-slide.png")
+      img(src="../images/signage/alucine.jpg")
 
     block(name='footer')
 
