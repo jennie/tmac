@@ -631,7 +631,7 @@ p > b.highlight {
     grid-template-columns: 1fr 1fr;
   }
   @media (--desktop) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   & > div {
     padding: 10px;
@@ -1060,6 +1060,9 @@ body#signage_fullscreen {
 }
 #events_today {
   background: #000;
+  @media (--desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   @nest & section {
     margin: 0;
   }
@@ -1079,8 +1082,12 @@ body#signage_fullscreen {
   }
   @nest & .event-grid {
     margin: 0;
-
     height: 100vh;
+    @nest &.upcoming {
+      @media (--desktop) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
     @nest &.exhibitions {
       grid-template-rows: 80px 1fr;
       @nest & h1 {
@@ -1092,11 +1099,21 @@ body#signage_fullscreen {
         margin: 0;
       }
       @nest & .event {
+        @nest & p.thisweek {
+          font-size: 56px;
+        }
+
+
         @nest & h3 {
-          font-size: 80px;
+          font-size: 180px;
+        }
+        @nest & .desc small {
+          font-size: 64px;
+          text-transform: uppercase;
         }
         @nest & a .desc .when p {
-          font-size: 28px;
+          font-size: 56px;
+          font-weight: 900;
         }
       }
     }
@@ -1110,7 +1127,7 @@ body#signage_fullscreen {
       }
       @nest & p.thisweek {
         padding: 4px 12px;
-        font-size: 56px;
+        /* font-size: 56px; */
       }
       @nest & .location {
         text-transform: uppercase;
