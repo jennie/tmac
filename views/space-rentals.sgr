@@ -47,7 +47,7 @@ extends(src='layout.sgr')
                 li: a(class="" href="#meetings") Meeting Spaces
                 li: a(class="" href="#other") Other Spaces
             .col-md-6
-              p: b Bookings are inclusive of set up/installation and strike/clean up time.
+              p: b Bookings are inclusive of set up/installation and strike/clean up time. All rates include off-hours staffing where required.
               .times
 
                 table(class="table table-condensed")
