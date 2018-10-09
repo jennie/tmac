@@ -490,3 +490,7 @@ extends(src='layout.sgr')
               li For bookings within one month of event date, payment is due 7 days before event. For events more than a month away, a 40% deposit is due immediately and balance by 7 days before event. We accept cheque, Interac e-Transfer, and major credit cards.
               li Food must be served at any event where alcohol is available. You must supply Smart Serve certified bar staff.
               li You may be required to pay a security surcharge if your event concludes after 11 p.m.
+
+
+    block(name="javascript")
+      script(src="https://calendly.com/assets/external/widget.js")
