@@ -24,6 +24,13 @@
   text-decoration: none;
   font-weight: normal;
 }
+@define-mixin galleries {
+  text-align: center;
+  text-transform: uppercase;
+  border-top: solid 2px var(--color-blue);
+  padding-top: 18px;
+  color: var(--color-blue);
+}
 
 @define-mixin upper {
   text-transform: uppercase;
@@ -1144,13 +1151,17 @@ body#signage_fullscreen {
 }
 
 body#space-rentals {
+  @nest & h3.spaces {
+    @mixin galleries;
+  }
   @nest & #spaces {
     @nest & h3 {
-      text-align: center;
-      text-transform: uppercase;
-      border-top: solid 2px var(--color-blue);
-      padding-top: 18px;
-      color: var(--color-blue);
+      @mixin galleries;
+    }
+    @nest & td + td {
+      font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+      text-align: right;
+      color: #EB193D;
     }
   }
 }

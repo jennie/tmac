@@ -70,26 +70,34 @@ extends(src='layout.sgr')
                       td Weekends and holidays
                       td 8 hours between noon and midnight
 
-          section#spaces
-            div(id="galleries")
-              h3 Gallery Spaces
-              p The adjoining Main and Small galleries can be rented together for media art exhibitions of 10 to 30 days at the following rates:
 
-              table(class="table table-condensed")
-                thead
-                  tr
-                    th(style='width:33%') Daily
-                    th(style='width:33%') Weekly
-                    th(style='width:33%') Monthly
+          div(id="galleries")
+            .row.space
+              .col-lg-12
+                h3(class="spaces") Gallery Spaces
 
-                tbody
-                  tr
-                    td $350
-                    td $1,750
-                    td $5,775
+                h4 Exhibitions
 
-              p The rates that follow are for events in the galleries.
+                p The adjoining Main and Small galleries can be rented together for media art exhibitions of 10 to 30 days at the following rates:
 
+                table(class="table table-condensed")
+                  thead
+                    tr
+                      th(style='width:33%') Daily
+                      th(style='width:33%') Weekly
+                      th(style='width:33%') Monthly
+
+                  tbody
+                    tr
+                      td $350
+                      td $1,750
+                      td $5,775
+
+            .row.space
+              .col-lg-12
+                h4 Events
+
+                p The rates that follow are for events in the galleries.
               .row.space
                 .col-lg-6
                   h4 Main Gallery
@@ -165,7 +173,7 @@ extends(src='layout.sgr')
 
                 .col-lg-6
                   img(src='../images/photos/IMG_4739.jpg' class="responsive shadowed")
-
+          section#spaces
             div(id="events")
               h3 Event Spaces
               .row.space
@@ -280,22 +288,22 @@ extends(src='layout.sgr')
                         td Full day
                         td $140
                       tr
-                        td Multi-day
-                        td $120/day (minimum 2 days, maximum 4 weeks)
+                        td Multi-day (minimum 2 days, maximum 4 weeks)
+                        td $120/day
 
 
                 .col-lg-6
                   img(src="../images/photos/space-rentals/meeting-room-1.jpg" class="responsive shadowed")
               .row.space
-                .col-lg-12
+                .col-lg-6
                   h4 Meeting Room 2
 
+                  p: b(class="highlight") Monthly rental is available only to media arts nonprofits.
                   p Great for a short-term festival office for up to 4 people, or daily meeting space for 6-8.
                   p Available Mon-Fri, 10 a.m.-6 p.m. After-hours access available for multi-day bookings.
 
                   p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3132313439363234363330%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
-
-
+                .col-lg-6
                   table(class="table table-condensed")
                     tbody
                       tr
@@ -308,17 +316,106 @@ extends(src='layout.sgr')
                         td Full day
                         td $70
                       tr
-                        td Multi-day
-                        td $60/day (2-5 days)
+                        td Multi-day (2-5 days)
+                        td $60/day
                       tr
-                        td Monthly
-                        td $450/month (media arts nonprofits only)
+                        td Monthly (1-3 months)
+                        td $450/month
 
 
                 // .col-lg-6
                 //   img(src="../images/photos/space-rentals/meeting-room-1.jpg" class="responsive shadowed")
 
-            hr
+            div(id="other")
+              h3 Other Spaces
+
+              .row.space
+                .col-lg-6
+                  h4 Production Studio
+
+                  p: b(class="highlight") Available to rent by artists, collectives, community groups, and nonprofit organizations only.
+                  p For fabrication, photo/video shoots and rehearsals. 725 square feet.
+                  p Available Mon-Fri, 10 a.m.-6 p.m. After-hours access available for weekly and monthly bookings.
+
+                  p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_3435343937363239363934%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
+
+                  dl
+                    dt Size
+                    dd 725 sq. ft.
+
+                .col-lg-6
+
+                  table(class="table table-condensed")
+                    thead
+                      tr
+                        th(style='width:75%') Days
+                        th(style='width:25%') Rate
+
+
+                    tbody
+                      tr
+                        td Daily - Weekday
+                        td $200
+                      tr
+                        td Daily - Weekends and holidays
+                        // 1.5 times base weekday daytime rate, plus $240 staffing fee
+                        td $540
+                      tr
+                        td Weekly
+                        td $700
+                      tr
+                        td Monthly
+                        td $1,400
+
+
+              .row.space
+                .col-lg-6
+                  h4 Expansion Space
+
+                  p Double height space with a wall of windows and double doors. Ideal for exhibitions and events.
+                  p Available Mon-Fri, 12-6 p.m.
+
+                  p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_373233343935393139%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
+
+                  dl
+                    dt Capacity
+                    dd 100 (80 w/ SOP)
+                    dt Size
+                    dd 800 sq. ft.
+
+                .col-lg-6
+
+                  table(class="table table-condensed")
+                    thead
+                      tr
+                        th(style='width:75%') Days
+                        th(style='width:25%') Rate
+
+                    tbody
+                      tr
+                        td Weekday daytime
+                        td $1,000
+                      tr
+                        td Weekday evening
+                        td $1,120
+                        // includes 4 hours staffing
+                      tr
+
+                        td Late night extension
+                        td $310
+                        // Hourly rate for evening for 2 hours, plus $60 for staffing
+                        // ((1000/8)*2)+60
+                      tr
+                        td Weekends and holidays
+                        td $1,740
+                        // (1000*1.5)+240
+
+
+                // .col-lg-6
+                //   img(src="../images/photos/space-rentals/meeting-room-1.jpg" class="responsive shadowed")
+
+            h3 Event Services
+
             .row.add-ons
               .col-lg-6
 
