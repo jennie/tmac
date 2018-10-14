@@ -84,20 +84,17 @@ const Dato = new SpikeDatoCMS({
 
 module.exports = {
   devtool: 'source-map',
-  matchers: { html: '*(**/)*.sgr', css: '*(**/)*.css', js: '*(**/)*.js' },
+  matchers: { html: '*(**/)*.html', css: '*(**/)*.css', js: '*(**/)*.js' },
   vendor: 'assets/js/vendor/**',
-  ignore: ['**/layout.sgr', '**/_layout.sgr', '**/.*', '_cache/**', 'readme.md'],
+  ignore: ['**/layout.sgr', '**/.*', '_cache/**', 'readme.md'],
   reshape: htmlStandards ({
-    parser: sugarml,
     locals: (ctx) => { return Object.assign(locals
       , { pageId: pageId(ctx) }
       , { df: df.bind(df) }
       , { dateFns: dateFns }
       , { md: md.render.bind(md) }
-
     )},
     markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3 }],markdownItAttrs, markdownItContainer ],
-
     retext: { quotes: false }
   }),
   postcss: cssStandards({
