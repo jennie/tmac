@@ -1112,10 +1112,10 @@ body#signage_fullscreen {
 
 
         @nest & h3 {
-          font-size: 180px;
+          font-size: 120px;
         }
         @nest & .desc small {
-          font-size: 64px;
+          font-size: 32px;
           text-transform: uppercase;
         }
         @nest & a .desc .when p {
@@ -1127,10 +1127,10 @@ body#signage_fullscreen {
 
     @nest & .event {
       @nest & .desc small {
-        font-size: 24px;
+        font-size: 16px;
       }
       @nest & h3 {
-        font-size: 40px;
+        font-size: 32px;
       }
       @nest & p.thisweek {
         padding: 4px 12px;
