@@ -13,7 +13,7 @@ extends(src='layout.sgr')
           h1 Exhibitions + Festivals
           each(loop='exhibition in dato.program')
             if(condition='exhibition.past !== true')
-              .event.exhibition(style="background-image: url('//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=70&blend={{ exhibition.canceled == true ? 'eeeeee' : 'FF6282'}}'); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}"  class="{{ exhibition.canceled == true ? 'canceled' : ''}}")
+              .event.exhibition(style="background-image: url('//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=70&blend={{ exhibition.canceled == true ? 'eeeeee' : '159159'}}'); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}"  class="{{ exhibition.canceled == true ? 'canceled' : ''}}")
 
                 a(href="/program/{{ exhibition.slug }}")
                   .desc
