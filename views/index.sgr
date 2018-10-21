@@ -108,9 +108,7 @@ extends(src='layout.sgr')
                           p.thisweek On Now
                         elseif(condition="dateFns.isFuture(exhibition.startDate) == true")
                           p.thisweek Upcoming
-                        else
-                          p(style="color: white") {{dateFns.endOfDay(exhibition.endDate)}}
-                          p(style="color: white") {{exhibition.endOfDayEndDate}}
+
 
         section#daily-events
           .container
