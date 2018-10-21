@@ -103,10 +103,15 @@ extends(src='layout.sgr')
 
                       .register
                         // span(class="btn btn-primary") Info
-                        if(condition="dateFns.isWithinRange(new Date(), exhibition.startDate, exhibition.endDate) == true")
+
+                        if(condition="dateFns.isWithinRange(new Date(), exhibition.startDate, exhibition.endOfDayEndDate) == true")
                           p.thisweek On Now
                         elseif(condition="dateFns.isFuture(exhibition.startDate) == true")
                           p.thisweek Upcoming
+                        else
+                          p(style="color: white") {{dateFns.endOfDay(exhibition.endDate)}}
+                          p(style="color: white") {{exhibition.endOfDayEndDate}}
+
         section#daily-events
           .container
             h4.divider Upcoming events

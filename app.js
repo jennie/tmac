@@ -62,7 +62,8 @@ const Dato = new SpikeDatoCMS({
         output: (program) => { return `program/${program.slug}.html` }
       },
       transform: (data) => {
-        if (dateFns.isPast(data.endDate)) {
+        var endOfDayEndDate = dateFns.endOfDay(data.endDate)
+        if (dateFns.isPast(endOfDayEndDate)) {
           data.past = true
         }
         else {
@@ -75,7 +76,11 @@ const Dato = new SpikeDatoCMS({
         if (data.endDate) {
           endDateHours = new Date( new Date(data.endDate).getTime() + 0 * 3600 * 1000).toUTCString()
           data.endDate = endDateHours
+          data.endOfDayEndDate = endOfDayEndDate
         }
+
+
+
         return data
       }
     }
