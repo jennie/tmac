@@ -619,12 +619,13 @@ p > b.highlight {
   margin: 3rem 0;
   grid-auto-rows: 1fr;
   &.exhibitions {
-    grid-template-columns: 1fr;
+    
+    grid-template-columns: auto;
     @media (--tablet) {
-      grid-template-columns: 1fr;
+      /* grid-template-columns: 1fr; */
     }
     @media (--desktop) {
-      grid-template-columns: 1fr 1fr;
+      /* grid-template-columns: 1fr 1fr; */
       /* grid-template-columns: 1fr; */
     }
   }
