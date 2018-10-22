@@ -18,10 +18,10 @@ footer
     .org Toronto Media Arts Centre
     a.email(href='mailto:info@tomediaarts.org') info@tomediaarts.org
     .adr
-      .street-address 401 Richmond St. W. Suite 245
+      .street-address 32 Lisgar Street
       span.locality Toronto
       |  ,
       span.region ON
       |  ,
-      span.postal-code M5V 3A8
+      span.postal-code M6J 0C9
       span.country-name Canada
