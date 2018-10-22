@@ -86,7 +86,7 @@ module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.html', css: '*(**/)*.css', js: '*(**/)*.js' },
   vendor: 'assets/js/vendor/**',
-  ignore: ['**/layout.sgr', '**/.*', '_cache/**', 'readme.md'],
+  ignore: ['**/layout.html','**/*.sgr','**/.*', '_cache/**', 'readme.md'],
   reshape: htmlStandards ({
     locals: (ctx) => { return Object.assign(locals
       , { pageId: pageId(ctx) }
