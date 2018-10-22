@@ -1097,6 +1097,8 @@ body#signage_fullscreen {
     }
     @nest &.exhibitions {
       grid-template-rows: 80px 1fr;
+      grid-template-columns: auto;
+
       @nest & h1 {
         grid-column: 1/-1;
         grid-row: 1;
