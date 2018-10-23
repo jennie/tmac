@@ -25,7 +25,11 @@ extends(src='layout.sgr')
                       small {{ exhibition.presenter }}
                     h3 {{ exhibition.title }}
                     if(condition="exhibition.location[0]")
-                      p.location {{ exhibition.location[0].name }}
+
+                      p.location
+                        each(loop='space in exhibition.location')
+                          span.space(style="background-color: #fff; color: #000; padding: 2px 4px;") {{ space.name }}
+
 
 
                     .when
