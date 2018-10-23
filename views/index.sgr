@@ -62,7 +62,7 @@ extends(src='layout.sgr')
             .event-grid.exhibitions
               each(loop='exhibition in dato.program')
                 if(condition='exhibition.past !== true')
-                  .event.exhibition(style="background-image: url('//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=60&blend={{ exhibition.canceled == true ? 'eeeeee' : '6042CD'}}'); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}"  class="{{ exhibition.canceled == true ? 'canceled' : ''}}")
+                  .event.exhibition(style="background-image: url('//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=60&blend={{ exhibition.canceled == true ? 'eeeeee' : '159159'}}'); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}"  class="{{ exhibition.canceled == true ? 'canceled' : ''}}")
 
                     a(href="/program/{{ exhibition.slug }}")
                       .desc
@@ -74,7 +74,12 @@ extends(src='layout.sgr')
                           small {{ exhibition.presenter }}
                         h3 {{ exhibition.title }}
                         if(condition="exhibition.location[0]")
-                          p.location {{ exhibition.location[0].name }}
+
+                          p.location
+                            each(loop='space in exhibition.location')
+                              span.space(style="background-color: #fff; color: #000; padding: 2px 4px;") {{ space.name }}
+
+
 
 
                         .when
@@ -97,9 +102,19 @@ extends(src='layout.sgr')
                               span(class="fas fa-fw fa-ticket-alt")
                               span {{ exhibition.ticketPrice }}
 
+                        if(condition='exhibition.highlights[0]')
+                          div.related
+                            h4 Related Programs
+                            each(loop='highlight, i of exhibition.highlights')
+                              p(class="highlight {{ i < 3 ? 'show' : 'hide' }}" data-date="{{ highlight.startDateTime }}")
+                                span.date {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:mmm d", true)}}
+                                span.title {{ highlight.title }}
+                              // ({{highlight.startDateTime}})
+                              // if(condition="i < 3")
 
-                        each(loop='highlight in exhibition.highlights')
-                          p.highlight {{ highlight.title }}: {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:mmmm d • h:MM tt", true)}}
+
+                            // else
+                            //   p(style="display: none" class="highlight" data-date="{{ highlight.startDateTime }}") {{ highlight.title }}: {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:mmmm d • h:MM tt", true)}}
 
                       .register
                         // span(class="btn btn-primary") Info
@@ -132,7 +147,7 @@ extends(src='layout.sgr')
                         .when
                           // if the event starts and ends on same day
                           if(condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true")
-                            p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
+                            p.date {{ df(event.startDateTime, "UTC:mmmm d", true)}}
 
                           // if the event spans multiple days, but starts and ends in same month,
                           // don't show month name twice
@@ -237,5 +252,6 @@ extends(src='layout.sgr')
     script.
       tinysort('.event-grid .exhibition',{data:'startdate', order:'asc'});
       tinysort('.event-grid .daily',{data:'startdate', order:'asc'});
+      tinysort('.exhibition .highlight',{data:'date', order:'asc'});
       window.locals = {{{ JSON.stringify(locals) }}}
 
