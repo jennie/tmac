@@ -34,6 +34,9 @@ const Dato = new SpikeDatoCMS({
   addDataTo: locals,
   token: process.env.dato_api_key,
   models: [
+    { name: 'press_link' },
+    { name: 'rental_period' },
+    { name: 'room' },
     {
       name: 'event',
       transform: (data) => {

@@ -58,7 +58,7 @@ a {
   }
 }
 p, li {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   & b {
     font-weight: 700;
   }
@@ -1192,5 +1192,34 @@ body#_program {
       display: flex;
     }
 
+  }
+}
+#press {
+
+  @nest & ul.media-coverage {
+    display: flex;
+    flex-wrap: wrap;
+
+    @nest & li {
+      border-bottom: solid 1px #eee;
+      padding: 20px 5px;
+      margin: 10px 0;
+      flex: 1 1 auto;
+      width: 33%;
+
+      @nest & p {
+        font-size: 20px;
+        margin: 0;
+      }
+      @nest & span.date {
+        background-color: rgba(0,0,0,.9);
+        color: #fff;
+        margin: 0;
+        @mixin upper;
+        font-weight: normal;
+        font-family: "Space Text", sans-serif;
+        padding: 0 3px;
+      }
+    }
   }
 }

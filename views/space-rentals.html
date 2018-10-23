@@ -1,0 +1,49 @@
+<extends src="layout.html">
+
+  <block name='meta'>
+
+    <meta name='description' content="Rent space at Toronto Media Arts Centre">
+    <meta name='keywords' content='TMAC, toronto media arts, toronto media arts cluster, urbancorp bakruptcy, tmac lawsuit'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='google-site-verification' content='ArLdqonWlRvHkvmHpdwdW3nxGnct3sJE--rDYC-Y0Mo'>
+  </block>
+
+  <block name="content">
+    <header style="background-image:url(/images/photos/TMAC-gallery.jpg); background-position: center top; height: 35vh">
+      <h1> Toronto Media Arts Centre Space Rentals </h1>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <p style='text-align: center'>
+            <a href="/">⬅ Back home</a>
+          </p>
+          <div class="intro">
+            <h3> Host your event at TMAC! </h3>
+            <p>
+              TMAC is available to rent for a wide range of events—from gallery openings and receptions to small meetups and hackathons, dining events to panel discussions.
+            </p>
+            <p>Located in the heart of the Queen West Triangle – a vibrant, arts-friendly neighbourhood close to downtown Toronto – TMAC offers event, meeting and exhibition spaces in a beautiful purpose-built media arts facility overlooking Lisgar Park.
+            </p>
+
+            <p>
+              <b class="highlight">We offer nonprofit/educational discounts and welcome co-production and co-presentation inquiries!</b>
+            </p>
+
+            <a href="/booking-request" class="btn btn-primary">Submit a booking request</a>
+            <a href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false">Schedule a tour</a>
+            <img src="/images/event-layout.jpg" class="responsive" />
+
+
+          </div>
+
+          <each loop="space in dato.room">
+            <h3>{{ space.name }}</h3>
+          </each>
+
+        </div>
+      </section>
+    </main>
+  </block>
+</extends>
