@@ -368,22 +368,19 @@ extends(src='layout.sgr')
                         td $1,400
 
 
-              .row.space
+              .row.space#expansion-space
                 .col-lg-6
                   h4 Expansion Space
 
-                  p Double height space with a wall of windows and double doors. Ideal for exhibitions and events.
-                  p Available Mon-Fri, 12-6 p.m.
+                  p Double height space with a wall of windows and double doors. Ideal for exhibitions, workshops and social events.
 
                   p: a(href="https://calendar.google.com/calendar/embed?src=tomediaarts.org_373233343935393139%40resource.calendar.google.com&ctz=America%2FToronto" target="_blank") View availability calendar
 
                   dl
                     dt Capacity
-                    dd 100 (80 w/ SOP)
+                    dd 100 standing reception • 80 w/ SOP • 40-60 workshop/theatre-style
                     dt Size
                     dd 800 sq. ft.
-
-                .col-lg-6
 
                   table(class="table table-condensed")
                     thead
@@ -411,8 +408,10 @@ extends(src='layout.sgr')
                         // (1000*1.5)+240
 
 
-                // .col-lg-6
-                //   img(src="../images/photos/space-rentals/meeting-room-1.jpg" class="responsive shadowed")
+
+                .col-lg-6
+
+                  img(src="../images/photos/space-rentals/studio.jpg" class="responsive shadowed")
 
             h3 Event Services
 
