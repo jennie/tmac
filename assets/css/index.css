@@ -1099,10 +1099,15 @@ body#signage_fullscreen {
   }
   @nest & .event-grid {
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
     height: 100vh;
+    @nest & .event {
+      flex: 1 1 auto;
+    }
+
     @nest &.upcoming {
       @media (--desktop) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
     }
     @nest &.exhibitions {
