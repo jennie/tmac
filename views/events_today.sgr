@@ -110,9 +110,9 @@ extends(src='layout.sgr')
         items: 2,
         speed: 300,
         slideBy: 1,
-        autoplay: false,
+        autoplay: true,
         axis: 'horizontal',
-        // gutter: 20,
+        
 
         controls: false,
         mode: 'carousel',
