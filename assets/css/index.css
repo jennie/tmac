@@ -1068,9 +1068,7 @@ body#signage_fullscreen {
 }
 #events_today {
   background: #000;
-  @media (--desktop) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  
   @nest & section {
     margin: 0;
   }
