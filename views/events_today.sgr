@@ -55,7 +55,9 @@ extends(src='layout.sgr')
 
                     p.thisweek Current Exhibition
                   elseif(condition="dateFns.isFuture(exhibition.startDate) == true")
-                    p.thisweek Upcoming Exhibition
+                    p.upcoming-exhibition Upcoming Exhibition
+                    p: small Opens in {{ dateFns.distanceInWordsToNow(exhibition.startDate)}}
+
 
       each(loop='event in dato.event')
         if(condition='event.past !== true')
@@ -108,7 +110,7 @@ extends(src='layout.sgr')
         items: 2,
         speed: 300,
         slideBy: 1,
-        autoplay: true,
+        autoplay: false,
         axis: 'horizontal',
         // gutter: 20,
 

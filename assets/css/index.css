@@ -678,12 +678,23 @@ p > b.highlight {
       justify-content: space-between;
       margin-top: auto;
       display: flex;
-      align-items: center;
+      align-items: baseline;
+      & small {
+        color: #fff;
+
+font-size: 25px;
+
+font-weight: normal;
+
+font-family: "Space Text", sans-serif;
+
+padding: 0 8px;
+      }
 
       & .btn {
         margin: 0;
       }
-      & .thisweek {
+      & .thisweek, & .upcoming-exhibition {
         background-color: rgba(0,0,0,.9);
         color: #fff;
         margin: 0;
@@ -1149,9 +1160,9 @@ body#signage_fullscreen {
       @nest & h3 {
         font-size: 32px;
       }
-      @nest & p.thisweek {
+      @nest & p.thisweek, & p.upcoming-exhibition {
         padding: 4px 12px;
-        /* font-size: 56px; */
+        font-size: 56px;
       }
       @nest & .location {
         text-transform: uppercase;

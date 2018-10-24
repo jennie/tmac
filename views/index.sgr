@@ -122,7 +122,7 @@ extends(src='layout.sgr')
                         if(condition="dateFns.isWithinRange(new Date(), exhibition.startDate, exhibition.endOfDayEndDate) == true")
                           p.thisweek On Now
                         elseif(condition="dateFns.isFuture(exhibition.startDate) == true")
-                          p.thisweek Upcoming
+                          p.thisweek Opens in {{ dateFns.distanceInWordsToNow(exhibition.startDate)}}
 
 
         section#daily-events
