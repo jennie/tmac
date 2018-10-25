@@ -35,7 +35,6 @@
                 <a href="{{ item.link }}"> Web site</a>
               </p>
             </div>
-
             <div class="col-md-5">
               <div class="desc">
                 <if condition="item.member[0] && item.presenter">
@@ -109,18 +108,17 @@
             </if>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-</block>
-<block name="footer"></block>
+      </section>
+    </main>
+  </block>
+  <block name="footer"></block>
 
-<block name="javascript">
-  <script src="/js/vendor/tinysort.js"></script>
+  <block name="javascript">
+    <script src="/js/vendor/tinysort.js"></script>
 
-  <script>
-  tinysort('.session',{data:'startdate', order:'asc'});
-  </script>
-</block>
+    <script>
+    tinysort('.session',{data:'startdate', order:'asc'});
+    </script>
+  </block>
 
 </extends>
