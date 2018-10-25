@@ -1,133 +1,126 @@
 <extends src="layout.html">
-  <block name="title">
-    <title>
-      {{ item.title }} - TMAC
-    </title>
-    <block name="content">
-      <header style="background-image:url('//{{ dato._meta.imgixHost + item.featureImage.path }}?bm=normal&balph=60&blend=322D5A&auto=compress'); background-size: cover;">
-        <h1> Toronto Media Arts Centre </h1>
-      </header>
-      <main>
-        <div class="alert alert-success" id="letter-callout">
-          <h1>
-            {{ item.title }}
-          </h1>
-          <if condition="item.presenter">
-            <h3>
-              {{ item.presenter }}
-            </h3>
-          </if>
-          <elseif condition="item.member[0]">
-            <h3>
-              {{ item.member[0].name }}
-            </h3>
-          </elseif>
-        </div>
+  <title>
+    {{ item.title }} - TMAC
+  </title>
+  <block name="content">
+    <header style="background-image:url('//{{ dato._meta.imgixHost + item.featureImage.path }}?bm=normal&balph=60&blend=322D5A&auto=compress'); background-size: cover;">
+      <h1> Toronto Media Arts Centre </h1>
+    </header>
+    <main>
+      <div class="alert alert-success" id="letter-callout">
+        <h1>
+          {{ item.title }}
+        </h1>
+        <if condition="item.presenter">
+          <h3>
+            {{ item.presenter }}
+          </h3>
+        </if>
+        <elseif condition="item.member[0]">
+          <h3>
+            {{ item.member[0].name }}
+          </h3>
+        </elseif>
+      </div>
 
 
-        <section>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-7">
-                <div class="" md>
-                  {{ item.description }}
-                </div>
-                <p>
-                  <a href="{{ item.link }}"> Web site</a>
-                </p>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="" md>
+                {{ item.description }}
               </div>
+              <p>
+                <a href="{{ item.link }}"> Web site</a>
+              </p>
+            </div>
 
-              <div class="col-md-5">
-                <div class="desc">
-                  <if condition="item.member[0] && item.presenter">
-                    <p>
-                      <b>Presented by {{ item.member[0].name }}</b>
-                    </p>
-                  </if>
-                  <if condition="item.location[0]">
-                    <p class="location">
-                      <span class="fas fa-fw fa-door-open"></span>
-                      <span>{{ item.location[0].name }}</span>
-                    </p>
-                  </if>
-
-                  <div class="when">
-                    <if condition="{{ item.startDate }}">
-                      <p class="date">
-                        <span class="fas fa-fw fa-calendar-alt"></span>
-                        <if condition="dateFns.isSameDay(item.startDate,item.endDate) == true">
-                          <span class="date">
-                            {{ df(item.startDate, "UTC:mmmm d", true)}} • {{ df(item.startDate, "UTC:h:MM tt", true)}}
-                          </span>
-                        </if>
-                        <if condition="dateFns.isSameMonth(item.startDate,item.endDate) == true">
-                          <span class="date">
-                            {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:d", true)}}
-                          </span>
-                          <else>
-                            <span class="date">
-                              {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:mmmm d", true)}}
-                            </span>
-                          </else>
-                        </if>
-                      </p>
-                    </if>
-                    <if condition="{{ item.hours }}">
-                      <p class="hours">
-                        <span class="fas fa-fw fa-clock">
-                          <span>
-                            {{ item.hours }}
-                          </span>
-                        </p>
-                      </if>
-                      <if condition="{{ item.ticketPrice }}">
-                        <p class="tickets">
-                          <span class="fas fa-fw fa-ticket-alt"></span>
-                          <span>
-                            {{ item.ticketPrice }}
-                          </span>
-                        </p>
-                      </if>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <if condition="{{item.highlights[0]}}">
-                <each loop="highlight in item.highlights">
-                  <h4 class="highlight">{{ highlight.title }}</h4>
-                  <p class="date">
-                    {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:dddd, mmmm d, h:MM tt", true)}}
+            <div class="col-md-5">
+              <div class="desc">
+                <if condition="item.member[0] && item.presenter">
+                  <p>
+                    <b>Presented by {{ item.member[0].name }}</b>
                   </p>
-                </each>
+                </if>
+              </div>
+              <div class="when">
+
+                <pre> {{ JSON.stringify( item.startDate, null, 2 ) }}
+                </pre>
+                <if condition="{{ item.startDate }}">
+                  <p class="date">
+                    <span class="fas fa-fw fa-calendar-alt"></span>
+                    <if condition="dateFns.isSameDay(item.startDate,item.endDate) == true">
+                      <span class="date">
+                        {{ df(item.startDate, "UTC:mmmm d", true)}} • {{ df(item.startDate, "UTC:h:MM tt", true)}}
+                      </span>
+                    </if>
+                    <if condition="dateFns.isSameMonth(item.startDate,item.endDate) == true">
+                      <span class="date">
+                        {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:d", true)}}
+                      </span>
+                    </if>
+                    <else>
+                      <span class="date">
+                        {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:mmmm d", true)}}
+                      </span>
+                    </else>
+                  </if>
+                </p>
               </if>
-              <if condition="{{item.sessions[0]}}">
-                <div id="schedule">
-                  <h3>
-                    Schedule
-                  </h3>
-                  <each loop="session in item.sessions">
-                    <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
-                      <h4>{{session.work.title}}</h4>
-                      <p>{{df(dateFns.subHours(session.startDateTime, 4), "UTC:dddd, mmmm d, h:MM tt", true)}} ({{session.location.name}})</p>
-                    </div>
-                  </each>
-                </div>
+              <if condition="{{ item.hours }}">
+                <p class="hours">
+                  <span class="fas fa-fw fa-clock"></span>
+                  <span>{{ item.hours }}</span>
+                </p>
+              </if>
+              <if condition="{{ item.ticketPrice }}">
+                <p class="tickets">
+                  <span class="fas fa-fw fa-ticket-alt"></span>
+                  <span>{{ item.ticketPrice }}</span>
+                </p>
               </if>
             </div>
+            <if condition="{{item.highlights[0]}}">
+              <each loop="highlight in item.highlights">
+                <h4 class="highlight">{{ highlight.title }}</h4>
+                <p class="date">
+                  {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:dddd, mmmm d, h:MM tt", true)}}
+                </p>
+              </each>
+            </if>
+            <if condition="{{item.sessions[0]}}">
+              <div id="schedule">
+                <h3>
+                  Schedule
+                </h3>
+                <each loop="session in item.sessions">
+                  <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
+                    <h4>{{session.work.title}}</h4>
+                    <p>{{df(dateFns.subHours(session.startDateTime, 4), "UTC:dddd, mmmm d, h:MM tt", true)}}
+                      <if condition="{{ session.location[0] }}">
+                        ({{session.location[0].name}})
+                      </if>
+                    </p>
+                  </div>
+                </each>
+              </div>
+            </if>
           </div>
-        </section>
-      </main>
-    </block>
-    <block name="footer"></block>
+        </div>
+      </div>
+    </section>
+  </main>
+</block>
+<block name="footer"></block>
 
-    <block name="javascript">
-      <script src="/js/vendor/tinysort.js"></script>
+<block name="javascript">
+  <script src="/js/vendor/tinysort.js"></script>
 
-      <script>
-      tinysort('.session',{data:'startdate', order:'asc'});
-      </script>
-    </block>
+  <script>
+  tinysort('.session',{data:'startdate', order:'asc'});
+  </script>
+</block>
 
-  </extends>
+</extends>

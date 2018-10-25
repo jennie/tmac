@@ -92,7 +92,13 @@
                           <small>{{ exhibition.presenter }}</small>
                           <h3> {{ exhibition.title }} </h3>
                           <if condition="exhibition.location[0]">
-                            <p class="location"> {{ exhibition.location[0].name }}</p>
+                            <p class="location">
+                              <each loop='space in exhibition.location'>
+                                <span class="space" style="background-color: #fff; color: #000; padding: 2px 4px;">
+                                  {{ space.name }}
+                                </span>
+                              </each>
+                            </p>
                           </if>
                         </elseif>
 
