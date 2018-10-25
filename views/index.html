@@ -124,18 +124,29 @@
                             </p>
                           </if>
                         </div>
+                        <div class="related">
 
+                          <h4>Related Programs</h4>
+                          <each loop='highlight, i of exhibition.highlights'>
+                            <p class="highlight {{ i < 3 ? 'show' : 'hide' }}" data-date="{{ highlight.startDateTime }}">
+                              <span class="date">
+                                {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:mmm d", true)}}
+                              </span>
+                              <span class="title">
+                                {{ highlight.title }}
+                              </span>
+                            </p>
+                          </each>
 
-                        <each loop="highlight in exhibition.highlights">
-                          <p class="highlight">{{ highlight.title }}: {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:mmmm d • h:MM tt", true)}}</p>
-                        </each>
+                        </div>
+
                         <div class="register">
                           <!-- // span(class="btn btn-primary") Info -->
                           <if condition="dateFns.isWithinRange(new Date(), exhibition.startDate, exhibition.endDate) == true">
                             <p class="thisweek">On Now</p>
                           </if>
                           <elseif condition="dateFns.isFuture(exhibition.startDate) == true">
-                            <p class="thisweek"> Upcoming</p>
+                            <p class="thisweek">Opens in {{ dateFns.distanceInWordsToNow(exhibition.startDate)}}</p>
                           </elseif>
                         </div>
                       </div>
@@ -220,8 +231,16 @@
                         <if condition="dateFns.isToday(event.startDateTime) == true">
                           <p class="thisweek">Today</p>
                         </if>
-                        <elseif condition="dateFns.isThisWeek(event.startDateTime) == true">
+                        <if condition="dateFns.isTomorrow(event.startDateTime) == true">
+                          <p class="thisweek">Tomorrow</p>
+                        </if>
+                        <!-- <elseif condition="dateFns.isThisWeek(event.startDateTime) == true">
                           <p class="thisweek">This week</p>
+                        </elseif> -->
+                        <elseif condition="dateFns.isThisWeek(event.startDateTime) == true">
+                          <p class="thisweek">
+                            {{ dateFns.format(event.startDateTime, 'dddd') }}
+                          </p>
                         </elseif>
                       </div>
                     </a>
