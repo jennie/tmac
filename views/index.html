@@ -188,7 +188,8 @@
                           <if condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true">
                             <p class="date">
                               <time itemprop="startDate" datetime='{{ df(event.startDateTime, "UTC:mmmm d", true)}}, {{ df(event.startDateTime, "UTC:h:MM tt", true)}}'>
-                                {{ df(event.startDateTime, "UTC:mmmm d", true)}}, {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
+                                {{ df(event.startDateTime, "UTC:mmmm d", true)}}
+                                <!-- , {{ df(event.startDateTime, "UTC:h:MM tt", true)}} -->
                               </time>
                             </p>
                           </if>
@@ -209,6 +210,7 @@
                             <p class="date">
                               <time itemprop="startDate" datetime='{{ df(event.startDateTime, "UTC:mmmm d", true)}}'>
                                 {{ df(event.startDateTime, "UTC:mmmm d", true)}}
+
                               </time>
                               –
                               <time itemprop="endDate" datetime='{{ df(event.endDateTime, "UTC:mmmm d", true)}}'>
