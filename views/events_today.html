@@ -11,21 +11,30 @@
           <div class="event exhibition" style="background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=70&blend={{ exhibition.canceled == true ? 'eeeeee' : '159159'}}); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}" class="{{ exhibition.canceled == true ? 'canceled' : ''}}" >
             <a href="/program/{{ exhibition.slug }}">
               <div class="desc">
-                <if condition="exhibition.member[0] && exhibition.presenter">
-                  <small>
-                    {{ exhibition.member[0].name }} & {{ exhibition.presenter }}
-                  </small>
-                </if>
-                <elseif condition="exhibition.member[0]">
-                  <small>{{ exhibition.member[0].name }}</small>
-                </elseif>
-                <elseif condition="exhibition.presenter">
-                  <small>{{ exhibition.presenter }}</small>
-                </elseif>
+                <div class="title">
+                  <if condition="exhibition.member[0] && exhibition.presenter">
+                    <small>
+                      {{ exhibition.member[0].name }} & {{ exhibition.presenter }}
+                    </small>
+                  </if>
+                  <elseif condition="exhibition.member[0]">
+                    <small>{{ exhibition.member[0].name }}</small>
+                  </elseif>
+                  <elseif condition="exhibition.presenter">
+                    <small>{{ exhibition.presenter }}</small>
+                  </elseif>
+                  <if condition="exhibition.location[0]">
+                    <p class="location">{{ exhibition.location[0].name }}</p>
+
+                    <each loop='space in exhibition.location'>
+                      <span class="space" style="background-color: #fff; color: #000; padding: 2px 4px;">
+                        {{ space.name }}
+                      </span>
+                    </each>
+
+                  </if>
+                </div>
                 <h3>{{ exhibition.title }}</h3>
-                <if condition="exhibition.location[0]">
-                  <p class="location">{{ exhibition.location[0].name }}</p>
-                </if>
                 <div class="when">
                   <p class="date">
                     <span class="fas fa-fw fa-calendar-alt"></span>
