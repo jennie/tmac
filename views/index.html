@@ -231,9 +231,9 @@
                         <if condition="dateFns.isToday(event.startDateTime) == true">
                           <p class="thisweek">Today</p>
                         </if>
-                        <if condition="dateFns.isTomorrow(event.startDateTime) == true">
+                        <elseif condition="dateFns.isTomorrow(event.startDateTime) == true">
                           <p class="thisweek">Tomorrow</p>
-                        </if>
+                        </elseif>
                         <!-- <elseif condition="dateFns.isThisWeek(event.startDateTime) == true">
                           <p class="thisweek">This week</p>
                         </elseif> -->
