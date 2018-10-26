@@ -8,6 +8,7 @@ const cssStandards            = require('spike-css-standards')
 const jsStandards             = require('spike-js-standards')
 const pageId                  = require('spike-page-id')
 const df                      = require('dateformat')
+const nf                      = require('number-formatter')
 const dateFns                 = require('date-fns')
 
 const SpikeDatoCMS            = require('spike-datocms')
@@ -19,24 +20,41 @@ const markdownItAttrs         = require('markdown-it-attrs')
 const markdownItContainer     = require('markdown-it-container')
 
 const md = new MarkdownIt()
-  .use(markdownItTocAndAnchor, {
-    tocFirstLevel: 3,
-    anchorLink: true
-  })
-  .use(markdownItContainer)
+.use(markdownItTocAndAnchor, {
+  tocFirstLevel: 3,
+  anchorLink: true
+})
+.use(markdownItContainer)
 
 const locals           = { }
 const DefinePlugin = require('webpack').DefinePlugin
 
 var offset = -4;
+var npRate = .35
 const Dato = new SpikeDatoCMS({
   // drafts: true,
   addDataTo: locals,
   token: process.env.dato_api_key,
   models: [
-    { name: 'press_link' },
-    { name: 'rental_period' },
-    { name: 'room' },
+    {
+      name: 'press_link'
+    },
+    {
+      name: 'rental_period'
+    },
+    {
+      name: 'room',
+      transform: (data) => {
+        if (data.rates) {
+          const rates = data.rates
+          rates.forEach(function (rate, index) {
+            rate.npRate = nf("$#,###.##", Math.round(((rate.rate - 120) * npRate) + 120))
+            rate.rate = nf("$#,###.##", rate.rate)
+          })
+        }
+        return data
+      }
+    },
     {
       name: 'event',
       transform: (data) => {
@@ -106,7 +124,7 @@ module.exports = {
   }),
   babel: jsStandards(),
   plugins: [ Dato, new DefinePlugin({
-      locals
-    })
-  ]
+    locals
+  })
+]
 }

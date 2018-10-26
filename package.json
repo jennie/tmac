@@ -19,6 +19,7 @@
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-sup": "^1.0.0",
     "markdown-it-toc-and-anchor": "^4.1.2",
+    "number-formatter": "^1.2.0",
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^3.0.0",
     "postcss-nested-props": "^2.0.0",

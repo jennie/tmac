@@ -42,12 +42,28 @@
             <if condition="space.rentable == true">
 
               <h3>{{ space.name }}</h3>
+              <h4>{{ space.category }}</h4>
               <p>{{ space.rentalDescription }}</p>
               <if condition="space.photo">
-                <img src="{{ dato._meta.imgixHost + space.photo.path }}?bm=normal&balph=60&blend=322D5A}}&w=400&fit=clip&auto=compress,format" />
+                <img src="//{{ dato._meta.imgixHost + space.photo.path }}?w=400&fit=clip&auto=compress,format" />
               </if>
+              <table class="table">
+                <th>
+                  <tr>
 
-
+                    <td>Period</td>
+                    <td>Rate</td>
+                    <td>Nonprofit Rate</td>
+                  </tr>
+                </th>
+                <each loop="rate in space.rates">
+                  <tr>
+                    <td>{{ rate.period.name }}</td>
+                    <td>{{ rate.rate }}</td>
+                    <td>{{ rate.npRate }}</td>
+                  </tr>
+                </each>
+              </table>
             </if>
           </each>
           <pre>
