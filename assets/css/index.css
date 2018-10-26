@@ -628,6 +628,11 @@ p > b.highlight {
       /* grid-template-columns: 1fr 1fr; */
 
     }
+    @media (--tablet), (--desktop) {
+      @nest & h3 {
+        font-size: calc(34px + .05vw);
+      }
+    }
   }
 
   & a {
@@ -699,6 +704,24 @@ p > b.highlight {
       grid-area: desc;
       color: #fff;
 
+      @nest & .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @nest & p {
+          margin: 0;
+          @mixin upper;
+          font-size: calc(14px + .05vw);
+          &.presenter {
+
+          }
+          &.location span.space:first-child {
+            margin-right: 8px;
+          }
+        }
+
+      }
       & small {
         line-height: normal;
         display: block;
@@ -770,6 +793,10 @@ p > b.highlight {
   }
 
   & .event {
+      transition: all .2s ease-in-out;
+      &:hover { transform: scale(1.05); }
+
+
     & > * {
       text-shadow: 1px 1px #000;
     }

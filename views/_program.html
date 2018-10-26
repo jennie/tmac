@@ -31,6 +31,20 @@
               <div class="" md>
                 {{ item.description }}
               </div>
+              <h3>Related Programs</h3>
+              <if condition="{{item.highlights[0]}}">
+                <each loop="highlight in item.highlights">
+                  <p class="highlight">
+                    <span class="date">
+                      {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:ddd, mmm d", true)}}
+                      <!-- {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:dddd, mmmm d, h:MM tt", true)}} -->
+                    </span> – 
+                    <b>{{ highlight.title }}</b></p>
+
+                </each>
+              </if>
+
+
               <p>
                 <a href="{{ item.link }}"> Web site</a>
               </p>
@@ -45,8 +59,7 @@
               </div>
               <div class="when">
 
-                <pre> {{ JSON.stringify( item.startDate, null, 2 ) }}
-                </pre>
+
                 <if condition="{{ item.startDate }}">
                   <p class="date">
                     <span class="fas fa-fw fa-calendar-alt"></span>
@@ -81,14 +94,7 @@
                 </p>
               </if>
             </div>
-            <if condition="{{item.highlights[0]}}">
-              <each loop="highlight in item.highlights">
-                <h4 class="highlight">{{ highlight.title }}</h4>
-                <p class="date">
-                  {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:dddd, mmmm d, h:MM tt", true)}}
-                </p>
-              </each>
-            </if>
+
             <if condition="{{item.sessions[0]}}">
               <div id="schedule">
                 <h3>
