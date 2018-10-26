@@ -52,7 +52,7 @@ extends(src='layout.sgr')
 
                 Our doors are east of the main condo entrance on the north side of the building, facing onto Lisgar Park (_not_ off of Lisgar Street!).
 
-                [Accessibility information](https://policies.tomediaarts.org/policies/accessibility.html)
+                [Accessibility information](https://policies.tomediaarts.org/procedure-manual/policies/accessibility)
 
               img(src="/images/door-map.jpg" class="responsive")
 

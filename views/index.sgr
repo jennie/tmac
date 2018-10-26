@@ -27,7 +27,7 @@ extends(src='layout.sgr')
                 With year-round arts and cultural programming, open lab studios, equipment libraries, coworking and social areas, we provide the tools, space and freedom to play with art, media and new technologies–including film, videogames, audio, video, robotics, electronics and more.
               p
                 i(class="fab fa-accessible-icon")
-                a(href="https://policies.tomediaarts.org/policies/accessibility.html") Accessibility information
+                a(href="https://policies.tomediaarts.org/procedure-manual/policies/accessibility") Accessibility information
 
               a(href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865")
                 img(src="https://www.canadahelps.org/image/DonateNowLink/en/Donate5.png" border="0" alt="Donate Now Through CanadaHelps.org!")
