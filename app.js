@@ -31,6 +31,7 @@ const DefinePlugin = require('webpack').DefinePlugin
 
 var offset = -4;
 var npRate = .35
+var staffRate = 30
 const Dato = new SpikeDatoCMS({
   // drafts: true,
   addDataTo: locals,
@@ -48,8 +49,16 @@ const Dato = new SpikeDatoCMS({
         if (data.rates) {
           const rates = data.rates
           rates.forEach(function (rate, index) {
-            rate.npRate = nf("$#,###.##", Math.round(((rate.rate - 120) * npRate) + 120))
-            rate.rate = nf("$#,###.##", rate.rate)
+            if (rate.period.extraHours) {
+              staffingCost = rate.period.extraHours * staffRate
+              rate.npRate = nf("$#,###.##", Math.round((rate.rate * npRate) + staffingCost))
+              rate.rate = nf("$#,###.##", Math.round(rate.rate + staffingCost))
+              console.log(staffingCost)
+            }
+            else {
+              rate.npRate = nf("$#,###.##", Math.round(rate.rate * npRate))
+              rate.rate = nf("$#,###.##", Math.round(rate.rate))
+            }
           })
         }
         return data
