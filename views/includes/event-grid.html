@@ -19,7 +19,10 @@
         <span itemprop="description" class="description"></span>
 
 
-        <img itemprop="photo" src="../media/hotel_front.png" alt="Front view of the hotel" />
+                <span itemprop="description" class="description"></span>
+                <span itemprop="image" url="//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=60&blend=322D5A"></span>
+
+
         <div class="when">
           <!-- // if the event starts and ends on same day -->
           <if condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true">
