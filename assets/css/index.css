@@ -57,8 +57,8 @@ a {
     color: color(var(--color-blue) tint(10%));
   }
 }
-p, li {
-  font-family: 'Work Sans', sans-serif;
+p, li, td, th {
+  font-family: 'Source Sans Pro', sans-serif;
   & b {
     font-weight: 700;
   }
@@ -619,14 +619,19 @@ p > b.highlight {
   margin: 3rem 0;
   grid-auto-rows: 1fr;
   &.exhibitions {
-
-    grid-template-columns: auto;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     @media (--tablet) {
       /* grid-template-columns: 1fr; */
     }
     @media (--desktop) {
       /* grid-template-columns: 1fr 1fr; */
-      /* grid-template-columns: 1fr; */
+      /* grid-template-columns: 1fr 1fr; */
+
+    }
+    @media (--tablet), (--desktop) {
+      @nest & h3 {
+        font-size: calc(34px + .05vw);
+      }
     }
   }
 
@@ -673,28 +678,17 @@ p > b.highlight {
       text-align: center;
       margin-bottom: 10px;
     }
-
+    & .where { display: none;}
     & .register {
       justify-content: space-between;
       margin-top: auto;
       display: flex;
-      align-items: baseline;
-      & small {
-        color: #fff;
-
-font-size: 25px;
-
-font-weight: normal;
-
-font-family: "Space Text", sans-serif;
-
-padding: 0 8px;
-      }
+      align-items: center;
 
       & .btn {
         margin: 0;
       }
-      & .thisweek, & .upcoming-exhibition {
+      & .thisweek {
         background-color: rgba(0,0,0,.9);
         color: #fff;
         margin: 0;
@@ -710,6 +704,24 @@ padding: 0 8px;
       grid-area: desc;
       color: #fff;
 
+      @nest & .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @nest & p {
+          margin: 0;
+          @mixin upper;
+          font-size: calc(14px + .05vw);
+          &.presenter {
+
+          }
+          &.location span.space:first-child {
+            margin-right: 8px;
+          }
+        }
+
+      }
       & small {
         line-height: normal;
         display: block;
@@ -739,10 +751,12 @@ padding: 0 8px;
           color: #fff;
           font-size: calc(10px + .5vw);
           margin: 0;
+          line-height: 30px;
           @nest & .date {
             background: #fff;
             color: #000;
             padding: 2px 4px;
+            margin-right: 4px;
             /* font-family: 'Courier New', Courier, monospace; */
           }
         }
@@ -779,6 +793,10 @@ padding: 0 8px;
   }
 
   & .event {
+      /* transition: all .2s ease-in-out;
+      &:hover { transform: scale(1.05); } */
+
+
     & > * {
       text-shadow: 1px 1px #000;
     }
@@ -786,6 +804,9 @@ padding: 0 8px;
       background-color: #e83d37;
       border: none;
       color: #fff;
+    }
+    & .description {
+      display: none;
     }
     & .when {
       margin-bottom: 20px;
@@ -1182,6 +1203,29 @@ body#signage_fullscreen {
 }
 
 body#space-rentals {
+  @nest & h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: RGBA(255, 82, 91, 1.00);
+  }
+  @nest & .room {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    border-bottom: solid 2px #eee;
+    @nest & .description {
+      font-size: calc(24px + 0.05vw);
+    }
+  }
+  @nest & dt {
+    margin-right: 5px;
+  }
+  @nest & dl {
+    display: flex;
+  }
+  @nest & dd {
+    flex: 1 1 auto
+  }
   @nest & h3.spaces {
     @mixin galleries;
   }
@@ -1189,11 +1233,10 @@ body#space-rentals {
     @nest & h3 {
       @mixin galleries;
     }
-    @nest & td + td {
-      font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-      text-align: right;
-      color: #EB193D;
-    }
+  }
+  @nest & .rate {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+
   }
 }
 
@@ -1224,3 +1267,33 @@ body#_program {
 
   }
 }
+#press {
+
+  @nest & ul.media-coverage {
+    display: flex;
+    flex-wrap: wrap;
+
+    @nest & li {
+      border-bottom: solid 1px #eee;
+      padding: 20px 5px;
+      margin: 10px 0;
+      flex: 1 1 auto;
+      width: 33%;
+
+      @nest & p {
+        font-size: 20px;
+        margin: 0;
+      }
+      @nest & span.date {
+        background-color: rgba(0,0,0,.9);
+        color: #fff;
+        margin: 0;
+        @mixin upper;
+        font-weight: normal;
+        font-family: "Space Text", sans-serif;
+        padding: 0 3px;
+      }
+    }
+  }
+}
+
