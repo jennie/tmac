@@ -1,0 +1,59 @@
+<extends src="layout.html">
+
+  <block name='meta'>
+
+    <meta name='description' content="Media coverage of TMAC's 2015 lawsuit against the City of Toronto and Urbancorp over the Section 37 space at 36 Lisgar.">
+    <meta name='keywords' content='TMAC, toronto media arts, toronto media arts cluster, urbancorp bakruptcy, tmac lawsuit'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='google-site-verification' content='ArLdqonWlRvHkvmHpdwdW3nxGnct3sJE--rDYC-Y0Mo'>
+  </block>
+
+  <block name='content'>
+    <header style="background-image:url(/images/photos/parkdale-meeting.jpg); background-position: center top; height: 80vh">
+      <h1>Toronto Media Arts Centre</h1>
+    </header>
+
+    <main>
+      <section id="press">
+        <div class="container">
+          <h4>Media Coverage</h4>
+          <ul class="media-coverage">
+            <each loop="link in dato.press_link">
+              <li data-pubDate="{{ link.date }}">
+
+                <span class="date">{{ df(link.date, "UTC:mmm d, yyyy", true)}}</span>
+                <br>
+                <p class="title">
+                  <a href="{{ link.link }}">{{ link.title }}</a>
+                </p>
+                <if condition="{{ link.author }}">
+                  {{ link.author}}, {{ link.outlet }}
+                </if>
+                <else>
+                  {{ link.outlet }}
+                </else>
+                <br>
+
+                <if condition="{{ link.file }}">
+                  <span class="file">
+                    <i class="fas fa-fw fa-file"></i>
+                    <a href="//{{ dato._meta.imgixHost + link.file.path }}">Download/view {{ link.file.format }}</a>
+                  </span>
+                </if>
+
+              </li>
+            </each>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </block>
+
+  <block name="javascript">
+    <script src="js/main.js"></script>
+    <script src="/js/vendor/tinysort.js"></script>
+    <script>
+    tinysort(".media-coverage li",{data:"pubDate", order:"desc"});
+    </script>
+  </block>
+</extends>

@@ -1,0 +1,33 @@
+<extends src="layout.html">
+  <block name="content">
+    <header style="background-image:url(https://www.datocms-assets.com/5128/1533616878-damage-camp.jpg?&bm=normal&balph=20&auto=compress,format);">
+      <h1>Toronto Media Arts Centre</h1>
+    </header>
+
+    <section id="daily-events">
+      <div class="container">
+        <p style='text-align: center'>
+          <a href="/"> &larr; Back home</a>
+        </p>
+        <h4 class="divider">
+          Recent events
+        </h4>
+        <div class="event-grid past">
+          <each loop='event in dato.event'>
+            <if condition='event.past == true'>
+              <include src="includes/event-grid.html"></include>
+            </if>
+          </each>
+        </div>
+      </div>
+    </section>
+  </block>
+
+  <block name="javascript">
+    <script src="/js/vendor/tinysort.js"></script>
+    <script>
+    tinysort('.event',{data:'startdate', order:'desc'});
+    </script>
+  </block>
+</extends>
+
