@@ -22,10 +22,11 @@
           <!-- // if the event starts and ends on same day -->
           <if condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true">
             <p class="date">
-              <time itemprop="startDate" datetime='{{ df(event.startDateTime, "UTC:mmmm d", true)}}, {{ df(event.startDateTime, "UTC:h:MM tt", true)}}'>
+              <time itemprop="startDate" datetime='{{ df(event.startDateTime, "UTC", true)}}, {{ df(event.startDateTime, "UTC:h:MM tt", true)}}'>
                 {{ df(event.startDateTime, "UTC:mmmm d", true)}}
                 <!-- , {{ df(event.startDateTime, "UTC:h:MM tt", true)}} -->
               </time>
+              <time itemprop="endDate" datetime='{{ df(event.endDateTime, "UTC", true) }}'></time>
             </p>
           </if>
           <!-- // if the event spans multiple days, but starts and ends in same month,
@@ -56,7 +57,7 @@
         </div>
       </div>
       <div class="where" itemprop="location" itemscope itemtype="http://schema.org/Place">
-        <span itemprop="name">Toronto Media Arts Centre, {{event.location[0]}}</span><br>
+        <span itemprop="name">Toronto Media Arts Centre</span><br>
         <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <span itemprop="streetAddress">32 Lisgar Street</span><br>
           <span itemprop="addressLocality">Toronto</span><br>
