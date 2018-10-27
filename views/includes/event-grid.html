@@ -1,23 +1,26 @@
 <if condition="event">
-  <div class="event daily" style=' background-image: url(//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=60&blend={{ event.canceled == true ? "eeeeee" : "322D5A"}}&w=400&fit=clip&auto=compress,format); background-size: cover;' data-startDate="{{ Date.parse(event.startDateTime) }}" class='{{ event.canceled == true ? "canceled" : ""}}' itemscope itemtype="http://schema.org/Event" >
+  <div class="event daily" style='background-image: url("//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=60&blend={{ event.canceled == true ? "eeeeee" : "322D5A"}}&w=400&fit=clip&auto=compress,format"); background-size: cover;' data-startDate="{{ Date.parse(event.startDateTime) }}" class='{{ event.canceled == true ? "canceled" : ""}}' itemscope itemtype="http://schema.org/Event" >
     <a href="{{ event.registrationLink }}">
       <div class="desc">
         <if condition="event.canceled == true">
           <span class="canceled">Canceled</span>
         </if>
         <if condition="event.member[0] && event.presenter">
-          <small>{{ event.member[0].name }} + {{ event.presenter }}</small>
+          <small itemprop="organizer">{{ event.member[0].name }} + {{ event.presenter }}</small>
         </if>
         <elseif condition="event.member[0]">
-          <small>{{ event.member[0].name }}</small>
+          <small itemprop="organizer">{{ event.member[0].name }}</small>
         </elseif>
         <elseif condition="event.presenter">
-          <small>{{ event.presenter }}</small>
+          <small itemprop="organizer">{{ event.presenter }}</small>
         </elseif>
         <h3 itemprop="name">{{ event.title }}</h3>
-        <p itemprop="description" class="description">
-          {{ event.description }}
-        </p>
+
+        <span itemprop="description" class="description"></span>
+        <span itemprop="image" url="//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=60&blend=322D5A"></span>
+
+
+        <img itemprop="photo" src="../media/hotel_front.png" alt="Front view of the hotel" />
         <div class="when">
           <!-- // if the event starts and ends on same day -->
           <if condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true">
@@ -33,11 +36,11 @@
           // don"t show month name twice -->
           <elseif condition="dateFns.isSameMonth(event.startDateTime,event.endDateTime) == true">
             <p class="date">
-              <time itemprop="startDate" datetime='{{ df(event.startDateTime, "UTC:mmmm d", true)}}, {{ df(event.startDateTime, "UTC:h:MM tt", true)}}'>
+              <time itemprop="startDate" datetime='{{ df(event.startDateTime, "isoDateTime")}}'>
                 {{ df(event.startDateTime, "UTC:mmmm d", true)}}
               </time>
               –
-              <time itemprop="endDate" datetime='{{ df(event.endDateTime, "UTC:mmmm d", true)}}, {{ df(event.endDateTime, "UTC:h:MM tt", true)}}'>
+              <time itemprop="endDate" datetime='{{ df(event.endDateTime, "isoDateTime")}}'>
                 {{ df(event.endDateTime, "UTC:d", true)}}
               </time>
             </p>
