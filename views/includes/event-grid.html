@@ -22,11 +22,11 @@
           <!-- // if the event starts and ends on same day -->
           <if condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true">
             <p class="date">
-              <time itemprop="startDate" datetime='{{ df(event.startDateTime, "UTC", true)}}, {{ df(event.startDateTime, "UTC:h:MM tt", true)}}'>
+              <time itemprop="startDate" datetime='{{ df(event.startDateTime, "isoDateTime")}}'>
                 {{ df(event.startDateTime, "UTC:mmmm d", true)}}
                 <!-- , {{ df(event.startDateTime, "UTC:h:MM tt", true)}} -->
               </time>
-              <time itemprop="endDate" datetime='{{ df(event.endDateTime, "UTC", true) }}'></time>
+              <time itemprop="endDate" datetime='{{ df(event.endDateTime, "isoDateTime") }}'></time>
             </p>
           </if>
           <!-- // if the event spans multiple days, but starts and ends in same month,
