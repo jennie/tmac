@@ -8,7 +8,7 @@ const cssStandards            = require('spike-css-standards')
 const jsStandards             = require('spike-js-standards')
 const pageId                  = require('spike-page-id')
 const df                      = require('dateformat')
-const nf                      = require('number-formatter')
+const numeral                 = require('numeral');
 const dateFns                 = require('date-fns')
 
 const SpikeDatoCMS            = require('spike-datocms')
@@ -31,6 +31,7 @@ const DefinePlugin = require('webpack').DefinePlugin
 
 var offset = -4;
 var npRate = .35
+var serviceNpRate = .75
 var staffRate = 30
 const Dato = new SpikeDatoCMS({
   // drafts: true,
@@ -39,6 +40,19 @@ const Dato = new SpikeDatoCMS({
   models: [
     {
       name: 'press_link'
+    },
+    {
+      name: 'service',
+      transform: (data) => {
+        if (data.options) {
+          const options = data.options
+          options.forEach(function (option, index) {
+            option.npRate = numeral(Math.round(option.rate * serviceNpRate)).format('$ 0,0[.]00')
+            option.rate = numeral(Math.round(option.rate)).format('$ 0,0[.]00')
+          })
+        }
+        return data
+      }
     },
     {
       name: 'rental_period'
@@ -51,13 +65,12 @@ const Dato = new SpikeDatoCMS({
           rates.forEach(function (rate, index) {
             if (rate.period.extraHours) {
               staffingCost = rate.period.extraHours * staffRate
-              rate.npRate = nf("$#,###.##", Math.round((rate.rate * npRate) + staffingCost))
-              rate.rate = nf("$#,###.##", Math.round(rate.rate + staffingCost))
-              console.log(staffingCost)
+              rate.npRate = numeral(Math.round((rate.rate * npRate) + staffingCost)).format('$ 0,0[.]00')
+              rate.rate = numeral(Math.round(rate.rate + staffingCost)).format('$ 0,0[.]00')
             }
             else {
-              rate.npRate = nf("$#,###.##", Math.round(rate.rate * npRate))
-              rate.rate = nf("$#,###.##", Math.round(rate.rate))
+              rate.npRate = numeral(Math.round(rate.rate * npRate)).format('$ 0,0[.]00')
+              rate.rate = numeral(Math.round(rate.rate)).format('$ 0,0[.]00')
             }
           })
         }
@@ -121,6 +134,7 @@ module.exports = {
     locals: (ctx) => { return Object.assign(locals
       , { pageId: pageId(ctx) }
       , { df: df.bind(df) }
+      , { numeral: numeral.bind(numeral) }
       , { dateFns: dateFns }
       , { md: md.render.bind(md) }
     )},

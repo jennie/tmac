@@ -1,24 +1,18 @@
 <extends src="layout.html">
-
   <block name='meta'>
-
     <meta name='description' content="Rent space at Toronto Media Arts Centre">
     <meta name='keywords' content='TMAC, toronto media arts, toronto media arts cluster, urbancorp bakruptcy, tmac lawsuit'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta name='google-site-verification' content='ArLdqonWlRvHkvmHpdwdW3nxGnct3sJE--rDYC-Y0Mo'>
   </block>
-
   <block name="content">
     <header style="background-image:url(/images/photos/TMAC-gallery.jpg); background-position: center top; height: 35vh">
       <h1> Toronto Media Arts Centre Space Rentals </h1>
     </header>
-
     <main>
       <section>
         <div class="container">
-          <p style='text-align: center'>
-            <a href="/">⬅ Back home</a>
-          </p>
+          <h2>Space Rentals</h2>
           <div class="intro">
             <h3> Host your event at TMAC! </h3>
             <p>
@@ -26,52 +20,109 @@
             </p>
             <p>Located in the heart of the Queen West Triangle – a vibrant, arts-friendly neighbourhood close to downtown Toronto – TMAC offers event, meeting and exhibition spaces in a beautiful purpose-built media arts facility overlooking Lisgar Park.
             </p>
-
             <p>
               <b class="highlight">We offer nonprofit/educational discounts and welcome co-production and co-presentation inquiries!</b>
             </p>
-
             <a href="/booking-request" class="btn btn-primary">Submit a booking request</a>
             <a href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false">Schedule a tour</a>
             <!-- <img src="/images/event-layout.jpg" class="responsive" /> -->
-
-
           </div>
-
           <each loop="space in dato.room">
             <if condition="space.rentable == true">
-
-              <h3>{{ space.name }}</h3>
-              <h4>{{ space.category }}</h4>
-              <p>{{ space.rentalDescription }}</p>
-              <if condition="space.photo">
-                <img src="//{{ dato._meta.imgixHost + space.photo.path }}?w=400&fit=clip&auto=compress,format" />
-              </if>
-              <table class="table">
-                <th>
-                  <tr>
-
-                    <td>Period</td>
-                    <td>Rate</td>
-                    <td>Nonprofit Rate</td>
-                  </tr>
-                </th>
-                <each loop="rate in space.rates">
-                  <tr>
-                    <td>{{ rate.period.name }}</td>
-                    <td>{{ rate.rate }}</td>
-                    <td>{{ rate.npRate }}</td>
-                  </tr>
-                </each>
-              </table>
+              <div class="room">
+                <h3>{{ space.name }}</h3>
+                <div class="description" md>{{ space.rentalDescription }}</div>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <h4>Capacity</h4>
+                    <dl>
+                      <each loop="config in space.capacities">
+                        <dt>{{ config.configurationName }}</dt>
+                        <dd>{{ config.capacity}}</dd>
+                      </each>
+                      <if condition="{{ space.size }}">
+                        <dt>Size</dt>
+                        <dd>{{ numeral(space.size).format('0,0') }} sq. ft.</dd>
+                      </if>
+                    </dl>
+                    <h4 class="rates">Rates</h4>
+                    <table class="table">
+                      <tr>
+                        <th>For</th>
+                        <th>Period</th>
+                        <th>Rate</th>
+                        <th>Nonprofit Rate</th>
+                      </tr>
+                      <each loop="rate in space.rates">
+                        <tr>
+                          <td>{{ rate.usageCategory }}</td>
+                          <td>{{ rate.period.name }}</td>
+                          <td class="rate">{{ rate.rate }}</td>
+                          <td class="rate">
+                            <if condition="{{ rate.nonprofitRateAllowed }}">
+                              {{ rate.npRate }}
+                            </if>
+                            <else>
+                              –
+                            </else>
+                          </td>
+                        </tr>
+                      </each>
+                    </table>
+                    <if condition="{{ space.availabilityCalendar }}">
+                      <p><a href="{{ space.availabilityCalendar }}">View availability</a></p>
+                    </if>
+                  </div>
+                  <div class="col-lg-4">
+                    <if condition="space.photo">
+                      <img src="//{{ dato._meta.imgixHost + space.photo.path }}?auto=compress,format" class="responsive" />
+                    </if>
+                  </div>
+                </div>
+              </div>
             </if>
           </each>
-          <pre>
-            {{ JSON.stringify( dato.room, null, 2  ) }}
+          <div id="services">
+            <h2>Services</h2>
+            <each loop="service in dato.service">
+              <div class="service">
+                <h3>{{ service.title }}</h3>
+                <div class="description" md>{{ service.description }}</div>
+                <if condition="service.options[0]">
+                  <h4 class="rates">Rates</h4>
+                  <table class="table">
+                    <tr>
+                      <th width="65%"></th>
+                      <th>Rate</th>
+                      <th>Nonprofit Rate</th>
+                    </tr>
+                    <each loop="option in service.options">
+                      <tr>
+                        <td>
+                          <b>{{ option.title }}</b><br>
+                          {{ option.description }}</td>
+                          <td class="rate">{{ option.rate }}</td>
+                          <td class="rate">
+                            <if condition="{{ option.nonprofitRateAllowed }}">
+                              {{ option.npRate }}
+                            </if>
+                            <else>
+                              –
+                            </else>
+                          </td>
+                        </tr>
+                      </each>
+                    </table>
+                  </if>
+                </div>
+              </each>
+            </div>
+          </div>
+        </section>
+      </main>
+    </block>
+    <block name="javascript">
+      <script src="https://calendly.com/assets/external/widget.js"></script>
+    </block>
 
-          </pre>
-        </div>
-      </section>
-    </main>
-  </block>
-</extends>
+  </extends>

@@ -57,7 +57,7 @@ a {
     color: color(var(--color-blue) tint(10%));
   }
 }
-p, li {
+p, li, td, th {
   font-family: 'Source Sans Pro', sans-serif;
   & b {
     font-weight: 700;
@@ -1203,6 +1203,29 @@ body#signage_fullscreen {
 }
 
 body#space-rentals {
+  @nest & h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: RGBA(255, 82, 91, 1.00);
+  }
+  @nest & .room {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    border-bottom: solid 2px #eee;
+    @nest & .description {
+      font-size: calc(24px + 0.05vw);
+    }
+  }
+  @nest & dt {
+    margin-right: 5px;
+  }
+  @nest & dl {
+    display: flex;
+  }
+  @nest & dd {
+    flex: 1 1 auto
+  }
   @nest & h3.spaces {
     @mixin galleries;
   }
@@ -1210,11 +1233,10 @@ body#space-rentals {
     @nest & h3 {
       @mixin galleries;
     }
-    @nest & td + td {
-      font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-      text-align: right;
-      color: #EB193D;
-    }
+  }
+  @nest & .rate {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+
   }
 }
 
@@ -1274,3 +1296,4 @@ body#_program {
     }
   }
 }
+
