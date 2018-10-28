@@ -18,43 +18,47 @@
 </head>
 <body role="document" id="{{ pageId }}">
 
-  <div class="box header">
-    <span itemscope itemtype="http://schema.org/Place">
+  
+  <div class="container">
+    <div class="box header">
       <div class="logo">
-        <a href="/">
-          <img src="/images/tmac_logo_alt.png" alt="Toronto Media Arts Centre" itemprop="logo" />
-        </a>
-      </div>
-    </span>
-    <block name="nav">
-      <div class="nav">
-        <div class="nav-desktop">
-          <ul>
-            <include src="includes/nav-items.html"></include>
-          </ul>
-        </div>
-        <div class="nav-mobile">
-          <div class="nav-toggle">
-            <span class="burg" onclick="toggleNav()">
-              <svg height="32px" id="burg" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z">
-                </path>
-              </svg>
-            </span>
-          </div>
-          <div class="nav-toggle">
-            <span class="x" onclick="toggleNav()">
-              <svg id="x" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="-4 -4 32 32">
-                <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z">
-                </path>
-              </svg>
-            </span>
-          </div>
+        <span itemscope itemtype="http://schema.org/Place">
+          <a href="/">
+            <img src="/images/tmac_logo_alt.png" alt="Toronto Media Arts Centre" itemprop="logo" />
+          </a>
+        </span>
 
-          <div class="nav-menu">
+      </div>
+      <block name="nav">
+        <div class="nav">
+          <div class="nav-desktop">
             <ul>
               <include src="includes/nav-items.html"></include>
             </ul>
+          </div>
+          <div class="nav-mobile">
+            <div class="nav-toggle">
+              <span class="burg" onclick="toggleNav()">
+                <svg height="32px" id="burg" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+            <div class="nav-toggle">
+              <span class="x" onclick="toggleNav()">
+                <svg id="x" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="-4 -4 32 32">
+                  <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+
+            <div class="nav-menu">
+              <ul>
+                <include src="includes/nav-items.html"></include>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
