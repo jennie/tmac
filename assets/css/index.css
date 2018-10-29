@@ -1254,7 +1254,11 @@ body#space-rentals {
     margin-right: 5px;
   }
   @nest & dl {
-    display: flex;
+    @media (--tablet), (--desktop) {
+      display: flex;
+    }
+
+
   }
   @nest & dd {
     flex: 1 1 auto
