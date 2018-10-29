@@ -704,6 +704,7 @@ p > b.highlight {
       grid-area: desc;
       color: #fff;
 
+
       @nest & .title {
         display: flex;
         justify-content: space-between;
@@ -945,6 +946,7 @@ p > b.highlight {
   padding: 10px;
   @media (--desktop) {
     flex-wrap: nowrap;
+    max-width: 1200px;
   };
   grid-area: header;
   display: flex;
@@ -1147,6 +1149,7 @@ body#signage_fullscreen {
       }
     }
     @nest & .event {
+      height: 100vh;
       @nest & p.thisweek {
         font-size: 56px;
       }
@@ -1155,21 +1158,47 @@ body#signage_fullscreen {
         display: flex;
         justify-content: space-between;
         @nest & p {
-          @mixin upper
+          @mixin upper;
+          &.presenter {
+            font-size: 32px;
+          }
+        }
+        @nest & .spaces {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        @nest & .space {
+          background-color: #fff;
+          color: #000;
+          padding: 2px 8px;
+          margin-right: 10px;
+          &:last-child {
+            margin: 0;
+          }
+
         }
       }
 
 
       @nest & h3 {
-        font-size: 140px;
+        font-size: 100px;
       }
       @nest & .desc small {
         font-size: 32px;
         text-transform: uppercase;
       }
-      @nest & a .desc .when p {
-        font-size: 56px;
-        font-weight: 900;
+      @nest & a .desc {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 100%;
+        @nest & .register {
+          /* align-self: flex-end; */
+        }
+        @nest & .when p {
+          font-size: 56px;
+          font-weight: 900;
+        }
       }
     }
     @nest &.exhibitions {

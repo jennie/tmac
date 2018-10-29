@@ -45,8 +45,8 @@ const Dato = new SpikeDatoCMS({
         if (data.options) {
           const options = data.options
           options.forEach(function (option, index) {
-            option.npRate = numeral(Math.round(option.rate * serviceNpRate)).format('$ 0,0[.]00')
-            option.rate = numeral(Math.round(option.rate)).format('$ 0,0[.]00')
+            option.npRate = numeral(Math.round(option.rate * serviceNpRate)).format('$0,0[.]00')
+            option.rate = numeral(Math.round(option.rate)).format('$0,0[.]00')
           })
         }
         return data
@@ -63,12 +63,12 @@ const Dato = new SpikeDatoCMS({
           rates.forEach(function (rate, index) {
             if (rate.period.extraHours) {
               staffingCost = rate.period.extraHours * staffRate
-              rate.npRate = numeral(Math.round((rate.rate * npRate) + staffingCost)).format('$ 0,0[.]00')
-              rate.rate = numeral(Math.round(rate.rate + staffingCost)).format('$ 0,0[.]00')
+              rate.npRate = numeral(Math.round((rate.rate * npRate) + staffingCost)).format('$0,0[.]00')
+              rate.rate = numeral(Math.round(rate.rate + staffingCost)).format('$0,0[.]00')
             }
             else {
-              rate.npRate = numeral(Math.round(rate.rate * npRate)).format('$ 0,0[.]00')
-              rate.rate = numeral(Math.round(rate.rate)).format('$ 0,0[.]00')
+              rate.npRate = numeral(Math.round(rate.rate * npRate)).format('$0,0[.]00')
+              rate.rate = numeral(Math.round(rate.rate)).format('$0,0[.]00')
             }
           })
         }

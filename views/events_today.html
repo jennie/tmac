@@ -13,21 +13,22 @@
               <div class="desc">
                 <div class="title">
                   <if condition="exhibition.member[0] && exhibition.presenter">
-                    <p> {{ exhibition.member[0].name }} & {{ exhibition.presenter }} </p>
+                    <p class="presenter"> {{ exhibition.member[0].name }} & {{ exhibition.presenter }} </p>
                   </if>
                   <elseif condition="exhibition.member[0]">
-                    <p>{{ exhibition.member[0].name }}</p>
+                    <p class="presenter">{{ exhibition.member[0].name }}</p>
                   </elseif>
                   <elseif condition="exhibition.presenter">
-                    <p>{{ exhibition.presenter }}</p>
+                    <p class="presenter">{{ exhibition.presenter }}</p>
                   </elseif>
                   <if condition="exhibition.location[0]">
-                    <each loop='space in exhibition.location'>
-                      <span class="space" style="background-color: #fff; color: #000; padding: 2px 4px;">
-                        {{ space.name }}
-                      </span>
-                    </each>
-
+                    <div class="spaces">
+                      <each loop='space in exhibition.location'>
+                        <p class="space">
+                          {{ space.name }}
+                        </p>
+                      </each>
+                    </div>
                   </if>
                 </div>
                 <h3>{{ exhibition.title }}</h3>
@@ -37,7 +38,7 @@
                     <!-- if the program starts and ends on same day -->
                     <if condition="dateFns.isSameDay(exhibition.startDate,exhibition.endDate) == true">
                       <span class="date">
-                        {{ df(exhibition.startDate, "UTC:mmmm d", true)}} • {{ df(exhibition.startDate, "UTC:h:MM tt", true)}}
+                        {{ df(exhibition.startDate, "UTC:mmmm d", true)}}
                       </span>
                     </if>
                     <!-- if the program starts and ends in same month, don't show month name twice -->
@@ -74,7 +75,8 @@
                   </if>
                   <elseif condition="dateFns.isFuture(exhibition.startDate) == true">
                     <p class="thisweek">
-                      Upcoming
+                      {{ dateFns.format(exhibition.startDate, 'dddd') }}
+
                     </p>
                   </elseif>
                 </div>
@@ -95,20 +97,22 @@
                     <span class="canceled">Canceled</span>
                   </if>
                   <if condition="event.member[0] && event.presenter">
-                    <small>{{ event.member[0].name }} & {{ event.presenter }}</small>
+                    <p class="presenter">{{ event.member[0].name }} & {{ event.presenter }}</p>
                   </if>
                   <elseif condition="event.member[0]">
-                    <small>{{ event.member[0].name }}</small>
+                    <p class="presenter">{{ event.member[0].name }}</p>
                   </elseif>
                   <elseif condition="event.presenter">
-                    <small>{{ event.presenter }}</small>
+                    <p class="presenter">{{ event.presenter }}</p>
                   </elseif>
                   <if condition="event.location[0]">
-                    <each loop='space in event.location'>
-                      <span class="space" style="background-color: #fff; color: #000; padding: 2px 4px;">
-                        {{ space.name }}
-                      </span>
-                    </each>
+                    <div class="spaces">
+                      <each loop='space in event.location'>
+                        <p class="space">
+                          {{ space.name }}
+                        </p>
+                      </each>
+                    </div>
                   </if>
                 </div>
                 <h3>{{ event.title }}</h3>
@@ -116,7 +120,7 @@
                   <!-- // if the event starts and ends on same day -->
                   <if condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true">
                     <p class="date">
-                      {{ df(event.startDateTime, "UTC:mmmm d", true)}} • {{ df(event.startDateTime, "UTC:h:MM tt", true)}}
+                      {{ df(event.startDateTime, "UTC:mmmm d", true)}}
                     </p>
                   </if>
 
