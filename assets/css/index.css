@@ -247,7 +247,6 @@ ul.media-coverage {
 
 .cta {
   text-align: center;
-  margin: 3rem auto;
 }
 
 h4.divider {
@@ -1300,6 +1299,11 @@ body#_program {
     @nest & > span {
       font-size: 12px;
       display: flex;
+    }
+
+    @nest & span.tel {
+      display: block;
+      text-align: center;
     }
 
   }
