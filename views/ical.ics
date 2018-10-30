@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+CALSCALE:GREGORIAN
+PRODID:-//TMAC//Events//EN
+X-WR-CALNAME:DMG Events
+X-WR-TIMEZONE:America/New_York
+VERSION:2.0
+<each loop="event in dato.event">BEGIN:VEVENT
+TZID:America/New_York
+UID:tmac_event_{{event.id}}
+DTSTART:{{ event.startDateTime }}
+DTEND:{{ event.endDateTime }}
+SUMMARY:{{event.title}}
+URL;VALUE=URI:{{ event.registrationLink }}
+END:VEVENT</each>
+END:VCALENDAR
