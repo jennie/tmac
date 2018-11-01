@@ -43,10 +43,10 @@
 
                   <!-- // if the event spans multiple days, but starts and ends in same month, -->
                   <!-- // don't show month name twice -->
-      
+
                   <else>
                     <p class="date">
-                      {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
+                      {{ df(event.startDateTime, "UTC:mmmm d", true)}}
                     </p>
                   </else>
                 </div>
