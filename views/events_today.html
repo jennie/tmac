@@ -43,11 +43,7 @@
 
                   <!-- // if the event spans multiple days, but starts and ends in same month, -->
                   <!-- // don't show month name twice -->
-                  <elseif condition="dateFns.isSameMonth(event.startDateTime,event.endDateTime) == true">
-                    <p class="date">
-                      {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:d", true)}}
-                    </p>
-                  </elseif>
+      
                   <else>
                     <p class="date">
                       {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:mmmm d", true)}}
