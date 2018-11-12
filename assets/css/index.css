@@ -2,7 +2,7 @@
 
 
 :root {
-  --color-blue: #130CB7;
+  --color-blue: #0B0BEC;
   --color-primary-alt: #FF001A;
 
   /* max-widths for containers */
@@ -45,7 +45,20 @@
   cursor: pointer;
   border: none;
 }
+@define-mixin btn-inverse {
+  color: var(--color-blue);
+  background-color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
 
+@define-mixin btn {
+  padding: 0.25rem 1.4rem;
+  border-radius: 3rem;
+  font-size: calc(20px + .02vw);
+  line-height: 34px;
+}
 @define-mixin btn-outline {
   border: solid 1px var(--color-blue);
   padding: 0.25rem 1.4rem;
@@ -584,6 +597,19 @@ footer {
     }
   }
 }
+.btn-inverse {
+  @mixin btn;
+  @mixin btn-inverse;
+  &:hover {
+    background-color: color(var(--color-blue) tint(10%));
+    color: #fff;
+  }
+  @media screen and (min-width: 525px) {
+    & + .btn-primary {
+      margin-left: 2rem;
+    }
+  }
+}
 
 .row.space, .row.intro, .row.add-ons {
   margin: 5rem 0;
@@ -1112,7 +1138,7 @@ body#signage_fullscreen {
     display:none;
   }
 }
-#events_today {
+#events_today, #myseum {
   background: #000;
   @media (--desktop) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1337,4 +1363,31 @@ body#_program {
     }
   }
 }
+.event-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'image info'
+    'details details';
+  @media (max-width: 700px) {
+    grid-template-areas:
+    'image image'
+    'info info';
+  }
+  @nest & header {
+      grid-area: image;
+  }
+  @nest & main {
+      grid-area: info;
+      background-color: #2500FF;
+      padding: 20px;
+      color: #fff;
+      @nest & section {
+        background: transparent;
+        margin: 0;
+        padding: 0;
+      }
+  }
+}
+
 

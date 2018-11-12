@@ -1,0 +1,116 @@
+<extends src="layout.html">
+  <title>
+    {{ item.title }} - TMAC
+  </title>
+  <block name="content">
+    <div class="event-detail-grid">
+
+
+      <header style="background-image:url('//{{ dato._meta.imgixHost + item.featureImage.path }}?bm=normal&balph=60&blend=322D5A&auto=compress'); background-size: cover;">
+        <h1> Toronto Media Arts Centre </h1>
+      </header>
+      <main>
+
+        <h1>
+          {{ item.title }}
+        </h1>
+        <if condition="item.presenter">
+          <h3>
+            {{ item.presenter }}
+          </h3>
+        </if>
+        <elseif condition="item.member[0]">
+          <h3>
+            {{ item.member[0].name }}
+          </h3>
+        </elseif>
+        <if condition="item.location[0]">
+          <h4>
+            In
+            <each loop='space in item.location'>
+              <if condition="space.name">
+                <span class="space" style="background-color: #fff; color: #000; padding: 2px 4px; margin: 0 5px;">
+                  {{ space.name }}
+                </span>
+              </if>
+            </each>
+          </h4>
+        </if>
+
+
+
+        <section>
+          <div md>
+            {{ item.description }}
+          </div>
+
+
+          <div class="desc">
+            <if condition="item.member[0] && item.presenter">
+              <p>
+                <b>Presented by {{ item.member[0].name }}</b>
+              </p>
+            </if>
+          </div>
+          <div class="when">
+
+
+            <if condition="{{ item.startDateTime }}">
+              <p class="date">
+                <span class="fas fa-fw fa-calendar-alt"></span>
+                <if condition="dateFns.isSameDay(item.startDateTime,item.endDateTime) == true">
+                  <span class="date">
+                    {{ df(item.startDateTime, "UTC:mmmm d", true)}}, {{ df(item.startDateTime, "UTC:h:MM tt", true)}}–{{ df(item.endDateTime, "UTC:h:MM tt", true)}}
+                  </span>
+                </if>
+                <elseif condition="dateFns.isSameMonth(item.startDateTime,item.endDateTime) == true">
+                  <span class="date">
+                    {{ df(item.startDateTime, "UTC:mmmm d", true)}}–{{ df(item.endDateTime, "UTC:d", true)}}
+                  </span>
+                </elseif>
+                <else>
+                  <span class="date">
+                    {{ df(item.startDateTime, "UTC:mmmm d", true)}}–{{ df(item.endDateTime, "UTC:mmmm d", true)}}
+                  </span>
+                </else>
+              </p>
+            </if>
+            <if condition="{{ item.hours }}">
+              <p class="hours">
+                <span class="fas fa-fw fa-clock"></span>
+                <span>{{ item.hours }}</span>
+              </p>
+            </if>
+            <if condition="{{ item.ticketPrice }}">
+              <p class="tickets">
+                <span class="fas fa-fw fa-ticket-alt"></span>
+                <span>{{ item.ticketPrice }}</span>
+              </p>
+            </if>
+          </div>
+          <p>
+            <a href="{{ item.registrationLink }}" class="btn btn-inverse">
+              <if condition="item.past == true">
+                Info
+              </if>
+              <else>
+                Register
+              </else>
+            </a>
+          </p>
+
+        </section>
+      </main>
+    </div>
+  </block>
+  <block name="footer"></block>
+
+  <block name="javascript">
+    <script src="/js/vendor/tinysort.js"></script>
+
+    <script>
+      tinysort('.session',{data:'startdate', order:'asc'});
+    </script>
+  </block>
+
+</extends>
