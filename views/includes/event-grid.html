@@ -16,7 +16,8 @@
         </elseif>
         <h3 itemprop="name">{{ event.title }}</h3>
 
-        <span itemprop="description" class="description" style="display:none;">{{ event.description }}</span>
+        <span itemprop="description" style="display:none;">{{ event.description }}</span>
+        <span itemprop="photo" style="display:none;">{{ dato._meta.imgixHost + event.featureImage.path }}</span>
         <span itemprop="url" class="url" style="display:none;">https://www.tomediaarts.org/event/{{event.slug}}</span>
 
 
