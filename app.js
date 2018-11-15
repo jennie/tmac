@@ -8,10 +8,11 @@ const pageId                  = require('spike-page-id')
 const df                      = require('dateformat')
 const numeral                 = require('numeral');
 const dateFns                 = require('date-fns')
+const slugify                 = require('slugify')
 
 const SpikeDatoCMS            = require('spike-datocms')
 const postcssMixins           = require('postcss-mixins')
-
+const CopyWebpackPlugin       = require('copy-webpack-plugin')
 const MarkdownIt              = require('markdown-it')
 const markdownItTocAndAnchor  = require('markdown-it-toc-and-anchor').default
 const markdownItAttrs         = require('markdown-it-attrs')
@@ -25,12 +26,12 @@ const md = new MarkdownIt()
 .use(markdownItContainer)
 
 const locals           = { }
-const DefinePlugin = require('webpack').DefinePlugin
 
-var offset = -4;
+var offset = -5;
 var npRate = .35
 var serviceNpRate = .75
 var staffRate = 30
+
 const Dato = new SpikeDatoCMS({
   // drafts: true,
   addDataTo: locals,
@@ -77,7 +78,29 @@ const Dato = new SpikeDatoCMS({
     },
     {
       name: 'event',
+      template: {
+        path: 'views/_event.html',
+        output: (event) => {
+          if (event.slug) {
+            return `event/${event.slug}.html`
+          }
+          else {
+            return `event/${slugify(event.title, {
+              replacement: '-',
+              remove: /[*+~.()#'"!:@]/g,
+              lower: true })
+            }.html`
+          }
+        }
+      },
       transform: (data) => {
+        if (!data.slug) {
+          data.slug = slugify(data.title, {
+            replacement: '-',
+            remove: /[*+~.()#'"!:@]/g,
+            lower: true
+          })
+        }
         if (dateFns.isPast(data.endDateTime)) {
           data.past = true
         }
@@ -128,6 +151,9 @@ const Dato = new SpikeDatoCMS({
   ]
 })
 
+
+
+
 module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.html', css: '*(**/)*.css', js: '*(**/)*.js' },
@@ -149,8 +175,13 @@ module.exports = {
     appendPlugins: postcssMixins()
   }),
   babel: jsStandards(),
-  plugins: [ Dato, new DefinePlugin({
-    locals
-  })
-]
+  plugins: [
+    Dato
+  ]
+  // ,
+  // afterSpikePlugins: [
+  //   new CopyWebpackPlugin([
+  //     { from: 'public/ical.html', to: 'public/feeds/ical.ics' }
+  //   ] , { debug: 'debug' }
+  // )]
 }

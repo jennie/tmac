@@ -1,6 +1,6 @@
 <if condition="event">
   <div class="event daily" style='background-image: url(//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=60&blend={{ event.canceled == true ? "eeeeee" : "322D5A"}}&w=400&fit=clip&auto=compress,format); background-size: cover;' data-startDate="{{ Date.parse(event.startDateTime) }}" class='{{ event.canceled == true ? "canceled" : ""}}' itemscope itemtype="http://schema.org/Event" >
-    <a href="{{ event.registrationLink }}">
+    <a href="/event/{{event.slug}}">
       <div class="desc">
         <if condition="event.canceled == true">
           <span class="canceled">Canceled</span>
@@ -15,7 +15,12 @@
           <small>{{ event.presenter }}</small>
         </elseif>
         <h3 itemprop="name">{{ event.title }}</h3>
-        <span itemprop="description" class="description"></span>
+
+        <span itemprop="description" style="display:none;">{{ event.description }}</span>
+        <span itemprop="photo" style="display:none;">{{ dato._meta.imgixHost + event.featureImage.path }}</span>
+        <span itemprop="url" class="url" style="display:none;">https://www.tomediaarts.org/event/{{event.slug}}</span>
+
+
         <span itemprop="image" url="//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=60&blend=322D5A"></span>
 
 

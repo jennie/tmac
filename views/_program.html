@@ -34,11 +34,12 @@
               <h3>Related Programs</h3>
               <if condition="{{item.highlights[0]}}">
                 <each loop="highlight in item.highlights">
-                  <p class="highlight">
+                  <p class="highlight" data-startDate='{{ Date.parse(highlight.startDateTime) }}'>
+
                     <span class="date">
-                      {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:ddd, mmm d", true)}}
-                      <!-- {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:dddd, mmmm d, h:MM tt", true)}} -->
-                    </span> – 
+                      {{df(dateFns.subHours(highlight.startDateTime, 5), "UTC:ddd, mmm d, h:MM tt", true)}}
+                      <!-- {{df(dateFns.subHours(highlight.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}} -->
+                    </span><br>
                     <b>{{ highlight.title }}</b></p>
 
                 </each>
@@ -103,7 +104,7 @@
                 <each loop="session in item.sessions">
                   <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
                     <h4>{{session.work.title}}</h4>
-                    <p>{{df(dateFns.subHours(session.startDateTime, 4), "UTC:dddd, mmmm d, h:MM tt", true)}}
+                    <p>{{df(dateFns.subHours(session.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}}
                       <if condition="{{ session.location[0] }}">
                         ({{session.location[0].name}})
                       </if>
@@ -124,6 +125,7 @@
 
     <script>
     tinysort('.session',{data:'startdate', order:'asc'});
+    tinysort('.highlight',{data:'startdate', order:'asc'});
     </script>
   </block>
 
