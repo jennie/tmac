@@ -77,7 +77,8 @@
         <elseif condition="dateFns.isTomorrow(event.startDateTime) == true">
           <p class="thisweek">Tomorrow</p>
         </elseif>
-        <elseif condition="dateFns.isThisWeek(event.startDateTime) == true">
+        
+        <elseif condition="dateFns.isThisWeek(event.startDateTime) == true && dateFns.isFuture(event.startDateTime)">
           <p class="thisweek">
             {{ dateFns.format(event.startDateTime, 'dddd') }}
           </p>

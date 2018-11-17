@@ -141,14 +141,18 @@
 
                           <h4>Related Programs</h4>
                           <each loop='highlight, i of exhibition.highlights'>
-                            <p class="highlight {{ i < 3 ? 'show' : 'hide' }}" data-date="{{ highlight.startDateTime }}">
-                              <span class="date">
-                                {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:mmm d", true)}}
-                              </span>
-                              <span>
-                                {{ highlight.title }}
-                              </span>
-                            </p>
+                            <if condition="{{ dateFns.isPast(highlight.endDateTime) !== true}}">
+
+                              <p class="highlight" data-date="{{ highlight.startDateTime }}">
+                                <!-- <p class="highlight {{ i < 3 ? 'show' : 'hide' }}" data-date="{{ highlight.startDateTime }}"> -->
+                                <span class="date">
+                                  {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:mmm d", true)}}
+                                </span>
+                                <span>
+                                  {{ highlight.title }}
+                                </span>
+                              </p>
+                            </if>
                           </each>
 
                         </div>
@@ -301,9 +305,9 @@
     <script src="/js/vendor/tinysort.js"></script>
     <script src="https://calendly.com/assets/external/widget.js"></script>
     <script>
-    tinysort(".event-grid .exhibition",{data:"startdate", order:"asc"});
-    tinysort(".event-grid .daily",{data:"startdate", order:"asc"});
-    tinysort(".related .highlight",{data:"date", order:"asc"});
+      tinysort(".event-grid .exhibition",{data:"startdate", order:"asc"});
+      tinysort(".event-grid .daily",{data:"startdate", order:"asc"});
+      tinysort(".related .highlight",{data:"date", order:"asc"});
     </script>
   </block>
 </extends>
