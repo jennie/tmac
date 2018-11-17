@@ -178,10 +178,13 @@ module.exports = {
   plugins: [
     Dato
   ]
-  // ,
-  // afterSpikePlugins: [
-  //   new CopyWebpackPlugin([
-  //     { from: 'public/ical.html', to: 'public/feeds/ical.ics' }
-  //   ] , { debug: 'debug' }
-  // )]
+  ,
+  afterSpikePlugins: [
+    new CopyWebpackPlugin([
+      { from: 'public/ical.html', to: 'public/ical.ics' }
+    ] , { debug: 'debug' }
+
+  )
+]
+
 }
