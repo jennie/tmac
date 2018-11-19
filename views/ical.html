@@ -5,10 +5,9 @@ X-WR-CALNAME:TMAC Events
 X-WR-TIMEZONE:America/New_York
 VERSION:2.0<each loop="event in dato.event">
 BEGIN:VEVENT
-TZID:America/New_York
 UID:tmac_event_{{event.id}}
-DTSTART:{{ df(event.startDateTime, "isoDateTime")}}
-DTEND:{{ df(event.endDateTime, "isoDateTime")}}
+DTSTART;TZID=America/New_York:{{ df(event.startDateTime, "yyyymmdd'T'HH:MM")}}
+DTEND;TZID=America/New_York:{{ df(event.endDateTime, "yyyymmdd'T'HH:MM")}}
 SUMMARY:{{event.title}}
 URL:{{ event.registrationLink }}
 END:VEVENT</each>
