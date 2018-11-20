@@ -94,6 +94,15 @@ const Dato = new SpikeDatoCMS({
         }
       },
       transform: (data) => {
+        if(data.member[0] && data.presenter)  {
+          data.organizer = `${data.member[0].name} + ${data.presenter}`
+        }
+        else if(data.member[0]) {
+          data.organizer = `${data.member[0].name}`
+        }
+        else if(data.presenter) {
+          data.organizer = `${data.presenter}`
+        }
         if (!data.slug) {
           data.slug = slugify(data.title, {
             replacement: '-',
@@ -155,6 +164,7 @@ const Dato = new SpikeDatoCMS({
 
 
 module.exports = {
+
   devtool: 'source-map',
   matchers: { html: '*(**/)*.html', css: '*(**/)*.css', js: '*(**/)*.js' },
   vendor: 'assets/js/vendor/**',
@@ -177,14 +187,4 @@ module.exports = {
   babel: jsStandards(),
   plugins: [
     Dato
-  ]
-  ,
-  afterSpikePlugins: [
-    new CopyWebpackPlugin([
-      { from: 'public/ical.html', to: 'public/ical.ics' }
-    ] , { debug: 'debug' }
-
-  )
-]
-
-}
+  ]}
