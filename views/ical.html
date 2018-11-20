@@ -2,13 +2,13 @@ BEGIN:VCALENDAR
 CALSCALE:GREGORIAN
 PRODID:-//TMAC//Events//EN
 X-WR-CALNAME:TMAC Events
-X-WR-TIMEZONE:America/New_York
+X-WR-TIMEZONE:US-Eastern
 VERSION:2.0<each loop="event in dato.event">
 BEGIN:VEVENT
 UID:tmac_event_{{event.id}}
-DTSTART;TZID=America/New_York:{{ df(event.startDateTime, "yyyymmdd'T'HHMMss")}}
-DTEND;TZID=America/New_York:{{ df(event.endDateTime, "yyyymmdd'T'HHMMss")}}
-DTSTAMP;TZID=America/New_York:{{ df(new Date(), "UTC:yyyymmdd'T'HHMMss")}}
+DTSTART;TZID=US-Eastern:{{ df(event.startDateTime, "yyyymmdd'T'HHMMss")}}
+DTEND;TZID=US-Eastern:{{ df(event.endDateTime, "yyyymmdd'T'HHMMss")}}
+DTSTAMP;TZID=US-Eastern:{{ df(new Date(), "UTC:yyyymmdd'T'HHMMss")}}
 SUMMARY:{{event.title}}
 URL:{{ event.registrationLink }}
 END:VEVENT</each>
