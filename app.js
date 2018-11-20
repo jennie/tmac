@@ -32,8 +32,6 @@ var npRate = .35
 var serviceNpRate = .75
 var staffRate = 30
 var now = new Date( new Date().getTime() + offset * 3600 * 1000).toUTCString()
-console.log(now)
-
 
 const Dato = new SpikeDatoCMS({
   // drafts: true,
@@ -179,6 +177,7 @@ module.exports = {
       , { numeral: numeral.bind(numeral) }
       , { dateFns: dateFns }
       , { md: md.render.bind(md) }
+      , { now: now}
     )},
     markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3 }],markdownItAttrs, markdownItContainer ],
     retext: { quotes: false }
