@@ -63,14 +63,15 @@
         </div>
       </div>
       <div class="register">
-        <if condition="dateFns.isToday(event.startDateTime) == true">
+        <if condition="dateFns.isSameDay(now, event.startDateTime) == true">
+
           <p class="thisweek">Today</p>
         </if>
-        <elseif condition="dateFns.isTomorrow(event.startDateTime) == true">
+        <elseif condition="dateFns.isSameDay(event.startDateTime, dateFns.addDays(now, 1)) == true">
           <p class="thisweek">Tomorrow</p>
         </elseif>
 
-        <elseif condition="dateFns.isThisWeek(event.startDateTime) == true && dateFns.isFuture(event.startDateTime)">
+        <elseif condition="dateFns.isSameWeek(event.startDateTime, now) == true && dateFns.isAfter(event.startDateTime, now)">
           <p class="thisweek">
             {{ dateFns.format(event.startDateTime, 'dddd') }}
           </p>
