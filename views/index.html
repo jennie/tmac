@@ -178,6 +178,10 @@
         <section id="daily-events">
           <div class="container">
             <h4 class="divider">Upcoming events</h4>
+            <p>
+              <span class="fas fa-fw fa-calendar-alt"></span>
+                <a href="webcal://tomediaarts.org/ical.ics">Subscribe to calendar</a>
+            </p>
             <div class="event-grid upcoming">
               <each loop="event in dato.event">
                 <if condition="event.past !== true">

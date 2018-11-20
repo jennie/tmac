@@ -9,6 +9,7 @@ DTSTART;TZID=America/New_York:{{ df(event.startDateTime, "yyyymmdd'T'HHMMss")}}
 DTEND;TZID=America/New_York:{{ df(event.endDateTime, "yyyymmdd'T'HHMMss")}}
 DTSTAMP;TZID=America/New_York:{{ df(new Date(), "UTC:yyyymmdd'T'HHMMss")}}
 SUMMARY:{{event.title}}
+DESCRIPTION:Hosted by <if condition="event.member[0] && event.presenter">{{ event.member[0].name }} + {{ event.presenter }}</if><elseif condition="event.member[0]">{{ event.member[0].name }}</elseif><elseif condition="event.presenter">{{ event.presenter }}</elseif>.\nIn the {{ event.location[0].name }}.
 URL:{{ event.registrationLink }}
 END:VEVENT</each>
 END:VCALENDAR
