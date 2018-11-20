@@ -5,15 +5,7 @@
         <if condition="event.canceled == true">
           <span class="canceled">Canceled</span>
         </if>
-        <if condition="event.member[0] && event.presenter">
-          <small>{{ event.member[0].name }} + {{ event.presenter }}</small>
-        </if>
-        <elseif condition="event.member[0]">
-          <small>{{ event.member[0].name }}</small>
-        </elseif>
-        <elseif condition="event.presenter">
-          <small>{{ event.presenter }}</small>
-        </elseif>
+        <small>{{ event.organizer }}</small>
         <h3 itemprop="name">{{ event.title }}</h3>
 
         <span itemprop="description" style="display:none;">{{ event.description }}</span>
@@ -77,7 +69,7 @@
         <elseif condition="dateFns.isTomorrow(event.startDateTime) == true">
           <p class="thisweek">Tomorrow</p>
         </elseif>
-        
+
         <elseif condition="dateFns.isThisWeek(event.startDateTime) == true && dateFns.isFuture(event.startDateTime)">
           <p class="thisweek">
             {{ dateFns.format(event.startDateTime, 'dddd') }}
