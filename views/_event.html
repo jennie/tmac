@@ -1,6 +1,6 @@
 <extends src="layout.html">
   <block name="title">
-    <title>TMAC Event: {{ item.title }}</title>
+    <title>{{ item.title }} on {{ df(item.startDateTime, "UTC:mmm d", true)}}</title>
   </block>
   <block name="og">
     <meta name="twitter:card" content="summary_large_image">
