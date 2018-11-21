@@ -1,27 +1,16 @@
-<ol>
+<table>
   <each loop='event in dato.event'>
 
+    <tr class="event" data-startDate="{{ Date.parse(event.startDateTime) }}">
+      <td>{{ event.title }}</td>
+      <td>{{ df(event.startDateTime, "UTC:mmmm d", true)}}</td>
+      <td>{{ event.eventType }}</td>
+      <td><if condition="event.member[0]">{{ event.member[0].name }}</if></td>
+      <td><if condition="event.presenter">{{ event.presenter }}</if></td>
+    </tr>
+  </table>
 
-    <li class="event" data-startDate="{{ Date.parse(event.startDateTime) }}" >
-
-
-        {{ event.title }} – {{ df(event.startDateTime, "UTC:mmmm d", true)}}
-
-        <if condition="event.member[0] && event.presenter">
-          <small>({{ event.member[0].name }} + {{ event.presenter }})</small>
-        </if>
-        <elseif condition="event.member[0]">
-          <small>({{ event.member[0].name }})</small>
-        </elseif>
-        <elseif condition="event.presenter">
-          <small>({{ event.presenter }})</small>
-        </elseif>
-
-
-
-    </li>
-  </each>
-</ol>
+</each>
 
 
 <script src="/js/vendor/tinysort.js"></script>
