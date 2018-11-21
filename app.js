@@ -31,6 +31,7 @@ var offset = -5;
 var npRate = .35
 var serviceNpRate = .75
 var staffRate = 30
+var now = new Date( new Date().getTime() + offset * 3600 * 1000).toUTCString()
 
 const Dato = new SpikeDatoCMS({
   // drafts: true,
@@ -94,6 +95,15 @@ const Dato = new SpikeDatoCMS({
         }
       },
       transform: (data) => {
+        if(data.member[0] && data.presenter)  {
+          data.organizer = `${data.member[0].name} + ${data.presenter}`
+        }
+        else if(data.member[0]) {
+          data.organizer = `${data.member[0].name}`
+        }
+        else if(data.presenter) {
+          data.organizer = `${data.presenter}`
+        }
         if (!data.slug) {
           data.slug = slugify(data.title, {
             replacement: '-',
@@ -155,6 +165,7 @@ const Dato = new SpikeDatoCMS({
 
 
 module.exports = {
+
   devtool: 'source-map',
   matchers: { html: '*(**/)*.html', css: '*(**/)*.css', js: '*(**/)*.js' },
   vendor: 'assets/js/vendor/**',
@@ -166,6 +177,7 @@ module.exports = {
       , { numeral: numeral.bind(numeral) }
       , { dateFns: dateFns }
       , { md: md.render.bind(md) }
+      , { now: now}
     )},
     markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3 }],markdownItAttrs, markdownItContainer ],
     retext: { quotes: false }
@@ -177,11 +189,4 @@ module.exports = {
   babel: jsStandards(),
   plugins: [
     Dato
-  ]
-  // ,
-  // afterSpikePlugins: [
-  //   new CopyWebpackPlugin([
-  //     { from: 'public/ical.html', to: 'public/feeds/ical.ics' }
-  //   ] , { debug: 'debug' }
-  // )]
-}
+  ]}

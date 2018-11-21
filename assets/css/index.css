@@ -268,6 +268,10 @@ h4.divider {
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
+  @nest & + p {
+    text-align: center;
+    color: var(--color-blue);
+  }
 }
 
 #letter-callout {
@@ -600,9 +604,11 @@ footer {
 .btn-inverse {
   @mixin btn;
   @mixin btn-inverse;
+  @mixin upper;
+  font-size: calc(14px + 0.05vw);
   &:hover {
-    background-color: color(var(--color-blue) tint(10%));
-    color: #fff;
+    background-color: #eee;
+    color: var(--color-blue);
   }
   @media screen and (min-width: 525px) {
     & + .btn-primary {

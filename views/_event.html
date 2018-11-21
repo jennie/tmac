@@ -1,16 +1,20 @@
 <extends src="layout.html">
-  <title>
-    {{ item.title }} - TMAC
-  </title>
+  <block name="title">
+    <title>{{ item.title }} on {{ df(item.startDateTime, "UTC:mmm d", true)}}</title>
+  </block>
+  <block name="og">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@tomediaarts">
+    <meta name="twitter:title" content="{{ item.title }}">
+    <meta name="twitter:description" content="{{ item.summary != undefined ? item.summary : item.description }}">
+    <meta name="twitter:image" content="https://{{ dato._meta.imgixHost + item.featureImage.path }}?bm=normal&balph=40&blend=322D5A">
+  </block>
   <block name="content">
     <div class="event-detail-grid">
-
-
       <header style="background-image:url('//{{ dato._meta.imgixHost + item.featureImage.path }}?bm=normal&balph=60&blend=322D5A&auto=compress'); background-size: cover;">
         <h1> Toronto Media Arts Centre </h1>
       </header>
       <main>
-
         <h1>
           {{ item.title }}
         </h1>
@@ -102,8 +106,8 @@
         </section>
       </main>
     </div>
+    
   </block>
-  <block name="footer"></block>
 
   <block name="javascript">
     <script src="/js/vendor/tinysort.js"></script>
@@ -111,6 +115,31 @@
     <script>
       tinysort('.session',{data:'startdate', order:'asc'});
     </script>
-  </block>
+    <script type="application/ld+json">
+      {
+        "@context": "http://www.schema.org",
+        "@type": "Event",
+        "name": "{{ item.title }}",
+        "url": "https://tomediaarts.org/event/{{ item.slug }}",
+        "description": "{{ item.description }}",
+        "startDate": "{{ item.startDateTime }}",
+        "endDate": "{{ item.endDateTime }}",
+        "image": "https://{{ dato._meta.imgixHost + item.featureImage.path }}",
+        "location": {
+          "@type": "Place",
+          "name": "Toronto Media Arts Centre",
+          "sameAs": "https://tomediaarts.org",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "32 Lisgar Street",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "postalCode": "M6J0C9",
+            "addressCountry": "Canada"
+          }
+        }
+      }
+    </script>
 
+  </block>
 </extends>
