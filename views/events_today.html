@@ -75,7 +75,7 @@
                   </if>
                   <elseif condition="dateFns.isFuture(exhibition.startDate) == true">
                     <p class="thisweek">
-                      {{ dateFns.format(exhibition.startDate, 'dddd') }}
+                      Opens {{ df(exhibition.startDate, "UTC:mmmm d", true) }}
 
                     </p>
                   </elseif>
