@@ -277,6 +277,7 @@ h4.divider {
 #letter-callout {
   text-align: center;
   font-size: 1.4rem;
+  margin: 0;
   & a {
     background-color: transparent;
     text-decoration: underline;
@@ -1396,4 +1397,23 @@ body#_program {
   }
 }
 
+.alert + .highlight {
+  margin: 0;
+}
+.special-alert {
 
+  background: #5959FF;
+
+  padding: 1rem;
+
+  color: #fff;
+
+  text-align: center;
+
+  margin: 0;
+
+  font-size: 24px;
+  @nest & p {
+    margin: 0;
+  }
+}
