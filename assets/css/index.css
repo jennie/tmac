@@ -815,7 +815,7 @@ p > b.highlight {
 }
 
 #daily-events {
-
+  margin-top: 4rem;
   & header {
     height: auto;
     text-align: center;
@@ -1416,4 +1416,7 @@ body#_program {
   @nest & p {
     margin: 0;
   }
+}
+html body#exhibitions section#daily-events div.container div.event-grid.exhibitions div.event.exhibition {
+  grid-column: span 2
 }
