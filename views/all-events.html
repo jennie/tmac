@@ -1,19 +1,25 @@
-<table>
-  <each loop='event in dato.event'>
+<extends src="layout.html">
+  <block name="content">
+    <table class="table">
+      <each loop='event in dato.event'>
 
-    <tr class="event" data-startDate="{{ Date.parse(event.startDateTime) }}">
-      <td>{{ event.title }}</td>
-      <td>{{ df(event.startDateTime, "UTC:mmmm d", true)}}</td>
-      <td>{{ event.eventType }}</td>
-      <td><if condition="event.member[0]">{{ event.member[0].name }}</if></td>
-      <td><if condition="event.presenter">{{ event.presenter }}</if></td>
-    </tr>
-  </table>
+        <tr class="event" style="{{ dateFns.isThisISOWeek(event.startDateTime) == true ? 'background-color: yellow;' : '' }}" data-startDate="{{ Date.parse(event.startDateTime) }}">
+          <td>{{ dateFns.getISOWeek(event.startDateTime) }}</td>
+          <td>{{ event.title }}</td>
+          <td>{{ df(event.startDateTime, "UTC:dddd, mmm d", true)}}</td>
+          <td>{{ event.eventType }}</td>
+          <td><if condition="event.member[0]">{{ event.member[0].name }}</if></td>
+          <td><if condition="event.presenter">{{ event.presenter }}</if></td>
+        </tr>
+      </each>
+    </table>
+  </block>
 
-</each>
+  <block name="javascript">
 
-
-<script src="/js/vendor/tinysort.js"></script>
-<script>
-tinysort('.event',{data:'startdate', order:'asc'});
-</script>
+    <script src="/js/vendor/tinysort.js"></script>
+    <script>
+      tinysort('.event',{data:'startdate', order:'asc'});
+    </script>
+  </block>
+</extends>

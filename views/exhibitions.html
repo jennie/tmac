@@ -1,0 +1,75 @@
+<extends src="layout.html">
+  <block name="content">
+    <header style="background-image:url(https://www.datocms-assets.com/5128/1533616878-damage-camp.jpg?&bm=normal&balph=20&auto=compress,format);">
+      <h1>Toronto Media Arts Centre</h1>
+    </header>
+
+    <section id="daily-events">
+      <div class="container">
+        <p style='text-align: center'>
+          <a href="/"> &larr; Back home</a>
+        </p>
+        <h4 class="divider">
+          Past exhibitions &amp; Festivals
+        </h4>
+        <div class="event-grid exhibitions">
+          <each loop="exhibition in dato.program">
+            <if condition="exhibition.past == true">
+              <div class="event exhibition" style='background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=80&blend={{ exhibition.canceled == true ? "eeeeee" : "132132"}}); background-size: cover;' data-startDate="{{ Date.parse(exhibition.startDate) }}" class='{{ exhibition.canceled == true ? "canceled" : ""}}' >
+
+                <a href="/program/{{ exhibition.slug }}">
+                  <div class="desc">
+                    <div class="title">
+                      <if condition="exhibition.member[0] && exhibition.presenter">
+                        <p class="presenter">{{ exhibition.member[0].name }} &amp; {{ exhibition.presenter }}</p>
+                      </if>
+                      <elseif condition="exhibition.member[0]">
+                        <p class="presenter">{{ exhibition.member[0].name }}</p>
+                      </elseif>
+                      <elseif condition="exhibition.presenter">
+                        <p class="presenter">{{ exhibition.presenter }}</p>
+                      </elseif>
+
+                    </div>
+                    <h3> {{ exhibition.title }} </h3>
+
+                    <div class="when">
+                      <p class="date">
+                        <span class="fas fa-fw fa-calendar-alt"></span>
+                        <if condition="dateFns.isSameDay(exhibition.startDate,exhibition.endDate) == true">
+                          <!-- // if the program starts and ends on same day, only show that date once-->
+                          <span class="date"> {{ df(exhibition.startDate, "UTC:mmmm d", true)}} • {{ df(exhibition.startDate, "UTC:h:MM tt", true)}}, {{ df(exhibition.startDate, "UTC:yyyy", true)}}</span>
+                        </if>
+                        <if condition="dateFns.isSameMonth(exhibition.startDate,exhibition.endDate) == true">
+                          <!-- // if the program starts and ends in same month, don"t show month name twice -->
+                          <span class="date">{{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:d", true)}}, {{ df(exhibition.startDate, "UTC:yyyy", true)}}</span>
+                        </if>
+                        <else>
+                          <span class="date">{{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:mmmm d", true)}}, {{ df(exhibition.startDate, "UTC:yyyy", true)}}</span>
+                        </else>
+                      </p>
+
+
+                    </div>
+
+
+
+                  </div>
+                </a>
+              </div>
+            </if>
+          </each>
+
+        </div>
+      </div>
+    </section>
+  </block>
+
+  <block name="javascript">
+    <script src="/js/vendor/tinysort.js"></script>
+    <script>
+    tinysort('.event',{data:'startdate', order:'desc'});
+    </script>
+  </block>
+</extends>
+

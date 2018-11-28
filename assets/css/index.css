@@ -277,6 +277,7 @@ h4.divider {
 #letter-callout {
   text-align: center;
   font-size: 1.4rem;
+  margin: 0;
   & a {
     background-color: transparent;
     text-decoration: underline;
@@ -814,7 +815,7 @@ p > b.highlight {
 }
 
 #daily-events {
-
+  margin-top: 4rem;
   & header {
     height: auto;
     text-align: center;
@@ -1396,4 +1397,26 @@ body#_program {
   }
 }
 
+.alert + .highlight {
+  margin: 0;
+}
+.special-alert {
 
+  background: #5959FF;
+
+  padding: 1rem;
+
+  color: #fff;
+
+  text-align: center;
+
+  margin: 0;
+
+  font-size: 24px;
+  @nest & p {
+    margin: 0;
+  }
+}
+html body#exhibitions section#daily-events div.container div.event-grid.exhibitions div.event.exhibition {
+  grid-column: span 2
+}
