@@ -158,11 +158,8 @@
                           </if>
                         </div>
                         <div class="related">
-
-                          <h4>Related Programs</h4>
                           <each loop='highlight, i of exhibition.highlights'>
                             <if condition="{{ dateFns.isPast(highlight.endDateTime) !== true}}">
-
                               <p class="highlight" data-date="{{ highlight.startDateTime }}">
                                 <!-- <p class="highlight {{ i < 3 ? 'show' : 'hide' }}" data-date="{{ highlight.startDateTime }}"> -->
                                 <span class="date">
@@ -174,9 +171,7 @@
                               </p>
                             </if>
                           </each>
-
                         </div>
-
                         <div class="register">
                           <!-- // span(class="btn btn-primary") Info -->
                           <if condition="dateFns.isWithinRange(new Date(), exhibition.startDate, exhibition.endDate) == true">
@@ -202,7 +197,7 @@
             <h4 class="divider">Upcoming events</h4>
             <p>
               <span class="fas fa-fw fa-calendar-alt"></span>
-                <a href="webcal://tomediaarts.org/ical.ics">Subscribe to calendar</a>
+              <a href="webcal://tomediaarts.org/ical.ics">Subscribe to calendar</a>
             </p>
             <div class="event-grid upcoming">
               <each loop="event in dato.event">
