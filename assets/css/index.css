@@ -19,7 +19,15 @@
 }
 
 
-
+@define-mixin date {
+  background-color: rgba(0,0,0,.9);
+  color: #fff;
+  margin: 0;
+  @mixin upper;
+  font-weight: normal;
+  font-family: "Space Text", sans-serif;
+  padding: 0 3px;
+}
 @define-mixin link {
   text-decoration: none;
   font-weight: normal;
@@ -112,6 +120,10 @@ body {
   &#news {
     & img {
       max-width: 100%;
+    }
+    & p.date {
+      @mixin date;
+      display: inline;
     }
     & .timeline {
       & ul {
@@ -1359,13 +1371,9 @@ body#_program {
         margin: 0;
       }
       @nest & span.date {
-        background-color: rgba(0,0,0,.9);
-        color: #fff;
-        margin: 0;
+
+        @mixin date;
         @mixin upper;
-        font-weight: normal;
-        font-family: "Space Text", sans-serif;
-        padding: 0 3px;
       }
     }
   }
