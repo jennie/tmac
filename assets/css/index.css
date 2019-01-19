@@ -1389,6 +1389,9 @@ body#_program {
       background-color: #2500FF;
       padding: 20px;
       color: #fff;
+      @nest & li a {
+        color: inherit;
+      }
       @nest & section {
         background: transparent;
         margin: 0;
