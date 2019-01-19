@@ -39,6 +39,9 @@ const Dato = new SpikeDatoCMS({
   token: process.env.dato_api_key,
   models: [
     {
+      name: 'article'
+    },
+    {
       name: 'press_link'
     },
     {
@@ -179,7 +182,7 @@ module.exports = {
       , { md: md.render.bind(md) }
       , { now: now}
     )},
-    markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3 }],markdownItAttrs, markdownItContainer ],
+    markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3, anchorLink: false }],markdownItAttrs ],
     retext: { quotes: false }
   }),
   postcss: cssStandards({
