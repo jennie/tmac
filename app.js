@@ -23,7 +23,8 @@ const md = new MarkdownIt()
   tocFirstLevel: 3,
   anchorLink: true
 })
-.use(markdownItContainer)
+.use(markdownItContainer, 'image')
+.use(markdownItAttrs)
 
 const locals           = { }
 
@@ -39,7 +40,13 @@ const Dato = new SpikeDatoCMS({
   token: process.env.dato_api_key,
   models: [
     {
-      name: 'article'
+      name: 'article',
+      template: {
+        path: 'views/_article.html',
+        output: (article) => {
+          return `news/${article.slug}.html`
+        }
+      }
     },
     {
       name: 'press_link'
@@ -182,7 +189,9 @@ module.exports = {
       , { md: md.render.bind(md) }
       , { now: now}
     )},
-    markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3, anchorLink: false }],markdownItAttrs ],
+    markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3, anchorLink: false }],markdownItAttrs, markdownItContainer ],
+
+
     retext: { quotes: false }
   }),
   postcss: cssStandards({

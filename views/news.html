@@ -10,29 +10,21 @@
       <h1> Toronto Media Arts Centre News</h1>
     </header>
 
-
     <main>
       <section id="mission">
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
 
-
               <each loop='article in dato.article'>
-                <h3>{{ article.title }}</h3>
-                <p class="date">{{ df(article.date, "UTC:mmmm d, yyyy", true) }}</p>
-                <div class="body" md>{{ article.body }}</div>
+                <div class="summary">
+                  <h3><a href="/news/{{ article.slug }}">{{ article.title }}</a></h3>
+                  <p class="date">{{ df(article.date, "UTC:mmmm d, yyyy", true) }}</p>
+                  <div class="body" md>{{ article.summary }}</div>
+                </div>
               </each>
 
-
-
-
               <p class="highlight">In May 2015, the City of Toronto and Urbancorp <strong>breached their obligations under a contract</strong> with TMAC. We’re suing both parties for the right to purchase the arts space as agreed. Here you’ll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.</p>
-
-
-
-
-
             </div>
             <div class="col-lg-4 aside">
               <div class="visible-xs"><!-- a(href="/help" class="btn btn-primary") How You Can Help -->

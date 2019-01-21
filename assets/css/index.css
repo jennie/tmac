@@ -1382,29 +1382,29 @@ body#_program {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    'image info'
-    'details details';
+  'image info'
+  'details details';
   @media (max-width: 700px) {
     grid-template-areas:
     'image image'
     'info info';
   }
   @nest & header {
-      grid-area: image;
+    grid-area: image;
   }
   @nest & main {
-      grid-area: info;
-      background-color: #2500FF;
-      padding: 20px;
-      color: #fff;
-      @nest & li a {
-        color: inherit;
-      }
-      @nest & section {
-        background: transparent;
-        margin: 0;
-        padding: 0;
-      }
+    grid-area: info;
+    background-color: #2500FF;
+    padding: 20px;
+    color: #fff;
+    @nest & li a {
+      color: inherit;
+    }
+    @nest & section {
+      background: transparent;
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 
@@ -1430,4 +1430,83 @@ body#_program {
 }
 html body#exhibitions section#daily-events div.container div.event-grid.exhibitions div.event.exhibition {
   grid-column: span 2
+}
+
+body#news {
+  @nest & .summary {
+    border-bottom: solid 1px #ccc;
+    padding: 30px 0;
+    @nest & h3 {
+      margin: 4px 0 8px 0;
+    }
+    @nest & p {
+      margin: 8px 0 0 0;
+    }
+  }
+
+}
+body#_article {
+  & p.left {
+    margin: 0 1rem 1rem 0;
+    float: left;
+  }
+  & p.center {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+
+  }
+  & header {
+    background-color: #2500FF;
+    color: #fff;
+    height: auto;
+    padding: 10rem 0;
+    & h1, & h2 {
+      display: block;
+      text-align: center;
+    }
+    & h2 {
+      font-weight: 200;
+    }
+  }
+  & main {
+    grid-area: body;
+    padding: 20px;
+  }
+
+
+  & .article-detail-grid {
+    @nest & header {
+    }
+    @nest & main {
+      & p:first-of-type {
+        font-size: 22px;
+        color: #000;
+        font-family: "Space Text", sans-serif;
+        font-weight: 700;
+
+      }
+      & p {
+        font-size: 16px;
+      }
+      max-width: 700px;
+      margin: 0 auto;
+      @nest & img {
+        max-width: 100%;
+        display: block;
+        /* box-shadow: 5px 5px 0px 0px #000; */
+      }
+      @nest & li a {
+        color: inherit;
+      }
+      @nest & section {
+        background: transparent;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+
+
 }
