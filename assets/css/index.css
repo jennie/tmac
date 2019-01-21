@@ -1450,7 +1450,7 @@ body#_article {
     margin: 0 1rem 1rem 0;
     float: left;
   }
-  & p.center {
+  & p.center img {
     margin: 0 auto;
     display: block;
     text-align: center;
@@ -1479,15 +1479,17 @@ body#_article {
     @nest & header {
     }
     @nest & main {
-      & p:first-of-type {
+      & div > p:first-of-type {
         font-size: 22px;
         color: #000;
         font-family: "Space Text", sans-serif;
         font-weight: 700;
-
       }
       & p {
         font-size: 16px;
+      }
+      & li > p {
+        margin: 0;
       }
       max-width: 700px;
       margin: 0 auto;
