@@ -42,91 +42,90 @@
                     </span><br>
                     <b>{{ highlight.title }}</b></p>
 
-                </each>
-              </if>
-
-
-              <p>
-                <a href="{{ item.link }}"> Web site</a>
-              </p>
-            </div>
-            <div class="col-md-5">
-              <div class="desc">
-                <if condition="item.member[0] && item.presenter">
-                  <p>
-                    <b>Presented by {{ item.member[0].name }}</b>
-                  </p>
+                  </each>
                 </if>
+
+
+                <p>
+                  <a href="{{ item.link }}"> Web site</a>
+                </p>
               </div>
-              <div class="when">
-
-
-                <if condition="{{ item.startDate }}">
-                  <p class="date">
-                    <span class="fas fa-fw fa-calendar-alt"></span>
-                    <if condition="dateFns.isSameDay(item.startDate,item.endDate) == true">
-                      <span class="date">
-                        {{ df(item.startDate, "UTC:mmmm d", true)}} • {{ df(item.startDate, "UTC:h:MM tt", true)}}
-                      </span>
-                    </if>
-                    <if condition="dateFns.isSameMonth(item.startDate,item.endDate) == true">
-                      <span class="date">
-                        {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:d", true)}}
-                      </span>
-                    </if>
-                    <else>
-                      <span class="date">
-                        {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:mmmm d", true)}}
-                      </span>
-                    </else>
-                  </if>
-                </p>
-              </if>
-              <if condition="{{ item.hours }}">
-                <p class="hours">
-                  <span class="fas fa-fw fa-clock"></span>
-                  <span>{{ item.hours }}</span>
-                </p>
-              </if>
-              <if condition="{{ item.ticketPrice }}">
-                <p class="tickets">
-                  <span class="fas fa-fw fa-ticket-alt"></span>
-                  <span>{{ item.ticketPrice }}</span>
-                </p>
-              </if>
-            </div>
-
-            <if condition="{{item.sessions[0]}}">
-              <div id="schedule">
-                <h3>
-                  Schedule
-                </h3>
-                <each loop="session in item.sessions">
-                  <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
-                    <h4>{{session.work.title}}</h4>
-                    <p>{{df(dateFns.subHours(session.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}}
-                      <if condition="{{ session.location[0] }}">
-                        ({{session.location[0].name}})
-                      </if>
+              <div class="col-md-5">
+                <div class="desc">
+                  <if condition="item.member[0] && item.presenter">
+                    <p>
+                      <b>Presented by {{ item.member[0].name }}</b>
                     </p>
+                  </if>
+                </div>
+                <div class="when">
+
+
+                  <if condition="{{ item.startDate }}">
+                    <p class="date">
+                      <span class="fas fa-fw fa-calendar-alt"></span>
+                      <if condition="dateFns.isSameDay(item.startDate,item.endDate) == true">
+                        <span class="date">
+                          {{ df(item.startDate, "UTC:mmmm d", true)}}
+                        </span>
+                      </if>
+                      <if condition="dateFns.isSameMonth(item.startDate,item.endDate) == true">
+                        <span class="date">
+                          {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:d", true)}}
+                        </span>
+                      </if>
+                      <else>
+                        <span class="date">
+                          {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:mmmm d", true)}}
+                        </span>
+                      </else>
+                    </if>
+
+                    <if condition="{{ item.hours }}">
+                      <p class="hours">
+                        <span class="fas fa-fw fa-clock"></span>
+                        <span>{{ item.hours }}</span>
+                      </p>
+                    </if>
+                    <if condition="{{ item.ticketPrice }}">
+                      <p class="tickets">
+                        <span class="fas fa-fw fa-ticket-alt"></span>
+                        <span>{{ item.ticketPrice }}</span>
+                      </p>
+                    </if>
                   </div>
-                </each>
+
+                  <if condition="{{item.sessions[0]}}">
+                    <div id="schedule">
+                      <h3>
+                        Schedule
+                      </h3>
+                      <each loop="session in item.sessions">
+                        <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
+                          <h4>{{session.work.title}}</h4>
+                          <p>{{df(dateFns.subHours(session.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}}
+                            <if condition="{{ session.location[0] }}">
+                              ({{session.location[0].name}})
+                            </if>
+                          </p>
+                        </div>
+                      </each>
+                    </div>
+                  </if>
+                </div>
               </div>
-            </if>
-          </div>
-        </div>
-      </section>
-    </main>
-  </block>
-  <block name="footer"></block>
+            </section>
+          </main>
+        </block>
+        <block name="footer"></block>
 
-  <block name="javascript">
-    <script src="/js/vendor/tinysort.js"></script>
+        <block name="javascript">
+          <script src="/js/vendor/tinysort.js"></script>
 
-    <script>
-    tinysort('.session',{data:'startdate', order:'asc'});
-    tinysort('.highlight',{data:'startdate', order:'asc'});
-    </script>
-  </block>
+          <script>
+            tinysort('.session',{data:'startdate', order:'asc'});
+            tinysort('.highlight',{data:'startdate', order:'asc'});
+          </script>
+        </block>
 
-</extends>
+      </extends>
