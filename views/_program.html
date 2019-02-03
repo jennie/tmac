@@ -69,11 +69,11 @@
                         {{ df(item.startDate, "UTC:mmmm d", true)}}
                       </span>
                     </if>
-                    <if condition="dateFns.isSameMonth(item.startDate,item.endDate) == true">
+                    <elseif condition="dateFns.isSameMonth(item.startDate,item.endDate) == true">
                       <span class="date">
                         {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:d", true)}}
                       </span>
-                    </if>
+                    </elseif>
                     <else>
                       <span class="date">
                         {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:mmmm d", true)}}
