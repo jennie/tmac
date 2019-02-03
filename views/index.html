@@ -101,7 +101,7 @@
             <div class="event-grid exhibitions">
               <each loop="exhibition in dato.program">
                 <if condition="exhibition.past !== true">
-                  <div class="event exhibition" style='background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=80&blend={{ exhibition.canceled == true ? "eeeeee" : "6151FF"}}); background-size: cover;' data-startDate="{{ Date.parse(exhibition.startDate) }}" class='{{ exhibition.canceled == true ? "canceled" : ""}}' >
+                  <div class="event exhibition" style='background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=30&blend={{ exhibition.canceled == true ? "eeeeee" : "6151FF"}}); background-size: cover;' data-startDate="{{ Date.parse(exhibition.startDate) }}" class='{{ exhibition.canceled == true ? "canceled" : ""}}' >
 
                     <a href="/program/{{ exhibition.slug }}">
                       <div class="desc">
