@@ -38,7 +38,7 @@
                         <span class="fas fa-fw fa-calendar-alt"></span>
                         <if condition="dateFns.isSameDay(exhibition.startDate,exhibition.endDate) == true">
                           <!-- // if the program starts and ends on same day, only show that date once-->
-                          <span class="date"> {{ df(exhibition.startDate, "UTC:mmmm d", true)}} • {{ df(exhibition.startDate, "UTC:h:MM tt", true)}}, {{ df(exhibition.startDate, "UTC:yyyy", true)}}</span>
+                          <span class="date"> {{ df(exhibition.startDate, "UTC:mmmm d", true)}}</span>
                         </if>
                         <if condition="dateFns.isSameMonth(exhibition.startDate,exhibition.endDate) == true">
                           <!-- // if the program starts and ends in same month, don"t show month name twice -->
