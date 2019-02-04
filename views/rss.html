@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
   <title>TMAC Events and Exhibitions Feed</title>
   <link href="https://tomediaarts.org"/>
   <description>Public events and exhibitions held at the Toronto Media Arts Centre.</description>
@@ -9,7 +7,6 @@
   <author>
     <name>TMAC Staff</name>
   </author>
-  <id>urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af6</id>
   <each loop="event in dato.event">
     <entry>
       <title>{{event.title}}</title>
@@ -27,7 +24,6 @@
       <published>{{ df(event.createdAt, "yyyymmdd'T'HHMMss")}}</published>
       <updated>{{ df(event.updatedAt, "yyyymmdd'T'HHMMss")}}</updated>
       <content>{{ event.programType }} starting {{ df(event.startDate, "UTC:mmmm d, yyyy", true)}} https://tomediaarts.org/program/{{ event.slug }}</content>
-      <summary>{{ event.summary }}</summary>
     </entry>
   </each>
 </feed>
