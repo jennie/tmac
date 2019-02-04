@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
@@ -14,21 +13,19 @@
   <each loop="event in dato.event">
     <entry>
       <title>{{event.title}}</title>
-      <link href="https://tomediaarts.org/event/{{ event.slug }}"/>
       <id>tmac_event_{{event.id}}</id>
       <published>{{ df(event.createdAt, "yyyymmdd'T'HHMMss")}}</published>
       <updated>{{ df(event.updatedAt, "yyyymmdd'T'HHMMss")}}</updated>
-      <summary>{{ event.summary }}</summary>
+      <summary>{{ event.summary }} – https://tomediaarts.org/event/{{ event.slug }}</summary>
     </entry>
   </each>
   <each loop="event in dato.program">
     <entry>
       <title>{{event.title}}</title>
-      <link href="https://tomediaarts.org/event/{{ event.slug }}"/>
       <id>tmac_program_{{event.id}}</id>
       <published>{{ df(event.createdAt, "yyyymmdd'T'HHMMss")}}</published>
       <updated>{{ df(event.updatedAt, "yyyymmdd'T'HHMMss")}}</updated>
-      <summary>{{ event.programType }} starting {{ df(event.startDate, "UTC:mmmm d, yyyy", true)}}</summary>
+      <summary>{{ event.programType }} starting {{ df(event.startDate, "UTC:mmmm d, yyyy", true)}} – https://tomediaarts.org/program/{{ event.slug }}</summary>
     </entry>
   </each>
 </feed>
