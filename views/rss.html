@@ -26,7 +26,7 @@
       <id>tmac_program_{{event.id}}</id>
       <published>{{ df(event.createdAt, "yyyymmdd'T'HHMMss")}}</published>
       <updated>{{ df(event.updatedAt, "yyyymmdd'T'HHMMss")}}</updated>
-      <content>{{ event.programType }} starting {{ df(event.startDate, "UTC:mmmm d, yyyy", true)}} - https://tomediaarts.org/program/{{ event.slug }}</content>
+      <content>{{ event.programType }} starting {{ df(event.startDate, "UTC:mmmm d, yyyy", true)}} https://tomediaarts.org/program/{{ event.slug }}</content>
       <summary>{{ event.summary }}</summary>
     </entry>
   </each>
