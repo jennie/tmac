@@ -10,7 +10,17 @@ DTEND;TZID=America/New_York:{{ df(event.endDateTime, "yyyymmdd'T'HHMMss")}}
 DTSTAMP;TZID=America/New_York:{{ df(now, "UTC:yyyymmdd'T'HHMMss")}}
 SUMMARY:{{event.title}}
 ORGANIZER:{{event.organizer}}
-DESCRIPTION:In the <each loop="space in event.location">{{ space.name }} </each>
+DESCRIPTION:Location: {{ event.location.map(a => a.name).join(", ") }}
 URL:{{ event.registrationLink }}
+END:VEVENT</each>
+<each loop="event in dato.program">
+BEGIN:VEVENT
+UID:tmac_event_{{event.id}}
+DTSTART;TZID=America/New_York:{{ df(event.startDateTime, "yyyymmdd'T'HHMMss")}}
+DTEND;TZID=America/New_York:{{ df(event.endDateTime, "yyyymmdd'T'HHMMss")}}
+DTSTAMP;TZID=America/New_York:{{ df(now, "UTC:yyyymmdd'T'HHMMss")}}
+SUMMARY:{{event.title}} ({{event.programType}})
+ORGANIZER:{{event.presenter}}
+DESCRIPTION:Location: {{ event.location.map(a => a.name).join(", ") }}
 END:VEVENT</each>
 END:VCALENDAR
