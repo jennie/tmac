@@ -1,25 +1,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>TMAC Events and Exhibitions Feed</title>
-  <updated>{{ df(now, "UTC:yyyymmdd'T'HHMMss")}}</updated>
+  <updated>{{ df(now, "UTC:yyyy-mm-dd'T'HH:MM:ss'Z'")}}</updated>
   <author>
     <name>TMAC Staff</name>
   </author>
+  <id>https://tomediaarts.org/</id>
   <each loop="event in dato.event">
     <entry>
-      <title>{{event.title}}</title>
-      <id>https://tomediaarts.org/event/{{ event.slug }}</id>
-      <published>{{ df(event.createdAt, "yyyy-mm-dd'T'HHMMss")}}</published>
-      <updated>{{ df(event.updatedAt, "yyyy-mm-dd'T'HHMMss")}}</updated>
+      <title>{{event.title}} on {{ df(event.startDateTime, "UTC:mmmm d", true)}} -{{ event.summary }} https://tomediaarts.org/event/{{ event.slug }}</title>
+      <id>https://tomediaarts.org/event/{{ event.slug }}/{{event.id}}</id>
+      <published>{{ df(event.createdAt, "yyyy-mm-dd'T'HH:MM:ss'Z'")}}</published>
+      <updated>{{ df(event.updatedAt, "yyyy-mm-dd'T'HH:MM:ss'Z'")}}</updated>
       <content>{{ event.summary }} https://tomediaarts.org/event/{{ event.slug }}</content>
-      <summary>{{ event.summary }}</summary>
+      <if condition="{{ event.summary }}">
+        <summary>{{ event.summary }}</summary>
+      </if>
     </entry>
   </each>
   <each loop="event in dato.program">
     <entry>
-      <title>{{event.title}}</title>
-      <id>https://tomediaarts.org/program/{{ event.slug }}</id>
-      <published>{{ df(event.createdAt, "yyyy-mm-dd'T'HHMMss")}}</published>
-      <updated>{{ df(event.updatedAt, "yyyy-mm-dd'T'HHMMss")}}</updated>
+      <title>{{event.title}}, {{ event.programType }} starting {{ df(event.startDate, "UTC:mmmm d, yyyy", true)}} https://tomediaarts.org/program/{{ event.slug }}</title>
+      <id>https://tomediaarts.org/program/{{ event.slug }}/{{ event.id }}</id>
+      <published>{{ df(event.createdAt, "yyyy-mm-dd'T'HH:MM:ss'Z'")}}</published>
+      <updated>{{ df(event.updatedAt, "yyyy-mm-dd'T'HH:MM:ss'Z'")}}</updated>
       <content>{{ event.programType }} starting {{ df(event.startDate, "UTC:mmmm d, yyyy", true)}} https://tomediaarts.org/program/{{ event.slug }}</content>
     </entry>
   </each>
