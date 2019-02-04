@@ -1,6 +1,5 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>TMAC Events and Exhibitions Feed</title>
-  <description>Public events and exhibitions held at the Toronto Media Arts Centre.</description>
   <updated>{{ df(now, "UTC:yyyymmdd'T'HHMMss")}}</updated>
   <author>
     <name>TMAC Staff</name>
@@ -8,9 +7,9 @@
   <each loop="event in dato.event">
     <entry>
       <title>{{event.title}}</title>
-      <id>tmac_event_{{event.id}}</id>
-      <published>{{ df(event.createdAt, "yyyymmdd'T'HHMMss")}}</published>
-      <updated>{{ df(event.updatedAt, "yyyymmdd'T'HHMMss")}}</updated>
+      <id>https://tomediaarts.org/event/{{ event.slug }}</id>
+      <published>{{ df(event.createdAt, "yyyy-mm-dd'T'HHMMss")}}</published>
+      <updated>{{ df(event.updatedAt, "yyyy-mm-dd'T'HHMMss")}}</updated>
       <content>{{ event.summary }} https://tomediaarts.org/event/{{ event.slug }}</content>
       <summary>{{ event.summary }}</summary>
     </entry>
@@ -18,9 +17,9 @@
   <each loop="event in dato.program">
     <entry>
       <title>{{event.title}}</title>
-      <id>tmac_program_{{event.id}}</id>
-      <published>{{ df(event.createdAt, "yyyymmdd'T'HHMMss")}}</published>
-      <updated>{{ df(event.updatedAt, "yyyymmdd'T'HHMMss")}}</updated>
+      <id>https://tomediaarts.org/program/{{ event.slug }}</id>
+      <published>{{ df(event.createdAt, "yyyy-mm-dd'T'HHMMss")}}</published>
+      <updated>{{ df(event.updatedAt, "yyyy-mm-dd'T'HHMMss")}}</updated>
       <content>{{ event.programType }} starting {{ df(event.startDate, "UTC:mmmm d, yyyy", true)}} https://tomediaarts.org/program/{{ event.slug }}</content>
     </entry>
   </each>
