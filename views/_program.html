@@ -34,14 +34,16 @@
               <h3>Related Programs</h3>
               <if condition="{{item.highlights[0]}}">
                 <each loop="highlight in item.highlights">
-                  <h2>{{ isDST(new Date(highlight.startDateTime)) ? '4' : '5' }}</h2>
-                  <h3>{{ new Date(highlight.startDateTime) }}</h3>
 
                   <p class="highlight" data-startDate='{{ Date.parse(highlight.startDateTime) }}'>
                     <span class="date">
-                      {{df(dateFns.subHours(highlight.startDateTime, isDST(new Date(highlight.startDateTime)) ? '4' : '5'), "UTC:dddd, mmmm d, h:MM tt", true)}}–{{df(dateFns.subHours(highlight.endDateTime, isDST(new Date(highlight.endDateTime)) ? '4' : '5'), "UTC:h:MM tt", true)}}
+                      <b>{{ df(highlight.startDateTime, "UTC:mmmm d", true)}}</b>
                     </span><br>
-                    <b>{{ highlight.title }}</b></p>
+                    <!-- <span class="date">
+                      {{df(dateFns.subHours(highlight.startDateTime, isDST(new Date(highlight.startDateTime)) ? '4' : '5'), "UTC:dddd, mmmm d, h:MM tt", true)}}–{{df(dateFns.subHours(highlight.endDateTime, isDST(new Date(highlight.endDateTime)) ? '4' : '5'), "UTC:h:MM tt", true)}}
+                    </span> -->
+
+                    <a href="https://tomediaarts.org/event/{{ highlight.slug }}">{{ highlight.title }}</a></p>
 
                 </each>
               </if>
