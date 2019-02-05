@@ -17,6 +17,7 @@ const MarkdownIt              = require('markdown-it')
 const markdownItTocAndAnchor  = require('markdown-it-toc-and-anchor').default
 const markdownItAttrs         = require('markdown-it-attrs')
 const markdownItContainer     = require('markdown-it-container')
+const isDST                   = require('is-dst')
 
 const md = new MarkdownIt()
 .use(markdownItTocAndAnchor, {
@@ -28,7 +29,13 @@ const md = new MarkdownIt()
 
 const locals           = { }
 
-var offset = -5;
+if (isDST(new Date())) {
+  offset = '-4';
+}
+else {
+  offset = '-5';
+}
+
 var npRate = .35
 var serviceNpRate = .75
 var staffRate = 30
@@ -105,6 +112,14 @@ const Dato = new SpikeDatoCMS({
         }
       },
       transform: (data) => {
+
+        if (isDST(new Date(data.startDateTime))) {
+          offset = '-4';
+        }
+        else {
+          offset = '-5';
+        }
+
         if(data.member[0] && data.presenter)  {
           data.organizer = `${data.member[0].name} + ${data.presenter}`
         }
@@ -147,6 +162,13 @@ const Dato = new SpikeDatoCMS({
       },
       transform: (data) => {
         var endOfDayEndDate = dateFns.endOfDay(data.endDate)
+        if (isDST(new Date(data.startDate))) {
+          offset = '-4';
+        }
+        else {
+          offset = '-5';
+        }
+
         if (dateFns.isPast(endOfDayEndDate)) {
           data.past = true
         }
@@ -154,11 +176,11 @@ const Dato = new SpikeDatoCMS({
           data.past = false
         }
         if (data.startDate) {
-          startDateHours = new Date(new Date(data.startDate).getTime() + 0 * 3600 * 1000).toUTCString()
+          startDateHours = new Date(new Date(data.startDate).getTime() + offset * 3600 * 1000).toUTCString()
           data.startDate = startDateHours
         }
         if (data.endDate) {
-          endDateHours = new Date( new Date(data.endDate).getTime() + 0 * 3600 * 1000).toUTCString()
+          endDateHours = new Date( new Date(data.endDate).getTime() + offset * 3600 * 1000).toUTCString()
           data.endDate = endDateHours
           data.endOfDayEndDate = endOfDayEndDate
         }
@@ -171,18 +193,16 @@ const Dato = new SpikeDatoCMS({
   ]
 })
 
-
-
-
 module.exports = {
-
   devtool: 'source-map',
   matchers: { html: '*(**/)*.html', css: '*(**/)*.css', js: '*(**/)*.js' },
   vendor: 'assets/js/vendor/**',
   ignore: ['_*.html', '**/layout.html','**/*.sgr','**/.*', '_cache/**', 'readme.md'],
   reshape: htmlStandards ({
     locals: (ctx) => { return Object.assign(locals
+      , { atom: '?xml version="1.0" encoding="utf-8"?' }
       , { pageId: pageId(ctx) }
+      , { isDST: isDST }
       , { df: df.bind(df) }
       , { numeral: numeral.bind(numeral) }
       , { dateFns: dateFns }
@@ -190,8 +210,6 @@ module.exports = {
       , { now: now}
     )},
     markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3, anchorLink: false }],markdownItAttrs, markdownItContainer ],
-
-
     retext: { quotes: false }
   }),
   postcss: cssStandards({

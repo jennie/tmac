@@ -10,6 +10,7 @@
   "dependencies": {
     "date-fns": "^1.29.0",
     "dateformat": "^3.0.3",
+    "is-dst": "^1.0.0",
     "markdown-it": "^8.4.2",
     "markdown-it-attrs": "^2.3.2",
     "markdown-it-container": "^2.0.0",
