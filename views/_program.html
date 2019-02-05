@@ -34,11 +34,11 @@
               <h3>Related Programs</h3>
               <if condition="{{item.highlights[0]}}">
                 <each loop="highlight in item.highlights">
+
                   <p class="highlight" data-startDate='{{ Date.parse(highlight.startDateTime) }}'>
 
                     <span class="date">
-                      {{df(dateFns.subHours(highlight.startDateTime, 5), "UTC:ddd, mmm d, h:MM tt", true)}}
-                      <!-- {{df(dateFns.subHours(highlight.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}} -->
+                      {{df(dateFns.subHours(highlight.startDateTime, isDST(new Date(highlight.startDateTime)) ? '4' : '5'), "UTC:dddd, mmmm d, h:MM tt", true)}}–{{df(dateFns.subHours(highlight.endDateTime, isDST(new Date(highlight.startDateTime)) ? '4' : '5'), "UTC:h:MM tt", true)}}
                     </span><br>
                     <b>{{ highlight.title }}</b></p>
 
