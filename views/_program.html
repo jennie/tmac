@@ -38,7 +38,7 @@
                   <p class="highlight" data-startDate='{{ Date.parse(highlight.startDateTime) }}'>
 
                     <span class="date">
-                      {{df(dateFns.subHours(highlight.startDateTime, isDST(new Date(highlight.startDateTime)) ? '4' : '5'), "UTC:dddd, mmmm d, h:MM tt", true)}}–{{df(dateFns.subHours(highlight.endDateTime, isDST(new Date(highlight.startDateTime)) ? '4' : '5'), "UTC:h:MM tt", true)}}
+                      {{df(dateFns.subHours(highlight.startDateTime, isDST(new Date(highlight.startDateTime)) ? '4' : '5'), "UTC:dddd, mmmm d, h:MM tt", true)}}–{{df(dateFns.subHours(highlight.endDateTime, isDST(new Date(highlight.endDateTime)) ? '4' : '5'), "UTC:h:MM tt", true)}}
                     </span><br>
                     <b>{{ highlight.title }}</b></p>
 
