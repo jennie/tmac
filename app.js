@@ -114,10 +114,10 @@ const Dato = new SpikeDatoCMS({
       transform: (data) => {
 
         if (isDST(new Date(data.startDateTime))) {
-          offset = '-4';
+          var offset = '-4';
         }
         else {
-          offset = '-5';
+          var offset = '-5';
         }
 
         if(data.member[0] && data.presenter)  {
