@@ -37,21 +37,18 @@
 
                   <p class="highlight" data-startDate='{{ Date.parse(highlight.startDateTime) }}'>
                     <span class="date">
-                      <b>{{ df(highlight.startDateTime, "UTC:mmmm d", true)}}</b>
+                      <b>{{ df(new Date(new Date(highlight.startDateTime).getTime() + offset * 3600 * 1000).toUTCString(), "UTC:mmmm d h:MM tt", true)}}</b>
+                      
                     </span><br>
                     <!-- <span class="date">
-                      {{df(dateFns.subHours(highlight.startDateTime, isDST(new Date(highlight.startDateTime)) ? '4' : '5'), "UTC:dddd, mmmm d, h:MM tt", true)}}–{{df(dateFns.subHours(highlight.endDateTime, isDST(new Date(highlight.endDateTime)) ? '4' : '5'), "UTC:h:MM tt", true)}}
-                    </span> -->
+                    {{df(dateFns.subHours(highlight.startDateTime, isDST(new Date(highlight.startDateTime)) ? '4' : '5'), "UTC:dddd, mmmm d, h:MM tt", true)}}–{{df(dateFns.subHours(highlight.endDateTime, isDST(new Date(highlight.endDateTime)) ? '4' : '5'), "UTC:h:MM tt", true)}}
+                  </span> -->
 
-                    <a href="https://tomediaarts.org/event/{{ highlight.slug }}">{{ highlight.title }}</a></p>
+                  <a href="https://tomediaarts.org/event/{{ highlight.slug }}">{{ highlight.title }}</a></p>
 
                 </each>
               </if>
 
-
-              <p>
-                <a href="{{ item.link }}"> Web site</a>
-              </p>
             </div>
             <div class="col-md-5">
               <div class="desc">
@@ -61,6 +58,11 @@
                   </p>
                 </if>
               </div>
+
+
+              <p>
+                <a href="{{ item.link }}"> Web site</a>
+              </p>
               <div class="when">
 
 
@@ -127,8 +129,8 @@
     <script src="/js/vendor/tinysort.js"></script>
 
     <script>
-    tinysort('.session',{data:'startdate', order:'asc'});
-    tinysort('.highlight',{data:'startdate', order:'asc'});
+      tinysort('.session',{data:'startdate', order:'asc'});
+      tinysort('.highlight',{data:'startdate', order:'asc'});
     </script>
   </block>
 
