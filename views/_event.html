@@ -105,7 +105,7 @@
         "@type": "Event",
         "name": "{{ item.title }}",
         "url": "https://tomediaarts.org/event/{{ item.slug }}",
-        "description": "{{ item.presenter }}",
+        "description": "{{ item.description }}",
         "startDate": "{{ item.startDateTime.toISO() }}",
         "endDate": "{{ item.endDateTime.toISO() }}",
         "image": "https://{{ dato._meta.imgixHost + item.featureImage.path }}",
