@@ -98,15 +98,16 @@
       tinysort('.session',{data:'startdate', order:'asc'});
       var DateTime = luxon.DateTime;
     </script>
+
     <script type="application/ld+json">
       {
         "@context": "http://www.schema.org",
         "@type": "Event",
         "name": "{{ item.title }}",
         "url": "https://tomediaarts.org/event/{{ item.slug }}",
-        "description": "{{ item.description }}",
-        "startDate": "{{ item.startDateTime }}",
-        "endDate": "{{ item.endDateTime }}",
+        "description": "{{ item.presenter }}",
+        "startDate": "{{ item.startDateTime.toISO() }}",
+        "endDate": "{{ item.endDateTime.toISO() }}",
         "image": "https://{{ dato._meta.imgixHost + item.featureImage.path }}",
         "location": {
           "@type": "Place",
@@ -120,7 +121,8 @@
             "postalCode": "M6J0C9",
             "addressCountry": "Canada"
           }
-        }
+        },
+        "eventStatus": '{{ item.canceled == true ? "http://schema.org/EventCancelled" : "http://schema.org/EventScheduled" }}'
       }
     </script>
 
