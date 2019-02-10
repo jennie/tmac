@@ -39,13 +39,6 @@ var serviceNpRate = .75
 var staffRate = 30
 var now = DateTime.local();
 var nowParsed = now.toISO()
-// var nowParsedZoned = utcToZonedTime(now.toISO(), "America/New_York")
-// test = toDate(now.toISO(), { timeZone: 'America/New_York' })
-// console.log(test)
-console.log(dateFnsTz.utcToZonedTime(new Date(), 'America/New_York'))
-
-
-
 
 const Dato = new SpikeDatoCMS({
   // drafts: true,
@@ -142,16 +135,20 @@ const Dato = new SpikeDatoCMS({
           data.past = false
         }
         if (data.startDateTime) {
+          data.startTimestamp =  df(data.startDateTime, "yyyymmdd'T'HHMMss'Z'")
           data.startDateTimeParsed = dateFns.parseISO(data.startDateTime)
           data.startDateTime = DateTime.fromISO(data.startDateTime);
           // console.log(data.startDateTimeParsed)
         }
         if (data.endDateTime) {
+          data.endTimestamp =  df(data.endDateTime, "yyyymmdd'T'HHMMss'Z'")
           data.endDateTimeParsed = dateFns.parseISO(data.endDateTime)
           data.endDateTime = DateTime.fromISO(data.endDateTime);
         }
+
         var zonedStart = dateFnsTz.utcToZonedTime(data.startDateTimeParsed, 'America/New_York')
         var zonedEnd = dateFnsTz.utcToZonedTime(data.endDateTimeParsed, 'America/New_York')
+
         if (data.endDateTime && data.startDateTime) {
           // todo: make this a function so it can be reused in program
           if (dateFns.isSameDay(zonedStart,zonedEnd) == true) {
@@ -187,11 +184,14 @@ const Dato = new SpikeDatoCMS({
           data.past = false
         }
         if (data.startDate) {
+          data.startTimestamp = df(data.startDate, "yyyymmdd'T'HHMMss'Z'")
           data.startDateParsed = dateFns.parseISO(data.startDate)
           data.startDate = DateTime.fromISO(data.startDate);
           data.startDate = data.startDate.toLocaleString(DateTime.DATETIME_FULL)
+
         }
         if (data.endDate) {
+          data.endTimestamp = df(data.endDate, "yyyymmdd'T'HHMMss'Z'")
           data.endDateParsed = dateFns.parseISO(data.endDate)
           data.endDate = DateTime.fromISO(data.endDate);
           data.endDate = data.endDate.toLocaleString(DateTime.DATETIME_FULL)
