@@ -8,9 +8,11 @@
   },
   "bugs": "https://github.com/jennie/tmac/issues",
   "dependencies": {
-    "date-fns": "^1.29.0",
+    "date-fns": "^2.0.0-alpha.27",
+    "date-fns-tz": "^1.0.7",
     "dateformat": "^3.0.3",
     "is-dst": "^1.0.0",
+    "luxon": "^1.11.1",
     "markdown-it": "^8.4.2",
     "markdown-it-attrs": "^2.3.2",
     "markdown-it-container": "^2.0.0",

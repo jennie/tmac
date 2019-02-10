@@ -36,13 +36,13 @@
                   <p class="date">
                     <span class="fas fa-fw fa-calendar-alt"></span>
                     <!-- if the program starts and ends on same day -->
-                    <if condition="dateFns.isSameDay(exhibition.startDate,exhibition.endDate) == true">
+                    <if condition="dateFns.isSameDay(exhibition.startDateParsed,exhibition.endDateParsed) == true">
                       <span class="date">
                         {{ df(exhibition.startDate, "UTC:mmmm d", true)}}
                       </span>
                     </if>
                     <!-- if the program starts and ends in same month, don't show month name twice -->
-                    <if condition="dateFns.isSameMonth(exhibition.startDate,exhibition.endDate) == true">
+                    <if condition="dateFns.isSameMonth(exhibition.startDateParsed,exhibition.endDateParsed) == true">
                       <span class="date">
                         {{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:d", true)}}
                       </span>
@@ -68,12 +68,12 @@
                 </div>
                 <div class="register">
                   <!-- // span(class="btn btn-primary") Info -->
-                  <if condition="dateFns.isWithinRange(new Date(), exhibition.startDate, exhibition.endDate) == true">
+                  <!-- <if condition="dateFns.isWithinInterval(new Date(), { start: exhibition.startDateParsed, end: exhibition.endDateParsed }) == true">
                     <p class="thisweek">
                       On Now
                     </p>
-                  </if>
-                  <elseif condition="dateFns.isFuture(exhibition.startDate) == true">
+                  </if> -->
+                  <elseif condition="dateFns.isAfter(new Date(), exhibition.startDateParsed) == true">
                     <p class="thisweek">
                       Opens {{ df(exhibition.startDate, "UTC:mmmm d", true) }}
 
@@ -118,7 +118,7 @@
                 <h3>{{ event.title }}</h3>
                 <div class="when">
                   <!-- // if the event starts and ends on same day -->
-                  <if condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true">
+                  <if condition="dateFns.isSameDay(event.startDateTimeParsed,event.endDateTimeParsed) == true">
                     <p class="date">
                       {{ df(event.startDateTime, "UTC:mmmm d", true)}}
                     </p>
@@ -126,7 +126,7 @@
 
                   <!-- // if the event spans multiple days, but starts and ends in same month, -->
                   <!-- // don't show month name twice -->
-                  <elseif condition="dateFns.isSameMonth(event.startDateTime,event.endDateTime) == true">
+                  <elseif condition="dateFns.isSameMonth(event.startDateTimeParsed,event.endDateTimeParsed) == true">
                     <p class="date">
                       {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:d", true)}}
                     </p>
@@ -139,14 +139,14 @@
                 </div>
 
                 <div class="register">
-                  <if condition="dateFns.isToday(event.startDateTime) == true">
+                  <if condition="dateFns.isSameDay(new Date(), event.startDateTimeParsed) == true">
                     <p class="thisweek">
                       Today
                     </p>
                   </if>
-                  <elseif condition="dateFns.isThisWeek(event.startDateTime) == true && dateFns.isFuture(event.startDateTime)">
+                  <elseif condition="dateFns.isSameWeek(event.startDateTimeParsed, new Date()) == true && dateFns.isAfter(new Date(), event.startDateTimeParsed)">
                     <p class="thisweek">
-                      {{ dateFns.format(event.startDateTime, 'dddd') }}
+                      {{ dateFns.format(event.startDateTimeParsed, 'dddd') }}
                     </p>
                   </elseif>
                 </div>
@@ -163,21 +163,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/min/tiny-slider.js"></script>
     <script src="/js/vendor/tinysort.js"></script>
     <script>
-    tinysort('.event-grid .exhibition',{data:'startdate', order:'asc'});
-    tinysort('.event-grid .daily',{data:'startdate', order:'asc'});
-    var slider = tns({
-      items: 2,
-      speed: 300,
-      slideBy: 1,
-      autoplay: true,
-      axis: 'horizontal',
-      controls: false,
-      mode: 'carousel',
-      nav: false,
-      autoplayButtonOutput: false,
-      // autoplayTimeout: 5000
-    });
-    slider.play();
+      tinysort('.event-grid .exhibition',{data:'startdate', order:'asc'});
+      tinysort('.event-grid .daily',{data:'startdate', order:'asc'});
+      var slider = tns({
+        items: 2,
+        speed: 300,
+        slideBy: 1,
+        autoplay: true,
+        axis: 'horizontal',
+        controls: false,
+        mode: 'carousel',
+        nav: false,
+        autoplayButtonOutput: false,
+        // autoplayTimeout: 5000
+      });
+      slider.play();
     </script>
   </block>
 

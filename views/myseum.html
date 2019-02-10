@@ -45,7 +45,7 @@
                 <h3>{{ event.title }}</h3>
                 <div class="when">
                   <!-- // if the event starts and ends on same day -->
-                  <if condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true">
+                  <if condition="dateFns.isSameDay(event.startDateTimeParsed,event.endDateTimeParsed) == true">
                     <p class="date">
                       {{ df(event.startDateTime, "UTC:mmmm d", true)}}
                     </p>
@@ -53,7 +53,7 @@
 
                   <!-- // if the event spans multiple days, but starts and ends in same month, -->
                   <!-- // don't show month name twice -->
-                  <elseif condition="dateFns.isSameMonth(event.startDateTime,event.endDateTime) == true">
+                  <elseif condition="dateFns.isSameMonth(event.startDateTimeParsed,event.endDateTimeParsed) == true">
                     <p class="date">
                       {{ df(event.startDateTime, "UTC:mmmm d", true)}}–{{ df(event.endDateTime, "UTC:d", true)}}
                     </p>
@@ -66,12 +66,12 @@
                 </div>
 
                 <div class="register">
-                  <if condition="dateFns.isToday(event.startDateTime) == true">
+                  <if condition="dateFns.isSameDay(new Date(), event.startDateTimeParsed) == true">
                     <p class="thisweek">
                       Today
                     </p>
                   </if>
-                  <elseif condition="dateFns.isThisWeek(event.startDateTime) == true">
+                  <elseif condition="dateFns.isSameWeek(event.startDateTimeParsed, new Date()) == true">
                     <p class="thisweek">
                       {{ dateFns.format(event.startDateTime, 'dddd') }}
                     </p>

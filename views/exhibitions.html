@@ -36,11 +36,11 @@
                     <div class="when">
                       <p class="date">
                         <span class="fas fa-fw fa-calendar-alt"></span>
-                        <if condition="dateFns.isSameDay(exhibition.startDate,exhibition.endDate) == true">
+                        <if condition="dateFns.isSameDay(exhibition.startDateParsed,exhibition.endDateParsed) == true">
                           <!-- // if the program starts and ends on same day, only show that date once-->
                           <span class="date"> {{ df(exhibition.startDate, "UTC:mmmm d", true)}}</span>
                         </if>
-                        <if condition="dateFns.isSameMonth(exhibition.startDate,exhibition.endDate) == true">
+                        <if condition="dateFns.isSameMonth(exhibition.startDateParsed,exhibition.endDateParsed) == true">
                           <!-- // if the program starts and ends in same month, don"t show month name twice -->
                           <span class="date">{{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:d", true)}}, {{ df(exhibition.startDate, "UTC:yyyy", true)}}</span>
                         </if>

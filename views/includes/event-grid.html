@@ -16,43 +16,7 @@
         <span itemprop="image" url="//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=60&blend=322D5A"></span>
 
 
-        <div class="when">
-          <!-- // if the event starts and ends on same day -->
-          <if condition="dateFns.isSameDay(event.startDateTime,event.endDateTime) == true">
-            <p class="date">
-              <time itemprop="startDate" datetime='{{ df(event.startDateTime, "isoDateTime")}}'>
-                {{ df(event.startDateTime, "UTC:mmmm d", true)}}
-                <!-- , {{ df(event.startDateTime, "UTC:h:MM tt", true)}} -->
-              </time>
-              <time itemprop="endDate" datetime='{{ df(event.endDateTime, "isoDateTime") }}'></time>
-            </p>
-          </if>
-          <!-- // if the event spans multiple days, but starts and ends in same month,
-          // don"t show month name twice -->
-          <elseif condition="dateFns.isSameMonth(event.startDateTime,event.endDateTime) == true">
-            <p class="date">
-              <time itemprop="startDate" datetime='{{ df(event.startDateTime, "isoDateTime")}}'>
-                {{ df(event.startDateTime, "UTC:mmmm d", true)}}
-              </time>
-              –
-              <time itemprop="endDate" datetime='{{ df(event.endDateTime, "isoDateTime")}}'>
-                {{ df(event.endDateTime, "UTC:d", true)}}
-              </time>
-            </p>
-          </elseif>
-          <else>
-            <p class="date">
-              <time itemprop="startDate" datetime='{{ df(event.startDateTime, "UTC:mmmm d", true)}}'>
-                {{ df(event.startDateTime, "UTC:mmmm d", true)}}
-
-              </time>
-              –
-              <time itemprop="endDate" datetime='{{ df(event.endDateTime, "UTC:mmmm d", true)}}'>
-                {{ df(event.endDateTime, "UTC:mmmm d", true)}}
-              </time>
-            </p>
-          </else>
-        </div>
+        <div class="when">{{ event.humanTime}}</div>
       </div>
       <div class="where" itemprop="location" itemscope itemtype="http://schema.org/Place">
         <span itemprop="name">Toronto Media Arts Centre</span><br>
@@ -62,18 +26,19 @@
           <span itemprop="addressRegion">ON</span>
         </div>
       </div>
+
       <div class="register">
-        <if condition="dateFns.isSameDay(now, event.startDateTime) == true">
+        <if condition="dateFns.isSameDay(now, event.startDateTimeParsed) == true">
 
           <p class="thisweek">Today</p>
         </if>
-        <elseif condition="dateFns.isSameDay(event.startDateTime, dateFns.addDays(now, 1)) == true">
+        <elseif condition="dateFns.isSameDay(event.startDateTimeParsed, dateFns.addDays(nowParsed, 1)) == true">
           <p class="thisweek">Tomorrow</p>
         </elseif>
 
-        <elseif condition="dateFns.isSameWeek(event.startDateTime, now) == true && dateFns.isAfter(event.startDateTime, now)">
+        <elseif condition="dateFns.isSameWeek(event.startDateTimeParsed, nowParsed) == true && dateFns.isAfter(event.startDateTimeParsed, nowParsed)">
           <p class="thisweek">
-            {{ dateFns.format(event.startDateTime, 'dddd') }}
+            {{ event.startDateTime.toLocaleString({ weekday: 'long' }) }}
           </p>
         </elseif>
       </div>

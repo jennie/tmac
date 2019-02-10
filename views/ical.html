@@ -5,9 +5,9 @@ X-WR-CALNAME:TMAC Events
 VERSION:2.0<each loop="event in dato.event">
 BEGIN:VEVENT
 UID:tmac_event_{{event.id}}
-DTSTART;TZID=America/New_York:{{ df(event.startDateTime, "yyyymmdd'T'HHMMss")}}
-DTEND;TZID=America/New_York:{{ df(event.endDateTime, "yyyymmdd'T'HHMMss")}}
-DTSTAMP;TZID=America/New_York:{{ df(now, "UTC:yyyymmdd'T'HHMMss")}}
+DTSTART;TZID=America/New_York:{{ event.startDateTime }}
+DTEND;TZID=America/New_York:{{ event.endDateTime }}
+DTSTAMP;TZID=America/New_York:{{ now }}
 SUMMARY:{{event.title}}
 ORGANIZER:{{event.organizer}}
 DESCRIPTION:Location: {{ event.location.map(a => a.name).join(", ") }}
@@ -16,9 +16,9 @@ END:VEVENT</each>
 <each loop="event in dato.program">
 BEGIN:VEVENT
 UID:tmac_event_{{event.id}}
-DTSTART;TZID=America/New_York:{{ df(event.startDate, "yyyymmdd'T'HHMMss")}}
-DTEND;TZID=America/New_York:{{ df(event.endDate, "yyyymmdd'T'HHMMss")}}
-DTSTAMP;TZID=America/New_York:{{ df(now, "UTC:yyyymmdd'T'HHMMss")}}
+DTSTART;TZID=America/New_York:{{ event.startDate }}
+DTEND;TZID=America/New_York:{{ event.endDate }}
+DTSTAMP;TZID=America/New_York:{{ now }}
 SUMMARY:{{event.title}} ({{event.programType}})
 ORGANIZER:{{event.presenter}}
 DESCRIPTION:Hours: {{ event.hours }} in {{ event.location.map(a => a.name).join(", ") }}

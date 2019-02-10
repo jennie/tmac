@@ -3,8 +3,8 @@
     <table class="table">
       <each loop='event in dato.event'>
 
-        <tr class="event" style="{{ dateFns.isThisISOWeek(event.startDateTime) == true ? 'background-color: yellow;' : '' }}" data-startDate="{{ Date.parse(event.startDateTime) }}">
-          <td>{{ dateFns.getISOWeek(event.startDateTime) }}</td>
+        <tr class="event" style="{{ dateFns.isSameISOWeek(event.startDateTimeParsed, new Date()) == true ? 'background-color: yellow;' : '' }}" data-startDate="{{ Date.parse(event.startDateTimeParsed) }}">
+          <td>{{ dateFns.getISOWeek(event.startDateTimeParsed) }}</td>
           <td>{{ event.title }}</td>
           <td>{{ df(event.startDateTime, "UTC:dddd, mmm d", true)}}</td>
           <td>{{ event.eventType }}</td>

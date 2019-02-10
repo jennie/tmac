@@ -17,7 +17,12 @@ const MarkdownIt              = require('markdown-it')
 const markdownItTocAndAnchor  = require('markdown-it-toc-and-anchor').default
 const markdownItAttrs         = require('markdown-it-attrs')
 const markdownItContainer     = require('markdown-it-container')
-const isDST                   = require('is-dst')
+const {DateTime,Settings}     = require('luxon')
+const dateFnsTz               = require('date-fns-tz')
+
+const tz = "America/New_York"
+
+Settings.defaultZoneName = tz
 
 const md = new MarkdownIt()
 .use(markdownItTocAndAnchor, {
@@ -29,17 +34,18 @@ const md = new MarkdownIt()
 
 const locals           = { }
 
-if (isDST(new Date())) {
-  offset = '-4';
-}
-else {
-  offset = '-5';
-}
-
 var npRate = .35
 var serviceNpRate = .75
 var staffRate = 30
-var now = new Date( new Date().getTime() + offset * 3600 * 1000).toUTCString()
+var now = DateTime.local();
+var nowParsed = now.toISO()
+// var nowParsedZoned = utcToZonedTime(now.toISO(), "America/New_York")
+// test = toDate(now.toISO(), { timeZone: 'America/New_York' })
+// console.log(test)
+console.log(dateFnsTz.utcToZonedTime(new Date(), 'America/New_York'))
+
+
+
 
 const Dato = new SpikeDatoCMS({
   // drafts: true,
@@ -113,13 +119,6 @@ const Dato = new SpikeDatoCMS({
       },
       transform: (data) => {
 
-        if (isDST(new Date(data.startDateTime))) {
-          var offset = '-4';
-        }
-        else {
-          var offset = '-5';
-        }
-
         if(data.member[0] && data.presenter)  {
           data.organizer = `${data.member[0].name} + ${data.presenter}`
         }
@@ -136,23 +135,41 @@ const Dato = new SpikeDatoCMS({
             lower: true
           })
         }
-        if (dateFns.isPast(data.endDateTime)) {
+        if (dateFns.isBefore(dateFns.parseISO(data.startDateTime), new Date())) {
           data.past = true
         }
         else {
           data.past = false
         }
         if (data.startDateTime) {
-          startDateHours = new Date(new Date(data.startDateTime).getTime() + offset * 3600 * 1000).toUTCString()
-          data.startDateTime = startDateHours
+          data.startDateTimeParsed = dateFns.parseISO(data.startDateTime)
+          data.startDateTime = DateTime.fromISO(data.startDateTime);
+          // console.log(data.startDateTimeParsed)
         }
         if (data.endDateTime) {
-          endDateHours = new Date( new Date(data.endDateTime).getTime() + offset * 3600 * 1000).toUTCString()
-          data.endDateTime = endDateHours
+          data.endDateTimeParsed = dateFns.parseISO(data.endDateTime)
+          data.endDateTime = DateTime.fromISO(data.endDateTime);
         }
+        var zonedStart = dateFnsTz.utcToZonedTime(data.startDateTimeParsed, 'America/New_York')
+        var zonedEnd = dateFnsTz.utcToZonedTime(data.endDateTimeParsed, 'America/New_York')
+        if (data.endDateTime && data.startDateTime) {
+          // todo: make this a function so it can be reused in program
+          if (dateFns.isSameDay(zonedStart,zonedEnd) == true) {
+            data.humanTime = `${data.startDateTime.toLocaleString(DateTime.DATETIME_MED)}–${data.endDateTime.toLocaleString(DateTime.TIME_SIMPLE)}`
+            // console.log(`same day: ${data.humanTime}`)
+          }
+          else if (dateFns.isSameMonth(zonedStart,zonedEnd) == true) {
+            data.humanTime = `${data.startDateTime.toLocaleString({ month: 'long', day: 'numeric' })}–${data.endDateTime.toLocaleString({ day: 'numeric' })}`
+            // console.log(`same month: ${data.humanTime}`)
+          }
+          else {
+            data.humanTime = `${data.startDateTime.toLocaleString({ month: 'long', day: 'numeric' })}–${data.endDateTime.toLocaleString({ month: 'long', day: 'numeric' })}`
+            // console.log(`different month and day: ${data.humanTime}`)
+          }
 
         return data
       }
+     }
     },
     {
       name: 'program',
@@ -161,32 +178,24 @@ const Dato = new SpikeDatoCMS({
         output: (program) => { return `program/${program.slug}.html` }
       },
       transform: (data) => {
-        var endOfDayEndDate = dateFns.endOfDay(data.endDate)
-        if (isDST(new Date(data.startDate))) {
-          offset = '-4';
-        }
-        else {
-          offset = '-5';
-        }
+        var endOfDayEndDate = dateFns.endOfDay(dateFns.parseISO(data.endDate))
 
-        if (dateFns.isPast(endOfDayEndDate)) {
+        if (dateFns.isBefore(endOfDayEndDate, new Date())) {
           data.past = true
         }
         else {
           data.past = false
         }
         if (data.startDate) {
-          startDateHours = new Date(new Date(data.startDate).getTime() + offset * 3600 * 1000).toUTCString()
-          data.startDate = startDateHours
+          data.startDateParsed = dateFns.parseISO(data.startDate)
+          data.startDate = DateTime.fromISO(data.startDate);
+          data.startDate = data.startDate.toLocaleString(DateTime.DATETIME_FULL)
         }
         if (data.endDate) {
-          endDateHours = new Date( new Date(data.endDate).getTime() + offset * 3600 * 1000).toUTCString()
-          data.endDate = endDateHours
-          data.endOfDayEndDate = endOfDayEndDate
+          data.endDateParsed = dateFns.parseISO(data.endDate)
+          data.endDate = DateTime.fromISO(data.endDate);
+          data.endDate = data.endDate.toLocaleString(DateTime.DATETIME_FULL)
         }
-
-
-
         return data
       }
     }
@@ -202,9 +211,9 @@ module.exports = {
     locals: (ctx) => { return Object.assign(locals
       , { atom: '?xml version="1.0" encoding="utf-8"?' }
       , { pageId: pageId(ctx) }
-      , { isDST: isDST }
       , { df: df.bind(df) }
       , { numeral: numeral.bind(numeral) }
+      , { DateTime: DateTime }
       , { dateFns: dateFns }
       , { md: md.render.bind(md) }
       , { now: now}

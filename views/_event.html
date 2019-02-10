@@ -1,6 +1,6 @@
 <extends src="layout.html">
   <block name="title">
-    <title>{{ item.title }} on {{ df(item.startDateTime, "UTC:mmm d", true)}}</title>
+    <title>{{ item.title }} on {{ df(item.startDateTime, "UTC:mmm d")}}</title>
   </block>
   <block name="og">
     <meta name="twitter:card" content="summary_large_image">
@@ -19,14 +19,10 @@
           {{ item.title }}
         </h1>
         <if condition="item.presenter">
-          <h3>
-            {{ item.presenter }}
-          </h3>
+          <h3> {{ item.presenter }} </h3>
         </if>
         <elseif condition="item.member[0]">
-          <h3>
-            {{ item.member[0].name }}
-          </h3>
+          <h3> {{ item.member[0].name }} </h3>
         </elseif>
         <if condition="item.location[0]">
           <h4>
@@ -59,24 +55,10 @@
           <div class="when">
 
 
-            <if condition="{{ item.startDateTime }}">
+            <if condition="{{ item.humanTime }}">
               <p class="date">
                 <span class="fas fa-fw fa-calendar-alt"></span>
-                <if condition="dateFns.isSameDay(item.startDateTime,item.endDateTime) == true">
-                  <span class="date">
-                    {{ df(item.startDateTime, "UTC:mmmm d", true)}}, {{ df(item.startDateTime, "UTC:h:MM tt", true)}}–{{ df(item.endDateTime, "UTC:h:MM tt", true)}}
-                  </span>
-                </if>
-                <elseif condition="dateFns.isSameMonth(item.startDateTime,item.endDateTime) == true">
-                  <span class="date">
-                    {{ df(item.startDateTime, "UTC:mmmm d", true)}}–{{ df(item.endDateTime, "UTC:d", true)}}
-                  </span>
-                </elseif>
-                <else>
-                  <span class="date">
-                    {{ df(item.startDateTime, "UTC:mmmm d", true)}}–{{ df(item.endDateTime, "UTC:mmmm d", true)}}
-                  </span>
-                </else>
+                <span class="date">{{ item.humanTime }}</span>
               </p>
             </if>
             <if condition="{{ item.hours }}">
@@ -106,14 +88,15 @@
         </section>
       </main>
     </div>
-    
+
   </block>
 
   <block name="javascript">
     <script src="/js/vendor/tinysort.js"></script>
-
+    <script src="/js/vendor/luxon.min.js"></script>
     <script>
       tinysort('.session',{data:'startdate', order:'asc'});
+      var DateTime = luxon.DateTime;
     </script>
     <script type="application/ld+json">
       {

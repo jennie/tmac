@@ -130,11 +130,11 @@
                         <div class="when">
                           <p class="date">
                             <span class="fas fa-fw fa-calendar-alt"></span>
-                            <if condition="dateFns.isSameDay(exhibition.startDate,exhibition.endDate) == true">
+                            <if condition="dateFns.isSameDay(exhibition.startDateParsed,exhibition.endDateParsed) == true">
                               <!-- // if the program starts and ends on same day, only show that date once-->
                               <span class="date"> {{ df(exhibition.startDate, "UTC:mmmm d", true)}}</span>
                             </if>
-                            <elseif condition="dateFns.isSameMonth(exhibition.startDate,exhibition.endDate) == true">
+                            <elseif condition="dateFns.isSameMonth(exhibition.startDateParsed,exhibition.endDateParsed) == true">
                               <!-- // if the program starts and ends in same month, don"t show month name twice -->
                               <span class="date">{{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:d", true)}}</span>
                             </elseif>
@@ -157,11 +157,12 @@
                         </div>
                         <div class="related">
                           <each loop='highlight, i of exhibition.highlights'>
-                            <if condition="{{ dateFns.isPast(highlight.endDateTime) !== true}}">
+                            <if condition="{{ dateFns.isBefore(highlight.endDateTimeParsed, new Date()) !== true}}">
                               <p class="highlight" data-date="{{ highlight.startDateTime }}">
-                                <!-- <p class="highlight {{ i < 3 ? 'show' : 'hide' }}" data-date="{{ highlight.startDateTime }}"> -->
+
                                 <span class="date">
-                                  {{df(dateFns.subHours(highlight.startDateTime, 4), "UTC:mmm d", true)}}
+                                  {{ DateTime.fromISO(highlight.startDateTime).toLocaleString(DateTime.DATETIME_MED) }}
+
                                 </span>
                                 <span>
                                   {{ highlight.title }}
@@ -171,11 +172,12 @@
                           </each>
                         </div>
                         <div class="register">
-                          <!-- // span(class="btn btn-primary") Info -->
-                          <if condition="dateFns.isWithinRange(new Date(), exhibition.startDate, exhibition.endDate) == true">
+                          <if condition="dateFns.isWithinInterval(new Date(), { start: exhibition.startDateParsed, end: exhibition.endDateParsed }) == true">
+
+
                             <p class="thisweek">On Now</p>
                           </if>
-                          <elseif condition="dateFns.isFuture(exhibition.startDate) == true">
+                          <elseif condition="dateFns.isAfter(exhibition.startDateParsed, new Date()) == true">
                             <p class="thisweek">Upcoming</p>
                           </elseif>
                         </div>

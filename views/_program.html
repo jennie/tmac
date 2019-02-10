@@ -37,14 +37,10 @@
 
                   <p class="highlight" data-startDate='{{ Date.parse(highlight.startDateTime) }}'>
                     <span class="date">
-                      <b>{{ df(new Date(new Date(highlight.startDateTime).getTime() + offset * 3600 * 1000).toUTCString(), "UTC:mmmm d h:MM tt", true)}}</b>
-                      
+                      <b>{{ DateTime.fromISO(highlight.startDateTime).toLocaleString(DateTime.DATETIME_MED) }}–{{ DateTime.fromISO(highlight.endDateTime).toLocaleString(DateTime.TIME_SIMPLE) }}</b>
                     </span><br>
-                    <!-- <span class="date">
-                    {{df(dateFns.subHours(highlight.startDateTime, isDST(new Date(highlight.startDateTime)) ? '4' : '5'), "UTC:dddd, mmmm d, h:MM tt", true)}}–{{df(dateFns.subHours(highlight.endDateTime, isDST(new Date(highlight.endDateTime)) ? '4' : '5'), "UTC:h:MM tt", true)}}
-                  </span> -->
 
-                  <a href="https://tomediaarts.org/event/{{ highlight.slug }}">{{ highlight.title }}</a></p>
+                  <a href="/event/{{ highlight.slug }}">{{ highlight.title }}</a></p>
 
                 </each>
               </if>
@@ -69,12 +65,12 @@
                 <if condition="{{ item.startDate }}">
                   <p class="date">
                     <span class="fas fa-fw fa-calendar-alt"></span>
-                    <if condition="dateFns.isSameDay(item.startDate,item.endDate) == true">
+                    <if condition="dateFns.isSameDay(item.startDateParsed,item.endDateParsed) == true">
                       <span class="date">
                         {{ df(item.startDate, "UTC:mmmm d", true)}}
                       </span>
                     </if>
-                    <elseif condition="dateFns.isSameMonth(item.startDate,item.endDate) == true">
+                    <elseif condition="dateFns.isSameMonth(item.startDateParsed,item.endDateParsed) == true">
                       <span class="date">
                         {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:d", true)}}
                       </span>
@@ -84,54 +80,53 @@
                         {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:mmmm d", true)}}
                       </span>
                     </else>
-                  </if>
-                </p>
-              </if>
-              <if condition="{{ item.hours }}">
-                <p class="hours">
-                  <span class="fas fa-fw fa-clock"></span>
-                  <span>{{ item.hours }}</span>
-                </p>
-              </if>
-              <if condition="{{ item.ticketPrice }}">
-                <p class="tickets">
-                  <span class="fas fa-fw fa-ticket-alt"></span>
-                  <span>{{ item.ticketPrice }}</span>
-                </p>
+                  </p>
+                </if>
+                </if>
+
+                <if condition="{{ item.hours }}">
+                  <p class="hours">
+                    <span class="fas fa-fw fa-clock"></span>
+                    <span>{{ item.hours }}</span>
+                  </p>
+                </if>
+                <if condition="{{ item.ticketPrice }}">
+                  <p class="tickets">
+                    <span class="fas fa-fw fa-ticket-alt"></span>
+                    <span>{{ item.ticketPrice }}</span>
+                  </p>
+                </if>
+              </div>
+
+              <if condition="{{item.sessions[0]}}">
+                <div id="schedule">
+                  <h3>Schedule</h3>
+                  <each loop="session in item.sessions">
+                    <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
+                      <h4>{{session.work.title}}</h4>
+                      <!-- <p>{{df(dateFns.subHours(session.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}}
+                        <if condition="{{ session.location[0] }}">
+                          ({{session.location[0].name}})
+                        </if>
+                      </p> -->
+                    </div>
+                  </each>
+                </div>
               </if>
             </div>
-
-            <if condition="{{item.sessions[0]}}">
-              <div id="schedule">
-                <h3>
-                  Schedule
-                </h3>
-                <each loop="session in item.sessions">
-                  <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
-                    <h4>{{session.work.title}}</h4>
-                    <p>{{df(dateFns.subHours(session.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}}
-                      <if condition="{{ session.location[0] }}">
-                        ({{session.location[0].name}})
-                      </if>
-                    </p>
-                  </div>
-                </each>
-              </div>
-            </if>
           </div>
-        </div>
-      </section>
-    </main>
-  </block>
-  <block name="footer"></block>
+        </section>
+      </main>
+    </block>
+    <block name="footer"></block>
 
-  <block name="javascript">
-    <script src="/js/vendor/tinysort.js"></script>
+    <block name="javascript">
+      <script src="/js/vendor/tinysort.js"></script>
 
-    <script>
-      tinysort('.session',{data:'startdate', order:'asc'});
-      tinysort('.highlight',{data:'startdate', order:'asc'});
-    </script>
-  </block>
+      <script>
+        tinysort('.session',{data:'startdate', order:'asc'});
+        tinysort('.highlight',{data:'startdate', order:'asc'});
+      </script>
+    </block>
 
-</extends>
+  </extends>
