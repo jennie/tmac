@@ -16,8 +16,8 @@ END:VEVENT</each>
 <each loop="event in dato.program">
 BEGIN:VEVENT
 UID:tmac_event_{{event.id}}
-DTSTART:{{ event.startTimestamp }}
-DTEND:{{ event.endTimestamp }}
+DTSTART;VALUE=DATE:{{ event.startTimestamp }}
+DTEND;VALUE=DATE:{{ event.endTimestamp }}
 DTSTAMP:{{  df(now, "yyyymmdd'T'HHMMss'Z'") }}
 SUMMARY:{{event.title}} ({{event.programType}})
 ORGANIZER:{{event.presenter}}

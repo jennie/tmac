@@ -184,14 +184,14 @@ const Dato = new SpikeDatoCMS({
           data.past = false
         }
         if (data.startDate) {
-          data.startTimestamp = df(data.startDate, "yyyymmdd'T'HHMMss'Z'")
+          data.startTimestamp = df(data.startDate, "yyyymmdd")
           data.startDateParsed = dateFns.parseISO(data.startDate)
           data.startDate = DateTime.fromISO(data.startDate);
           data.startDate = data.startDate.toLocaleString(DateTime.DATETIME_FULL)
 
         }
         if (data.endDate) {
-          data.endTimestamp = df(data.endDate, "yyyymmdd'T'HHMMss'Z'")
+          data.endTimestamp = df(data.endDate, "yyyymmdd")
           data.endDateParsed = dateFns.parseISO(data.endDate)
           data.endDate = DateTime.fromISO(data.endDate);
           data.endDate = data.endDate.toLocaleString(DateTime.DATETIME_FULL)
