@@ -8,13 +8,11 @@
         <small>{{ event.organizer }}</small>
         <h3 itemprop="name">{{ event.title }}</h3>
 
+        <span itemprop="startDate" style="display:none;">{{ event.startDateTime.toISO() }}</span>
+        <span itemprop="endDate" style="display:none;">{{ event.endDateTime.toISO() }}</span>
         <span itemprop="description" style="display:none;">{{ event.description }}</span>
-        <span itemprop="image" style="display:none;">{{ dato._meta.imgixHost + event.featureImage.path }}</span>
+        <span itemprop="image" style="display:none;">https://{{ dato._meta.imgixHost + event.featureImage.path }}</span>
         <span itemprop="url" class="url" style="display:none;">https://www.tomediaarts.org/event/{{event.slug}}</span>
-
-
-        <span itemprop="image" url="https://{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=60&blend=322D5A"></span>
-
 
         <div class="when">{{ event.humanTime}}</div>
       </div>
