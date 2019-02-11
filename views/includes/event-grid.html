@@ -14,7 +14,11 @@
         <span itemprop="image" style="display:none;">https://{{ dato._meta.imgixHost + event.featureImage.path }}</span>
         <span itemprop="url" class="url" style="display:none;">https://www.tomediaarts.org/event/{{event.slug}}</span>
 
-        <div class="when">{{ event.humanTime}}</div>
+        <div class="when">
+          {{event.startDateTime.toLocaleString({ month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' })}}
+          <!-- {{event.startDateTime.toFormat('dd LLLL h:mm a')}} -->
+          <!-- {{ event.humanTime}} -->
+        </div>
       </div>
       <div class="where" itemprop="location" itemscope itemtype="http://schema.org/Place">
         <span itemprop="name">Toronto Media Arts Centre</span><br>
@@ -26,7 +30,7 @@
       </div>
 
       <div class="register">
-        <if condition="dateFns.isSameDay(now, event.startDateTimeParsed) == true">
+        <if condition="dateFns.isSameDay(nowParsed, event.startDateTimeParsed) == true">
 
           <p class="thisweek">Today</p>
         </if>
