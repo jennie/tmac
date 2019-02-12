@@ -14,9 +14,7 @@
         <span itemprop="image" style="display:none;">https://{{ dato._meta.imgixHost + event.featureImage.path }}</span>
         <span itemprop="url" class="url" style="display:none;">https://www.tomediaarts.org/event/{{event.slug}}</span>
 
-        <div class="when">
-          {{event.startDateTime.toFormat('LLLL dd, h:mm a')}}
-        </div>
+        <div class="when">{{event.humanTime}}</div>
       </div>
       <div class="where" itemprop="location" itemscope itemtype="http://schema.org/Place">
         <span itemprop="name">Toronto Media Arts Centre</span><br>

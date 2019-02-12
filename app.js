@@ -152,7 +152,7 @@ const Dato = new SpikeDatoCMS({
         if (data.endDateTime && data.startDateTime) {
           // todo: make this a function so it can be reused in program
           if (dateFns.isSameDay(zonedStart,zonedEnd) == true) {
-            data.humanTime = `${data.startDateTime.toLocaleString(DateTime.DATETIME_MED)}–${data.endDateTime.toLocaleString(DateTime.TIME_SIMPLE)}`
+            data.humanTime = `${data.startDateTime.toFormat('LLLL d, h:mm a')}`
           }
           else if (dateFns.isSameMonth(zonedStart,zonedEnd) == true) {
             data.humanTime = `${data.startDateTime.toLocaleString({ month: 'long', day: 'numeric' })}–${data.endDateTime.toLocaleString({ day: 'numeric' })}`
@@ -201,10 +201,10 @@ const Dato = new SpikeDatoCMS({
         }
         // todo: check year here someday
         if (dateFns.isSameDay(zonedStart,zonedEnd) == true) {
-          data.humanTime = `${data.startDate.toFormat('LLLL dd')}`
+          data.humanTime = `${data.startDate.toFormat('LLLL d')}`
         }
         else if (dateFns.isSameMonth(zonedStart,zonedEnd) == true) {
-          data.humanTime = `${data.startDate.toFormat('LLLL dd')}–${data.endDate.toFormat('dd')}`
+          data.humanTime = `${data.startDate.toFormat('LLLL d')}–${data.endDate.toFormat('dd')}`
           console.log(data.humanTime)
         }
         else {

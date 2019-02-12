@@ -150,7 +150,7 @@
                               <p class="highlight" data-date="{{ highlight.startDateTime }}">
 
                                 <span class="date">
-                                  {{ DateTime.fromISO(highlight.startDateTime).toLocaleString(DateTime.DATETIME_MED) }}
+                                  {{ DateTime.fromISO(highlight.startDateTime).toFormat('LLLL d') }}
 
                                 </span>
                                 <span>
