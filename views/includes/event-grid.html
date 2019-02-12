@@ -15,9 +15,7 @@
         <span itemprop="url" class="url" style="display:none;">https://www.tomediaarts.org/event/{{event.slug}}</span>
 
         <div class="when">
-          {{event.startDateTime.toLocaleString({ month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' })}}
-          <!-- {{event.startDateTime.toFormat('dd LLLL h:mm a')}} -->
-          <!-- {{ event.humanTime}} -->
+          {{event.startDateTime.toFormat('LLLL dd, h:mm a')}}
         </div>
       </div>
       <div class="where" itemprop="location" itemscope itemtype="http://schema.org/Place">
@@ -30,19 +28,7 @@
       </div>
 
       <div class="register">
-        <if condition="dateFns.isSameDay(nowParsed, event.startDateTimeParsed) == true">
-
-          <p class="thisweek">Today</p>
-        </if>
-        <elseif condition="dateFns.isSameDay(event.startDateTimeParsed, dateFns.addDays(nowParsed, 1)) == true">
-          <p class="thisweek">Tomorrow</p>
-        </elseif>
-
-        <elseif condition="dateFns.isSameWeek(event.startDateTimeParsed, nowParsed) == true && dateFns.isAfter(event.startDateTimeParsed, nowParsed)">
-          <p class="thisweek">
-            {{ event.startDateTime.toLocaleString({ weekday: 'long' }) }}
-          </p>
-        </elseif>
+        <include src="includes/relative-time.html"></include>
       </div>
     </a>
   </div>

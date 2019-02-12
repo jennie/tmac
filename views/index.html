@@ -99,7 +99,7 @@
             <div class="event-grid exhibitions">
               <each loop="exhibition in dato.program">
                 <if condition="exhibition.past !== true">
-                  <div class="event exhibition" style='background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=30&blend={{ exhibition.canceled == true ? "eeeeee" : "6151FF"}}); background-size: cover;' data-startDate="{{ Date.parse(exhibition.startDate) }}" class='{{ exhibition.canceled == true ? "canceled" : ""}}' >
+                  <div class="event exhibition" style='background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=60&blend={{ exhibition.canceled == true ? "eeeeee" : "6151FF"}}); background-size: cover;' data-startDate="{{ Date.parse(exhibition.startDate) }}" class='{{ exhibition.canceled == true ? "canceled" : ""}}' >
 
                     <a href="/program/{{ exhibition.slug }}">
                       <div class="desc">
@@ -128,17 +128,8 @@
                         <div class="when">
                           <p class="date">
                             <span class="fas fa-fw fa-calendar-alt"></span>
-                            <if condition="dateFns.isSameDay(exhibition.startDateParsed,exhibition.endDateParsed) == true">
-                              <!-- // if the program starts and ends on same day, only show that date once-->
-                              <span class="date"> {{ df(exhibition.startDate, "UTC:mmmm d", true)}}</span>
-                            </if>
-                            <elseif condition="dateFns.isSameMonth(exhibition.startDateParsed,exhibition.endDateParsed) == true">
-                              <!-- // if the program starts and ends in same month, don"t show month name twice -->
-                              <span class="date">{{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:d", true)}}</span>
-                            </elseif>
-                            <else>
-                              <span class="date">{{ df(exhibition.startDate, "UTC:mmmm d", true)}}–{{ df(exhibition.endDate, "UTC:mmmm d", true)}}</span>
-                            </else>
+                            <span class="date">{{ exhibition.humanTime}}</span>
+
                           </p>
                           <if condition="{{ exhibition.hours }}">
                             <p class="hours">

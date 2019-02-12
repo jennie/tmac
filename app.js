@@ -153,20 +153,17 @@ const Dato = new SpikeDatoCMS({
           // todo: make this a function so it can be reused in program
           if (dateFns.isSameDay(zonedStart,zonedEnd) == true) {
             data.humanTime = `${data.startDateTime.toLocaleString(DateTime.DATETIME_MED)}–${data.endDateTime.toLocaleString(DateTime.TIME_SIMPLE)}`
-            // console.log(`same day: ${data.humanTime}`)
           }
           else if (dateFns.isSameMonth(zonedStart,zonedEnd) == true) {
             data.humanTime = `${data.startDateTime.toLocaleString({ month: 'long', day: 'numeric' })}–${data.endDateTime.toLocaleString({ day: 'numeric' })}`
-            // console.log(`same month: ${data.humanTime}`)
           }
           else {
             data.humanTime = `${data.startDateTime.toLocaleString({ month: 'long', day: 'numeric' })}–${data.endDateTime.toLocaleString({ month: 'long', day: 'numeric' })}`
-            // console.log(`different month and day: ${data.humanTime}`)
           }
 
-        return data
+          return data
+        }
       }
-     }
     },
     {
       name: 'program',
@@ -183,19 +180,39 @@ const Dato = new SpikeDatoCMS({
         else {
           data.past = false
         }
+
+
+
         if (data.startDate) {
+
           data.startTimestamp = df(data.startDate, "yyyymmdd")
           data.startDateParsed = dateFns.parseISO(data.startDate)
           data.startDate = DateTime.fromISO(data.startDate);
-          data.startDate = data.startDate.toLocaleString(DateTime.DATETIME_FULL)
+          // data.startDate = data.startDate.toLocaleString(DateTime.DATETIME_FULL)
+          var zonedStart = dateFnsTz.utcToZonedTime(data.startDateParsed, 'America/New_York')
 
         }
         if (data.endDate) {
           data.endTimestamp = df(data.endDate, "yyyymmdd")
           data.endDateParsed = dateFns.parseISO(data.endDate)
           data.endDate = DateTime.fromISO(data.endDate);
-          data.endDate = data.endDate.toLocaleString(DateTime.DATETIME_FULL)
+          // data.endDate = data.endDate.toLocaleString(DateTime.DATETIME_FULL)
+          var zonedEnd = dateFnsTz.utcToZonedTime(data.endDateParsed, 'America/New_York')
         }
+        // todo: check year here someday
+        if (dateFns.isSameDay(zonedStart,zonedEnd) == true) {
+          data.humanTime = `${data.startDate.toFormat('LLLL dd')}`
+        }
+        else if (dateFns.isSameMonth(zonedStart,zonedEnd) == true) {
+          data.humanTime = `${data.startDate.toFormat('LLLL dd')}–${data.endDate.toFormat('dd')}`
+          console.log(data.humanTime)
+        }
+        else {
+          data.humanTime = `${data.startDate.toLocaleString({ month: 'long', day: 'numeric' })}–${data.endDate.toLocaleString({ month: 'long', day: 'numeric' })}`
+          console.log(`${data.title}: ${data.humanTime}`)
+        }
+
+
         return data
       }
     }
@@ -217,6 +234,7 @@ module.exports = {
       , { dateFns: dateFns }
       , { md: md.render.bind(md) }
       , { now: now}
+      , { nowParsed: nowParsed}
     )},
     markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3, anchorLink: false }],markdownItAttrs, markdownItContainer ],
     retext: { quotes: false }
