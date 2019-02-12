@@ -10,6 +10,7 @@ DTEND:{{ event.endTimestamp }}
 DTSTAMP:{{  df(now, "yyyymmdd'T'HHMMss'Z'") }}
 SUMMARY:{{event.title}}
 ORGANIZER:{{event.organizer}}
+STATUS:{{event.canceled == true ? 'CANCELLED' : 'CONFIRMED'}}
 DESCRIPTION:Location: {{ event.location.map(a => a.name).join(", ") }}
 URL:{{ event.registrationLink }}
 END:VEVENT</each>
@@ -19,6 +20,7 @@ UID:tmac_event_{{event.id}}
 DTSTART;VALUE=DATE:{{ event.startTimestamp }}
 DTEND;VALUE=DATE:{{ event.endTimestamp }}
 DTSTAMP:{{  df(now, "yyyymmdd'T'HHMMss'Z'") }}
+STATUS:{{event.canceled == true ? 'CANCELLED' : 'CONFIRMED'}}
 SUMMARY:{{event.title}} ({{event.programType}})
 ORGANIZER:{{event.presenter}}
 DESCRIPTION:Hours: {{ event.hours }} in {{ event.location.map(a => a.name).join(", ") }}
