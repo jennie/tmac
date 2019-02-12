@@ -675,6 +675,7 @@ p > b.highlight {
     @media (--tablet), (--desktop) {
       @nest & h3 {
         font-size: calc(34px + .05vw);
+        margin-top: 16px;
       }
     }
   }
@@ -727,7 +728,8 @@ p > b.highlight {
       justify-content: space-between;
       margin-top: auto;
       display: flex;
-      align-items: center;
+
+      align-content: flex-end;
 
       & .btn {
         margin: 0;
@@ -747,6 +749,7 @@ p > b.highlight {
     @nest & .desc {
       grid-area: desc;
       color: #fff;
+      /* display: flex; */
 
 
       @nest & .title {
@@ -762,7 +765,6 @@ p > b.highlight {
 
           }
           &.location span.space:first-child {
-            margin-right: 8px;
           }
         }
 
@@ -1220,7 +1222,6 @@ body#signage_fullscreen {
           background-color: #fff;
           color: #000;
           padding: 2px 8px;
-          margin-right: 10px;
           &:last-child {
             margin: 0;
           }

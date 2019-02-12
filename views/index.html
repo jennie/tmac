@@ -113,7 +113,21 @@
                           <elseif condition="exhibition.presenter">
                             <p class="presenter">{{ exhibition.presenter }}</p>
                           </elseif>
-                          <if condition="exhibition.location[0]">
+                          <div class="register">
+                          <p class="location">
+
+                              <if condition="dateFns.isWithinInterval(new Date(), { start: exhibition.startDateParsed, end: exhibition.endDateParsed }) == true">
+
+
+                                <p class="thisweek">On Now</p>
+                              </if>
+                              <elseif condition="dateFns.isAfter(exhibition.startDateParsed, new Date()) == true">
+                                <p class="thisweek">Upcoming</p>
+                              </elseif>
+
+                          </p>
+                          </div>
+                          <!-- <if condition="exhibition.location[0]">
                             <p class="location">
                               <each loop='space in exhibition.location'>
                                 <span class="space" style="background-color: #fff; color: #000; padding: 2px 4px;">
@@ -121,7 +135,7 @@
                                 </span>
                               </each>
                             </p>
-                          </if>
+                          </if> -->
                         </div>
                         <h3> {{ exhibition.title }} </h3>
 
@@ -160,16 +174,7 @@
                             </if>
                           </each>
                         </div>
-                        <div class="register">
-                          <if condition="dateFns.isWithinInterval(new Date(), { start: exhibition.startDateParsed, end: exhibition.endDateParsed }) == true">
-
-
-                            <p class="thisweek">On Now</p>
-                          </if>
-                          <elseif condition="dateFns.isAfter(exhibition.startDateParsed, new Date()) == true">
-                            <p class="thisweek">Upcoming</p>
-                          </elseif>
-                        </div>
+                        <div class="register"></div>
                       </div>
                     </a>
                   </div>
