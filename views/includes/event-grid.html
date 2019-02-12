@@ -12,6 +12,8 @@
         <span itemprop="endDate" style="display:none;">{{ event.endDateTime.toISO() }}</span>
         <span itemprop="description" style="display:none;">{{ event.description }}</span>
         <span itemprop="image" style="display:none;">https://{{ dato._meta.imgixHost + event.featureImage.path }}</span>
+        <span itemprop="status" style="display:none;">{{event.canceled == true ? 'CANCELLED' : 'CONFIRMED'}}
+</span>
         <span itemprop="url" class="url" style="display:none;">https://www.tomediaarts.org/event/{{event.slug}}</span>
 
         <div class="when">{{event.humanTime}}</div>
