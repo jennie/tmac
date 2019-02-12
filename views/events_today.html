@@ -99,7 +99,20 @@
                 </div>
 
                 <div class="register">
-                  <include src="_relative-time.html"></include>
+
+                  <if condition="dateFns.isSameDay(new Date(), event.startDateTimeParsed) == true">
+                    <p class="thisweek">Today</p>
+                  </if>
+                  <elseif condition="dateFns.isSameDay(event.startDateTimeParsed, dateFns.addDays(new Date(), 1)) == true">
+                    <p class="thisweek">Tomorrow</p>
+                  </elseif>
+
+                  <elseif condition="dateFns.isSameWeek(event.startDateTimeParsed, new Date())">
+                    <p class="thisweek">
+                      {{ event.startDateTime.toLocaleString({ weekday: 'long' }) }}
+                    </p>
+                  </elseif>
+
                 </div>
               </div>
             </a>
