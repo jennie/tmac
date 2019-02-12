@@ -15,9 +15,37 @@
         <h1> Toronto Media Arts Centre </h1>
       </header>
       <main>
+        <if condition="item.canceled == true">
+          <div class="canceled">Canceled</div>
+        </if>
         <h1>
           {{ item.title }}
         </h1>
+
+        <div class="when {{ item.canceled == true ? 'canceled-time' : 'scheduled-time' }}">
+
+
+          <if condition="{{ item.humanTime }}">
+            <p class="date">
+              <span class="fas fa-fw fa-calendar-alt"></span>
+              <span class="date">{{ item.humanTime }}</span>
+            </p>
+          </if>
+          <if condition="{{ item.hours }}">
+            <p class="hours">
+              <span class="fas fa-fw fa-clock"></span>
+              <span>{{ item.hours }}</span>
+            </p>
+          </if>
+          <if condition="{{ item.ticketPrice }}">
+            <p class="tickets">
+              <span class="fas fa-fw fa-ticket-alt"></span>
+              <span>{{ item.ticketPrice }}</span>
+            </p>
+          </if>
+        </div>
+
+
         <if condition="item.presenter">
           <h3> {{ item.presenter }} </h3>
         </if>
@@ -36,14 +64,10 @@
             </each>
           </h4>
         </if>
-
-
-
         <section>
           <div md>
             {{ item.description }}
           </div>
-
 
           <div class="desc">
             <if condition="item.member[0] && item.presenter">
@@ -52,31 +76,10 @@
               </p>
             </if>
           </div>
-          <div class="when">
 
-
-            <if condition="{{ item.humanTime }}">
-              <p class="date">
-                <span class="fas fa-fw fa-calendar-alt"></span>
-                <span class="date">{{ item.humanTime }}</span>
-              </p>
-            </if>
-            <if condition="{{ item.hours }}">
-              <p class="hours">
-                <span class="fas fa-fw fa-clock"></span>
-                <span>{{ item.hours }}</span>
-              </p>
-            </if>
-            <if condition="{{ item.ticketPrice }}">
-              <p class="tickets">
-                <span class="fas fa-fw fa-ticket-alt"></span>
-                <span>{{ item.ticketPrice }}</span>
-              </p>
-            </if>
-          </div>
           <p>
             <a href="{{ item.registrationLink }}" class="btn btn-inverse">
-              <if condition="item.past == true">
+              <if condition="item.past == true || item.canceled == true">
                 Info
               </if>
               <else>

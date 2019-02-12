@@ -1411,6 +1411,26 @@ body#_program {
       margin: 0;
       padding: 0;
     }
+    @nest & div.canceled-time {
+      text-decoration: line-through;
+    }
+    @nest & div.canceled {
+      position: relative;
+      display: block;
+      top: 0;
+      right: 0;
+      z-index: 999999;
+      background: #fff;
+      color: RGBA(229,63,61,.80);
+      width: 100%;
+      padding: 10px;
+      font-size: 23px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 10px;
+
+    }
   }
 }
 
