@@ -20,6 +20,8 @@ const markdownItContainer     = require('markdown-it-container')
 const {DateTime,Settings}     = require('luxon')
 const dateFnsTz               = require('date-fns-tz')
 
+const Records                 = require('spike-records')
+
 const tz = "America/New_York"
 
 Settings.defaultZoneName = tz
@@ -205,11 +207,9 @@ const Dato = new SpikeDatoCMS({
         }
         else if (dateFns.isSameMonth(zonedStart,zonedEnd) == true) {
           data.humanTime = `${data.startDate.toFormat('LLLL d')}–${data.endDate.toFormat('dd')}`
-          console.log(data.humanTime)
         }
         else {
           data.humanTime = `${data.startDate.toLocaleString({ month: 'long', day: 'numeric' })}–${data.endDate.toLocaleString({ month: 'long', day: 'numeric' })}`
-          console.log(`${data.title}: ${data.humanTime}`)
         }
 
 
@@ -217,6 +217,35 @@ const Dato = new SpikeDatoCMS({
       }
     }
   ]
+})
+const Events = new Records({
+  addDataTo: locals,
+  events: {
+    graphql: {
+      url: 'https://graphql.datocms.com/',
+      query: `query eventsThisWeek($startDate: DateTime, $endDate: DateTime) {
+        allEvents(filter: {
+          canceled: { eq: false }, startDateTime: {gte: $startDate, lte: $endDate}}, orderBy: [startDateTime_ASC]) {
+            title,
+            startDateTime,
+            endDateTime,
+            slug,
+            description,
+            summary
+          }
+        }`,
+        variables: {
+          "startDate": new Date(),
+          "endDate": dateFns.addDays(new Date(), 7)
+        },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          Authorization: 'Bearer f483964890d9a6793cb6d1c632627e'
+        }
+      },
+    transform: (res) => res.data.allEvents
+  }
 })
 
 module.exports = {
@@ -245,5 +274,5 @@ module.exports = {
   }),
   babel: jsStandards(),
   plugins: [
-    Dato
+    Dato, Events
   ]}
