@@ -76,13 +76,15 @@
               </p>
             </if>
           </div>
-
           <p>
             <a href="{{ item.registrationLink }}" class="btn btn-inverse">
               <if condition="item.past == true || item.canceled == true">
                 Info
               </if>
-              <else>
+              <elseif condition="item.actionButtonText">
+                {{ item.actionButtonText }}
+              </elseif>
+              <else condition="!item.actionButtonText">
                 Register
               </else>
             </a>
