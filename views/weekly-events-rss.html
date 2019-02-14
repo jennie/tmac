@@ -8,15 +8,18 @@
   <each loop="event in events">
     <entry>
       <title>{{event.title}}</title>
-      <url>https://tomediaarts.org/event/{{ event.slug }}</url>
+
       <published>{{ df(event.createdAt, "yyyy-mm-dd'T'HH:MM:ss'Z'")}}</published>
       <updated>{{ df(event.updatedAt, "yyyy-mm-dd'T'HH:MM:ss'Z'")}}</updated>
-      <description> <![CDATA[
-        <b style="font-weight: 900">{{ df(event.startDateTime, "UTC:mmmm d", true)}}</b>
+      <description>
+        <h2>
+          <a href="https://tomediaarts.org/event/{{ event.slug }}">{{ event.title}}</a>
+        </h2>
+        <p><b style="font-weight: 900">{{ df(event.startDateTime, "UTC:mmmm d", true)}}</b>
         <if condition="{{ event.summary }}">
           {{ event.summary }}
         </if>
-        ]]>
+        </p>
       </description>
 
     </entry>
