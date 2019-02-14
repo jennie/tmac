@@ -264,6 +264,8 @@ module.exports = {
       , { md: md.render.bind(md) }
       , { now: now}
       , { nowParsed: nowParsed}
+      , { cdataStart: '<![CDATA['}
+      , { cdataEnd: ']]>'}
     )},
     markdownPlugins: [ [markdownItTocAndAnchor, { tocFirstLevel: 3, anchorLink: false }],markdownItAttrs, markdownItContainer ],
     retext: { quotes: false }
