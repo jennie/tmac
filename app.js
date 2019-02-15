@@ -241,7 +241,7 @@ const Events = new Records({
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          Authorization: 'Bearer f483964890d9a6793cb6d1c632627e'
+          Authorization: 'Bearer ' + process.env.dato_graphql_key
         }
       },
     transform: (res) => res.data.allEvents
