@@ -1,0 +1,90 @@
+<extends src="layout.html">
+  <block name="title">
+    <title>TMAC</title>
+  </block>
+  <block name="og">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@tomediaarts">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+  </block>
+  <block name="content">
+    <div class="event-detail-grid">
+      <header style="background-image:url('https://www.datocms-assets.com/5128/1525840684-ee48de27-3698-4f7a-b111-3f30e83adc4c.jpg?bm=normal&balph=60&blend=322D5A&auto=compress'); background-size: cover;">
+        <h1> Toronto Media Arts Centre </h1>
+      </header>
+      <main>
+
+        <h3>Sign Up for Our Email Newsletter</h3>
+        <!-- Begin Mailchimp Signup Form -->
+        <div id="mc_embed_signup">
+          <form action="https://tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&amp;id=0f5e662ee0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+
+
+              
+              <div class="form-group">
+                <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
+                <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL">
+              </div>
+              <div class="form-group">
+                <label for="mce-FNAME">First Name</label>
+                <input type="text" value="" name="FNAME" class="form-control required" id="mce-FNAME">
+              </div>
+              <div class="form-group">
+                <label for="mce-LNAME">Last Name</label>
+                <input type="text" value="" name="LNAME" class="form-control required" id="mce-LNAME">
+              </div>
+              <div class="form-group">
+                <label for="mce-ORG">Organization</label>
+                <input type="text" value="" name="ORG" class="form-control" id="mce-ORG">
+              </div>
+              <div class="form-group">
+
+                <strong>What would you like to hear about? </strong>
+
+                <div class="form-check">
+                  <input type="checkbox" value="2" name="group[12545][2]" class="form-check-input" id="mce-group[12545]-12545-0">
+                  <label for="mce-group[12545]-12545-0" class="form-check-label">Weekly Events &amp; Exhibitions</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" value="4" name="group[12545][4]" class="form-check-input" id="mce-group[12545]-12545-1">
+                  <label for="mce-group[12545]-12545-1" class="form-check-label">Monthly Events Events &amp; Exhibitions</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" value="8" name="group[12545][8]" class="form-check-input" id="mce-group[12545]-12545-2">
+                  <label for="mce-group[12545]-12545-2" class="form-check-label">News</label>
+                </div>
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a11a58bffdfcead3161ea4d9d_0f5e662ee0" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-inverse"></div>
+            </div>
+          </form>
+        </div>
+
+        <!--End mc_embed_signup-->
+
+      </main>
+    </div>
+
+  </block>
+
+  <block name="javascript">
+    <script src="/js/vendor/tinysort.js"></script>
+    <script src="/js/vendor/luxon.min.js"></script>
+    <script>
+      tinysort('.session',{data:'startdate', order:'asc'});
+      var DateTime = luxon.DateTime;
+    </script>
+
+
+
+  </block>
+</extends>
+
+
