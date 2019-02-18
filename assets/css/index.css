@@ -1541,3 +1541,8 @@ body#_article {
 
 
 }
+
+#mailing-list header,
+#_event header {
+  height: 100%;
+}
