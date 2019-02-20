@@ -218,35 +218,6 @@ const Dato = new SpikeDatoCMS({
     }
   ]
 })
-const Events = new Records({
-  addDataTo: locals,
-  events: {
-    graphql: {
-      url: 'https://graphql.datocms.com/',
-      query: `query eventsThisWeek($startDate: DateTime, $endDate: DateTime) {
-        allEvents(filter: {
-          canceled: { eq: false }, startDateTime: {gte: $startDate, lte: $endDate}}, orderBy: [startDateTime_ASC]) {
-            title,
-            startDateTime,
-            endDateTime,
-            slug,
-            description,
-            summary
-          }
-        }`,
-        variables: {
-          "startDate": new Date(),
-          "endDate": dateFns.addDays(new Date(), 7)
-        },
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          Authorization: 'Bearer f483964890d9a6793cb6d1c632627e'
-        }
-      },
-    transform: (res) => res.data.allEvents
-  }
-})
 
 module.exports = {
   devtool: 'source-map',
@@ -276,5 +247,5 @@ module.exports = {
   }),
   babel: jsStandards(),
   plugins: [
-    Dato, Events
+    Dato
   ]}
