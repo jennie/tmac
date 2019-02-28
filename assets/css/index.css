@@ -633,11 +633,27 @@ footer {
   }
 
 }
+.btn-dark {
+  background-color: #000;
+  color: #ccc;
+  border-color: none;
+  text-decoration: none;
+  border-radius: 3rem;
+  padding: .5rem 2rem;
+  display: inline-block;
+  margin: 1rem auto;
+  &:hover {
+    color: #fff;
+  }
+
+}
 
 .btn-inverse {
   @mixin btn;
   @mixin btn-inverse;
   @mixin upper;
+  text-decoration: none;
+
   font-size: calc(14px + 0.05vw);
   &:hover {
     background-color: #eee;
@@ -1476,7 +1492,7 @@ body#_program {
   }
 }
 html body#exhibitions section#daily-events div.container div.event-grid.exhibitions div.event.exhibition {
-  grid-column: span 2
+  /* grid-column: span 2 */
 }
 
 body#news {
