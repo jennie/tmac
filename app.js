@@ -235,6 +235,7 @@ module.exports = {
       , { md: md.render.bind(md) }
       , { now: now}
       , { nowParsed: nowParsed}
+      , { slugify: slugify}
       , { cdataStart: '<![CDATA['}
       , { cdataEnd: ']]>'}
     )},

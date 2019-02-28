@@ -53,6 +53,14 @@
   cursor: pointer;
   border: none;
 }
+@define-mixin btn-alt {
+  color: var(--color-blue);
+  background-color: #ddd;
+  font-size: calc(12px + .02vw);
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
 @define-mixin btn-inverse {
   color: var(--color-blue);
   background-color: #fff;
@@ -442,11 +450,10 @@ header {
 }
 
 main {
-  & p a:link {
-    text-decoration: none;
+  & p a:not(.btn) {
     color: var(--color-blue);
-    background-color: color(var(--color-blue) tint(95%));
-    font-weight: 400;
+
+    font-weight: 700;
   }
   & .aside {
     & a {
@@ -613,6 +620,20 @@ footer {
     }
   }
 }
+.btn-alt {
+  background-color: #ccc;
+  border-color: none;
+  text-decoration: none;
+  border-radius: 3rem;
+  padding: .5rem 2rem;
+  display: inline-block;
+  margin: 1rem auto;
+  &:hover {
+    background-color: color(#ccc tint(50%));
+  }
+
+}
+
 .btn-inverse {
   @mixin btn;
   @mixin btn-inverse;

@@ -30,11 +30,40 @@
             <a href="/booking-request" class="btn btn-primary">Submit a booking request</a>
             <a href="" class="btn btn-primary" onclick="Calendly.showPopupWidget('https://calendly.com/tomediaarts/space-tour');return false">Schedule a tour</a>
             <!-- <img src="/images/event-layout.jpg" class="responsive" /> -->
+            <a href="https://www.datocms-assets.com/5128/1551313423-tmac-event-space-floorplan-january-2019.pdf" class="btn btn-primary"><i class="fas fa-fw fa-file-download"></i> Floorplan (PDF)</a>
           </div>
-          <i class="fas fa-fw fa-file"></i> <a href="https://www.dropbox.com/s/uihbltbo1ic3q7i/TMAC%20Event%20Space%20Floorplan%20-%20January%202019.pdf?dl=0">Floorplan (PDF)</a>
+
+
+          <div style="margin: 3rem 0">
+            <div class="row">
+              <div class="col-md-4">
+                <h3>Spaces</h3>
+                <ul>
+                  <each loop="space in dato.room">
+                    <if condition="space.rentable == true">
+
+                      <li>
+                        <a href="#{{ slugify(space.name, {lower: true}) }}">{{ space.name }}</a>
+                      </li>
+                    </if>
+                  </each>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h3>Services</h3>
+                <ul>
+                  <each loop="service in dato.service">
+                    <li>
+                      <a href="#{{ slugify(service.title, {lower: true}) }}">{{ service.title }}</a>
+                    </li>
+                  </each>
+                </ul>
+              </div>
+            </div>
+          </div>
           <each loop="space in dato.room">
             <if condition="space.rentable == true">
-              <div class="room">
+              <div class="room" id="{{ slugify(space.name, {lower: true}) }}">
                 <h3>{{ space.name }}</h3>
                 <div class="description" md>{{ space.rentalDescription }}</div>
                 <div class="row">
@@ -75,7 +104,9 @@
                       </each>
                     </table>
                     <if condition="{{ space.availabilityCalendar }}">
-                      <p><a href="{{ space.availabilityCalendar }}">View availability</a></p>
+                      <p>
+                        <a href="{{ space.availabilityCalendar }}" class="btn btn-alt"><i class="fas fa-fw fa-calendar-alt"></i> View Availability</a>
+                      </p>
                     </if>
                   </div>
                   <div class="col-lg-4">
@@ -90,7 +121,8 @@
           <div id="services">
             <h2>Services</h2>
             <each loop="service in dato.service">
-              <div class="service">
+              <div class="service" id="{{ slugify(service.title, {lower: true}) }}">
+
                 <h3>{{ service.title }}</h3>
                 <div class="description" md>{{ service.description }}</div>
                 <if condition="service.options[0]">
