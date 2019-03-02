@@ -183,8 +183,12 @@ const Dato = new SpikeDatoCMS({
           data.past = false
         }
 
-
-
+        if (dateFns.isWithinInterval(new Date(), { start: dateFns.parseISO(data.startDate), end: dateFns.parseISO(data.endDate)})) {
+          data.onNow = true
+        }
+        else {
+          data.onNow = false
+        }
         if (data.startDate) {
 
           data.startTimestamp = df(data.startDate, "yyyymmdd")

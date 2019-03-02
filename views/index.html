@@ -136,7 +136,7 @@
             <div class="event-grid exhibitions">
               <each loop="exhibition in dato.program">
                 <if condition="exhibition.past !== true">
-                  <div class="event exhibition" style='background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=60&blend={{ exhibition.canceled == true ? "eeeeee" : "6151FF"}}); background-size: cover;' data-startDate="{{ Date.parse(exhibition.startDate) }}" class='{{ exhibition.canceled == true ? "canceled" : ""}}' >
+                  <div class="event exhibition" style='background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=60&blend={{ exhibition.onNow == true ? "6151FF" : "444444"}}); background-size: cover;' data-startDate="{{ Date.parse(exhibition.startDate) }}" class='{{ exhibition.canceled == true ? "canceled" : ""}}' >
 
                     <a href="/program/{{ exhibition.slug }}">
                       <div class="desc">
@@ -152,12 +152,12 @@
                           </elseif>
                           <div class="register">
                             <p class="location">
-                              <if condition="dateFns.isWithinInterval(new Date(), { start: exhibition.startDateParsed, end: exhibition.endDateParsed }) == true">
+                              <if condition="exhibition.onNow == true">
                                 <p class="thisweek">On Now</p>
                               </if>
-                              <elseif condition="dateFns.isAfter(exhibition.startDateParsed, new Date()) == true">
+                              <else>
                                 <p class="thisweek">Upcoming</p>
-                              </elseif>
+                              </else>
                             </p>
                           </div>
                           <!-- <if condition="exhibition.location[0]">
