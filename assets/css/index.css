@@ -634,6 +634,7 @@ footer {
 
 }
 .btn-dark {
+  @mixin upper;
   background-color: #000;
   color: #ccc;
   border-color: none;
