@@ -190,22 +190,22 @@
                             </p>
                           </if>
                         </div>
-                        <div class="related">
+                        <!-- <div class="related">
                           <each loop='highlight, i of exhibition.highlights'>
-                            <if condition="{{ dateFns.isBefore(highlight.endDateTimeParsed, new Date()) !== true}}">
-                              <p class="highlight" data-date="{{ highlight.startDateTime }}">
+                              <if condition="{{ dateFns.isBefore(highlight.endDateTimeParsed, new Date()) !== true}}">
+                                <p class="highlight" data-date="{{ Date.parse(highlight.startDateTime) }}">
 
-                                <span class="date">
-                                  {{ DateTime.fromISO(highlight.startDateTime).toFormat('LLLL d') }}
+                                  <span class="date">
+                                    {{ DateTime.fromISO(highlight.startDateTime).toFormat('LLLL d') }}
 
-                                </span>
-                                <span>
-                                  {{ highlight.title }}
-                                </span>
-                              </p>
-                            </if>
-                          </each>
-                        </div>
+                                  </span>
+                                  <span>
+                                    {{ highlight.title }}
+                                  </span>
+                                </p>
+                              </if>
+                            </each>
+                        </div> -->
                         <div class="register"></div>
                       </div>
                     </a>
@@ -323,7 +323,7 @@
     <script>
       tinysort(".event-grid .exhibition",{data:"startdate", order:"asc"});
       tinysort(".event-grid .daily",{data:"startdate", order:"asc"});
-      tinysort(".exhibitions .related .highlight",{data:"date", order:"asc"});
+      tinysort(".exhibition > .related .highlight",{data:"date", order:"asc"});
     </script>
   </block>
 </extends>
