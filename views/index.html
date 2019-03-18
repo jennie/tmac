@@ -151,14 +151,13 @@
                             <p class="presenter">{{ exhibition.presenter }}</p>
                           </elseif>
                           <div class="register">
-                            <p class="location">
                               <if condition="exhibition.onNow == true">
                                 <p class="thisweek">On Now</p>
                               </if>
                               <else>
                                 <p class="thisweek">Upcoming</p>
                               </else>
-                            </p>
+
                           </div>
                           <!-- <if condition="exhibition.location[0]">
                             <p class="location">
@@ -324,7 +323,7 @@
     <script>
       tinysort(".event-grid .exhibition",{data:"startdate", order:"asc"});
       tinysort(".event-grid .daily",{data:"startdate", order:"asc"});
-      tinysort(".exhibition > .related .highlight",{data:"date", order:"asc"});
+      tinysort(".exhibitions .related .highlight",{data:"date", order:"asc"});
     </script>
   </block>
 </extends>
