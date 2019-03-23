@@ -188,6 +188,7 @@ const Dato = new SpikeDatoCMS({
         }
         else {
           data.onNow = false
+          console.log(new Date() + 'start: ' + dateFns.parseISO(data.startDate) + ' // end: ' + dateFns.parseISO(data.endDate))
         }
         if (data.startDate) {
 
