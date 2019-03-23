@@ -175,6 +175,7 @@ const Dato = new SpikeDatoCMS({
       },
       transform: (data) => {
         var endOfDayEndDate = dateFns.endOfDay(dateFns.parseISO(data.endDate))
+        var startOfDayStartDate = dateFns.startOfDay(dateFns.parseISO(data.startDate))
 
         if (dateFns.isBefore(endOfDayEndDate, new Date())) {
           data.past = true
@@ -201,7 +202,7 @@ const Dato = new SpikeDatoCMS({
           var zonedEnd = dateFnsTz.utcToZonedTime(data.endDateParsed, 'America/New_York')
         }
 
-        if (dateFns.isWithinInterval(new Date(), { start: zonedStart, end: zonedEnd})) {
+        if (dateFns.isWithinInterval(new Date(), { start: startOfDayStartDate, end: endOfDayEndDate})) {
           data.onNow = true
         }
         else {
