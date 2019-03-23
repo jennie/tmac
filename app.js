@@ -183,13 +183,7 @@ const Dato = new SpikeDatoCMS({
           data.past = false
         }
 
-        if (dateFns.isWithinInterval(new Date(), { start: dateFns.parseISO(data.startDate), end: dateFns.parseISO(data.endDate)})) {
-          data.onNow = true
-        }
-        else {
-          data.onNow = false
-          console.log(new Date() + 'start: ' + dateFns.parseISO(data.startDate) + ' // end: ' + dateFns.parseISO(data.endDate))
-        }
+
         if (data.startDate) {
 
           data.startTimestamp = df(data.startDate, "yyyymmdd")
@@ -206,6 +200,16 @@ const Dato = new SpikeDatoCMS({
           // data.endDate = data.endDate.toLocaleString(DateTime.DATETIME_FULL)
           var zonedEnd = dateFnsTz.utcToZonedTime(data.endDateParsed, 'America/New_York')
         }
+
+        if (dateFns.isWithinInterval(new Date(), { start: zonedStart, end: zonedEnd})) {
+          data.onNow = true
+        }
+        else {
+          data.onNow = false
+          console.log(new Date() + 'start: ' + zonedStart + ' // end: ' + zonedEnd)
+        }
+
+
         // todo: check year here someday
         if (dateFns.isSameDay(zonedStart,zonedEnd) == true) {
           data.humanTime = `${data.startDate.toFormat('LLLL d')}`
