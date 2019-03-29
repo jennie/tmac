@@ -450,6 +450,7 @@ header {
 }
 
 main {
+
   & p a:not(.btn) {
     color: var(--color-blue);
 
@@ -1579,7 +1580,12 @@ body#_article {
 
 
 }
-
+#_event {
+  main {
+    & p a:not(.btn) {
+      color: #fff;
+    }
+}
 #mailing-list header,
 #_event header {
   height: 100%;
