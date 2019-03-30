@@ -1585,6 +1585,7 @@ body#_article {
     & p a:not(.btn) {
       color: #fff;
     }
+  }
 }
 #mailing-list header,
 #_event header {
