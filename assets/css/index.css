@@ -375,7 +375,10 @@ figure {
     }
   }
 }
+#_program header {
+  height: 45vh;
 
+}
 header {
   background-position: center center;
   background-size: cover;
