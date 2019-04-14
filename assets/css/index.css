@@ -383,7 +383,7 @@ header {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 45vh;
+  height: 75vh;
   & img {
     width: 327px;
     margin: 0;
