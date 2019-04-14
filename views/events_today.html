@@ -21,15 +21,7 @@
                   <elseif condition="exhibition.presenter">
                     <p class="presenter">{{ exhibition.presenter }}</p>
                   </elseif>
-                  <if condition="exhibition.location[0]">
-                    <div class="spaces">
-                      <each loop='space in exhibition.location'>
-                        <p class="space">
-                          {{ space.name }}
-                        </p>
-                      </each>
-                    </div>
-                  </if>
+                  
                 </div>
                 <h3>{{ exhibition.title }}</h3>
                 <div class="when">
@@ -134,7 +126,7 @@
         speed: 300,
         slideBy: 1,
         autoplay: true,
-        axis: 'horizontal',
+        // axis: 'vertical',
         controls: false,
         mode: 'carousel',
         nav: false,
