@@ -1679,9 +1679,12 @@ body#location {
 }
 body#news {
   @nest & .content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-column-gap: var(--padding-primary)
+    @media (--tablet), (--desktop) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-column-gap: var(--padding-primary)
+
+    }
   }
   @nest & .summary {
     border-bottom: solid 1px #ccc;
