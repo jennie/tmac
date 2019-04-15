@@ -708,6 +708,7 @@ p.copyright {
   background-color: #000;
   border: none;
   color: #fff;
+  padding: var(--padding-primary);
   & a {
     color: #fff;
     font-weight: normal;
