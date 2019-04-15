@@ -1,17 +1,27 @@
 <extends src="layout.html">
   <block name="content">
-    <header style="background-image:url(https://www.datocms-assets.com/5128/1533616878-damage-camp.jpg?&bm=normal&balph=20&auto=compress,format);">
-      <h1>Toronto Media Arts Centre</h1>
-    </header>
+    <section id="daily-events">
+      <h4 class="divider">Events &amp; Workshops</h4>
+      <p class="subscribe">
+        <span class="fas fa-fw fa-calendar-alt"></span>
+        <a href="webcal://tomediaarts.org/ical.ics">Subscribe to calendar</a>
+      </p>
+      <div class="event-grid upcoming">
+        <each loop="event in dato.event">
+          <if condition="event.past !== true">
+            <include src="includes/event-grid.html"></include>
+          </if>
+        </each>
+      </div>
+    </section>
+
 
     <section id="daily-events">
       <div class="container">
-        <p style='text-align: center'>
-          <a href="/"> &larr; Back home</a>
-        </p>
-        <h4 class="divider">
-          Recent events
-        </h4>
+
+        <h4 class="divider"> Past events </h4>
+        <p><span class="count"></span> events since April 2018</p>
+
         <div class="event-grid past">
           <each loop='event in dato.event'>
             <if condition='event.past == true'>
@@ -21,12 +31,16 @@
         </div>
       </div>
     </section>
+
   </block>
 
   <block name="javascript">
     <script src="/js/vendor/tinysort.js"></script>
     <script>
-    tinysort('.event',{data:'startdate', order:'desc'});
+      tinysort('.past .event',{data:'startdate', order:'desc'});
+      tinysort('.upcoming .event',{data:'startdate', order:'asc'});
+      const countSpan = document.querySelector('.count')
+      countSpan.innerHTML = document.querySelectorAll('.past .event').length;
     </script>
   </block>
 </extends>

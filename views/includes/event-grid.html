@@ -5,7 +5,10 @@
         <if condition="event.canceled == true">
           <span class="canceled">Canceled</span>
         </if>
-        <small>{{ event.organizer }}</small>
+
+        <if condition="event.organizer !== undefined">
+          <small>{{ event.organizer }}</small>
+        </if>
         <h3 itemprop="name">{{ event.title }}</h3>
 
         <span itemprop="startDate" style="display:none;">{{ event.startDateTime.toISO() }}</span>
@@ -13,10 +16,15 @@
         <span itemprop="description" style="display:none;">{{ event.description }}</span>
         <span itemprop="image" style="display:none;">https://{{ dato._meta.imgixHost + event.featureImage.path }}</span>
         <span itemprop="status" style="display:none;">{{event.canceled == true ? 'CANCELLED' : 'CONFIRMED'}}
-</span>
+        </span>
         <span itemprop="url" class="url" style="display:none;">https://www.tomediaarts.org/event/{{event.slug}}</span>
 
-        <div class="when">{{event.humanTime}}</div>
+        <div class="when">{{event.humanTime}}
+          <if condition="{{ pageId !== 'index'}}">
+            <br>
+            <small>{{ event.endDateTime.toLocaleString({ year: 'numeric' }) }}</small>
+          </if>
+        </div>
       </div>
       <div class="where" itemprop="location" itemscope itemtype="http://schema.org/Place">
         <span itemprop="name">Toronto Media Arts Centre</span><br>
@@ -27,20 +35,7 @@
         </div>
       </div>
 
-      <!-- <div class="register">
-        <if condition="dateFns.isSameDay(new Date(), event.startDateTimeParsed) == true">
-          <p class="thisweek">Today</p>
-        </if>
-        <elseif condition="dateFns.isSameDay(event.startDateTimeParsed, dateFns.addDays(new Date(), 1)) == true">
-          <p class="thisweek">Tomorrow</p>
-        </elseif>
 
-        <elseif condition="dateFns.isSameWeek(event.startDateTimeParsed, new Date())">
-          <p class="thisweek">
-            {{ event.startDateTime.toLocaleString({ weekday: 'long' }) }}
-          </p>
-        </elseif>
-      </div> -->
     </a>
   </div>
 </if>

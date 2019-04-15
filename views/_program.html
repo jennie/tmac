@@ -7,7 +7,7 @@
       <h1> Toronto Media Arts Centre </h1>
     </header>
     <main>
-      <div class="alert alert-success" id="letter-callout">
+      <div id="program-header">
         <h1>
           {{ item.title }}
         </h1>
@@ -25,43 +25,43 @@
 
 
       <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-7">
-              <div class="" md>
-                {{ item.description }}
-              </div>
-              <h3>Related Programs</h3>
-              <if condition="{{item.highlights[0]}}">
-                <each loop="highlight in item.highlights">
+        <div class="container two-col">
 
-                  <p class="highlight" data-startDate='{{ Date.parse(highlight.startDateTime) }}'>
-                    <span class="date">
-                      <b>{{ DateTime.fromISO(highlight.startDateTime).toLocaleString(DateTime.DATETIME_MED) }}–{{ DateTime.fromISO(highlight.endDateTime).toLocaleString(DateTime.TIME_SIMPLE) }}</b>
-                    </span><br>
+          <div>
+            <div md>
+              {{ item.description }}
+            </div>
+
+            <h3>Related Programs</h3>
+            <if condition="{{item.highlights[0]}}">
+              <each loop="highlight in item.highlights">
+
+                <p class="highlight" data-startDate='{{ Date.parse(highlight.startDateTime) }}'>
+                  <span class="date">
+                    <b>{{ DateTime.fromISO(highlight.startDateTime).toLocaleString(DateTime.DATETIME_MED) }}–{{ DateTime.fromISO(highlight.endDateTime).toLocaleString(DateTime.TIME_SIMPLE) }}</b>
+                  </span><br>
 
                   <a href="/event/{{ highlight.slug }}">{{ highlight.title }}</a></p>
 
                 </each>
               </if>
 
+
             </div>
-            <div class="col-md-5">
+            <div>
+
+
               <div class="desc">
                 <if condition="item.member[0] && item.presenter">
                   <p>
-                    <b>Presented by {{ item.member[0].name }}</b>
+                    <b>Co-presented by {{ item.member[0].name }}</b>
                   </p>
                 </if>
               </div>
 
 
-              <p>
-                <a href="{{ item.link }}"> Web site</a>
-              </p>
+              <p> <a href="{{ item.link }}"> Web site</a> </p>
               <div class="when">
-
-
                 <if condition="{{ item.startDate }}">
                   <p class="date">
                     <span class="fas fa-fw fa-calendar-alt"></span>
@@ -81,7 +81,6 @@
                       </span>
                     </else>
                   </p>
-                </if>
                 </if>
 
                 <if condition="{{ item.hours }}">
@@ -105,28 +104,30 @@
                     <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
                       <h4>{{session.work.title}}</h4>
                       <!-- <p>{{df(dateFns.subHours(session.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}}
-                        <if condition="{{ session.location[0] }}">
-                          ({{session.location[0].name}})
-                        </if>
-                      </p> -->
-                    </div>
-                  </each>
+                      <if condition="{{ session.location[0] }}">
+                      ({{session.location[0].name}})
+                    </if>
+                  </p> -->
                 </div>
-              </if>
+              </each>
             </div>
-          </div>
-        </section>
-      </main>
-    </block>
-    <block name="footer"></block>
+          </if>
 
-    <block name="javascript">
-      <script src="/js/vendor/tinysort.js"></script>
+        </div>
 
-      <script>
-        tinysort('.session',{data:'startdate', order:'asc'});
-        tinysort('.highlight',{data:'startdate', order:'asc'});
-      </script>
-    </block>
+      </div>
+    </section>
+  </main>
+</block>
+<block name="footer"></block>
 
-  </extends>
+<block name="javascript">
+  <script src="/js/vendor/tinysort.js"></script>
+
+  <script>
+    tinysort('.session',{data:'startdate', order:'asc'});
+    tinysort('.highlight',{data:'startdate', order:'asc'});
+  </script>
+</block>
+
+</extends>
