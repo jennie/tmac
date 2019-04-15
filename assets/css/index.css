@@ -3,7 +3,7 @@
 
 :root {
   --color-blue: #0B0BEC;
-  --color-primary-alt: #FF001A;
+  --color-primary-alt: #D9472A;
 
   /* max-widths for containers */
   --mini: 90vw;
@@ -41,8 +41,8 @@
 
 @define-mixin upper {
   text-transform: uppercase;
-  letter-spacing: 0.05rem;
   font-family: HelveticaNowMicro-Regular;
+  font-weight: normal;
 }
 
 @define-mixin btn-primary {
@@ -54,8 +54,9 @@
   color: #fff;
 }
 @define-mixin btn-alt {
-  color: var(--color-blue);
-  background-color: #ddd;
+  color: var(--color-primary-alt);
+  background-color: var(--color-primary-alt);
+  color: #fff;
   font-size: calc(12px + .02vw);
   cursor: pointer;
   border: none;
@@ -740,13 +741,15 @@ p.copyright {
   }
 }
 .btn-alt {
-  background-color: #ccc;
-  border-color: none;
-  text-decoration: none;
+  @mixin btn-alt;
   padding: .5rem 2rem;
   margin: 1rem auto;
+  font-size: 22px;
+  text-decoration: none;
+
   &:hover {
-    background-color: color(#ccc tint(50%));
+    color: #fff;
+    background-color: color(var(--color-primary-alt) shade(20%));
   }
 
 }
@@ -1691,6 +1694,16 @@ body#news {
       margin: 8px 0 0 0;
     }
   }
+  @nest & .timeline {
+    font-size: 12px;
+
+    @nest & strong {
+      @mixin upper;
+      font-size: 11px;
+      color: var(--color-primary-alt);
+
+    }
+  }
 
 }
 body#_article {
@@ -1771,6 +1784,9 @@ body#_article {
     & p a:not(.btn) {
       color: #fff;
     }
+    @nest & .space:not(:empty):not(:last-child):after {
+      content: ", ";
+    }
   }
 }
 #mailing-list header, #_event header {
@@ -1797,13 +1813,27 @@ body#_article {
       background-color: #2500FF;
       padding: 20px;
       color: #fff;
-      @nest & li a {
+      @nest & a {
         color: inherit;
       }
       @nest & section {
         background: transparent;
         margin: 0;
         padding: 0;
+        @nest &#facility {
+          @nest & small {
+
+            background: #fff;
+            color: var(--color-blue);
+            text-transform: uppercase;
+            font-size: 13px;
+            margin: 0 4px 0 0;
+            display: inline-block;
+            padding: 0 3px;
+            font-family: HelveticaNowMicro-Regular;
+            font-size: 9px;
+          }
+        }
       }
 
 
