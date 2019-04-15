@@ -53,16 +53,16 @@
           <h3> {{ item.member[0].name }} </h3>
         </elseif>
         <if condition="item.location[0]">
-          <h4>
+
+
+          <p>
             In
             <each loop='space in item.location'>
               <if condition="space.name">
-                <span class="space" style="background-color: #fff; color: #000; padding: 2px 4px; margin: 0 5px;">
-                  {{ space.name }}
-                </span>
+                <span class="space">{{ space.name }}</span>
               </if>
             </each>
-          </h4>
+          </p>
         </if>
         <section>
           <div md>
@@ -102,6 +102,9 @@
     <script>
       tinysort('.session',{data:'startdate', order:'asc'});
       var DateTime = luxon.DateTime;
+      // item.location.forEach(function (name, index) {
+      //   console.log(this.name)
+      // });
     </script>
 
     <script type="application/ld+json">

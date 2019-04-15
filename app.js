@@ -20,7 +20,7 @@ const markdownItContainer     = require('markdown-it-container')
 const {DateTime,Settings}     = require('luxon')
 const dateFnsTz               = require('date-fns-tz')
 
-const Records                 = require('spike-records')
+const SpikeRecords                 = require('spike-records')
 
 const tz = "America/New_York"
 
@@ -41,6 +41,7 @@ var serviceNpRate = .75
 var staffRate = 30
 var now = DateTime.local();
 var nowParsed = now.toISO()
+
 
 const Dato = new SpikeDatoCMS({
   // drafts: true,
@@ -207,19 +208,24 @@ const Dato = new SpikeDatoCMS({
         }
         else {
           data.onNow = false
-          console.log(new Date() + 'start: ' + zonedStart + ' // end: ' + zonedEnd)
+          // console.log(new Date() + 'start: ' + zonedStart + ' // end: ' + zonedEnd)
         }
 
 
         // todo: check year here someday
         if (dateFns.isSameDay(zonedStart,zonedEnd) == true) {
           data.humanTime = `${data.startDate.toFormat('LLLL d')}`
+          console.log(data.title, data.humanTime)
         }
         else if (dateFns.isSameMonth(zonedStart,zonedEnd) == true) {
-          data.humanTime = `${data.startDate.toFormat('LLLL d')}–${data.endDate.toFormat('dd')}`
+          data.humanTime = `${data.startDate.toFormat('LLLL d')}–${data.endDate.toFormat('d')}`
+          console.log(data.title, data.humanTime)
+          return data
         }
         else {
           data.humanTime = `${data.startDate.toLocaleString({ month: 'long', day: 'numeric' })}–${data.endDate.toLocaleString({ month: 'long', day: 'numeric' })}`
+          console.log(data.title, data.humanTime)
+          return data
         }
 
 
@@ -242,6 +248,7 @@ module.exports = {
       , { numeral: numeral.bind(numeral) }
       , { DateTime: DateTime }
       , { dateFns: dateFns }
+      , { dateFnsTz: dateFnsTz }
       , { md: md.render.bind(md) }
       , { now: now}
       , { nowParsed: nowParsed}
@@ -259,4 +266,5 @@ module.exports = {
   babel: jsStandards(),
   plugins: [
     Dato
+    // Records
   ]}

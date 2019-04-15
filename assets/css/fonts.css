@@ -1,75 +1,60 @@
-/* @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700'); */
+/**
+ * @license
+ * MyFonts Webfont Build ID 3747066, 2019-04-14T14:59:13-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: HelveticaNowText-Regular by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-regular/
+ *
+ * Webfont: HelveticaNowText-It by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-italic/
+ *
+ * Webfont: HelveticaNowText-Bold by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-bold/
+ *
+ * Webfont: HelveticaNowText-BdIt by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-bold-italic/
+ *
+ * Webfont: HelveticaNowDisplay-XBlk by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/display-extrablack/
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3747066
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Copyright © 2019 Monotype Imaging Inc. All rights reserved.
+ *
+ * © 2019 MyFonts Inc
+*/
 
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i");
 
-@font-face {
-    font-family: 'Space Text';
-    src: url('../fonts/SpaceText-Regular.woff2') format('woff2'),
-        url('../fonts/SpaceText-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url("//hello.myfonts.net/count/392cfa");
 
-@font-face {
-    font-family: 'Space Text';
-    src: url('../fonts/SpaceText-Light.woff2') format('woff2'),
-        url('../fonts/SpaceText-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Space Text';
-    src: url('../fonts/SpaceText-Bold.woff2') format('woff2'),
-        url('../fonts/SpaceText-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Space Text';
-    src: url('../fonts/SpaceText-SemiBold.woff2') format('woff2'),
-        url('../fonts/SpaceText-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
+@font-face {font-family: 'HelveticaNowDisplay-XBd';src: url('../webfonts/392D1F_0_0.eot');src: url('../webfonts/392D1F_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/392D1F_0_0.woff2') format('woff2'),url('../webfonts/392D1F_0_0.woff') format('woff'),url('../webfonts/392D1F_0_0.ttf') format('truetype');}
 
-@font-face {
-    font-family: 'Space Text';
-    src: url('../fonts/SpaceText-Medium.woff2') format('woff2'),
-        url('../fonts/SpaceText-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Space Text';
-    src: url('../fonts/SpaceText-SemiBold.woff2') format('woff2'),
-        url('../fonts/SpaceText-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
+@font-face {font-family: 'HelveticaNowMicro-Regular';src: url('../webfonts/392D04_0_0.eot');src: url('../webfonts/392D04_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/392D04_0_0.woff2') format('woff2'),url('../webfonts/392D04_0_0.woff') format('woff'),url('../webfonts/392D04_0_0.ttf') format('truetype');}
 
-@font-face {
-    font-family: 'Space Text';
-    src: url('../fonts/SpaceText-Regular.woff2') format('woff2'),
-        url('../fonts/SpaceText-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'Space Text';
-    src: url('../fonts/SpaceText-Light.woff2') format('woff2'),
-        url('../fonts/SpaceText-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
+@font-face {font-family: 'HelveticaNowMicro-Bold';src: url('../webfonts/392D04_1_0.eot');src: url('../webfonts/392D04_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/392D04_1_0.woff2') format('woff2'),url('../webfonts/392D04_1_0.woff') format('woff'),url('../webfonts/392D04_1_0.ttf') format('truetype');}
 
-@font-face {
-    font-family: 'Space Text';
-    src: url('../fonts/SpaceText-Bold.woff2') format('woff2'),
-        url('../fonts/SpaceText-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
+@font-face {font-family: 'HelveticaNow';font-weight: normal;font-style: normal;src: url('../webfonts/392CFA_0_0.eot');src: url('../webfonts/392CFA_0_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/392CFA_0_0.woff2') format('woff2'),url('../webfonts/392CFA_0_0.woff') format('woff'),url('../webfonts/392CFA_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'HelveticaNowText-It';src: url('../webfonts/392CFA_1_0.eot');src: url('../webfonts/392CFA_1_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/392CFA_1_0.woff2') format('woff2'),url('../webfonts/392CFA_1_0.woff') format('woff'),url('../webfonts/392CFA_1_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'HelveticaNow';font-weight: bold;font-style: normal;src: url('../webfonts/392CFA_2_0.eot');src: url('../webfonts/392CFA_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/392CFA_2_0.woff2') format('woff2'),url('../webfonts/392CFA_2_0.woff') format('woff'),url('../webfonts/392CFA_2_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'HelveticaNow';font-weight: normal;font-style: italic;src: url('../webfonts/392CFA_3_0.eot');src: url('../webfonts/392CFA_3_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/392CFA_3_0.woff2') format('woff2'),url('../webfonts/392CFA_3_0.woff') format('woff'),url('../webfonts/392CFA_3_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'HelveticaNowDisplay-XBlk';src: url('../webfonts/392CFA_4_0.eot');src: url('../webfonts/392CFA_4_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/392CFA_4_0.woff2') format('woff2'),url('../webfonts/392CFA_4_0.woff') format('woff'),url('../webfonts/392CFA_4_0.ttf') format('truetype');}
+
