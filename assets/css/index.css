@@ -1238,7 +1238,7 @@ p > b.highlight {
         @mixin link;
         @mixin upper;
         @media (--tablet), (--desktop) {
-          font-size: 10px;
+          font-size: 13px;
         }
       }
     }
