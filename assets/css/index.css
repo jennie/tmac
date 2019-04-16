@@ -69,13 +69,13 @@
 }
 
 @define-mixin btn {
-  padding: 0.25rem 1.4rem;
+  padding: 1rem 1.6rem .8rem 1.6rem;
   font-size: calc(20px + .02vw);
   line-height: 34px;
 }
 @define-mixin btn-outline {
   border: solid 1px var(--color-blue);
-  padding: 0.25rem 1.4rem;
+  padding: 1rem 1.6rem .8rem 1.6rem;
 }
 a {
   color: var(--color-blue);
@@ -406,11 +406,7 @@ figure {
   }
 }
 
-#events {
-  @nest & .container {
-    display: block;
-  }
-}
+
 
 
 main {
@@ -420,6 +416,15 @@ main {
     grid-template-columns: 1fr 1fr;
     @media (--tablet), (--desktop) {
       grid-template-columns: repeat(2, 1fr);
+
+    }
+  }
+  @nest & .container.three-col {
+    display: grid;
+    grid-column-gap: var(--padding-primary);
+    grid-template-columns: repeat(3, 1fr);
+    @media (--tablet), (--desktop) {
+      grid-template-columns: repeat(3, 1fr);
 
     }
   }
@@ -600,10 +605,18 @@ section {
     }
   }
 }
-
 footer {
+  @media (--tablet), (--desktop) {
+    border-top: solid 2px #000;
+  }
+}
+footer .container {
+
   margin-left: auto;
   margin-right: auto;
+  @nest & a.btn {
+    color: #fff
+  }
   @nest & h3 {
     margin-top: 2rem;
     border-top: solid 2px #000;
@@ -613,7 +626,6 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: var(--padding-primary);
-    border-top: solid 2px #000;
     padding-top: var(--padding-primary);
     @nest & h3 {
       margin-top: 0;
@@ -1164,7 +1176,7 @@ p > b.highlight {
 }
 .header {
   flex-wrap: wrap;
-  padding: 10px;
+  padding: calc(var(--padding-primary)/2) var(--padding-primary);
   @media (--desktop) {
     flex-wrap: nowrap;
     max-width: 1200px;
@@ -1172,7 +1184,8 @@ p > b.highlight {
   grid-area: header;
   display: flex;
   margin: 0 auto;
-  width: 100%;
+
+  /* width: 100%; */
   flex: 1;
   align-content: center;
   align-items: center;
@@ -1196,6 +1209,7 @@ p > b.highlight {
   }
   @nest & .nav {
     width: 100%;
+    margin-left: calc(var(--padding-primary)*2);
     @media (--mini), (--mobile) {
       & .dropdown-toggle:before {
         content:'\2630';
@@ -1221,7 +1235,7 @@ p > b.highlight {
         align-self: center;
         display: flex;
         @media (--tablet), (--desktop) {
-          margin-left: auto;
+          /* margin-left: auto; */
         }
         @nest & .sign-up {
           @mixin btn-outline;
@@ -1846,5 +1860,30 @@ body#_article {
     }
   }
 }
+section#sponsors {
+  margin: 3rem auto 6rem auto;
+  @nest & div {
+    padding: 0 50px;
+    display: flex;
+  }
+  @nest & .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 6rem;
+  }
+  @nest & img, & svg {
+    margin: 0 0 2rem 0;
+    max-width: 200px;
+    max-height: 100px;
+    @media (--tablet), (--desktop) {
+      margin: 0;
+    }
+  }
+  @media (--tablet), (--desktop) {
+    grid-template-columns: repeat(3, 1fr);
 
+  }
+}
 
