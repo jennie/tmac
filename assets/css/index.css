@@ -1813,6 +1813,27 @@ body#_article {
   height: 100%;
 }
 #about {
+  @nest & .well {
+    background: #fff;
+    color: var(--color-blue);
+    padding: var(--padding-primary);
+    display: flex;
+    @nest & > * {
+      padding: 1%;
+      width: 30%;
+      flex: 1 1 auto;
+      align-items: flex-start;
+      margin: 0;
+    }
+    @nest & h4 {
+      margin: 0;
+    }
+    @nest & ul {
+      margin: 0;
+    }
+
+
+  }
   @nest & .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
