@@ -20,7 +20,7 @@
         <span itemprop="url" class="url" style="display:none;">https://www.tomediaarts.org/event/{{event.slug}}</span>
 
         <div class="when">{{event.humanTime}}
-          <if condition="{{ pageId !== 'index'}}">
+          <if condition="{{ event.past == true }}">
             <br>
             <small>{{ event.endDateTime.toLocaleString({ year: 'numeric' }) }}</small>
           </if>
