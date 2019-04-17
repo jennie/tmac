@@ -13,7 +13,7 @@ const slugify                 = require('slugify')
 const SpikeDatoCMS            = require('spike-datocms')
 const postcssMixins           = require('postcss-mixins')
 const CopyWebpackPlugin       = require('copy-webpack-plugin')
-const MarkdownIt              = require('markdown-it')({html: true})
+const MarkdownIt              = require('markdown-it')
 const markdownItTocAndAnchor  = require('markdown-it-toc-and-anchor').default
 const markdownItAttrs         = require('markdown-it-attrs')
 const markdownItContainer     = require('markdown-it-container')
@@ -25,12 +25,6 @@ const SpikeRecords                 = require('spike-records')
 const tz = "America/New_York"
 
 Settings.defaultZoneName = tz
-// md = require('markdown-it')({
-//   html: true,
-//   linkify: true,
-//   typographer: true,
-// });
-
 
 const md = new MarkdownIt()
 .use(markdownItTocAndAnchor, {
@@ -221,16 +215,16 @@ const Dato = new SpikeDatoCMS({
         // todo: check year here someday
         if (dateFns.isSameDay(zonedStart,zonedEnd) == true) {
           data.humanTime = `${data.startDate.toFormat('LLLL d')}`
-          console.log(data.title, data.humanTime)
+          // console.log(data.title, data.humanTime)
         }
         else if (dateFns.isSameMonth(zonedStart,zonedEnd) == true) {
           data.humanTime = `${data.startDate.toFormat('LLLL d')}–${data.endDate.toFormat('d')}`
-          console.log(data.title, data.humanTime)
+          // console.log(data.title, data.humanTime)
           return data
         }
         else {
           data.humanTime = `${data.startDate.toLocaleString({ month: 'long', day: 'numeric' })}–${data.endDate.toLocaleString({ month: 'long', day: 'numeric' })}`
-          console.log(data.title, data.humanTime)
+          // console.log(data.title, data.humanTime)
           return data
         }
 
