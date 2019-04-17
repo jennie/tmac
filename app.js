@@ -26,7 +26,7 @@ const tz = "America/New_York"
 
 Settings.defaultZoneName = tz
 
-const md = new MarkdownIt()
+const md = new MarkdownIt( {html: true})
 .use(markdownItTocAndAnchor, {
   tocFirstLevel: 3,
   anchorLink: true
