@@ -28,7 +28,9 @@
       <main>
         <section>
           <div md>{{ item.body }}</div>
-          <div>{{ item.appendix }}</div>
+          <if condition="item.appendix">
+            <div>{{ item.appendix }}</div>
+          </if>
         </section>
       </main>
     </div>
