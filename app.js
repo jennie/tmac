@@ -13,7 +13,7 @@ const slugify                 = require('slugify')
 const SpikeDatoCMS            = require('spike-datocms')
 const postcssMixins           = require('postcss-mixins')
 const CopyWebpackPlugin       = require('copy-webpack-plugin')
-const MarkdownIt              = require('markdown-it')
+const MarkdownIt              = require('markdown-it')({html: true})
 const markdownItTocAndAnchor  = require('markdown-it-toc-and-anchor').default
 const markdownItAttrs         = require('markdown-it-attrs')
 const markdownItContainer     = require('markdown-it-container')
@@ -25,8 +25,14 @@ const SpikeRecords                 = require('spike-records')
 const tz = "America/New_York"
 
 Settings.defaultZoneName = tz
+// md = require('markdown-it')({
+//   html: true,
+//   linkify: true,
+//   typographer: true,
+// });
 
-const md = new MarkdownIt( {html: true})
+
+const md = new MarkdownIt()
 .use(markdownItTocAndAnchor, {
   tocFirstLevel: 3,
   anchorLink: true
