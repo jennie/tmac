@@ -96,9 +96,11 @@ p, li, td, th {
 }
 
 h1, h2, h3, h4 {
-  font-family: HelveticaNowDisplay-XBd;
-  letter-spacing: .05rem;
-  font-weight: normal;
+  /* font-family: HelveticaNowDisplay-XBd; */
+
+  font-family: 'Space Text', 'HelveticaNowDisplay-XBd', Helvetica, sans-serif;
+  /* letter-spacing: .05rem; */
+  font-weight: bold;
 }
 
 body {
@@ -606,8 +608,9 @@ section {
   }
 }
 footer {
+  padding-top: 3rem;
   @media (--tablet), (--desktop) {
-    border-top: solid 2px #000;
+    border-top: solid 1px #000;
   }
 }
 footer .container {
@@ -647,7 +650,8 @@ footer .container {
   }
   @nest & h3 {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
+
   }
   @nest & section {
     margin: 0;
@@ -754,10 +758,10 @@ p.copyright {
   }
 }
 .btn-alt {
+  @mixin btn;
   @mixin btn-alt;
-  padding: .5rem 2rem;
+  @mixin upper;
   margin: 1rem auto;
-  font-size: 22px;
   text-decoration: none;
 
   &:hover {
@@ -1483,7 +1487,6 @@ body#space-rentals {
   @nest & .room {
     margin: 2rem 0;
     padding: 2rem 0;
-    border-bottom: solid 2px #eee;
     @nest & .room-header {
       @media (--tablet), (--desktop) {
         display: grid;

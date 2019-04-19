@@ -59,10 +59,24 @@
                 <h2>{{ space.name }}</h2>
                 <div class="room-header">
 
-                  <div class="description" md>{{ space.rentalDescription }}</div>
+                  <div class="description">
+                    <div md> {{ space.rentalDescription }} </div>
+
+
+                    <if condition="{{ space.availabilityCalendar }}">
+                      <p>
+                        <a href="{{ space.availabilityCalendar }}" class="btn btn-alt"><i class="fas fa-fw fa-calendar-alt"></i> View Availability</a>
+                      </p>
+                    </if>
+
+
+                  </div>
                   <if condition="space.photo">
                     <img src="//{{ dato._meta.imgixHost + space.photo.path }}?auto=compress,format" class="responsive" />
                   </if>
+
+
+
                 </div>
 
                 <h4>Capacity</h4>
@@ -106,11 +120,7 @@
                     </each>
                   </tbody>
                 </table>
-                <if condition="{{ space.availabilityCalendar }}">
-                  <p>
-                    <a href="{{ space.availabilityCalendar }}" class="btn btn-alt"><i class="fas fa-fw fa-calendar-alt"></i> View Availability</a>
-                  </p>
-                </if>
+
               </div>
 
             </if>
