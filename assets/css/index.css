@@ -1691,10 +1691,36 @@ body#_program {
 
 
 body#location {
+
   @nest & .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: var(--padding-primary)
+    @media (--tablet), (--desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: var(--padding-primary)
+    }
+  }
+}
+body#cafe-popup {
+  @media (--tablet), (--desktop) {
+    @nest & .header-action {
+      margin-bottom: var(--padding-primary);
+      text-align: center;
+
+    }
+    @nest & .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: var(--padding-primary)
+    }
+  }
+  @media (--tablet), (--desktop) {
+
+    @nest & .three-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: var(--padding-primary);
+
+    }
   }
 }
 body#news {
