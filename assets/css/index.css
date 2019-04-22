@@ -301,7 +301,6 @@ h4.divider {
   flex-wrap: wrap;
   background-color: var(--color-blue);
   padding: var(--padding-primary);
-
   & a {
     background-color: transparent;
     text-decoration: underline;
@@ -1708,6 +1707,11 @@ body#location {
   }
 }
 body#cafe-popup {
+
+  @nest & .map {
+    grid-column: span 3
+
+  }
   @media (--tablet), (--desktop) {
     @nest & .header-action {
       margin-bottom: var(--padding-primary);
