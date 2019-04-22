@@ -421,6 +421,7 @@ main {
   }
   @nest & .container.three-col {
     display: grid;
+    order: 2;
     grid-column-gap: var(--padding-primary);
     grid-template-columns: repeat(3, 1fr);
     @media (--tablet), (--desktop) {
@@ -1562,7 +1563,7 @@ body#_program {
     @nest & .details {
       order: 2
     }
-}
+  }
   @nest & #schedule {
     @nest & h4 {
       font-size: calc(14px + .02vw);
@@ -1707,30 +1708,54 @@ body#location {
   }
 }
 body#cafe-popup {
+  @nest & .container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
 
+  }
+  @nest & .header-action {
+    grid-row: 1;
+  }
+  @nest & .content {
+    grid-row: 2;
+  }
+  @nest & .content {
+    grid-row: 3;
+  }
+  @nest & .images {
+    grid-row: 4;
+  }
   @nest & .map {
-    grid-column: span 3
 
+    display: none;
   }
   @media (--tablet), (--desktop) {
     @nest & .header-action {
+      grid-row: 1;
       margin-bottom: var(--padding-primary);
       text-align: center;
 
     }
-    @nest & .content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: var(--padding-primary)
-    }
-  }
-  @media (--tablet), (--desktop) {
+    @nest & .images {
 
-    @nest & .three-col {
+      grid-row: 2;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-column-gap: var(--padding-primary);
 
+    }
+    @nest & .content {
+      grid-row: 3;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: var(--padding-primary)
+    }
+    @nest & .map {
+      display: block;
+      grid-row: 4;
+      grid-column: span 3
     }
   }
 }
