@@ -300,7 +300,7 @@ h4.divider {
   flex: 1 1 auto;
   flex-wrap: wrap;
   background-color: var(--color-blue);
-  padding: var(--padding-primary) 0;
+  padding: var(--padding-primary);
 
   & a {
     background-color: transparent;
@@ -412,12 +412,12 @@ figure {
 
 main {
   @nest & .container.two-col {
+    grid-template-columns: repeat(1fr);
+
     display: grid;
     grid-column-gap: var(--padding-primary);
-    grid-template-columns: 1fr 1fr;
     @media (--tablet), (--desktop) {
       grid-template-columns: repeat(2, 1fr);
-
     }
   }
   @nest & .container.three-col {
@@ -1556,6 +1556,14 @@ body#index {
   }
 }
 body#_program {
+  @nest & .details {
+    order: -1
+  }
+  @media (--tablet), (--desktop) {
+    @nest & .details {
+      order: 2
+    }
+}
   @nest & #schedule {
     @nest & h4 {
       font-size: calc(14px + .02vw);

@@ -27,7 +27,7 @@
       <section>
         <div class="container two-col">
 
-          <div>
+          <div class="description">
             <div md>
               {{ item.description }}
             </div>
@@ -41,83 +41,84 @@
                     <b>{{ DateTime.fromISO(highlight.startDateTime).toLocaleString(DateTime.DATETIME_MED) }}–{{ DateTime.fromISO(highlight.endDateTime).toLocaleString(DateTime.TIME_SIMPLE) }}</b>
                   </span><br>
 
-                  <a href="/event/{{ highlight.slug }}">{{ highlight.title }}</a></p>
+                  <a href="/event/{{ highlight.slug }}">{{ highlight.title }}</a>
+                </p>
 
-                </each>
+              </each>
+            </if>
+
+
+          </div>
+          <div class="details">
+
+
+            <div class="desc">
+              <if condition="item.member[0] && item.presenter">
+                <p>
+                  <b>Co-presented by {{ item.member[0].name }}</b>
+                </p>
+              </if>
+            </div>
+
+
+            <p> <a href="{{ item.link }}"> Web site</a> </p>
+            <div class="when">
+              <if condition="{{ item.startDate }}">
+                <p class="date">
+                  <span class="fas fa-fw fa-calendar-alt"></span>
+                  <if condition="dateFns.isSameDay(item.startDateParsed,item.endDateParsed) == true">
+                    <span class="date">
+                      {{ df(item.startDate, "UTC:mmmm d", true)}}
+                    </span>
+                  </if>
+                  <elseif condition="dateFns.isSameMonth(item.startDateParsed,item.endDateParsed) == true">
+                    <span class="date">
+                      {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:d", true)}}
+                    </span>
+                  </elseif>
+                  <else>
+                    <span class="date">
+                      {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:mmmm d", true)}}
+                    </span>
+                  </else>
+                </p>
               </if>
 
-
+              <if condition="{{ item.hours }}">
+                <p class="hours">
+                  <span class="fas fa-fw fa-clock"></span>
+                  <span>{{ item.hours }}</span>
+                </p>
+              </if>
+              <if condition="{{ item.ticketPrice }}">
+                <p class="tickets">
+                  <span class="fas fa-fw fa-ticket-alt"></span>
+                  <span>{{ item.ticketPrice }}</span>
+                </p>
+              </if>
             </div>
-            <div>
 
-
-              <div class="desc">
-                <if condition="item.member[0] && item.presenter">
-                  <p>
-                    <b>Co-presented by {{ item.member[0].name }}</b>
-                  </p>
-                </if>
+            <if condition="{{item.sessions[0]}}">
+              <div id="schedule">
+                <h3>Schedule</h3>
+                <each loop="session in item.sessions">
+                  <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
+                    <h4>{{session.work.title}}</h4>
+                    <!-- <p>{{df(dateFns.subHours(session.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}}
+                    <if condition="{{ session.location[0] }}">
+                    ({{session.location[0].name}})
+                  </if>
+                </p> -->
               </div>
-
-
-              <p> <a href="{{ item.link }}"> Web site</a> </p>
-              <div class="when">
-                <if condition="{{ item.startDate }}">
-                  <p class="date">
-                    <span class="fas fa-fw fa-calendar-alt"></span>
-                    <if condition="dateFns.isSameDay(item.startDateParsed,item.endDateParsed) == true">
-                      <span class="date">
-                        {{ df(item.startDate, "UTC:mmmm d", true)}}
-                      </span>
-                    </if>
-                    <elseif condition="dateFns.isSameMonth(item.startDateParsed,item.endDateParsed) == true">
-                      <span class="date">
-                        {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:d", true)}}
-                      </span>
-                    </elseif>
-                    <else>
-                      <span class="date">
-                        {{ df(item.startDate, "UTC:mmmm d", true)}}–{{ df(item.endDate, "UTC:mmmm d", true)}}
-                      </span>
-                    </else>
-                  </p>
-                </if>
-
-                <if condition="{{ item.hours }}">
-                  <p class="hours">
-                    <span class="fas fa-fw fa-clock"></span>
-                    <span>{{ item.hours }}</span>
-                  </p>
-                </if>
-                <if condition="{{ item.ticketPrice }}">
-                  <p class="tickets">
-                    <span class="fas fa-fw fa-ticket-alt"></span>
-                    <span>{{ item.ticketPrice }}</span>
-                  </p>
-                </if>
-              </div>
-
-              <if condition="{{item.sessions[0]}}">
-                <div id="schedule">
-                  <h3>Schedule</h3>
-                  <each loop="session in item.sessions">
-                    <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
-                      <h4>{{session.work.title}}</h4>
-                      <!-- <p>{{df(dateFns.subHours(session.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}}
-                      <if condition="{{ session.location[0] }}">
-                      ({{session.location[0].name}})
-                    </if>
-                  </p> -->
-                </div>
-              </each>
-            </div>
-          </if>
-
-        </div>
+            </each>
+          </div>
+        </if>
 
       </div>
-    </section>
-  </main>
+
+    </div>
+  </section>
+</main>
 </block>
 
 <block name="javascript">
