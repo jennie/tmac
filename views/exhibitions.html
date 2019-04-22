@@ -6,7 +6,7 @@
         <span class="fas fa-fw fa-calendar-alt"></span>
         <a href="webcal://tomediaarts.org/ical.ics">Subscribe to calendar</a>
       </p>
-      <div class="event-grid exhibitions">
+      <div class="event-grid exhibitions upcoming">
         <each loop="exhibition in dato.program">
           <if condition="exhibition.past !== true">
             <div class="event exhibition" style='background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&w=600&balph=60&blend={{ exhibition.onNow == true ? "6151FF" : "444444"}}); background-size: cover;' data-startDate="{{ Date.parse(exhibition.startDate) }}" class='{{ exhibition.canceled == true ? "canceled" : ""}}' >
