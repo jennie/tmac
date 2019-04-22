@@ -2,6 +2,14 @@
   <block name="title">
     <title>{{ item.title }} on {{ df(item.startDate, "UTC:mmm d")}}</title>
   </block>
+  <block name="og">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@tomediaarts">
+    <meta name="twitter:title" content="{{ item.title }}">
+    <meta name="twitter:description" content="{{ item.summary != undefined ? item.summary : item.description }}">
+    <meta name="twitter:image" content="https://{{ dato._meta.imgixHost + item.featureImage.path }}">
+  </block>
+
   <block name="content">
     <header style="background-image:url('//{{ dato._meta.imgixHost + item.featureImage.path }}?auto=compress'); background-size: cover;">
       <h1> Toronto Media Arts Centre </h1>
