@@ -1708,7 +1708,7 @@ body#location {
   }
 }
 body#cafe-popup {
-  @nest & .container {
+  @nest & main > .container {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto;
