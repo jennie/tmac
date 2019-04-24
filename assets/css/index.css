@@ -1831,7 +1831,7 @@ body#_article {
       & div > p:first-of-type {
         font-size: 22px;
         color: #000;
-        font-family: 'HelveticaNow', 'Helvetica Neue', Helvetica, sans-serif;
+        font-family: 'Space Text', 'HelveticaNowDisplay-XBd', Helvetica, sans-serif;
         font-weight: 700;
       }
       & p {
