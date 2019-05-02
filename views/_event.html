@@ -11,7 +11,7 @@
   </block>
   <block name="content">
     <div class="event-detail-grid">
-      <header style="background-image:url('//{{ dato._meta.imgixHost + item.featureImage.path }}?bm=normal&balph=60&blend=322D5A&auto=compress'); background-size: cover;">
+      <header style="background-image:url('//{{ dato._meta.imgixHost + item.featureImage.path }}?auto=compress'); background-size: cover;">
         <h1> Toronto Media Arts Centre </h1>
       </header>
       <main>
@@ -68,11 +68,19 @@
           <div md>
             {{ item.description }}
           </div>
-
           <div class="desc">
             <if condition="item.member[0] && item.presenter">
               <p>
-                <b>Presented by {{ item.member[0].name }}</b>
+                <b>Co-presented by 
+                <each loop='member in item.member'>
+                  <span class="space">{{ member.name }}</span>
+                </each>
+                </b>        
+              </p>
+            </if>
+            <if condition="item.externalCoPresenters">
+              <p>
+                <b>And {{ item.externalCoPresenters }}</b>        
               </p>
             </if>
           </div>
