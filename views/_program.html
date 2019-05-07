@@ -11,7 +11,8 @@
   </block>
 
   <block name="content">
-    <header style="background-image:url('//{{ dato._meta.imgixHost + item.featureImage.path }}?auto=compress'); background-size: cover;">
+    <header
+      style="background-image:url('//{{ dato._meta.imgixHost + item.featureImage.path }}?auto=compress'); background-size: cover;">
       <h1> Toronto Media Arts Centre </h1>
     </header>
     <main>
@@ -40,36 +41,13 @@
               {{ item.description }}
             </div>
 
-            <h3>Related Programs</h3>
-            <if condition="{{item.highlights[0]}}">
-              <each loop="highlight in item.highlights">
-
-                <p class="highlight" data-startDate='{{ Date.parse(highlight.startDateTime) }}'>
-                  <span class="date">
-                    <b>{{ DateTime.fromISO(highlight.startDateTime).toLocaleString(DateTime.DATETIME_MED) }}–{{ DateTime.fromISO(highlight.endDateTime).toLocaleString(DateTime.TIME_SIMPLE) }}</b>
-                  </span><br>
-
-                  <a href="/event/{{ highlight.slug }}">{{ highlight.title }}</a>
-                </p>
-
-              </each>
-            </if>
-
+            <p> <a class="btn btn-primary" href="{{ item.link }}"> Web site</a> </p>
 
           </div>
           <div class="details">
 
 
-            <div class="desc">
-              <if condition="item.member[0] && item.presenter">
-                <p>
-                  <b>Co-presented by {{ item.member[0].name }}</b>
-                </p>
-              </if>
-            </div>
 
-
-            <p> <a href="{{ item.link }}"> Web site</a> </p>
             <div class="when">
               <if condition="{{ item.startDate }}">
                 <p class="date">
@@ -106,6 +84,66 @@
               </if>
             </div>
 
+
+            <div class="desc">
+
+
+              <if condition="item.member[0] && item.presenter">
+                <h3>Co-presented by</h3>
+                <div class="copresenters">
+                  <each loop='member in item.member'>
+
+                    <img src="https://{{ dato._meta.imgixHost + member.logo.path }}?auto=compress,format"
+                      alt="{{ member.logo.alt ? member.logo.alt : member.name }}" width="200">
+
+                  </each>
+                </div>
+              </if>
+              <if condition="item.externalCoPresenters">
+                <p>
+                  <b>And {{ item.externalCoPresenters }}</b>
+                </p>
+              </if>
+
+
+            </div>
+
+
+
+
+            <if condition="{{item.highlights[0]}}">
+              <h3>Related Programs</h3>
+
+              <each loop="highlight in item.highlights">
+
+                <if condition="highlight.programType">
+
+                  <p class="highlight" data-startDate='{{ Date.parse(highlight.startDate) }}'>
+
+                    <span class="date">
+                      {{ highlight.humanTime }}
+                    </span>
+                    <br>
+
+
+                    <a href="/program/{{ highlight.slug }}">{{ highlight.title }}</a>
+                    <small>{{highlight.programType}}</small>
+                  </p>
+
+                </if>
+                <else>
+                  <p class="highlight" data-startDate='{{ Date.parse(highlight.startDateTime) }}'>
+                    <span class="date">
+                      <b>{{ DateTime.fromISO(highlight.startDateTime).toLocaleString(DateTime.DATETIME_MED) }}–{{ DateTime.fromISO(highlight.endDateTime).toLocaleString(DateTime.TIME_SIMPLE) }}</b>
+                    </span><br>
+
+                    <a href="/event/{{ highlight.slug }}">{{ highlight.title }}</a>
+                  </p>
+                </else>
+
+              </each>
+            </if>
+
             <if condition="{{item.sessions[0]}}">
               <div id="schedule">
                 <h3>Schedule</h3>
@@ -117,25 +155,32 @@
                     ({{session.location[0].name}})
                   </if>
                 </p> -->
+                  </div>
+                </each>
               </div>
-            </each>
+            </if>
+
           </div>
-        </if>
 
-      </div>
+        </div>
+      </section>
+    </main>
+  </block>
 
-    </div>
-  </section>
-</main>
-</block>
+  <block name="javascript">
+    <script src="/js/vendor/tinysort.js"></script>
 
-<block name="javascript">
-  <script src="/js/vendor/tinysort.js"></script>
+    <script>
+      tinysort('.session', {
+        data: 'startdate',
+        order: 'asc'
+      });
+      tinysort('.highlight', {
+        data: 'startdate',
+        order: 'asc'
+      });
 
-  <script>
-    tinysort('.session',{data:'startdate', order:'asc'});
-    tinysort('.highlight',{data:'startdate', order:'asc'});
-  </script>
-</block>
+    </script>
+  </block>
 
 </extends>

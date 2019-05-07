@@ -1571,6 +1571,29 @@ body#_program {
       color: var(--color-blue);
     }
   }
+  @nest & .copresenters {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-columns: 1fr;
+    grid-row-gap: var(--padding-primary);
+    @nest & img {
+      width: 160px;
+    }
+
+  }
+  @nest & .details  {
+    @nest & h3 {
+    margin-top: calc(var(--padding-primary)*2);
+    padding-bottom: calc(var(--padding-primary)/3);
+    border-bottom: solid 2px #000;
+
+    }
+    @nest & .highlight small {
+      padding-left: 4px;
+      text-transform: uppercase
+
+    }
+  }
 }
 #social {
   font-size: 36px;
