@@ -13,18 +13,17 @@
 
               <a href="/program/{{ exhibition.slug }}">
                 <div class="desc">
-                  <div class="title">
-                    <if condition="exhibition.member[0] && exhibition.presenter">
-                      <p class="presenter">{{ exhibition.member[0].name }} &amp; {{ exhibition.presenter }}</p>
-                    </if>
-                    <elseif condition="exhibition.member[0]">
-                      <p class="presenter">{{ exhibition.member[0].name }}</p>
-                    </elseif>
-                    <elseif condition="exhibition.presenter">
-                      <p class="presenter">{{ exhibition.presenter }}</p>
-                    </elseif>
-                  </div>
-                  <h3> {{ exhibition.title }} </h3>
+                    <div class="title">
+                      <!-- ARTIST -->
+                      <if condition="exhibition.presenter">
+                        <p class="presenter">{{ exhibition.presenter }}</p>
+                      </if>
+                      <elseif condition="exhibition.member[0]">
+                        <p class="presenter">{{ exhibition.member[0].name }}</p>
+                      </elseif>
+                      
+                    </div>
+                    <h3> {{ exhibition.title }} </h3>
 
                   <div class="when">
                     <p class="date">
