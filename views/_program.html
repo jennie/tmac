@@ -87,7 +87,10 @@
 
             <div class="desc">
 
-
+              <if condition="item.primaryPresenter">
+                <h3>Presented by</h3>
+                <p> {{ item.primaryPresenter }} </p>
+              </if>
               <if condition="item.member[0] && item.presenter">
                 <h3>Co-presented by</h3>
                 <div class="copresenters">
