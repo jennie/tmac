@@ -198,6 +198,7 @@
       grid-row-gap: 10px;
       margin: 3rem 0;
       grid-auto-rows: repeat(3, 1fr);
+
     }
 
     .event-grid a:hover {
@@ -221,16 +222,17 @@
     }
 
     .event-grid .event {
-      grid-template-areas: "image desc";
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      height: 100%;
-      position: relative;
+      
+          transform: rotate(90deg);
+
+          /* transform-origin:bottom left; */
+
+          /* position:absolute;
+          top:-100vw;
+
+          height:100vw;
+          width:100vh; */
+      /* position: relative; */
     }
 
     .event-grid .exhibition a .desc .when p {
@@ -238,31 +240,10 @@
     }
 
     .event-grid .event a {
-      grid-template-areas: "image desc";
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      height: 100%;
-      position: relative;
+
     }
 
-    .event-grid .event a {
-      grid-template-areas: "image desc";
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      height: 100%;
-      position: relative;
-    }
-
+  
     .event-grid .event a .register {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -365,14 +346,7 @@
 
     #events_today {
       background: #000;
-      transform: rotate(90deg);
-      transform-origin:bottom left;
-
-      position:absolute;
-      top:-100vw;
-
-      height:100vw;
-      width:100vh;
+      
     }
 
     @media (min-width:1025px) {
@@ -956,8 +930,9 @@
         items: 3,
         speed: 300,
         slideBy: 1,
+        autoplayDirection: 'backward',
         autoplay: true,
-        axis: 'vertical',
+        // axis: 'vertical',
         controls: false,
         mode: 'carousel',
         nav: false,
