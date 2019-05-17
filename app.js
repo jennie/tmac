@@ -219,7 +219,7 @@ const Dato = new SpikeDatoCMS({
         }
         else if (dateFns.isSameMonth(zonedStart,zonedEnd) == true) {
           data.humanTime = `${data.startDate.toFormat('LLLL d')}–${data.endDate.toFormat('d')}`
-          // console.log(data.title, data.humanTime)
+          console.log(data.title, data.humanTime, zonedEnd)
           return data
         }
         else {
