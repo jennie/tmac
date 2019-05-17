@@ -56,14 +56,14 @@
     p{font-family:'Source Sans Pro',sans-serif;}
     h3{font-family:'Space Text',sans-serif;font-weight:700;}
     body{height:100%;width:100%;position:relative;overflow-x:hidden;padding:0;margin:0;}
-    .event-grid{display:grid;grid-column-gap:10px;grid-row-gap:10px;margin:3rem 0;grid-auto-rows:1fr;}
+    .event-grid{display:grid;grid-column-gap:10px;grid-row-gap:10px;margin:3rem 0;grid-auto-rows:repeat(3, 1fr);}
     .event-grid a:hover{text-decoration:none;}
-    @media (min-width:768px) and (max-width:1024px){
-      .event-grid{grid-template-columns:1fr 1fr;}
+
+    .event-grid{
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: 1fr;
     }
-    @media (min-width:1025px){
-      .event-grid{grid-template-columns:1fr 1fr 1fr;}
-    }
+
     .event-grid>div{padding:10px;}
     .event-grid .exhibition a .desc .when p{font-size:calc(10px + .5vw);}
     .event-grid .event a{grid-template-areas:"image desc";display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%;position:relative;}
@@ -111,19 +111,6 @@
     /*! CSS Used from: https://calendly.com/assets/external/widget.css */
     body{height:100%;}
     body{overflow:auto;}
-    /*! CSS Used from: https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/tiny-slider.css */
-    .tns-outer{padding:0!important;}
-    .tns-slider{-webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s;}
-    .tns-slider>div{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-    .tns-horizontal.tns-subpixel{white-space:nowrap;}
-    .tns-horizontal.tns-subpixel>div{display:inline-block;vertical-align:top;white-space:normal;}
-    .tns-ovh{overflow:hidden;}
-    /*! CSS Used from: Embedded */
-    #tns1 > .tns-item{font-size:16px;}
-    #tns1{font-size:0px;}
-    #tns1-iw{transition-duration:0.3s;}
-    #tns1{width:calc(1200%);transition-duration:0.3s;}
-    #tns1 > .tns-item{width:calc(4.16667%);}
     /*! CSS Used fontfaces */
     @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;src:local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7qsDJB9cme_xc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
     @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;src:local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7jsDJB9cme_xc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
@@ -283,11 +270,11 @@
     tinysort('.event-grid .exhibition',{data:'startdate', order:'asc'});
     tinysort('.event-grid .daily',{data:'startdate', order:'asc'});
     var slider = tns({
-      items: 2,
+      items: 3,
       speed: 300,
       slideBy: 1,
       autoplay: true,
-      // axis: 'vertical',
+      axis: 'vertical',
       controls: false,
       mode: 'carousel',
       nav: false,
