@@ -191,22 +191,12 @@
       padding: 0;
       margin: 0;
     }
+.event-grid {
+        height: 100vh;
 
-    .event-grid {
-      display: grid;
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
-      margin: 3rem 0;
-      grid-auto-rows: 30%;
-
-    }
-
+}
     .event-grid a:hover {
       text-decoration: none;
-    }
-
-    .event-grid {
-      
     }
 
     body {
@@ -221,8 +211,9 @@
     }
 
     .event-grid .event {
+      height: 640px;
       
-      flex: 1 1 auto;
+      /* flex: 1 1 auto; */
           /* transform: rotate(90deg); */
 
           /* transform-origin:bottom left; */
@@ -237,10 +228,6 @@
 
     .event-grid .exhibition a .desc .when p {
       font-size: calc(10px + .5vw);
-    }
-
-    .event-grid .event a {
-
     }
 
   
@@ -349,11 +336,7 @@
       
     }
 
-    @media (min-width:1025px) {
-      #events_today {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-    }
+   
 
     #events_today .container {
       width: 100%;
@@ -365,24 +348,7 @@
       display: none;
     }
 
-    #events_today .event-grid {
-      margin: 0;
-      height: 100vh;
-      display: grid;
-      grid-template-rows: repeat(3, 1fr)
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      /* height: 100vh; */
-    }
-
-    #events_today .event-grid .event {
-
-    }
-
-    #events_today .event-grid .event {
-      /* height: 100vh; */
-    }
-
+ 
     #events_today .event-grid .event p.thisweek {
       font-size: 56px;
     }
@@ -913,7 +879,7 @@
   </main>
 
   <block name='javascript'>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/min/tiny-slider.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
     <script src="/js/vendor/tinysort.js"></script>
     <script>
       tinysort('.event-grid .exhibition', {
@@ -927,9 +893,10 @@
       var slider = tns({
         items: 3,
         speed: 300,
+        gutter: 10,
         slideBy: 1,
         // autoplayDirection: 'backward',
-        // autoplay: true,
+        autoplay: true,
         axis: 'vertical',
         controls: false,
         mode: 'carousel',
