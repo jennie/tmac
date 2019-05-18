@@ -12,7 +12,7 @@
   </block>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/tiny-slider.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
   <style media="screen">
     /*! CSS Used from: https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css */
     *,
@@ -212,6 +212,7 @@
 
     .event-grid .event {
       height: 640px;
+      overflow: hidden;
       
       /* flex: 1 1 auto; */
           /* transform: rotate(90deg); */
@@ -769,7 +770,7 @@
     <each loop='exhibition in dato.program'>
       <if condition='exhibition.past !== true'>
         <div class="event exhibition"
-          style="background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=70&blend={{ exhibition.canceled == true ? 'eeeeee' : '159159'}}); background-size: cover;"
+          style="background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=80&blend={{ exhibition.canceled == true ? 'eeeeee' : '159159'}}); background-size: cover;"
           data-startDate="{{ Date.parse(exhibition.startDate) }}"
           class="{{ exhibition.canceled == true ? 'canceled' : ''}}">
           <a href="/program/{{ exhibition.slug }}">
@@ -797,12 +798,12 @@
                     <span>{{ exhibition.hours }}</span>
                   </p>
                 </if>
-                <if condition="{{ exhibition.ticketPrice }}">
+                <!-- <if condition="{{ exhibition.ticketPrice }}">
                   <p class="tickets">
                     <span class="fas fa-fw fa-ticket-alt"></span>
                     <span>{{ exhibition.ticketPrice }}</span>
                   </p>
-                </if>
+                </if> -->
               </div>
               <div class="register">
                 <if condition="dateFns.isAfter(exhibition.startDateParsed, dateFns.parseISO(nowParsed)) == true">
@@ -892,8 +893,7 @@
       });
       var slider = tns({
         items: 3,
-        speed: 300,
-        gutter: 10,
+        speed: 500,
         slideBy: 1,
         // autoplayDirection: 'backward',
         autoplay: true,
