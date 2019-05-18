@@ -197,8 +197,7 @@
       grid-column-gap: 10px;
       grid-row-gap: 10px;
       margin: 3rem 0;
-      grid-auto-rows: repeat(3, 1fr);
-      height: 100vh;
+      grid-auto-rows: 30%;
 
     }
 
@@ -207,8 +206,7 @@
     }
 
     .event-grid {
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: 1fr;
+      
     }
 
     body {
@@ -224,6 +222,7 @@
 
     .event-grid .event {
       
+      flex: 1 1 auto;
           /* transform: rotate(90deg); */
 
           /* transform-origin:bottom left; */
@@ -368,18 +367,16 @@
 
     #events_today .event-grid {
       margin: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr)
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       /* height: 100vh; */
     }
 
     #events_today .event-grid .event {
-      -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
+
     }
 
     #events_today .event-grid .event {
@@ -916,7 +913,7 @@
   </main>
 
   <block name='javascript'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/min/tiny-slider.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/min/tiny-slider.js"></script> -->
     <script src="/js/vendor/tinysort.js"></script>
     <script>
       tinysort('.event-grid .exhibition', {
@@ -932,7 +929,7 @@
         speed: 300,
         slideBy: 1,
         // autoplayDirection: 'backward',
-        autoplay: true,
+        // autoplay: true,
         axis: 'vertical',
         controls: false,
         mode: 'carousel',
