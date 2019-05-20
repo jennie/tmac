@@ -214,6 +214,7 @@
       /* height: 640px; */
       height: 50%;
       overflow: hidden;
+      border-bottom: solid 5px #fff;
       
       /* flex: 1 1 auto; */
           /* transform: rotate(90deg); */
@@ -227,6 +228,9 @@
           width:100vh; */
       /* position: relative; */
     }
+       .event-grid .event > * {
+          text-shadow: 1px 1px 1px #000
+        }
 
     .event-grid .exhibition a .desc .when p {
       font-size: calc(10px + .5vw);
@@ -238,9 +242,9 @@
       -ms-flex-pack: justify;
       justify-content: space-between;
       margin-top: auto;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      
+      
+      display: block;
       -ms-flex-line-pack: end;
       align-content: flex-end;
       position: absolute;
@@ -266,9 +270,9 @@
     }
 
     .event-grid .event a .desc .title {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      
+      
+      display: block;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
@@ -311,9 +315,9 @@
 
     .header {
       grid-area: header;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      
+      
+      display: block;
       margin: 0 auto;
       width: 100%;
       -webkit-box-flex: 1;
@@ -360,9 +364,9 @@
     }
 
     #events_today .event-grid .event .title {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      
+      
+      display: block;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
@@ -378,9 +382,9 @@
     }
 
     #events_today .event-grid .event .title .spaces {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      
+      
+      display: block;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
     }
@@ -400,9 +404,9 @@
     }
 
     #events_today .event-grid .event a .desc {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
+      
+      
+      display: block;
  
       flex-wrap: wrap;
  
@@ -773,7 +777,9 @@
     <each loop='exhibition in dato.program'>
       <if condition='exhibition.past !== true'>
         <div class="event exhibition"
-          style="background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=80&blend={{ exhibition.canceled == true ? 'eeeeee' : '159159'}}); background-size: cover;"
+          style="background-image:
+          url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=30&blend={{ exhibition.canceled == true ? 'eeeeee' : '3663F4'}});
+          background-size: cover;"
           data-startDate="{{ Date.parse(exhibition.startDate) }}"
           class="{{ exhibition.canceled == true ? 'canceled' : ''}}">
           <a href="/program/{{ exhibition.slug }}">
@@ -824,10 +830,12 @@
     <each loop='event in dato.event'>
       <if condition='event.past !== true'>
         <div class="event daily"
-          style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=70&blend={{ event.canceled == true ? 'eeeeee' : '322D5A'}}'); background-size: cover;"
+          style="background-image:
+          url('//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=70&blend={{ event.canceled == true ? 'eeeeee' : '3663F4'}}');
+          background-size: cover;"
           data-startDate="{{ Date.parse(event.startDateTime) }}" class="{{ event.canceled == true ? 'canceled' : ''}}">
 
-          <a href="" style="display: flex;">
+          <a href="" style="display: block;">
             <div class="desc">
               <div class="title">
                 <if condition="event.canceled == true">
@@ -883,7 +891,7 @@
   </main>
 
   <block name='javascript'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script> -->
     <script src="/js/vendor/tinysort.js"></script>
     <script>
       tinysort('.event-grid .exhibition', {
