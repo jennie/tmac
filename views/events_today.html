@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <block name="meta">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,169 +10,769 @@
   <block name="title">
     <title>Toronto Media Arts Centre</title>
   </block>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/tiny-slider.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
   <style media="screen">
     /*! CSS Used from: https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css */
-    *,::after,::before{box-sizing:border-box;}
-    main{display:block;}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff;}
-    [tabindex="-1"]:focus{outline:0!important;}
-    h3{margin-top:0;margin-bottom:.5rem;}
-    p{margin-top:0;margin-bottom:1rem;}
-    a{color:#007bff;text-decoration:none;background-color:transparent;}
-    a:hover{color:#0056b3;text-decoration:underline;}
-    a:not([href]):not([tabindex]){color:inherit;text-decoration:none;}
-    a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover{color:inherit;text-decoration:none;}
-    a:not([href]):not([tabindex]):focus{outline:0;}
-    img{vertical-align:middle;border-style:none;}
-    svg{overflow:hidden;vertical-align:middle;}
-    h3{margin-bottom:.5rem;font-weight:500;line-height:1.2;}
-    h3{font-size:1.75rem;}
-    .container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
-    @media (min-width:576px){
-      .container{max-width:540px;}
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
     }
-    @media (min-width:768px){
-      .container{max-width:720px;}
+
+    main {
+      display: block;
     }
-    @media (min-width:992px){
-      .container{max-width:960px;}
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      text-align: left;
+      background-color: #fff;
     }
-    @media (min-width:1200px){
-      .container{max-width:1140px;}
+
+    [tabindex="-1"]:focus {
+      outline: 0 !important;
     }
-    @media print{
-      *,::after,::before{text-shadow:none!important;box-shadow:none!important;}
-      a:not(.btn){text-decoration:underline;}
-      img{page-break-inside:avoid;}
-      h3,p{orphans:3;widows:3;}
-      h3{page-break-after:avoid;}
-      body{min-width:992px!important;}
-      .container{min-width:992px!important;}
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: .5rem;
     }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    a:not([href]):not([tabindex]) {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:not([href]):not([tabindex]):focus,
+    a:not([href]):not([tabindex]):hover {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:not([href]):not([tabindex]):focus {
+      outline: 0;
+    }
+
+    img {
+      vertical-align: middle;
+      border-style: none;
+    }
+
+    svg {
+      overflow: hidden;
+      vertical-align: middle;
+    }
+
+    h3 {
+      margin-bottom: .5rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media (min-width:576px) {
+      .container {
+        max-width: 540px;
+      }
+    }
+
+    @media (min-width:768px) {
+      .container {
+        max-width: 720px;
+      }
+    }
+
+    @media (min-width:992px) {
+      .container {
+        max-width: 960px;
+      }
+    }
+
+    @media (min-width:1200px) {
+      .container {
+        max-width: 1140px;
+      }
+    }
+
+    @media print {
+
+      *,
+      ::after,
+      ::before {
+        text-shadow: none !important;
+        box-shadow: none !important;
+      }
+
+      a:not(.btn) {
+        text-decoration: underline;
+      }
+
+      img {
+        page-break-inside: avoid;
+      }
+
+      h3,
+      p {
+        orphans: 3;
+        widows: 3;
+      }
+
+      h3 {
+        page-break-after: avoid;
+      }
+
+      body {
+        min-width: 992px !important;
+      }
+
+      .container {
+        min-width: 992px !important;
+      }
+    }
+
     /*! CSS Used from: https://d33wubrfki0l68.cloudfront.net/css/70579677042c67034feb32f074ccf8110e6323e4/css/index.css */
-    a{color:#0b0bec;}
-    a:active,a:hover{color:#2323ee;}
-    p{font-family:'Source Sans Pro',sans-serif;}
-    h3{font-family:'Space Text',sans-serif;font-weight:700;}
-    body{height:100%;width:100%;position:relative;overflow-x:hidden;padding:0;margin:0;}
-    .event-grid{display:grid;grid-column-gap:10px;grid-row-gap:10px;margin:3rem 0;grid-auto-rows:1fr;}
-    .event-grid a:hover{text-decoration:none;}
-    @media (min-width:768px) and (max-width:1024px){
-      .event-grid{grid-template-columns:1fr 1fr;}
+    a {
+      color: #0b0bec;
     }
-    @media (min-width:1025px){
-      .event-grid{grid-template-columns:1fr 1fr 1fr;}
+
+    a:active,
+    a:hover {
+      color: #2323ee;
     }
-    .event-grid>div{padding:10px;}
-    .event-grid .exhibition a .desc .when p{font-size:calc(10px + .5vw);}
-    .event-grid .event a{grid-template-areas:"image desc";display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%;position:relative;}
-    .event-grid .event a .register{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-top:auto;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:end;align-content:flex-end;}
-    .event-grid .event a .register .thisweek{background-color:rgba(0,0,0,.9);color:#fff;margin:0;text-transform:uppercase;letter-spacing:.05rem;font-weight:400;font-family:"Space Text",sans-serif;padding:0 8px;}
-    .event-grid .event a .desc{grid-area:desc;color:#fff;}
-    .event-grid .event a .desc .title{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-wrap:wrap;flex-wrap:wrap;}
-    .event-grid .event a .desc .title p{margin:0;text-transform:uppercase;letter-spacing:.05rem;font-size:calc(14px + .05vw);}
-    .event-grid .event a .desc p{margin:0 0 .7rem 0;font-size:calc(14px + .5vw);}
-    .event-grid .event a .desc p:last-child{margin:0;}
-    .header{-ms-flex-wrap:wrap;flex-wrap:wrap;padding:10px;}
-    @media (min-width:1025px){
-      .header{-ms-flex-wrap:nowrap;flex-wrap:nowrap;max-width:1200px;}
+
+    p {
+      font-family: 'Source Sans Pro', sans-serif;
     }
-    .header{grid-area:header;display:-webkit-box;display:-ms-flexbox;display:flex;margin:0 auto;width:100%;-webkit-box-flex:1;-ms-flex:1;flex:1;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-item-align:center;align-self:center;}
-    .header a{color:#000;}
-    .header .logo img{width:156px;max-width:156px;}
-    #events_today{background:#000;}
-    @media (min-width:1025px){
-      #events_today{grid-template-columns:1fr 1fr 1fr;}
+
+    h3 {
+      font-family: 'Space Text', sans-serif;
+      font-weight: 700;
     }
-    #events_today .container{width:100%;max-width:100%;padding:0;}
-    #events_today .header{display:none;}
-    #events_today .event-grid{margin:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;height:100vh;}
-    #events_today .event-grid .event{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;}
-    #events_today .event-grid .event{height:100vh;}
-    #events_today .event-grid .event p.thisweek{font-size:56px;}
-    #events_today .event-grid .event .title{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}
-    #events_today .event-grid .event .title p{text-transform:uppercase;letter-spacing:.05rem;}
-    #events_today .event-grid .event .title p.presenter{font-size:32px;}
-    #events_today .event-grid .event .title .spaces{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;}
-    #events_today .event-grid .event .title .space{background-color:#fff;color:#000;padding:2px 8px;}
-    #events_today .event-grid .event .title .space:last-child{margin:0;}
-    #events_today .event-grid .event h3{font-size:100px;}
-    #events_today .event-grid .event a .desc{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:100%;}
-    #events_today .event-grid .event a .desc .when p{font-size:56px;font-weight:900;}
-    #events_today .event-grid .event p.thisweek{padding:4px 12px;font-size:56px;}
+
+    body {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow-x: hidden;
+      padding: 0;
+      margin: 0;
+    }
+.event-grid {
+        height: 100vh;
+
+}
+    .event-grid a:hover {
+      text-decoration: none;
+    }
+
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+
+    .event-grid>div {
+      padding: 10px;
+
+    }
+
+    .event-grid .event {
+      height: 640px;
+      overflow: hidden;
+      
+      /* flex: 1 1 auto; */
+          /* transform: rotate(90deg); */
+
+          /* transform-origin:bottom left; */
+
+          /* position:absolute;
+          top:-100vw;
+
+          height:100vw;
+          width:100vh; */
+      /* position: relative; */
+    }
+
+    .event-grid .exhibition a .desc .when p {
+      font-size: calc(10px + .5vw);
+    }
+
+  
+    .event-grid .event a .register {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin-top: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-line-pack: end;
+      align-content: flex-end;
+    }
+
+    .event-grid .event a .register .thisweek {
+      background-color: rgba(0, 0, 0, .9);
+      color: #fff;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: .05rem;
+      font-weight: 400;
+      font-family: "Space Text", sans-serif;
+      padding: 0 8px;
+    }
+
+    .event-grid .event a .desc {
+      grid-area: desc;
+      color: #fff;
+    }
+
+    .event-grid .event a .desc .title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .event-grid .event a .desc .title p {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: .05rem;
+      font-size: calc(14px + .05vw);
+    }
+
+    .event-grid .event a .desc p {
+      margin: 0 0 .7rem 0;
+      font-size: calc(14px + .5vw);
+    }
+
+    .event-grid .event a .desc p:last-child {
+      margin: 0;
+    }
+
+    .header {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+
+    @media (min-width:1025px) {
+      .header {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        max-width: 1200px;
+      }
+    }
+
+    .header {
+      grid-area: header;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0 auto;
+      width: 100%;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-item-align: center;
+      align-self: center;
+    }
+
+    .header a {
+      color: #000;
+    }
+
+    .header .logo img {
+      width: 156px;
+      max-width: 156px;
+    }
+
+    #events_today {
+      background: #000;
+      
+    }
+
+   
+
+    #events_today .container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+    }
+
+    #events_today .header {
+      display: none;
+    }
+
+ 
+    #events_today .event-grid .event p.thisweek {
+      font-size: 56px;
+    }
+
+    #events_today .event-grid .event .title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    #events_today .event-grid .event .title p {
+      text-transform: uppercase;
+      letter-spacing: .05rem;
+    }
+
+    #events_today .event-grid .event .title p.presenter {
+      font-size: 32px;
+    }
+
+    #events_today .event-grid .event .title .spaces {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    #events_today .event-grid .event .title .space {
+      background-color: #fff;
+      color: #000;
+      padding: 2px 8px;
+    }
+
+    #events_today .event-grid .event .title .space:last-child {
+      margin: 0;
+    }
+
+    #events_today .event-grid .event h3 {
+      font-size: 100px;
+    }
+
+    #events_today .event-grid .event a .desc {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #events_today .event-grid .event a .desc .when p {
+      font-size: 56px;
+      font-weight: 900;
+    }
+
+    #events_today .event-grid .event p.thisweek {
+      padding: 4px 12px;
+      font-size: 56px;
+    }
+
     /*! CSS Used from: https://use.fontawesome.com/releases/v5.5.0/css/all.css */
-    .fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1;}
-    .fa-fw{text-align:center;width:1.25em;}
-    .fa-clock:before{content:"\f017";}
-    .fa-ticket-alt:before{content:"\f3ff";}
-    .fas{font-family:"Font Awesome 5 Free";}
-    .fas{font-weight:900;}
+    .fas {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+    }
+
+    .fa-fw {
+      text-align: center;
+      width: 1.25em;
+    }
+
+    .fa-clock:before {
+      content: "\f017";
+    }
+
+    .fa-ticket-alt:before {
+      content: "\f3ff";
+    }
+
+    .fas {
+      font-family: "Font Awesome 5 Free";
+    }
+
+    .fas {
+      font-weight: 900;
+    }
+
     /*! CSS Used from: https://calendly.com/assets/external/widget.css */
-    body{height:100%;}
-    body{overflow:auto;}
-    /*! CSS Used from: https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/tiny-slider.css */
-    .tns-outer{padding:0!important;}
-    .tns-slider{-webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s;}
-    .tns-slider>div{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-    .tns-horizontal.tns-subpixel{white-space:nowrap;}
-    .tns-horizontal.tns-subpixel>div{display:inline-block;vertical-align:top;white-space:normal;}
-    .tns-ovh{overflow:hidden;}
-    /*! CSS Used from: Embedded */
-    #tns1 > .tns-item{font-size:16px;}
-    #tns1{font-size:0px;}
-    #tns1-iw{transition-duration:0.3s;}
-    #tns1{width:calc(1200%);transition-duration:0.3s;}
-    #tns1 > .tns-item{width:calc(4.16667%);}
+    body {
+      height: 100%;
+    }
+
+    body {
+      overflow: auto;
+    }
+
     /*! CSS Used fontfaces */
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;src:local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7qsDJB9cme_xc.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;src:local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7jsDJB9cme_xc.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;src:local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7rsDJB9cme_xc.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;src:local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7ksDJB9cme_xc.woff2) format('woff2');unicode-range:U+0370-03FF;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;src:local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7osDJB9cme_xc.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;src:local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7psDJB9cme_xc.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;src:local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDJB9cme.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;src:local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdh18S0xR41YDw.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;src:local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdo18S0xR41YDw.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;src:local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdg18S0xR41YDw.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;src:local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdv18S0xR41YDw.woff2) format('woff2');unicode-range:U+0370-03FF;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;src:local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdj18S0xR41YDw.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;src:local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdi18S0xR41YDw.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
-    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;src:local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSds18S0xR41.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;src:local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lujVj9_mf.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;src:local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lujVj9_mf.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;src:local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lujVj9_mf.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;src:local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lujVj9_mf.woff2) format('woff2');unicode-range:U+0370-03FF;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;src:local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lujVj9_mf.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;src:local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lujVj9_mf.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;src:local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmhdu3cOWxy40.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwkxdu3cOWxy40.woff2) format('woff2');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmxdu3cOWxy40.woff2) format('woff2');unicode-range:U+1F00-1FFF;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlBdu3cOWxy40.woff2) format('woff2');unicode-range:U+0370-03FF;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmBdu3cOWxy40.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRdu3cOWxy40.woff2) format('woff2');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}
-    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu3cOWxw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-    @font-face{font-family:'Space Text';src:url(https://d33wubrfki0l68.cloudfront.net/56997726918b047e4965508b3ab137b0334c2d0a/f677c/fonts/spacetext-regular.woff2) format('woff2'),url(https://d33wubrfki0l68.cloudfront.net/084e4caf0d5c1ce3286769264b82ba19522bb7cc/45680/fonts/spacetext-regular.woff) format('woff');font-weight:400;font-style:normal;}
-    @font-face{font-family:'Space Text';src:url(https://d33wubrfki0l68.cloudfront.net/e20982e1d1206981e58c09e581360964269a5b25/07f89/fonts/spacetext-light.woff2) format('woff2'),url(https://d33wubrfki0l68.cloudfront.net/c87671bd09f060d87d4febab8b8ada9660fba08d/671cc/fonts/spacetext-light.woff) format('woff');font-weight:300;font-style:normal;}
-    @font-face{font-family:'Space Text';src:url(https://d33wubrfki0l68.cloudfront.net/d56874ce62faa52547a26890a2eef7e2522e3fe6/1d310/fonts/spacetext-bold.woff2) format('woff2'),url(https://d33wubrfki0l68.cloudfront.net/5366ed6a43260ae64448b3c1bda2ddb3e4631441/495f9/fonts/spacetext-bold.woff) format('woff');font-weight:700;font-style:normal;}
-    @font-face{font-family:'Space Text';src:url(https://d33wubrfki0l68.cloudfront.net/a38bea173f955e1443df236d81f61a0ad9878e32/ac960/fonts/spacetext-semibold.woff2) format('woff2'),url(https://d33wubrfki0l68.cloudfront.net/278d4434d58b6699ace5f1c534ceba11715c3864/9d5ed/fonts/spacetext-semibold.woff) format('woff');font-weight:600;font-style:normal;}
-    @font-face{font-family:'Space Text';src:url(https://d33wubrfki0l68.cloudfront.net/9f63401477f687287069e9646b8ccebc89ac4dc3/b9c25/fonts/spacetext-medium.woff2) format('woff2'),url(https://d33wubrfki0l68.cloudfront.net/939cb4a4165f8c938d2462008308be5d3bac3321/50cf6/fonts/spacetext-medium.woff) format('woff');font-weight:500;font-style:normal;}
-    @font-face{font-family:'Space Text';src:url(https://d33wubrfki0l68.cloudfront.net/a38bea173f955e1443df236d81f61a0ad9878e32/ac960/fonts/spacetext-semibold.woff2) format('woff2'),url(https://d33wubrfki0l68.cloudfront.net/278d4434d58b6699ace5f1c534ceba11715c3864/9d5ed/fonts/spacetext-semibold.woff) format('woff');font-weight:600;font-style:normal;}
-    @font-face{font-family:'Space Text';src:url(https://d33wubrfki0l68.cloudfront.net/56997726918b047e4965508b3ab137b0334c2d0a/f677c/fonts/spacetext-regular.woff2) format('woff2'),url(https://d33wubrfki0l68.cloudfront.net/084e4caf0d5c1ce3286769264b82ba19522bb7cc/45680/fonts/spacetext-regular.woff) format('woff');font-weight:400;font-style:normal;}
-    @font-face{font-family:'Space Text';src:url(https://d33wubrfki0l68.cloudfront.net/e20982e1d1206981e58c09e581360964269a5b25/07f89/fonts/spacetext-light.woff2) format('woff2'),url(https://d33wubrfki0l68.cloudfront.net/c87671bd09f060d87d4febab8b8ada9660fba08d/671cc/fonts/spacetext-light.woff) format('woff');font-weight:300;font-style:normal;}
-    @font-face{font-family:'Space Text';src:url(https://d33wubrfki0l68.cloudfront.net/d56874ce62faa52547a26890a2eef7e2522e3fe6/1d310/fonts/spacetext-bold.woff2) format('woff2'),url(https://d33wubrfki0l68.cloudfront.net/5366ed6a43260ae64448b3c1bda2ddb3e4631441/495f9/fonts/spacetext-bold.woff) format('woff');font-weight:700;font-style:normal;}
-    @font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;src:url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.eot);src:url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.eot#iefix) format("embedded-opentype"),url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.woff2) format("woff2"),url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.woff) format("woff"),url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.ttf) format("truetype"),url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.svg#fontawesome) format("svg");}
-    @font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;src:url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.eot);src:url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.eot#iefix) format("embedded-opentype"),url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.woff2) format("woff2"),url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.woff) format("woff"),url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.ttf) format("truetype"),url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.svg#fontawesome) format("svg");}
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7qsDJB9cme_xc.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7jsDJB9cme_xc.woff2) format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7rsDJB9cme_xc.woff2) format('woff2');
+      unicode-range: U+1F00-1FFF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7ksDJB9cme_xc.woff2) format('woff2');
+      unicode-range: U+0370-03FF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7osDJB9cme_xc.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7psDJB9cme_xc.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDJB9cme.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdh18S0xR41YDw.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdo18S0xR41YDw.woff2) format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdg18S0xR41YDw.woff2) format('woff2');
+      unicode-range: U+1F00-1FFF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdv18S0xR41YDw.woff2) format('woff2');
+      unicode-range: U+0370-03FF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdj18S0xR41YDw.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSdi18S0xR41YDw.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSds18S0xR41.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lujVj9_mf.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lujVj9_mf.woff2) format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lujVj9_mf.woff2) format('woff2');
+      unicode-range: U+1F00-1FFF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lujVj9_mf.woff2) format('woff2');
+      unicode-range: U+0370-03FF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lujVj9_mf.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lujVj9_mf.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmhdu3cOWxy40.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwkxdu3cOWxy40.woff2) format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmxdu3cOWxy40.woff2) format('woff2');
+      unicode-range: U+1F00-1FFF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlBdu3cOWxy40.woff2) format('woff2');
+      unicode-range: U+0370-03FF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmBdu3cOWxy40.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRdu3cOWxy40.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu3cOWxw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Space Text';
+      src: url(https://d33wubrfki0l68.cloudfront.net/56997726918b047e4965508b3ab137b0334c2d0a/f677c/fonts/spacetext-regular.woff2) format('woff2'), url(https://d33wubrfki0l68.cloudfront.net/084e4caf0d5c1ce3286769264b82ba19522bb7cc/45680/fonts/spacetext-regular.woff) format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Space Text';
+      src: url(https://d33wubrfki0l68.cloudfront.net/e20982e1d1206981e58c09e581360964269a5b25/07f89/fonts/spacetext-light.woff2) format('woff2'), url(https://d33wubrfki0l68.cloudfront.net/c87671bd09f060d87d4febab8b8ada9660fba08d/671cc/fonts/spacetext-light.woff) format('woff');
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Space Text';
+      src: url(https://d33wubrfki0l68.cloudfront.net/d56874ce62faa52547a26890a2eef7e2522e3fe6/1d310/fonts/spacetext-bold.woff2) format('woff2'), url(https://d33wubrfki0l68.cloudfront.net/5366ed6a43260ae64448b3c1bda2ddb3e4631441/495f9/fonts/spacetext-bold.woff) format('woff');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Space Text';
+      src: url(https://d33wubrfki0l68.cloudfront.net/a38bea173f955e1443df236d81f61a0ad9878e32/ac960/fonts/spacetext-semibold.woff2) format('woff2'), url(https://d33wubrfki0l68.cloudfront.net/278d4434d58b6699ace5f1c534ceba11715c3864/9d5ed/fonts/spacetext-semibold.woff) format('woff');
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Space Text';
+      src: url(https://d33wubrfki0l68.cloudfront.net/9f63401477f687287069e9646b8ccebc89ac4dc3/b9c25/fonts/spacetext-medium.woff2) format('woff2'), url(https://d33wubrfki0l68.cloudfront.net/939cb4a4165f8c938d2462008308be5d3bac3321/50cf6/fonts/spacetext-medium.woff) format('woff');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Space Text';
+      src: url(https://d33wubrfki0l68.cloudfront.net/a38bea173f955e1443df236d81f61a0ad9878e32/ac960/fonts/spacetext-semibold.woff2) format('woff2'), url(https://d33wubrfki0l68.cloudfront.net/278d4434d58b6699ace5f1c534ceba11715c3864/9d5ed/fonts/spacetext-semibold.woff) format('woff');
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Space Text';
+      src: url(https://d33wubrfki0l68.cloudfront.net/56997726918b047e4965508b3ab137b0334c2d0a/f677c/fonts/spacetext-regular.woff2) format('woff2'), url(https://d33wubrfki0l68.cloudfront.net/084e4caf0d5c1ce3286769264b82ba19522bb7cc/45680/fonts/spacetext-regular.woff) format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Space Text';
+      src: url(https://d33wubrfki0l68.cloudfront.net/e20982e1d1206981e58c09e581360964269a5b25/07f89/fonts/spacetext-light.woff2) format('woff2'), url(https://d33wubrfki0l68.cloudfront.net/c87671bd09f060d87d4febab8b8ada9660fba08d/671cc/fonts/spacetext-light.woff) format('woff');
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Space Text';
+      src: url(https://d33wubrfki0l68.cloudfront.net/d56874ce62faa52547a26890a2eef7e2522e3fe6/1d310/fonts/spacetext-bold.woff2) format('woff2'), url(https://d33wubrfki0l68.cloudfront.net/5366ed6a43260ae64448b3c1bda2ddb3e4631441/495f9/fonts/spacetext-bold.woff) format('woff');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.eot);
+      src: url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.eot#iefix) format("embedded-opentype"), url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.woff2) format("woff2"), url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.woff) format("woff"), url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.ttf) format("truetype"), url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-regular-400.svg#fontawesome) format("svg");
+    }
+
+    @font-face {
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-weight: 900;
+      src: url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.eot);
+      src: url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.eot#iefix) format("embedded-opentype"), url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.woff2) format("woff2"), url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.woff) format("woff"), url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.ttf) format("truetype"), url(https://use.fontawesome.com/releases/v5.5.0/webfonts/fa-solid-900.svg#fontawesome) format("svg");
+    }
   </style>
 </head>
+
 <body role="document" id="{{ pageId }}">
 
   <main class="slider event-grid">
     <each loop='exhibition in dato.program'>
       <if condition='exhibition.past !== true'>
-        <div class="event exhibition" style="background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=70&blend={{ exhibition.canceled == true ? 'eeeeee' : '159159'}}); background-size: cover;" data-startDate="{{ Date.parse(exhibition.startDate) }}" class="{{ exhibition.canceled == true ? 'canceled' : ''}}" >
+        <div class="event exhibition"
+          style="background-image: url(//{{ dato._meta.imgixHost + exhibition.featureImage.path }}?bm=normal&balph=80&blend={{ exhibition.canceled == true ? 'eeeeee' : '159159'}}); background-size: cover;"
+          data-startDate="{{ Date.parse(exhibition.startDate) }}"
+          class="{{ exhibition.canceled == true ? 'canceled' : ''}}">
           <a href="/program/{{ exhibition.slug }}">
             <div class="desc">
               <div class="title">
@@ -197,12 +798,12 @@
                     <span>{{ exhibition.hours }}</span>
                   </p>
                 </if>
-                <if condition="{{ exhibition.ticketPrice }}">
+                <!-- <if condition="{{ exhibition.ticketPrice }}">
                   <p class="tickets">
                     <span class="fas fa-fw fa-ticket-alt"></span>
                     <span>{{ exhibition.ticketPrice }}</span>
                   </p>
-                </if>
+                </if> -->
               </div>
               <div class="register">
                 <if condition="dateFns.isAfter(exhibition.startDateParsed, dateFns.parseISO(nowParsed)) == true">
@@ -219,7 +820,9 @@
 
     <each loop='event in dato.event'>
       <if condition='event.past !== true'>
-        <div class="event daily" style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=70&blend={{ event.canceled == true ? 'eeeeee' : '322D5A'}}'); background-size: cover;" data-startDate="{{ Date.parse(event.startDateTime) }}"  class="{{ event.canceled == true ? 'canceled' : ''}}">
+        <div class="event daily"
+          style="background-image: url('//{{ dato._meta.imgixHost + event.featureImage.path }}?bm=normal&balph=70&blend={{ event.canceled == true ? 'eeeeee' : '322D5A'}}'); background-size: cover;"
+          data-startDate="{{ Date.parse(event.startDateTime) }}" class="{{ event.canceled == true ? 'canceled' : ''}}">
 
           <a href="">
             <div class="desc">
@@ -269,33 +872,42 @@
       </elseif>
 
     </div> -->
-  </div>
-</a>
-</div>
-</if>
-</each>
-</main>
+            </div>
+          </a>
+        </div>
+      </if>
+    </each>
+  </main>
 
-<block name='javascript'>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.3/min/tiny-slider.js"></script>
-  <script src="/js/vendor/tinysort.js"></script>
-  <script>
-    tinysort('.event-grid .exhibition',{data:'startdate', order:'asc'});
-    tinysort('.event-grid .daily',{data:'startdate', order:'asc'});
-    var slider = tns({
-      items: 2,
-      speed: 300,
-      slideBy: 1,
-      autoplay: true,
-      // axis: 'vertical',
-      controls: false,
-      mode: 'carousel',
-      nav: false,
-      autoplayButtonOutput: false,
-      // autoplayTimeout: 5000
-    });
-    slider.play();
-  </script>
+  <block name='javascript'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
+    <script src="/js/vendor/tinysort.js"></script>
+    <script>
+      tinysort('.event-grid .exhibition', {
+        data: 'startdate',
+        order: 'asc'
+      });
+      tinysort('.event-grid .daily', {
+        data: 'startdate',
+        order: 'asc'
+      });
+      var slider = tns({
+        items: 3,
+        speed: 500,
+        slideBy: 1,
+        // autoplayDirection: 'backward',
+        autoplay: true,
+        axis: 'vertical',
+        controls: false,
+        mode: 'carousel',
+        nav: false,
+        autoplayButtonOutput: false,
+        // autoplayTimeout: 5000
+      });
+      slider.play();
+    </script>
 
-</block>
-</body></html>
+  </block>
+</body>
+
+</html>
