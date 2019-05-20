@@ -237,7 +237,7 @@ const Dato = new SpikeDatoCMS({
 
 module.exports = {
   devtool: 'source-map',
-  matchers: { html: '*(**/)*.html', css: '*(**/)*.css', js: '*(**/)*.js' },
+  matchers: { html: '*(**/)(**/)*.html', css: '*(**/)*.css', js: '*(**/)*.js' },
   vendor: 'assets/js/vendor/**',
   ignore: ['_*.html', '**/layout.html','**/*.sgr','**/.*', '_cache/**', 'readme.md'],
   reshape: htmlStandards ({
