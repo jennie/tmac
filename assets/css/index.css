@@ -1728,7 +1728,7 @@ body#location {
     }
   }
 }
-body#cafe-popup {
+body#cafe-popup, body#cinema {
   @nest & main > .container {
     display: grid;
     grid-template-rows: auto;
