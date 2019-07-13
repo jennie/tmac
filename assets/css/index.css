@@ -1780,6 +1780,35 @@ body#cafe-popup, body#cinema {
     }
   }
 }
+
+body#cinema {
+  background-image: url(/images/photos/cinema-model.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @nest & main>.container {
+    max-width: 100%;
+    padding: 0;
+    @nest & .content {
+      padding: var(--padding-primary);
+      background: #fff;
+      margin: var(--padding-primary)
+    }
+    @nest & .header-action {
+      height: 0;
+      padding-bottom: 20%;
+      margin: 0;
+      flex-wrap: wrap;
+      position: relative;
+      display: block;
+      height: 100%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+    }
+  }
+}
 body#news {
   @nest & .content {
     @media (--tablet), (--desktop) {
