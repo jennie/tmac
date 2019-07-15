@@ -1785,14 +1785,18 @@ body#cinema {
   background-image: url(/images/photos/cinema-model.png);
   background-repeat: no-repeat;
     background-size: cover;
-  @media (--tablet), (--desktop) {
-    background-size: contain;
+        background-position: 0 -120px;
+
+  @media (--desktop) {
   }
   @nest & p:first-child {
     margin-top: 0;
-    font-size: 150%;
     font-weight: 900;
-    font-family: 'Space Text'
+    font-family: 'Space Text';
+    font-size: 115%;
+    @media (--tablet), (--desktop) {
+      font-size: 150%;
+    }
   }
   @nest & main>.container {
     max-width: 100%;
@@ -1811,17 +1815,22 @@ body#cinema {
       justify-content: center;
       justify-items: center;
       text-align: center;
+      @media (--desktop) {
+        height: 500px
+      }
       @nest & div {
         display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-justify-content: center;
-align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
       }
       @nest & h2 {
       }
       @nest & h2, & h3 {
-        text-shadow: 1px 1px #fff;
+        /* text-shadow: 2px 2px #fff; */
+        background: #fff;
+        padding: 4px 8px;
         max-width: 80%;
         @media (--tablet), (--desktop) {
           max-width: 100%;
