@@ -1563,10 +1563,24 @@ body#_program {
     }
   }
   @nest & #schedule {
+    @nest & .session {
+      margin: 12px 0 0 0;
+      @nest &:first-child {
+        margin: 0;
+      }
+    }
     @nest & h4 {
-      font-size: calc(14px + .02vw);
-      font-weight: 900;
+      font-size: calc(16px + .02vw);
       color: var(--color-blue);
+      font-weight: 900;
+      margin: 0;
+      
+    }
+    @nest & .time  {
+      font-size: calc(14px + .02vw);
+      font-weight: 400;
+      margin: 0;
+
     }
   }
   @nest & .copresenters {

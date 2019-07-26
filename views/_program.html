@@ -32,7 +32,6 @@
         </elseif>
       </div>
 
-
       <section>
         <div class="container two-col">
 
@@ -40,13 +39,12 @@
             <div md>
               {{ item.description }}
             </div>
-
-            <p> <a class="btn btn-primary" href="{{ item.link }}"> Web site</a> </p>
+            <if condition="{{ item.link }}">
+              <p> <a class="btn btn-primary" href="{{ item.link }}"> Web site</a> </p>
+            </if>
 
           </div>
           <div class="details">
-
-
 
             <div class="when">
               <if condition="{{ item.startDate }}">
@@ -84,7 +82,6 @@
               </if>
             </div>
 
-
             <div class="desc">
 
               <if condition="item.primaryPresenter">
@@ -98,7 +95,6 @@
 
                     <img src="https://{{ dato._meta.imgixHost + member.logo.path }}?auto=compress,format"
                       alt="{{ member.logo.alt ? member.logo.alt : member.name }}" width="200">
-
                   </each>
                 </div>
               </if>
@@ -108,11 +104,7 @@
                 </p>
               </if>
 
-
             </div>
-
-
-
 
             <if condition="{{item.highlights[0]}}">
               <h3>Related Programs</h3>
@@ -127,7 +119,6 @@
                       {{ highlight.humanTime }}
                     </span>
                     <br>
-
 
                     <a href="/program/{{ highlight.slug }}">{{ highlight.title }}</a>
                     <small>{{highlight.programType}}</small>
@@ -146,18 +137,21 @@
 
               </each>
             </if>
-
+            <if condition="{{ item.external_tickets_link }}">
+              <p> <a class="btn btn-primary" href="{{ item.external_tickets_link }}">Tickets</a> </p>
+            </if>
             <if condition="{{item.sessions[0]}}">
               <div id="schedule">
                 <h3>Schedule</h3>
                 <each loop="session in item.sessions">
-                  <div class="session(data-startDate='{{ Date.parse(session.startDateTime) }}')">
+                  <div class="session" data-startDate='{{ Date.parse(session.startDateTime) }}'>
                     <h4>{{session.work.title}}</h4>
-                    <!-- <p>{{df(dateFns.subHours(session.startDateTime, 5), "UTC:dddd, mmmm d, h:MM tt", true)}}
-                    <if condition="{{ session.location[0] }}">
-                    ({{session.location[0].name}})
-                  </if>
-                </p> -->
+                    <p class="time">{{df(dateFns.subHours(Date.parse(session.startDateTime), 5), "UTC:dddd, mmmm d, h:MMtt", true)}}
+
+                      <if condition="{{ session.location[0] }}">
+                        ({{session.location[0].name}})
+                      </if>
+                    </p>
                   </div>
                 </each>
               </div>
