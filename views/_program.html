@@ -43,6 +43,8 @@
               <p> <a class="btn btn-primary" href="{{ item.link }}"> Web site</a> </p>
             </if>
 
+
+
           </div>
           <div class="details">
 
@@ -137,8 +139,8 @@
 
               </each>
             </if>
-            <if condition="{{ item.external_tickets_link }}">
-              <p> <a class="btn btn-primary" href="{{ item.external_tickets_link }}">Tickets</a> </p>
+            <if condition="{{ item.externalTicketsLink }}">
+              <p> <a class="btn btn-primary" href="{{ item.externalTicketsLink }}">Get Tickets</a> </p>
             </if>
             <if condition="{{item.sessions[0]}}">
               <div id="schedule">
