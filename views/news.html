@@ -17,7 +17,7 @@
           <div class="stories">
             <p class="highlight">In May 2015, the City of Toronto and Urbancorp <strong>breached their obligations under a contract</strong> with TMAC. We’re suing both parties for the right to purchase the arts space as agreed. Here you’ll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.</p>
             <each loop='article in dato.article'>
-              <div class="summary">
+              <div class="article summary" data-pubDate="{{ article.date }}">
                 <h3><a href="/news/{{ article.slug }}">{{ article.title }}</a></h3>
                 <p class="date">{{ df(article.date, "UTC:mmmm d, yyyy", true) }}</p>
                 <div class="body" md>{{ article.summary }}</div>
@@ -45,29 +45,69 @@
             <h3>Timeline</h3>
             <div class="timeline">
               <ul>
-                <li> <p><strong>March 2019</strong> TMAC secures sponsorships totalling $2.285 million, fulfilling its obligations under the terms of the Minutes of Settlement. </p>
-                <p>We also celebrated the 1-year anniversary of moving in to our space, and launched our second year of artistic and community programming.</p> </li>
+                <li>
+                  <p><strong>March 2019</strong> TMAC secures sponsorships totalling $2.285 million, fulfilling its obligations under the terms of the Minutes of Settlement. </p>
+                  <p>We also celebrated the 1-year anniversary of moving in to our space, and launched our second year of artistic and community programming.</p>
+                </li>
 
-                <li> <p><strong>November 2018</strong> Consent to sever the "Additional Arts &amp; Culture Space" from TMAC is <a href="/docs/Committee-of-Adjustment-Decision-re-32-Lisgar-St.pdf">granted by the committee of adjustment</a> and no appeal is filed by the deadline.</p> </li>
+                <li>
+                  <p><strong>November 2018</strong> Consent to sever the "Additional Arts &amp; Culture Space" from TMAC is <a href="/docs/Committee-of-Adjustment-Decision-re-32-Lisgar-St.pdf">granted by the committee of adjustment</a> and no appeal is filed by the deadline.</p>
+                </li>
 
-                <li> <p><strong>May 2018</strong> The City of Toronto proposes (and TMAC accepts) a 6-month extension to the deadline in the MoS, as the City does not control the timeline for the conveyance of title. </p> </li>
+                <li>
+                  <p><strong>May 2018</strong> The City of Toronto proposes (and TMAC accepts) a 6-month extension to the deadline in the MoS, as the City does not control the timeline for the conveyance of title. </p>
+                </li>
 
-                <li> <p><strong>February 2018</strong> TMAC and the City of Toronto sign a settlement agreement intended to resolve the legal dispute over the TMAC space at 36 Lisgar.</p> </li>
-                <li> <p><strong>December 2017</strong> TMAC files motion for an injunction for temporary occupancy of the space while we continue negotiating the settlement. Court date set for Jan. 17, 2018. <a href="/news/hearing-date-set-for-jan-17-and-what-you-can-do">More info</a></p> </li>
-                <li> <p><strong>November 2017</strong> The City blocks our proposal for temporary occupancy of the space to provide relief to our member organizations with expiring leases – despite granting Urbancorp permission to use it as an office. <a href="/news/city-of-toronto-rejects-interim-occupancy-proposal">More info</a></p> </li>
-                <li> <p> <strong>April 2016</strong> <a href="https://www.thestar.com/news/gta/transportation/2016/04/22/urbancorp-files-for-restructuring-under-bankruptcy-act.html">Urbancorp files for restructuring under bankruptcy act</a> </p> </li>
-                <li> <p><strong>October 2015 - December 2017</strong> Mediation begins, and all parties engage in a negotiation process</p> </li>
-                <li> <p><strong>June 2015</strong> City holds a public consultation, signalling its intent to move forward with an RFP process, despite a legal action by TMAC asserting its rights to the space</p> <p>A “raucous” community consultation attended by 200+ community members, plus local and national news media, sends a message to the City: The community wants TMAC in its space. <img src="/images/photos/parkdale-meeting.jpg" alt="'Parkdale'"></p> <p> <a href="/images/2015-06-public-meeting.mp4">Watch a short video clip from the meeting</a> </p> </li>
-                <li> <p><strong>May 28, 2015</strong> TMAC files a statement of claim against Urbancorp and the City of Toronto for specific performance of the APS, requiring Urbancorp to complete the sale</p> </li>
-                <li> <p><strong>May 3, 2015</strong> TMAC tenders closing deliveries; Urbancorp refuses to complete the transaction</p> </li>
-                <li> <p><strong>April 2015</strong> City directs Urbancorp not to complete sale, despite facility being substantially completed for occupancy and subsequently registered</p> </li>
-                <li> <p><strong>2014</strong> Urbancorp, TMAC and the City finalize&nbsp;<a href="/docs/TMAC-Edge-City_APS-executed.pdf">Agreement of Purchase and Sale</a> (PDF) <img src="/images/photos/tmac_agreement.jpeg" alt="'APS'"></p> </li>
-                <li> <p><strong>2012</strong> Urbancorp and the City enter into&nbsp;<a href="/docs/Section-37-Agreement-executed.pdf">Section 37 agreement</a> (PDF) subject to a&nbsp; <a href="/docs/Land-Use-Agreement-executed.pdf">land use agreement</a> (PDF)</p> </li>
-                <li> <p><strong>2012-2015</strong> TMAC designs the facility, investing close to $1m in public funds and thousands of volunteer hours into overseeing the build</p> </li>
-                <li> <p><strong>2011</strong> TMAC and Urbancorp sign a&nbsp;<a href="/docs/Letter-of-Intent-executed.pdf">letter of intent</a><img src="/images/photos/saskin.png" alt="'Saskin'"></p> </li>
-                <li> <p><strong>2005</strong> TMAC commissions needs assessment for shared facility <img src="/images/photos/lga.jpg" alt="'Saskin'"></p> </li>
-                <li> <p><strong>2003</strong> TMAC formed to secure permanent affordable space for media arts non-profits</p> </li>
-                <li> <p><strong>1994</strong> TMAC’s precursor, the Cultural Arts Centre Toronto (CACTI), commissions <a href="/docs/cacti-study-1994.pdf">feasibility study</a>&nbsp;(PDF). <img src="/images/cacti-cover.png" alt="'Parkdale'"></p> </li>
+                <li>
+                  <p><strong>February 2018</strong> TMAC and the City of Toronto sign a settlement agreement intended to resolve the legal dispute over the TMAC space at 36 Lisgar.</p>
+                </li>
+                <li>
+                  <p><strong>December 2017</strong> TMAC files motion for an injunction for temporary occupancy of the space while we continue negotiating the settlement. Court date set for Jan. 17, 2018. <a href="/news/hearing-date-set-for-jan-17-and-what-you-can-do">More info</a></p>
+                </li>
+                <li>
+                  <p><strong>November 2017</strong> The City blocks our proposal for temporary occupancy of the space to provide relief to our member organizations with expiring leases – despite granting Urbancorp permission to use it as an office. <a href="/news/city-of-toronto-rejects-interim-occupancy-proposal">More info</a></p>
+                </li>
+                <li>
+                  <p> <strong>April 2016</strong> <a href="https://www.thestar.com/news/gta/transportation/2016/04/22/urbancorp-files-for-restructuring-under-bankruptcy-act.html">Urbancorp files for restructuring under bankruptcy act</a> </p>
+                </li>
+                <li>
+                  <p><strong>October 2015 - December 2017</strong> Mediation begins, and all parties engage in a negotiation process</p>
+                </li>
+                <li>
+                  <p><strong>June 2015</strong> City holds a public consultation, signalling its intent to move forward with an RFP process, despite a legal action by TMAC asserting its rights to the space</p>
+                  <p>A “raucous” community consultation attended by 200+ community members, plus local and national news media, sends a message to the City: The community wants TMAC in its space. <img src="/images/photos/parkdale-meeting.jpg" alt="'Parkdale'"></p>
+                  <p> <a href="/images/2015-06-public-meeting.mp4">Watch a short video clip from the meeting</a> </p>
+                </li>
+                <li>
+                  <p><strong>May 28, 2015</strong> TMAC files a statement of claim against Urbancorp and the City of Toronto for specific performance of the APS, requiring Urbancorp to complete the sale</p>
+                </li>
+                <li>
+                  <p><strong>May 3, 2015</strong> TMAC tenders closing deliveries; Urbancorp refuses to complete the transaction</p>
+                </li>
+                <li>
+                  <p><strong>April 2015</strong> City directs Urbancorp not to complete sale, despite facility being substantially completed for occupancy and subsequently registered</p>
+                </li>
+                <li>
+                  <p><strong>2014</strong> Urbancorp, TMAC and the City finalize&nbsp;<a href="/docs/TMAC-Edge-City_APS-executed.pdf">Agreement of Purchase and Sale</a> (PDF) <img src="/images/photos/tmac_agreement.jpeg" alt="'APS'"></p>
+                </li>
+                <li>
+                  <p><strong>2012</strong> Urbancorp and the City enter into&nbsp;<a href="/docs/Section-37-Agreement-executed.pdf">Section 37 agreement</a> (PDF) subject to a&nbsp; <a href="/docs/Land-Use-Agreement-executed.pdf">land use agreement</a> (PDF)</p>
+                </li>
+                <li>
+                  <p><strong>2012-2015</strong> TMAC designs the facility, investing close to $1m in public funds and thousands of volunteer hours into overseeing the build</p>
+                </li>
+                <li>
+                  <p><strong>2011</strong> TMAC and Urbancorp sign a&nbsp;<a href="/docs/Letter-of-Intent-executed.pdf">letter of intent</a><img src="/images/photos/saskin.png" alt="'Saskin'"></p>
+                </li>
+                <li>
+                  <p><strong>2005</strong> TMAC commissions needs assessment for shared facility <img src="/images/photos/lga.jpg" alt="'Saskin'"></p>
+                </li>
+                <li>
+                  <p><strong>2003</strong> TMAC formed to secure permanent affordable space for media arts non-profits</p>
+                </li>
+                <li>
+                  <p><strong>1994</strong> TMAC’s precursor, the Cultural Arts Centre Toronto (CACTI), commissions <a href="/docs/cacti-study-1994.pdf">feasibility study</a>&nbsp;(PDF). <img src="/images/cacti-cover.png" alt="'Parkdale'"></p>
+                </li>
               </ul>
             </div>
           </div>
@@ -77,6 +117,10 @@
   </block>
   <block name="javascript">
     <script src="https://calendly.com/assets/external/widget.js"></script>
-  </block>
 
+    <script src="/js/vendor/tinysort.js"></script>
+    <script>
+      tinysort('.article', { data: 'pubdate', order: 'desc' });
+    </script>
+  </block>
 </extends>
