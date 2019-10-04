@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <block name="meta">
     <meta name="description" content="A collaborative space for Toronto media arts organizations, media-based artists and the Queen West Triangle community.">
@@ -11,10 +12,11 @@
   <block name="title">
     <title>Toronto Media Arts Centre</title>
   </block>
-  <link rel="stylesheet" href="/css/index.css?{{ nowParsed }}">
+  <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://calendly.com/assets/external/widget.css">
 </head>
+
 <body role="document" id="{{ pageId }}">
   <div class="box header container">
     <a href="/" class="logo">
@@ -55,7 +57,7 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
   </block>
   <block name="content">
 
@@ -70,40 +72,43 @@
   </block>
 
   <script>
-  const mobileMenu = document.querySelector(".nav-menu");
-  const burg = document.querySelector(".burg");
-  const x = document.querySelector(".x");
-  const menuItems = document.querySelectorAll(".nav-menu li a");
+    const mobileMenu = document.querySelector(".nav-menu");
+    const burg = document.querySelector(".burg");
+    const x = document.querySelector(".x");
+    const menuItems = document.querySelectorAll(".nav-menu li a");
 
-  function isHidden(e) {
-    return (e.offsetParent === null)
-  }
-  function hideNav() {
-    mobileMenu.setAttribute("style","display: none")
-  }
-  function toggleNav() {
-    if(isHidden(mobileMenu)) {
-      mobileMenu.setAttribute("style","display: block")
-      burg.setAttribute("style","display: none")
-      x.setAttribute("style","display: block")
+    function isHidden(e) {
+      return (e.offsetParent === null)
     }
-    else {
-      hideNav()
-      burg.setAttribute("style","display: block")
-      x.setAttribute("style","display: none")
+    function hideNav() {
+      mobileMenu.setAttribute("style", "display: none")
     }
-  }
-  for (var i = 0 ; i < menuItems.length; i++) {
-    menuItems[i].addEventListener("click", toggleNav, false) ;
-  }
+    function toggleNav() {
+      if (isHidden(mobileMenu)) {
+        mobileMenu.setAttribute("style", "display: block")
+        burg.setAttribute("style", "display: none")
+        x.setAttribute("style", "display: block")
+      }
+      else {
+        hideNav()
+        burg.setAttribute("style", "display: block")
+        x.setAttribute("style", "display: none")
+      }
+    }
+    for (var i = 0; i < menuItems.length; i++) {
+      menuItems[i].addEventListener("click", toggleNav, false);
+    }
 
-  (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+    (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
 
-  ga("create", "UA-16850490-7", "auto");
-  ga("send", "pageview");
+    ga("create", "UA-16850490-7", "auto");
+    ga("send", "pageview");
   </script>
 </body>
+
 </html>
