@@ -37,11 +37,10 @@
   <block name="javascript">
     <script src="/js/vendor/tinysort.js"></script>
     <script>
-      tinysort('.past .event',{data:'startdate', order:'desc'});
-      tinysort('.upcoming .event',{data:'startdate', order:'asc'});
+      tinysort('.past .event', { data: 'startdate', order: 'desc' });
+      tinysort('.upcoming .event', { data: 'startdate', order: 'asc' });
       const countSpan = document.querySelector('.count')
       countSpan.innerHTML = document.querySelectorAll('.past .event').length;
     </script>
   </block>
 </extends>
-
