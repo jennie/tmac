@@ -71,32 +71,35 @@
           <div class="desc">
             <if condition="item.member[0] && item.presenter">
               <p>
-                <b>Co-presented by 
-                <each loop='member in item.member'>
-                  <span class="space">{{ member.name }}</span>
-                </each>
-                </b>        
+                <b>Co-presented by
+                  <each loop='member in item.member'>
+                    <span class="space">{{ member.name }}</span>
+                  </each>
+                </b>
               </p>
             </if>
             <if condition="item.externalCoPresenters">
               <p>
-                <b>And {{ item.externalCoPresenters }}</b>        
+                <b>And {{ item.externalCoPresenters }}</b>
               </p>
             </if>
           </div>
-          <p>
-            <a href="{{ item.registrationLink }}" class="btn btn-inverse">
-              <if condition="item.past == true || item.canceled == true">
-                Info
-              </if>
-              <elseif condition="item.actionButtonText">
-                {{ item.actionButtonText }}
-              </elseif>
-              <else condition="!item.actionButtonText">
-                Register
-              </else>
-            </a>
-          </p>
+          <if condition="item.registrationLink">
+            <p>
+              <a href="{{ item.registrationLink }}" class="btn btn-inverse">
+                <if condition="item.past == true || item.canceled == true">
+                  Info
+                </if>
+                <elseif condition="item.actionButtonText">
+                  {{ item.actionButtonText }}
+                </elseif>
+                <else condition="!item.actionButtonText">
+                  Register
+                </else>
+              </a>
+            </p>
+          </if>
+
 
         </section>
       </main>
@@ -108,7 +111,7 @@
     <script src="/js/vendor/tinysort.js"></script>
     <script src="/js/vendor/luxon.min.js"></script>
     <script>
-      tinysort('.session',{data:'startdate', order:'asc'});
+      tinysort('.session', { data: 'startdate', order: 'asc' });
       var DateTime = luxon.DateTime;
       // item.location.forEach(function (name, index) {
       //   console.log(this.name)
