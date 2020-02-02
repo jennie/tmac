@@ -60,6 +60,9 @@ const Dato = new SpikeDatoCMS({
       name: "press_link"
     },
     {
+      name: "timeline_item"
+    },
+    {
       name: "service",
       transform: data => {
         if (data.options) {

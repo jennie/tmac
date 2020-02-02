@@ -143,12 +143,20 @@ body {
     }
 
     & .timeline {
-      & ul {
+      & ul.related {
+
+        margin: 0 0 0 10px;
+        padding: 0;
+        & li {
+          margin: 4px 0;
+        }
+      }
+      & ul.timeline {
+        list-style: none;
         margin: 0;
         padding: 0;
-        list-style: none;
 
-        & li {
+        & > li {
           margin: 0 0 12px 0;
           padding: 0 0 12px 0;
           border-bottom: solid 1px #ccc;
