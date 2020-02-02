@@ -16,6 +16,7 @@
         <div class="content">
           <div class="stories">
             <p class="highlight">In May 2015, the City of Toronto and Urbancorp <strong>breached their obligations under a contract</strong> with TMAC. We’re suing both parties for the right to purchase the arts space as agreed. Here you’ll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.</p>
+            <p>As of February 2020, we are <b>still in litigation</b> with the City of Toronto over the space, and thye City maintains its position that TMAC </p>
             <each loop='article in dato.article'>
               <div class="article summary" data-pubDate="{{ article.date }}">
                 <h3><a href="/news/{{ article.slug }}">{{ article.title }}</a></h3>
@@ -46,7 +47,7 @@
             <div class="timeline">
               <ul class="timeline">
                 <each loop="item in dato.timeline_item">
-                  <li class="timeline-item" data-pubDate="{{ item.date }}">
+                  <li class="timeline-item" data-pubDate='{{df(item.date, "isoDateTime") }}'>
                     <strong class="date">{{ df(item.date, "UTC:mmm yyyy", true)}}</strong>
                     <div md>{{ item.description }}</div>
 
@@ -87,7 +88,7 @@
 
     <script src="/js/vendor/tinysort.js"></script>
     <script>
-      tinysort('.article', { data: 'pubdate', order: 'desc' });
+      tinysort(' .article', { data: 'pubdate', order: 'desc' });
       tinysort('.timeline-item', { data: 'pubdate', order: 'desc' });
     </script>
   </block>
