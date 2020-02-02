@@ -15,9 +15,9 @@
         <h2>News</h2>
         <div class="content">
           <div class="stories">
-            <p class="highlight">In May 2015, the City of Toronto and Urbancorp <strong>breached their obligations under a contract</strong> with TMAC. We’re suing both parties for the right to purchase the arts space as agreed. Here you’ll find updates about our progress towards a resolution that will bring arts back to the Queen West Triangle.<br><br>As of February 2020, we are <b>still in litigation</b> with the City of Toronto over the space, and the City maintains its position that TMAC is uanable to successfully operate the space and provides "limited benefit" to the community.</p>
+            <p class="highlight">In May 2015, the City of Toronto and Urbancorp <strong>breached their obligations under a contract</strong> with TMAC. We’re suing both parties for the right to purchase the arts space as agreed. Here you’ll find updates about our progress towards a resolution that will secure the space at 32 Lisgar for the benefit of the community.<br><br>As of February 2020, we are <b>still in litigation</b> with the City of Toronto over the space, and the City maintains its position that TMAC is uanable to successfully operate the space and provides "limited benefit" to the community.</p>
             <each loop='article in dato.article'>
-              <div class="article summary" data-pubDate="{{ article.date }}">
+              <div class="article summary" data-pubDate="{{df(article.date, 'isoDateTime') }}">
                 <h3><a href="/news/{{ article.slug }}">{{ article.title }}</a></h3>
                 <p class="date">{{ df(article.date, "UTC:mmmm d, yyyy", true) }}</p>
                 <div class="body" md>{{ article.summary }}</div>
@@ -55,6 +55,17 @@
 
 
                     </if>
+
+                    <if condition="item.youtubeVideo">
+
+                      <a href="{{ item.youtubeVideo.url }}">
+                        <img src="{{ item.youtubeVideo.thumbnailUrl }}" alt="item.youtubeVideo.title">
+                      </a>
+
+
+                    </if>
+
+
                     <if condition="item.related">
                       <ul class="related">
                         <each loop="related in item.related">
@@ -63,9 +74,12 @@
                             <if condition="related.link">
                               <a href="{{ related.link }}">{{ related.title }}</a>
                             </if>
-                            <if condition="related.slug">
+                            <elseif condition="related.slug">
                               <a href="/news/{{ related.slug }}">{{ related.title }}</a>
-                            </if>
+                            </elseif>
+                            <elseif condition="related.file">
+                              <a href="//{{ dato._meta.imgixHost + related.file.path }}">{{related.title}}</a>
+                            </elseif>
                           </li>
                       </ul>
                 </each>
