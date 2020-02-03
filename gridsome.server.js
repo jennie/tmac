@@ -1,8 +1,10 @@
-const axios = require("axios");
+const fs = require("fs");
 const path = require("path");
+const pick = require("lodash.pick");
+const axios = require("axios");
 let d = new Date();
 let today = d.toISOString();
-module.exports = function(api) {
+module.exports = function(api, options) {
   api.createPages(({ createPage }) => {
     createPage({
       path: "/events",

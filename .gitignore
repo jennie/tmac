@@ -4,3 +4,5 @@ public
 /_cache
 /.env
 assets/images/signage/Digital Sign Template.acorn
+src/.temp/*
+/dist
