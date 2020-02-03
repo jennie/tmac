@@ -1,55 +1,20 @@
 {
-  "name": "tmac",
-  "description": "",
-  "version": "0.0.1",
-  "author": "jennie",
-  "ava": {
-    "verbose": "true"
+  "name": "tmac-www",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
   },
-  "bugs": "https://github.com/jennie/tmac/issues",
   "dependencies": {
-    "date-fns": "^2.0.0-alpha.27",
-    "date-fns-tz": "^1.0.7",
-    "dateformat": "^3.0.3",
-    "is-dst": "^1.0.0",
-    "luxon": "^1.11.3",
-    "markdown-it": "^8.4.2",
-    "markdown-it-attrs": "^2.3.2",
-    "markdown-it-container": "^2.0.0",
-    "markdown-it-footnote": "^3.0.1",
-    "markdown-it-sup": "^1.0.0",
-    "markdown-it-toc-and-anchor": "^4.2.0",
-    "numeral": "^2.0.6",
-    "postcss-mixins": "^6.2.1",
-    "postcss-nested": "^3.0.0",
-    "postcss-nested-props": "^2.0.0",
-    "postcss-simple-vars": "^4.1.0",
-    "reshape-standard": "^3.3.0",
-    "slugify": "^1.3.4",
-    "spike": "^2.3.0",
-    "spike-css-standards": "^3.0.0",
-    "spike-datocms": "^2.4.1",
-    "spike-js-standards": "^2.1.0",
-    "spike-page-id": "^1.1.0",
-    "spike-records": "^2.2.1",
-    "tinysort": "^2.3.6"
+    "axios": "^0.19.2",
+    "gridsome": "^0.7.0",
+    "path": "^0.12.7",
+    "postcss-custom-properties": "^9.0.2",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.1.4"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^4.6.0",
-    "postcss-nesting": "^5.0.0",
-    "rename-webpack-plugin": "1.0.1",
-    "rimraf": "^2.6.3",
-    "snazzy": "^7.1.1",
-    "standard": "^11.0.1"
-  },
-  "homepage": "https://github.com/jennie/tmac",
-  "main": "app.js",
-  "private": "true",
-  "repository": "https://github.com/jennie/tmac",
-  "scripts": {
-    "lint": "standard | snazzy",
-    "precommit": "npm run lint -s",
-    "pretest": "npm run lint -s",
-    "test": "NODE_ENV=test ava"
+    "@fullhuman/postcss-purgecss": "^2.0.5"
   }
 }

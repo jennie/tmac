@@ -1,16 +1,14 @@
-# tmac
+# Default starter for Gridsome
 
+This is the project you get when you run `gridsome create new-project`.
 
+### 1. Install Gridsome CLI tool if you don't have
 
-## Setup
+`npm install --global @gridsome/cli`
 
-- make sure [node.js](http://nodejs.org) is at version >= `6`
-- `npm i spike -g`
-- clone this repo down and `cd` into the folder
-- run `npm install`
-- run `spike watch` or `spike compile`
+### 2. Create a Gridsome project
 
-## Testing
-Tests are located in `test/**` and are powered by [ava](https://github.com/sindresorhus/ava)
-- `npm install` to ensure devDeps are installed
-- `npm test` to run test suite
+1. `gridsome create my-gridsome-site` to install default starter
+2. `cd my-gridsome-site` to open the folder
+3. `gridsome develop` to start a local dev server at `http://localhost:8080`
+4. Happy coding 🎉🙌
