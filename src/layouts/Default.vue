@@ -8,7 +8,7 @@
         >
         </g-image
       ></g-link>
-      <nav class="nav mx-auto flex text-center justify-center -pl-24">
+      <nav class="nav mx-auto flex text-center justify-center -pl-24 mb-16">
         <g-link class="nav__link px-12" to="/">Home</g-link>
         <g-link class="nav__link px-12" to="/about/">About</g-link>
       </nav>

@@ -1,20 +1,31 @@
 <template>
-  <div class="event px-6 w-1/3">
-    <img
-      :src="
-        `${event.node.featureImage.url}?auto=compress,format&fit=crop&max-w=427&max-h=224&crop=faces,entropy`
-      "
-    />
-    <h2 class="text-3xl my-2 text-uppercase">
-      <g-link :to="event.node.path" class="no-underline ">{{
-        event.node.title
-      }}</g-link>
-    </h2>
-    <div class="mb-2">
-      <span class="date">{{ event.node.startDateTime }}</span>
+  <div class="event px-6 mb-12 w-full flex">
+    <div class="w-1/3">
+      <img
+        class="pr-6"
+        :src="
+          `${event.node.featureImage.url}?auto=compress,format&fit=crop&w=600&h=314&crop=faces,entropy`
+        "
+      />
+    </div>
+    <div class="w-2/3">
+      <h2 class="text-2xl my-2 text-uppercase">
+        <g-link :to="event.node.path" class="no-underline">
+          {{ event.node.title }}
+        </g-link>
+      </h2>
+      <div class="mb-2">
+        <span class="date">
+          {{ event.node.startDateTime | luxon:format('EEEE, MMMM d, t') }}
+          <!-- –{{ event.node.endDateTime | luxon:format('t') }} -->
+        </span>
+      </div>
+      <div
+        class="text-base mb-8 leading-snug sm:hidden md:block"
+        v-html="event.node.summary"
+      />
     </div>
     <!-- <h4 v-html="event.node.eventType" /> -->
-    <div class="text-base mb-8 leading-snug " v-html="event.node.summary" />
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h2 class="">Upcoming Events</h2>
+    <h2 class>Upcoming Events</h2>
     <div class="-px-12 py-16 flex flex-wrap">
       <EventListing
         v-for="(e, index) in $page.events.edges"
@@ -29,8 +29,8 @@ query Events ($page: Int, $today: Date) {
     }
     edges {
       node {
-        startDateTime (format: "MMMM D, Y")
-        endDateTime (format: "MMMM D, Y")
+        startDateTime
+        endDateTime
         featureImage {
           url
         }

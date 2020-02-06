@@ -7,8 +7,8 @@ module.exports = {
       xl: "1280px"
     },
     fontFamily: {
-      display: ["Agrandir Tight", "sans-serif"],
-      body: ["Helvetica Textbook", "sans-serif"]
+      display: ["Agrandir Grand", "sans-serif"],
+      body: ["HelveticaNowText-Regular", "sans-serif"]
     },
     borderWidth: {
       default: "1px",

@@ -1,0 +1,51 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3864087, 2020-02-06T12:21:51-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: HelveticaNowText-Regular by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-regular/
+ * 
+ * Webfont: HelveticaNowText-It by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-italic/
+ * 
+ * Webfont: HelveticaNowText-Bold by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-bold/
+ * 
+ * Webfont: HelveticaNowText-BdIt by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-bold-italic/
+ * 
+ * Webfont: HelveticaNowText-ExtraBold by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-extrabold/
+ * 
+ * 
+ * Licensed pageviews: 250,000
+ * Webfonts copyright: Copyright © 2019 Monotype Imaging Inc. All rights reserved.
+ * 
+ * © 2020 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3af617");
+
+  
+@font-face {font-family: 'HelveticaNowText-Regular';src: url('webfonts/3AF617_0_0.eot');src: url('webfonts/3AF617_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3AF617_0_0.woff2') format('woff2'),url('webfonts/3AF617_0_0.woff') format('woff'),url('webfonts/3AF617_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNowText-It';src: url('webfonts/3AF617_1_0.eot');src: url('webfonts/3AF617_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3AF617_1_0.woff2') format('woff2'),url('webfonts/3AF617_1_0.woff') format('woff'),url('webfonts/3AF617_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNowText-Bold';src: url('webfonts/3AF617_2_0.eot');src: url('webfonts/3AF617_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3AF617_2_0.woff2') format('woff2'),url('webfonts/3AF617_2_0.woff') format('woff'),url('webfonts/3AF617_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNowText-BdIt';src: url('webfonts/3AF617_3_0.eot');src: url('webfonts/3AF617_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3AF617_3_0.woff2') format('woff2'),url('webfonts/3AF617_3_0.woff') format('woff'),url('webfonts/3AF617_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNowText-ExtraBold';src: url('webfonts/3AF617_4_0.eot');src: url('webfonts/3AF617_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3AF617_4_0.woff2') format('woff2'),url('webfonts/3AF617_4_0.woff') format('woff'),url('webfonts/3AF617_4_0.ttf') format('truetype');}
+ 
