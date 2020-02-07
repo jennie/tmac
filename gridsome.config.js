@@ -11,6 +11,7 @@ module.exports = {
   siteDescription: "Toronto Media Arts Centre",
   siteUrl: "https://tomediaarts.netlify.com",
   templates: {
+    Exhibition: "/exhibitions/:slug",
     Event: "/events/:slug"
   },
 

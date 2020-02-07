@@ -2,34 +2,24 @@
 
 
 /* purgecss start ignore */
-@import "./assets/fonts/fonts.css"
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3af617");
 
-.HelveticaNowText-Regular { 
-	font-family: HelveticaNowText-Regular;
-	font-weight: normal;
-	font-style: normal;
-}
-.HelveticaNowText-It { 
-	font-family: HelveticaNowText-It;
-	font-weight: normal;
-	font-style: normal;
-}
-.HelveticaNowText-Bold { 
-	font-family: HelveticaNowText-Bold;
-	font-weight: normal;
-	font-style: normal;
-}
-.HelveticaNowText-BdIt { 
-	font-family: HelveticaNowText-BdIt;
-	font-weight: normal;
-	font-style: normal;
-}
-.HelveticaNowText-ExtraBold { 
-	font-family: HelveticaNowText-ExtraBold;
-	font-weight: normal;
-	font-style: normal;
-}
-
+  
+@font-face {font-family: 'HelveticaNowText-Regular';src: url('./assets/fonts/3AF617_0_0.eot');src: url('./assets/fonts/3AF617_0_0.eot?#iefix') format('embedded-opentype'),url('./assets/fonts/3AF617_0_0.woff2') format('woff2'),url('./assets/fonts/3AF617_0_0.woff') format('woff'),url('./assets/fonts/3AF617_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNowText-It';src: url('./assets/fonts/3AF617_1_0.eot');src: url('./assets/fonts/3AF617_1_0.eot?#iefix') format('embedded-opentype'),url('./assets/fonts/3AF617_1_0.woff2') format('woff2'),url('./assets/fonts/3AF617_1_0.woff') format('woff'),url('./assets/fonts/3AF617_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNowText-Bold';src: url('./assets/fonts/3AF617_2_0.eot');src: url('./assets/fonts/3AF617_2_0.eot?#iefix') format('embedded-opentype'),url('./assets/fonts/3AF617_2_0.woff2') format('woff2'),url('./assets/fonts/3AF617_2_0.woff') format('woff'),url('./assets/fonts/3AF617_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNowText-BdIt';src: url('./assets/fonts/3AF617_3_0.eot');src: url('./assets/fonts/3AF617_3_0.eot?#iefix') format('embedded-opentype'),url('./assets/fonts/3AF617_3_0.woff2') format('woff2'),url('./assets/fonts/3AF617_3_0.woff') format('woff'),url('./assets/fonts/3AF617_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'HelveticaNowText-ExtraBold';src: url('./assets/fonts/3AF617_4_0.eot');src: url('./assets/fonts/3AF617_4_0.eot?#iefix') format('embedded-opentype'),url('./assets/fonts/3AF617_4_0.woff2') format('woff2'),url('./assets/fonts/3AF617_4_0.woff') format('woff'),url('./assets/fonts/3AF617_4_0.ttf') format('truetype');}
+ 
 @font-face {
     font-family: 'Agrandir Tight';
     src: url('./assets/fonts/Agrandir-TightBlack.woff2') format('woff2'),
@@ -168,7 +158,35 @@ h3 {
   @apply py-2 px-4 rounded cursor-pointer;
 }
 
+li {
+    @apply mb-2 leading-tight;
+    
+    margin-left: 2rem
+}
+li:before {
 
+    content: '– ';
+    margin-left: -1.25rem;
+    font-weight: 900;
+}
+
+main {
+  p a:not(.btn) {
+    @apply underline text-blue;
+    font-family: HelveticaNowText-Bold;
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  p a:hover:not(.btn) {
+    color: #0000E3;
+  }
+
+  p,
+  ul {
+    @apply mb-3;
+  }
+}
 nav li a.active--exact {
 @apply border-black border-b font-bold;
 }
