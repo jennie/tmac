@@ -6,3 +6,4 @@ public
 assets/images/signage/Digital Sign Template.acorn
 src/.temp/*
 /dist
+/.cache
