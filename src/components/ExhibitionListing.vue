@@ -1,6 +1,6 @@
 <template>
   <div class="event px-6 mb-12 w-full flex">
-    <div class="w-2/3">
+    <div class="w-1/2">
       <img
         class="pr-6"
         :src="
@@ -8,7 +8,7 @@
         "
       />
     </div>
-    <div class="w-1/3">
+    <div class="w-1/2">
       <h2 class="text-2xl my-2 text-uppercase">
         <g-link :to="exhibition.node.path" class="no-underline">{{
           exhibition.node.title
@@ -17,6 +17,7 @@
       <div class="mb-2">
         <span class="date">
           {{ exhibition.node.startDate | luxon:format('MMMM d')
+
           }}&nbsp;–&nbsp;{{ exhibition.node.endDate | luxon:format('MMMM d') }}
         </span>
       </div>
