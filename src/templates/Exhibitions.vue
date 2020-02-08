@@ -59,6 +59,7 @@ query Exhibitions ($page: Int, $today: Date) {
         presenter
         primaryPresenter
         programType
+        path
         slug
         startDate
         ticketPrice

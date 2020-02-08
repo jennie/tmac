@@ -38,10 +38,7 @@ h2 {
   }
 }
 .date {
-  @apply text-2xl;
-  font-family: "Agrandir Tight";
-  font-weight: 400;
-  font-style: normal;
+  @apply text-2xl tracking-tighter text-xl;
 }
 </style>
 <script>

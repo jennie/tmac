@@ -125,7 +125,7 @@ module.exports = function(api, options) {
               }
             }
             allPrograms {
-              description
+              description(markdown: true)
               endDate
               externalCoPresenters
               externalTicketsLink

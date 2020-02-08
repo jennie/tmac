@@ -1,5 +1,11 @@
 <template>
   <div class="layout">
+    <p class="highlight p-2 bg-red-600 text-white text-center text-xl">
+      <g-link :to="news" class="text-white">
+        Get the latest updates about our ongoing litigation against the City of
+        Toronto and Urbancorp.
+      </g-link>
+    </p>
     <header class="header container mx-auto md:px-12">
       <g-link to="/">
         <g-image
@@ -7,9 +13,12 @@
           src="~/assets/images/logos/TMAC_logo@4x.png"
         ></g-image>
       </g-link>
-      <nav class="nav flex -pl-24 mb-16">
-        <g-link class="nav__link px-12 -pl-24" to="/">Home</g-link>
-        <g-link class="nav__link px-12" to="/about/">About</g-link>
+      <nav class="nav flex -pl-24 mb-16 text-3xl -ml-12">
+        <g-link class="nav__link " to="/">Home</g-link>
+        <g-link class="nav__link" to="/news">#TMACtion</g-link>
+        <g-link class="nav__link" to="/about/">About</g-link>
+        <g-link class="nav__link" to="/events">Events</g-link>
+        <g-link class="nav__link" to="/exhibitions">Exhibitions</g-link>
       </nav>
     </header>
     <main class="container mx-auto md:px-12">
@@ -35,7 +44,7 @@ export default {
     },
     bodyAttrs: {
       class:
-        "font-sans text-copy-primary font-body tracking-normal text-xl flex flex-col min-h-screen"
+        "font-sans text-copy-primary font-body tracking-tight text-xl flex flex-col min-h-screen"
     }
   }
 };

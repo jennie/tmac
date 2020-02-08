@@ -10,12 +10,14 @@
     </div>
     <div class="w-1/3">
       <h2 class="text-2xl my-2 text-uppercase">
-        <g-link :to="exhibition.node.path" class="no-underline">{{ exhibition.node.title }}</g-link>
+        <g-link :to="exhibition.node.path" class="no-underline">{{
+          exhibition.node.title
+        }}</g-link>
       </h2>
       <div class="mb-2">
         <span class="date">
-          {{ exhibition.node.startDate | luxon:format('MMMM d') }}
-          –{{ exhibition.node.endDate | luxon:format('MMMM d') }}
+          {{ exhibition.node.startDate | luxon:format('MMMM d')
+          }}&nbsp;–&nbsp;{{ exhibition.node.endDate | luxon:format('MMMM d') }}
         </span>
       </div>
       <div class="text-base mb-8 leading-snug sm:hidden md:block" />
@@ -32,10 +34,7 @@ h2 {
   }
 }
 .date {
-  @apply text-2xl;
-  font-family: "Agrandir Tight";
-  font-weight: 400;
-  font-style: normal;
+  @apply text-2xl tracking-tighter text-xl;
 }
 </style>
 <script>

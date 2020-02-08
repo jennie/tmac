@@ -5,153 +5,174 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3af617");
 
-  
-@font-face {font-family: 'HelveticaNowText-Regular';src: url('./assets/fonts/3AF617_0_0.eot');src: url('./assets/fonts/3AF617_0_0.eot?#iefix') format('embedded-opentype'),url('./assets/fonts/3AF617_0_0.woff2') format('woff2'),url('./assets/fonts/3AF617_0_0.woff') format('woff'),url('./assets/fonts/3AF617_0_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'HelveticaNowText-It';src: url('./assets/fonts/3AF617_1_0.eot');src: url('./assets/fonts/3AF617_1_0.eot?#iefix') format('embedded-opentype'),url('./assets/fonts/3AF617_1_0.woff2') format('woff2'),url('./assets/fonts/3AF617_1_0.woff') format('woff'),url('./assets/fonts/3AF617_1_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'HelveticaNowText-Bold';src: url('./assets/fonts/3AF617_2_0.eot');src: url('./assets/fonts/3AF617_2_0.eot?#iefix') format('embedded-opentype'),url('./assets/fonts/3AF617_2_0.woff2') format('woff2'),url('./assets/fonts/3AF617_2_0.woff') format('woff'),url('./assets/fonts/3AF617_2_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'HelveticaNowText-BdIt';src: url('./assets/fonts/3AF617_3_0.eot');src: url('./assets/fonts/3AF617_3_0.eot?#iefix') format('embedded-opentype'),url('./assets/fonts/3AF617_3_0.woff2') format('woff2'),url('./assets/fonts/3AF617_3_0.woff') format('woff'),url('./assets/fonts/3AF617_3_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'HelveticaNowText-ExtraBold';src: url('./assets/fonts/3AF617_4_0.eot');src: url('./assets/fonts/3AF617_4_0.eot?#iefix') format('embedded-opentype'),url('./assets/fonts/3AF617_4_0.woff2') format('woff2'),url('./assets/fonts/3AF617_4_0.woff') format('woff'),url('./assets/fonts/3AF617_4_0.ttf') format('truetype');}
- 
+
 @font-face {
-    font-family: 'Agrandir Tight';
-    src: url('./assets/fonts/Agrandir-TightBlack.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-TightBlack.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
+  font-family: 'HelveticaNowText-Regular';
+  src: url('./assets/fonts/3AF617_0_0.eot');
+  src: url('./assets/fonts/3AF617_0_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AF617_0_0.woff2') format('woff2'), url('./assets/fonts/3AF617_0_0.woff') format('woff'), url('./assets/fonts/3AF617_0_0.ttf') format('truetype');
 }
- 
+
+
 @font-face {
-    font-family: 'Agrandir';
-    src: url('./assets/fonts/Agrandir-Regular.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'HelveticaNowText-It';
+  src: url('./assets/fonts/3AF617_1_0.eot');
+  src: url('./assets/fonts/3AF617_1_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AF617_1_0.woff2') format('woff2'), url('./assets/fonts/3AF617_1_0.woff') format('woff'), url('./assets/fonts/3AF617_1_0.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'HelveticaNowText-Bold';
+  src: url('./assets/fonts/3AF617_2_0.eot');
+  src: url('./assets/fonts/3AF617_2_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AF617_2_0.woff2') format('woff2'), url('./assets/fonts/3AF617_2_0.woff') format('woff'), url('./assets/fonts/3AF617_2_0.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'HelveticaNowText-BdIt';
+  src: url('./assets/fonts/3AF617_3_0.eot');
+  src: url('./assets/fonts/3AF617_3_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AF617_3_0.woff2') format('woff2'), url('./assets/fonts/3AF617_3_0.woff') format('woff'), url('./assets/fonts/3AF617_3_0.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'HelveticaNowText-ExtraBold';
+  src: url('./assets/fonts/3AF617_4_0.eot');
+  src: url('./assets/fonts/3AF617_4_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AF617_4_0.woff2') format('woff2'), url('./assets/fonts/3AF617_4_0.woff') format('woff'), url('./assets/fonts/3AF617_4_0.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Agrandir';
-    src: url('./assets/fonts/Agrandir-TextBold.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-TextBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Agrandir Tight';
+  src: url('./assets/fonts/Agrandir-TightBlack.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-TightBlack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Agrandir Grand';
-    src: url('./assets/fonts/Agrandir-GrandLight.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-GrandLight.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Agrandir';
+  src: url('./assets/fonts/Agrandir-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Agrandir';
-    src: url('./assets/fonts/Agrandir-Italic.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
+  font-family: 'Agrandir';
+  src: url('./assets/fonts/Agrandir-TextBold.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-TextBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Agrandir Tight';
-    src: url('./assets/fonts/Agrandir-Tight.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-Tight.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Agrandir Grand';
+  src: url('./assets/fonts/Agrandir-GrandLight.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-GrandLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Agrandir Grand';
-    src: url('./assets/fonts/Agrandir-GrandHeavy.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-GrandHeavy.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
+  font-family: 'Agrandir';
+  src: url('./assets/fonts/Agrandir-Italic.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'Agrandir Narrow';
-    src: url('./assets/fonts/Agrandir-NarrowBlack.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-NarrowBlack.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
+  font-family: 'Agrandir Tight';
+  src: url('./assets/fonts/Agrandir-Tight.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-Tight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Agrandir Grand';
-    src: url('./assets/fonts/Agrandir-Grand.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-Grand.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Agrandir Grand';
+  src: url('./assets/fonts/Agrandir-GrandHeavy.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-GrandHeavy.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Agrandir';
-    src: url('./assets/fonts/Agrandir-ThinItalic.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-ThinItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
+  font-family: 'Agrandir Narrow';
+  src: url('./assets/fonts/Agrandir-NarrowBlack.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-NarrowBlack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Agrandir Grand';
-    src: url('./assets/fonts/Agrandir-GrandItalic.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-GrandItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
+  font-family: 'Agrandir Grand';
+  src: url('./assets/fonts/Agrandir-Grand.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-Grand.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Agrandir Wide';
-    src: url('./assets/fonts/Agrandir-WideBlackItalic.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-WideBlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
+  font-family: 'Agrandir';
+  src: url('./assets/fonts/Agrandir-ThinItalic.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'Agrandir Narrow';
-    src: url('./assets/fonts/Agrandir-Narrow.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-Narrow.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Agrandir Grand';
+  src: url('./assets/fonts/Agrandir-GrandItalic.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-GrandItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'Agrandir Tight';
-    src: url('./assets/fonts/Agrandir-TightThin.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-TightThin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
+  font-family: 'Agrandir Wide';
+  src: url('./assets/fonts/Agrandir-WideBlackItalic.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-WideBlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: 'Agrandir Wide';
-    src: url('./assets/fonts/Agrandir-WideLight.woff2') format('woff2'),
-        url('./assets/fonts/Agrandir-WideLight.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-} 
+  font-family: 'Agrandir Narrow';
+  src: url('./assets/fonts/Agrandir-Narrow.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-Narrow.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agrandir Tight';
+  src: url('./assets/fonts/Agrandir-TightThin.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-TightThin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agrandir Wide';
+  src: url('./assets/fonts/Agrandir-WideLight.woff2') format('woff2'),
+    url('./assets/fonts/Agrandir-WideLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
 
 
 body {
-    @apply font-body;
+  @apply font-body;
 }
+
 h1,
 h2,
 h3 {
-    @apply font-display;
-    font-weight: 900;
-    font-style: normal;
-    text-transform: uppercase;
-    line-height: 1.7rem;
+  @apply font-display;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 1.7rem;
 }
 
 .btn {
@@ -159,23 +180,24 @@ h3 {
 }
 
 li {
-    @apply mb-2 leading-tight;
-    
-    margin-left: 2rem
+  @apply mb-2 leading-tight;
+
+  margin-left: 2rem
 }
+
 li:before {
 
-    content: '– ';
-    margin-left: -1.25rem;
-    font-weight: 900;
+  content: '– ';
+  margin-left: -1.25rem;
+  font-weight: 900;
 }
 
 main {
   p a:not(.btn) {
     @apply underline text-blue;
     font-family: HelveticaNowText-Bold;
-	font-weight: normal;
-	font-style: normal;
+    font-weight: normal;
+    font-style: normal;
   }
 
   p a:hover:not(.btn) {
@@ -187,15 +209,41 @@ main {
     @apply mb-3;
   }
 }
-nav li a.active--exact {
-@apply border-black border-b font-bold;
+nav {
+  a {
+    @apply m-12 tracking-normal;
+    font-family: "Agrandir Tight";
+    font-weight: normal;
+    font-style: normal;
+    
+    &.active--exact {
+      @apply border-black border-b font-bold border-b-4 uppercase;
+      font-family: "Agrandir Grand";
+      font-weight: 900;
+      font-style: normal;
+    }
+  }
 }
-
 
 p {
-@apply mb-3;
-}
+  @apply mb-3;
 
+  strong,
+  b {
+    font-family: HelveticaNowText-ExtraBold;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  em,
+  i {
+    font-family: HelveticaNowText-It;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+}
 /* purgecss end ignore */
 
 
