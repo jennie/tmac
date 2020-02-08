@@ -2,8 +2,12 @@ const fs = require("fs");
 const path = require("path");
 const pick = require("lodash.pick");
 const axios = require("axios");
-let d = new Date();
-let today = d.toISOString();
+const luxon = require("luxon");
+var DateTime = luxon.DateTime;
+let d = DateTime.local();
+let today = d.toISODate();
+let thisWeek = d.plus({ days: 7 }).toISODate();
+console.log(thisWeek);
 module.exports = function(api, options) {
   api.createPages(({ createPage }) => {
     createPage({
@@ -18,6 +22,14 @@ module.exports = function(api, options) {
       component: "./src/templates/Exhibitions.vue",
       context: {
         today: today
+      }
+    });
+    createPage({
+      path: "/",
+      component: "./src/templates/Index.vue",
+      context: {
+        today: today,
+        thisWeek: thisWeek
       }
     });
   });
@@ -173,6 +185,11 @@ module.exports = function(api, options) {
     }).then(result => {
       for (const item of result.data.data.allPrograms) {
         exhibitions.addNode({
+          ...item
+        });
+      }
+      for (const item of result.data.data.allMembers) {
+        members.addNode({
           ...item
         });
       }

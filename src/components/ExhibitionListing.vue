@@ -9,14 +9,17 @@
       />
     </div>
     <div class="w-1/2">
-      <h2 class="text-2xl my-2 text-uppercase">
+      <h3 class="text-2xl my-2 text-uppercase">
         <g-link :to="exhibition.node.path" class="no-underline">{{
           exhibition.node.title
         }}</g-link>
-      </h2>
+      </h3>
       <div class="mb-2">
         <span class="date">
           {{ exhibition.node.startDate | luxon:format('MMMM d')
+
+
+
 
           }}&nbsp;–&nbsp;{{ exhibition.node.endDate | luxon:format('MMMM d') }}
         </span>
@@ -28,8 +31,9 @@
 </template>
 
 <style lang="postcss">
-h2 {
+h3 {
   hyphens: auto;
+  @apply uppercase;
   a:hover {
     @apply text-blue;
   }

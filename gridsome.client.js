@@ -12,7 +12,11 @@ import {
   faEnvelope,
   faCalendarDay
 } from "@fortawesome/free-solid-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faTwitter,
+  faInstagram,
+  faFacebook
+} from "@fortawesome/free-brands-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { dom } from "@fortawesome/fontawesome-svg-core";
 
@@ -20,6 +24,8 @@ config.autoAddCss = false;
 library.add(
   faCheck,
   faTwitter,
+  faInstagram,
+  faFacebook,
   faSquare,
   faFilm,
   faMusic,

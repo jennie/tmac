@@ -114,23 +114,7 @@ query Event($id: ID!)  {
   }
 }
 </page-query>
-<style lang="postcss">
-#page--event {
-  h2 {
-    @apply text-3xl mt-12 mb-0 leading-tight mb-3;
-  }
-  h3 {
-    @apply text-2xl uppercase mt-6 mb-0;
-  }
-  h4 {
-    @apply font-display uppercase text-lg font-bold leading-snug mt-3 mb-0;
-  }
-
-  h3 + p {
-    @apply mb-6;
-  }
-}
-</style>
+<style lang="postcss"></style>
 <script>
 import Layout from "~/layouts/Default.vue";
 

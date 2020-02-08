@@ -1,5 +1,5 @@
 <template>
-  <div class="event px-6 mb-12 w-full flex">
+  <div class="event mb-12 w-full flex">
     <div class="w-1/3">
       <img
         v-if="event.node.featureImage"
@@ -10,11 +10,11 @@
       />
     </div>
     <div class="w-2/3">
-      <h2 class="text-2xl my-2 text-uppercase">
+      <h3 class="text-2xl my-2 text-uppercase">
         <g-link :to="event.node.path" class="no-underline">
           {{ event.node.title }}
         </g-link>
-      </h2>
+      </h3>
       <div class="mb-2">
         <span class="date">
           {{ event.node.startDateTime | luxon:format('EEEE, MMMM d, t') }}
@@ -31,8 +31,10 @@
 </template>
 
 <style lang="postcss">
-h2 {
+h3 {
   hyphens: auto;
+  text-transform: uppercase;
+
   a:hover {
     @apply text-blue;
   }
