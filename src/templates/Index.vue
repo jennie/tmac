@@ -38,10 +38,6 @@
         />
         <g-image src="~/assets/images/tiwt.jpg" quality="100" fit="cover" width="920" height="614" />
       </div>
-      <!-- <img
-        src="https://www.datocms-assets.com/5128/1580249587-426632353321595576094648128269575260209152o-1.jpg?&bm=normal&balph=20&auto=compress,format"
-        alt=""
-      />-->
     </header>
 
     <h2 class="text-center">Events This Week</h2>
@@ -53,7 +49,7 @@
       />
     </div>
     <h2 class="text-center">More Upcoming Events</h2>
-    <div class="py-16 -m-4 flex flex-wrap">
+    <div class="py-16 flex flex-wrap">
       <EventListingMini
         v-for="(e, index) in $page.events.edges"
         :key="`event-${index}`"

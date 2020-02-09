@@ -1,10 +1,15 @@
 <template>
   <Layout>
     <main>
+      <img
+        src="https://www.datocms-assets.com/5128/1580249587-426632353321595576094648128269575260209152o-1.jpg?&bm=normal&balph=20&auto=compress,format"
+        alt
+      />
       <h2>About TMAC</h2>
       <p class="lead">
         TMAC is a new permanent home for Toronto’s media arts organizations, and
-        an <b>accessible public space for art</b>, creation and collaboration in
+        an
+        <b>accessible public space for art</b>, creation and collaboration in
         the Queen West Triangle.
       </p>
       <p>
@@ -22,10 +27,7 @@
         electronics and more.
       </p>
       <p>
-        <a
-          href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
-          >Donate now</a
-        >
+        <a href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865">Donate now</a>
         to support our programs.
       </p>
       <h2>How we operate</h2>
@@ -42,20 +44,41 @@
             <a
               href="https://governance.tomediaarts.org/director-register"
               target="_blank"
-              >Past directors and advisory board</a
-            >
+            >Past directors and advisory board</a>
           </p>
         </span>
         <span>
           <ul>
-            <li>Henry Faber, chair<br /><small>Gamma Space</small></li>
-            <li>Greg Breen<br /><small>Charles Street Video</small></li>
-            <li>Gina Vanni<br /><small>CFMDC</small></li>
             <li>
-              Izzie Colpitts-Campbell<br /><small>Dames Making Games</small>
+              Henry Faber, chair
+              <br />
+              <small>Gamma Space</small>
             </li>
-            <li>Frank Manzo<br /><small>community</small></li>
-            <li>Scott Miller Berry<br /><small>community</small></li>
+            <li>
+              Greg Breen
+              <br />
+              <small>Charles Street Video</small>
+            </li>
+            <li>
+              Gina Vanni
+              <br />
+              <small>CFMDC</small>
+            </li>
+            <li>
+              Izzie Colpitts-Campbell
+              <br />
+              <small>Dames Making Games</small>
+            </li>
+            <li>
+              Frank Manzo
+              <br />
+              <small>community</small>
+            </li>
+            <li>
+              Scott Miller Berry
+              <br />
+              <small>community</small>
+            </li>
           </ul>
         </span>
       </div>
@@ -72,10 +95,10 @@
           <h2 id="history">History</h2>
           <div>
             <p>
-              <a href="/news"
-                >Read about our dispute with the City of Toronto and Urbancorp
-                over the facility.</a
-              >
+              <a href="/news">
+                Read about our dispute with the City of Toronto and Urbancorp
+                over the facility.
+              </a>
             </p>
             <p>
               TMAC grew out of grassroots community support and in response to a
@@ -92,7 +115,9 @@
             </p>
             <p>
               In 2014, with the support of the local community, City staff,
-              <a href="http://active18.net">Active 18</a> and Councillor
+              <a
+                href="http://active18.net"
+              >Active 18</a> and Councillor
               <a href="http://www.anabailao.com/developments">Ana Bailão</a>,
               TMAC, Urbancorp and the City of Toronto finalized an agreement
               that would provide the Edge on Triangle Park condominium a density
@@ -102,22 +127,19 @@
             </p>
             <p>
               We
-              <a href="news/were-moving-in"
-                >moved into our facility in March 2018</a
-              >, and are currently occupying our space on an interim basis as we
+              <a href="news/were-moving-in">moved into our facility in March 2018</a>, and are currently occupying our space on an interim basis as we
               conclude our litigation against the City of Toronto and Urbancorp.
             </p>
           </div>
           <div>
             <p>
-              <strong
-                ><a
+              <strong>
+                <a
                   href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
-                  >Make a donation today</a
-                >
+                >Make a donation today</a>
                 and immediately receive a charitable receipt through Canada
-                Helps!</strong
-              >
+                Helps!
+              </strong>
             </p>
           </div>
         </section>
@@ -128,9 +150,7 @@
             including:
           </p>
           <ul>
-            <li>
-              Community gathering and event spaces overlooking Lisgar Park
-            </li>
+            <li>Community gathering and event spaces overlooking Lisgar Park</li>
             <li>
               Classrooms for public talks, workshops, screenings, festivals and
               events
@@ -141,7 +161,8 @@
             <li>A temperature-controlled film vault and archive</li>
             <li>Technical and production facilities</li>
             <li>
-              Four public galleries and <strong>exhibition spaces</strong>
+              Four public galleries and
+              <strong>exhibition spaces</strong>
             </li>
             <li>
               <small>Coming soon</small> Café serving coffee, pastries and lunch

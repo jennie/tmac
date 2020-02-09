@@ -10,12 +10,15 @@ import {
   faTheaterMasks,
   faMobile,
   faEnvelope,
-  faCalendarDay
+  faCalendarDay,
+  faWheelchair,
+  faMapMarkerAlt
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
   faInstagram,
-  faFacebook
+  faFacebook,
+  faAccessibleIcon
 } from "@fortawesome/free-brands-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { dom } from "@fortawesome/fontawesome-svg-core";
@@ -23,6 +26,8 @@ import { dom } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 library.add(
   faCheck,
+  faAccessibleIcon,
+  faMapMarkerAlt,
   faTwitter,
   faInstagram,
   faFacebook,

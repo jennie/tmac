@@ -1,5 +1,13 @@
 export default [
   {
+    path: "/program/:slug/",
+    component: () => import(/* webpackChunkName: "page--src--templates--exhibition-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Exhibition.vue")
+  },
+  {
+    path: "/news/:slug/",
+    component: () => import(/* webpackChunkName: "page--src--templates--article-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Article.vue")
+  },
+  {
     path: "/events/:page(\\d+)?/",
     component: () => import(/* webpackChunkName: "page--src--templates--events-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Events.vue")
   },
@@ -8,12 +16,16 @@ export default [
     component: () => import(/* webpackChunkName: "page--src--templates--exhibitions-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Exhibitions.vue")
   },
   {
-    path: "/exhibitions/:slug/",
-    component: () => import(/* webpackChunkName: "page--src--templates--exhibition-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Exhibition.vue")
+    path: "/event/:slug/",
+    component: () => import(/* webpackChunkName: "page--src--templates--event-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Event.vue")
   },
   {
-    path: "/events/:slug/",
-    component: () => import(/* webpackChunkName: "page--src--templates--event-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Event.vue")
+    path: "/news/",
+    component: () => import(/* webpackChunkName: "page--src--templates--news-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/News.vue")
+  },
+  {
+    path: "/location/",
+    component: () => import(/* webpackChunkName: "page--src--pages--location-vue" */ "/Users/jennie/Sites/tmac-www/src/pages/Location.vue")
   },
   {
     path: "/about/",

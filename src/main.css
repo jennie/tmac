@@ -175,13 +175,18 @@ h3 {
   @apply font-display;
   font-weight: 900;
   font-style: normal;
-  line-height: 1.7rem;
 }
 
-#page--event, #page--exhibition {
+main h3 {
+    @apply text-2xl uppercase mt-6 mb-0;
+}
+
+#page--event, #page--exhibition, #page--article {
+
   h1 {
     @apply text-4xl uppercase leading-tight;
   }
+  #body {
   h2 {
     @apply text-3xl mt-12 mb-0 leading-tight mb-3 uppercase;
   }
@@ -194,6 +199,7 @@ h3 {
 
   h3 + p {
     @apply mb-6;
+  }
   }
 }
 .btn {

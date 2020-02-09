@@ -32,11 +32,18 @@ module.exports = function(api, options) {
         thisWeek: thisWeek
       }
     });
+    createPage({
+      path: "/news",
+      component: "./src/templates/News.vue"
+    });
   });
 
   api.loadSource(async store => {
     const events = store.addCollection({
       typeName: "Event"
+    });
+    const articles = store.addCollection({
+      typeName: "Article"
     });
     const exhibitions = store.addCollection({
       typeName: "Exhibition"
@@ -136,6 +143,19 @@ module.exports = function(api, options) {
                 url
               }
             }
+            allArticles {
+              appendix
+              body(markdown: true)
+              date
+              featureImage {
+                url
+              }
+              id
+              title
+              summary(markdown: true)
+              slug
+              shortSummary
+            }
             allPrograms {
               description(markdown: true)
               endDate
@@ -190,6 +210,11 @@ module.exports = function(api, options) {
       }
       for (const item of result.data.data.allMembers) {
         members.addNode({
+          ...item
+        });
+      }
+      for (const item of result.data.data.allArticles) {
+        articles.addNode({
           ...item
         });
       }
