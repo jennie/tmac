@@ -1,5 +1,13 @@
 export default [
   {
+    path: "/tmaction/press/",
+    component: () => import(/* webpackChunkName: "page--src--templates--press-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Press.vue")
+  },
+  {
+    path: "/tmaction/news/",
+    component: () => import(/* webpackChunkName: "page--src--templates--news-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/News.vue")
+  },
+  {
     path: "/program/:slug/",
     component: () => import(/* webpackChunkName: "page--src--templates--exhibition-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Exhibition.vue")
   },
@@ -20,8 +28,8 @@ export default [
     component: () => import(/* webpackChunkName: "page--src--templates--event-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Event.vue")
   },
   {
-    path: "/news/",
-    component: () => import(/* webpackChunkName: "page--src--templates--news-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/News.vue")
+    path: "/tmaction/",
+    component: () => import(/* webpackChunkName: "page--src--pages--tmaction-vue" */ "/Users/jennie/Sites/tmac-www/src/pages/Tmaction.vue")
   },
   {
     path: "/location/",

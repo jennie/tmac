@@ -5,14 +5,21 @@
         v-if="article.node.featureImage"
         class="pr-6"
         :src="
-          `${article.node.featureImage.url}?auto=compress,format&fit=crop&w=600&h=314&crop=faces,entropy`
+          `${article.node.featureImage.url}?auto=compress,format&fit=crop&max-w=600&max-h=337&ar=16:9&crop=faces,entropy`
         "
+      />
+      <img
+        v-else
+        class="pr-6"
+        src="https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png?auto=compress,format&fit=crop&m-width=600&ar=16:9"
       />
     </div>
 
-    <div class="w-2/3">
+    <div class="w-2/3 self-center">
       <h3 class="text-2xl my-2 text-uppercase">
-        <g-link :to="article.node.path" class="no-underline">{{ article.node.title }}</g-link>
+        <g-link :to="article.node.path" class="no-underline">{{
+          article.node.title
+        }}</g-link>
       </h3>
       <div class="mb-2">
         <span class="date">
@@ -20,7 +27,10 @@
           <!-- –{{ article.node.endDateTime | luxon:format('t') }} -->
         </span>
       </div>
-      <div class="text-base mb-8 leading-snug sm:hidden md:block" v-html="article.node.summary" />
+      <div
+        class="text-base mb-8 leading-snug sm:hidden md:block"
+        v-html="article.node.summary"
+      />
     </div>
     <!-- <h4 v-html="article.node.articleType" /> -->
   </div>

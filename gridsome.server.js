@@ -33,8 +33,12 @@ module.exports = function(api, options) {
       }
     });
     createPage({
-      path: "/news",
+      path: "/tmaction/news",
       component: "./src/templates/News.vue"
+    });
+    createPage({
+      path: "/tmaction/press",
+      component: "./src/templates/Press.vue"
     });
   });
 
@@ -42,15 +46,24 @@ module.exports = function(api, options) {
     const events = store.addCollection({
       typeName: "Event"
     });
+    events.addReference("membersList", "Member");
+
     const articles = store.addCollection({
       typeName: "Article"
+    });
+    const presslinks = store.addCollection({
+      typeName: "Press"
     });
     const exhibitions = store.addCollection({
       typeName: "Exhibition"
     });
+    exhibitions.addReference("membersList", "Member");
 
-    events.addReference("memberList", "Member");
-    exhibitions.addReference("memberList", "Member");
+    const timelineItems = store.addCollection({
+      typeName: "Timeline"
+    });
+    timelineItems.addReference("pressLinksList", "Press");
+    timelineItems.addReference("articleList", "Article");
 
     const members = store.addCollection({
       typeName: "Member"
@@ -115,6 +128,7 @@ module.exports = function(api, options) {
     }
     for (const item of eventNodes) {
       let members = item.member;
+
       let membersList = members.map(function(member) {
         return member.id;
       });
@@ -156,6 +170,45 @@ module.exports = function(api, options) {
               slug
               shortSummary
             }
+            allPressLinks {
+              title
+              outlet
+              link
+              isCoverage
+              id
+              file {
+                url
+                format
+              }
+              date
+              author
+            }
+            allTimelineItems {
+              date
+              description(markdown: true)
+              image {
+                url
+              }
+              related {
+                ... on ArticleRecord {
+                  id
+                  slug
+                  title
+                  __typename
+                }
+                ... on PressLinkRecord {
+                  id
+                  link
+                  title
+                  __typename
+                }
+              }
+              title
+              youtubeVideo {
+                url
+                thumbnailUrl
+              }
+            }                        
             allPrograms {
               description(markdown: true)
               endDate
@@ -218,6 +271,41 @@ module.exports = function(api, options) {
           ...item
         });
       }
+      for (const item of result.data.data.allPressLinks) {
+        presslinks.addNode({
+          ...item
+        });
+      }
+      for (const item of result.data.data.allTimelineItems) {
+        timelineItems.addNode({
+          ...item
+        });
+      }
+      // for (const item of result.data.data.allTimelineItems) {
+      //   let pressLinksList;
+      //   let articleList;
+      //   if (item.related[0]) {
+      //     let related = item.related;
+      //     if (related.__typename == "PressLinkRecord") {
+      //       let pressLinksList = [related].map(function(presslink) {
+      //         console.log(pressLinksList);
+      //         return presslink.id;
+      //       });
+      //     }
+      //     if (related.__typename == "ArticleRecord") {
+      //       let articleList = [related].map(function(article) {
+      //         console.log(articleList);
+      //         return article.id;
+      //       });
+      //     }
+
+      //     timelineItems.addNode({
+      //       ...item,
+      //       pressLinksList: pressLinksList,
+      //       articleList: articleList
+      //     });
+      //   }
+      // }
     });
   });
 

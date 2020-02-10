@@ -12,7 +12,8 @@ import {
   faEnvelope,
   faCalendarDay,
   faWheelchair,
-  faMapMarkerAlt
+  faMapMarkerAlt,
+  faFile
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
@@ -27,6 +28,7 @@ config.autoAddCss = false;
 library.add(
   faCheck,
   faAccessibleIcon,
+  faFile,
   faMapMarkerAlt,
   faTwitter,
   faInstagram,

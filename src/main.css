@@ -161,10 +161,11 @@
 }
 
 .AgrandirTight {
-      font-family: "Agrandir Tight";
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Agrandir Tight";
+  font-weight: normal;
+  font-style: normal;
 }
+
 body {
   @apply font-body;
 }
@@ -177,31 +178,39 @@ h3 {
   font-style: normal;
 }
 
-main h3 {
-    @apply text-2xl uppercase mt-6 mb-0;
+/* main h3 {
+  @apply text-2xl uppercase mt-6 mb-0;
+} */
+
+#page--event,
+#page--exhibition,
+#page--article {
+  main {
+
+    h1 {
+      @apply text-4xl uppercase leading-tight;
+    }
+
+    #body {
+      h2 {
+        @apply text-3xl mt-12 mb-0 leading-tight mb-3 uppercase;
+      }
+
+      h3 {
+        @apply text-2xl uppercase mt-6 mb-0;
+      }
+
+      h4 {
+        @apply font-display uppercase text-lg font-bold leading-snug mt-3 mb-0;
+      }
+
+      h3+p {
+        @apply mb-6;
+      }
+    }
+  }
 }
 
-#page--event, #page--exhibition, #page--article {
-
-  h1 {
-    @apply text-4xl uppercase leading-tight;
-  }
-  #body {
-  h2 {
-    @apply text-3xl mt-12 mb-0 leading-tight mb-3 uppercase;
-  }
-  h3 {
-    @apply text-2xl uppercase mt-6 mb-0;
-  }
-  h4 {
-    @apply font-display uppercase text-lg font-bold leading-snug mt-3 mb-0;
-  }
-
-  h3 + p {
-    @apply mb-6;
-  }
-  }
-}
 .btn {
   @apply py-2 px-4 rounded cursor-pointer;
 }
@@ -236,33 +245,41 @@ main {
     @apply mb-3;
   }
 }
+
 nav {
   a {
     @apply mx-12 tracking-tight text-xl;
     font-family: HelveticaNowText-Regular;
     font-weight: normal;
     font-style: normal;
-    
-    &.active--exact {
-      @apply border-black border-b font-bold border-b-4 uppercase;
+
+
+    &.active {
+      @apply text-gray-600 border-gray-600 border-b font-bold border-b-4 uppercase;
       font-family: "Agrandir Grand";
       font-weight: 900;
       font-style: normal;
+      &.active--exact {
+      @apply text-black border-black border-b font-bold border-b-4 uppercase;
+      }
     }
   }
 }
+
 .about,
 h2 {
   font-family: "Agrandir Tight";
   font-weight: normal;
   font-style: normal;
   text-transform: initial;
-  
+
   @apply text-4xl mt-24 mb-6 text-center;
+
   &.about {
     @apply text-4xl my-12;
   }
 }
+
 p {
   @apply mb-3;
 
@@ -282,6 +299,15 @@ p {
 
 
 }
+
+.fade-enter-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
 /* purgecss end ignore */
 
 
