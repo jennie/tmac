@@ -1,35 +1,37 @@
 <template>
   <Layout>
-    <main>
-      <div class=" flex">
-        <div class="w-1/2">
-          <img
-            src="https://www.datocms-assets.com/5128/1581278016-parkdale-meeting.jpg?&bm=normal&balph=20&auto=compress,format"
-            alt
-          />
-        </div>
-        <div class="w-1/2">
-          <h2 class="mt-0">#TMACtion</h2>
-          <div class="lead">
-            <p>
-              In May 2015, the City of Toronto and Urbancorp
-              <b>breached their obligations</b> under a contract with TMAC.
-              We’re suing both parties for the right to purchase the arts space
-              as agreed. Here you’ll find updates about our progress towards a
-              resolution that will secure the space at 32 Lisgar for the benefit
-              of the community.
-            </p>
+    <div class="header">
+      <img
+        class="text-center mx-auto"
+        src="
+          https://www.datocms-assets.com/5128/1581278016-parkdale-meeting.jpg?&bm=normal&balph=20&auto=compress,format
+        "
+      />
+      <div class="mx-auto -mt-32 pt-0 md:w-2/3 bg-white relative p-12">
+        <h1 class="text-3xl text-center mt-12 mb-6 pt-12">
+          #TMACtion
+        </h1>
+        <div class="text-center date mb-12"></div>
+        <div class="mb-8 text-center text-gray-800">
+          <p>
+            In May 2015, the City of Toronto and Urbancorp
+            <b>breached their obligations</b> under a contract with TMAC. We’re
+            suing both parties for the right to purchase the arts space as
+            agreed. Here you’ll find updates about our progress towards a
+            resolution that will secure the space at 32 Lisgar for the benefit
+            of the community.
+          </p>
 
-            <p>
-              As of February 2020, we are still in litigation with the City of
-              Toronto over the space, and the City maintains its position that
-              TMAC is uanable to successfully operate the space and provides
-              "limited benefit" to the community.
-            </p>
-          </div>
+          <p>
+            As of February 2020, we are still in litigation with the City of
+            Toronto over the space, and the City maintains its position that
+            TMAC is uanable to successfully operate the space and provides
+            "limited benefit" to the community.
+          </p>
         </div>
       </div>
-
+    </div>
+    <main>
       <div id="body">
         <div
           v-for="(t, index) in $page.timelineItems.edges"
@@ -39,11 +41,12 @@
             <div class="w-2/4  self-center">
               <img
                 v-if="t.node.image"
-                class="pr-6  my-2 mx-auto"
+                class="pr-6  my-2 mx-auto w-9/12"
                 :src="
                   `${t.node.image.url}?auto=compress,format&fit=crop&ar=16:9&crop=faces,entropy`
                 "
               />
+
               <div class="uppercase text-center text-red-600 timeline-date">
                 {{ t.node.date | luxon:format('MMMM d') }}
               </div>
@@ -68,7 +71,10 @@
     </main>
   </Layout>
 </template>
-<style lang="postcss">
+<style lang="postcss" scoped>
+h3 {
+  @apply uppercase;
+}
 hr.vertical {
   @apply h-24 flex text-center justify-center border-red-500;
 
@@ -108,6 +114,10 @@ query Timeline {
         image {
           url
         }
+        youtubeVideo {
+          url
+          thumbnailUrl
+        }        
       }
     }
   }
