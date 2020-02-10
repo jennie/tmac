@@ -16,9 +16,24 @@
         </g-link>
       </h3>
       <div class="mb-2">
-        <span class="date">
-          {{ event.node.startDateTime | luxon:format('EEEE, MMMM d, t') }}
-          <!-- –{{ event.node.endDateTime | luxon:format('t') }} -->
+        <span class="date text-base">
+          <div v-if="duration > 24">
+            <p class="date text-sm">
+              {{ event.node.startDateTime | luxon:format('EEEE, MMMM d')
+
+              }}
+              &nbsp;–&nbsp;
+              {{ event.node.endDateTime | luxon:format('EEEE, MMMM d') }}
+            </p>
+          </div>
+          <div v-else>
+            <p class="date">
+              {{ event.node.startDateTime | luxon:format('EEEE, MMMM d') }}
+              <br />
+              {{ event.node.startDateTime | luxon:format('t') }}&nbsp;–&nbsp;
+              {{ event.node.endDateTime | luxon:format('t') }}
+            </p>
+          </div>
         </span>
       </div>
       <div
@@ -43,8 +58,22 @@ h3 {
   @apply text-2xl tracking-tighter text-xl;
 }
 </style>
+
 <script>
+import Layout from "~/layouts/Default.vue";
+import Interval from "luxon/src/interval.js";
+import DateTime from "luxon/src/datetime.js";
 export default {
-  props: ["event"]
+  props: ["event"],
+
+  computed: {
+    duration() {
+      var i = Interval.fromDateTimes(
+        DateTime.fromISO(this.event.node.startDateTime),
+        DateTime.fromISO(this.event.node.endDateTime)
+      );
+      return i.length("hours");
+    }
+  }
 };
 </script>

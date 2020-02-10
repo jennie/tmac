@@ -17,6 +17,8 @@
         <div class="self-center">
           <a
             class="m-0 pt-3 leading-none bg-black text-sm uppercase hover:bg-red-600 text-white py-2 px-4 rounded-sm no-underline"
+            href="https://calendly.com/tomediaarts/space-tour"
+            target="_blank"
             >Book a Tour</a
           >
         </div>

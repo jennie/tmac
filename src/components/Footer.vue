@@ -5,8 +5,16 @@
         <h3>Toronto Media Arts Centre</h3>
         <p>
           32 Lisgar Street
-          <br />Toronto, ON M6J 0C9
-          <br />Canada
+          <br />Toronto, ON M6J 0C9 <br />Canada
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a
+            class="pl-1"
+            href="https://tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0"
+            target="_blank"
+            >Join our mailing list</a
+          >
         </p>
         <p>
           <i class="fas fa-map-marker-alt"></i>
@@ -17,13 +25,15 @@
           <a
             class="pl-1"
             href="https://policies.tomediaarts.org/procedure-manual/policies/accessibility"
-          >Accessibility information</a>
+            >Accessibility information</a
+          >
         </p>
         <p>
           <a
             href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
             class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full no-underline"
-          >Donate</a>
+            >Donate</a
+          >
         </p>
       </div>
       <div>
@@ -51,7 +61,7 @@
           </a>
         </section>
         <section id="logos">
-          <a href="https://shwca.se/tmac-logo-kit">Logos for print and web</a>
+          <a href="https://shwca.se/tmac-logo-kit">Download logos</a>
         </section>
       </div>
       <div>
@@ -61,7 +71,9 @@
         <p>Closed on all stat holidays.</p>
         <div class="hidden vcard">
           <div class="org">Toronto Media Arts Centre</div>
-          <a class="email" href="mailto:info@tomediaarts.org">info@tomediaarts.org</a>
+          <a class="email" href="mailto:info@tomediaarts.org"
+            >info@tomediaarts.org</a
+          >
           <div class="adr">
             <div class="street-address">32 Lisgar Street</div>
             <span class="locality">Toronto</span> ,
@@ -87,7 +99,9 @@
     </div>
     <div class="post-footer copyright text-center text-gray-600 mt-12">
       <p>© 2011-2020 Toronto Media Arts Cluster</p>
-      <p class="charitable-number text-sm">Registered Charity 847429701RR0001</p>
+      <p class="charitable-number text-sm">
+        Registered Charity 847429701RR0001
+      </p>
       <p>
         <a href="https://governance.tomediaarts.org">Governance</a>
       </p>
