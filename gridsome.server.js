@@ -40,6 +40,10 @@ module.exports = function(api, options) {
       path: "/tmaction/press",
       component: "./src/templates/Press.vue"
     });
+    createPage({
+      path: "/tmaction/faqs",
+      component: "./src/templates/Faqs.vue"
+    });
   });
 
   api.loadSource(async store => {
@@ -57,13 +61,16 @@ module.exports = function(api, options) {
     const exhibitions = store.addCollection({
       typeName: "Exhibition"
     });
+    const faqs = store.addCollection({
+      typeName: "Faqs"
+    });
     exhibitions.addReference("membersList", "Member");
 
     const timelineItems = store.addCollection({
       typeName: "Timeline"
     });
-    timelineItems.addReference("pressLinksList", "Press");
-    timelineItems.addReference("articleList", "Article");
+    // timelineItems.addReference("pressLinksList", "Press");
+    // timelineItems.addReference("articleList", "Article");
 
     const members = store.addCollection({
       typeName: "Member"
@@ -157,7 +164,7 @@ module.exports = function(api, options) {
                 url
               }
             }
-            allArticles {
+            allArticles(first: 100) {
               appendix
               body(markdown: true)
               date
@@ -170,7 +177,7 @@ module.exports = function(api, options) {
               slug
               shortSummary
             }
-            allPressLinks {
+            allPressLinks(first: 100) {
               title
               outlet
               link
@@ -183,32 +190,25 @@ module.exports = function(api, options) {
               date
               author
             }
-            allTimelineItems {
+            allTimelineItems(first: 100) {
               date
               description(markdown: true)
               image {
                 url
-              }
-              related {
-                ... on ArticleRecord {
-                  id
-                  slug
-                  title
-                  __typename
-                }
-                ... on PressLinkRecord {
-                  id
-                  link
-                  title
-                  __typename
-                }
               }
               title
               youtubeVideo {
                 url
                 thumbnailUrl
               }
-            }                        
+            }
+            allFaqItems {
+              answer
+              position
+              id
+              question
+              slug
+            }
             allPrograms {
               description(markdown: true)
               endDate
@@ -268,6 +268,11 @@ module.exports = function(api, options) {
       }
       for (const item of result.data.data.allArticles) {
         articles.addNode({
+          ...item
+        });
+      }
+      for (const item of result.data.data.allFaqItems) {
+        faqs.addNode({
           ...item
         });
       }

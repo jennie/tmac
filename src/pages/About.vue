@@ -1,53 +1,73 @@
 <template>
   <Layout>
-    <main>
+    <div class="header">
       <img
-        src="https://www.datocms-assets.com/5128/1580249587-426632353321595576094648128269575260209152o-1.jpg?&bm=normal&balph=20&auto=compress,format"
-        alt
+        class="text-center mx-auto"
+        src="
+          https://www.datocms-assets.com/5128/1580249587-426632353321595576094648128269575260209152o-1.jpg?auto=compress,format&fit=crop&ar=16:9&crop=faces,entropy
+        "
       />
-      <h2>About TMAC</h2>
-      <p class="lead">
-        TMAC is a new permanent home for Toronto’s media arts organizations, and
-        an
-        <b>accessible public space for art</b>, creation and collaboration in
-        the Queen West Triangle.
-      </p>
-      <p>
-        In the heart of Toronto’s Art and Design District, TMAC is a diverse and
-        collaborative environment where everyone can engage meaningfully with
-        art and technology. TMAC integrates creation, production, presentation,
-        education, conservation and dissemination practices and with a focus on
-        community building and inclusivity.
-      </p>
-      <p>
-        With year-round arts and cultural programming, open lab studios,
-        equipment libraries, coworking and social areas, we provide the tools,
-        space and freedom to play with art, media and new technologies–including
-        film, animation, videogames, audio and sound, video, robotics,
-        electronics and more.
-      </p>
-      <p>
-        <a href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865">Donate now</a>
-        to support our programs.
-      </p>
-      <h2>How we operate</h2>
-      <p>
-        TMAC is managed by a board of directors comprised of one representative
-        from each member organization, and two community stakeholders
-        representing the local neighborhood and the broader Toronto media arts
-        community. TMAC currently has no staff, and is 100% volunteer-run.
-      </p>
-      <div class="well">
-        <span>
-          <h4>Board of Directors →</h4>
+      <div class="mx-auto -mt-32 pt-0 md:w-2/3 bg-white relative p-12">
+        <h1 class="text-3xl text-center mt-12 mb-6 pt-12">
+          About TMAC
+        </h1>
+        <div class="mb-8 text-center text-gray-800">
+          <p>
+            TMAC is a new permanent home for Toronto’s media arts organizations,
+            and an
+            <b>accessible public space for art</b>, creation and collaboration
+            in the Queen West Triangle.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <main class="px-24">
+      <section class="flex">
+        <div class="w-full md:w-1/2 md:pr-12">
+          <p>
+            In the heart of Toronto’s Art and Design District, TMAC is a diverse
+            and collaborative environment where everyone can engage meaningfully
+            with art and technology. TMAC integrates creation, production,
+            presentation, education, conservation and dissemination practices
+            and with a focus on community building and inclusivity.
+          </p>
+          <p>
+            With year-round arts and cultural programming, open lab studios,
+            equipment libraries, coworking and social areas, we provide the
+            tools, space and freedom to play with art, media and new
+            technologies–including film, animation, videogames, audio and sound,
+            video, robotics, electronics and more.
+          </p>
           <p>
             <a
-              href="https://governance.tomediaarts.org/director-register"
-              target="_blank"
-            >Past directors and advisory board</a>
+              href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
+              >Donate now</a
+            >
+            to support our programs.
           </p>
-        </span>
-        <span>
+        </div>
+        <div class="w-full md:w-1/2">
+          <h3>How we operate</h3>
+          <p>
+            TMAC is managed by a board of directors comprised of one
+            representative from each member organization, and two community
+            stakeholders representing the local neighborhood and the broader
+            Toronto media arts community. TMAC currently has no staff, and is
+            100% volunteer-run.
+          </p>
+
+          <p>
+            Each member organization has its own workspace, some with offices
+            and classrooms, others with a gallery or film vault. Each member
+            organization takes an active role in our collective programming:
+            Supporting users of the exhibition spaces; promoting TMAC; and
+            developing a sustainable, equitable model for a collaborative centre
+            that supports our artistic, cultural, and community-based mandate.
+          </p>
+
+          <h3>Board of Directors</h3>
+          <p></p>
           <ul>
             <li>
               Henry Faber, chair
@@ -80,16 +100,16 @@
               <small>community</small>
             </li>
           </ul>
-        </span>
-      </div>
-      <p>
-        Each member organization has its own workspace, some with offices and
-        classrooms, others with a gallery or film vault. Each member
-        organization takes an active role in our collective programming:
-        Supporting users of the exhibition spaces; promoting TMAC; and
-        developing a sustainable, equitable model for a collaborative centre
-        that supports our artistic, cultural, and community-based mandate.
-      </p>
+          <p>
+            <a
+              href="https://governance.tomediaarts.org/director-register"
+              target="_blank"
+              >Past directors and advisory board</a
+            >
+          </p>
+        </div>
+      </section>
+
       <div class="sidebar">
         <section id="history">
           <h2 id="history">History</h2>
@@ -115,9 +135,7 @@
             </p>
             <p>
               In 2014, with the support of the local community, City staff,
-              <a
-                href="http://active18.net"
-              >Active 18</a> and Councillor
+              <a href="http://active18.net">Active 18</a> and Councillor
               <a href="http://www.anabailao.com/developments">Ana Bailão</a>,
               TMAC, Urbancorp and the City of Toronto finalized an agreement
               that would provide the Edge on Triangle Park condominium a density
@@ -127,7 +145,9 @@
             </p>
             <p>
               We
-              <a href="news/were-moving-in">moved into our facility in March 2018</a>, and are currently occupying our space on an interim basis as we
+              <a href="news/were-moving-in"
+                >moved into our facility in March 2018</a
+              >, and are currently occupying our space on an interim basis as we
               conclude our litigation against the City of Toronto and Urbancorp.
             </p>
           </div>
@@ -136,7 +156,8 @@
               <strong>
                 <a
                   href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
-                >Make a donation today</a>
+                  >Make a donation today</a
+                >
                 and immediately receive a charitable receipt through Canada
                 Helps!
               </strong>
@@ -150,7 +171,9 @@
             including:
           </p>
           <ul>
-            <li>Community gathering and event spaces overlooking Lisgar Park</li>
+            <li>
+              Community gathering and event spaces overlooking Lisgar Park
+            </li>
             <li>
               Classrooms for public talks, workshops, screenings, festivals and
               events

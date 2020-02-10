@@ -8,6 +8,10 @@ export default [
     component: () => import(/* webpackChunkName: "page--src--templates--news-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/News.vue")
   },
   {
+    path: "/tmaction/faqs/",
+    component: () => import(/* webpackChunkName: "page--src--templates--faqs-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Faqs.vue")
+  },
+  {
     path: "/program/:slug/",
     component: () => import(/* webpackChunkName: "page--src--templates--exhibition-vue" */ "/Users/jennie/Sites/tmac-www/src/templates/Exhibition.vue")
   },
@@ -30,6 +34,10 @@ export default [
   {
     path: "/tmaction/",
     component: () => import(/* webpackChunkName: "page--src--pages--tmaction-vue" */ "/Users/jennie/Sites/tmac-www/src/pages/Tmaction.vue")
+  },
+  {
+    path: "/space-rentals/",
+    component: () => import(/* webpackChunkName: "page--src--pages--space-rentals-vue" */ "/Users/jennie/Sites/tmac-www/src/pages/Space-rentals.vue")
   },
   {
     path: "/location/",

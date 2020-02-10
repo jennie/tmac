@@ -5,6 +5,11 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3af617");
 
+@font-face {
+  font-family: 'HelveticaNowDisplay-XBlk';
+  src: url('./assets/fonts/3AFA54_0_0.eot');
+  src: url('./assets/fonts/3AFA54_0_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AFA54_0_0.woff2') format('woff2'), url('./assets/fonts/3AFA54_0_0.woff') format('woff'), url('./assets/fonts/3AFA54_0_0.ttf') format('truetype');
+}
 
 @font-face {
   font-family: 'HelveticaNowText-Regular';
@@ -166,6 +171,12 @@
   font-style: normal;
 }
 
+.HelveticaNowDisplay-XBlk {
+  font-family: HelveticaNowDisplay-XBlk;
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   @apply font-body;
 }
@@ -178,9 +189,22 @@ h3 {
   font-style: normal;
 }
 
-/* main h3 {
-  @apply text-2xl uppercase mt-6 mb-0;
-} */
+main {
+
+  h1,
+  h3 {
+
+    @apply uppercase mt-6 mb-0;
+  }
+
+  h1 {
+    @apply text-4xl
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+}
 
 #page--event,
 #page--exhibition,
@@ -259,8 +283,9 @@ nav {
       font-family: "Agrandir Grand";
       font-weight: 900;
       font-style: normal;
+
       &.active--exact {
-      @apply text-black border-black border-b font-bold border-b-4 uppercase;
+        @apply text-black border-black border-b font-bold border-b-4 uppercase;
       }
     }
   }

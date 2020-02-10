@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <p class="highlight p-2 bg-red-600 text-white text-center text-xl">
-      <g-link to="/news" class="text-white underline">
+      <g-link to="/tmaction" class="text-white underline">
         Get the latest updates about our ongoing litigation against the City of
         Toronto and Urbancorp.
       </g-link>
@@ -113,12 +113,12 @@ export default {
               to: "/tmaction/news"
             },
             {
-              title: "Press",
-              to: "/tmaction/press"
-            },
-            {
               title: "FAQs",
               to: "/tmaction/faqs"
+            },
+            {
+              title: "Press",
+              to: "/tmaction/press"
             }
           ]
         },
@@ -129,7 +129,7 @@ export default {
 
         { title: "Events", to: "/events" },
         { title: "Exhibitions", to: "/exhibitions" },
-        { title: "Rentals", to: "/rentals" },
+        { title: "Rentals", to: "/space-rentals" },
         { title: "Location", to: "/location" }
       ]
     };
