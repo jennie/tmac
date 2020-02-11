@@ -19,8 +19,8 @@
       <span v-if="presslink.node.author">{{ presslink.node.author }} –</span>
       {{ presslink.node.outlet }}
     </div>
-    <i class="fas fa-file"></i>
     <div v-if="presslink.node.file">
+      <i class="fas fa-file"></i>
       <a :href="presslink.node.file.url" class="pl-2 text-base underline"
         >Download/view {{ presslink.node.file.format }}</a
       >
