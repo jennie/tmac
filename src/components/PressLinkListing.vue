@@ -20,10 +20,11 @@
       {{ presslink.node.outlet }}
     </div>
     <i class="fas fa-file"></i>
-
-    <a :href="presslink.node.file.url" class="pl-2 text-base underline"
-      >Download/view {{ presslink.node.file.format }}</a
-    >
+    <div v-if="presslink.node.file">
+      <a :href="presslink.node.file.url" class="pl-2 text-base underline"
+        >Download/view {{ presslink.node.file.format }}</a
+      >
+    </div>
     <div
       class="text-base mb-8 leading-snug sm:hidden md:block"
       v-html="presslink.node.summary"
