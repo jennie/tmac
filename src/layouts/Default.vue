@@ -39,9 +39,18 @@
         class="main nav flex flex-wrap justify-between flex-col md:flex-row md:flex md:flex-no-wrap md:flex-initial md:w-auto md:mt-0 md:relative md:h-auto md:w-auto md:bg-transparent md:p-0 fixed top-0 left-0 right-0 h-full w-full bg-gray-300 z-10 p-6 flex-1 "
         :class="isOpen ? 'block' : 'hidden'"
       >
-        <g-link to="/" class="home-link md:hidden tracking-tight text-3xl "
-          >Home</g-link
-        >
+        <div class="md:hidden justify-end self-end absolute ">
+          <button @click="toggle" class="flex items-center py-2 btn ">
+            Close
+          </button>
+        </div>
+        <div>
+          <g-link
+            to="/"
+            class="home-link md:hidden inline-flex tracking-tight text-3xl "
+            >Home</g-link
+          >
+        </div>
         <div v-for="item in menu" :key="item.id">
           <g-link
             :to="item.to"
