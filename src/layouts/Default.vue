@@ -148,10 +148,10 @@ export default {
               title: "News",
               to: "/tmaction/news"
             },
-            {
-              title: "FAQs",
-              to: "/tmaction/faqs"
-            },
+            // {
+            //   title: "FAQs",
+            //   to: "/tmaction/faqs"
+            // },
             {
               title: "Press",
               to: "/tmaction/press"
