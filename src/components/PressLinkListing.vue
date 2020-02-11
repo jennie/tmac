@@ -33,7 +33,7 @@
   <!-- <h4 v-html="presslink.node.articleType" /> -->
 </template>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 main {
   h3 {
     @apply normal-case font-normal leading-tight;

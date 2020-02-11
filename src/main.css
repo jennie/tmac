@@ -1,9 +1,8 @@
+@import url("https://hello.myfonts.net/count/3af617");
 @tailwind base;
 
 
 /* purgecss start ignore */
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/3af617");
 
 @font-face {
   font-family: 'HelveticaNowDisplay-XBlk';
@@ -202,26 +201,29 @@ main {
   }
 
   h3 {
-    @apply text-2xl;
+    @apply text-2xl font-display;
   }
 }
+
 /* page layouts */
 .hero-header {
   h1 {
     @apply text-4xl text-center mb-6 pt-0 mt-0
   }
+
   .lead {
     @apply mb-8 text-center text-gray-800
   }
 
 }
+
 #page--event,
 #page--exhibition,
 #page--article {
   main {
 
     h1 {
-      @apply text-4xl uppercase leading-tight ;
+      @apply text-4xl uppercase leading-tight;
       hyphens: auto;
     }
 
@@ -253,20 +255,21 @@ main {
 
 main {
   ul {
-  
+
     li {
       @apply mb-2 leading-tight;
-    
+
       margin-left: 2rem
     }
-    
+
     li:before {
-    
+
       content: '– ';
       margin-left: -1.25rem;
       font-weight: 900;
     }
   }
+
   p a:not(.btn) {
     @apply underline text-blue;
     font-family: HelveticaNowText-Bold;
@@ -292,10 +295,14 @@ nav {
 
 
     &.active {
-      @apply text-gray-600 border-gray-600 border-b border-b-4 uppercase;
-      font-family: "HelveticaNowText-ExtraBold";
-      font-weight: normal;
-      font-style: normal;
+      &:not(.active--exact) {
+        @apply text-gray-600 border-gray-600 border-b border-b-4 uppercase;
+        font-family: "HelveticaNowText-ExtraBold";
+        font-weight: normal;
+        font-style: normal;
+
+      }
+
       &.home-link {
         font-family: HelveticaNowText-Regular;
         font-weight: normal;
@@ -303,11 +310,12 @@ nav {
         @apply text-black border-0 normal-case
       }
 
-      &.active--exact, &.active--exact.home-link {
+      &.active--exact,
+      &.active--exact.home-link {
         font-family: "HelveticaNowText-ExtraBold";
         font-weight: normal;
         font-style: normal;
-        @apply text-black border-black border-b font-bold border-b-4 uppercase;
+        @apply border-black border-b font-bold border-b-4 uppercase;
       }
     }
   }
