@@ -96,13 +96,6 @@
         <g-link to="/events" class="uppercase">&larr; Back to Events</g-link>
       </div>
     </div>
-
-    <pre>
-
-    {{ JSON.stringify( jsonld.jsonld,null,2 ) }}
-    </pre>
-
-
     <script v-html="jsonld.jsonld" type="application/ld+json" />
   </Layout>
     </template>
@@ -163,28 +156,28 @@
         },
         jsonld() {
           const jsonld = {
-          "@context": "http://www.schema.org",
-          "@type": "Event",
-          "name": this.$page.event.title,
-          "url": this.$page.event.path,
-          "description": this.$page.event.description,
-          "startDate": this.$page.event.startDateTime,
-          "endDate": this.$page.event.endDateTime,
-          "image": this.$page.event.featureImage.url,
-          "location": {
-            "@type": "Place",
-            "name": "Toronto Media Arts Centre",
-            "sameAs": "https://tomediaarts.org",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "32 Lisgar Street",
-              "addressLocality": "Toronto",
-              "addressRegion": "ON",
-              "postalCode": "M6J0C9",
-              "addressCountry": "Canada"
+            "@context": "http://www.schema.org",
+            "@type": "Event",
+            "name": this.$page.event.title,
+            "url": `https://tomediaarts.org/event/${this.$page.event.slug}`,
+            "description": this.$page.event.description,
+            "startDate": this.$page.event.startDateTime,
+            "endDate": this.$page.event.endDateTime,
+            "image": this.$page.event.featureImage.url,
+            "location": {
+              "@type": "Place",
+              "name": "Toronto Media Arts Centre",
+              "sameAs": "https://tomediaarts.org",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "32 Lisgar Street",
+                "addressLocality": "Toronto",
+                "addressRegion": "ON",
+                "postalCode": "M6J0C9",
+                "addressCountry": "Canada"
+              }
             }
           }
-        }
         return { jsonld }
         }
       },

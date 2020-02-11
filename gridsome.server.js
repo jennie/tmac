@@ -168,6 +168,7 @@ module.exports = function(api, options) {
               appendix
               body
               date
+              _updatedAt
               featureImage {
                 url
               }

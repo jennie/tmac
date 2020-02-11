@@ -35,6 +35,9 @@
         </div>
       </div>
     </div>
+    {{ jsonld }}
+
+    <script v-html="jsonld.jsonld" type="application/ld+json" />
   </Layout>
 </template>
 
@@ -45,6 +48,7 @@ query Article($id: ID!)  {
     appendix
     body
     date
+    _updatedAt    
     featureImage {
       url
     }
@@ -65,7 +69,36 @@ export default {
   components: {
     Layout
   },
-
+  computed: {
+    jsonld() {
+      const jsonld = {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `https://tomediaarts.org/news/${this.$page.article.slug}`
+        },
+        headline: this.$page.article.title,
+        image: `${this.$page.article.featureImage.url}?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.91:1&fit=crop`,
+        datePublished: this.$page.article.date,
+        dateModified: this.$page.article._updatedAt,
+        author: {
+          "@type": "Organization",
+          name: "Toronto Media Arts Centre"
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Toronto Media Arts Centre",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://tomediaarts.org/images/logos/TMAC_logo@4x.png"
+          }
+        },
+        description: this.$page.article.summary
+      };
+      return { jsonld };
+    }
+  },
   metaInfo() {
     return {
       title: this.$page.article.title,

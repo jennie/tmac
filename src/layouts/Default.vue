@@ -14,6 +14,7 @@
         <g-link to="/" class="self-center">
           <g-image
             class="w-32"
+            itemprop="logo"
             src="~/assets/images/logos/TMAC_logo@4x.png"
           ></g-image>
         </g-link>
