@@ -79,7 +79,11 @@ export default {
           "@id": `https://tomediaarts.org/news/${this.$page.article.slug}`
         },
         headline: this.$page.article.title,
-        image: `${this.$page.article.featureImage.url}?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.91:1&fit=crop`,
+        image: `${
+          this.$page.article.featureImage
+            ? this.$page.article.featureImage.url
+            : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
+        }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`,
         datePublished: this.$page.article.date,
         dateModified: this.$page.article._updatedAt,
         author: {
