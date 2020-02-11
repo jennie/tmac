@@ -46,6 +46,7 @@
           v-for="(t, index) in $page.timelineItems.edges"
           :key="`timelineItem-${index}`"
           :timelineItem="t"
+          :index="index"
         />
       </div>
     </main>

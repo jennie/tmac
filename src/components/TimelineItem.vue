@@ -65,7 +65,7 @@ hr.vertical {
 import DateTime from "luxon/src/datetime.js";
 
 export default {
-  props: ["timelineItem"],
+  props: ["timelineItem", "index"],
   computed: {
     date() {
       let d = DateTime.fromISO(this.timelineItem.node.date);

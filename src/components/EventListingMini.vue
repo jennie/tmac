@@ -1,5 +1,5 @@
 <template>
-  <div class="w-1/3 p-1 rounded-lg overflow-hidden">
+  <div class="w-full md:w-1/3 p-1 rounded-lg overflow-hidden">
     <div class="pb-2/3 relative">
       <g-link :to="event.node.path" class="no-underline">
         <img
