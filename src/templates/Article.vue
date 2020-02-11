@@ -35,7 +35,6 @@
         </div>
       </div>
     </div>
-    {{ jsonld }}
 
     <script v-html="jsonld.jsonld" type="application/ld+json" />
   </Layout>

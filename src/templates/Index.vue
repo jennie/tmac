@@ -2,52 +2,28 @@
   <Layout>
     <header>
       <div class="image-gallery">
-        <g-image
-          src="~/assets/images/ruby.jpg"
-          quality="100"
-          fit="cover"
-          width="920"
-          height="614"
+        <img
+          src="https://www.datocms-assets.com/5128/1581459534-ruby.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
         />
-        <g-image
-          src="~/assets/images/summerwork.jpg"
-          quality="100"
-          fit="cover"
-          width="920"
-          height="614"
+        <img
+          src="https://www.datocms-assets.com/5128/1581459444-summerwork.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
         />
-        <g-image
-          src="~/assets/images/changeup.jpg"
-          quality="100"
-          fit="cover"
-          width="920"
-          height="614"
+        <img
+          src="https://www.datocms-assets.com/5128/1581445197-426965753321596209427917960276168609890304o.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
         />
       </div>
-      <h2 class="about text-center my-24 text-4xl">
+      <h2 class="about text-center my-12 md:my-24 text-4xl">
         A place to create and experience video, film, games and digital culture.
       </h2>
       <div class="image-gallery">
-        <g-image
-          src="~/assets/images/jordan.jpg"
-          quality="90"
-          fit="cover"
-          width="920"
-          height="614"
+        <img
+          src="https://www.datocms-assets.com/5128/1581448828-jordan.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
         />
-        <g-image
-          src="~/assets/images/42713268_332158887609531_963870951341031424_o.jpg"
-          quality="90"
-          fit="cover"
-          width="920"
-          height="614"
+        <img
+          src="https://www.datocms-assets.com/5128/1581459375-42713268332158887609531963870951341031424o.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
         />
-        <g-image
-          src="~/assets/images/tiwt.jpg"
-          quality="100"
-          fit="cover"
-          width="920"
-          height="614"
+        <img
+          src="https://www.datocms-assets.com/5128/1581459430-tiwt.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
         />
       </div>
     </header>
