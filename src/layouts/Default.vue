@@ -44,10 +44,8 @@
             Close
           </button>
         </div>
-        <div>
-          <g-link
-            to="/"
-            class="home-link md:hidden inline-flex tracking-tight text-3xl "
+        <div class="md:hidden ">
+          <g-link to="/" class="home-link inline-flex tracking-tight text-3xl "
             >Home</g-link
           >
         </div>

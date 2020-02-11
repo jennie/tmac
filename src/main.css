@@ -223,7 +223,7 @@ main {
   main {
 
     h1 {
-      @apply text-4xl uppercase leading-tight;
+      @apply uppercase leading-tight;
       hyphens: auto;
     }
 

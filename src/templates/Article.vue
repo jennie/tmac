@@ -11,8 +11,8 @@
       </div>
 
       <div v-else class="bg-black pb-1/3" />
-      <div class="mx-auto -mt-64 pt-0 md:w-2/3 bg-white relative p-12">
-        <h1 class="text-3xl text-center mt-12 mb-6 pt-12">
+      <div class="mx-auto md:-mt-32 pt-0 md:w-2/3 md:bg-white relative md:p-6">
+        <h1 class="text-2xl md:text-4xl text-center mb-6">
           {{ $page.article.title }}
         </h1>
         <div class="text-center date mb-12">

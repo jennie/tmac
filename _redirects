@@ -1,4 +1,5 @@
 /dispute /news 301
+/news /tmaction/news 200
 /booking-request https://airtable.com/shrx5ut1Eq5aEffJk
 /help /news 301
 /ical.ics    /ical.html   200
