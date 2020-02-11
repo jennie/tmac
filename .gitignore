@@ -4,3 +4,17 @@ public
 /_cache
 /.env
 assets/images/signage/Digital Sign Template.acorn
+src/.temp/*
+/dist
+/.cache
+/src/.temp/icons.js
+/src/.temp/now.js
+/src/.temp/plugins-server.js
+/src/.temp/routes.js
+src/.temp/icons.js
+src/.temp/icons.js
+src/.temp/now.js
+src/.temp/icons.js
+src/.temp/now.js
+src/.temp/plugins-server.js
+src/.temp/routes.js

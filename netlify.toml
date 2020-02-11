@@ -1,0 +1,9 @@
+[context.master]
+  command = "spike compile"
+  environment = { NODE_VERSION = "9.2.0" }
+  publish = "public"
+
+[context.gridsome-migration]
+  command = "gridsome build"
+  environment = { NODE_VERSION = "13.7.0" }
+  publish = "dist"
