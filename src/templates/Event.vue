@@ -96,102 +96,131 @@
         <g-link to="/events" class="uppercase">&larr; Back to Events</g-link>
       </div>
     </div>
+    <script v-html="jsonld" type="application/ld+json"></script>
   </Layout>
-</template>
+    </template>
 
-<page-query>
+    <page-query>
 
-query Event($id: ID!)  {
-  event(id: $id) {
-    startDateTime
-    endDateTime
-    actionButtonText
-    canceled
-    createdAt
-    description
-    eventType
-    externalCoPresenters
-    featureImage {
-      url
-    }
-    id
-    location {
-      name
-    }
-    member {
-      name
-      shortName
-      logo {
-        url
+    query Event($id: ID!)  {
+      event(id: $id) {
+        startDateTime
+        endDateTime
+        actionButtonText
+        canceled
+        createdAt
+        description
+        eventType
+        externalCoPresenters
+        featureImage {
+          url
+        }
+        id
+        location {
+          name
+        }
+        member {
+          name
+          shortName
+          logo {
+            url
+          }
+        }
+        presenter
+        registrationLink
+        slug
+        summary
+        title
+
       }
     }
-    presenter
-    registrationLink
-    slug
-    summary
-    title
-
-  }
-}
-</page-query>
-<style lang="postcss"></style>
-<script>
-import Layout from "~/layouts/Default.vue";
-import Interval from "luxon/src/interval.js";
-import DateTime from "luxon/src/datetime.js";
-export default {
-  components: {
-    Layout
-  },
-
-  computed: {
-    duration() {
-      var i = Interval.fromDateTimes(
-        DateTime.fromISO(this.$page.event.startDateTime),
-        DateTime.fromISO(this.$page.event.endDateTime)
-      );
-      return i.length("hours");
-    }
-  },
-  name: "Event",
-  metaInfo() {
-    return {
-      title: this.$page.event.title,
-      description: this.$page.event.summary,
-      bodyAttrs: {
-        id: "page--event"
+    </page-query>
+    <style lang="postcss"></style>
+    <script>
+    import Layout from "~/layouts/Default.vue";
+    import Interval from "luxon/src/interval.js";
+    import DateTime from "luxon/src/datetime.js";
+    export default {
+      components: {
+        Layout
       },
-      meta: [
-        { name: "twitter:card", content: "summary_large_image" },
-        {
-          name: "twitter:image",
-          content: `${
-            this.$page.event.featureImage
-              ? this.$page.event.featureImage.url
-              : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
-          }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
+
+
+      computed: {
+        duration() {
+          var i = Interval.fromDateTimes(
+            DateTime.fromISO(this.$page.event.startDateTime),
+            DateTime.fromISO(this.$page.event.endDateTime)
+          );
+          return i.length("hours");
         },
-        { name: "twitter:site", content: "@tomediaarts" },
-        { name: "twitter:title", content: this.$page.event.title },
-        {
-          name: "twitter:description",
-          content: `${this.$page.event.summary}`
-        },
-        { name: "og:title", content: this.$page.event.title },
-        {
-          name: "og:description",
-          content: this.$page.event.summary
-        },
-        {
-          name: "og:image",
-          content: `${
-            this.$page.event.featureImage
-              ? this.$page.event.featureImage.url
-              : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
-          }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
+        jsonld() {
+          const jsonld = {
+          "@context": "http://www.schema.org",
+          "@type": "Event",
+          "name": this.$page.event.title,
+          "url": this.$page.event.path,
+          "description": this.$page.event.description,
+          "startDate": this.$page.event.startDateTime,
+          "endDate": this.$page.event.endDateTime,
+          "image": this.$page.event.featureImage.url,
+          "location": {
+            "@type": "Place",
+            "name": "Toronto Media Arts Centre",
+            "sameAs": "https://tomediaarts.org",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "32 Lisgar Street",
+              "addressLocality": "Toronto",
+              "addressRegion": "ON",
+              "postalCode": "M6J0C9",
+              "addressCountry": "Canada"
+            }
+          }
         }
-      ]
+        return { jsonld }
+        }
+      },
+      name: "Event",
+      metaInfo() {
+        return {
+          title: this.$page.event.title,
+          description: this.$page.event.summary,
+          bodyAttrs: {
+            id: "page--event"
+          },
+          meta: [
+            { name: "twitter:card", content: "summary_large_image" },
+            {
+              name: "twitter:image",
+              content: `${
+                this.$page.event.featureImage
+                  ? this.$page.event.featureImage.url
+                  : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
+              }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
+            },
+            { name: "twitter:site", content: "@tomediaarts" },
+            { name: "twitter:title", content: this.$page.event.title },
+            {
+              name: "twitter:description",
+              content: `${this.$page.event.summary}`
+            },
+            { name: "og:title", content: this.$page.event.title },
+            {
+              name: "og:description",
+              content: this.$page.event.summary
+            },
+            {
+              name: "og:image",
+              content: `${
+                this.$page.event.featureImage
+                  ? this.$page.event.featureImage.url
+                  : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
+              }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
+            }
+          ]
+        };
+      }
     };
-  }
-};
-</script>
+  </script>
+</template>
