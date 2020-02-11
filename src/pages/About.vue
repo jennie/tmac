@@ -7,8 +7,8 @@
           https://www.datocms-assets.com/5128/1580249587-426632353321595576094648128269575260209152o-1.jpg?auto=compress,format&fit=crop&ar=16:9&crop=faces,entropy
         "
       />
-      <div class="mx-auto -mt-32 pt-0 md:w-2/3 bg-white relative p-12">
-        <h1 class="text-3xl text-center mt-12 mb-6 pt-12">
+      <div class="mx-auto md:-mt-32 pt-0 md:w-2/3 md:bg-white relative md:p-6">
+        <h1 class="text-2xl md:text-4xl text-center mb-6">
           About TMAC
         </h1>
         <div class="mb-8 text-center text-gray-800">
@@ -22,9 +22,9 @@
       </div>
     </div>
 
-    <main class="px-24">
-      <section class="flex">
-        <div class="w-full md:w-1/2 md:pr-12">
+    <main class="px-6 lg:px-24">
+      <section class="flex flex-wrap">
+        <div class="w-full lg:w-1/2 lg:pr-12">
           <p>
             In the heart of Toronto’s Art and Design District, TMAC is a diverse
             and collaborative environment where everyone can engage meaningfully
@@ -47,7 +47,7 @@
             to support our programs.
           </p>
         </div>
-        <div class="w-full md:w-1/2">
+        <div class="w-full lg:w-1/2">
           <h3>How we operate</h3>
           <p>
             TMAC is managed by a board of directors comprised of one
@@ -112,7 +112,7 @@
 
       <div class="sidebar">
         <section id="history">
-          <h2 id="history">History</h2>
+          <h3 id="history">History</h3>
           <div>
             <p>
               <a href="/news">
@@ -165,7 +165,7 @@
           </div>
         </section>
         <section id="facility">
-          <h2>Facility</h2>
+          <h3>Facility</h3>
           <p>
             Our multi-purpose facility offers shared spaces and amenities
             including:
@@ -181,23 +181,32 @@
             <li>Meeting rooms seating up to 14</li>
             <li>Coworking spaces for film festival and studio staff</li>
             <li>Shared resource and equipment libraries</li>
-            <li>A temperature-controlled film vault and archive</li>
+            <li>
+              A temperature- and humidity–controlled film vault and archive
+            </li>
             <li>Technical and production facilities</li>
             <li>
               Four public galleries and
               <strong>exhibition spaces</strong>
             </li>
             <li>
-              <small>Coming soon</small> Café serving coffee, pastries and lunch
-              daily
+              <small class="bg-yellow-200 rounded-full py-1 px-2"
+                >Coming soon</small
+              >
+              Café serving coffee, pastries and lunch daily
             </li>
             <li>
-              <small>Coming soon</small> A
-              <strong>210-seat theatre</strong> designed by renowned architect
+              <small class="bg-yellow-200 rounded-full py-1 px-2"
+                >Coming soon</small
+              >
+              A <strong>210-seat theatre</strong> designed by renowned architect
               Peter Smith, for screening independent and experimental works
             </li>
             <li>
-              <small>Coming soon</small> Studio apartment for visiting
+              <small class="bg-yellow-200 rounded-full py-1 px-2"
+                >Coming soon</small
+              >
+              Studio apartment for visiting
               <strong>artist residencies</strong>
             </li>
           </ul>

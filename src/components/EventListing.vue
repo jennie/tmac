@@ -1,6 +1,6 @@
 <template>
-  <div class="event mb-12 w-full flex">
-    <div class="w-1/3">
+  <div class="event mb-12 w-full flex flex-wrap">
+    <div class="w-full md:w-1/3">
       <img
         v-if="event.node.featureImage"
         class="pr-6"
@@ -9,7 +9,7 @@
         "
       />
     </div>
-    <div class="w-2/3">
+    <div class="w-full md:w-2/3">
       <h3 class="text-2xl my-2 text-uppercase">
         <g-link :to="event.node.path" class="no-underline">
           {{ event.node.title }}
@@ -19,9 +19,7 @@
         <span class="date text-base">
           <div v-if="duration > 24">
             <p class="date text-sm">
-              {{ event.node.startDateTime | luxon:format('EEEE, MMMM d')
-
-              }}
+              {{ event.node.startDateTime | luxon:format('EEEE, MMMM d') }}
               &nbsp;–&nbsp;
               {{ event.node.endDateTime | luxon:format('EEEE, MMMM d') }}
             </p>

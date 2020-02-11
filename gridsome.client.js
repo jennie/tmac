@@ -13,7 +13,9 @@ import {
   faCalendarDay,
   faWheelchair,
   faMapMarkerAlt,
-  faFile
+  faFile,
+  faBars,
+  faBuilding
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
@@ -30,7 +32,9 @@ library.add(
   faAccessibleIcon,
   faFile,
   faMapMarkerAlt,
+  faBuilding,
   faTwitter,
+  faBars,
   faInstagram,
   faFacebook,
   faSquare,

@@ -5,14 +5,19 @@
         <img
           class="text-center mx-auto"
           :src="
-          `${$page.article.featureImage.url}?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.91:1&fit=crop`
-        "
+            `${$page.article.featureImage.url}?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.91:1&fit=crop`
+          "
         />
       </div>
+
       <div v-else class="bg-black pb-1/3" />
       <div class="mx-auto -mt-64 pt-0 md:w-2/3 bg-white relative p-12">
-        <h1 class="text-3xl text-center mt-12 mb-6 pt-12">{{ $page.article.title }}</h1>
-        <div class="text-center date mb-12">{{ $page.article.date | luxon:format('MMMM d, kkkk') }}</div>
+        <h1 class="text-3xl text-center mt-12 mb-6 pt-12">
+          {{ $page.article.title }}
+        </h1>
+        <div class="text-center date mb-12">
+          {{ $page.article.date | luxon:format('MMMM d, kkkk') }}
+        </div>
         <div class="mb-8 text-center text-2xl" v-html="$page.article.summary" />
       </div>
     </div>

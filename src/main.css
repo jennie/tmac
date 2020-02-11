@@ -205,14 +205,24 @@ main {
     @apply text-2xl;
   }
 }
+/* page layouts */
+.hero-header {
+  h1 {
+    @apply text-4xl text-center mb-6 pt-0 mt-0
+  }
+  .lead {
+    @apply mb-8 text-center text-gray-800
+  }
 
+}
 #page--event,
 #page--exhibition,
 #page--article {
   main {
 
     h1 {
-      @apply text-4xl uppercase leading-tight;
+      @apply text-4xl uppercase leading-tight ;
+      hyphens: auto;
     }
 
     #body {
@@ -239,20 +249,24 @@ main {
   @apply py-2 px-4 rounded cursor-pointer;
 }
 
-li {
-  @apply mb-2 leading-tight;
 
-  margin-left: 2rem
-}
-
-li:before {
-
-  content: '– ';
-  margin-left: -1.25rem;
-  font-weight: 900;
-}
 
 main {
+  ul {
+  
+    li {
+      @apply mb-2 leading-tight;
+    
+      margin-left: 2rem
+    }
+    
+    li:before {
+    
+      content: '– ';
+      margin-left: -1.25rem;
+      font-weight: 900;
+    }
+  }
   p a:not(.btn) {
     @apply underline text-blue;
     font-family: HelveticaNowText-Bold;
@@ -272,19 +286,27 @@ main {
 
 nav {
   a {
-    @apply mx-12 tracking-tight text-xl;
     font-family: HelveticaNowText-Regular;
     font-weight: normal;
     font-style: normal;
 
 
     &.active {
-      @apply text-gray-600 border-gray-600 border-b font-bold border-b-4 uppercase;
-      font-family: "Agrandir Grand";
-      font-weight: 900;
+      @apply text-gray-600 border-gray-600 border-b border-b-4 uppercase;
+      font-family: "HelveticaNowText-ExtraBold";
+      font-weight: normal;
       font-style: normal;
+      &.home-link {
+        font-family: HelveticaNowText-Regular;
+        font-weight: normal;
+        font-style: normal;
+        @apply text-black border-0 normal-case
+      }
 
-      &.active--exact {
+      &.active--exact, &.active--exact.home-link {
+        font-family: "HelveticaNowText-ExtraBold";
+        font-weight: normal;
+        font-style: normal;
         @apply text-black border-black border-b font-bold border-b-4 uppercase;
       }
     }

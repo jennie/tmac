@@ -7,23 +7,38 @@
           `${$page.exhibition.featureImage.url}?auto=compress,format&fit=crop&crop=faces,entropy&ar=16:9&fit=crop`
         "
       />
-      <div class="mx-auto -mt-32 pt-0 md:w-2/3 bg-white relative p-12">
-        <h1 class="text-3xl text-center mt-12 mb-6 pt-12">{{ $page.exhibition.title }}</h1>
+      <div class="mx-auto md:-mt-32 pt-0 md:w-2/3 md:bg-white relative md:p-6">
+        <h1 class="text-2xl md:text-4xl text-center mb-6">
+          {{ $page.exhibition.title }}
+        </h1>
         <div class="text-center date mb-12">
           {{ $page.exhibition.startDate | luxon:format('MMMM d')
+
+
+
+
+
+
           }}&nbsp;–&nbsp;{{ $page.exhibition.endDate | luxon:format('MMMM d, kkkk') }}
           <br />
           {{ $page.exhibition.hours }}
         </div>
-        <div class="mb-8 text-center text-gray-800" v-html="$page.exhibition.summary" />
       </div>
     </div>
 
     <div class="mx-auto my-16">
-      <div class="flex flex-wrap">
-        <div id="aside" class="w-full md:w-1/3 md:pr-12">
-          <div v-for="member in $page.exhibition.member" :key="member.id" class="mb-12 block">
-            <img :src="`${member.logo.url}?auto=compress,format`" :alt="member.name" width="200" />
+      <div class="flex flex-wrap ">
+        <div id="aside" class="w-full md:w-1/3 md:pr-12 order-2 md:order-1">
+          <div
+            v-for="member in $page.exhibition.member"
+            :key="member.id"
+            class="mb-12 block"
+          >
+            <img
+              :src="`${member.logo.url}?auto=compress,format`"
+              :alt="member.name"
+              width="200"
+            />
           </div>
           <div class="space">
             <h3 class="font-display font-bold uppercase">
@@ -34,7 +49,9 @@
               class="date m-0"
               v-for="location in $page.exhibition.location"
               :key="location.id"
-            >{{ location.name }}</p>
+            >
+              {{ location.name }}
+            </p>
           </div>
 
           <div v-if="$page.exhibition.externalCoPresenters" class="mt-6">
@@ -46,16 +63,20 @@
 
             <p>{{ $page.exhibition.presenter }}</p>
             <div v-if="$page.exhibition.member[0]">
-              <p v-for="member in $page.exhibition.member" :key="member.id">{{ member.shortName }}</p>
+              <p v-for="member in $page.exhibition.member" :key="member.id">
+                {{ member.shortName }}
+              </p>
             </div>
           </div>
         </div>
-        <div id="body" class="w-full md:w-2/3">
+        <div id="body" class="w-full md:w-2/3  order-1 md:order-2">
           <div class="mb-8" v-html="$page.exhibition.description" />
-          <div class="mb-8">
-            <g-link to="/exhibitions" class="uppercase">&larr; Back to Exhibitions</g-link>
-          </div>
         </div>
+      </div>
+      <div class="mb-8">
+        <g-link to="/exhibitions" class="uppercase"
+          >&larr; Back to Exhibitions</g-link
+        >
       </div>
     </div>
   </Layout>

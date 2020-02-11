@@ -8,8 +8,8 @@
           `${$page.event.featureImage.url}?auto=compress,format&fit=crop&crop=faces,entropy&ar=16:9&fit=crop`
         "
       />
-      <div class="mx-auto -mt-32 pt-0 md:w-2/3 bg-white relative p-12">
-        <h1 class="text-3xl text-center mt-12 mb-6 pt-12">
+      <div class="mx-auto md:-mt-32 pt-0 md:w-2/3 md:bg-white relative md:p-6">
+        <h1 class="text-2xl md:text-4xl text-center mb-6">
           {{ $page.event.title }}
         </h1>
         <div class="text-center date mb-12">
@@ -28,7 +28,7 @@
           </div>
         </div>
         <div
-          class="mb-8 text-center text-gray-800"
+          class="mb-8 text-center text-2xl text-gray-800"
           v-html="$page.event.summary"
         />
       </div>
@@ -36,7 +36,7 @@
 
     <div class="mx-auto my-16">
       <div class="flex flex-wrap">
-        <div class="w-full md:w-1/3 md:pr-12">
+        <div class="w-full md:w-1/3 md:pr-12  order-2 md:order-1">
           <div
             v-for="member in $page.event.member"
             :key="member.id"
@@ -88,14 +88,12 @@
             </p>
           </div>
         </div>
-        <div id="body" class="w-full md:w-2/3">
+        <div id="body" class="w-full md:w-2/3  order-1 md:order-2">
           <div class="mb-8" v-html="$page.event.description" />
-          <div class="mb-8">
-            <g-link to="/events" class="uppercase"
-              >&larr; Back to Events</g-link
-            >
-          </div>
         </div>
+      </div>
+      <div class="mb-8">
+        <g-link to="/events" class="uppercase">&larr; Back to Events</g-link>
       </div>
     </div>
   </Layout>

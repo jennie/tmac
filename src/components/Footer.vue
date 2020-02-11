@@ -1,7 +1,7 @@
 <template>
-  <footer class="container mt-32 mx-auto md:px-12">
-    <div class="flex flex-1">
-      <div>
+  <footer class="container px-4 mt-32 mx-auto md:px-12">
+    <div class="flex flex-wrap md:flex-no-wrap flex-1">
+      <div class="md:w-1/4 md:px-2 md:mb-0">
         <h3>Toronto Media Arts Centre</h3>
         <p>
           32 Lisgar Street
@@ -14,6 +14,12 @@
             href="https://tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0"
             target="_blank"
             >Join our mailing list</a
+          >
+        </p>
+        <p>
+          <i class="fas fa-building"></i>
+          <a class="pl-1" href="https://calendly.com/tomediaarts/space-tour"
+            >Book a tour</a
           >
         </p>
         <p>
@@ -36,7 +42,7 @@
           >
         </p>
       </div>
-      <div>
+      <div class="md:w-1/4 md:px-2 md:mb-0">
         <h3>Contact us</h3>
         <section id="contact">
           <p>
@@ -64,7 +70,7 @@
           <a href="https://shwca.se/tmac-logo-kit">Download logos</a>
         </section>
       </div>
-      <div>
+      <div class="md:w-1/4 md:px-2 md:mb-0">
         <h3>Hours</h3>
         <p>10am–6pm Mon-Fri</p>
         <p>Open later + on weekends for events and exhibitions.</p>
@@ -84,7 +90,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="md:w-1/4 md:px-2 md:mb-0">
         <h3>Members</h3>
         <div class="orgs" id="members">
           <div v-for="member in $static.members.edges" :key="member.id">
@@ -114,6 +120,9 @@ footer {
   a {
     @apply underline;
   }
+  div {
+    @apply p-0;
+  }
   div:first-child {
     @apply pl-0;
   }
@@ -126,7 +135,7 @@ footer {
     }
   }
   > div > div {
-    @apply w-1/4 px-2;
+    @apply w-full mb-6;
   }
   h3 {
     @apply font-normal normal-case leading-normal tracking-normal;

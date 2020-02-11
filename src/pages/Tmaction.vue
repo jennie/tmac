@@ -7,45 +7,61 @@
           https://www.datocms-assets.com/5128/1581301758-img2704.jpeg?auto=compress,format&fit=crop&ar=16:9&crop=faces,entropy
         "
       />
-      <div class="mx-auto -mt-32 pt-0 md:w-2/3 bg-white relative p-12">
-        <h1 class="text-4xl text-center mt-12 mb-6 pt-12">
+      <div class="mx-auto md:-mt-32 pt-0 md:w-2/3 md:bg-white relative md:p-6">
+        <h1 class="text-2xl md:text-4xl text-center mb-6">
           #TMACtion
         </h1>
-        <div class="text-center date mb-12"></div>
-        <div class="mb-8 text-center text-gray-800">
-          <p>
-            In May 2015,
-            <b>the City of Toronto and Urbancorp breached their obligations</b>
-            under a contract with TMAC. We’re suing both parties for the right
-            to purchase the arts space as agreed.
-          </p>
-          <p>
-            <b>TMAC remains ready, willing and able to close.</b> All we want is
-            for the City of Toronto to deliver on the promises it made and allow
-            us to complete the transaction — nothing more, nothing less. The
-            City has a responsibility to protect this unique Section 37 benefit.
-            Yet, it has interfered and refused to act in the interest of the
-            community — putting the continuity and security of arts nonprofits
-            and artists in jeopardy.
-          </p>
-
-          <!-- <p>
-            As of February 2020, we are still in litigation with the City of
-            Toronto over the space, and the City maintains its position that
-            TMAC is uanable to successfully operate the space and provides
-            "limited benefit" to the community.
-          </p> -->
-        </div>
+        <div class="mb-8 text-center text-gray-800"></div>
       </div>
     </div>
     <main>
+      <div
+        class="cols flex flex-wrap justify-between my-6 border-b-4 border-red-600 py-6"
+      >
+        <p class="px-6 md:w-1/3">
+          In May 2015,
+          <b>the City of Toronto and Urbancorp breached their obligations</b>
+          under a contract with TMAC. We’re suing both parties for the right to
+          purchase the arts space as agreed.
+        </p>
+        <p class="px-6 md:w-1/3">
+          <b>TMAC remains ready, willing and able to close.</b> All we want is
+          for the City of Toronto to deliver on the promises it made and allow
+          us to complete the transaction. Nothing more, nothing less.
+        </p>
+        <p class="px-6 md:w-1/3">
+          Despite its responsibility to protect this unique Section 37 benefit,
+          the
+          <b>
+            City has interfered and refused to act in the interest of the
+            community
+          </b>
+          for over 5 years — putting the security vital media artists and
+          nonprofits in jeopardy.
+        </p>
+        <p class="px-6 w-full">
+          Instead of being a good partner, facilitating the stewarship of a
+          community benefit by the rightful and intended owner, the City
+          continues to put up roadblocks, change the goalposts, and renege on
+          promises it made to the community. Its actions – interfering with our
+          right to close – have cost us funding opportunities and ripped away
+          the security we believed we were building in the years we spent
+          designing and building this space. Because the City rushed to get the
+          building "substantially completed" to appease condo owners and avoid
+          extending the developer's deadline in our APS, the developer got away
+          with not finishing the arts and culture space, leaving deficiencies
+          and serious issues in its wake. Now the City just wants it off their
+          hands. We want them to be accountable to the community.
+        </p>
+      </div>
       <div id="body">
+        <h2>Timeline of Events</h2>
         <div
           v-for="(t, index) in $page.timelineItems.edges"
           :key="`timelineItem-${index}`"
         >
           <div class="-px-12 py-2 flex flex-wrap mx-auto">
-            <div class="w-2/4  self-center">
+            <div class="w-full md:w-2/4  self-center">
               <img
                 v-if="t.node.image"
                 class="pr-6  my-2 mx-auto"
@@ -68,14 +84,14 @@
                 {{ t.node.date | luxon:format('kkkk') }}
               </div>
             </div>
-            <div class="w-2/4 self-center">
+            <div class="w-full md:w-2/4 self-center">
               <h3>{{ t.node.title }}</h3>
               <div v-html="t.node.description" />
             </div>
           </div>
 
           <div
-            class="w-2/4 flex"
+            class="w-full md:w-2/4 flex"
             v-if="$page.timelineItems.edges.length !== index + 1"
           >
             <hr class="vertical self-center justify-center mx-auto " />
