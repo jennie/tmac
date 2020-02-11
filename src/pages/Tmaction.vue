@@ -36,22 +36,8 @@
             City has interfered and refused to act in the interest of the
             community
           </b>
-          for over 5 years — putting the security vital media artists and
+          for over 5 years — putting the security of vital media artists and
           nonprofits in jeopardy.
-        </p>
-        <p class="px-6 w-full">
-          Instead of being a good partner, facilitating the stewarship of a
-          community benefit by the rightful and intended owner, the City
-          continues to put up roadblocks, change the goalposts, and renege on
-          promises it made to the community. Its actions – interfering with our
-          right to close – have cost us funding opportunities and ripped away
-          the security we believed we were building in the years we spent
-          designing and building this space. Because the City rushed to get the
-          building "substantially completed" to appease condo owners and avoid
-          extending the developer's deadline in our APS, the developer got away
-          with not finishing the arts and culture space, leaving deficiencies
-          and serious issues in its wake. Now the City just wants it off their
-          hands. We want them to be accountable to the community.
         </p>
       </div>
       <div id="body">
