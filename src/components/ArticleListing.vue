@@ -24,15 +24,13 @@
       <div class="mb-2">
         <span class="date">
           {{ article.node.date | luxon:format('MMMM d, kkkk') }}
-          <!-- –{{ article.node.endDateTime | luxon:format('t') }} -->
         </span>
       </div>
       <div
         class="text-base mb-8 leading-snug sm:hidden md:block"
-        v-html="article.node.summary"
+        v-html="marked(article.node.summary)"
       />
     </div>
-    <!-- <h4 v-html="article.node.articleType" /> -->
   </div>
 </template>
 

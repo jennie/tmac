@@ -2,7 +2,13 @@
   <Layout>
     <header>
       <div class="image-gallery">
-        <g-image src="~/assets/images/ruby.jpg" quality="100" fit="cover" width="920" height="614" />
+        <g-image
+          src="~/assets/images/ruby.jpg"
+          quality="100"
+          fit="cover"
+          width="920"
+          height="614"
+        />
         <g-image
           src="~/assets/images/summerwork.jpg"
           quality="100"
@@ -18,9 +24,9 @@
           height="614"
         />
       </div>
-      <h2
-        class="about text-center my-24 text-4xl"
-      >A place to create and experience video, film, games and digital culture.</h2>
+      <h2 class="about text-center my-24 text-4xl">
+        A place to create and experience video, film, games and digital culture.
+      </h2>
       <div class="image-gallery">
         <g-image
           src="~/assets/images/jordan.jpg"
@@ -36,7 +42,13 @@
           width="920"
           height="614"
         />
-        <g-image src="~/assets/images/tiwt.jpg" quality="100" fit="cover" width="920" height="614" />
+        <g-image
+          src="~/assets/images/tiwt.jpg"
+          quality="100"
+          fit="cover"
+          width="920"
+          height="614"
+        />
       </div>
     </header>
 
@@ -131,6 +143,39 @@ export default {
     PaginationPosts,
     EventListing,
     EventListingMini
+  },
+  name: "Home",
+  metaInfo: {
+    title: "Toronto Media Arts Centre",
+    keywords:
+      "oronto media arts, toronto media arts cluster, media-based arts, electronic arts, computer integrated media, toronto media arts center, media arts collective",
+    titleTemplate: "%s",
+    meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content:
+          "https://www.datocms-assets.com/5128/1581445197-426965753321596209427917960276168609890304o.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      },
+      { name: "twitter:site", content: "@tomediaarts" },
+      { name: "twitter:title", content: "TMAC" },
+      {
+        name: "twitter:description",
+        content:
+          "A collaborative space for Toronto media arts organizations, media-based artists and the Queen West Triangle community."
+      },
+      { name: "og:title", content: "TMAC" },
+      {
+        name: "og:description",
+        content:
+          "A collaborative space for Toronto media arts organizations, media-based artists and the Queen West Triangle community."
+      },
+      {
+        name: "og:image",
+        content:
+          "https://www.datocms-assets.com/5128/1581445197-426965753321596209427917960276168609890304o.jpg.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      }
+    ]
   }
 };
 </script>

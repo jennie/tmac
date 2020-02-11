@@ -18,14 +18,17 @@
         <div class="text-center date mb-12">
           {{ $page.article.date | luxon:format('MMMM d, kkkk') }}
         </div>
-        <div class="mb-8 text-center text-2xl" v-html="$page.article.summary" />
+        <div
+          class="mb-8 text-center text-2xl"
+          v-html="marked($page.article.summary)"
+        />
       </div>
     </div>
 
     <div class="mx-auto mb-16">
       <div class="flex flex-wrap">
         <div id="body" class="w-full mx-auto md:w-2/3">
-          <div class="mb-8" v-html="$page.article.body" />
+          <div class="mb-8" v-html="marked($page.article.body)" />
           <div class="mb-8">
             <g-link to="/news" class="uppercase">&larr; Back to News</g-link>
           </div>
@@ -63,13 +66,43 @@ export default {
     Layout
   },
 
-  name: "Article",
   metaInfo() {
     return {
       title: this.$page.article.title,
+      description: this.$page.article.summary,
       bodyAttrs: {
         id: "page--article"
-      }
+      },
+      meta: [
+        { name: "twitter:card", content: "summary_large_image" },
+        {
+          name: "twitter:image",
+          content: `${
+            this.$page.article.featureImage
+              ? this.$page.article.featureImage.url
+              : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
+          }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
+        },
+        { name: "twitter:site", content: "@tomediaarts" },
+        { name: "twitter:title", content: this.$page.article.title },
+        {
+          name: "twitter:description",
+          content: `${this.$page.article.summary}`
+        },
+        { name: "og:title", content: this.$page.article.title },
+        {
+          name: "og:description",
+          content: this.$page.article.summary
+        },
+        {
+          name: "og:image",
+          content: `${
+            this.$page.article.featureImage
+              ? this.$page.article.featureImage.url
+              : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
+          }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
+        }
+      ]
     };
   }
 };

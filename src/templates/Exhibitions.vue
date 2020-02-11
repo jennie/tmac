@@ -10,7 +10,7 @@
 
       <pagination-posts
         v-if="$page.exhibitions.pageInfo.totalPages > 1"
-        base="/events"
+        base="/Exhibitions"
         :totalPages="$page.exhibitions.pageInfo.totalPages"
         :currentPage="$page.exhibitions.pageInfo.currentPage"
       />
@@ -78,6 +78,34 @@ export default {
   components: {
     PaginationPosts,
     ExhibitionListing
+  },
+  name: "Exhibitions",
+  metaInfo: {
+    title: "Exhibitions",
+    meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content:
+          "https://www.datocms-assets.com/5128/1547952533-2018-11-01001-bymyseum.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      },
+      { name: "twitter:site", content: "@tomediaarts" },
+      { name: "twitter:title", content: "Exhibitions" },
+      {
+        name: "twitter:description",
+        content: "Upcoming programs, exhibitions and festivals."
+      },
+      { name: "og:title", content: "Exhibitions" },
+      {
+        name: "og:description",
+        content: "Upcoming programs, exhibitions and festivals."
+      },
+      {
+        name: "og:image",
+        content:
+          "https://www.datocms-assets.com/5128/1547952533-2018-11-01001-bymyseum.jpg.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      }
+    ]
   }
 };
 </script>

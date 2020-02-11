@@ -26,7 +26,7 @@
       </div>
       <div class="w-full md:w-2/4 self-center">
         <h3>{{ timelineItem.node.title }}</h3>
-        <div v-html="timelineItem.node.description" />
+        <div v-html="marked(timelineItem.node.description)" />
       </div>
     </div>
     <div

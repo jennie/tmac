@@ -88,6 +88,36 @@ import TimelineItem from "../components/TimelineItem";
 export default {
   components: {
     TimelineItem
+  },
+  name: "#TMACtion",
+  metaInfo: {
+    title: "#TMACtion",
+    meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content:
+          "https://www.datocms-assets.com/5128/1581301758-img2704.jpeg?auto=compress,format?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      },
+      { name: "twitter:site", content: "@tomediaarts" },
+      { name: "twitter:title", content: "Updates on the fight for our space" },
+      {
+        name: "twitter:description",
+        content:
+          "News, FAQs and updates about our ongoing litigation against the City of Toronto and Urbancirp over our space at 32 Lisgar Street."
+      },
+      { name: "og:title", content: "Updates on the fight for our space" },
+      {
+        name: "og:description",
+        content:
+          "News, FAQs and updates about our ongoing litigation against the City of Toronto and Urbancirp over our space at 32 Lisgar Street."
+      },
+      {
+        name: "og:image",
+        content:
+          "https://www.datocms-assets.com/5128/1581301758-img2704.jpeg?auto=compress,format?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      }
+    ]
   }
 };
 </script>

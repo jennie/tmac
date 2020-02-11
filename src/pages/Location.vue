@@ -77,7 +77,34 @@
 <script>
 export default {
   metaInfo: {
-    title: "About us"
+    title: "Location",
+    keywords: "TMAC, toronto media arts centre, tmac address, 32 Lisgar",
+    meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content:
+          "https://www.datocms-assets.com/5128/1535151025-tmac-exterior-facebook.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      },
+      { name: "twitter:site", content: "@tomediaarts" },
+      { name: "twitter:title", content: "How to find us" },
+      {
+        name: "twitter:description",
+        content:
+          "How to find the Toronto Media Arts Centre – transit, parking and accessibility information."
+      },
+      { name: "og:title", content: "About TMAC" },
+      {
+        name: "og:description",
+        content:
+          "How to find the Toronto Media Arts Centre – transit, parking and accessibility information."
+      },
+      {
+        name: "og:image",
+        content:
+          "https://www.datocms-assets.com/5128/1535151025-tmac-exterior-facebook.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      }
+    ]
   }
 };
 </script>

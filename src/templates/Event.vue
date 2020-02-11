@@ -29,7 +29,7 @@
         </div>
         <div
           class="mb-8 text-center text-2xl text-gray-800"
-          v-html="$page.event.summary"
+          v-html="marked($page.event.summary)"
         />
       </div>
     </div>
@@ -89,7 +89,7 @@
           </div>
         </div>
         <div id="body" class="w-full md:w-2/3  order-1 md:order-2">
-          <div class="mb-8" v-html="$page.event.description" />
+          <div class="mb-8" v-html="marked($page.event.description)" />
         </div>
       </div>
       <div class="mb-8">
@@ -157,9 +157,40 @@ export default {
   metaInfo() {
     return {
       title: this.$page.event.title,
+      description: this.$page.event.summary,
       bodyAttrs: {
         id: "page--event"
-      }
+      },
+      meta: [
+        { name: "twitter:card", content: "summary_large_image" },
+        {
+          name: "twitter:image",
+          content: `${
+            this.$page.event.featureImage
+              ? this.$page.event.featureImage.url
+              : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
+          }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
+        },
+        { name: "twitter:site", content: "@tomediaarts" },
+        { name: "twitter:title", content: this.$page.event.title },
+        {
+          name: "twitter:description",
+          content: `${this.$page.event.summary}`
+        },
+        { name: "og:title", content: this.$page.event.title },
+        {
+          name: "og:description",
+          content: this.$page.event.summary
+        },
+        {
+          name: "og:image",
+          content: `${
+            this.$page.event.featureImage
+              ? this.$page.event.featureImage.url
+              : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
+          }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
+        }
+      ]
     };
   }
 };

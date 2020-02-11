@@ -36,7 +36,7 @@
       </div>
       <div
         class="text-base mb-8 leading-snug sm:hidden md:block"
-        v-html="event.node.summary"
+        v-html="marked(event.node.summary)"
       />
     </div>
     <!-- <h4 v-html="event.node.eventType" /> -->

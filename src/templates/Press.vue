@@ -52,6 +52,36 @@ import PressLinkListing from "../components/PressLinkListing";
 export default {
   components: {
     PressLinkListing
+  },
+  name: "Media Coverage",
+  metaInfo: {
+    title: "Media Coverage",
+    meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content:
+          "https://www.datocms-assets.com/5128/1580597552-img2715.jpeg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      },
+      { name: "twitter:site", content: "@tomediaarts" },
+      { name: "twitter:title", content: "Media Coverage" },
+      {
+        name: "twitter:description",
+        content:
+          "Coverage from media outlets about TMAC's litigation against the City of Toronto and Urbancorp."
+      },
+      { name: "og:title", content: "Media Coverage" },
+      {
+        name: "og:description",
+        content:
+          "Coverage from media outlets about TMAC's litigation against the City of Toronto and Urbancorp."
+      },
+      {
+        name: "og:image",
+        content:
+          "https://www.datocms-assets.com/5128/1580597552-img2715.jpeg.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      }
+    ]
   }
 };
 </script>

@@ -22,3 +22,36 @@
     </div>
   </Layout>
 </template>
+
+<script>
+export default {
+  name: "Space Rentals",
+  metaInfo: {
+    title: "Space Rentals",
+    meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content:
+          "https://www.datocms-assets.com/5128/1573870676-1562639275-8c954bd3-9617-42f3-a332-016f2f33bcf4.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      },
+      { name: "twitter:site", content: "@tomediaarts" },
+      { name: "twitter:title", content: "Space Rentals" },
+      {
+        name: "twitter:description",
+        content: "Information about renting space at Toronto Media Arts Centre"
+      },
+      { name: "og:title", content: "About TMAC" },
+      {
+        name: "og:description",
+        content: "Information about renting space at Toronto Media Arts Centre"
+      },
+      {
+        name: "og:image",
+        content:
+          "https://www.datocms-assets.com/5128/1573870676-1562639275-8c954bd3-9617-42f3-a332-016f2f33bcf4.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      }
+    ]
+  }
+};
+</script>

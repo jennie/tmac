@@ -54,6 +54,36 @@ export default {
   components: {
     PaginationPosts,
     EventListing
+  },
+  name: "Events",
+  metaInfo: {
+    title: "Events",
+    meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content:
+          "https://www.datocms-assets.com/5128/1581448828-jordan.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      },
+      { name: "twitter:site", content: "@tomediaarts" },
+      { name: "twitter:title", content: "Events" },
+      {
+        name: "twitter:description",
+        content:
+          "Upcoming workshops, receptions, openings, socials, parties and concerts."
+      },
+      { name: "og:title", content: "Events" },
+      {
+        name: "og:description",
+        content:
+          "Upcoming workshops, receptions, openings, socials, parties and concerts."
+      },
+      {
+        name: "og:image",
+        content:
+          "https://www.datocms-assets.com/5128/1581448828-jordan.jpg.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      }
+    ]
   }
 };
 </script>

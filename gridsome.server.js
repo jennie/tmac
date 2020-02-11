@@ -95,7 +95,7 @@ module.exports = function(api, options) {
               actionButtonText
               canceled
               createdAt
-              description(markdown: true)
+              description
               endDateTime
               eventType
               externalCoPresenters
@@ -118,7 +118,7 @@ module.exports = function(api, options) {
               registrationLink
               slug
               startDateTime
-              summary(markdown: true)
+              summary
               title
             }
           }
@@ -166,14 +166,14 @@ module.exports = function(api, options) {
             }
             allArticles(first: 100) {
               appendix
-              body(markdown: true)
+              body
               date
               featureImage {
                 url
               }
               id
               title
-              summary(markdown: true)
+              summary
               slug
               shortSummary
             }
@@ -192,7 +192,7 @@ module.exports = function(api, options) {
             }
             allTimelineItems(first: 100) {
               date
-              description(markdown: true)
+              description
               image {
                 url
               }
@@ -210,7 +210,7 @@ module.exports = function(api, options) {
               slug
             }
             allPrograms {
-              description(markdown: true)
+              description
               endDate
               externalCoPresenters
               externalTicketsLink

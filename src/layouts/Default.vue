@@ -104,6 +104,7 @@ export default {
   components: {
     Footer
   },
+
   metaInfo: {
     htmlAttrs: {
       lang: "en",
@@ -112,7 +113,8 @@ export default {
     bodyAttrs: {
       class:
         "font-sans text-copy-primary font-body tracking-tight text-xl flex flex-col min-h-screen"
-    }
+    },
+    titleTemplate: "Toronto Media Arts Centre – %s"
   },
   watch: {
     $route: {

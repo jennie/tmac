@@ -62,3 +62,37 @@ query Articles {
   }
 }
 </page-query>
+<script>
+export default {
+  name: "FAQs",
+  description: "Frequently Asked Questions about TMAC",
+  metaInfo: {
+    title: "FAQs",
+    description: "Frequently Asked Questions about TMAC",
+    meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content:
+          "https://www.datocms-assets.com/5128/1581304594-cafe-floors.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      },
+      { name: "twitter:site", content: "@tomediaarts" },
+      { name: "twitter:title", content: "FAQs" },
+      {
+        name: "twitter:description",
+        content: "The questions we get… over and over."
+      },
+      { name: "og:title", content: "TMAC" },
+      {
+        name: "og:description",
+        content: "The questions we get… over and over."
+      },
+      {
+        name: "og:image",
+        content:
+          "https://www.datocms-assets.com/5128/1581304594-cafe-floors.jpg.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      }
+    ]
+  }
+};
+</script>

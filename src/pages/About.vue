@@ -218,8 +218,35 @@
 
 <script>
 export default {
+  name: "About",
   metaInfo: {
-    title: "About us"
+    title: "About",
+    meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content:
+          "https://www.datocms-assets.com/5128/1580249587-426632353321595576094648128269575260209152o-1.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      },
+      { name: "twitter:site", content: "@tomediaarts" },
+      { name: "twitter:title", content: "About TMAC" },
+      {
+        name: "twitter:description",
+        content:
+          "TMAC is a new permanent home for Toronto’s media arts organizations, and an accessible public space for art, creation and collaboration in the Queen West Triangle."
+      },
+      { name: "og:title", content: "About TMAC" },
+      {
+        name: "og:description",
+        content:
+          "TMAC is a new permanent home for Toronto’s media arts organizations, and an accessible public space for art, creation and collaboration in the Queen West Triangle."
+      },
+      {
+        name: "og:image",
+        content:
+          "https://www.datocms-assets.com/5128/1580249587-426632353321595576094648128269575260209152o-1.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+      }
+    ]
   }
 };
 </script>
