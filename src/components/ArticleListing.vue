@@ -1,9 +1,9 @@
 <template>
-  <div class="event mb-12 w-full flex">
-    <div class="w-1/3">
+  <div class="event mb-12 w-full flex flex-wrap">
+    <div class="w-full md:w-1/3">
       <img
         v-if="article.node.featureImage"
-        class="pr-6"
+        class="md:pr-6"
         :src="
           `${article.node.featureImage.url}?auto=compress,format&fit=crop&max-w=600&max-h=337&ar=16:9&crop=faces,entropy`
         "
@@ -15,7 +15,7 @@
       />
     </div>
 
-    <div class="w-2/3 self-center">
+    <div class="w-full md:w-2/3 self-center">
       <h3 class="text-2xl my-2 text-uppercase">
         <g-link :to="article.node.path" class="no-underline">{{
           article.node.title

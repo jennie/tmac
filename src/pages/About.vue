@@ -48,7 +48,7 @@
           </p>
         </div>
         <div class="w-full lg:w-1/2">
-          <h3>How we operate</h3>
+          <h3>Governance</h3>
           <p>
             TMAC is managed by a board of directors comprised of one
             representative from each member organization, and two community
