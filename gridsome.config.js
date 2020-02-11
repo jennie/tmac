@@ -5,7 +5,7 @@ const postcssPlugins = [tailwind(), postcssNested];
 require("dotenv").config();
 
 module.exports = {
-  cachebusting: false,
+  cacheBusting: false,
 
   siteName: "Toronto Media Arts Centre",
   siteDescription: "Toronto Media Arts Centre",
