@@ -97,7 +97,7 @@ export default {
       {
         name: "twitter:image",
         content:
-          "https://www.datocms-assets.com/5128/1581301758-img2704.jpeg?auto=compress,format?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+          "https://www.datocms-assets.com/5128/1581292380-c1e2c1a7-e926-4a84-b125-ddf381d50554.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
       },
       { name: "twitter:site", content: "@tomediaarts" },
       { name: "twitter:title", content: "Updates on the fight for our space" },
@@ -115,7 +115,7 @@ export default {
       {
         name: "og:image",
         content:
-          "https://www.datocms-assets.com/5128/1581301758-img2704.jpeg?auto=compress,format?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+          "https://www.datocms-assets.com/5128/1581292380-c1e2c1a7-e926-4a84-b125-ddf381d50554.jpg?auto=compress,format?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
       }
     ]
   }
