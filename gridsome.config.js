@@ -5,6 +5,8 @@ const postcssPlugins = [tailwind(), postcssNested];
 require("dotenv").config();
 
 module.exports = {
+  cachebusting: false,
+
   siteName: "Toronto Media Arts Centre",
   siteDescription: "Toronto Media Arts Centre",
   siteUrl: "https://tomediaarts.netlify.com",
