@@ -96,7 +96,14 @@
         <g-link to="/events" class="uppercase">&larr; Back to Events</g-link>
       </div>
     </div>
-    <script v-html="jsonld" type="application/ld+json"></script>
+
+    <pre>
+
+    {{ JSON.stringify( jsonld.jsonld,null,2 ) }}
+    </pre>
+
+
+    <script v-html="jsonld.jsonld" type="application/ld+json" />
   </Layout>
     </template>
 
