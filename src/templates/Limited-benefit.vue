@@ -76,7 +76,7 @@
 <script>
 import Fullscreen from "~/layouts/Fullscreen.vue";
 export default {
-  name: "Space Rentals",
+  name: "Limited Benefit?",
   data() {
     return {
       formData: {}
@@ -99,7 +99,7 @@ export default {
           ...this.formData
         })
       })
-        .then(() => this.$router.push("/success"))
+        .then(() => this.$router.push("/tmaction/limited-benefit/thank-you"))
         .catch(error => alert(error));
     }
   },
