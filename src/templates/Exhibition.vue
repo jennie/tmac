@@ -13,21 +13,22 @@
           {{ $page.exhibition.title }}
         </h1>
         <div class="text-center date mb-12">
-          {{ $page.exhibition.startDate | luxon:format('MMMM d')
-
-
-
-
-
-
-
-
-
-
-
-          }}&nbsp;–&nbsp;{{ $page.exhibition.endDate | luxon:format('MMMM d, kkkk') }}
+          {{ $page.exhibition.startDate | luxon:format('MMMM d') }}
+          &nbsp;–&nbsp;
+          {{ $page.exhibition.endDate | luxon:format('MMMM d, kkkk') }}
           <br />
           {{ $page.exhibition.hours }}
+        </div>
+        <div v-if="$page.exhibition.primaryPresenter">
+          <div class="text-center text-sm HelveticaNowMicro-XLtIt">
+            presented by {{ $page.exhibition.primaryPresenter }}
+            <div v-if="$page.exhibition.externalCoPresenters">
+              and {{ $page.exhibition.externalCoPresenters }}
+            </div>
+            <div v-if="$page.exhibition.member[0]">
+              with {{ $page.exhibition.member[0].name }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -77,13 +78,18 @@
         </div>
         <div id="body" class="w-full md:w-2/3  order-1 md:order-2">
           <div class="mb-8" v-html="marked($page.exhibition.description)" />
-          <h3>Related Programs</h3>
-          <EventListingMini
-            v-for="(e, index) in $page.exhibition.eventsList"
-            :key="`event-${index}`"
-            :event="e"
-            class="w-full md:w-1/2 p-1 rounded-lg overflow-hidden"
-          />
+
+          <div v-if="$page.exhibition.eventsList.length > 0">
+            <h4 class="font-body normal-case mb-2 p-1">Related Programs</h4>
+            <div class="flex flex-wrap">
+              <EventListingMini
+                v-for="(e, index) in $page.exhibition.eventsList"
+                :key="`event-${index}`"
+                :event="e"
+                class="w-full md:w-1/2 p-1 rounded-lg overflow-hidden"
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div class="mb-8">

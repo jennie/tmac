@@ -3,6 +3,11 @@
 
 
 /* purgecss start ignore */
+@font-face {
+  font-family: 'HelveticaNowMicro-XLtIt';
+  src: url('./assets/fonts/3AFE57_0_0.eot');
+  src: url('./assets/fonts/3AFE57_0_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AFE57_0_0.woff2') format('woff2'), url('./assets/fonts/3AFE57_0_0.woff') format('woff'), url('./assets/fonts/3AFE57_0_0.ttf') format('truetype');
+}
 
 @font-face {
   font-family: 'HelveticaNowDisplay-XBlk';
@@ -172,6 +177,12 @@
 
 .HelveticaNowDisplay-XBlk {
   font-family: HelveticaNowDisplay-XBlk;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.HelveticaNowMicro-XLtIt {
+  font-family: HelveticaNowMicro-XLtIt;
   font-weight: normal;
   font-style: normal;
 }
