@@ -4,7 +4,7 @@
       <div class="w-full md:w-2/4  self-center">
         <img
           v-if="timelineItem.node.image"
-          class="pr-6  my-2 mx-auto"
+          class="md:pr-6 my-2 mx-auto"
           :src="
             `${timelineItem.node.image.url}?auto=compress,format&fit=crop&ar=16:9&crop=faces,entropy`
           "
@@ -39,6 +39,13 @@
 </template>
 
 <style lang="postcss" scoped>
+h3 {
+  @apply tracking-tight text-3xl leading-tight;
+  font-family: HelveticaNowText-Bold;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+}
 hr.vertical {
   @apply h-24 flex text-center justify-center border-red-500;
   border-width: 0 3px 0 0;
