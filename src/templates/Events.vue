@@ -7,8 +7,7 @@
         :key="`event-${index}`"
         :event="e"
       />
-
-      <pagination-posts
+      <PaginationPosts
         v-if="$page.events.pageInfo.totalPages > 1"
         base="/events"
         :totalPages="$page.events.pageInfo.totalPages"

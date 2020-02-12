@@ -27,47 +27,58 @@
         />
       </div>
     </header>
-
-    <h2 class="text-center">Events This Week</h2>
-    <div class="-px-12 pt-6 flex flex-wrap">
-      <EventListing
-        v-for="(e, index) in $page.eventsThisWeek.edges"
-        :key="`event-${index}`"
-        :event="e"
-      />
+    <div v-if="$page.exhibitionsUpcoming.edges.length > 0">
+      <h2 class="text-center">Exhibitions</h2>
+      <div class="-px-12 py-16 flex flex-wrap">
+        <ExhibitionListingMini
+          v-for="(e, index) in $page.exhibitionsUpcoming.edges"
+          :key="`exhibition-${index}`"
+          :exhibition="e"
+        />
+      </div>
     </div>
-    <h2 class="text-center">More Upcoming Events</h2>
-    <div class="py-16 flex flex-wrap">
-      <EventListingMini
-        v-for="(e, index) in $page.events.edges"
-        :key="`event-${index}`"
-        :event="e"
-      />
-
-      <pagination-posts
-        v-if="$page.events.pageInfo.totalPages > 1"
-        base="/events"
-        :totalPages="$page.events.pageInfo.totalPages"
-        :currentPage="$page.events.pageInfo.currentPage"
-      />
+    <div v-if="$page.eventsThisWeek.edges.length > 0">
+      <h2 class="text-center">Events This Week</h2>
+      <div class="-px-12 pt-6 flex flex-wrap">
+        <EventListing
+          v-for="(e, index) in $page.eventsThisWeek.edges"
+          :key="`event-${index}`"
+          :event="e"
+        />
+      </div>
+    </div>
+    <div v-if="$page.events.edges.length > 0">
+      <h2 class="text-center">Upcoming Events</h2>
+      <div class="py-16 flex flex-wrap">
+        <EventListingMini
+          v-for="(e, index) in $page.events.edges"
+          :key="`event-${index}`"
+          :event="e"
+        />{{ $page.events.totalcount }}
+        <div
+          class="w-full text-center my-6 "
+          v-if="$page.events.totalCount > 9"
+        >
+          <g-link
+            to="/events"
+            class="px-4 py-2 bg-transparent hover:bg-red-500 text-red-500 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+            >All upcoming events</g-link
+          >
+        </div>
+      </div>
     </div>
   </Layout>
 </template>
 
 <page-query>
-query Events($page: Int, $today: Date, $thisWeek: Date) {
+query Events($today: Date, $thisWeek: Date) {
   events: allEvent(
     sortBy: "startDateTime"
     order: ASC
-    perPage: 20
+    limit: 9
     filter: { startDateTime: { gt: $thisWeek } }
-    page: $page
-  ) @paginate {
+  ) {
     totalCount
-    pageInfo {
-      totalPages
-      currentPage
-    }
     edges {
       node {
         startDateTime
@@ -105,7 +116,33 @@ query Events($page: Int, $today: Date, $thisWeek: Date) {
       }
     }
   }
+  exhibitionsUpcoming: allExhibition(
+    sortBy: "startDate"
+    order: ASC
+    filter: { endDate: { gte: $today } }
+  ) {
+    edges {
+      node {
+        endDate
+        externalCoPresenters
+        externalTicketsLink
+        featureImage {
+          url
+        }
+        link
+        presenter
+        primaryPresenter
+        programType
+        path
+        slug
+        startDate
+        ticketPrice
+        title
+      }
+    }
+  }
 }
+
 
 </page-query>
 
@@ -113,12 +150,14 @@ query Events($page: Int, $today: Date, $thisWeek: Date) {
 import PaginationPosts from "../components/PaginationPosts";
 import EventListing from "../components/EventListing";
 import EventListingMini from "../components/EventListingMini";
+import ExhibitionListingMini from "../components/ExhibitionListingMini";
 
 export default {
   components: {
     PaginationPosts,
     EventListing,
-    EventListingMini
+    EventListingMini,
+    ExhibitionListingMini
   },
   name: "Home",
   metaInfo: {

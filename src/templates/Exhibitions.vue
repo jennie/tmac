@@ -21,7 +21,7 @@
 <page-query>
 query Exhibitions ($page: Int, $today: Date) {
 
-  exhibitions: allExhibition(sortBy: "startDate", order: ASC, perPage: 20, filter: { startDate: { gte: $today } }, page: $page) @paginate {
+  exhibitions: allExhibition(sortBy: "startDate", order: ASC, perPage: 20, filter: { endDate: { gte: $today } }, page: $page) @paginate {
     totalCount
     pageInfo {
       totalPages

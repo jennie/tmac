@@ -1,25 +1,22 @@
 <template>
-  <div class="event px-6 mb-12 w-full flex flex-wrap">
-    <div class="w-full md:w-1/2">
+  <div class="exhibitionMini px-6 mb-12 w-full md:w-1/2 flex flex-wrap">
+    <g-link :to="exhibition.node.path" class="no-underline">
       <img
-        class="pr-6"
+        class="w-full object-cover"
         :src="
-          `${exhibition.node.featureImage.url}?auto=compress,format&fit=crop&w=600&h=314&crop=faces,entropy`
+          `${exhibition.node.featureImage.url}?auto=compress,format&fit=crop&ar=16:9&crop=faces,entropy`
         "
       />
-    </div>
-    <div class="w-full md:w-1/2">
-      <h3 class="text-2xl my-2 text-uppercase">
-        <g-link :to="exhibition.node.path" class="no-underline">{{
-          exhibition.node.title
-        }}</g-link>
-      </h3>
-      <div class="mb-2">
-        <span class="date"> {{ startDate }} – {{ endDate }} </span>
+      <div class="w-full text-center">
+        <h3 class="text-2xl my-2 text-uppercase">
+          {{ exhibition.node.title }}
+        </h3>
+        <div class="mb-2">
+          <span class="date"> {{ startDate }} – {{ endDate }} </span>
+        </div>
+        <div class="text-base mb-8 leading-snug sm:hidden md:block" />
       </div>
-      <div class="text-base mb-8 leading-snug sm:hidden md:block" />
-    </div>
-    <!-- <h4 v-html="exhibition.node.eventType" /> -->
+    </g-link>
   </div>
 </template>
 
