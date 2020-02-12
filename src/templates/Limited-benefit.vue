@@ -2,7 +2,8 @@
   <Fullscreen>
     <img
       class=" h-full w-full mx-auto max-w-5xl object cover"
-      src=" https://www.datocms-assets.com/5128/1581520322-sally-han.jpg "
+      src="https://www.datocms-assets.com/5128/1581520322-sally-han.jpg"
+      alt="Text on white background reads: I, Sally Han, of the City of Toronto, in the Province of Ontario, affirm and say as follows: I. TMAC's operations provide limited benefit to community."
     />
     <p
       class="mt-32 mx-auto text-center text-sm md:text-base bottom-0 right-0 bg-black text-white p-2"
@@ -38,6 +39,7 @@
                 for="name"
               >
                 Name and/or organization
+                <span class="text-gray-500">optional</span>
               </label>
               <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -48,11 +50,18 @@
               <div class="flex items-center flex-no-wrap justify-between">
                 <button
                   class="bg-blue my-6 hover:bg-black text-xl text-white py-2 px-8 rounded-full focus:outline-none focus:shadow-outline"
-                  type="button"
+                  type="submit"
                 >
                   Send
                 </button>
               </div>
+              <p class="text-gray-500 text-sm self-center text-left">
+                Your response will be sent to TMAC. We're collecting these
+                reactions to
+                <g-link to="/tmaction" class="underline" target="_blank">
+                  share with the City later this month </g-link
+                >.
+              </p>
             </div>
           </form>
         </div>
@@ -72,10 +81,10 @@ export default {
       {
         name: "twitter:image",
         content:
-          "https://www.datocms-assets.com/5128/1573870676-1562639275-8c954bd3-9617-42f3-a332-016f2f33bcf4.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+          "https://www.datocms-assets.com/5128/1581520322-sally-han.jpg?auto=compress,format&fit=crop&ar=1.91:1"
       },
       { name: "twitter:site", content: "@tomediaarts" },
-      { name: "twitter:title", content: "Space Rentals" },
+      { name: "twitter:title", content: "" },
       {
         name: "twitter:description",
         content: "Information about renting space at Toronto Media Arts Centre"
