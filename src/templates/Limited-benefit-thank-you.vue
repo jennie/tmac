@@ -17,8 +17,8 @@
               Received, thank you!
             </h3>
             <p>
-              Feel free to tweet this image – use the #TMACtion hashtag if you
-              do!
+              Feel free to tweet the image above, and share your thoughts on
+              social media using #TMACtion hashtag!
               <g-link to="/tmaction" class="underline">
                 Stay up to date with our ongoing fight for our space.
               </g-link>
@@ -33,33 +33,9 @@
 <script>
 import Fullscreen from "~/layouts/Fullscreen.vue";
 export default {
-  name: "Space Rentals",
+  name: "Thanks!",
   metaInfo: {
-    title: "Space Rentals",
-    meta: [
-      { name: "twitter:card", content: "summary_large_image" },
-      {
-        name: "twitter:image",
-        content:
-          "https://www.datocms-assets.com/5128/1573870676-1562639275-8c954bd3-9617-42f3-a332-016f2f33bcf4.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
-      },
-      { name: "twitter:site", content: "@tomediaarts" },
-      { name: "twitter:title", content: "Space Rentals" },
-      {
-        name: "twitter:description",
-        content: "Information about renting space at Toronto Media Arts Centre"
-      },
-      { name: "og:title", content: "About TMAC" },
-      {
-        name: "og:description",
-        content: "Information about renting space at Toronto Media Arts Centre"
-      },
-      {
-        name: "og:image",
-        content:
-          "https://www.datocms-assets.com/5128/1573870676-1562639275-8c954bd3-9617-42f3-a332-016f2f33bcf4.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
-      }
-    ]
+    title: "Thanks!"
   }
 };
 </script>

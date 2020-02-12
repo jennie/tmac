@@ -10,7 +10,7 @@
     >
       from the affidavit of Sally Han, City of Toronto<br />August 2019
     </p>
-    <div class="container md:w-2/3 mx-auto pt-0 md:bg-white">
+    <div class="container md:w-1/2 mx-auto pt-0 md:bg-white">
       <div class="w-full px-6">
         <div class="mb-8 text-center text-gray-800">
           <form
@@ -60,10 +60,13 @@
               </div>
               <p class="text-gray-500 text-sm self-center text-left">
                 Your response will be sent to TMAC. We're collecting these
-                reactions to
-                <g-link to="/tmaction" class="underline" target="_blank">
-                  share with the City later this month </g-link
-                >.
+                reactions to share with the City later this month. Need some
+                background?
+                <g-link to="/tmaction" class="underline" target="_blank"
+                  >Read about our lawsuit against the City of Toronto and
+                  Urbancorp</g-link
+                >
+                – filed 5 years ago this May.
               </p>
             </div>
           </form>
@@ -104,7 +107,7 @@ export default {
     }
   },
   metaInfo: {
-    title: "Space Rentals",
+    title: "Limited Benefit?",
     meta: [
       { name: "twitter:card", content: "summary_large_image" },
       {
