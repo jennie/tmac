@@ -18,6 +18,7 @@
             action="/tmaction/limited-benefit/thank-you/"
             data-netlify="true"
             method="POST"
+            v-on:submit.prevent="handleSubmit"
             accept-charset="utf-8"
           >
             <div class="mb-4 w-full">
@@ -31,6 +32,7 @@
                 class="shadow block text-3xl appearance-none border rounded w-full py-2 mx-auto px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 placeholder="Start typing…"
                 name="response"
+                v-model="formData.response"
                 rows="5"
               />
 
@@ -45,6 +47,7 @@
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 name="name"
                 type="text"
+                v-model="formData.name"
                 placeholder="Name and/or organization"
               />
               <div class="flex items-center flex-no-wrap justify-between">
@@ -74,6 +77,32 @@
 import Fullscreen from "~/layouts/Fullscreen.vue";
 export default {
   name: "Space Rentals",
+  data() {
+    return {
+      formData: {}
+    };
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
+    },
+    handleSubmit(e) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": e.target.getAttribute("name"),
+          ...this.formData
+        })
+      })
+        .then(() => this.$router.push("/success"))
+        .catch(error => alert(error));
+    }
+  },
   metaInfo: {
     title: "Space Rentals",
     meta: [
