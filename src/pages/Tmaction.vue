@@ -104,13 +104,13 @@ export default {
       {
         name: "twitter:description",
         content:
-          "News, FAQs and updates about our ongoing litigation against the City of Toronto and Urbancirp over our space at 32 Lisgar Street."
+          "News, FAQs and updates about our ongoing litigation against the City of Toronto and Urbancorp over our space at 32 Lisgar Street."
       },
       { name: "og:title", content: "Updates on the fight for our space" },
       {
         name: "og:description",
         content:
-          "News, FAQs and updates about our ongoing litigation against the City of Toronto and Urbancirp over our space at 32 Lisgar Street."
+          "News, FAQs and updates about our ongoing litigation against the City of Toronto and Urbancorp over our space at 32 Lisgar Street."
       },
       {
         name: "og:image",
