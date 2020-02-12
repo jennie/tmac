@@ -23,14 +23,14 @@
             <div class="mb-4 w-full">
               <label
                 class="block text-gray-700 text-sm font-bold mb-2 mt-6 text-left"
-                for="name"
+                for="response"
               >
                 What do you think?
               </label>
               <textarea
                 class="shadow block text-3xl appearance-none border rounded w-full py-2 mx-auto px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="username"
                 placeholder="Start typing…"
+                name="response"
                 rows="5"
               />
 
@@ -43,7 +43,7 @@
               </label>
               <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="name"
+                name="name"
                 type="text"
                 placeholder="Name and/or organization"
               />
