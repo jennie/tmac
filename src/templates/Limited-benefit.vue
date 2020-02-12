@@ -84,15 +84,15 @@ export default {
           "https://www.datocms-assets.com/5128/1581520322-sally-han.jpg?auto=compress,format&fit=crop&ar=1.91:1"
       },
       { name: "twitter:site", content: "@tomediaarts" },
-      { name: "twitter:title", content: "" },
+      { name: "twitter:title", content: "#TMACtion" },
       {
         name: "twitter:description",
-        content: "Information about renting space at Toronto Media Arts Centre"
+        content: "Do you think TMAC provides a benefit to the community?"
       },
-      { name: "og:title", content: "About TMAC" },
+      { name: "og:title", content: "#TMACtion" },
       {
         name: "og:description",
-        content: "Information about renting space at Toronto Media Arts Centre"
+        content: "Do you think TMAC provides a benefit to the community?"
       },
       {
         name: "og:image",
