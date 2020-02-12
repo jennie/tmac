@@ -15,7 +15,7 @@
         <div class="mb-8 text-center text-gray-800">
           <form
             name="limited-benefit"
-            action="/tmaction/limited-benefit/thank-you"
+            action="/tmaction/limited-benefit/thank-you/"
             data-netlify="true"
             method="POST"
             accept-charset="utf-8"
