@@ -30,7 +30,9 @@
         <div id="body" class="w-full mx-auto md:w-2/3">
           <div class="mb-8" v-html="marked($page.article.body)" />
           <div class="mb-8">
-            <g-link to="/news" class="uppercase">&larr; Back to News</g-link>
+            <g-link to="/tmaction/news" class="uppercase"
+              >&larr; Back to News</g-link
+            >
           </div>
         </div>
       </div>
