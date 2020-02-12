@@ -13,9 +13,8 @@
           {{ $page.exhibition.title }}
         </h1>
         <div class="text-center date mb-12">
-          {{ $page.exhibition.startDate | luxon:format('MMMM d') }}
-          &nbsp;–&nbsp;
-          {{ $page.exhibition.endDate | luxon:format('MMMM d, kkkk') }}
+          <span class="date">{{ startDate }}&#8212;{{ endDate }} </span>
+
           <br />
           {{ $page.exhibition.hours }}
         </div>
@@ -149,6 +148,7 @@ query Exhibition($id: ID!)  {
 <script>
 import Layout from "~/layouts/Default.vue";
 import EventListingMini from "~/components/EventListingMini.vue";
+import DateTime from "luxon/src/datetime.js";
 
 export default {
   components: {
@@ -157,6 +157,16 @@ export default {
   },
 
   name: "Exhibition",
+  computed: {
+    startDate() {
+      let d = DateTime.fromISO(this.$page.exhibition.startDate);
+      return d.toFormat("MMMM d");
+    },
+    endDate() {
+      let d = DateTime.fromISO(this.$page.exhibition.endDate);
+      return d.toFormat("MMMM d, kkkk");
+    }
+  },
   metaInfo() {
     return {
       title: this.$page.exhibition.title,

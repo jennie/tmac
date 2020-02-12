@@ -17,13 +17,13 @@
             {{ $page.event.startDateTime | luxon:format('EEEE, MMMM d')
 
             }}
-            &nbsp;–&nbsp;
+            &#8212;
             {{ $page.event.endDateTime | luxon:format('EEEE, MMMM d') }}
           </div>
           <div v-else>
             {{ $page.event.startDateTime | luxon:format('EEEE, MMMM d') }}
             <br />
-            {{ $page.event.startDateTime | luxon:format('t') }}&nbsp;–&nbsp;
+            {{ $page.event.startDateTime | luxon:format('t') }}&#8212;
             {{ $page.event.endDateTime | luxon:format('t') }}
           </div>
         </div>

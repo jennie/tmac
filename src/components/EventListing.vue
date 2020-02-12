@@ -20,7 +20,7 @@
           <div v-if="duration > 24">
             <p class="date text-sm">
               {{ event.node.startDateTime | luxon:format('EEEE, MMMM d') }}
-              &nbsp;–&nbsp;
+              &#8212;
               {{ event.node.endDateTime | luxon:format('EEEE, MMMM d') }}
             </p>
           </div>
@@ -28,7 +28,7 @@
             <p class="date">
               {{ event.node.startDateTime | luxon:format('EEEE, MMMM d') }}
               <br />
-              {{ event.node.startDateTime | luxon:format('t') }}&nbsp;–&nbsp;
+              {{ event.node.startDateTime | luxon:format('t') }}&#8212;
               {{ event.node.endDateTime | luxon:format('t') }}
             </p>
           </div>
