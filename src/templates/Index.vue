@@ -53,8 +53,9 @@
         <EventListingMini
           v-for="(e, index) in $page.events.edges"
           :key="`event-${index}`"
-          :event="e"
-        />{{ $page.events.totalcount }}
+          :event="e.node"
+          class="w-full md:w-1/3 p-1 rounded-lg overflow-hidden"
+        />
         <div
           class="w-full text-center my-6 "
           v-if="$page.events.totalCount > 9"

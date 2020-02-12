@@ -61,10 +61,12 @@ module.exports = function(api, options) {
     const exhibitions = store.addCollection({
       typeName: "Exhibition"
     });
+    exhibitions.addReference("eventsList", "Event");
+    exhibitions.addReference("membersList", "Member");
+
     const faqs = store.addCollection({
       typeName: "Faqs"
     });
-    exhibitions.addReference("membersList", "Member");
 
     const timelineItems = store.addCollection({
       typeName: "Timeline"
@@ -219,18 +221,7 @@ module.exports = function(api, options) {
                 url
               }
               highlights {
-                ... on EventRecord {
-                  id
-                  title
-                  slug
-                  startDateTime
-                }
-                ... on ProgramRecord {
-                  id
-                  title
-                  slug
-                  startDate
-                }
+                id
               }
               hours
               id
@@ -258,10 +249,17 @@ module.exports = function(api, options) {
       }
     }).then(result => {
       for (const item of result.data.data.allPrograms) {
+        // create reference to events
+        let events = item.highlights;
+        let eventsList = events.map(function(event) {
+          return event.id;
+        });
         exhibitions.addNode({
-          ...item
+          ...item,
+          eventsList: eventsList
         });
       }
+
       for (const item of result.data.data.allMembers) {
         members.addNode({
           ...item

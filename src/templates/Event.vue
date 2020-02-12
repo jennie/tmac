@@ -33,7 +33,6 @@
         />
       </div>
     </div>
-
     <div class="mx-auto my-16">
       <div class="flex flex-wrap">
         <div class="w-full md:w-1/3 md:pr-12  order-2 md:order-1">

@@ -36,13 +36,12 @@ query Exhibitions ($page: Int, $today: Date) {
         featureImage {
           url
         }
-        highlights {
+        eventsList {
           title
           startDateTime
           slug
-          
+          path
         }
-
         hours
         id
         link

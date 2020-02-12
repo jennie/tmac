@@ -7,12 +7,14 @@
           `${$page.exhibition.featureImage.url}?auto=compress,format&fit=crop&crop=faces,entropy&ar=16:9&fit=crop`
         "
       />
+
       <div class="mx-auto md:-mt-32 pt-0 md:w-2/3 md:bg-white relative md:p-6">
         <h1 class="text-2xl md:text-4xl text-center mb-6">
           {{ $page.exhibition.title }}
         </h1>
         <div class="text-center date mb-12">
           {{ $page.exhibition.startDate | luxon:format('MMMM d')
+
 
 
 
@@ -75,6 +77,13 @@
         </div>
         <div id="body" class="w-full md:w-2/3  order-1 md:order-2">
           <div class="mb-8" v-html="marked($page.exhibition.description)" />
+          <h3>Related Programs</h3>
+          <EventListingMini
+            v-for="(e, index) in $page.exhibition.eventsList"
+            :key="`event-${index}`"
+            :event="e"
+            class="w-full md:w-1/2 p-1 rounded-lg overflow-hidden"
+          />
         </div>
       </div>
       <div class="mb-8">
@@ -97,10 +106,15 @@ query Exhibition($id: ID!)  {
     featureImage {
       url
     }
-    highlights {
+    eventsList {
+    
       title
+      path
       startDateTime
       slug
+      featureImage {
+        url
+      }      
     }
     hours
     id
@@ -128,10 +142,12 @@ query Exhibition($id: ID!)  {
 
 <script>
 import Layout from "~/layouts/Default.vue";
+import EventListingMini from "~/components/EventListingMini.vue";
 
 export default {
   components: {
-    Layout
+    Layout,
+    EventListingMini
   },
 
   name: "Exhibition",
