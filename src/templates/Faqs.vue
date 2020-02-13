@@ -27,7 +27,7 @@
           class="p-2 mx-auto md:w-2/3 w-full"
           v-for="(faq, index) in $page.faqs.edges"
           :key="`faq-${index}`"
-          :id="`${faq.slug}`"
+          :id="faq.node.slug"
         >
           <div class="p-6 h-full border-black border-4">
             <div v-if="faq.node.image">
