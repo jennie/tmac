@@ -44,7 +44,20 @@
                       href="mailto:councillor_bailao@toronto.ca"
                       >councillor_bailao@toronto.ca</a
                     >
+                    • Twitter:
+                    <a href="https://twitter.com/anabailaoTO" target="_blank"
+                      >AnaBailaoTO</a
+                    >
                   </li>
+                  <!-- <li class="m-0 p-0">
+                    <b>Councillor Michael Thompson</b>, Chair of Toronto's
+                    Economic and Community Development Committee <br />
+                    <a
+                      class="text-blue underline"
+                      href="mailto:councillor_thompson@toronto.ca"
+                      >councillor_thompson@toronto.ca</a
+                    >
+                  </li> -->
                 </ol>
               </div>
               <div class="w-full md:w-1/2 px-6">
