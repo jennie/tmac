@@ -45,7 +45,10 @@
                       >councillor_bailao@toronto.ca</a
                     >
                     • Twitter:
-                    <a href="https://twitter.com/anabailaoTO" target="_blank"
+                    <a
+                      class="text-blue underline"
+                      href="https://twitter.com/anabailaoTO"
+                      target="_blank"
                       >AnaBailaoTO</a
                     >
                   </li>
