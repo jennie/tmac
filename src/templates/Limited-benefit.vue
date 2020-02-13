@@ -213,12 +213,12 @@ export default {
       { name: "twitter:title", content: "#TMACtion" },
       {
         name: "twitter:description",
-        content: "Do you think TMAC provides a benefit to the community?"
+        content: "What benefit do you think TMAC provides to the community?"
       },
       { name: "og:title", content: "#TMACtion" },
       {
         name: "og:description",
-        content: "Do you think TMAC provides a benefit to the community?"
+        content: "What benefit do you think TMAC provides to the community?"
       },
       {
         name: "og:image",
