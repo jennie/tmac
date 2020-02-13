@@ -14,23 +14,31 @@
         <div class="text-center date mb-12"></div>
         <div class="mb-8 text-center text-gray-800">
           <p>
-            We've heard these a few times. Here are the
-            <b>TOP 5 burning questions</b> you've had about TMAC!
+            We've heard these a few times. Here are answers to those
+            <b>burning questions</b> you've had about TMAC!
           </p>
         </div>
       </div>
     </div>
 
     <main>
-      <div id="body" class="flex flex-wrap">
+      <div id="body" class="">
         <div
-          class="p-2 w-full"
+          class="p-2 mx-auto md:w-2/3 w-full"
           v-for="(faq, index) in $page.faqs.edges"
           :key="`faq-${index}`"
+          id="`faq-${index}`"
         >
-          <div class="p-6 h-full  bg-black">
-            <h3 class="m-0 text-white">{{ faq.node.question }}</h3>
-            <div class="text-white" v-html="marked(faq.node.answer)" />
+          <div class="p-6 h-full border-black border-4">
+            <h3 class="m-0">{{ faq.node.question }}</h3>
+            <div class="text-black" v-html="marked(faq.node.answer)" />
+          </div>
+
+          <div
+            class=" text-6xl text-center mx-auto my-12"
+            v-if="$page.faqs.edges.length !== index + 1"
+          >
+            <i class="fas fa-question-circle"></i>
           </div>
         </div>
       </div>

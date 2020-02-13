@@ -15,7 +15,8 @@ import {
   faMapMarkerAlt,
   faFile,
   faBars,
-  faBuilding
+  faBuilding,
+  faQuestionCircle
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
@@ -45,7 +46,8 @@ library.add(
   faTheaterMasks,
   faMobile,
   faEnvelope,
-  faCalendarDay
+  faCalendarDay,
+  faQuestionCircle
 );
 dom.watch();
 
