@@ -16,7 +16,8 @@ import {
   faFile,
   faBars,
   faBuilding,
-  faQuestionCircle
+  faQuestionCircle,
+  faLink
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
@@ -37,6 +38,7 @@ library.add(
   faTwitter,
   faBars,
   faInstagram,
+  faLink,
   faFacebook,
   faSquare,
   faFilm,

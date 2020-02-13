@@ -27,7 +27,7 @@
           class="p-2 mx-auto md:w-2/3 w-full"
           v-for="(faq, index) in $page.faqs.edges"
           :key="`faq-${index}`"
-          :id="`faq-${index}`"
+          :id="`${faq.slug}`"
         >
           <div class="p-6 h-full border-black border-4">
             <div v-if="faq.node.image">
@@ -35,6 +35,15 @@
             </div>
             <h3 class="m-0">{{ faq.node.question }}</h3>
             <div class="text-black" v-html="marked(faq.node.answer)" />
+            <div class="link">
+              <a
+                :href="
+                  `https://www.tomediaarts.org/tmaction/faqs#${faq.node.slug}`
+                "
+              >
+                <i class="fas fa-link"></i>
+              </a>
+            </div>
           </div>
 
           <div
