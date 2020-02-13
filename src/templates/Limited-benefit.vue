@@ -1,5 +1,5 @@
 <template>
-  <Fullscreen>
+  <Fullscreen id="limited-benfit" name="LimitedBenefit">
     <img
       class=" h-full w-full mx-auto max-w-5xl object cover"
       src="https://www.datocms-assets.com/5128/1581520322-sally-han.jpg"
@@ -10,42 +10,100 @@
     >
       from the affidavit of Sally Han, City of Toronto<br />August 2019
     </p>
-    <div class="container md:w-1/2 mx-auto pt-0 md:bg-white">
+    <div class="container mx-auto pt-0 md:bg-white">
       <div class="w-full px-6">
-        <div class="mb-8 text-center text-gray-800">
+        <div type="success" v-if="submitted">
+          <h3 class="uppercase text-center text-green-500 text-3xl">
+            Thanks, got it!
+          </h3>
+          <div class="text-left mt-6">
+            <h4>Next steps:</h4>
+
+            <div class="flex flex-wrap">
+              <div class="w-full md:w-1/2 px-6">
+                <h3 class="HelveticaNowDisplay-XBlk normal-case">
+                  Share your response with the City
+                </h3>
+                <ol
+                  class="list-decimal my-6 mx-auto px-12 py-6 bg-yellow-300 text-lg "
+                >
+                  <li class="m-0 pb-3">
+                    <b>Mike Williams</b>, General Manager, Economic Development
+                    and Culture<br />
+                    <a
+                      class="text-blue underline"
+                      href="mailto:mike.williams@toronto.ca"
+                      >mike.williams@toronto.ca</a
+                    >
+                  </li>
+                  <li class="m-0 p-0">
+                    <b>Councillor Ana Bailão</b>, City of Toronto, Ward 9
+                    Davenport<br />
+                    <a
+                      class="text-blue underline"
+                      href="mailto:councillor_bailao@toronto.ca"
+                      >councillor_bailao@toronto.ca</a
+                    >
+                  </li>
+                </ol>
+              </div>
+              <div class="w-full md:w-1/2 px-6">
+                <h3 class="HelveticaNowDisplay-XBlk normal-case">
+                  Share your thoughts on Twitter
+                </h3>
+                <p>
+                  Feel free to share the image above and a link to
+                  <g-link to="/tmaction/limited-benefit">this page</g-link>, and
+                  share your thoughts on social media using #TMACtion hashtag!
+                </p>
+              </div>
+            </div>
+          </div>
+          <h3 class="HelveticaNowDisplay-XBlk normal-case">
+            Your response:
+          </h3>
+          <blockquote class="my-6 mx-auto px-12 py-6 bg-gray-100 text-base">
+            {{ formData.response }}
+          </blockquote>
+        </div>
+
+        <div v-else class="mb-8 text-center text-gray-800">
           <form
             name="limited-benefit"
-            action="/tmaction/limited-benefit/thank-you/"
+            action
             data-netlify="true"
             method="POST"
+            v-if="!submitted"
             v-on:submit.prevent="handleSubmit"
             accept-charset="utf-8"
           >
-            <div class="mb-4 w-full">
+            <div class="mb-4 w-full md:w-2/3 mx-auto">
               <label
-                class="block text-gray-700 text-sm font-bold mb-2 mt-6 text-left"
+                class="block text-gray-700 text-xl mb-2 mt-6 text-left"
                 for="response"
               >
                 What do you think?
               </label>
               <textarea
-                class="shadow block text-3xl appearance-none border rounded w-full py-2 mx-auto px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                class="shadow block text-xl appearance-none border rounded w-full py-2 mx-auto px-3 text-gray-700 leading-tight tracking-tight focus:outline-none focus:shadow-outline"
                 placeholder="Start typing…"
                 name="response"
+                id="response"
                 v-model="formData.response"
                 rows="5"
               />
 
               <label
-                class="block text-gray-700 text-sm font-bold mb-2 mt-6 text-left"
+                class="block text-gray-700 text-lg mb-2 mt-6 text-left"
                 for="name"
               >
                 Name and/or organization
-                <span class="text-gray-500">optional</span>
+                <span class="pl-2 text-gray-500 font-normal">optional</span>
               </label>
               <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 name="name"
+                id="name"
                 type="text"
                 v-model="formData.name"
                 placeholder="Name and/or organization"
@@ -55,13 +113,12 @@
                   class="bg-blue my-6 hover:bg-black text-xl text-white py-2 px-8 rounded-full focus:outline-none focus:shadow-outline"
                   type="submit"
                 >
-                  Send
+                  Save and see next steps →
                 </button>
               </div>
-              <p class="text-gray-500 text-sm self-center text-left">
-                Your response will be sent to TMAC. We're collecting these
-                reactions to share with the City later this month. Need some
-                background?
+              <p class="text-gray-600 text-base self-center text-left">
+                Your response will be sent to TMAC. On the next page, you will
+                see who else you can contact. Need some background?
                 <g-link to="/tmaction" class="underline" target="_blank"
                   >Read about our lawsuit against the City of Toronto and
                   Urbancorp</g-link
@@ -76,13 +133,32 @@
   </Fullscreen>
 </template>
 
+<style lang="postcss">
+h3 {
+}
+label {
+  font-family: HelveticaNowText-ExtraBold;
+  font-weight: normal;
+  font-style: normal;
+  span {
+    font-family: HelveticaNowText-Regular;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+</style>
 <script>
 import Fullscreen from "~/layouts/Fullscreen.vue";
+
 export default {
-  name: "Limited Benefit?",
+  name: "LimitedBenefit",
+  components: {
+    Fullscreen
+  },
   data() {
     return {
-      formData: {}
+      formData: {},
+      submitted: false
     };
   },
   methods: {
@@ -94,16 +170,25 @@ export default {
         .join("&");
     },
     handleSubmit(e) {
+      let responseText = e.target.querySelector("#response").value;
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
           "form-name": e.target.getAttribute("name"),
+          response: e.target.querySelector("#response").value,
+          name: e.target.querySelector("#name").value,
           ...this.formData
         })
       })
-        .then(() => this.$router.push("/tmaction/limited-benefit/thank-you"))
-        .catch(error => alert(error));
+        .then(response => {
+          this.submitted = true;
+        })
+        .catch(error => {
+          console.log("====================================");
+          console.log(`error in submiting the form data:${error}`);
+          console.log("====================================");
+        });
     }
   },
   metaInfo: {

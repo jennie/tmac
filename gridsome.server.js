@@ -36,10 +36,7 @@ module.exports = function(api, options) {
       path: "/tmaction/limited-benefit",
       component: "./src/templates/Limited-benefit.vue"
     });
-    createPage({
-      path: "/tmaction/limited-benefit/thank-you",
-      component: "./src/templates/Limited-benefit-thank-you.vue"
-    });
+
     createPage({
       path: "/tmaction/news",
       component: "./src/templates/News.vue"

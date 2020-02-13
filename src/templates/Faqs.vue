@@ -30,7 +30,7 @@
         >
           <div class="p-6 h-full  bg-black">
             <h3 class="m-0 text-white">{{ faq.node.question }}</h3>
-            <div class="text-white" v-html="faq.node.answer" />
+            <div class="text-white" v-html="marked(faq.node.answer)" />
           </div>
         </div>
       </div>
