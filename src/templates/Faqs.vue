@@ -27,7 +27,7 @@
           class="p-2 mx-auto md:w-2/3 w-full"
           v-for="(faq, index) in $page.faqs.edges"
           :key="`faq-${index}`"
-          id="`faq-${index}`"
+          :id="`faq-${index}`"
         >
           <div class="p-6 h-full border-black border-4">
             <h3 class="m-0">{{ faq.node.question }}</h3>
