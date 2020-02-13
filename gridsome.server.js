@@ -216,6 +216,9 @@ module.exports = function(api, options) {
               id
               question
               slug
+              image {
+                url
+              }
             }
             allPrograms {
               description

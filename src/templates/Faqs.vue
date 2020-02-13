@@ -30,6 +30,9 @@
           :id="`faq-${index}`"
         >
           <div class="p-6 h-full border-black border-4">
+            <div v-if="faq.node.image">
+              <img :src="faq.node.image.url" alt="" class="mb-6" />
+            </div>
             <h3 class="m-0">{{ faq.node.question }}</h3>
             <div class="text-black" v-html="marked(faq.node.answer)" />
           </div>
@@ -65,6 +68,9 @@ query Articles {
 				position
         question
         slug
+        image {
+          url
+        }
       }
     }
   }
