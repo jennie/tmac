@@ -24,7 +24,7 @@
     <main>
       <div id="body" class="flex flex-wrap">
         <div
-          class="p-2 w-full lg:w-1/3"
+          class="p-2 w-full"
           v-for="(faq, index) in $page.faqs.edges"
           :key="`faq-${index}`"
         >
