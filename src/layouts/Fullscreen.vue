@@ -1,10 +1,9 @@
 <template>
   <div class="layout">
-    <transition name="fade" appear>
-      <main>
-        <slot />
-      </main>
-    </transition>
+    <main>
+      <slot />
+    </main>
+
     <Footer />
   </div>
 </template>

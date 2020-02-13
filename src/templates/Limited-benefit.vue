@@ -17,7 +17,7 @@
             Thanks, got it!
           </h3>
           <div class="text-left mt-6">
-            <h4>Next steps:</h4>
+            <h4 class="text-center text-gray-900 text-3xl mb-6">Next steps:</h4>
 
             <div class="flex flex-wrap">
               <div class="w-full md:w-1/2 px-6">
@@ -51,20 +51,29 @@
                 <h3 class="HelveticaNowDisplay-XBlk normal-case">
                   Share your thoughts on Twitter
                 </h3>
-                <p>
-                  Feel free to share the image above and a link to
-                  <g-link to="/tmaction/limited-benefit">this page</g-link>, and
-                  share your thoughts on social media using #TMACtion hashtag!
+                <p class="mt-6">
+                  Feel free to share the image above with a link to
+                  <g-link to="/tmaction/limited-benefit" target="_blank"
+                    >this page</g-link
+                  >, and share your thoughts on social media using
+                  <a
+                    href="https://twitter.com/search?q=TMACtion&src=typed_query&f=live"
+                    target="_blank"
+                    >#TMACtion</a
+                  >
+                  hashtag!
                 </p>
               </div>
             </div>
           </div>
-          <h3 class="HelveticaNowDisplay-XBlk normal-case">
-            Your response:
-          </h3>
-          <blockquote class="my-6 mx-auto px-12 py-6 bg-gray-100 text-base">
-            {{ formData.response }}
-          </blockquote>
+          <div class="mx-6">
+            <h3 class="HelveticaNowDisplay-XBlk normal-case">
+              Your response:
+            </h3>
+            <blockquote class="my-6 mx-auto px-12 py-6 bg-gray-100 text-base">
+              {{ formData.response }}
+            </blockquote>
+          </div>
         </div>
 
         <div v-else class="mb-8 text-center text-gray-800">
