@@ -239,7 +239,7 @@ export default {
       {
         name: "og:image",
         content:
-          "https://www.datocms-assets.com/5128/1573870676-1562639275-8c954bd3-9617-42f3-a332-016f2f33bcf4.jpg?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy"
+          "https://www.datocms-assets.com/5128/1581520322-sally-han.jpg?auto=compress,format&fit=crop&ar=1.91:1"
       }
     ]
   }
