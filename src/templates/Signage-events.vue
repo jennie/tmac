@@ -2,7 +2,7 @@
   <Fullscreen>
     <ClientOnly>
       <div class="grid grid-cols-1 grid-rows-3 grid-flow-col h-full">
-        <vue-tiny-slider v-bind="tinySliderOptions">
+        <TinySlider v-bind="tinySliderOptions">
           <div
             class="pb-2/3 relative"
             v-for="(event, index) in $page.events.edges"
@@ -26,7 +26,7 @@
               </p>
             </div>
           </div>
-        </vue-tiny-slider>
+        </TinySlider>
       </div>
     </ClientOnly>
   </Fullscreen>
@@ -68,7 +68,8 @@ import Fullscreen from "~/layouts/Fullscreen";
 export default {
   components: {
     EventListingMini,
-    Fullscreen
+    Fullscreen,
+    TinySlider: () => import("vue-tiny-slider")
   },
   name: "Events",
   data() {

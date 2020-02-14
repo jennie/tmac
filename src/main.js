@@ -3,9 +3,10 @@ require("~/main.css");
 
 import DefaultLayout from "~/layouts/Default.vue";
 import VueLuxon from "vue-luxon";
-import vTinySlider from "vue-tiny-slider";
 
 export default function(Vue, { router, head, isClient }) {
+  if (isClient) {
+  }
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
   var marked = require("marked");
@@ -22,10 +23,4 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(VueLuxon, {
     clientZone: "America/Toronto"
   });
-  const VueTinySlider = {
-    install(Vue, options) {
-      Vue.component("VueTinySlider", vTinySlider);
-    }
-  };
-  Vue.use(VueTinySlider);
 }
