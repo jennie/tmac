@@ -8,7 +8,8 @@
     <p
       class="mt-32 mx-auto text-center text-sm md:text-base bottom-0 right-0 bg-black text-white p-2"
     >
-      from the affidavit of Sally Han, City of Toronto<br />August 2019
+      from the affidavit of Sally Han, City of Toronto<br />Respondent's Motion
+      Record, (Motion re. variation of Settlement Agreement), August 2019
     </p>
     <div class="container mx-auto pt-0 md:bg-white">
       <div class="w-full px-6">
