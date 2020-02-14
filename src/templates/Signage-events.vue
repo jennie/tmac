@@ -15,12 +15,12 @@
                 `${event.node.featureImage.url}?fit=crop&crop=faces,entropy,top&ar=16:9`
               "
             />
-            <div class="p-2 absolute bottom-0">
-              <h3 class="text-xl m-2 -mb-1 bg-white p-1">
+            <div class="absolute bottom-0">
+              <h3 class="text-6xl m-2 -mb-1 bg-white p-3">
                 {{ event.node.title }}
               </h3>
               <p
-                class="date text-sm font-body font-normal inline m-2 bg-white p-1"
+                class="text-4xl font-body font-normal inline m-2 bg-white p-3 -mt-1"
               >
                 {{ event.node.startDateTime | luxon:format('MMMM d') }}
               </p>

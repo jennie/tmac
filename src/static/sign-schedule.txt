@@ -1,0 +1,30 @@
+{
+  "display_settings": {
+    "Value": {
+      "rotation": 270
+    }
+  },
+  "schedule": {
+    "Value": [
+      {
+        "items": [
+          
+          {
+            "autoReload": 360000,
+            "cachePolicy": "forever",
+            "content": "https://tomediaarts.org/signage-events",
+            "duration": 86400000,
+            "repetition": "d",
+            "start": "Mon May 20 2019 10:00:00 GMT-0400",
+            "zone": "ul",
+            "zoneHeight": "100%",
+            "zoneWidth": "100%",
+            "zoneXOffset": "0",
+            "zoneYOffset": "0"
+          }
+        ],
+        "name": "Reception Signage"
+      }
+    ]
+  }
+}
