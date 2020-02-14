@@ -14,6 +14,40 @@
         :currentPage="$page.events.pageInfo.currentPage"
       />
     </div>
+
+    <div id="past-events">
+      <h2 class>Past Events</h2>
+
+      <!-- {{ $page.pastEvents.totalCount }} -->
+      <div
+        class="event"
+        v-for="(e, index) in $page.pastEvents.edges"
+        :key="`event-${index}`"
+        :event="e"
+      >
+        <h4 class="flex">
+          <strong class="truncate"
+            ><g-link :to="e.node.path">
+              {{ e.node.title }}
+            </g-link>
+          </strong>
+          <div
+            class="self-center pl-2 presenters text-xs HelveticaNowMicro-XLtIt"
+          >
+            <span class="truncate">
+              {{ e.node.startDateTime  | luxon:format('MMMM d, kkkk')}}
+            </span>
+            <!-- <span v-if="e.node.member[0]"
+              >{{ e.node.member[0].shortName }}
+            </span>
+            <span v-if="e.node.presenter">{{ e.node.presenter }}</span>
+            <span v-if="e.node.externalCoPresenters">{{
+              e.node.externalCoPresenters
+            }}</span> -->
+          </div>
+        </h4>
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -42,9 +76,34 @@ query Events ($page: Int, $today: Date) {
       }
     }
   }
+  pastEvents: allEvent(sortBy: "startDateTime", order: DESC, filter: { endDateTime: { lt: $today } }) {
+    totalCount
+    edges {
+      node {
+        startDateTime
+        endDateTime
+        slug
+        path
+        title
+        presenter
+        member {
+          shortName
+        }
+        externalCoPresenters
+      }
+    }
+  }
 }
 </page-query>
-
+<style lang="postcss" scoped>
+h4 {
+  strong {
+    font-family: HelveticaNowText-ExtraBold;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+</style>
 <script>
 import PaginationPosts from "../components/PaginationPosts";
 import EventListing from "../components/EventListing";
