@@ -15,6 +15,18 @@
         :currentPage="$page.exhibitions.pageInfo.currentPage"
       />
     </div>
+
+    <div id="past-events">
+      <h2 class>Past Exhibitions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <ExhibitionListingMini
+          v-for="(e, index) in $page.pastExhibitions.edges"
+          :key="`exhibition-${index}`"
+          :exhibition="e"
+          class=" "
+        />
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -66,17 +78,34 @@ query Exhibitions ($page: Int, $today: Date) {
       }
     }
   }
+  pastExhibitions: allExhibition(sortBy: "startDate", order: DESC, filter: { endDate: { lt: $today } }, limit: 100)  {
+    totalCount
+
+    edges {
+      node {
+        endDate
+        featureImage {
+          url
+        }
+        path
+        startDate
+        title
+      }
+    }
+  }
 }
 </page-query>
 
 <script>
 import PaginationPosts from "../components/PaginationPosts";
 import ExhibitionListing from "../components/ExhibitionListing";
+import ExhibitionListingMini from "../components/ExhibitionListingMini";
 
 export default {
   components: {
     PaginationPosts,
-    ExhibitionListing
+    ExhibitionListing,
+    ExhibitionListingMini
   },
   name: "Exhibitions",
   metaInfo: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="exhibitionMini px-6 mb-12 w-full md:w-1/2 flex flex-wrap">
+  <div class="exhibitionMini">
     <g-link :to="exhibition.node.path" class="no-underline">
       <img
         class="w-full object-cover"

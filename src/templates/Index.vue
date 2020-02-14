@@ -29,7 +29,7 @@
     </header>
     <div v-if="$page.exhibitionsUpcoming.edges.length > 0">
       <h2 class="text-center">Exhibitions</h2>
-      <div class="-px-12 py-16 flex flex-wrap">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
         <ExhibitionListingMini
           v-for="(e, index) in $page.exhibitionsUpcoming.edges"
           :key="`exhibition-${index}`"

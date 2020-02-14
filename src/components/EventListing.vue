@@ -3,7 +3,6 @@
     <div class="w-full md:w-1/3">
       <img
         v-if="event.node.featureImage"
-        class="pr-6"
         :src="
           `${event.node.featureImage.url}?auto=compress,format&fit=crop&w=600&h=314&crop=faces,entropy`
         "

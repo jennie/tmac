@@ -220,7 +220,7 @@ module.exports = function(api, options) {
                 url
               }
             }
-            allPrograms {
+            allPrograms(first:100) {
               description
               endDate
               externalCoPresenters
