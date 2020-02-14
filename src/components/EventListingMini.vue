@@ -3,6 +3,7 @@
     <div class="pb-2/3 relative">
       <g-link :to="event.path" class="no-underline">
         <img
+          v-if="event.featureImage"
           class="absolute h-full w-full object-cover"
           :src="
             `${event.featureImage.url}?auto=compress,format&fit=crop&w=600&h=314&crop=faces,entropy`

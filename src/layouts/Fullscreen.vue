@@ -3,8 +3,6 @@
     <main>
       <slot />
     </main>
-
-    <Footer />
   </div>
 </template>
 
@@ -18,13 +16,7 @@ query {
 </static-query>
 
 <script>
-import Footer from "../components/Footer";
-
 export default {
-  components: {
-    Footer
-  },
-
   metaInfo: {
     htmlAttrs: {
       lang: "en",
