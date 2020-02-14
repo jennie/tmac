@@ -141,9 +141,10 @@
                   Save and see next steps →
                 </button>
               </div>
-              <p class="text-gray-600 text-base self-center text-left">
-                Your response will be sent to TMAC. On the next page, you will
-                see who else you can contact. Need some background?
+              <p class="text-gray-600 text-lg self-center text-left">
+                Your response will be sent to TMAC to present to the City. On
+                the next page, you will see who else you can contact. Need some
+                background?
                 <g-link to="/tmaction" class="underline" target="_blank"
                   >Read about our lawsuit against the City of Toronto and
                   Urbancorp</g-link
