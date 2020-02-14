@@ -12,7 +12,7 @@
               v-if="event.node.featureImage"
               class="absolute h-full w-full object-cover"
               :src="
-                `${event.node.featureImage.url}?fit=crop&crop=faces,entropy`
+                `${event.node.featureImage.url}?fit=crop&crop=faces,entropy,top&ar=16:9`
               "
             />
             <div class="p-2 absolute bottom-0">
