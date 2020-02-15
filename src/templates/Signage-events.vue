@@ -19,9 +19,7 @@
               <h3 class="text-6xl m-2 -mb-1 bg-white p-3">
                 {{ event.node.title }}
               </h3>
-              <p
-                class="text-4xl font-body font-normal inline m-2 bg-white p-3 -mt-1"
-              >
+              <p class="text-4xl font-body font-normal inline m-2 bg-white p-3">
                 {{ event.node.startDateTime | luxon:format('MMMM d') }}
               </p>
             </div>
@@ -58,6 +56,10 @@ h4 {
     font-family: HelveticaNowText-ExtraBold;
     font-weight: normal;
     font-style: normal;
+  }
+  .tns-liveregion {
+    @apply absolute z-0;
+    display: none;
   }
 }
 </style>
