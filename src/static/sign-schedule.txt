@@ -10,7 +10,6 @@
         "items": [
           
           {
-            "autoReload": 360000,
             "cachePolicy": "forever",
             "content": "https://tomediaarts.org/signage-events",
             "duration": 86400000,
