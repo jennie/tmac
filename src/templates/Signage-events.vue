@@ -50,17 +50,17 @@ query Events ($today: Date) {
   
 }
 </page-query>
-<style lang="postcss" scoped>
+<style lang="postcss">
 h4 {
   strong {
     font-family: HelveticaNowText-ExtraBold;
     font-weight: normal;
     font-style: normal;
   }
-  .tns-liveregion {
-    @apply absolute z-0;
-    display: none;
-  }
+}
+.tns-liveregion {
+  @apply absolute z-0;
+  display: none !important;
 }
 </style>
 <script>
@@ -78,7 +78,8 @@ export default {
     return {
       tinySliderOptions: {
         loop: true,
-        items: 2,
+        gutter: 30,
+        items: 3,
         speed: 1000,
         autoplay: true,
         axis: "vertical",
