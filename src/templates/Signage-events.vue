@@ -1,10 +1,10 @@
 <template>
-  <Fullscreen>
+  <Fullscreen class="bg-black h-full">
     <ClientOnly>
-      <div class="grid grid-cols-1 grid-rows-3 grid-flow-col h-full">
-        <TinySlider v-bind="tinySliderOptions">
+      <div>
+        <TinySlider v-bind="tinySliderOptions" class="flex flex-col h-full">
           <div
-            class="pb-2/3 relative"
+            class="relative flex flex-col justify-evenly slide min-h-full"
             v-for="(event, index) in $page.events.edges"
             :key="`event-${index}`"
           >
@@ -15,7 +15,7 @@
                 `${event.node.featureImage.url}?fit=crop&crop=faces,entropy,top&ar=16:9`
               "
             />
-            <div class="absolute bottom-0">
+            <div class="absolute z-20 bottom-0">
               <h3 class="text-6xl m-2 -mb-1 bg-white p-3">
                 {{ event.node.title }}
               </h3>
@@ -58,6 +58,9 @@ h4 {
     font-style: normal;
   }
 }
+.slide {
+  height: 640px;
+}
 .tns-liveregion {
   @apply absolute z-0;
   display: none !important;
@@ -78,7 +81,7 @@ export default {
     return {
       tinySliderOptions: {
         loop: true,
-        gutter: 30,
+        slideby: 3,
         items: 3,
         speed: 1000,
         autoplay: true,
