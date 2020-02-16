@@ -51,7 +51,9 @@ query Events ($today: Date) {
 }
 </page-query>
 <style lang="postcss">
-h4 {
+h3 {
+  line-height: 1;
+
   strong {
     font-family: HelveticaNowText-ExtraBold;
     font-weight: normal;
