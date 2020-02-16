@@ -87,9 +87,8 @@
             <h3 class="HelveticaNowDisplay-XBlk normal-case">
               Your response:
             </h3>
-            <blockquote class="my-6 mx-auto px-12 py-6 bg-gray-100 text-base">
-              {{ formData.response }}
-            </blockquote>
+            <!-- prettier-ignore -->
+            <blockquote class="my-6 mx-auto px-12 py-6 bg-gray-100 text-base" style="white-space: pre-wrap;" >{{ formData.response }}</blockquote>
           </div>
         </div>
 
