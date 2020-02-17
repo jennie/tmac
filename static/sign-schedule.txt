@@ -1,0 +1,99 @@
+{
+  "display_settings": {
+    "Value": {
+      "rotation": 270
+    }
+  },
+  "schedule": {
+    "Value": [
+      {
+        "items": [
+          {
+            "autoReload": 0,
+            "cachePolicy": "forever",
+            "content": "https://www.tomediaarts.org/shopify",
+            "duration": 43200000,
+            "end": "Wed Jul 25 2018 19:00:00 GMT-0400",
+            "repetition": "d",
+            "start": "Tue Jul 24 2018 07:00:00 GMT-0400",
+            "zone": "fs",
+            "zoneHeight": "30%",
+            "zoneWidth": "30%",
+            "zoneXOffset": "0",
+            "zoneYOffset": "0"
+          },
+          {
+            "autoReload": 0,
+            "cachePolicy": "forever",
+            "content": "https://www.tomediaarts.org/shopify",
+            "duration": 3600000,
+            "end": "Mon Jul 23 2018 16:00:00 GMT-0400",
+            "repetition": "-",
+            "start": "Mon Jul 23 2018 15:00:00 GMT-0400",
+            "zone": "fs",
+            "zoneHeight": "30%",
+            "zoneWidth": "30%",
+            "zoneXOffset": "0",
+            "zoneYOffset": "0"
+          },
+          {
+            "autoReload": 0,
+            "cachePolicy": "forever",
+            "content": "https://www.tomediaarts.org/signage_fullscreen",
+            "duration": 7200000,
+            "end": "Fri Sep 21 2018 10:00:00 GMT-0400",
+            "repetition": "-",
+            "start": "Fri Sep 21 2018 08:00:00 GMT-0400",
+            "zone": "fs",
+            "zoneHeight": "30%",
+            "zoneWidth": "30%",
+            "zoneXOffset": "0",
+            "zoneYOffset": "0"
+          },
+          {
+            "autoReload": 0,
+            "cachePolicy": "forever",
+            "content": "https://tomediaarts.org/signage_fullscreen",
+            "duration": 16200000,
+            "end": "Wed Nov 28 2018 22:00:00 GMT-0500",
+            "repetition": "-",
+            "start": "Wed Nov 28 2018 17:30:00 GMT-0500",
+            "zone": "fs",
+            "zoneHeight": "30%",
+            "zoneWidth": "30%",
+            "zoneXOffset": "0",
+            "zoneYOffset": "0"
+          },
+          {
+            "autoReload": 0,
+            "cachePolicy": "forever",
+            "content": "https://tomediaarts.org/signs/doors_open",
+            "duration": 43200000,
+            "end": "Sun May 26 2019 22:00:00 GMT-0400",
+            "repetition": "d",
+            "start": "Thu May 23 2019 10:00:00 GMT-0400",
+            "zone": "ll",
+            "zoneHeight": "34%",
+            "zoneWidth": "100%",
+            "zoneXOffset": "0",
+            "zoneYOffset": "0"
+          },
+          {
+            "autoReload": 0,
+            "cachePolicy": "forever",
+            "content": "https://tomediaarts.org/signage-events",
+            "duration": 52200000,
+            "repetition": "d",
+            "start": "Mon May 20 2019 09:30:00 GMT-0400",
+            "zone": "fs",
+            "zoneHeight": "66%",
+            "zoneWidth": "100%",
+            "zoneXOffset": "0",
+            "zoneYOffset": "0"
+          }
+        ],
+        "name": "Reception Signage"
+      }
+    ]
+  }
+}
