@@ -40,6 +40,13 @@ module.exports = function(api, options) {
       }
     });
     createPage({
+      path: "/signage-projection",
+      component: "./src/templates/Signage-projection.vue",
+      context: {
+        today: today
+      }
+    });
+    createPage({
       path: "/tmaction/limited-benefit",
       component: "./src/templates/Limited-benefit.vue"
     });
