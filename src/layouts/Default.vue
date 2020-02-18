@@ -204,6 +204,16 @@
           <g-link :to="item.to">{{ item.title }}</g-link>
         </div>
       </nav>
+
+      <!-- {{ $static.latestArticle[0] }} -->
+      <p class="text-base mt-3">
+        Read the latest:
+        <g-link
+          class="text-blue underline"
+          :to="$static.latestArticle.edges[0].node.path"
+          >{{ $static.latestArticle.edges[0].node.title }}</g-link
+        >
+      </p>
     </header>
     <transition name="fade" appear>
       <main class="container mx-auto px-4 md:px-12">
@@ -219,7 +229,14 @@ query {
   metadata {
     siteName
   }
-
+  latestArticle: allArticle(sortBy: "date", limit:1, order: DESC) {
+    edges {
+      node {
+        title
+        path
+      }
+    }
+  }
 }
 </static-query>
 
@@ -246,7 +263,7 @@ export default {
     $route: {
       handler: function(current) {
         const route = this.menu.filter(route =>
-          current.path.includes(route.to)
+          current.path.includes(route.to || route.root)
         );
         if (route[0]) {
           if (route && Array.isArray(route[0].submenu)) {
@@ -287,10 +304,7 @@ export default {
         { title: "Events", to: "/events" },
         { title: "Exhibitions", to: "/exhibitions" },
         { title: "Rentals", to: "/space-rentals" },
-        {
-          title: "About",
-          to: "/about"
-        },
+        { title: "About", to: "/about" },
         { title: "Location", to: "/location" }
       ]
     };
