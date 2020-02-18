@@ -64,7 +64,15 @@ query Article($id: ID!)  {
   }
 }
 </page-query>
-<style lang="postcss"></style>
+<style lang="postcss">
+ul {
+  @media (min-width: 768px) {
+    li {
+      @apply pr-32;
+    }
+  }
+}
+</style>
 <script>
 import Layout from "~/layouts/Default.vue";
 

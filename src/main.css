@@ -278,7 +278,7 @@ main {
   ul {
 
     li {
-      @apply mb-4 pr-32 leading-normal;
+      @apply mb-4 leading-normal;
 
       margin-left: 2rem
     }
