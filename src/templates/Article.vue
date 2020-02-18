@@ -12,9 +12,11 @@
 
       <div v-else class="bg-black pb-1/3" />
       <div class="mx-auto md:-mt-32 pt-0 md:w-2/3 md:bg-white relative md:p-6">
-        <h1 class="text-2xl md:text-4xl text-center mb-6">
-          {{ $page.article.title }}
-        </h1>
+        <h1
+          class="text-2xl md:text-4xl text-center mb-6"
+          v-html="marked($page.article.title)"
+        />
+
         <div class="text-center date mb-12">
           {{ $page.article.date | luxon:format('MMMM d, kkkk') }}
         </div>
