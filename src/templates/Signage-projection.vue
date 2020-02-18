@@ -2,28 +2,22 @@
   <Fullscreen class="bg-black h-full">
     <ClientOnly>
       <div>
-        <TinySlider
-          v-bind="tinySliderOptions"
-          class="flex flex-col h-full h-screen"
-        >
+        <TinySlider v-bind="tinySliderOptions" class="flex flex-col h-full">
           <div
             class="relative flex flex-col justify-evenly slide min-h-full"
-            v-for="(faq, index) in $page.faqs.edges"
-            :key="`faq-${index}`"
-            :id="faq.node.slug"
+            v-for="(event, index) in $page.faqs.edges"
+            :key="`event-${index}`"
           >
             <img
-              :src="
-                `${faq.node.image.url}?fit=crop&crop=faces,entropy,top&ar=16:9`
-              "
-              v-if="faq.node.image.url"
+              v-if="event.node.image"
               class="absolute h-full w-full object-cover"
-              alt=""
+              :src="
+                `${event.node.image.url}?fit=crop&crop=faces,entropy,top&ar=16:9`
+              "
             />
-
             <div class="absolute z-20 bottom-0">
               <h3 class="text-6xl mt-0 bg-black text-white p-3">
-                {{ faq.node.question }}
+                {{ event.node.question }}
               </h3>
             </div>
           </div>
@@ -49,6 +43,10 @@ query Faqs {
 }
 </page-query>
 <style lang="postcss">
+body {
+  height: 100%;
+  min-height: 100%;
+}
 h3 {
   line-height: 1;
 
@@ -59,7 +57,7 @@ h3 {
   }
 }
 .slide {
-  height: 640px;
+  height: 100vh;
 }
 .tns-liveregion {
   @apply absolute z-0;
@@ -67,27 +65,24 @@ h3 {
 }
 </style>
 <script>
-import EventListingMini from "../components/EventListingMini";
 import Fullscreen from "~/layouts/Fullscreen";
 
 export default {
   components: {
-    EventListingMini,
     Fullscreen,
     TinySlider: () => import("vue-tiny-slider")
   },
-  name: "Events",
+  name: "Projection",
   data() {
     return {
       tinySliderOptions: {
-        loop: true,
-        slideBy: 1,
+        nav: false,
         speed: 1000,
+        mode: "carousel",
+        axis: "vertical",
+
         autoplay: true,
         controls: false,
-        mode: "gallery",
-        animateDelay: 10000,
-        nav: false,
         autoplayButtonOutput: false,
         autoplayTimeout: 5000
       }
