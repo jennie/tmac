@@ -24,7 +24,7 @@ export default {
     },
     bodyAttrs: {
       class:
-        "font-sans text-copy-primary font-body tracking-tight text-xl flex flex-col min-h-screen"
+        "font-sans text-copy-primary font-body tracking-tight text-xl flex flex-col min-h-screen  overflow-hidden"
     },
     titleTemplate: "Toronto Media Arts Centre – %s"
   }
