@@ -1,10 +1,10 @@
 <template>
-  <Fullscreen class="bg-black h-full">
+  <Fullscreen class="bg-black overflow-hidden">
     <ClientOnly>
       <div>
-        <TinySlider v-bind="tinySliderOptions" class="flex flex-col h-full">
+        <TinySlider v-bind="tinySliderOptions" class="">
           <div
-            class="relative flex flex-col justify-evenly slide min-h-full"
+            class="relative flex flex-col justify-evenly slide "
             v-for="(event, index) in $page.faqs.edges"
             :key="`event-${index}`"
           >
@@ -80,6 +80,7 @@ export default {
         speed: 1000,
         mode: "carousel",
         axis: "vertical",
+        slideBy: 1,
 
         autoplay: true,
         controls: false,
