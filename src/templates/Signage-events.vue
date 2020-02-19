@@ -4,7 +4,7 @@
       <div>
         <TinySlider v-bind="tinySliderOptions" class="flex flex-col h-full">
           <div
-            class="relative flex flex-col justify-evenly slide min-h-full"
+            class="relative flex flex-col justify-evenly slide three-up min-h-full"
             v-for="(event, index) in $page.events.edges"
             :key="`event-${index}`"
           >
@@ -60,7 +60,7 @@ h3 {
     font-style: normal;
   }
 }
-.slide {
+.slide.three-up {
   height: 640px;
 }
 .tns-liveregion {

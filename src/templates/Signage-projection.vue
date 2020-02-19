@@ -4,7 +4,7 @@
       <div>
         <TinySlider v-bind="tinySliderOptions" class="">
           <div
-            class="relative flex flex-col justify-evenly slide "
+            class="relative flex flex-col justify-evenly slide one-up"
             v-for="(event, index) in $page.faqs.edges"
             :key="`event-${index}`"
           >
@@ -16,7 +16,7 @@
               "
             />
             <div class="absolute z-20 bottom-0">
-              <h3 class="text-6xl mt-0 bg-black text-white p-3">
+              <h3 class="mt-0 bg-black text-white p-3">
                 {{ event.node.question }}
               </h3>
             </div>
@@ -47,16 +47,16 @@ body {
   height: 100%;
   min-height: 100%;
 }
-h3 {
+main h3 {
   line-height: 1;
-
+  font-size: 12rem;
   strong {
     font-family: HelveticaNowText-ExtraBold;
     font-weight: normal;
     font-style: normal;
   }
 }
-.slide {
+.one-up.slide {
   height: 100vh;
 }
 .tns-liveregion {
@@ -78,8 +78,7 @@ export default {
       tinySliderOptions: {
         nav: false,
         speed: 1000,
-        mode: "carousel",
-        axis: "vertical",
+        mode: "gallery",
         slideBy: 1,
 
         autoplay: true,
