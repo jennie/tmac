@@ -1,5 +1,5 @@
 <template>
-  <Layout id="limited-benefit" name="LimitedBenefit">
+  <Fullscreen id="limited-benefit" name="LimitedBenefit">
     <img
       class=" h-full w-full mx-auto max-w-5xl object cover"
       src="https://www.datocms-assets.com/5128/1581520322-sally-han.jpg"
@@ -156,7 +156,7 @@
         </div>
       </div>
     </div>
-  </Layout>
+  </Fullscreen>
 </template>
 
 <style lang="postcss">
