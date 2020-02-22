@@ -42,7 +42,7 @@ query Faqs {
   }
 }
 </page-query>
-<style lang="postcss">
+<style lang="postcss" scoped>
 body {
   height: 100%;
   min-height: 100%;
