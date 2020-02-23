@@ -13,8 +13,8 @@
         </h1>
         <div class="mb-8 text-center text-gray-800">
           <p>
-            We are not currently accepting new booking requests as we are
-            preparing for court on February 19. For more information,
+            We are not currently accepting new booking requests. For more
+            information,
             <g-link to="/tmaction"> check out our #TMACtion page </g-link>.
           </p>
         </div>
