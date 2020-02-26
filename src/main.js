@@ -3,6 +3,7 @@ require("~/main.css");
 
 import DefaultLayout from "~/layouts/Default.vue";
 import VueLuxon from "vue-luxon";
+import VueFuse from "vue-fuse";
 
 export default function(Vue, { router, head, isClient }) {
   if (isClient) {
@@ -23,4 +24,5 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(VueLuxon, {
     clientZone: "America/Toronto"
   });
+  Vue.use(VueFuse);
 }

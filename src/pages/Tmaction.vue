@@ -101,7 +101,7 @@ export default {
   components: {
     TimelineItem
   },
-  name: "#TMACtion",
+  name: "TMACtion",
   metaInfo: {
     title: "#TMACtion",
     meta: [

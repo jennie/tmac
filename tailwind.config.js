@@ -6,6 +6,7 @@ module.exports = {
       lg: "1024px",
       xl: "1280px"
     },
+
     fontFamily: {
       display: ["Agrandir Grand", "sans-serif"],
       body: ["HelveticaNowText-Regular", "sans-serif"]
@@ -20,7 +21,10 @@ module.exports = {
       colors: {
         blue: "#0B0BEC"
       },
+
       spacing: {
+        "80": "20rem",
+        "108": "27rem",
         "1/2": "50%",
         "1/3": "33.333333%",
         "2/3": "66.666667%",

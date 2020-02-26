@@ -1,7 +1,9 @@
 <template>
   <Layout>
     <h2 class>News</h2>
-
+    <div class="text-center mx-auto px-12 w-80">
+      <SearchInput />
+    </div>
     <div class="-px-12 py-16 flex flex-wrap">
       <ArticleListing
         v-for="(a, index) in $page.articles.edges"
@@ -36,11 +38,13 @@ query Articles {
 </page-query>
 
 <script>
-import ArticleListing from "../components/ArticleListing";
+import ArticleListing from "~/components/ArticleListing";
+import SearchInput from "~/components/SearchInput";
 
 export default {
   components: {
-    ArticleListing
+    ArticleListing,
+    SearchInput
   },
   name: "News",
   metaInfo: {

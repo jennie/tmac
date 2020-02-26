@@ -329,10 +329,11 @@ module.exports = function(api, options) {
   });
 
   api.beforeBuild(({ config, store }) => {
-    const { collection } = store.getCollection("Event");
+    // Generate an index file for Fuse to search Posts
+    const { collection } = store.getCollection("Article");
 
-    const eventsList = collection.data.map(event => {
-      return pick(event, ["title", "path"]);
+    const posts = collection.data.map(post => {
+      return pick(post, ["title", "path", "summary", "body"]);
     });
 
     const output = {
@@ -350,13 +351,13 @@ module.exports = function(api, options) {
     if (outputPathExists) {
       fs.writeFileSync(
         path.resolve(process.cwd(), output.dir, fileName),
-        JSON.stringify(eventsList)
+        JSON.stringify(posts)
       );
     } else {
       fs.mkdirSync(outputPath);
       fs.writeFileSync(
         path.resolve(process.cwd(), output.dir, fileName),
-        JSON.stringify(eventsList)
+        JSON.stringify(posts)
       );
     }
   });
