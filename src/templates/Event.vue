@@ -73,10 +73,24 @@
               </p>
             </div>
           </div>
+          <div v-if="$page.event.belongsTo.edges[0]">
+            <h4 class="mt-8">This event is part of:</h4>
+            <p
+              v-for="exhibition in $page.event.belongsTo.edges"
+              :key="exhibition.id"
+            >
+              <g-link :to="exhibition.node.path">
+                {{ exhibition.node.title }}
+              </g-link>
+            </p>
+          </div>
 
           <div v-if="$page.event.registrationLink">
             <p class="flex mt-12">
-              <a :href="$page.event.registrationLink" class="">
+              <a
+                :href="$page.event.registrationLink"
+                class="btn btn-outline-red no-underline text-red-500 "
+              >
                 <div v-if="$page.event.actionButtonText">
                   {{ $page.event.actionButtonText }}
                 </div>
@@ -89,17 +103,19 @@
         </div>
         <div id="body" class="w-full md:w-2/3  order-1 md:order-2">
           <div class="mb-8" v-html="marked($page.event.description)" />
+          <div class="mb-8">
+            &larr;
+            <g-link to="/events" class="underline">Back to all events</g-link>
+          </div>
         </div>
       </div>
-      <div class="mb-8">
-        <g-link to="/events" class="uppercase">&larr; Back to Events</g-link>
-      </div>
     </div>
+
     <script v-html="jsonld.jsonld" type="application/ld+json" />
   </Layout>
-    </template>
+</template>
 
-    <page-query>
+<page-query>
 
     query Event($id: ID!)  {
       event(id: $id) {
@@ -130,96 +146,103 @@
         slug
         summary
         title
-
-      }
-    }
-    </page-query>
-    <style lang="postcss"></style>
-    <script>
-    import Layout from "~/layouts/Default.vue";
-    import Interval from "luxon/src/interval.js";
-    import DateTime from "luxon/src/datetime.js";
-    export default {
-      components: {
-        Layout
-      },
-
-
-      computed: {
-        duration() {
-          var i = Interval.fromDateTimes(
-            DateTime.fromISO(this.$page.event.startDateTime),
-            DateTime.fromISO(this.$page.event.endDateTime)
-          );
-          return i.length("hours");
-        },
-        jsonld() {
-          const jsonld = {
-            "@context": "http://www.schema.org",
-            "@type": "Event",
-            "name": this.$page.event.title,
-            "url": `https://tomediaarts.org/event/${this.$page.event.slug}`,
-            "description": this.$page.event.description,
-            "startDate": this.$page.event.startDateTime,
-            "endDate": this.$page.event.endDateTime,
-            "image": this.$page.event.featureImage.url,
-            "location": {
-              "@type": "Place",
-              "name": "Toronto Media Arts Centre",
-              "sameAs": "https://tomediaarts.org",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "32 Lisgar Street",
-                "addressLocality": "Toronto",
-                "addressRegion": "ON",
-                "postalCode": "M6J0C9",
-                "addressCountry": "Canada"
+        belongsTo {
+          edges {
+            node {
+              ... on Exhibition {
+                title
+                path
               }
             }
           }
-        return { jsonld }
         }
-      },
-      name: "Event",
-      metaInfo() {
-        return {
-          title: this.$page.event.title,
-          description: this.$page.event.summary,
-          bodyAttrs: {
-            id: "page--event"
-          },
-          meta: [
-            { name: "twitter:card", content: "summary_large_image" },
-            {
-              name: "twitter:image",
-              content: `${
-                this.$page.event.featureImage
-                  ? this.$page.event.featureImage.url
-                  : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
-              }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
-            },
-            { name: "twitter:site", content: "@tomediaarts" },
-            { name: "twitter:title", content: this.$page.event.title },
-            {
-              name: "twitter:description",
-              content: `${this.$page.event.summary}`
-            },
-            { name: "og:title", content: this.$page.event.title },
-            {
-              name: "og:description",
-              content: this.$page.event.summary
-            },
-            {
-              name: "og:image",
-              content: `${
-                this.$page.event.featureImage
-                  ? this.$page.event.featureImage.url
-                  : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
-              }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
-            }
-          ]
-        };
       }
+    }
+    </page-query>
+<style lang="postcss"></style>
+<script>
+import Layout from "~/layouts/Default.vue";
+import Interval from "luxon/src/interval.js";
+import DateTime from "luxon/src/datetime.js";
+export default {
+  components: {
+    Layout
+  },
+
+  computed: {
+    duration() {
+      var i = Interval.fromDateTimes(
+        DateTime.fromISO(this.$page.event.startDateTime),
+        DateTime.fromISO(this.$page.event.endDateTime)
+      );
+      return i.length("hours");
+    },
+    jsonld() {
+      const jsonld = {
+        "@context": "http://www.schema.org",
+        "@type": "Event",
+        name: this.$page.event.title,
+        url: `https://tomediaarts.org/event/${this.$page.event.slug}`,
+        description: this.$page.event.description,
+        startDate: this.$page.event.startDateTime,
+        endDate: this.$page.event.endDateTime,
+        image: this.$page.event.featureImage.url,
+        location: {
+          "@type": "Place",
+          name: "Toronto Media Arts Centre",
+          sameAs: "https://tomediaarts.org",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "32 Lisgar Street",
+            addressLocality: "Toronto",
+            addressRegion: "ON",
+            postalCode: "M6J0C9",
+            addressCountry: "Canada"
+          }
+        }
+      };
+      return { jsonld };
+    }
+  },
+  name: "Event",
+  metaInfo() {
+    return {
+      title: this.$page.event.title,
+      description: this.$page.event.summary,
+      bodyAttrs: {
+        id: "page--event"
+      },
+      meta: [
+        { name: "twitter:card", content: "summary_large_image" },
+        {
+          name: "twitter:image",
+          content: `${
+            this.$page.event.featureImage
+              ? this.$page.event.featureImage.url
+              : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
+          }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
+        },
+        { name: "twitter:site", content: "@tomediaarts" },
+        { name: "twitter:title", content: this.$page.event.title },
+        {
+          name: "twitter:description",
+          content: `${this.$page.event.summary}`
+        },
+        { name: "og:title", content: this.$page.event.title },
+        {
+          name: "og:description",
+          content: this.$page.event.summary
+        },
+        {
+          name: "og:image",
+          content: `${
+            this.$page.event.featureImage
+              ? this.$page.event.featureImage.url
+              : "https://www.datocms-assets.com/5128/1562264739-videoblocks-laser-scan-lines-looping-background-animationhoy-vxoxthumbnail-full06.png"
+          }?auto=compress,format&fit=crop&ar=1.91:1&crop=faces,entropy`
+        }
+      ]
     };
-  </script>
-</template>
+  }
+};
+</script>
