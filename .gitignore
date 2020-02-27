@@ -21,3 +21,4 @@ src/.temp/routes.js
 
 # Local Netlify folder
 .netlify
+src/.temp/config.js
