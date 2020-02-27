@@ -104,6 +104,7 @@ export default {
         console.log(error);
       });
   },
+  computed() {},
   data() {
     return {
       query: "",
@@ -114,12 +115,12 @@ export default {
       options: {
         shouldSort: true,
         includeMatches: true,
-        threshold: 0.8,
-        location: 0,
-        distance: 500,
+        location: 2000,
+        threshold: 0.6,
         maxPatternLength: 32,
-        minMatchCharLength: 1,
-        keys: ["title", "summary", "body"]
+        minMatchCharLength: 3,
+
+        keys: ["title", "body", "summary"]
       }
     };
   },
@@ -163,6 +164,15 @@ export default {
       if (e.key === "/") {
         this.$refs.search.focus();
       }
+    },
+    highlightText(sourceString, startIndex, endIndex) {
+      return (
+        sourceString.substring(0, startIndex) +
+        '<span class="highlight">' +
+        sourceString.substring(startIndex, endIndex + 1) +
+        "</span>" +
+        (endIndex ? sourceString.substring(endIndex + 1) : "")
+      );
     }
   }
 };
