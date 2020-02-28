@@ -11,6 +11,7 @@ query {
   metadata {
     siteName
   }
+  
 
 }
 </static-query>
@@ -24,7 +25,7 @@ export default {
     },
     bodyAttrs: {
       class:
-        "font-sans text-copy-primary font-body tracking-tight text-xl flex flex-col min-h-screen"
+        "`{$page.bodyClass ? $page.bodyClass : ''} font-sans text-copy-primary font-body tracking-tight text-xl flex flex-col min-h-screen`"
     },
     titleTemplate: "Toronto Media Arts Centre – %s"
   }

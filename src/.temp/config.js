@@ -3,5 +3,6 @@ export default {
   "pathPrefix": "",
   "titleTemplate": "%s - Toronto Media Arts Centre",
   "siteUrl": "https://tomediaarts.netlify.com",
-  "version": "0.7.12"
+  "version": "0.7.13",
+  "catchLinks": true
 }

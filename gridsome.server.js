@@ -36,19 +36,32 @@ module.exports = function(api, options) {
       path: "/signage-events",
       component: "./src/templates/Signage-events.vue",
       context: {
-        today: today
+        today: today,
+        bodyClass: "signage-events"
       }
     });
     createPage({
       path: "/signage-projection",
       component: "./src/templates/Signage-projection.vue",
       context: {
-        today: today
+        today: today,
+        bodyClass: "signage-projection"
+      }
+    });
+    createPage({
+      path: "/signage-logo",
+      component: "./src/templates/Signage-logo.vue",
+      context: {
+        today: today,
+        bodyClass: "signage-logo"
       }
     });
     createPage({
       path: "/tmaction/limited-benefit",
-      component: "./src/templates/Limited-benefit.vue"
+      component: "./src/templates/Limited-benefit.vue",
+      context: {
+        bodyClass: "limited-benefit"
+      }
     });
 
     createPage({
