@@ -7,7 +7,6 @@ var DateTime = luxon.DateTime;
 let d = DateTime.local();
 let today = d.toISODate();
 let thisWeek = d.plus({ days: 7 }).toISODate();
-console.log(thisWeek);
 module.exports = function(api, options) {
   api.createPages(({ createPage }) => {
     createPage({
@@ -76,6 +75,9 @@ module.exports = function(api, options) {
     });
     const presslinks = store.addCollection({
       typeName: "Press"
+    });
+    const rentalPackages = store.addCollection({
+      typeName: "RentalPackage"
     });
     const exhibitions = store.addCollection({
       typeName: "Exhibition"
@@ -266,6 +268,27 @@ module.exports = function(api, options) {
               ticketPrice
               title
             }
+            allRentalPackages {
+              name
+              description
+              rate
+              spaceOptions {
+                price
+                note
+                room {
+                  size
+                  name
+                  photo {
+                    url
+                  }
+                }
+              }
+              schedule {
+                dayOfWeek
+                name
+                time
+              }
+            }
           }
         `
       }
@@ -304,6 +327,11 @@ module.exports = function(api, options) {
       }
       for (const item of result.data.data.allTimelineItems) {
         timelineItems.addNode({
+          ...item
+        });
+      }
+      for (const item of result.data.data.allRentalPackages) {
+        rentalPackages.addNode({
           ...item
         });
       }

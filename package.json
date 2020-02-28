@@ -21,6 +21,7 @@
     "postcss-custom-properties": "^9.0.2",
     "postcss-import": "^12.0.1",
     "tailwindcss": "^1.2.0",
+    "vue-currency-filter": "^4.0.3",
     "vue-luxon": "^0.7.0",
     "vue-tiny-slider": "^0.1.39"
   },
