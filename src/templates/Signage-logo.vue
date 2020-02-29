@@ -1,47 +1,60 @@
 <template>
-  <Fullscreen class="bg-black overflow-hidden h-full w-full h-screen">
-    <div
-      class="bg-black overflow-hidden h-full w-full flex items-center justify-center self-center"
-    >
-      <g-image
-        src="~/assets/images/logos/MOSHED-2020-2-27-19-26-15.gif"
-        alt=""
-        class="h-full w-full flex items-center justify-center self-center"
-      />
-    </div>
+  <Fullscreen class="bg-black overflow-hidden">
+    <ClientOnly>
+      <div>
+        <TinySlider v-bind="tinySliderOptions">
+          <g-image src="/logo-2.gif" alt="" class="" />
+          <g-image src="/logo-1.gif" alt="" class="" />
+        </TinySlider>
+      </div>
+    </ClientOnly>
   </Fullscreen>
 </template>
 
-<style lang="postcss" scoped>
-body.signage-projection {
-  height: 100%;
-  min-height: 100%;
-  main h3 {
-    line-height: 1;
-    font-size: 9rem;
-    strong {
-      font-family: HelveticaNowText-ExtraBold;
-      font-weight: normal;
-      font-style: normal;
-    }
-  }
-  .one-up.slide {
-    height: 100vh;
-  }
-  .tns-liveregion {
-    @apply absolute z-0;
-    display: none !important;
-  }
-}
-</style>
 <script>
 import Fullscreen from "~/layouts/Fullscreen";
 
 export default {
+  components: {
+    TinySlider: () => import("vue-tiny-slider"),
+    Fullscreen
+  },
+  data() {
+    return {
+      tinySliderOptions: {
+        nav: false,
+        speed: 1000,
+        items: 1,
+
+        mode: "gallery",
+        animateDelay: 5000,
+        autoplay: true,
+        controls: false,
+        autoplayButtonOutput: false
+        // loop: true,
+        // items: 1,
+        // slideBy: 1,
+        // speed: 1000,
+        // autoplay: true,
+        // controls: false,
+        // animateDelay: 1000,
+        // nav: false,
+        // autoplayButtonOutput: false,
+        // autoplayTimeout: 5000
+      }
+    };
+  },
+
   metaInfo: {
-    bodyAttrs: {
-      class: "custom-body-class"
-    }
+    title: "Signage Logo",
+
+    link: [
+      {
+        rel: "stylesheet",
+        href:
+          "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css"
+      }
+    ]
   },
 
   name: "Logo"
