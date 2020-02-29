@@ -23,11 +23,11 @@ export default {
     return {
       tinySliderOptions: {
         nav: false,
-        speed: 1000,
+        speed: 5000,
         items: 1,
 
         mode: "gallery",
-        animateDelay: 5000,
+        animateDelay: 10000,
         autoplay: true,
         controls: false,
         autoplayButtonOutput: false
