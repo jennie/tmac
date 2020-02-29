@@ -27,7 +27,8 @@ export default {
         items: 1,
 
         mode: "gallery",
-        animateDelay: 10000,
+        animateDelay: 30000,
+        autoplayTimeout: 30000,
         autoplay: true,
         controls: false,
         autoplayButtonOutput: false
