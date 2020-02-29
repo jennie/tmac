@@ -23,9 +23,10 @@ export default {
       lang: "en",
       class: "text-gray-900 antialiased"
     },
+
     bodyAttrs: {
       class:
-        "`{$page.bodyClass ? $page.bodyClass : ''} font-sans text-copy-primary font-body tracking-tight text-xl flex flex-col min-h-screen`"
+        "`font-sans text-copy-primary font-body tracking-tight text-xl flex flex-col min-h-screen`"
     },
     titleTemplate: "Toronto Media Arts Centre – %s"
   }
