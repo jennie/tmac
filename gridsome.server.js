@@ -284,6 +284,7 @@ module.exports = function(api, options) {
             allRentalPackages {
               name
               description
+              position
               rate
               spaceOptions {
                 price
@@ -297,7 +298,7 @@ module.exports = function(api, options) {
                 }
               }
               schedule {
-                dayOfWeek
+                dayLabel
                 name
                 time
               }

@@ -26,16 +26,23 @@
         :index="index"
       >
         <div
-          class="package my-6 border-b-4 border-red-600 py-6 bg-gray-100 rounded p-12 my-6 "
+          class="package my-6 border-b-4 py-6 bg-gray-100 rounded p-12 my-6 "
         >
           <h2>
             {{ rentalPackage.node.name }}
           </h2>
           <div class="flex flex-wrap justify-between ">
             <div class="w-full md:w-1/2">
-              <p>{{ rentalPackage.node.rate | currency }}</p>
+              <div v-html="marked(rentalPackage.node.description)" />
 
-              <h3 class="mb-4">Additional Space Options</h3>
+              <h3 class="mb-4">Package Rate</h3>
+              <p
+                class="rate text-center font-bold text-green-600 bg-white inline-block rounded text-3xl p-3"
+              >
+                {{ rentalPackage.node.rate | currency }}
+              </p>
+
+              <h3 class="mb-4">Room Fees</h3>
 
               <table class="table-auto">
                 <thead class="hidden">
@@ -64,9 +71,7 @@
                 </tbody>
               </table>
             </div>
-            <div class="w-full md:w-1/2">
-              <div v-html="marked(rentalPackage.node.description)" />
-
+            <div class="w-full md:w-1/2 md:pl-4">
               <h3 class="mb-4">Schedule</h3>
               <div
                 v-for="(schedule, index) in rentalPackage.node.schedule"
@@ -92,7 +97,7 @@
 
 <page-query>
 query Packages {
-  packages: allRentalPackage {
+  packages: allRentalPackage(sortBy: "position", order:ASC) {
     edges {
       node {
         name
