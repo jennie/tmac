@@ -352,7 +352,7 @@ module.exports = function(api, options) {
   api.beforeBuild(({ config, store }) => {
     const output = {
       dir: "./static",
-      name: "calendar.ics",
+      name: "ical.ics",
       ...options.output
     };
 
