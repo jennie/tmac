@@ -115,7 +115,7 @@ query Packages {
           }
         }
         schedule {
-          dayOfWeek
+          dayLabel
           name
           time
         }
