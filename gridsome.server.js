@@ -3,11 +3,12 @@ const path = require("path");
 const pick = require("lodash.pick");
 const axios = require("axios");
 const luxon = require("luxon");
+const ics = require("ics");
+
 var DateTime = luxon.DateTime;
 let d = DateTime.local();
 let today = d.toISODate();
 let thisWeek = d.plus({ days: 7 }).toISODate();
-console.log(thisWeek);
 module.exports = function(api, options) {
   api.createPages(({ createPage }) => {
     createPage({
@@ -349,34 +350,131 @@ module.exports = function(api, options) {
   });
 
   api.beforeBuild(({ config, store }) => {
-    const { collection } = store.getCollection("Event");
-
-    const eventsList = collection.data.map(event => {
-      return pick(event, ["title", "path"]);
-    });
-
     const output = {
       dir: "./static",
-      name: "search.json",
+      name: "calendar.ics",
       ...options.output
     };
 
     const outputPath = path.resolve(process.cwd(), output.dir);
     const outputPathExists = fs.existsSync(outputPath);
-    const fileName = output.name.endsWith(".json")
+
+    var { collection } = store.getCollection("Event");
+    const events = [];
+
+    const eventsList = collection.data.map(event => {
+      return pick(event, [
+        "title",
+        "path",
+        "summary",
+        "startDateTime",
+        "endDateTime",
+        "eventType",
+        "location",
+        "id"
+      ]);
+    });
+
+    var { collection } = store.getCollection("Exhibition");
+    const exhibitions = [];
+
+    const exhibitionsList = collection.data.map(exhibition => {
+      return pick(exhibition, [
+        "title",
+        "path",
+        "summary",
+        "startDate",
+        "endDate",
+        "location",
+        "primaryPresenter",
+        "presenter",
+        "member",
+        "id"
+      ]);
+    });
+    for (const item of exhibitionsList) {
+      const startTime = DateTime.fromISO(item.startDate).toObject();
+      const endTime = DateTime.fromISO(item.endDate)
+        .plus({ days: 1 })
+        .toObject();
+      const presenters = [];
+      if (item.member[0]) {
+        presenters.push(item.member[0].name);
+      }
+      if (item.primaryPresenter) {
+        presenters.push(item.primaryPresenter);
+      }
+      if (item.presenter) {
+        presenters.push(item.presenter);
+      }
+
+      const exhibition = {
+        start: [startTime.year, startTime.month, startTime.day],
+        end: [endTime.year, endTime.month, endTime.day],
+        uid: `tmac_exhibition_${item.id}`,
+        productId: "TMAC Bot - Jennie",
+
+        title: item.title,
+        description: `Presented by ${presenters.join(", ")}`,
+        location: `Toronto Media Arts Centre, ${item.location
+          .map(a => a.name)
+          .join(", ")}`,
+        url: "https://www.tomediaarts.org" + item.path
+      };
+      exhibitions.push(exhibition);
+    }
+    for (const item of eventsList) {
+      const startTime = DateTime.fromISO(item.startDateTime).toObject();
+      const endTime = DateTime.fromISO(item.endDateTime).toObject();
+
+      const event = {
+        start: [
+          startTime.year,
+          startTime.month,
+          startTime.day,
+          startTime.hour,
+          startTime.minute
+        ],
+        end: [
+          endTime.year,
+          endTime.month,
+          endTime.day,
+          endTime.hour,
+          endTime.minute
+        ],
+        uid: `tmac_event_${item.id}`,
+        productId: "TMAC Bot - Jennie",
+
+        title: item.title,
+        description: item.summary,
+        location: `Toronto Media Arts Centre, ${item.location
+          .map(a => a.name)
+          .join(", ")}`,
+        url: "https://www.tomediaarts.org" + item.path
+      };
+      events.push(event);
+    }
+    const allCalendarItems = events.concat(exhibitions);
+    const { error, value } = ics.createEvents(allCalendarItems);
+
+    if (error) {
+      console.log(error);
+      return;
+    }
+    const icsFileName = output.name.endsWith(".ics")
       ? output.name
-      : `${output.name}.json`;
+      : `${output.name}.ics`;
 
     if (outputPathExists) {
       fs.writeFileSync(
-        path.resolve(process.cwd(), output.dir, fileName),
-        JSON.stringify(eventsList)
+        path.resolve(process.cwd(), output.dir, icsFileName),
+        value
       );
     } else {
       fs.mkdirSync(outputPath);
       fs.writeFileSync(
-        path.resolve(process.cwd(), output.dir, fileName),
-        JSON.stringify(eventsList)
+        path.resolve(process.cwd(), output.dir, icsFileName),
+        value
       );
     }
   });
