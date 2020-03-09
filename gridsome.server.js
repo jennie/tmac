@@ -286,10 +286,13 @@ module.exports = function(api, options) {
               description
               position
               rate
+              singleDay
               spaceOptions {
                 price
                 note
+                
                 room {
+                  availabilityCalendar
                   size
                   name
                   photo {
@@ -298,7 +301,7 @@ module.exports = function(api, options) {
                 }
               }
               schedule {
-                dayLabel
+                label
                 name
                 time
               }

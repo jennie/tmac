@@ -30,26 +30,26 @@ import { dom } from "@fortawesome/fontawesome-svg-core";
 
 config.autoAddCss = false;
 library.add(
-  faCheck,
   faAccessibleIcon,
-  faFile,
-  faMapMarkerAlt,
-  faBuilding,
-  faTwitter,
   faBars,
+  faBuilding,
+  faCalendarDay,
+  faChalkboardTeacher,
+  faCheck,
+  faEnvelope,
+  faFacebook,
+  faFile,
+  faFilm,
   faInstagram,
   faLink,
-  faFacebook,
-  faSquare,
-  faFilm,
-  faMusic,
-  faUsers,
-  faChalkboardTeacher,
-  faTheaterMasks,
+  faMapMarkerAlt,
   faMobile,
-  faEnvelope,
-  faCalendarDay,
-  faQuestionCircle
+  faMusic,
+  faQuestionCircle,
+  faSquare,
+  faTheaterMasks,
+  faTwitter,
+  faUsers
 );
 dom.watch();
 

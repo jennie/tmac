@@ -44,7 +44,7 @@
 
               <h3 class="mb-4">Room Fees</h3>
 
-              <table class="table-auto">
+              <table class="table-auto w-auto w-full">
                 <thead class="hidden">
                   <tr>
                     <th class="px-4 py-2">Space</th>
@@ -59,10 +59,20 @@
                     :index="index"
                   >
                     <td class="border px-4 py-2">
-                      {{ spaceOption.room.name }}
-                      <span class="text-sm block" v-if="spaceOption.note">{{
-                        spaceOption.note
-                      }}</span>
+                      <div class="flex  justify-between">
+                        <p class="m-0 p-0">
+                          {{ spaceOption.room.name }}
+                          <span class="text-sm block" v-if="spaceOption.note">{{
+                            spaceOption.note
+                          }}</span>
+                        </p>
+                        <a
+                          class="justify-end align-middle"
+                          :href="spaceOption.room.availabilityCalendar"
+                          target="_blank"
+                          ><i class="fas fa-calendar-day"></i
+                        ></a>
+                      </div>
                     </td>
                     <td class="border px-4 py-2">
                       {{ spaceOption.price | currency }}
@@ -71,7 +81,7 @@
                 </tbody>
               </table>
             </div>
-            <div class="w-full md:w-1/2 md:pl-4">
+            <div class="w-full md:w-1/2 md:pl-12">
               <h3 class="mb-4">Schedule</h3>
               <div
                 v-for="(schedule, index) in rentalPackage.node.schedule"
@@ -79,14 +89,19 @@
                 :index="index"
                 class="mb-4"
               >
-                <span class="uppercase text-sm block" v-if="schedule.dayOfWeek">
-                  {{ schedule.dayOfWeek }}
+                <span
+                  class="label uppercase text-sm block text-green-600 tracking-normal"
+                  v-if="rentalPackage.node.singleDay !== true && schedule.label"
+                >
+                  {{ schedule.label }}
                 </span>
                 <span> {{ schedule.name }}: </span>
                 <span>
                   {{ schedule.time }}
                 </span>
               </div>
+
+              <h3>Images</h3>
             </div>
           </div>
         </div>
@@ -109,13 +124,15 @@ query Packages {
           room {
             size
             name
+            availabilityCalendar
             photo {
               url
             }
           }
         }
+        singleDay
         schedule {
-          dayLabel
+          label
           name
           time
         }
@@ -128,7 +145,8 @@ query Packages {
 main {
   .package {
     h2,
-    h3 {
+    h3,
+    .label {
       font-family: HelveticaNowText-Bold;
       font-weight: normal;
       font-style: normal;
@@ -147,7 +165,7 @@ main {
 </style>
 <script>
 export default {
-  name: "Space Rentals",
+  name: "SpaceRentals",
   metaInfo: {
     title: "Space Rentals",
     meta: [
