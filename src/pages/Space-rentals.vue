@@ -13,13 +13,39 @@
         </h1>
         <div class="mb-8 text-center text-gray-800">
           <p>
-            We offer our gallery, event and meeting spaces for rent to a variety
-            of groups.
+            TMAC is available to rent for a wide range of events—from gallery
+            openings and receptions to small meetups and hackathons, dining
+            events to panel discussions.
           </p>
         </div>
       </div>
     </div>
     <main>
+      <div
+        class="cols flex flex-wrap justify-between my-6 border-b-4 border-red-600 py-6"
+      >
+        <p class="px-6 md:w-1/2">
+          Located in the heart of the Queen West Triangle – a vibrant,
+          arts-friendly neighbourhood close to downtown Toronto – TMAC offers
+          event, meeting and exhibition spaces in a beautiful purpose-built
+          media arts facility overlooking Lisgar Park.
+        </p>
+        <div class="px-6 md:w-1/2">
+          <ul>
+            <li>
+              We welcome <b>co-production</b> and co-presentation inquiries.
+            </li>
+            <li>
+              We offer PWYC pricing for <b>community events</b> and ad hoc
+              groups.
+            </li>
+            <li>
+              We want to support <b>new artists</b> and their work. Please
+              inquire about in-kind space if that's you!
+            </li>
+          </ul>
+        </div>
+      </div>
       <div
         v-for="(rentalPackage, index) in $page.packages.edges"
         :key="`package-${index}`"
@@ -35,6 +61,26 @@
             <div class="w-full md:w-1/2">
               <div v-html="marked(rentalPackage.node.description)" />
 
+              <h3 class="mb-3 uppercase text-base">Schedule</h3>
+              <div
+                v-for="(schedule, index) in rentalPackage.node.schedule"
+                :key="`schedule-${index}`"
+                :index="index"
+                class="mb-2 text-base"
+              >
+                <span
+                  class="label uppercase text-sm block text-green-600 tracking-normal"
+                  v-if="rentalPackage.node.singleDay !== true && schedule.label"
+                >
+                  {{ schedule.label }}
+                </span>
+                <span> {{ schedule.name }}: </span>
+                <span>
+                  {{ schedule.time }}
+                </span>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 md:pl-12">
               <h3 class="mb-4">Package Rate</h3>
               <p
                 class="rate text-center font-bold text-green-600 bg-white inline-block rounded text-3xl p-3"
@@ -49,6 +95,7 @@
                   <tr>
                     <th class="px-4 py-2">Space</th>
                     <th class="px-4 py-2">Price</th>
+                    <th class="px-4 py-2">Availability</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -58,7 +105,7 @@
                     :key="`space-${index}`"
                     :index="index"
                   >
-                    <td class="border px-4 py-2">
+                    <td class="border px-4 py-2 w-2/3">
                       <div class="flex  justify-between">
                         <p class="m-0 p-0">
                           {{ spaceOption.room.name }}
@@ -66,42 +113,23 @@
                             spaceOption.note
                           }}</span>
                         </p>
-                        <a
-                          class="justify-end align-middle"
-                          :href="spaceOption.room.availabilityCalendar"
-                          target="_blank"
-                          ><i class="fas fa-calendar-day"></i
-                        ></a>
                       </div>
                     </td>
                     <td class="border px-4 py-2">
                       {{ spaceOption.price | currency }}
                     </td>
+                    <td class="border px-4 py-2 ">
+                      <a
+                        class="justify-center align-middle"
+                        v-if="spaceOption.room.availabilityCalendar"
+                        :href="spaceOption.room.availabilityCalendar"
+                        target="_blank"
+                        ><i class="fas fa-calendar-day"></i
+                      ></a>
+                    </td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div class="w-full md:w-1/2 md:pl-12">
-              <h3 class="mb-4">Schedule</h3>
-              <div
-                v-for="(schedule, index) in rentalPackage.node.schedule"
-                :key="`schedule-${index}`"
-                :index="index"
-                class="mb-4"
-              >
-                <span
-                  class="label uppercase text-sm block text-green-600 tracking-normal"
-                  v-if="rentalPackage.node.singleDay !== true && schedule.label"
-                >
-                  {{ schedule.label }}
-                </span>
-                <span> {{ schedule.name }}: </span>
-                <span>
-                  {{ schedule.time }}
-                </span>
-              </div>
-
-              <h3>Images</h3>
             </div>
           </div>
         </div>
