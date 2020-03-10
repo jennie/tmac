@@ -91,6 +91,9 @@ module.exports = function(api, options) {
     const presslinks = store.addCollection({
       typeName: "Press"
     });
+    const rentalPackages = store.addCollection({
+      typeName: "RentalPackage"
+    });
     const exhibitions = store.addCollection({
       typeName: "Exhibition"
     });
@@ -280,6 +283,31 @@ module.exports = function(api, options) {
               ticketPrice
               title
             }
+            allRentalPackages {
+              name
+              description
+              position
+              rate
+              singleDay
+              spaceOptions {
+                price
+                note
+                
+                room {
+                  availabilityCalendar
+                  size
+                  name
+                  photo {
+                    url
+                  }
+                }
+              }
+              schedule {
+                label
+                name
+                time
+              }
+            }
           }
         `
       }
@@ -318,6 +346,11 @@ module.exports = function(api, options) {
       }
       for (const item of result.data.data.allTimelineItems) {
         timelineItems.addNode({
+          ...item
+        });
+      }
+      for (const item of result.data.data.allRentalPackages) {
+        rentalPackages.addNode({
           ...item
         });
       }
