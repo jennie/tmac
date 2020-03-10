@@ -21,30 +21,50 @@
       </div>
     </div>
     <main>
-      <div
-        class="cols flex flex-wrap justify-between my-6 border-b-4 border-red-600 py-6"
-      >
-        <p class="px-6 md:w-1/2">
-          Located in the heart of the Queen West Triangle – a vibrant,
-          arts-friendly neighbourhood close to downtown Toronto – TMAC offers
-          event, meeting and exhibition spaces in a beautiful purpose-built
-          media arts facility overlooking Lisgar Park.
-        </p>
+      <div class="cols flex flex-wrap justify-between my-6 border-b-4 py-6">
         <div class="px-6 md:w-1/2">
+          <p class="lead text-3xl leading-tight">
+            Located in the heart of the Queen West Triangle – a vibrant,
+            arts-friendly neighbourhood close to downtown Toronto – TMAC offers
+            event, meeting and exhibition spaces in a purpose-built media arts
+            facility overlooking Lisgar Park.
+          </p>
+
+          <p>
+            <em>
+              The rates below apply to not-for-profit organizations
+              (incorporated or not), individual artists and collectives. We have
+              limited availability for corporate/private and ticketed event
+              rentals.
+              <a href="mailto:events@tomediaarts.org"
+                >Get in touch for rates.</a
+              >
+            </em>
+          </p>
+        </div>
+
+        <div class="px-6 md:w-1/2">
+          <h3>In-Kind Space</h3>
           <ul>
             <li>
-              We welcome <b>co-production</b> and co-presentation inquiries.
+              We welcome <b>co-production</b> and
+              <b>co-presentation</b> inquiries from media arts nonprofits and
+              festivals.
             </li>
             <li>
-              We offer PWYC pricing for <b>community events</b> and ad hoc
-              groups.
-            </li>
-            <li>
-              We want to support <b>new artists</b> and their work. Please
-              inquire about in-kind space if that's you!
+              We offer in-kind and PWYC pricing for <b>community events</b>, ad
+              hoc groups and new/emerging artists, especially those serving and
+              from marginalized communities.
             </li>
           </ul>
         </div>
+      </div>
+      <div class="flex justify-around justify-center">
+        <a
+          href="https://airtable.com/shrx5ut1Eq5aEffJk"
+          class="bg-teal-500 text-2xl hover:bg-teal-600 text-white py-2 px-8 rounded text-center no-underline"
+          >Submit Request</a
+        >
       </div>
       <div
         v-for="(rentalPackage, index) in $page.packages.edges"
@@ -69,7 +89,7 @@
                 class="mb-2 text-base"
               >
                 <span
-                  class="label uppercase text-sm block text-green-600 tracking-normal"
+                  class="label uppercase text-sm block text-teal-600 tracking-normal"
                   v-if="rentalPackage.node.singleDay !== true && schedule.label"
                 >
                   {{ schedule.label }}
@@ -83,7 +103,7 @@
             <div class="w-full md:w-1/2 md:pl-12">
               <h3 class="mb-4">Package Rate</h3>
               <p
-                class="rate text-center font-bold text-green-600 bg-white inline-block rounded text-3xl p-3"
+                class="rate text-center font-bold text-teal-600 bg-white inline-block rounded text-3xl p-3"
               >
                 {{ rentalPackage.node.rate | currency }}
               </p>
@@ -134,6 +154,13 @@
           </div>
         </div>
       </div>
+      <div class="flex justify-around justify-center">
+        <a
+          href="https://airtable.com/shrx5ut1Eq5aEffJk"
+          class="bg-teal-500 text-2xl hover:bg-teal-600 text-white py-2 px-8 rounded text-center no-underline"
+          >Submit Request</a
+        >
+      </div>
     </main>
   </Layout>
 </template>
@@ -171,6 +198,11 @@ query Packages {
 </page-query>
 <style lang="postcss">
 main {
+  .lead {
+    font-family: HelveticaNowText-Bold;
+    font-weight: normal;
+    font-style: normal;
+  }
   .package {
     h2,
     h3,
