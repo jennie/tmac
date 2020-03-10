@@ -4510,6 +4510,16 @@ iconv-lite@0.4.24:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
+ics@^2.19.0:
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/ics/-/ics-2.19.0.tgz#d32718ce03f4fae244ce51bfe5ca8848baf6300a"
+  integrity sha512-5zNEg0CXXpTD+lTguIwQP9FQSLhH4GPprqUuj0/Cql9hTBIdj7md/azNiPbefppjpkpJ9Dp7y0GgCgueD2wu3w==
+  dependencies:
+    "@hapi/joi" "^15.1.1"
+    lodash "^4.17.15"
+    moment "^2.24.0"
+    uuid "^3.3.3"
+
 icss-replace-symbols@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/icss-replace-symbols/-/icss-replace-symbols-1.1.0.tgz#06ea6f83679a7749e386cfe1fe812ae5db223ded"
@@ -8643,7 +8653,7 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@^3.0.1, uuid@^3.3.2:
+uuid@^3.0.1, uuid@^3.3.2, uuid@^3.3.3:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
