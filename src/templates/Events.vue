@@ -73,6 +73,7 @@ query Events ($page: Int, $today: Date) {
         title
         summary
         eventType
+        canceled
       }
     }
   }
@@ -86,6 +87,7 @@ query Events ($page: Int, $today: Date) {
         path
         title
         presenter
+        canceled
         member {
           shortName
         }

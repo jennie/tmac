@@ -1,5 +1,8 @@
 <template>
-  <Layout id="event">
+  <Layout
+    id="event"
+    :class="`${$page.event.canceled == true ? 'canceled' : 'not-canceled'}`"
+  >
     <div class="header">
       <img
         class="text-center mx-auto"
@@ -9,6 +12,12 @@
         "
       />
       <div class="mx-auto md:-mt-32 pt-0 md:w-2/3 md:bg-white relative md:p-6">
+        <div
+          v-if="$page.event.canceled == true"
+          class="label uppercase p-2 bg-red-100 text-center text-red-600 leading-tight tracking-wide"
+        >
+          This event has been canceled.
+        </div>
         <h1 class="text-2xl md:text-4xl text-center mb-6">
           {{ $page.event.title }}
         </h1>

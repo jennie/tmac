@@ -1,15 +1,31 @@
 <template>
-  <div class="event mb-12 w-full flex flex-wrap">
+  <div
+    :class="
+      `event regular mb-12 w-full flex flex-wrap ${
+        event.node.canceled == true ? 'canceled' : 'not-canceled'
+      }`
+    "
+  >
     <div class="w-full md:w-1/3">
       <img
         v-if="event.node.featureImage"
         class="md:pr-6"
         :src="
-          `${event.node.featureImage.url}?auto=compress,format&fit=crop&w=600&h=314&crop=faces,entropy`
+          `${
+            event.node.featureImage.url
+          }?auto=compress,format&fit=crop&w=600&h=314&crop=faces,entropy&sat=${
+            event.node.canceled == true ? -100 : 0
+          }&con=${event.node.canceled == true ? -85 : 0}`
         "
       />
     </div>
     <div class="w-full md:w-2/3">
+      <div
+        v-if="event.node.canceled == true"
+        class="label uppercase text-red-600 leading-tight tracking-wide"
+      >
+        Canceled
+      </div>
       <h3 class="text-2xl my-2 text-uppercase">
         <g-link :to="event.node.path" class="no-underline">
           {{ event.node.title }}

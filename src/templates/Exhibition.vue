@@ -117,6 +117,7 @@ query Exhibition($id: ID!)  {
       path
       startDateTime
       slug
+      canceled
       featureImage {
         url
       }      

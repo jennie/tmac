@@ -21,6 +21,7 @@
       </div>
     </div>
     <main>
+      fgdgfd
       <div class="cols flex flex-wrap justify-between my-6 border-b-4 py-6">
         <div class="px-6 md:w-1/2">
           <p class="lead text-3xl leading-tight">

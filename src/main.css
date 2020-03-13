@@ -271,8 +271,10 @@ main {
 .btn {
   @apply py-2 px-4 rounded cursor-pointer;
 }
+
 .btn-outline-red {
-  @apply px-4 py-2 bg-transparent text-red-500 py-2 px-4 border border-red-500  rounded;
+  @apply px-4 py-2 bg-transparent text-red-500 py-2 px-4 border border-red-500 rounded;
+
   &:hover {
     @apply text-white border-transparent bg-red-500
   }
@@ -389,6 +391,41 @@ li {
 .fade-enter {
   opacity: 0;
 }
+
+
+/* event listings */
+
+.canceled {
+  &.mini {
+
+    h3,
+    p {
+      @apply text-white bg-transparent
+    }
+  } 
+  
+  &.regular {
+
+    h3,
+    p {
+      color: #878787
+    }
+  }
+
+  .label {
+    font-family: HelveticaNowText-Bold;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+/* event page */
+#event.canceled {
+  .label {
+
+  }
+}
+
 
 /* purgecss end ignore */
 

@@ -93,6 +93,7 @@ query Events($today: Date, $thisWeek: Date) {
         title
         summary
         eventType
+        canceled
       }
     }
   }
@@ -113,6 +114,7 @@ query Events($today: Date, $thisWeek: Date) {
         path
         title
         summary
+        canceled
         eventType
       }
     }
@@ -134,6 +136,7 @@ query Events($today: Date, $thisWeek: Date) {
         presenter
         primaryPresenter
         programType
+        
         path
         slug
         startDate
