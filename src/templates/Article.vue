@@ -5,7 +5,7 @@
         <img
           class="text-center mx-auto"
           :src="
-            `${$page.article.featureImage.url}?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.91:1&fit=crop`
+            `${$page.article.featureImage.url}?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.91:1&max-h=1200`
           "
         />
       </div>
