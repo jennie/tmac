@@ -400,6 +400,7 @@ module.exports = function(api, options) {
         "title",
         "path",
         "summary",
+        "canceled",
         "startDateTime",
         "endDateTime",
         "eventType",
@@ -459,7 +460,7 @@ module.exports = function(api, options) {
     for (const item of eventsList) {
       const startTime = DateTime.fromISO(item.startDateTime).toObject();
       const endTime = DateTime.fromISO(item.endDateTime).toObject();
-
+      console.log(item.canceled);
       const event = {
         start: [
           startTime.year,
@@ -477,7 +478,7 @@ module.exports = function(api, options) {
         ],
         uid: `tmac_event_${item.id}`,
         productId: "TMAC Bot - Jennie",
-
+        status: `${item.canceled == true ? "CANCELLED" : "CONFIRMED"}`,
         title: item.title,
         description: item.summary,
         location: `Toronto Media Arts Centre, ${item.location
