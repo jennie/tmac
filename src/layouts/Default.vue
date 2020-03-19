@@ -3,10 +3,12 @@
     <p
       class="highlight leading-tight md:leading-normal text-base p-2 bg-red-600 text-white text-center md:text-xl"
     >
-      <g-link to="/tmaction" class="text-white underline">
-        Get the latest updates about our ongoing litigation against the City of
-        Toronto and Urbancorp.
-      </g-link>
+      <a
+        href="/news/novel-coronavirus-covid-19-and-tmac/"
+        class="text-white underline"
+      >
+        TMAC is closed until further notice to help slow the spread of COVID-19.
+      </a>
     </p>
 
     <header class="header container mx-auto my-6 md:my-24 px-4 md:px-12">
