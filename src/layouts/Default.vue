@@ -148,10 +148,9 @@
         <div class="buttons flex justify-end ">
           <div class="self-center hidden md:block">
             <a
-              class="btn"
-              href="https://calendly.com/tomediaarts/space-tour"
-              target="_blank"
-              >Book a Tour</a
+              href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
+              class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full no-underline"
+              >Donate</a
             >
           </div>
           <div class="md:hidden self-center ">
