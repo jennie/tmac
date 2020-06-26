@@ -72,9 +72,10 @@
       </div>
       <div class="md:w-1/4 md:px-2 md:mb-0">
         <h3>Hours</h3>
-        <p>10am–6pm Mon-Fri</p>
+        <p>Currently closed due to COVID-19.</p>
+        <!-- <p>10am–6pm Mon-Fri</p>
         <p>Open later + on weekends for events and exhibitions.</p>
-        <p>Closed on all stat holidays.</p>
+        <p>Closed on all stat holidays.</p> -->
         <div class="hidden vcard">
           <div class="org">Toronto Media Arts Centre</div>
           <a class="email" href="mailto:info@tomediaarts.org"
