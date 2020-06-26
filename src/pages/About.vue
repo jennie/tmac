@@ -190,10 +190,7 @@
               <strong>exhibition spaces</strong>
             </li>
             <li>
-              <small class="bg-yellow-200 rounded-full py-1 px-2"
-                >Coming soon</small
-              >
-              Café serving coffee, pastries and lunch daily
+              Santo Pecado Café @ TMAC serving coffee, pastries and lunch daily
             </li>
             <li>
               <small class="bg-yellow-200 rounded-full py-1 px-2"
