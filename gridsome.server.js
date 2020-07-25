@@ -460,7 +460,6 @@ module.exports = function(api, options) {
     for (const item of eventsList) {
       const startTime = DateTime.fromISO(item.startDateTime).toObject();
       const endTime = DateTime.fromISO(item.endDateTime).toObject();
-      console.log(item.canceled);
       const event = {
         start: [
           startTime.year,

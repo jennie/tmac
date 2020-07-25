@@ -1,4 +1,21 @@
 module.exports = {
+  purge: {
+    enabled: false,
+    content: ["./src/**/*.vue"],
+    options: {
+      whitelist: [
+        "body",
+        "html",
+        "img",
+        "a",
+        "g-image",
+        "g-image--lazy",
+        "g-image--loaded",
+        "antialiased"
+      ],
+      whitelistPatterns: [/^font-/]
+    }
+  },
   theme: {
     screens: {
       sm: "640px",
