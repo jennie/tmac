@@ -7,26 +7,26 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-brands-svg-icons": "^5.12.1",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^0.1.10",
     "axios": "^0.19.2",
     "fs": "0.0.1-security",
-    "gridsome": "^0.7.13",
-    "ics": "^2.19.0",
+    "gridsome": "^0.7.19",
+    "ics": "^2.22.1",
     "lodash.pick": "^4.4.0",
-    "luxon": "^1.22.0",
-    "marked": "^0.8.0",
+    "luxon": "^1.24.1",
+    "marked": "^0.8.2",
     "path": "^0.12.7",
     "postcss-custom-properties": "^9.1.1",
     "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.2.0",
+    "tailwindcss": "^1.5.2",
     "vue-currency-filter": "^4.0.3",
-    "vue-luxon": "^0.7.0",
+    "vue-luxon": "^0.7.3",
     "vue-tiny-slider": "^0.1.39"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.0"
+    "@fullhuman/postcss-purgecss": "^2.3.0"
   }
 }
