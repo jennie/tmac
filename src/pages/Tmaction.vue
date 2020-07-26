@@ -4,7 +4,7 @@
       <img
         class="text-center mx-auto"
         src="
-          https://www.datocms-assets.com/5128/1595708760-c7517614-1987-49f5-94dc-18ffa85e5eb1-9884be84-2a9e-4142-9371-cea815f2d895.jpg?auto=compress,format
+          https://www.datocms-assets.com/5128/1595708026-photo1-3.jpg?auto=compress,format
         "
       />
       <div class="mx-auto md:-mt-32 pt-0 md:w-2/3 md:bg-white relative md:p-6">
