@@ -116,8 +116,8 @@
       <div class="sidebar">
         <section id="history">
           <h3 id="history">History</h3>
-          <div class="flex  space-x-6">
-            <div class="w-2/3">
+          <div class="flex flex-wrap md:flex-no-wrap md:space-x-6">
+            <div class="md:w-2/3">
               <p>
                 <a href="/news">
                   Read about our dispute with the City of Toronto and Urbancorp
@@ -156,7 +156,7 @@
                 Urbancorp.
               </p>
             </div>
-            <div class="w-1/3">
+            <div class="md:w-1/3">
               <img
                 src="https://www.datocms-assets.com/5128/1581459534-ruby.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
               />
@@ -165,13 +165,13 @@
         </section>
 
         <section id="facility">
-          <div class="flex space-x-6">
-            <div class="w-1/2">
+          <div class="flex flex-wrap md:flex-no-wrap md:space-x-6">
+            <div class="w-full md:w-1/2">
               <img
                 src="https://www.datocms-assets.com/5128/1581459430-tiwt.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
               />
             </div>
-            <div class="w-1/2">
+            <div class="w-full md:w-1/2">
               <h3>Facility</h3>
 
               <p>
