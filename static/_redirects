@@ -1,8 +1,10 @@
-/dispute /news 301
-/tmaction/news  /news 301
+/dispute /about/tmaction/timeline 301
+/news /about/tmaction/news  301
 
+/tmaction  /about/tmaction/timeline 301
+/tmaction/faqs  /about/tmaction/faqs  301
+/tmaction/press /about/tmaction/press 301
 
-/booking-request https://airtable.com/shrx5ut1Eq5aEffJk
-/help /news 301
+/help /tmaction/limited-benefit 301
 /rss.xml    /rss.html   200
 /tmaction/limit /tmaction/limited-benefit
