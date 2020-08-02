@@ -1,14 +1,11 @@
 <template>
   <div class="layout">
     <p
-      class="highlight leading-tight md:leading-normal text-base p-2 bg-red-600 text-white text-center md:text-xl"
+      class="highlight leading-tight md:leading-normal text-base p-2 bg-black text-red-300 text-center md:text-xl"
     >
-      <a
-        href="/news/novel-coronavirus-covid-19-and-tmac/"
-        class="text-white underline"
-      >
-        TMAC is closed until further notice to help slow the spread of COVID-19.
-      </a>
+      TMAC is closed until further notice to help protect our community from
+      COVID-19.<br />Some members may be open for curbside service by
+      appointment. Please contact them directly for more information.
     </p>
 
     <header class="header container mx-auto my-6 md:my-24 px-4 md:px-12">

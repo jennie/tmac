@@ -4,7 +4,9 @@
       <img
         class="text-center mx-auto"
         :src="
-          `${$page.exhibition.featureImage.url}?auto=compress,format&fit=crop&crop=faces,entropy&ar=16:9&fit=crop`
+          `${
+            $page.exhibition.featureImage.url
+          }?auto=compress,format&fit=crop&crop=faces,entropy&ar=16:9&fit=crop`
         "
       />
 
@@ -19,7 +21,7 @@
           {{ $page.exhibition.hours }}
         </div>
         <div v-if="$page.exhibition.primaryPresenter">
-          <div class="text-center text-sm HelveticaNowMicro-XLtIt">
+          <div class="text-center text-xl HelveticaNowMicro-XLtIt">
             presented by {{ $page.exhibition.primaryPresenter }}
             <div v-if="$page.exhibition.externalCoPresenters">
               and {{ $page.exhibition.externalCoPresenters }}
@@ -65,7 +67,7 @@
             {{ $page.exhibition.externalCoPresenters }}
           </div>
           <div v-if="$page.exhibition.presenter" class="mt-6">
-            <div class="font-display font-bold uppercase">Presented by</div>
+            <div class="font-display font-bold uppercase">Artist</div>
 
             <p>{{ $page.exhibition.presenter }}</p>
             <div v-if="$page.exhibition.member[0]">
@@ -73,6 +75,17 @@
                 {{ member.shortName }}
               </p>
             </div>
+          </div>
+
+          <div v-if="$page.exhibition.link">
+            <p class="flex mt-12">
+              <a
+                :href="$page.exhibition.link"
+                class="btn btn-outline-red no-underline text-red-500 "
+              >
+                More info
+              </a>
+            </p>
           </div>
         </div>
         <div id="body" class="w-full md:w-2/3  order-1 md:order-2">

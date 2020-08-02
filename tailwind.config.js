@@ -1,6 +1,5 @@
 module.exports = {
   purge: {
-    enabled: false,
     content: ["./src/**/*.vue"],
     options: {
       whitelist: [
@@ -68,5 +67,9 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: [require("postcss-import"), require("postcss-custom-properties")]
+  plugins: [
+    require("postcss-import"),
+    require("postcss-custom-properties"),
+    require("@tailwindcss/ui")
+  ]
 };
