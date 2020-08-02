@@ -13,7 +13,7 @@ module.exports = {
   templates: {
     Exhibition: "/program/:slug",
     Event: "/event/:slug",
-    Article: "/news/:slug"
+    Article: "/about/news/:slug"
   },
   chainWebpack: config => {
     config.mode("development");
