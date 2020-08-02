@@ -288,6 +288,10 @@ export default {
           to: "/about",
           submenu: [
             {
+              title: "News",
+              to: "/about/news"
+            },
+            {
               title: "Timeline",
               to: "/about/tmaction/timeline"
             },

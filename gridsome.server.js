@@ -70,7 +70,7 @@ module.exports = function(api, options) {
       component: "./src/templates/Tmaction.vue"
     });
     createPage({
-      path: "/about/tmaction/news",
+      path: "/about/news",
       component: "./src/templates/News.vue"
     });
     createPage({
