@@ -21,8 +21,7 @@
         </div>
       </div>
     </div>
-
-    <main class="px-6 lg:px-24">
+    <main class="">
       <section class="flex flex-wrap">
         <div class="w-full lg:w-1/2 lg:pr-12">
           <p>
@@ -46,6 +45,10 @@
             >
             to support our programs.
           </p>
+
+          <img
+            src="https://www.datocms-assets.com/5128/1581459444-summerwork.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
+          />
         </div>
         <div class="w-full lg:w-1/2">
           <h3>Governance</h3>
@@ -113,106 +116,124 @@
       <div class="sidebar">
         <section id="history">
           <h3 id="history">History</h3>
-          <div>
-            <p>
-              <a href="/news">
-                Read about our dispute with the City of Toronto and Urbancorp
-                over the facility.
-              </a>
-            </p>
-            <p>
-              TMAC grew out of grassroots community support and in response to a
-              need for an accessible and affordable centre dedicated to media
-              art and technology.
-            </p>
-            <p>
-              The idea for TMAC was first conceptualized in 2003, after almost
-              15 years of organizing. TMAC incorporated in 2011 and attained
-              charitable status in 2013. Today, TMAC has organically grown into
-              an integrated collaborative organization supporting its members,
-              the West Queen West community, and all of Toronto’s media artists
-              and artist-run centres.
-            </p>
-            <p>
-              In 2014, with the support of the local community, City staff,
-              <a href="http://active18.net">Active 18</a> and Councillor
-              <a href="http://www.anabailao.com/developments">Ana Bailão</a>,
-              TMAC, Urbancorp and the City of Toronto finalized an agreement
-              that would provide the Edge on Triangle Park condominium a density
-              bonus in exchange for a
-              <strong>turnkey, purpose-built, 38,000 sq. ft. facility</strong>
-              for TMAC.
-            </p>
-            <p>
-              We
-              <a href="news/were-moving-in"
-                >moved into our facility in March 2018</a
-              >, and are currently occupying our space on an interim basis as we
-              conclude our litigation against the City of Toronto and Urbancorp.
-            </p>
-          </div>
-          <div>
-            <p>
-              <strong>
-                <a
-                  href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
-                  >Make a donation today</a
-                >
-                and immediately receive a charitable receipt through Canada
-                Helps!
-              </strong>
-            </p>
+          <div class="flex  space-x-6">
+            <div class="w-2/3">
+              <p>
+                <a href="/news">
+                  Read about our dispute with the City of Toronto and Urbancorp
+                  over the facility.
+                </a>
+              </p>
+              <p>
+                TMAC grew out of grassroots community support and in response to
+                a need for an accessible and affordable centre dedicated to
+                media art and technology.
+              </p>
+              <p>
+                The idea for TMAC was first conceptualized in 2003, after almost
+                15 years of organizing. TMAC incorporated in 2011 and attained
+                charitable status in 2013. Today, TMAC has organically grown
+                into an integrated collaborative organization supporting its
+                members, the West Queen West community, and all of Toronto’s
+                media artists and artist-run centres.
+              </p>
+              <p>
+                In 2014, with the support of the local community, City staff,
+                <a href="http://active18.net">Active 18</a> and Councillor
+                <a href="http://www.anabailao.com/developments">Ana Bailão</a>,
+                TMAC, Urbancorp and the City of Toronto finalized an agreement
+                that would provide the Edge on Triangle Park condominium a
+                density bonus in exchange for a
+                <strong>turnkey, purpose-built, 38,000 sq. ft. facility</strong>
+                for TMAC.
+              </p>
+              <p>
+                We
+                <a href="news/were-moving-in"
+                  >moved into our facility in March 2018</a
+                >, and are currently occupying our space on an interim basis as
+                we conclude our litigation against the City of Toronto and
+                Urbancorp.
+              </p>
+            </div>
+            <div class="w-1/3">
+              <img
+                src="https://www.datocms-assets.com/5128/1581459534-ruby.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
+              />
+            </div>
           </div>
         </section>
+
         <section id="facility">
-          <h3>Facility</h3>
-          <p>
-            Our multi-purpose facility offers shared spaces and amenities
-            including:
-          </p>
-          <ul>
-            <li>
-              Community gathering and event spaces overlooking Lisgar Park
-            </li>
-            <li>
-              Classrooms for public talks, workshops, screenings, festivals and
-              events
-            </li>
-            <li>Meeting rooms seating up to 14</li>
-            <li>Coworking spaces for film festival and studio staff</li>
-            <li>Shared resource and equipment libraries</li>
-            <li>
-              A temperature- and humidity–controlled film vault and archive
-            </li>
-            <li>Technical and production facilities</li>
-            <li>
-              Four public galleries and
-              <strong>exhibition spaces</strong>
-            </li>
-            <li>
-              Santo Pecado Café @ TMAC serving coffee, pastries and lunch daily
-            </li>
-            <li>
-              <small class="bg-yellow-200 rounded-full py-1 px-2"
-                >Coming soon</small
-              >
-              A <strong>210-seat theatre</strong> designed by renowned architect
-              Peter Smith, for screening independent and experimental works
-            </li>
-            <li>
-              <small class="bg-yellow-200 rounded-full py-1 px-2"
-                >Coming soon</small
-              >
-              Studio apartment for visiting
-              <strong>artist residencies</strong>
-            </li>
-          </ul>
+          <div class="flex space-x-6">
+            <div class="w-1/2">
+              <img
+                src="https://www.datocms-assets.com/5128/1581459430-tiwt.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
+              />
+            </div>
+            <div class="w-1/2">
+              <h3>Facility</h3>
+
+              <p>
+                Our multi-purpose facility offers shared spaces and amenities
+                including:
+              </p>
+              <ul>
+                <li>
+                  Community gathering and event spaces overlooking Lisgar Park
+                </li>
+                <li>
+                  Classrooms for public talks, workshops, screenings, festivals
+                  and events
+                </li>
+                <li>Meeting rooms seating up to 14</li>
+                <li>Coworking spaces for film festival and studio staff</li>
+                <li>Shared resource and equipment libraries</li>
+                <li>
+                  A temperature- and humidity–controlled film vault and archive
+                </li>
+                <li>Technical and production facilities</li>
+                <li>
+                  Four public galleries and
+                  <strong>exhibition spaces</strong>
+                </li>
+                <li>
+                  Santo Pecado Café @ TMAC serving coffee, pastries and lunch
+                  daily
+                </li>
+                <li>
+                  <small class="bg-yellow-200 rounded-full py-1 px-2"
+                    >Coming soon</small
+                  >
+                  A <strong>210-seat theatre</strong> designed by renowned
+                  architect Peter Smith, for screening independent and
+                  experimental works
+                </li>
+                <li>
+                  <small class="bg-yellow-200 rounded-full py-1 px-2"
+                    >Coming soon</small
+                  >
+                  Studio apartment for visiting
+                  <strong>artist residencies</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
+        <img
+          src="https://www.datocms-assets.com/5128/1581445197-426965753321596209427917960276168609890304o.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
+        />
       </div>
     </main>
   </Layout>
 </template>
-
+<style lang="postcss">
+section {
+  @apply my-12 py-12 border-b-2 border-yellow-100;
+  div.flex {
+  }
+}
+</style>
 <script>
 export default {
   name: "About",
