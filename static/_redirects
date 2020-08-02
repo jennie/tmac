@@ -1,5 +1,7 @@
 /dispute /news 301
-/news /tmaction/news 301
+/tmaction/news  /news 301
+
+
 /booking-request https://airtable.com/shrx5ut1Eq5aEffJk
 /help /news 301
 /rss.xml    /rss.html   200

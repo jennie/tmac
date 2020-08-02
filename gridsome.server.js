@@ -66,15 +66,19 @@ module.exports = function(api, options) {
     });
 
     createPage({
-      path: "/tmaction/news",
+      path: "/about/tmaction/timeline",
+      component: "./src/templates/Tmaction.vue"
+    });
+    createPage({
+      path: "/about/tmaction/news",
       component: "./src/templates/News.vue"
     });
     createPage({
-      path: "/tmaction/press",
+      path: "/about/tmaction/press",
       component: "./src/templates/Press.vue"
     });
     createPage({
-      path: "/tmaction/faqs",
+      path: "/about/tmaction/faqs",
       component: "./src/templates/Faqs.vue"
     });
   });

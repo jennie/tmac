@@ -284,28 +284,26 @@ export default {
       isActive: false,
       menu: [
         {
-          title: "#TMACtion",
-          to: "/tmaction",
+          title: "About",
+          to: "/about",
           submenu: [
             {
-              title: "News",
-              to: "/tmaction/news"
+              title: "Timeline",
+              to: "/about/tmaction/timeline"
             },
             {
               title: "FAQs",
-              to: "/tmaction/faqs"
+              to: "/about/tmaction/faqs"
             },
             {
-              title: "Press",
-              to: "/tmaction/press"
+              title: "Press + Media",
+              to: "/about/tmaction/press"
             }
           ]
         },
-
         { title: "Events", to: "/events" },
         { title: "Exhibitions", to: "/exhibitions" },
         { title: "Rentals", to: "/space-rentals" },
-        { title: "About", to: "/about" },
         { title: "Location", to: "/location" }
       ]
     };
