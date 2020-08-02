@@ -4,6 +4,11 @@
 /tmaction  /about/tmaction/timeline 301
 /tmaction/faqs  /about/tmaction/faqs  301
 /tmaction/press /about/tmaction/press 301
+/tmaction/news /about/news 301
+
+
+/news/:slug  /about/news/:slug  301
+
 
 /help /tmaction/limited-benefit 301
 /rss.xml    /rss.html   200
