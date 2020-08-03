@@ -227,11 +227,9 @@
     </main>
   </Layout>
 </template>
-<style lang="postcss">
+<style lang="postcss" scoped>
 section {
   @apply my-12 py-12 border-b-2 border-yellow-100;
-  div.flex {
-  }
 }
 </style>
 <script>
