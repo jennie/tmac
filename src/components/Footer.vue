@@ -105,7 +105,7 @@
       </div>
     </div>
     <div class="post-footer copyright text-center text-gray-600 mt-12">
-      <p>© 2011-2020 Toronto Media Arts Cluster</p>
+      <p>© 2011-2021 Toronto Media Arts Cluster</p>
       <p class="charitable-number text-sm">
         Registered Charity 847429701RR0001
       </p>

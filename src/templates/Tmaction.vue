@@ -21,13 +21,13 @@
         <p class="px-6 md:w-1/3">
           In May 2015,
           <b>the City of Toronto and Urbancorp breached their obligations</b>
-          under a contract with TMAC. We’re suing both parties for the right to
+          under a contract with TMAC. We sued both parties for the right to
           purchase the arts space as agreed.
         </p>
         <p class="px-6 md:w-1/3">
-          <b>TMAC remains ready, willing and able to close.</b> All we want is
-          for the City of Toronto to deliver on the promises it made and allow
-          us to complete the transaction. Nothing more, nothing less.
+          Our only demand is that the City of Toronto
+          <b>deliver on the promises it made</b> to this community. Nothing
+          more, nothing less.
         </p>
         <p class="px-6 md:w-1/3">
           Despite its responsibility to protect this unique Section 37 benefit,
@@ -36,7 +36,7 @@
             City has interfered and refused to act in the interest of the
             community
           </b>
-          for over 5 years — putting the security of vital media artists and
+          for over 6 years — putting the security of vital media artists and
           nonprofits in jeopardy.
         </p>
       </div>
