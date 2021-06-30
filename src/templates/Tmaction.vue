@@ -41,18 +41,6 @@
         </p>
       </div>
       <div id="body">
-        <div class="mx-auto">
-          <p class="text-xl text-red-600 text-center">
-            Do you think TMAC provides a benefit to the community?
-          </p>
-          <div class="text-center mx-auto">
-            <g-link
-              to="/tmaction/limited-benefit"
-              class="bg-red-500 hover:bg-red-600 text-2xl text-white py-2 px-4 rounded-full no-underline "
-              >Submit Your Response</g-link
-            >
-          </div>
-        </div>
         <h2>Timeline of Events</h2>
         <TimelineItem
           v-for="(t, index) in $page.timelineItems.edges"
