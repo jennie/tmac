@@ -5,6 +5,17 @@ const postcssPlugins = [tailwind(), postcssNested];
 require("dotenv").config();
 
 module.exports = {
+  plugins: [
+    {
+      use: "gridsome-plugin-service-worker",
+      options: {
+        networkFirst: {
+          routes: ["/", "/about"],
+          fileTypes: ["document", "style"]
+        }
+      }
+    }
+  ],
   cacheBusting: false,
 
   siteName: "Toronto Media Arts Centre",
