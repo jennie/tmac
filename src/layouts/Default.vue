@@ -3,9 +3,12 @@
     <p
       class="highlight leading-tight md:leading-normal text-base p-2 bg-black text-red-300 text-center md:text-xl"
     >
-      TMAC is closed until further notice to help protect our community from
-      COVID-19.<br />Some members may be open for curbside service by
-      appointment. Please contact them directly for more information.
+      TMAC is closed to the public until further notice due to public health
+      restrictions.<br />
+      Please read an important announcement:
+      <g-link to="/about/news/goodbye-32-lisgar/" class="font-bold underline"
+        >Goodbye, 32 Lisgar!</g-link
+      >
     </p>
 
     <header class="header container mx-auto my-6 md:my-24 px-4 md:px-12">

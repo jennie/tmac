@@ -1,170 +1,186 @@
 @import url("https://hello.myfonts.net/count/3af617");
 @tailwind base;
 
-
 /* purgecss start ignore */
 @font-face {
-  font-family: 'HelveticaNowMicro-XLtIt';
-  src: url('./assets/fonts/3AFE57_0_0.eot');
-  src: url('./assets/fonts/3AFE57_0_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AFE57_0_0.woff2') format('woff2'), url('./assets/fonts/3AFE57_0_0.woff') format('woff'), url('./assets/fonts/3AFE57_0_0.ttf') format('truetype');
+  font-family: "HelveticaNowMicro-XLtIt";
+  src: url("./assets/fonts/3AFE57_0_0.eot");
+  src: url("./assets/fonts/3AFE57_0_0.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/3AFE57_0_0.woff2") format("woff2"),
+    url("./assets/fonts/3AFE57_0_0.woff") format("woff"),
+    url("./assets/fonts/3AFE57_0_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'HelveticaNowDisplay-XBlk';
-  src: url('./assets/fonts/3AFA54_0_0.eot');
-  src: url('./assets/fonts/3AFA54_0_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AFA54_0_0.woff2') format('woff2'), url('./assets/fonts/3AFA54_0_0.woff') format('woff'), url('./assets/fonts/3AFA54_0_0.ttf') format('truetype');
+  font-family: "HelveticaNowDisplay-XBlk";
+  src: url("./assets/fonts/3AFA54_0_0.eot");
+  src: url("./assets/fonts/3AFA54_0_0.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/3AFA54_0_0.woff2") format("woff2"),
+    url("./assets/fonts/3AFA54_0_0.woff") format("woff"),
+    url("./assets/fonts/3AFA54_0_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'HelveticaNowText-Regular';
-  src: url('./assets/fonts/3AF617_0_0.eot');
-  src: url('./assets/fonts/3AF617_0_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AF617_0_0.woff2') format('woff2'), url('./assets/fonts/3AF617_0_0.woff') format('woff'), url('./assets/fonts/3AF617_0_0.ttf') format('truetype');
-}
-
-
-@font-face {
-  font-family: 'HelveticaNowText-It';
-  src: url('./assets/fonts/3AF617_1_0.eot');
-  src: url('./assets/fonts/3AF617_1_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AF617_1_0.woff2') format('woff2'), url('./assets/fonts/3AF617_1_0.woff') format('woff'), url('./assets/fonts/3AF617_1_0.ttf') format('truetype');
-}
-
-
-@font-face {
-  font-family: 'HelveticaNowText-Bold';
-  src: url('./assets/fonts/3AF617_2_0.eot');
-  src: url('./assets/fonts/3AF617_2_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AF617_2_0.woff2') format('woff2'), url('./assets/fonts/3AF617_2_0.woff') format('woff'), url('./assets/fonts/3AF617_2_0.ttf') format('truetype');
-}
-
-
-@font-face {
-  font-family: 'HelveticaNowText-BdIt';
-  src: url('./assets/fonts/3AF617_3_0.eot');
-  src: url('./assets/fonts/3AF617_3_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AF617_3_0.woff2') format('woff2'), url('./assets/fonts/3AF617_3_0.woff') format('woff'), url('./assets/fonts/3AF617_3_0.ttf') format('truetype');
-}
-
-
-@font-face {
-  font-family: 'HelveticaNowText-ExtraBold';
-  src: url('./assets/fonts/3AF617_4_0.eot');
-  src: url('./assets/fonts/3AF617_4_0.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/3AF617_4_0.woff2') format('woff2'), url('./assets/fonts/3AF617_4_0.woff') format('woff'), url('./assets/fonts/3AF617_4_0.ttf') format('truetype');
+  font-family: "HelveticaNowText-Regular";
+  src: url("./assets/fonts/3AF617_0_0.eot");
+  src: url("./assets/fonts/3AF617_0_0.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/3AF617_0_0.woff2") format("woff2"),
+    url("./assets/fonts/3AF617_0_0.woff") format("woff"),
+    url("./assets/fonts/3AF617_0_0.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Agrandir Tight';
-  src: url('./assets/fonts/Agrandir-TightBlack.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-TightBlack.woff') format('woff');
+  font-family: "HelveticaNowText-It";
+  src: url("./assets/fonts/3AF617_1_0.eot");
+  src: url("./assets/fonts/3AF617_1_0.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/3AF617_1_0.woff2") format("woff2"),
+    url("./assets/fonts/3AF617_1_0.woff") format("woff"),
+    url("./assets/fonts/3AF617_1_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNowText-Bold";
+  src: url("./assets/fonts/3AF617_2_0.eot");
+  src: url("./assets/fonts/3AF617_2_0.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/3AF617_2_0.woff2") format("woff2"),
+    url("./assets/fonts/3AF617_2_0.woff") format("woff"),
+    url("./assets/fonts/3AF617_2_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNowText-BdIt";
+  src: url("./assets/fonts/3AF617_3_0.eot");
+  src: url("./assets/fonts/3AF617_3_0.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/3AF617_3_0.woff2") format("woff2"),
+    url("./assets/fonts/3AF617_3_0.woff") format("woff"),
+    url("./assets/fonts/3AF617_3_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNowText-ExtraBold";
+  src: url("./assets/fonts/3AF617_4_0.eot");
+  src: url("./assets/fonts/3AF617_4_0.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/3AF617_4_0.woff2") format("woff2"),
+    url("./assets/fonts/3AF617_4_0.woff") format("woff"),
+    url("./assets/fonts/3AF617_4_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Agrandir Tight";
+  src: url("./assets/fonts/Agrandir-TightBlack.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-TightBlack.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Agrandir';
-  src: url('./assets/fonts/Agrandir-Regular.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-Regular.woff') format('woff');
+  font-family: "Agrandir";
+  src: url("./assets/fonts/Agrandir-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Agrandir';
-  src: url('./assets/fonts/Agrandir-TextBold.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-TextBold.woff') format('woff');
+  font-family: "Agrandir";
+  src: url("./assets/fonts/Agrandir-TextBold.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-TextBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Agrandir Grand';
-  src: url('./assets/fonts/Agrandir-GrandLight.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-GrandLight.woff') format('woff');
+  font-family: "Agrandir Grand";
+  src: url("./assets/fonts/Agrandir-GrandLight.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-GrandLight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Agrandir';
-  src: url('./assets/fonts/Agrandir-Italic.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-Italic.woff') format('woff');
+  font-family: "Agrandir";
+  src: url("./assets/fonts/Agrandir-Italic.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Agrandir Tight';
-  src: url('./assets/fonts/Agrandir-Tight.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-Tight.woff') format('woff');
+  font-family: "Agrandir Tight";
+  src: url("./assets/fonts/Agrandir-Tight.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-Tight.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Agrandir Grand';
-  src: url('./assets/fonts/Agrandir-GrandHeavy.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-GrandHeavy.woff') format('woff');
+  font-family: "Agrandir Grand";
+  src: url("./assets/fonts/Agrandir-GrandHeavy.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-GrandHeavy.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Agrandir Narrow';
-  src: url('./assets/fonts/Agrandir-NarrowBlack.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-NarrowBlack.woff') format('woff');
+  font-family: "Agrandir Narrow";
+  src: url("./assets/fonts/Agrandir-NarrowBlack.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-NarrowBlack.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Agrandir Grand';
-  src: url('./assets/fonts/Agrandir-Grand.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-Grand.woff') format('woff');
+  font-family: "Agrandir Grand";
+  src: url("./assets/fonts/Agrandir-Grand.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-Grand.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Agrandir';
-  src: url('./assets/fonts/Agrandir-ThinItalic.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-ThinItalic.woff') format('woff');
+  font-family: "Agrandir";
+  src: url("./assets/fonts/Agrandir-ThinItalic.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-ThinItalic.woff") format("woff");
   font-weight: 100;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Agrandir Grand';
-  src: url('./assets/fonts/Agrandir-GrandItalic.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-GrandItalic.woff') format('woff');
+  font-family: "Agrandir Grand";
+  src: url("./assets/fonts/Agrandir-GrandItalic.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-GrandItalic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Agrandir Wide';
-  src: url('./assets/fonts/Agrandir-WideBlackItalic.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-WideBlackItalic.woff') format('woff');
+  font-family: "Agrandir Wide";
+  src: url("./assets/fonts/Agrandir-WideBlackItalic.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-WideBlackItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Agrandir Narrow';
-  src: url('./assets/fonts/Agrandir-Narrow.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-Narrow.woff') format('woff');
+  font-family: "Agrandir Narrow";
+  src: url("./assets/fonts/Agrandir-Narrow.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-Narrow.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Agrandir Tight';
-  src: url('./assets/fonts/Agrandir-TightThin.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-TightThin.woff') format('woff');
+  font-family: "Agrandir Tight";
+  src: url("./assets/fonts/Agrandir-TightThin.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-TightThin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Agrandir Wide';
-  src: url('./assets/fonts/Agrandir-WideLight.woff2') format('woff2'),
-    url('./assets/fonts/Agrandir-WideLight.woff') format('woff');
+  font-family: "Agrandir Wide";
+  src: url("./assets/fonts/Agrandir-WideLight.woff2") format("woff2"),
+    url("./assets/fonts/Agrandir-WideLight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -200,15 +216,13 @@ h3 {
 }
 
 main {
-
   h1,
   h3 {
-
     @apply uppercase mt-6 mb-0;
   }
 
   h1 {
-    @apply text-4xl
+    @apply text-4xl;
   }
 
   h3 {
@@ -219,13 +233,12 @@ main {
 /* page layouts */
 .hero-header {
   h1 {
-    @apply text-4xl text-center mb-6 pt-0 mt-0
+    @apply text-4xl text-center mb-6 pt-0 mt-0;
   }
 
   .lead {
-    @apply mb-8 text-center text-gray-800
+    @apply mb-8 text-center text-gray-800;
   }
-
 }
 
 #page--article {
@@ -234,7 +247,6 @@ main {
     font-family: HelveticaNowText-Bold;
     font-weight: normal;
     font-style: normal;
-
   }
 }
 
@@ -242,26 +254,31 @@ main {
 #page--exhibition,
 #page--article {
   main {
-
     h1 {
       @apply uppercase leading-tight;
       hyphens: auto;
     }
 
     #body {
+      ol {
+        @apply list-decimal pl-12 bg-gray-200 border-black py-4 pl-12 pr-4 mb-8;
+        li:last-child {
+          @apply mb-0;
+        }
+      }
       h2 {
         @apply text-3xl mt-12 mb-0 leading-tight mb-3 uppercase;
       }
 
       h3 {
-        @apply text-2xl uppercase mt-6 mb-2 leading-tight;
+        @apply text-2xl uppercase mt-6 mb-2 leading-tight font-body font-bold border-t-2 mt-12 border-black pt-2;
       }
 
       h4 {
         @apply font-display uppercase text-lg font-bold leading-snug mt-3 mb-0;
       }
 
-      h3+p {
+      h3 + p {
         @apply mb-6;
       }
     }
@@ -276,23 +293,20 @@ main {
   @apply px-4 py-2 bg-transparent text-red-500 py-2 px-4 border border-red-500 rounded;
 
   &:hover {
-    @apply text-white border-transparent bg-red-500
+    @apply text-white border-transparent bg-red-500;
   }
 }
 
-
 main {
   ul {
-
     li {
       @apply mb-4 leading-normal;
 
-      margin-left: 2rem
+      margin-left: 2rem;
     }
 
     li:before {
-
-      content: '– ';
+      content: "– ";
       margin-left: -1.25rem;
       font-weight: 900;
     }
@@ -306,7 +320,7 @@ main {
   }
 
   p a:hover:not(.btn) {
-    color: #0000E3;
+    color: #0000e3;
   }
 
   p,
@@ -321,21 +335,19 @@ nav {
     font-weight: normal;
     font-style: normal;
 
-
     &.active {
       &:not(.active--exact) {
         @apply text-gray-600 border-gray-600 border-b border-b-4 uppercase;
         font-family: "HelveticaNowText-ExtraBold";
         font-weight: normal;
         font-style: normal;
-
       }
 
       &.home-link {
         font-family: HelveticaNowText-Regular;
         font-weight: normal;
         font-style: normal;
-        @apply text-black border-0 normal-case
+        @apply text-black border-0 normal-case;
       }
 
       &.active--exact,
@@ -380,8 +392,6 @@ li {
     font-weight: normal;
     font-style: normal;
   }
-
-
 }
 
 .fade-enter-active {
@@ -392,23 +402,20 @@ li {
   opacity: 0;
 }
 
-
 /* event listings */
 
 .canceled {
   &.mini {
-
     h3,
     p {
-      @apply text-white bg-transparent
+      @apply text-white bg-transparent;
     }
-  } 
-  
-  &.regular {
+  }
 
+  &.regular {
     h3,
     p {
-      color: #878787
+      color: #878787;
     }
   }
 
@@ -422,13 +429,10 @@ li {
 /* event page */
 #event.canceled {
   .label {
-
   }
 }
 
-
 /* purgecss end ignore */
-
 
 @tailwind components;
 

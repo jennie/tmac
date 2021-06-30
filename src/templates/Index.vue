@@ -6,18 +6,19 @@
           src="https://www.datocms-assets.com/5128/1581459534-ruby.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
         />
         <img
-          src="https://www.datocms-assets.com/5128/1581459444-summerwork.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
+          src="https://www.datocms-assets.com/5128/1581459430-tiwt.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
         />
+
         <img
           src="https://www.datocms-assets.com/5128/1581445197-426965753321596209427917960276168609890304o.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
-        />
-        <img
-          src="https://www.datocms-assets.com/5128/1581459430-tiwt.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
         />
       </div>
       <h2 class="about text-center my-12 md:my-24 text-4xl">
         A place to create and experience video, film, games and digital culture.
       </h2>
+      <img
+        src="https://www.datocms-assets.com/5128/1581459444-summerwork.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
+      />
     </header>
     <div v-if="$page.exhibitionsUpcoming.edges.length > 0">
       <h2 class="text-center">Exhibitions</h2>
