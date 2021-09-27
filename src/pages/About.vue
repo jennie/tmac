@@ -69,40 +69,6 @@
             that supports our artistic, cultural, and community-based mandate.
           </p>
 
-          <h3>Board of Directors</h3>
-          <p></p>
-          <ul>
-            <li>
-              Henry Faber, chair
-              <br />
-              <small>Gamma Space</small>
-            </li>
-            <li>
-              Greg Breen
-              <br />
-              <small>Charles Street Video</small>
-            </li>
-            <li>
-              Gina Vanni
-              <br />
-              <small>CFMDC</small>
-            </li>
-            <li>
-              Izzie Colpitts-Campbell
-              <br />
-              <small>Dames Making Games</small>
-            </li>
-            <li>
-              Frank Manzo
-              <br />
-              <small>community</small>
-            </li>
-            <li>
-              Scott Miller Berry
-              <br />
-              <small>community</small>
-            </li>
-          </ul>
           <p>
             <a
               href="https://governance.tomediaarts.org/director-register"
@@ -202,17 +168,11 @@
                   daily
                 </li>
                 <li>
-                  <small class="bg-yellow-200 rounded-full py-1 px-2"
-                    >Coming soon</small
-                  >
                   A <strong>210-seat theatre</strong> designed by renowned
                   architect Peter Smith, for screening independent and
                   experimental works
                 </li>
                 <li>
-                  <small class="bg-yellow-200 rounded-full py-1 px-2"
-                    >Coming soon</small
-                  >
                   Studio apartment for visiting
                   <strong>artist residencies</strong>
                 </li>

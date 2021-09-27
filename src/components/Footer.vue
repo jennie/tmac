@@ -3,10 +3,7 @@
     <div class="flex flex-wrap md:flex-no-wrap flex-1">
       <div class="md:w-1/4 md:px-2 md:mb-0">
         <h3>Toronto Media Arts Centre</h3>
-        <p>
-          32 Lisgar Street
-          <br />Toronto, ON M6J 0C9 <br />Canada
-        </p>
+
         <p>
           <i class="fas fa-envelope"></i>
           <a
@@ -16,24 +13,7 @@
             >Join our mailing list</a
           >
         </p>
-        <p>
-          <i class="fas fa-building"></i>
-          <a class="pl-1" href="https://calendly.com/tomediaarts/space-tour"
-            >Book a tour</a
-          >
-        </p>
-        <p>
-          <i class="fas fa-map-marker-alt"></i>
-          <a class="pl-1" href="/location">How to find us</a>
-        </p>
-        <p>
-          <i class="fab fa-accessible-icon"></i>
-          <a
-            class="pl-1"
-            href="https://policies.tomediaarts.org/procedure-manual/policies/accessibility"
-            >Accessibility information</a
-          >
-        </p>
+
         <p>
           <a
             href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
@@ -69,39 +49,6 @@
         <section id="logos">
           <a href="https://shwca.se/tmac-logo-kit">Download logos</a>
         </section>
-      </div>
-      <div class="md:w-1/4 md:px-2 md:mb-0">
-        <h3>Hours</h3>
-        <p>Currently closed due to COVID-19.</p>
-        <!-- <p>10am–6pm Mon-Fri</p>
-        <p>Open later + on weekends for events and exhibitions.</p>
-        <p>Closed on all stat holidays.</p> -->
-        <div class="hidden vcard">
-          <div class="org">Toronto Media Arts Centre</div>
-          <a class="email" href="mailto:info@tomediaarts.org"
-            >info@tomediaarts.org</a
-          >
-          <div class="adr">
-            <div class="street-address">32 Lisgar Street</div>
-            <span class="locality">Toronto</span> ,
-            <span class="region">ON</span>
-            ,
-            <span class="postal-code">M6J 0C9</span>
-            <span class="country-name">Canada</span>
-          </div>
-        </div>
-      </div>
-      <div class="md:w-1/4 md:px-2 md:mb-0">
-        <h3>Members</h3>
-        <div class="orgs" id="members">
-          <div v-for="member in $static.members.edges" :key="member.id">
-            <img
-              :src="`${member.node.logo.url}?auto=compress,format`"
-              :alt="member.name"
-              class="w-32 py-3"
-            />
-          </div>
-        </div>
       </div>
     </div>
     <div class="post-footer copyright text-center text-gray-600 mt-12">
