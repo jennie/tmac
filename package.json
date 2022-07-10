@@ -26,12 +26,12 @@
     "tailwindcss": "^1.8.10",
     "vue-currency-filter": "^4.0.3",
     "vue-luxon": "^0.7.3",
-    "vue-server-renderer": "^2.6.11",
     "vue-tiny-slider": "^0.1.39"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "gridsome-plugin-service-worker": "^0.2.8",
-    "vue-template-compiler": "^2.6.11"
+    "vue": "2.6.11",
+    "vue-template-compiler": "2.6.11"
   }
 }
