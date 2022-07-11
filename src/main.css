@@ -260,6 +260,22 @@ main {
     }
 
     #body {
+      table {
+        @apply mb-8;
+        thead {
+            @apply border-b-2 p-2;
+
+        }
+        tbody {
+          tr {
+            @apply border-b;
+            td {
+              @apply p-2;
+
+            }
+          }
+        }
+      }
       ol {
         @apply list-decimal pl-12 bg-gray-200 border-black py-4 pl-12 pr-4 mb-8;
         li:last-child {
