@@ -230,6 +230,12 @@ main {
   }
 }
 
+blockquote {
+    margin: 18px;
+    padding: 10px 0 10px 0;
+    font-style: italic;
+}
+
 /* page layouts */
 .hero-header {
   h1 {
