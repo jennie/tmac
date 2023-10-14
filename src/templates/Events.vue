@@ -1,35 +1,7 @@
 <template>
   <Layout>
-    <h2 class>Upcoming Events</h2>
-
-    <div class="border-red-500 w-1/2 mx-auto">
-      <p>
-        During the public health lockdown, please find online program listings
-        on our members' sites:
-        <a href="https://charlesstreetvideo.com/" target="_blank"
-          >Charles Street Video</a
-        >, <a href="https://www.cfmdc.org/">CFMDC</a>,
-        <a href="https://dmg.to/">DMG</a> and
-        <a href="https://www.gammaspace.ca/">Gamma Space</a>.
-      </p>
-    </div>
-
-    <!-- <div class="-px-12 py-16 flex flex-wrap">
-      <EventListing
-        v-for="(e, index) in $page.events.edges"
-        :key="`event-${index}`"
-        :event="e"
-      />
-      <PaginationPosts
-        v-if="$page.events.pageInfo.totalPages > 1"
-        base="/events"
-        :totalPages="$page.events.pageInfo.totalPages"
-        :currentPage="$page.events.pageInfo.currentPage"
-      /> 
-    </div>-->
-
     <div id="past-events">
-      <h2 class>Past Events</h2>
+      <h2 class="hidden">Past Events</h2>
 
       <!-- {{ $page.pastEvents.totalCount }} -->
       <div

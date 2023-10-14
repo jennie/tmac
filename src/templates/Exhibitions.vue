@@ -1,23 +1,7 @@
 <template>
   <Layout>
-    <h2 class>Upcoming Exhibitions</h2>
-    <div class="-px-12 py-16 flex flex-wrap">
-      <ExhibitionListing
-        v-for="(e, index) in $page.exhibitions.edges"
-        :key="`exhibition-${index}`"
-        :exhibition="e"
-      />
-
-      <pagination-posts
-        v-if="$page.exhibitions.pageInfo.totalPages > 1"
-        base="/Exhibitions"
-        :totalPages="$page.exhibitions.pageInfo.totalPages"
-        :currentPage="$page.exhibitions.pageInfo.currentPage"
-      />
-    </div>
-
     <div id="past-events">
-      <h2 class>Past Exhibitions</h2>
+      <h2 class="hidden">Past Exhibitions</h2>
       <div class="grid grid-cols-1 md:grid-cols-3">
         <ExhibitionListingMini
           v-for="(e, index) in $page.pastExhibitions.edges"

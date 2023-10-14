@@ -3,8 +3,6 @@
     <p
       class="highlight leading-tight md:leading-normal text-base p-2 bg-black text-red-300 text-center md:text-xl"
     >
-      TMAC is closed to the public until further notice due to public health
-      restrictions.<br />
       Please read an important announcement:
       <g-link to="/about/news/goodbye-32-lisgar/" class="font-bold underline"
         >Goodbye, 32 Lisgar!</g-link
@@ -146,13 +144,6 @@
           </svg>
         </g-link>
         <div class="buttons flex justify-end ">
-          <div class="self-center hidden md:block">
-            <a
-              href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
-              class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full no-underline"
-              >Donate</a
-            >
-          </div>
           <div class="md:hidden self-center ">
             <button @click="toggle" class="flex items-center py-2 btn ">
               Menu
@@ -163,7 +154,7 @@
       </div>
 
       <nav
-        class="main nav flex flex-wrap justify-between flex-col md:flex-row md:flex md:flex-no-wrap md:flex-initial md:w-auto md:mt-0 md:relative md:h-auto md:w-auto md:bg-transparent md:p-0 fixed top-0 left-0 right-0 h-full w-full bg-gray-300 z-10 p-6 flex-1 "
+        class="main nav flex flex-wrap flex-col md:flex-row md:flex md:flex-no-wrap md:flex-initial md:w-auto md:mt-0 md:relative md:h-auto md:w-auto md:bg-transparent md:p-0 fixed top-0 left-0 right-0 h-full w-full bg-gray-300 z-10 p-6 flex-1 "
         :class="isOpen ? 'block' : 'hidden'"
       >
         <div class="md:hidden justify-end self-end absolute ">
@@ -179,7 +170,7 @@
         <div v-for="item in menu" :key="item.id">
           <g-link
             :to="item.to"
-            class="tracking-tight text-3xl md:text-xl w-full "
+            class="tracking-tight text-3xl md:text-xl w-full mr-6"
             >{{ item.title }}</g-link
           >
           <ul
@@ -284,31 +275,23 @@ export default {
       isActive: false,
       menu: [
         {
-          title: "About",
-          to: "/about",
-          submenu: [
-            {
-              title: "News",
-              to: "/about/news"
-            },
-            {
-              title: "Timeline",
-              to: "/about/tmaction/timeline"
-            },
-            {
-              title: "FAQs",
-              to: "/about/tmaction/faqs"
-            },
-            {
-              title: "Press + Media",
-              to: "/about/tmaction/press"
-            }
-          ]
+          title: "News",
+          to: "/about/news"
         },
-        { title: "Events", to: "/events" },
-        { title: "Exhibitions", to: "/exhibitions" },
-        { title: "Rentals", to: "/space-rentals" },
-        { title: "Location", to: "/location" }
+        {
+          title: "Timeline",
+          to: "/about/tmaction/timeline"
+        },
+        {
+          title: "FAQs",
+          to: "/about/tmaction/faqs"
+        },
+        {
+          title: "Press + Media",
+          to: "/about/tmaction/press"
+        },
+        { title: "Past Events", to: "/events" },
+        { title: "Past Exhibitions", to: "/exhibitions" }
       ]
     };
   },
@@ -324,6 +307,9 @@ export default {
 nav {
   div:first-child a {
     @apply ml-0;
+  }
+  a:hover {
+    @apply underline;
   }
 }
 header .btn {

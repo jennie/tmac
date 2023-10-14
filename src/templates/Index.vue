@@ -14,7 +14,8 @@
         />
       </div>
       <h2 class="about text-center my-12 md:my-24 text-4xl">
-        A place to create and experience video, film, games and digital culture.
+        A place where we created and experienced video, film, games and digital
+        culture together.
       </h2>
       <img
         src="https://www.datocms-assets.com/5128/1581459444-summerwork.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"
