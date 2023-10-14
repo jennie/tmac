@@ -5,7 +5,7 @@
     >
       Please read an important announcement:
       <g-link to="/about/news/goodbye-32-lisgar/" class="font-bold underline"
-        >Goodbye, 32 Lisgar!</g-link
+        >Goodbye, 32 Lisgar! 👋🏻 See you again soon.</g-link
       >
     </p>
 
