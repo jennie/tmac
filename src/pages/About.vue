@@ -38,13 +38,6 @@
             technologies–including film, animation, videogames, audio and sound,
             video, robotics, electronics and more.
           </p>
-          <p>
-            <a
-              href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
-              >Donate now</a
-            >
-            to support our programs.
-          </p>
 
           <img
             src="https://www.datocms-assets.com/5128/1581459444-summerwork.jpg?auto=compress,format&fit=crop&crop=faces,entropy&ar=1.49:1&fit=crop"

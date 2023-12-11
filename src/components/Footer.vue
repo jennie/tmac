@@ -3,24 +3,6 @@
     <div class="flex flex-wrap md:flex-no-wrap flex-1">
       <div class="md:w-1/4 md:px-2 md:mb-0">
         <h3>Toronto Media Arts Centre</h3>
-
-        <!-- <p>
-          <i class="fas fa-envelope"></i>
-          <a
-            class="pl-1"
-            href="https://tomediaarts.us11.list-manage.com/subscribe/post?u=a11a58bffdfcead3161ea4d9d&id=0f5e662ee0"
-            target="_blank"
-            >Join our mailing list</a
-          >
-        </p> -->
-
-        <p>
-          <a
-            href="https://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d106865"
-            class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full no-underline"
-            >Donate</a
-          >
-        </p>
       </div>
       <div class="md:w-1/4 md:px-2 md:mb-0">
         <h3>Contact us</h3>
