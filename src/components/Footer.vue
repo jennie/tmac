@@ -4,7 +4,7 @@
       <div class="md:w-1/4 md:px-2 md:mb-0">
         <h3>Toronto Media Arts Centre</h3>
 
-        <p>
+        <!-- <p>
           <i class="fas fa-envelope"></i>
           <a
             class="pl-1"
@@ -12,7 +12,7 @@
             target="_blank"
             >Join our mailing list</a
           >
-        </p>
+        </p> -->
 
         <p>
           <a

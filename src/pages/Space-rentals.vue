@@ -59,7 +59,7 @@
           </ul>
         </div>
       </div>
-     <!-- <div class="flex justify-around justify-center">
+      <!-- <div class="flex justify-around justify-center">
         <a
           href="https://airtable.com/shrx5ut1Eq5aEffJk"
           class="bg-teal-500 text-2xl hover:bg-teal-600 text-white py-2 px-8 rounded text-center no-underline"
@@ -155,11 +155,11 @@
         </div>
       </div>
       <div class="flex justify-around justify-center">
-        <a
+        <!-- <a
           href="https://airtable.com/shrx5ut1Eq5aEffJk"
           class="bg-teal-500 text-2xl hover:bg-teal-600 text-white py-2 px-8 rounded text-center no-underline"
           >Submit Request</a
-        >
+        > -->
       </div>
     </main>
   </Layout>

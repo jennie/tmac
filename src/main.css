@@ -231,9 +231,9 @@ main {
 }
 
 blockquote {
-    margin: 18px;
-    padding: 10px 0 10px 0;
-    font-style: italic;
+  margin: 18px;
+  padding: 10px 0 10px 0;
+  font-style: italic;
 }
 
 /* page layouts */
@@ -269,15 +269,13 @@ blockquote {
       table {
         @apply mb-8;
         thead {
-            @apply border-b-2 p-2;
-
+          @apply border-b-2 p-2;
         }
         tbody {
           tr {
             @apply border-b;
             td {
               @apply p-2;
-
             }
           }
         }
